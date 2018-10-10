@@ -1,0 +1,114 @@
+/**mine.wxss**/
+
+.header {
+  height: 130px;
+  background: white;
+}
+
+.header .profile {
+  height: 50%;
+}
+
+.profile .avatar {
+  width: 50px;
+  height: 50px;
+  float: left;
+  margin: 7.5px 10px;
+  border-radius: 25px;
+}
+
+.profile .description {
+  display: inline-block;
+  margin: 7.5px auto;
+  height: 50px;
+}
+
+.description .item {
+    height: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.profile .add {
+    float: right;
+    margin: 15px 10px;
+    height: 35px;
+    width: 35px;
+}
+
+.header .tablist {
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tablist .tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 25%;
+    margin: 7.5px 0px;
+    border-right: 1px solid #eceff4;
+}
+
+.tab .content{
+    width: 25px;
+    height: 50px;
+    font-size: 12px;
+    color: #B3B3B3;
+}
+
+.tab .image {
+    width: 25px;
+    height: 25px;
+    margin-top: 10px;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, .5);
+    z-index: 99999;
+    opacity: 0;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal .dialog {
+    width: 84%;
+    height: 28%;
+    background-color: #eceff4;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.dialog .modal-item {
+    height: 33.3%;
+    width: 100%;
+}
+
+.modal-button {
+    height: 100rpx;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.modal-button view {
+    width: 50%;
+    border-top: 1px solid #E5E7ED;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

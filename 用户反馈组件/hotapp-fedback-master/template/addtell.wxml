@@ -1,0 +1,11 @@
+<template name="addtell">
+  <view>
+    <modal title="联系方式" confirm-text="确认" cancel-text="取消" hidden="{{addtellHidden}}" bindconfirm="modalconfirm" bindcancel="modalcancel">
+      <label>
+        <view class="tellsection">
+          <input class="tellinput" placeholder-style="height:50rpx;line-height:50rpx"  bindinput="saveusertell" placeholder="请输入QQ、邮箱或者微信号" value="{{addtell.contract_info}}" />
+        </view>
+      </label>
+    </modal>
+  </view>
+</template>

@@ -1,0 +1,61 @@
+<import src="../../../utils/playpercent.wxml" />
+<import src="../../../utils/lrc.wxml" />
+<view id="playingpage" class=" {{playing?'playing':''}}">
+  <image src="../../../image/cm2_default_play_bg-ip6@2x.jpg" id="coverbg"/>
+  <image id="playing-bg" class="blurbg" src="{{music.album.picUrl}}" />
+  <view id="playing-zz" hidden="{{showlrc}}">
+    <image src="../../../image/aag.png" />
+  </view>
+  <view id="playing-main" hidden="{{showlrc}}">
+    <image id="playingmainbg" src="../../../image/play.png" />
+    <image src="{{music.album.picUrl}}" bindtap="loadlrc" id="pmaincover" />
+  </view>
+  <template is="lrc" data="{{lrc:lrc,showlrc:showlrc,lrcindex:lrcindex}}" />
+  <view id="playing-actwrap">
+    <view id="playing-info" wx:if="{{!showlrc}}">
+      <view class="pi-act">
+        <image src="../../../image/a_r.png" />
+      </view>
+      <view class="pi-act" bindtap="downmusic">
+        <image src="../../../image/a_i.png" />
+      </view>
+      <view class="pi-act commentscount">
+        <navigator url="../recommend/index?id={{music.commentThreadId}}&from=song">
+          <image wx:if="{{!commentscount}}" src="../../../image/a_e.png" />
+          <image wx:if="{{commentscount}}" src="../../../image/a_f.png" />
+          <text wx:if="{{commentscount}}">{{commentscount>999?'999+':(commentscount>99?'99+':commentscount)}}</text>
+        </navigator>
+      </view>
+      <view class="pi-act">
+        <image src="../../../image/a_x.png" />
+      </view>
+    </view>
+    <template is="playingpercent" data="{{playtime:playtime,percent:percent,duration:duration,downloadPercent:downloadPercent}}" />
+    <view id="playingaction">
+      <view class="pa-saction" bindtap="playshuffle" hidden="{{shuffle!=1}}">
+        <image src="../../../image/a_p.png" />
+      </view>
+      <view class="pa-saction" bindtap="playshuffle" hidden="{{shuffle!=2}}">
+        <image src="../../../image/a_y.png" />
+      </view>
+      <view class="pa-saction" bindtap="playshuffle" hidden="{{shuffle!=3}}">
+        <image src="../../../image/aa9.png" />
+      </view>
+      <view class="pa-maction" data-other="-1" bindtap="playother">
+        <image src="../../../image/ajh.png" />
+      </view>
+      <view class="pa-baction" hidden="{{!playing}}" bindtap="playingtoggle" data-p="{{playing}}">
+        <image id='pa-playing' src="../../../image/ajd.png" />
+      </view>
+      <view class="pa-baction" hidden="{{playing}}" bindtap="playingtoggle" data-p="{{playing}}">
+        <image id='pa-pause' src="../../../image/ajf.png" />
+      </view>
+      <view class="pa-maction" data-other="1" bindtap="playother">
+        <image src="../../../image/ajb.png" />
+      </view>
+      <view class="pa-saction" bindtap="musicinfo">
+        <image src="../../../image/aab.png" />
+      </view>
+    </view>
+  </view>
+</view>

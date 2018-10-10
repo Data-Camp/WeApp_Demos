@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "allowJs": false,
+        "target": "es6",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "noLib": false,
+        "preserveConstEnums": true,
+        "outDir": "./dist",
+        "sourceMap": true,
+        "watch": true
+    },
+    "exclude": ["node_modules"],
+    "compileOnSave": true
+}

@@ -1,0 +1,58 @@
+<import src="../common/template.wxml"/>
+
+<view class="index">
+    <view class="nav-scroll">
+        <scroll-view class="scroll-view_H" scroll-x="true" style="width: 100%">
+            <text wx:for="{{section}}" wx:key="id" id="{{item.id}}" catchtap="handleTap" class="nav-name {{item.id == currentId ? 'nav-hover' : ''}}">{{item.name}}</text>
+        </scroll-view>
+    </view>
+
+    <template is="loadings" data="{{loading,loadtxt}}" />
+
+    <view class="banner-scroll">
+        <swiper indicator-dots="true" autoplay="true" class="Bannerswiper">
+            <block wx:for="{{banners}}" wx:key="picUrl">
+                <swiper-item>
+                    <view class="swiper-item">
+                        <navigator url="Play/play?name={{item.name}}">
+                            <view class="pic">
+                                <image src="{{item.picUrl}}" mode="aspectFit" class="slide-image" />
+                            </view>
+                            <view class="title">
+                                <text>{{item.name}}</text>
+                            </view>
+                        </navigator>
+                    </view>
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+
+    <view class="roundAvatorText {{AvatorText.length?'show':'hide'}}">
+        <block wx:for="{{AvatorText}}" wx:key="name">
+            <navigator url="Play/play?name={{item.name}}" class="roundList">
+                <view>
+                    <image src="{{item.picUrl}}"/>
+                    <text>{{item.name}}</text>
+                </view>
+            </navigator>
+        </block>
+    </view>
+
+    <view class="textRollLink {{RollLink.length?'show':'hide'}}">
+        <swiper class="Rollswiper" vertical="true">
+            <block wx:for="{{RollLink}}" wx:key="name">
+                <swiper-item>
+                    <navigator url="Play/play?name={{item.name}}">
+                        <view class="swiper-item">
+                            <image src="{{item.picUrl}}" mode="aspectFit" class="RollImage" />
+                            <text class="Rolltxt">{{item.name}}</text>
+                        </view>
+                    </navigator>
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+
+    <template is="ub-list" data="{{newList}}" />
+</view>

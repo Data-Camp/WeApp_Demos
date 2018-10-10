@@ -1,0 +1,13 @@
+<!--
+- 个人页面
+-->
+<import src="/templates/common/wxTableList.wxml"/>
+
+<view>
+    <block>
+        <template is="wxTableList" data="{{test}}"/>
+    </block>
+</view>
+<view>
+    <button class="fb-btn" type="default" size="mini">分答</button>
+</view>

@@ -1,0 +1,95 @@
+.container{
+  background: #f2f2f2;
+}
+.search_bar{
+  position:fixed;
+  background: #fff;
+  padding: 10rpx 0;
+  border-top:1px #f8f8f8 solid;
+  width: 100%;
+}
+.search_bar_txt{
+  background: #f2f2f2;
+  border-radius: 30px;
+  font-size: 20rpx;
+  padding: 10rpx 30rpx;
+  margin: 0 50rpx;
+}
+.recommended, .hot-brand{
+  margin-top: 50px;
+}
+.source_title{
+  font-size: 20rpx;
+  color: #333;
+  display: block;
+  padding: 20rpx 30rpx;
+  display: block;
+}
+.car-parallel{
+  background: #fff; 
+  padding: 10rpx;
+}
+.car-parallel-icon{
+  width: 50rpx;
+  height: 50rpx;
+  vertical-align: middle;
+  padding-left: 20rpx;
+  margin-right: 20rpx;
+}
+.car-parallel-txt{
+  font-size: 20rpx;
+  color: #333;
+}
+.hot-list{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex:1;
+}
+.hot-item{
+  /*flex:1;*/
+  text-align: center;
+  border:1px #f2f2f2 solid;
+  background: #fff;
+  margin-left: -1px;
+  margin-top: -1px;
+  width: 148rpx;
+  text-align: center;
+}
+.hot-item image{
+  width: 50rpx;
+  height:50rpx;
+  margin: 20rpx 0;
+}
+.hot-item text{
+  font-size: 20rpx;
+  display: block;
+  color: #333;
+  margin-bottom: 20rpx;
+}
+.alpha{
+  font-size: 20rpx; 
+  color: #333;
+  display: block;
+  padding: 10rpx 30rpx;
+}
+.brand-list-item{
+  background: #fff;
+}
+.brand-items{
+  display: block;
+  flex: 1;
+  flex-direction: row;
+  border-bottom: 1px #f2f2f2 solid;
+  padding: 20rpx 0;
+}
+.brand-items image{
+  width: 50rpx;
+  height: 50rpx;
+  vertical-align: middle;
+  margin: 0 30rpx;
+}
+.brand-items text{
+  font-size: 20rpx; 
+  color: #333;
+}

@@ -1,0 +1,41 @@
+{
+  "pages":[
+    "pages/search/search",
+    "pages/home/home",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/template/itemtpl",
+    "pages/shelf/shelf",
+    "pages/detail/detail"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "百度小说",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar":{
+    "color":"#dddddd",
+    "selectedColor":"#3cc51f",
+    "borderStyle":"gray",
+    "backgroundColor":"#fff",
+    "list":[{
+      "pagePath":"pages/search/search",
+      "text":"搜索"
+    },{
+      "pagePath":"pages/home/home",
+      "text":"发现"
+    },
+    {
+      "pagePath":"pages/shelf/shelf",
+      "text":"书架"
+    }]
+  },
+  "networkTimeout":{
+    "request":3000,
+    "connectSocket":3000,
+    "uploadFile":3000,
+    "downloadFile":3000
+  },
+  "debug":true
+}

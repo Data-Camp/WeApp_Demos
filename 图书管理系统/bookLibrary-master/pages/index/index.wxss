@@ -1,0 +1,108 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.header-bg {
+  height: 90rpx;
+  width: 100%;
+  background-color: #fbf9fe;
+  position: fixed;
+}
+
+.book-content {
+  margin-top: 90rpx;
+}
+
+.search-bar {
+  z-index: 1;
+}
+
+.search-bar button {
+  height: 70rpx;
+  line-height: 70rpx;
+  width: 140rpx;
+  position: fixed;
+  top: 20rpx;
+  left: 585rpx;
+  font-size: 30rpx;
+  color: #fbf9fe;
+}
+
+.search-bar input {
+  background-color: #fff;
+  border-radius: 5px;
+  width: 480rpx;
+  height: 70rpx;
+  margin-top: 20rpx;
+  /*text-indent: 70rpx;*/
+  margin-bottom: 15rpx;
+  position: fixed;
+  top: 0;
+  left: 25rpx;
+  padding-left: 70rpx;
+}
+
+.input-placeholder {
+  font-size: 30rpx;
+}
+
+.book-list {
+  display: flex;
+  width: 93.3%;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  margin-top: 20rpx;
+  background-color: #fff;
+}
+
+.book-image {
+  flex: 0 0 32%;
+  box-sizing: border-box;
+  min-height: 242rpx;
+}
+
+.book-image image {
+  height: 242rpx;
+  width: 242rpx;
+}
+
+.book-info {
+  background-color: #fff;
+  flex: 0 0 66%;
+  box-sizing: border-box;
+  height: 242rpx;
+  margin-left: 20rpx;
+}
+
+.book-info-style {
+  height: 244rpx;
+  background-color: white;
+}
+
+.book-info-style view {
+  display: block;
+  font-size: 30rpx;
+  margin-bottom: 8rpx;
+  width: 460rpx;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-top: 8rpx;
+}
+
+.line {
+  width: 100%;
+  border: 1px solid #eee;
+}
+
+.weui-icon-search_in-box{
+  position: absolute;
+  top: 40rpx;
+  left: 40rpx;
+  z-index: 1;
+}

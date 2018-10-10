@@ -1,0 +1,45 @@
+<ion-modal-view>
+	<ion-content>
+		<div class="title-skyvow">
+			让精彩填满生活!
+		</div>
+		<div class="row">
+			<div class="col text-center margin-bottom-20" on-tap="app.onSelect('web.banner.list')">
+				<div class="btn-skyvow bg-purple">
+					<i class="fa fa-bookmark-o"></i>
+				</div>
+				<h6>图片管理</h6>
+			</div>
+			<div class="col text-center margin-bottom-20" on-tap="app.onSelect('web.classify.list')">
+				<div class="btn-skyvow bg-yellow">
+					<i class="fa fa-flag"></i>
+				</div>
+				<h6>分类管理</h6>
+			</div>
+			<div class="col text-center margin-bottom-20" on-tap="app.onSelect('web.goods.list')">
+				<div class="btn-skyvow bg-maroon">
+					<i class="fa fa-bars"></i>
+				</div>
+				<h6>商品管理</h6>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col text-center margin-bottom-20" on-tap="app.onSelect('web.order.list')">
+				<div class="btn-skyvow bg-mediumspringgreen">
+					<i class="fa fa-file"></i>
+				</div>
+				<h6>订单管理</h6>
+			</div>
+			<div class="col text-center margin-bottom-20" on-tap="app.onSelect('web.help.list')">
+				<div class="btn-skyvow bg-sienna">
+					<i class="fa fa-bookmark-o"></i>
+				</div>
+				<h6>帮助管理</h6>
+			</div>
+			<div class="col text-center margin-bottom-20"></div>
+		</div>
+	</ion-content>
+	<ion-footer-bar class="bar-stable">
+		<h1 class="title" on-tap="app.selectModal.close()">取消</h1>
+	</ion-footer-bar>
+</ion-modal-view>

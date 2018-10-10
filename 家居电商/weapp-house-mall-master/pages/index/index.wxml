@@ -1,0 +1,44 @@
+<!--index.wxml-->
+<import src="woshi/woshi.wxml"/> 
+<view class="nav">
+    <view class="list">
+            <block wx:for="{{goodsData}}" wx:key="index">
+                   <view class="item {{clas[index]}}" data-index="{{index}}" bindtap="xun">{{item.title}}</view>
+            </block>
+    </view>
+</view>
+<swiper class="swiper" indicator-dots="{{indicatorDots}}"
+      autoplay="{{autoplay}}" interval="{{interval}}"  duration="{{duration}}" current="{{current}}"
+      bindchange="switchs">
+      <swiper-item data-id="{{item}}">
+            <view class="banner">
+                  <swiper indicator-dots="true"
+                  autoplay="true" interval="5000"  duration="1000" >
+                  <block wx:for="{{bander}}" wx:key="index">
+                        <swiper-item>
+                              <image mode="aspectFill" wx:if="{{item.cid != 0}}" src="{{item.image}}" bindtap="todetail" id="{{item.cid}}"/>
+                              <image mode="aspectFill" wx:else src="{{item.image}}" id="{{item.cid}}"/>
+                        </swiper-item>
+                  </block>
+                  </swiper>
+            </view>
+            <view class="listMall">
+                  <block wx:for="{{IndexList}}" wx:key="index">
+                        <view bindtap="todetail" id="{{item.id}}" class="blocks">
+                        <view class="img"><image src="{{item.thumb}}" mode="aspectFill"/></view>
+                        <view class="name">{{item.title}}</view>
+                        <view>
+                              <text class="now_price">￥{{item.price}}</text>
+                        </view>
+                        </view> 
+                  </block>
+            </view>
+      </swiper-item>
+      <block wx:for="{{goodsData}}" wx:key="index">
+            <swiper-item data-id="{{item}}" wx:if="{{index>0}}">
+                  <template is="msgItem" data="{{item}}"/>
+            </swiper-item>
+      </block>
+</swiper>
+
+	

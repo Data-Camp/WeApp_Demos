@@ -1,0 +1,90 @@
+.userinfo {
+  margin-top:20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+/*顶部切换*/
+.swiper-tab{
+  padding:10px 0px;
+  height:30px;
+  line-height: 30px;
+  background: #FFF;
+  display: flex;
+  position: relative;
+  z-index: 3;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-tab-list{
+  color: #f85f48;
+  text-align: center;
+  border: 1px solid #f85f48;
+  margin:10px 0px;
+  padding:0 6px;
+  width: 60px; 
+  font-size: 28rpx; 
+  font-family: Helvetica, Arial, "Hiragino Sans GB", "Source Han Sans CN", "PingFang SC", Roboto, "微软雅黑", "Heiti SC", "Microsoft Yahei", sans-serif ;
+}
+.on{
+  color: #fff; 
+  background: #f85f48;
+}
+/*my*/
+.mobileListBorder{
+    margin-top:30px;
+}
+.main{
+    display:flex;
+    flex-wrap: wrap;
+}
+.subMain{
+    width:50%;
+    height:205px;
+}
+.subMainImage{
+    position: relative;
+    left:5px;
+}
+.downImage{
+    position: absolute;
+    height:180px;
+    width:180px;
+}
+.upImage{
+    position: absolute;
+    width:180px;
+    height:180px;
+}
+.images{
+    position: absolute;
+    width:156px;
+    height:158px;
+    top:10px;
+    left:12px;
+}
+.collectImage{
+    width:30px;
+    height:30px;
+    position: absolute;
+    right:25px;
+    top:20px;
+}
+.subMainText{
+    text-align: center;
+    font-size:14px;
+    color:#b2b2b2;
+    padding-top:180px; 
+}

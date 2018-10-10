@@ -1,0 +1,15 @@
+/**app.wxss**/
+page{
+	height: 100%;
+	background: #fff;
+	color: #333;
+  	display: flex;
+  	flex-direction: column;
+ 	font: normal 30rpx/1.68 -apple-system-font, 'Helvetica Neue', Helvetica, 'Microsoft YaHei', sans-serif;
+}
+.container {
+	flex: 1;
+  	display: flex;
+  	flex-direction: column;
+ 	box-sizing: border-box;
+}

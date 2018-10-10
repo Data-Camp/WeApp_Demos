@@ -1,0 +1,28 @@
+<view>
+    <scroll-view scroll-Y="true" scroll-X="false"> 
+        <swiper class="swiper" indicator-dots="{{indicatorDots}}"
+            autoplay="{{autoplay}}" interval="{{interval}}"  duration="{{duration}}" >
+            <block wx:for="{{[1]}}" wx:key="index">
+                <swiper-item>
+                    <image mode="scaleToFill" src="{{goods.thumb}}" />
+                </swiper-item>
+            </block>
+        </swiper>
+        <view class="title">{{goods.title}}</view>
+        <view class="price">￥{{goods.price}}</view>
+        <view class="info">
+            <!--<block wx:for="{{goods.description}}" wx:key="index">-->
+                <text>{{goods.description}}</text>
+           <!-- </block>-->
+        </view>
+    </scroll-view>
+    <view class="footer">
+      <view class="footer_box">
+        <text class="footer_num">购买数量</text> 
+        <view class="footer_select"><label id="reduce" bindtap="buyCount">-</label> <text>{{buyCount}}</text>  <label id="add" bindtap="buyCount">+</label></view>
+      </view>
+      <view class="footer_btn">
+        <text id="add" bindtap="buyCount">加入购物车</text><text bindtap="buyNow">立即购买</text>
+      </view>
+    </view>
+</view>

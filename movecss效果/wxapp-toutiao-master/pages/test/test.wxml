@@ -1,0 +1,49 @@
+<!--index.wxml-->
+<!-- <view class="container"> -->
+  <!-- <block  wx:for-items="{{list}}" wx:for-item="item">
+  <view class="list_item" data-id="{{item.id}}" data-title="{{item.title}}" data-time="{{item.time}}"  bindtap="clickHandler">
+    <image class="userinfo-avatar-img" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <view class="u-info">
+      <view>{{item.title}}</view>
+      <view class="u-time">{{item.time}}</view>
+    </view>
+  </view>
+</block>
+-->
+<!-- <view class="body-view">
+<toast hidden="{{toast1Hidden}}" bindchange="toast1Change">{{currentVal}}</toast>           bindscrolltolower="loadMore" bindscrolltoupper="refesh"
+<button type="default" bindtap="toast1Tap">点击弹出默认toast</button>
+</view>
+-->
+
+<!-- </view> -->
+<toast hidden="{{toast1Hidden}}" bindchange="toast1Change">{{currentVal}}</toast>
+<!-- <loading hidden="{{hidden}}" bindchange="loadingChange">
+    加载中...
+  </loading> -->  
+<scroll-view scroll-y="true" style="height: 100%;"  bindscrolltoupper="upper" bindscrolltolower="lower"  scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+  <block  wx:for-items="{{list}}" wx:for-item="item">
+    <navigator url="../detail/detail?id={{item.id}}&title={{item.nm}}">
+    <view class="list_item" data-id="{{item.id}}" data-title="{{item.title}}" data-time="{{item.time}}"  bindtap="clickHandler">
+      <image class="userinfo-avatar-img" src="{{item.img}}" background-size="cover"></image>
+      <view class="u-info">
+        <view>
+            {{item.nm}}   <template is="template"  />
+            <view wx:if="{{item['3d']}}"  class="is3d">3D</view> 
+        </view>
+        <view class="u-time">评分：{{item.sc}}</view> 
+        <view class="u-time">{{item.scm}}</view> 
+      </view>
+    </view>
+    </navigator>
+  </block>
+  <view class="tips1">
+      <view wx:if="{{hasMore}}" style="display: flex;  color:#999; flex-direction: row;align-items: center;align-self: center;justify-content: center;">
+      <icon type="waiting" size="30"/><text>玩命的加载中...</text></view>
+      <view wx:else style="display: flex; color:#999; padding:10px 0; flex-direction: row;align-items: center;align-self: center;justify-content: center;"><text>没有更多内容了</text></view>
+  </view>
+ </scroll-view>
+
+
+
+

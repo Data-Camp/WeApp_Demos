@@ -1,0 +1,41 @@
+<!--main.wxml-->
+<view>
+    <swiper class="swiper_box" indicator-dots="{{indicatorDots}}" vertical="{{vertical}}"
+            autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" bindchange="swiperchange">
+        <block wx:for="{{images}}">
+            <swiper-item bindtap="itemclick" data-id="{{item.img}}" data-name="{{item.name}}">
+                <image src="{{item.img}}" class="slide-image"/>
+            </swiper-item>
+        </block>
+    </swiper>
+</view>
+
+<!--nearby.wxml-->
+<scroll-view class="sv" scroll-y="true">
+    <view style="overflow:hidden;">
+      <view class="items" wx:for="{{array}}" wx:for-item="item" bindtap="typeclick"  data-code="{{item.code}}" data-text="{{item.text}}" >
+        <image class="item-img" mode="aspectFit" src="{{item.src}}"></image>
+        <view class="item-text">{{item.text}}</view>
+      </view>
+    </view>
+    <view class="data">
+      <text class="data-title">{{title}}</text>
+
+      <view  style="overflow:hidden;">
+        <view class="data-items" wx:for="{{dataArray}}" wx:for-item="item" wx:key="id" bindtap="openmap" 
+              data-lat="{{item.lat}}" data-lng="{{item.lng}}" data-name="{{item.name}}" data-address="{{item.address}}">
+          <image class="data-item-img" mode="aspectFit" src="{{item.img}}"></image>
+          <view class="data-item-text">
+            <view style="width:100%; font-size: 30rpx; padding:2rpx;">{{item.name}}</view>
+            <view style="width:100%; font-size: 25rpx; padding:2rpx;">{{item.address}}</view>
+            <view style="width:100%; font-size: 25rpx; padding:2rpx;">{{item.phone}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+
+  <loading hidden="{{loadingHidden}}">
+        加载中...
+  </loading>
+

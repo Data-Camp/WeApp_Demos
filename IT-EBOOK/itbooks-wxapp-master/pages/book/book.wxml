@@ -1,0 +1,29 @@
+<view class="container">
+    <loading hidden="{{hidden}}">加载中...</loading>
+    <view class="book-detail">
+        <image class="book-image" style="width:300px;height:393px;display:block;margin:10px auto;background-color: #eeeeee;" scaleToFill  src="{{info.Image}}"></image>
+        <view class="books-item-txt">
+            <view class="txt-title">
+                <text>{{info.Title}}</text>
+            </view>
+            <view>
+                <text style="color:#aaa;clear:both;">Published in {{info.Year}}</text>
+            </view>
+            <view class="txt-source">
+                <text>{{info.SubTitle}}</text>
+            </view>
+            <view class="books-item-author">
+                <image class="avatar" style="width:20px;height:20px;" aspectFit src="https://cdn1.iconfinder.com/data/icons/user-pictures/100/unknown-128.png"></image>
+                <view class="author-txt">
+                    <text style="margin-top:5px;">{{info.Author}}</text>
+                    
+                </view>
+            </view>
+        </view>
+
+        <navigator class="book-download" url="{{info.Download}}">
+            <icon type="download" size="30" class="download-icon"/>
+            <text>Download This Book</text>
+        </navigator>
+    </view>
+</view>

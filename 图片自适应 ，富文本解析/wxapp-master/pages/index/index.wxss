@@ -1,0 +1,34 @@
+.index{
+    background-color: #FBF9FE;
+    font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
+    flex: 1;
+    min-height: 100%;
+    font-size: 32rpx;
+}
+.head{
+    padding: 40rpx;
+    font-size: 40rpx;
+}
+.head__desc {
+    font-size: 32rpx;
+    margin-top: 15rpx;
+}
+.widget {
+    background-color: #fff;
+    padding: 40rpx;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+.widget__arrow{
+    width: 8px;
+    height: 16px;
+}
+.widget__line{
+    width: 100%;
+    height: 1rpx;
+    background: #dfdfdf;
+    position: absolute;
+    left: 0;
+    bottom: 1rpx;
+}

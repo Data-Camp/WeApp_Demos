@@ -1,0 +1,50 @@
+/*
+***HotApp云笔记，基于HotApp小程序统计云后台
+***免费云后台申请地址 https://weixin.hotapp.cn/cloud
+***API 文档地址：https://weixin.hotapp.cn/api
+***小程序技术讨论QQ群：173063969
+*/
+page{
+    height: 100%;
+}
+.container{
+    height: 100%;
+    flex-flow:column nowrap;
+    align-items:center;
+    justify-content: center;
+}
+.container .row{
+    width: 100%;
+}
+
+.text{
+    width: 90%;
+    height: 400rpx;
+    flex-shrink:1;
+    margin: 0 auto;
+    border-radius: 10rpx;
+    color: #999;
+    font-size: 14px;
+    padding: 10px;
+    background: #ffffff;
+    box-sizing: border-box;
+}
+.btn_box{
+    margin-top: 100rpx;
+}
+.submit{
+    width: 180px;
+    background: #fc8e5d;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    margin-top: 20px;
+}
+.version{
+    margin-top: 100rpx;
+}
+.version .txt{
+    text-align: center;
+    font-size: 14px;
+    color: #999;
+}

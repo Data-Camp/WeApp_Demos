@@ -1,0 +1,72 @@
+<view class="navbar">
+  <view class="navbar-item" wx:for="{{navbar}}" wx:for-index="idx" data-idx="{{idx}}" bindtap="swichNav">
+    <text class="navbar-text {{currentNavbar==idx ? 'active' : ''}}">{{item}}</text>
+  </view>
+</view>
+
+<!-- 推荐 -->
+<scroll-view class="hot-item-container {{currentNavbar==0 ? '' : 'hidden'}}" style="height: {{systemInfo.windowHeight}}px;"
+  scroll-y="true" bindscrolltolower="pullUpLoad">
+  <swiper indicator-dots="true" autoplay="true" interval="4000" duration="600"
+    style="height:{{systemInfo.windowWidth/2}}px">
+    <block wx:for="{{swipers}}">
+      <swiper-item>
+        <image src="{{item.pic}}" class="slide-image" width="750"/>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <view class="line-text">
+    编辑推荐
+  </view>
+
+  <block wx:for="{{list}}">
+    <view class="hot-item">
+      <view class="image-container" data-row-id="{{item.row_id}}" bindtap="onItemClick">
+        <image src="{{_api.HOST_WORK+item.pic.pid}}!app.c540.webp"
+          mode="scaleToFill" class="hot-image"
+          style="width:{{systemInfo.windowWidth}}px;height:{{systemInfo.windowWidth}}px">
+        </image>
+        <view class="item-mask">
+          <text class="hot-item-title">{{item.name}}</text>
+          <text class="hot-item-category">{{item.category}}{{item.size_label?' / '+item.size_label:''}}{{item.times?' / '+item.times:''}}</text>
+        </view>
+      </view>
+
+      <view class="hot-item-desc">
+        <image src="{{_api.HOST_HEAD+item.user.uid}}/180" class="hot-head-image"></image>
+        <view class="hot-item-detail">
+          <text class="hot-item-username">{{item.name}}</text>
+          <view class="hot-location">
+            <image src="../../images/location.png" class="hot-location-icon"></image>
+            {{item.user.city}}
+          </view>
+        </view>
+        <view class="hot-item-like">
+          <image src="../../images/like.png" class="hot-like-icon"></image>
+          {{item.num_liked}}
+        </view>
+      </view>
+    </view>
+  </block>
+</scroll-view>
+
+<!-- 最新 -->
+<scroll-view class="latest-item-container {{currentNavbar==1 ? '' : 'hidden'}}" style="height: {{systemInfo.windowHeight}}px;" scroll-y="true" bindscrolltolower="pullUpLoadLatest">
+  <block wx:for="{{latest_list}}" wx:for-index="idx">
+    <view wx:if="{{idx%3===0}}" class="latest-item">
+      <image src="{{_api.HOST_WORK+latest_list[idx].pic.pid}}!app.c360.webp" class="latest-image"
+        data-row-id="{{latest_list[idx].row_id}}" bindtap="onItemClick"
+        style="width:{{(systemInfo.windowWidth-2)/3}}px;height:{{(systemInfo.windowWidth-2)/3}}px;" mode="scaleToFill">
+      </image>
+      <image src="{{_api.HOST_WORK+latest_list[idx+1].pic.pid}}!app.c360.webp" class="latest-image"
+        data-row-id="{{latest_list[idx+1].row_id}}" bindtap="onItemClick"
+        style="width:{{(systemInfo.windowWidth-2)/3}}px;height:{{(systemInfo.windowWidth-2)/3}}px;" mode="scaleToFill">
+      </image>
+      <image src="{{_api.HOST_WORK+latest_list[idx+2].pic.pid}}!app.c360.webp" class="latest-image"
+        data-row-id="{{latest_list[idx+2].row_id}}" bindtap="onItemClick"
+        style="width:{{(systemInfo.windowWidth-2)/3}}px;height:{{(systemInfo.windowWidth-2)/3}}px;" mode="scaleToFill">
+      </image>
+    </view>
+  </block>
+</scroll-view>

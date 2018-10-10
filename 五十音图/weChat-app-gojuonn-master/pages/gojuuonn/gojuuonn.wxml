@@ -1,0 +1,29 @@
+<import src="../../widget/footTabBar.wxml"/>
+<view class="container">
+    <view class="mojicontainer" style="max-height:{{minHeight - 50}}px;">
+        <view class="mojidiv {{sannbunn?'sannbunn':''}}" wx:for="{{mojiList}}">
+            <view class="moji-gana" wx:if="{{hiraganaShow}}">{{item.hiragana}}</view>
+            <view class="moji-gana" wx:else>{{item.katakana}}</view>
+            <view class="moji-roomaji">{{item.roomaji}}</view>
+        </view>
+    </view>
+    <!--<text>{{fortest}}</text>-->
+    <!--模板拥有自己的作用域，只能使用data传入的数据-->
+    <!--体验了一下后 还是觉着此处不适用模板 组件化体验很差-->
+    <!--<template is="footTabBar" data="{{...forfoot}}"></template>-->
+
+    <view class="footTabBar">
+        <view class="tab-changeKANA" bindtap="changeKANA">
+            <text>{{changeKANAText}}</text>
+        </view>
+        <view class="tab-toSEIONN {{tabnow=='seionn'?'tabnow':''}}" bindtap="toSEIONN">
+            <text>清音</text>
+        </view>
+        <view class="tab-toDAKUONN {{tabnow=='dakuonn'?'tabnow':''}}" bindtap="toDAKUONN">
+            <text>浊音</text>
+        </view>
+        <view class="tab-toYOUONN {{tabnow=='youonn'?'tabnow':''}}" bindtap="toYOUONN">
+            <text>拗音</text>
+        </view>
+    </view>
+</view>

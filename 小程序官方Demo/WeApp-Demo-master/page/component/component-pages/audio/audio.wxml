@@ -1,0 +1,11 @@
+<view class="page">
+  <view class="page__hd">
+    <text class="page__title">audio</text>
+    <text class="page__desc">音频</text>
+  </view>
+  <view class="page__bd">
+    <view class="section section_gap" style="text-align: center;">
+      <audio src="{{current.src}}" poster="{{current.poster}}" name="{{current.name}}" author="{{current.author}}" action="{{audioAction}}" controls></audio>
+    </view>
+  </view>
+</view>

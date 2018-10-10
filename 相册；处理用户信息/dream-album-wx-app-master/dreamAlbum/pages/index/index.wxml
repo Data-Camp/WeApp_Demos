@@ -1,0 +1,36 @@
+<view class="weui-search-bar">
+    <view class="weui-search-bar__form">
+        <view class="weui-search-bar__box">
+            <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+            <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" bindblur="getKeywords" />
+            <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+                <icon type="clear" size="14"></icon>
+            </view>
+        </view>
+        <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+            <icon class="weui-icon-search" type="search" size="14"></icon>
+            <view class="weui-search-bar__text">搜索</view>
+        </label>
+    </view>
+    <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+</view>
+<!--快捷搜索-->
+<view class="kjss">
+    <text wx:for="{{kjsearchList}}" data-keyword="{{item}}" bindtap="searchKeyWordsFast" wx:key="kjsearchList" class="kjsousuo"> {{item}} </text>
+</view>
+<!--模版列表-->
+<view class="mobileListBorder">
+     <scroll-view scroll-y="true"  wx:if="{{items.length>0}}" style="height:400px;">
+        <view class="main">
+            <view wx:for="{{items}}" wx:key="{{itemsss}}" class="subMain">
+                <view class="subMainImage">
+                    <image src="../../image/background-down.png" class="downImage"/>
+                    <image src="../../image/background-up.png" class="upImage"/>
+                    <image class="images" data-albumid="{{item.id}}" src="{{item.cover}}" bindtap="previewImage" />
+                    <image src="../../image/collect.png" class="collectImage" bindtap="collectApi"/>
+                </view>
+                <view class="subMainText">{{item.title}}</view>
+            </view>
+        </view>
+    </scroll-view>
+</view>

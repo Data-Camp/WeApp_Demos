@@ -1,0 +1,10 @@
+<view class="main">
+    <view class="view-search">
+        <input class="input" placeholder-class="input-placeholder" placeholder="输入食材或菜名" bindinput="bindSearchInput" />
+        <image class="button" src="../../res/img/search.png" bindtap="tapSearch" />
+    </view>
+    <view class="request_null" >
+        <text hidden="{{nullHidden}}">没有搜索结果，搜索“红烧肉”试试？</text>
+    </view>
+    <loading hidden="{{loadingHidden}}">{{lodingInfo}}</loading>
+</view>

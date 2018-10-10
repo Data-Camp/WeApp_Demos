@@ -1,0 +1,30 @@
+<template name="homePagePageType4">
+  <view class="homePagePageType4View">
+    <image src="{{commonItems['0'].imgUrl}}" />
+  </view>
+</template>
+<template name="homePagePageType5">
+  <view class="homePagePageType5View">
+    <image src="{{commonItems['0'].imgUrl}}" />
+  </view>
+</template>
+<template name="homePagePageType6">
+  <view class="homePagePageType6View">
+    <image src="{{commonItems['0'].imgUrl}}" />
+  </view>
+</template>
+<template name="homePagePageType7">
+  <view class="homePagePageType7View">
+    <view class="goods_view" wx:for="{{commonItems}}" wx:for-item="item">
+      <image src="{{item.imgUrl}}" />
+      <view class="goods_text">
+        <view class="goods_name">{{item.goodsName}}</view>
+        <view class="goods_marketPrice">￥{{item.marketPrice}}</view>
+        <view class="goods_price">￥{{item.price}}</view>
+        <view class="addToCartImage">
+          <image src="../../images/newgoodssel@2x.png" />
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

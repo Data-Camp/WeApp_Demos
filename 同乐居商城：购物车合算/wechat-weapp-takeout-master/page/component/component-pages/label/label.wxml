@@ -1,0 +1,40 @@
+<view class="page">
+  <view class="page__hd">
+    <text class="page__title">label</text>
+    <text class="page__desc">标签</text>
+  </view>
+  <view class="page__bd">
+    <view class="section section_gap">
+      <view class="section__title">表单组件在label内</view>
+      <checkbox-group class="group" bindchange="checkboxChange">
+        <view class="label-1" wx:for="{{checkboxItems}}">
+          <label>
+            <checkbox value="{{item.name}}" checked="{{item.checked}}"></checkbox>
+            <text class="label-1__text">{{item.value}}</text>
+          </label>
+        </view>
+      </checkbox-group>
+    </view>
+
+    <view class="section section_gap">
+      <view class="section__title">label用for标识表单组件</view>
+      <radio-group class="group" bindchange="radioChange">
+        <view class="label-2" wx:for="{{radioItems}}">
+          <radio id="{{item.name}}" value="{{item.name}}" checked="{{item.checked}}"></radio>
+          <label class="label-2__text" for="{{item.name}}"><text>{{item.name}}</text></label>
+        </view>
+      </radio-group>
+    </view>
+
+    <view class="section section_gap">
+      <view class="section__title">label内有多个时选中第一个</view>
+      <label class="label-4">
+        <checkbox> 选中我 </checkbox>
+        <checkbox> 选不中 </checkbox>
+        <checkbox> 选不中 </checkbox>
+        <checkbox> 选不中 </checkbox>
+        <view class="label-4_text">点我会选中第一个</view>
+      </label>
+    </view>
+  </view>
+</view>

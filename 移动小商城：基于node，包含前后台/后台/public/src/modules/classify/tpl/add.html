@@ -1,0 +1,24 @@
+<ion-view view-title="添加分类">
+	<ion-content ng-class="{'no-footer': tabsHidden}">
+		<form name="form" ng-submit="vm.submitForm(form.$valid)" novalidate>
+			<div class="weui-cells weui-cells_form">
+		        <div class="weui-cell">
+		            <div class="weui-cell__hd">
+		            	<label class="weui-label">名称</label>
+		            </div>
+		            <div class="weui-cell__bd">
+		                <input name="name" class="weui-input" type="text" placeholder="名称" ng-model="vm.form.name" required>
+		            </div>
+		        </div>
+		        <div class="weui-cell">
+		            <div class="weui-cell__bd">
+		                <textarea name="remark" class="weui-textarea" placeholder="简介" rows="6" ng-model="vm.form.remark" required></textarea>
+		            </div>
+		        </div>
+		    </div>
+		    <div class="weui-btn-area">
+		        <button type="submit" class="weui-btn weui-btn_primary">保存</button>
+		    </div>
+	    </form>
+	</ion-content>
+</ion-view>

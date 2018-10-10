@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/popular/popular",
+    "pages/coming/coming",
+    "pages/top/top",
+    "pages/search/search",
+    "pages/filmDetail/filmDetail",
+    "pages/personDetail/personDetail",
+    "pages/searchResult/searchResult"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#47a86c",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText":  "电影推荐",
+    "backgroundColor": "#fff",
+    "backgroundTextStyle": "dark"
+  },
+  "tabBar": {
+    "color": "#686868",
+    "selectedColor": "#47a86c",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "list": [{
+      "pagePath": "pages/popular/popular",
+      "iconPath": "dist/images/popular_icon.png",
+      "selectedIconPath": "dist/images/popular_active_icon.png",
+      "text": "热映"
+    }, {
+      "pagePath": "pages/coming/coming",
+      "iconPath": "dist/images/coming_icon.png",
+      "selectedIconPath": "dist/images/coming_active_icon.png",
+      "text": "待映"
+    },{
+      "pagePath": "pages/search/search",
+      "iconPath": "dist/images/search_icon.png",
+      "selectedIconPath": "dist/images/search_active_icon.png",
+      "text": "搜索"
+    },
+    {
+      "pagePath": "pages/top/top",
+      "iconPath": "dist/images/top_icon.png",
+      "selectedIconPath": "dist/images/top_active_icon.png",
+      "text": "口碑"
+    }]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

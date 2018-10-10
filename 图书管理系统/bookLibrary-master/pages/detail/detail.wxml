@@ -1,0 +1,49 @@
+<view class="content" wx:if="{{isLoading}}">
+    <view class="book-content">
+        <view>
+            <view class="book-list">
+                <view class="book-image">
+                    <image src="{{bookMsg.image}}" mode="aspectFit"></image>
+                </view>
+                <view class="book-info">
+                    <view class="book-info-style">
+                        <view>书名:{{bookMsg.title}}</view>
+                        <view>作者:{{bookMsg.author}}\n</view>
+                        <view>价格:{{bookMsg.price}}\n</view>
+                        <view>出版信息:{{bookMsg.publisher}}\n</view>
+                        <view wx:if="{{!showAddBook}}">可借数量:{{bookMsg.qty}}\n</view>
+
+                        <view class="add-book-container" wx:if="{{showAddBook}}">
+                            <label>录入数量：</label>
+                            <input class="add-book-qty" value="{{addBookQty}}" bindchange="inputChange"/>
+                        </view>
+
+                    </view>
+
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="space-line-30"></view>
+    <scroll-view scroll-y="true" class="scroll-content" style="height:{{windowHeight*0.66}}px">
+        <view class="book-intro">
+            <text class="book-title">内容推荐</text>
+            <text class="book-msg">{{bookMsg.summary}}</text>
+        </view>
+        <view class="space-line-30"></view>
+        <view class="book-intro">
+            <text class="book-title">作者简介</text>
+            <text class="book-msg">{{bookMsg.author_intro}}</text>
+        </view>
+        <view class="space-line-30"></view>
+        <view class="book-intro">
+            <text class="book-title">目录</text>
+            <text class="book-msg">{{bookMsg.catalog}}</text>
+        </view>
+        <view class="btn-area">
+            <button type="primary" size="default" wx:if="{{showBorrowBtn}}" bindtap="borrowBook">借阅</button>
+            <button type="primary" size="default" wx:if="{{showBookBtn}}">预约</button>
+            <button type="primary" size="default" wx:if="{{showAddBook}}" bindtap="addBook">录入</button>
+        </view>
+    </scroll-view>
+</view>

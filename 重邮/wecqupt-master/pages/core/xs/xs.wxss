@@ -1,0 +1,386 @@
+/**xs.wxss**/
+
+.container {
+    background: #f7f7f7;
+    padding: 0;
+}
+.container.home{
+    align-items: center;
+}
+
+/**首屏**/
+.home .xs-logo {
+    width: 180rpx;
+    height: 180rpx;
+    opacity: .9;
+    margin: 100rpx 0 75rpx;
+}
+.home .search-input{
+    position: relative;
+    display: flex;
+    width: 92%;
+    margin: 0 4%;
+    height: 75rpx;
+    box-shadow: 5rpx 5rpx 15rpx #e2e2e2;
+    transition: all .15s ease-in-out;
+}
+.home .search-input:focus{
+    box-shadow: 5rpx 5rpx 20rpx #d2d2d2;
+}
+.home .search-icon-box{
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 20rpx;
+    width: 38rpx;
+    height: 38rpx;
+    margin-top: -16rpx;
+}
+.home .input-form{
+    position: relative;
+    background: #fff;
+    flex: 1;
+    display: flex;
+    height: 100%;
+    padding-right: 110rpx;
+}
+.home .input-text{
+    position: absolute;
+    left: 0;
+    right: 0;
+    flex: 1;
+    display: flex;
+    height: 100%;
+    padding: 0 160rpx 0 70rpx;
+    font-size: 11pt;
+    line-height: 150%;
+}
+.input-placeholder {
+    color: #ccc;
+    font-size: 11pt;
+    line-height: 150%;
+}
+button{
+    font-size: 11pt;
+    background: transparent;
+    line-height: 150%;
+    border-radius: 0;
+    padding: 0;
+    border: none;
+}
+button::after{
+    display: none;
+}
+.home .input-clear-button{
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    right: 115rpx;
+    padding: 15rpx;
+    margin-top: -30rpx;
+}
+.home .input-clear-button:active{
+    opacity: .8;
+}
+.home .clear-icon{
+    width: 30rpx;
+    height: 30rpx;
+}
+.home .input-confirm-button{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    height: 75rpx;
+    width: 110rpx;
+    background: #9f8bea;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+}
+.home .input-confirm-button:active{
+    opacity: .8;
+}
+
+/* ==========================================================================
+   header
+ ============================================================================ */
+.header {
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.active .header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 85rpx;
+    background-color: #fff;
+}
+.active .xs-logo{
+    display: none;
+}
+/* search-input
+ ============================================================================ */
+.active .search-input {
+
+    position: absolute;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 85rpx;
+}
+    .active .search-icon-box{
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 20rpx;
+        height: 85rpx;
+    }
+    .active .input-form {
+        flex: 1;
+        display: flex;
+        position: relative;
+        height: 85rpx;
+    }
+    .active .input-text {
+        
+        flex: 1;
+        position: absolute;
+        left: 0;
+        right: 0;
+        font-size: 11pt;
+        line-height: 150%;
+        box-sizing: border-box;
+        width: 100%;
+        height: 85rpx;
+        padding: 0 180rpx 0 70rpx;
+    }
+    .active .input-clear-button{
+        position: absolute;
+        top: 0;
+        right: 105rpx;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 20rpx;
+        height: 85rpx;
+        opacity: .95;
+    }
+    .active .input-clear-button .clear-icon{
+        width: 30rpx;
+        height: 30rpx;
+    }
+    .active .input-confirm-button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 20rpx 0 10rpx;
+        height: 85rpx;
+        opacity: .95;
+    }
+    .active .input-confirm-button text{
+        font-size: 10pt;
+        background: #9f8bea;
+        color: #fff;
+        border-radius: 3px; 
+        padding: 3rpx 15rpx;
+    }
+    .active .input-confirm-button:active{
+        opacity: .8;
+    }
+/* search-state
+ ============================================================================ */
+.search-state {
+
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}   
+    .search-icon {
+
+        width: 30rpx;
+        height: 30rpx;
+    }
+    .state-text {
+        
+        margin-left: 20rpx;
+        color: #b1b1b1;
+        text-align: center;
+    }
+
+/* ==========================================================================
+   search-message
+ ============================================================================ */
+.search-message {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100rpx;
+}
+    .message-title {
+
+        color: #aaa;
+    }
+
+/* ==========================================================================
+   main
+ ============================================================================ */
+ .main {
+
+    display: flex;
+    width: 100%;
+    flex-flow: column nowrap;
+    overflow: hidden;
+    margin-top: 85rpx;
+ }
+  /* main-title
+ ============================================================================ */
+.main-title {
+
+    flex: 1;
+    margin: 35rpx 0 20rpx 25rpx;
+}
+    .title-text {
+        color: #999;
+    }
+  /* main-list
+ ============================================================================ */
+.main-list {
+
+    display: flex;
+    flex: 1;
+    flex-flow: column nowrap;
+    align-items: stretch;
+}
+    .list-item {
+
+        display: flex;
+        margin-bottom: 20rpx;
+        padding: 0 20rpx;
+        flex-flow: column nowrap;
+        align-items: stretch;
+        background-color: #fff;
+        font-size: 11pt;
+    }
+  /* main-list > item
+ ============================================================================ */
+.item {
+
+    display: flex;
+    padding: 20rpx;
+    padding-right: 0;
+    align-items: center;
+}
+    .item-content {
+
+        flex: 1;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        align-items: center;
+    }
+        .item-content-image {
+            
+            display: flex;
+            width: 100rpx;
+            height: 100rpx;
+        }
+        .item-content-state {
+
+            margin-left: 20rpx;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-content: flex-start;
+        }
+            .content-state-name {
+                font-size: 12pt;
+                line-height: 175%;
+                letter-spacing: 1px;
+            }
+                .state-name-active {
+                    color: #8271bf;
+                }
+            .content-state-stuId {
+
+                color: #999;
+            }
+  /* main-list > item > list-sign
+ ============================================================================ */
+.list-sign {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    .list-sign-icon {
+
+        width: 30rpx;
+        height: 30rpx;
+        padding: 20rpx;
+        transition: transform .2s;
+        transform: rotate(0deg);
+    }
+    .list-sign-icon-show {
+
+        transform: rotate(180deg);
+    }
+  /* main-list > item > item-ul
+ ============================================================================ */
+.item-ul {
+    
+    display: flex;
+    flex: 1;
+    flex-flow: column nowrap;
+    padding: 10rpx 30rpx 15rpx;
+    overflow: hidden;
+}
+    .item-ul-li {
+
+        display: flex;
+        border-top: 1px solid #eee;
+        padding: 25rpx 5rpx 20rpx;
+    }
+        .ul-li-label {
+            
+            color: #888;
+            width: 48pt;
+        }
+
+        .ul-li-content {
+
+            flex: 1;
+        }
+
+        .ul-li-kb {
+
+            /*background: url('/images/core/kb.png') no-repeat;*/
+            /*微信暂不支持静态bgimg文件，改用服务器url*/
+            background: url('https://we.cqu.pt/app/images/core/kb.png') no-repeat;
+            background-size: 30rpx 30rpx;
+            background-position: 0 50%;
+            color: #888;
+            font-size: 10pt;
+            padding-left: 40rpx;
+        }
+            
+            
+
+
+

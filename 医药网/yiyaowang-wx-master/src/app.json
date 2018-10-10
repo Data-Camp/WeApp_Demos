@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/category/category",
+    "pages/cart/cart"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#f5f5f5",
+    "navigationBarTitleText": "壹药网",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar":{
+    "color": "#515151",
+    "selectedColor":"#ff6666",
+    "borderStyle":"white",
+    "backgroundColor":"#f5f5f5",
+    "list":[{
+      "pagePath":"pages/home/home",
+      "text":"首页",
+      "iconPath": "images/navigation_homebutton_normal.png",
+      "selectedIconPath": "images/navigation_homebutton_press.png"
+      },
+      {
+        "pagePath":"pages/category/category",
+        "text":"分类",
+        "iconPath": "images/navigation_typebutton_normal.png",
+        "selectedIconPath": "images/navigation_typebutton_press.png"
+      },
+      {
+        "pagePath":"pages/cart/cart",
+        "text":"购物车",
+        "iconPath": "images/navigation_cartbutton_normal.png",
+        "selectedIconPath": "images/navigation_cartbutton_press.png"
+      }
+    ]
+  }
+}

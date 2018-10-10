@@ -1,0 +1,50 @@
+<modal title="" confirm-text="" no-cancel="true" hidden="{{modalHidden}}" bindconfirm="modalChange">
+  <button>标记未读</button>
+  <button>取消关注</button>
+  <button>删除该聊天</button>
+</modal>
+<loading hidden="{{hidden}}">
+    加载中...
+</loading>
+<toast hidden="{{toast1Hidden}}" bindchange="toast1Change">
+    {{toastText}}
+</toast>
+<scroll-view scroll-y="true">
+  <view wx:if="{{!list}}">
+    请检查服务器，设置IP地址为无线下IP
+    <view>下载本小程序server例子获取数据https://github.com/liujians/weApp-server</view>
+  </view>
+  <view class="item-avatar-md" wx:for="{{list}}" wx:for-item="i" wx:for-index="index" data-index="{{index}}" data-name="{{i.name}}" data-id="{{i.id}}" bindtap="goPage">
+      <!--<view catchlongtap="modalTap" style="width:100%;">-->
+          <view class="marks" wx:if="{{i.count}}">
+            <text>{{i.count}}</text>
+          </view>
+          <image src="{{i.img}}"></image>
+          <view class="item-text">
+            <view class="text_box">
+              <view class="flex">
+                <text class="title">{{i.name}}</text>
+              </view>
+              <view class="flex">
+                <text class="message">{{i.message}}</text>
+              </view>
+            </view>
+          </view>
+          <view class="item-time padding_half">
+            <text class="message">{{i.time}}</text>
+          </view>
+      <!--</view>-->
+      
+  </view>
+  <!--<view class="weui-grids">
+    <view class="weui-grid"><view class="weui-btn weui-btn_primary">1111</view></view>
+    <view class="weui-grid"><view class="weui-grid_label">1</view></view>
+    <view class="weui-grid"><view class="weui-grid_label">1</view></view>
+  </view>-->
+  <!--<view class="list list-inset">
+    <view class="item item-input">
+      <text class="icon ion-search placeholder-icon"></text>
+      <input placeholder="Search" />
+    </view>
+  </view>-->
+</scroll-view>

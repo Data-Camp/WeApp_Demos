@@ -1,0 +1,48 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+.showView{
+  height: 150rpx;
+  width: 150rpx;
+  background-color: orangered;
+}
+.head{
+    margin-top: 40;
+    padding: 50rpx;
+    line-height: 1;
+}
+.body{
+    padding-left: 30rpx;
+    padding-right: 30rpx;
+    overflow: hidden;
+}
+.bigTitle{
+    font-size: 52rpx;
+    padding-left:  30rpx;
+    padding-right: 30rpx;
+    position: center;
+}
+.title{
+    font-size: 52rpx;
+}
+.desc{
+    margin-top: 10rpx;
+    color: #888888;
+    font-size: 28rpx;
+    padding-left:  30rpx;
+    padding-right: 30rpx;
+}
+.icon{
+    width: 80rpx;
+    height: 80rpx;
+    margin-top: 20;
+    margin-bottom:10; 
+}
+

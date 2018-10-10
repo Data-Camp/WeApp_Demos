@@ -1,0 +1,74 @@
+<view class="container">
+	<view class="container-body container-gray" style="display:{{showfootertab==0?'block':'none'}}">
+		<view class="group">
+			<view class="group-header">问题描述</view>
+			<view class="group-body">
+				<textarea placeholder="请输入对问题的描述，可输入1000字" maxlength="1000"></textarea>
+			</view>
+			<view class="group-header">上传图片</view>
+			<view class="group-body">
+				<view class="img-upload">
+					<view class="img-add" bindtap="chooseImage"></view>
+					<view class="img-item" bindlongtap="editImage" wx:for="{{uploadimgs}}" wx:key="{{index}}">
+						<icon type="clear" size="20" color="red" style="display:{{editable?'block':'none'}}" bindtap="deleteImg" data-index="{{index}}"/>
+						<image src="{{item}}" mode="aspectFill"></image>
+					</view>
+				</view>
+			</view>
+			<view class="group-header">联系信息</view>
+			<view class="group-body">
+				<view class="input-list">
+					<view class="input-item">
+						<text class="input-item-label">联系人</text>
+						<view class="input-item-content">
+							<input type="text" auto-focus placeholder="请输入您的姓名" bindinput="inputName"></input>
+						</view>
+					</view>
+					<view class="input-item">
+						<text class="input-item-label">手机号码</text>
+						<view class="input-item-content">
+							<input type="idcard" placeholder="请输入您的手机号码" maxlength="11" bindinput="inputPhone"></input>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+		<view class="btn-submit">
+			<button class="btn-block btn-orange" bindtap="questionSubmit">确认提交</button>
+		</view>
+		<view class="question-text">
+			<text>如问题无法简单描述清楚</text>
+			<text>可以直接拨打电话</text>
+			<text>我们将第一时间为您答疑解惑</text>
+			<view bindtap="callContact" data-phonenumber="400-1234-567">400-1234-567</view>
+		</view>
+	</view>
+	<view class="container-body container-gray" style="display:{{showfootertab==1?'block':'none'}}">
+		<view class="tab">
+			<view class="tab-nav">
+				<text wx:for="{{tabnav.tabitem}}" bindtap="setTab" class="{{showtab==index?'active':''}}" data-tabindex="{{index}}" data-type="{{item.type}}" wx:key="{{item.type}}">{{item.text}}</text>
+				<view class="tab-line" style="width:{{100/tabnav.tabnum}}%;transform:translateX({{100*showtab}}%);"></view>
+			</view>
+			<view class="tab-content">
+				<view class="tab-panel">
+					<view class="question-list">
+						<view class="question-item {{showquestionindex==index?'active':''}}" wx:for="{{questions}}" wx:key="{{item.id}}" bindtap="foldQuestion" data-qindex="{{index}}">
+							<view class="question-item-q">{{item.q}}类型：{{item.type}}</view>
+							<view class="question-item-a">{{item.a}}</view>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="footer-tab footer-tab-widthicon">
+		<view class="footer-tab-item {{showfootertab==0?'active':''}}" data-index="0" bindtap="showTab">
+			<image src="../../images/{{showfootertab==0?'xinxifill':'xinxi'}}.png" mode="aspectFit"></image>
+			<text>问题反馈</text>
+		</view>
+		<view class="footer-tab-item {{showfootertab==1?'active':''}}" data-index="1" bindtap="showTab">
+			<image src="../../images/{{showfootertab==1?'wenhaofill':'wenhao'}}.png" mode="aspectFit"></image>
+			<text>常见问题</text>
+		</view>
+	</view>
+</view>

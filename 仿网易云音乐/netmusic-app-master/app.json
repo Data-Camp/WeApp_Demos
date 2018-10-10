@@ -1,0 +1,56 @@
+{
+  "pages": [
+   "page/component/index",
+   "page/component/playlist/index",
+   "page/component/mv/index",
+   "page/component/playing/index",
+   "page/component/login/index",
+   "page/component/fm/index",
+   "page/component/toplist/index",
+   "page/component/recommend/index",
+   "page/component/search/index",
+   "page/component/album/index",
+   "page/component/home/index",
+   "page/component/artist/index"
+],
+  "window": {
+    "navigationBarTextStyle": "#fff",
+    "navigationBarTitleText": "Music",
+    "backgroundColor": "#fbfcfd",
+    "navigationBarBackgroundColor":"#BB2C08"
+  },
+  "tabBar": {
+    "color": "#aaa",
+    "selectedColor": "#fff",
+    "borderStyle": "#333",
+    "backgroundColor": "#212121",
+    "list": [{
+      "pagePath": "page/component/index",
+      "iconPath": "image/cm2_btm_icn_discovery.png",
+      "selectedIconPath": "image/cm2_btm_icn_discovery_prs.png",
+      "text":"发现音乐"
+    },{
+      "pagePath":"page/component/fm/index",
+      "iconPath": "image/cm2_btm_icn_radio.png",
+      "selectedIconPath": "image/cm2_btm_icn_radio_prs.png",
+      "text":"私人Fm"
+    },{
+      "pagePath": "page/component/home/index",
+      "iconPath": "image/cm2_btm_icn_music.png",
+      "selectedIconPath": "image/cm2_btm_icn_music_prs.png",
+      "text":"我的音乐"
+    },{
+      "pagePath": "page/component/search/index",
+      "iconPath": "image/cm2_btm_icn_account.png",
+      "selectedIconPath": "image/cm2_btm_icn_account_prs.png",
+      "text":"账号"
+    }]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

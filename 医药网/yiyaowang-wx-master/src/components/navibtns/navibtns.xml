@@ -1,0 +1,8 @@
+<view class="navibtns">
+  <block wx:for="{{props.itemArr}}" wx:key= "{{item.index}}">
+    <view class="navi-item">
+      <image src={{item.pic}} />
+      <text>{{item.title}}</text>
+    </view>
+  </block>
+</view>

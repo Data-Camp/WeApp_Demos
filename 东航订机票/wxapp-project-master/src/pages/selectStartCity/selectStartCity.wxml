@@ -1,0 +1,49 @@
+<view class="container">
+
+  <view class="nav" bindtap="handleTapEvent" >
+    <view class="home {{currentIndex==0?'active':''}}" data-index="0">国内</view>
+    <view class="abroad {{currentIndex==1?'active':''}}" data-index="1">国际</view>
+    <view class="abroad {{currentIndex==2?'active':''}}" data-index="2">港澳台</view>
+  </view>
+
+  <view class="wrapCity">
+    <swiper current="{{currentIndex}}" duration="100"  bindchange="handleChangeEvent">
+      <swiper-item>
+        <scroll-view scroll-y="true" scroll-into-view="{{letterId}}">
+          <view class="cityList">
+            <block wx:for="{{lettersCh}}" wx:key="*this"  wx:for-item='le'>
+              <view class="letterList" id="{{le+'0'}}">{{le}}</view>
+              <view wx:for="{{cityItems['国内'][le]}}" wx:key="name" wx:for-item='ct'  bindtap="bindChangeCity" data-city="{{ct.name}}">{{ct.name}}</view>
+            </block>
+          </view>
+        </scroll-view>
+      </swiper-item>
+      <swiper-item>
+        <scroll-view scroll-y="true" scroll-into-view="{{letterId}}">
+          <view class="cityList">
+            <block wx:for="{{lettersIt}}" wx:key="*this"  wx:for-item='le'>
+              <view class="letterList" id="{{le+'1'}}">{{le}}</view>
+              <view wx:for="{{cityItems['国际'][le]}}" wx:key="name" wx:for-item='ct' bindtap="bindChangeCity" data-city="{{ct.name}}">{{ct.name}}</view>
+            </block>
+          </view>
+        </scroll-view>
+      </swiper-item>
+      <swiper-item>
+          <scroll-view scroll-y="true" scroll-into-view="{{letterId}}">
+            <view class="cityList">
+              <block wx:for="{{lettersHmw}}" wx:key="*this"  wx:for-item='le'>
+                <view class="letterList" id="{{le+'2'}}">{{le}}</view>
+                <view wx:for="{{cityItems['港澳台'][le]}}" wx:key="name" wx:for-item='ct' bindtap="bindChangeCity" data-city="{{ct.name}}">{{ct.name}}</view>
+              </block>
+            </view>
+          </scroll-view>
+        </swiper-item>
+    </swiper>
+  </view>
+
+  <view class="toolBar">
+    <scroll-view scroll-y="true">
+      <view wx:for="{{letters}}" wx:key="*this" wx:for-item="le" bindtap="handleLetterTap" data-id="{{le}}">{{le}}</view>
+    </scroll-view>
+  </view>
+</view>

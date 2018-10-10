@@ -1,0 +1,16 @@
+<!--index.wxml-->
+<scroll-view scroll-y="true" class="tm container">
+    <view class="m" wx:for="{{plist}}" bindtap="go" id="{{index}}">
+        <text class="m-name">机器名称: {{item.sys.hostname}}</text>
+        <view class="m-data">
+            <view class="m-data-left">
+                <label class="m-data-top-left">CPU: <text class="m-green">{{item.sys.cpus.percent}}</text></label>
+                <label class="m-data-top-right">MEM: <text class="m-green">{{item.sys.mem.percent}}</text></label>
+            </view>
+            <view class="m-data-right">
+                <label class="m-data-top-left">负载: <text class="m-green">{{item.sys.load[0]}}, {{item.sys.load[1]}}, {{item.sys.load[2]}}</text></label>
+                <label class="m-data-top-right">进程数: <text class="m-green">{{item.procs.length}}</text></label>
+            </view>
+        </view>
+    </view>
+</scroll-view>

@@ -1,0 +1,21 @@
+{
+  "pages": [
+    "pages/main/main",
+    "pages/specific/specific",
+    "pages/post/post"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fbf9fe",
+    "navigationBarTitleText": "干货集中营",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#fbf9fe"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

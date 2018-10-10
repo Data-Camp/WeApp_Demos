@@ -1,0 +1,86 @@
+
+scroll-view{
+    margin-bottom: 100px;
+}
+swiper{
+    height: 500rpx;
+}
+swiper-item image{
+  width:100%;
+  height: 500rpx;
+}
+.title{
+    font-size: 32rpx;
+    color: #333333;
+    padding: 20rpx 20rpx 0 20rpx;
+}
+.price{
+    font-size: 40rpx;
+    color: #F98809;
+    margin: 20rpx 20rpx 0rpx 20rpx;
+    padding: 0 0 20rpx 0;
+    border-bottom: 1rpx solid silver;
+}
+.info{
+    margin-top: 15rpx;
+    display: flex;
+    flex-flow: column;
+}
+.info text{
+    margin: 10rpx 20rpx ;
+    font-size: 25rpx;
+    color: #9B9B9B;
+}
+.footer{
+    background-color: #fff;
+    border-top:1px solid #eee;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 10rpx 0 0 0;
+}
+.footer_box{
+    width: 90%;
+    height: 80rpx;
+    line-height: 80rpx;
+    margin: 0 20rpx 20rpx 20rpx;
+}
+.footer_num{
+    color: #484848;
+    font-size: 30rpx;
+    width: 30%;
+    float: left;
+}
+.footer_select{
+    float: right;
+
+}
+.footer_select label{
+    background-color: #EEECEC;
+    text-align: center;
+    width: 90rpx;
+    display: block;
+    float: left;
+}
+.footer_select text{
+    display: block;
+    float: left;
+    margin: 0 50rpx;
+}
+.footer_btn{
+    width: 100%;
+    height: 80rpx;
+    line-height: 80rpx;
+}
+.footer_btn text{
+    width: 50%;
+    text-align: center;
+    float: left;
+    background: #f55d02;
+    color: #fff;
+}
+.footer_btn text:last-child{
+    background: #f5b223;
+}

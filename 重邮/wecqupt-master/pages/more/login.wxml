@@ -1,0 +1,58 @@
+<!--login.wxml-->
+<view class="container">
+  <view class="remind-box" wx:if="{{remind}}">
+    <image class="remind-img" src="/images/index/loading.gif"></image>
+  </view>
+  <block wx:else>
+    <image class="title" src="/images/more/title.png"></image>
+    <view class="content">
+      <view class="hd" style="transform:rotateZ({{angle}}deg);">
+          <image class="logo" src="/images/more/logo.png"></image>
+          <image class="wave" src="/images/more/wave.png" mode="aspectFill"></image>
+          <image class="wave wave-bg" src="/images/more/wave.png" mode="aspectFill"></image>
+      </view>
+      <view class="bd">
+        <form class="login-form">
+          <view class="input-group {{userid_focus ? 'active' : ''}}">
+            <text class="input-label">帐号</text>
+            <input type="number" id="userid" maxlength="7" placeholder="请输入统一认证码" bindinput="useridInput" bindfocus="inputFocus" bindblur="inputBlur" />
+          </view>
+          <view class="input-group {{passwd_focus ? 'active' : ''}}">
+            <text class="input-label">密码</text>
+            <input password="true" id="passwd" placeholder="初始密码为身份证后6位" bindinput="passwdInput" bindfocus="inputFocus" bindblur="inputBlur" />
+          </view>
+          <view class="login-help" bindtap="showHelp">
+            <text>帮助</text>
+            <image class="login-help-img" src="/images/more/help.png"></image>
+          </view>
+        </form>
+        <view class="confirm-btn" bindtap="bind">
+            <text>确认绑定</text>
+        </view>
+      </view>
+
+      <view class="help" id="help" wx:if="{{help_status}}" bindtap="tapHelp">
+        <view class="box">
+          <view class="box-hd">
+            <text class="box-title">帮助</text>
+            <image class="box-close" src="/images/more/close.png" bindtap="hideHelp"></image>
+          </view>
+          <view class="box-bd">
+            <view class="help-q">1、帐号和密码是什么？</view>
+            <view class="help-a">
+              <text>帐号：统一认证码（校园一卡通卡号）</text>
+              <text>密码：初始密码或者已更改密码</text>
+              <text>其中初始密码与个人身份证号码相关，采用以下规则：①身份证号码：取最后6位作为密码；②身份证号码最后一位是x的默认大写；③无居民身份证的人员（如国外留学生等），密码与统一认证码相同</text>
+            </view>
+            <view class="help-q">2、忘记密码？</view>
+            <view class="help-a">
+              <text>请访问统一身份认证平台（https://ids.cqupt.edu.cn）进行忘记密码操作</text>
+            </view>
+          </view>
+        </view>
+      </view>
+
+    </view>
+  </block>
+
+</view>

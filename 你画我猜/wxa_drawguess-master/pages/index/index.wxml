@@ -1,0 +1,41 @@
+<view class="root">
+    <view class="line">
+        <text>综合示例</text>
+        <view class="line-control">
+            <view bindtap="openChat" class="item"><view class="item-inner">三木聊天室</view></view>
+            <view bindtap="openDrawguess" class="item"><view class="item-inner">你猜我画</view></view>
+            <view bindtap="openUpload" class="item"><view class="item-inner">文件上传</view></view>
+        </view>
+    </view>
+    <view class="line">
+        <text>登录接口测试</text>
+        <input type="text" value="{{loginUrl}}" disabled class="hide"></input>
+        <view class="line-control">
+            <view bindtap="doLogin" class="item"><view class="item-inner">登录</view></view>
+            <view bindtap="clearSession" class="item"><view class="item-inner">清除登录会话</view></view>
+        </view>
+    </view>
+    <view class="line">
+        <text>带会话请求测试</text>
+        <input type="text" value="{{requestUrl}}" disabled class="hide"></input>
+        <view class="line-control">
+            <view bindtap="doRequest" class="item" ><view class="item-inner">请求</view></view>
+        </view>
+    </view>
+    <view class="line">
+        <text>WebSocket 信道服务测试</text>
+        <input type="text" value="{{tunnelUrl}}" disabled class="hide" />
+        <view class="line-control">
+            <view class="item flag">
+                <view class="item-inner">信道
+                    <view class="switch-status">
+                        <text>{{tunnelStatusText[tunnelStatus]}}</text>
+                        <switch bindchange="switchTunnel" class="switch" checked="{{tunnelStatus == 'connected'}}"/>
+                    </view>
+                </view>
+            </view>
+            <view bindtap="sendMessage" class="item {{tunnelStatus == 'connected' || 'disabled'}}"><view class="item-inner">发送消息</view></view>
+            <view bindtap="testReconnect" class="item {{tunnelStatus == 'connected' || 'disabled'}}"><view class="item-inner">测试重连</view></view>
+        </view>
+    </view>
+</view>

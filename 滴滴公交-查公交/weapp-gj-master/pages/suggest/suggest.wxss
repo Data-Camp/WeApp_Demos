@@ -1,0 +1,93 @@
+.sug-input{
+    z-index: 10;
+    position: relative;
+    height: 50px;
+    width: 100%;
+    line-height: 50px;
+    border-bottom: 1px solid #e5e5e5;
+    background-color: #fafafa;
+    font-size:14px;
+}
+.sug-input input{
+    background: transparent;
+    float: left;
+    line-height: 14px;
+    margin-top: 18px;
+    margin-bottom: 18px;
+    outline: none;
+    width: 100%;
+    overflow: hidden;
+    margin-left: -42px;
+    padding-left: 42px;
+    box-sizing: border-box;
+}
+
+.transit-search-icon-img{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-image: url('./search.png');
+    background-size: 10px 10px;
+    margin: 0 16px;
+}
+.transit-sug-search-icon{
+    float: left;
+    width: 42px;
+}
+.transit-sug-click-hook{
+    float: left;
+    width: 100%;
+    line-height: 50px;
+    box-sizing: border-box;
+    padding-right: 60px;
+    margin-right: -60px;
+}
+.transit-sug-list{
+    position: absolute;
+    top: 50px;
+    bottom: 0;
+    width: 100%;
+    height:500px;
+}
+.transit-list-item{
+    background-color: #fafafa;
+}
+.transit-list-item-inner{
+    display: table;
+    margin: 0 16px;
+    width:100%;
+    height: 60px;
+    border-bottom: 1px solid #ebebeb;
+}
+.transit-sug-text{
+    display: table-cell;
+    vertical-align: middle;
+    height: 60px;
+    width: 100%;
+}
+.transit-sugitem-name{
+    font-size: 16px;
+    margin-top:10px;
+    line-height: 16px;
+    color: #333;
+}
+.transit-sugitem-desc{
+    display: inline-block;
+    margin-top: 5px;
+    font-size: 12px;
+    color: #adadad;
+}
+.transit-sug-icon{
+    display: inline-block;
+    width: 20px;
+    margin-right: 10px;
+}
+.sug-line-icon{
+    display: inline-block;
+    position:relative;
+    top:20px;
+    height: 20px;
+    width: 20px;
+    background-image: url('./search_location.png');
+    background-size: 20px 20px;
+}

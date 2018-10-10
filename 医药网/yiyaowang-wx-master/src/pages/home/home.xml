@@ -1,0 +1,8 @@
+<view class="home-home">
+  <component key="banner"/>
+  <component key="navibtns"/>
+  <view>
+    <list key="speciallist" name="specialitem"/>
+  </view>
+
+</view>

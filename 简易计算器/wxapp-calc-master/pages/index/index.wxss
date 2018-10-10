@@ -1,0 +1,90 @@
+/**index.wxss**/
+
+.container{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f1f3f3;
+}
+
+.panel-display{
+  width: 100%;
+  flex: 1;
+}
+
+.panel-btns{
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.btns-rows{
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  background-color: #f7f8f9;
+}
+
+.btn{
+  text-align: center;
+  box-sizing: border-box;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #c3c6c7;
+}
+
+.btn.active{
+  background-color: #e3e4e5;
+}
+
+.btn:not(:last-child){
+  border-right: 1px solid #c3c6c7;
+}
+
+#btns2-right{
+  border-left: 1px solid #c3c6c7;
+}
+
+#display-num{
+  display: inline-block;
+  font-size: 36px;
+  position: absolute; 
+  bottom: 5vh; 
+  right: 3vw; 
+}
+
+#display-op{
+  display: inline-block;
+  font-size: 16px;
+  position: absolute; 
+  bottom: 1vh; 
+  right: 3vw; 
+}
+
+#btns2{
+  flex: 2;display: flex;flex-direction: row;
+}
+
+#btns2-left{
+  flex: 3;display: flex;flex-direction: column;
+}
+
+.btns2-left-part{
+  display: flex; flex-direction: row;flex-grow: 1;
+}
+
+#btn-c{
+  color: #f00;
+}
+
+#icon-about{
+  position: absolute; 
+  right: 3vw;
+  top: 3vw;
+}

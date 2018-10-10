@@ -1,0 +1,9 @@
+<view class="footer">
+    <view class="tab-bar">
+        <view>首页</view>
+        <view>会议</view>
+        <view>直播</view>
+        <view>我的</view>
+    </view>
+</view>
+

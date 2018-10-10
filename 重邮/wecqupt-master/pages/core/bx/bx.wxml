@@ -1,0 +1,70 @@
+<!--bx.wxml-->
+<view class="container">
+    <view class="service-nav">
+        <view class="service-nav-item service-history">
+            <text class="service-nav-hd">历史累计</text>
+            <view class="service-nav-bd">
+                <text class="service-nav-value">{{count}}</text>
+            </view>
+        </view>
+        <navigator class="service-nav-item service-apply-btn" url="bx_apply">
+            <image class="service-apply-icon" src="/images/core/bx.png"></image>
+            <text>服务申报</text>
+        </navigator> 
+    </view>
+    <view wx:if="{{remind}}" class="remind-box">
+        <image wx:if="{{remind == '加载中'}}" class="remind-img" src="/images/index/loading.gif"></image>
+        <block wx:else>
+          <image class="remind-img" src="/images/index/nothing.png"></image>
+          <text class="remind-text">{{remind}}</text>
+        </block>
+    </view>
+    <block wx:else>
+        <text class="service-process-title">申报记录</text>
+        <block wx:for="{{list}}" wx:key="wx_djh">
+            <view class="process review-process">
+                <view class="process-hd">
+                    <image class="review-process-icon" src="/images/core/bx/bx_{{item.state}}.png"></image>
+                    <view class="order-number-name">
+                        <text>{{item.wx_bt}}</text>
+                    </view>
+                    <view class="process-state">
+                        <text class="process-state-name process-state-{{item.state}}">{{item.wx_wxztm}}</text>
+                    </view>
+                </view>
+                <view class="process-bd">
+                    <view class="process-item">
+                        <view class="process-item-bd">
+                            <text class="process-item-name">服务类型</text>
+                        </view>
+                        <view class="process-item-ft">
+                            <text class="process-item-info">{{item.wx_bxlxm}}</text>
+                        </view>
+                    </view>
+                    <view class="process-item">
+                        <view class="process-item-bd">
+                            <text class="process-item-name">报修时间</text>
+                        </view>
+                        <view class="process-item-ft">
+                            <text class="process-item-info">{{item.wx_bxsj}}</text>
+                        </view>
+                    </view>
+                    <view class="process-item">
+                        <view class="process-item-bd">
+                            <text class="process-item-name">响应时间</text>
+                        </view>
+                        <view class="process-item-ft">
+                            <text class="process-item-info">{{item.xysj}}</text>
+                        </view>
+                    </view>
+                </view> 
+                <navigator url="bx_detail?id={{item.wx_djh}}">
+                    <view class="service-detail-open">
+                        <text>详情</text>
+                    </view>
+                </navigator>
+            </view>
+        </block>
+    </block>
+
+</view>

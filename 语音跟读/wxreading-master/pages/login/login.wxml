@@ -1,0 +1,54 @@
+<!--login.wxml-->
+<view class="login_container">
+    <view class="login-header">
+        <image class="login-header-bg" src="images/img_login_bg.png"></image>
+        <image class="login-header-swbg" src="images/img_login_swbg.png"></image>
+    </view>
+    <view class="login-header-content">
+        <text class="loginhc-1">小朋友们~</text>
+        <text class="loginhc-2">和超级飞侠一起开始快乐的学习之旅吧!</text>
+    </view>
+    <block wx:if="{{mobile_login != true}}">
+        <view class="login-article-control">
+            <view class="login-article-mobile" bindtap="tapMobileLogin">
+                <text>请使用手机号码快速登录</text>
+            </view>
+            <view class="login-article-weixin" bindtap="tapWeixinLogin">
+                <image class="weixin-ico" src="images/img_login_wechat.png"></image>
+                <text>使用微信账号登录</text>
+            </view>
+        </view>
+        <view class="login-footer">
+            <text>点击登录即表示同意</text>
+            <text class="agree-txt">《SuperWings用户协议》</text>
+        </view>
+    </block>
+
+    <block wx:if="{{mobile_login == true}}">
+        <view class="mobile-login-content">
+            <view class="mobile-login-number">
+                <input name="phone" placeholder="请输入手机号" bindinput="checkMobileRegExp" value="{{inputMobileNumber}}" maxlength="11"/>
+                <!-- -->
+                <block wx:if="{{has_get_vcode != true && checkMobilePass == true}}">
+                    <view class="mobile-login-getvcode" bindtap="tapGetVcode" >获取验证码</view>
+                </block>
+                <block wx:if="{{has_get_vcode != true && checkMobilePass != true}}">
+                    <view class="mobile-login-getvcode disable" disabled="true" bindtap="tapGetVcode">获取验证码</view>
+                </block>
+                <block wx:if="{{has_get_vcode == true}}">
+                    <view class="mobile-login-getvcode disable">重新获取({{vcodeGetTime}})</view>
+                </block>
+
+            </view>
+            <view class="mobile-login-vcode">
+                <input name="vcode" type="text" placeholder="请输入验证码" value="{{inputVcode}}" maxlength="6"/>
+            </view>
+        </view>
+        <view class="mobile-login-submit" bindtap="tapMobileLoginSubmit">立即登录</view>
+        <view class="login-footer">
+            <text>点击登录即表示同意</text>
+            <text class="agree-txt">《SuperWings用户协议》</text>
+        </view>
+    </block>
+
+</view>

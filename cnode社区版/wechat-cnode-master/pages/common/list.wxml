@@ -1,0 +1,58 @@
+<!--列表list组件 -->
+<template name="list">
+<scroll-view class="scroll-posts-list"  scroll-y="true" style="height:100%"  bindscrolltolower="lower">
+  <view class="postslist">
+    <block wx:for="{{postsList}}"  wx:key="">
+      <view class="posts-list">
+        <navigator url="/pages/detail/detail?id={{item.id}}">
+          <view class="posts-list-info" index="{{index}}">
+              <image class="userimg" src="{{item.author.avatar_url}}" />
+              <view class="item-box">
+                <view class="userinfo">
+                  <text class="username">{{item.author.loginname}}</text>
+                  <text class="time">{{item.last_reply_at}}</text>
+                </view>
+                <view class="posts-title">
+                  <view class="posts-tag hot" wx:if="{{item.top === true}}">置顶</view>
+                  <view class="posts-tag" wx:if="{{item.good === true}}">精华</view>
+                  <text>{{item.title}}</text>
+                </view>
+              </view>
+          </view>
+          <view class="bar-info">
+            <view class="bar-info-item">
+              <image class="bar-info-item-icon" src="/images/icon/reply.png"></image>
+              <view class="bar-info-item-number">{{item.reply_count}}</view>
+            </view>
+            <view class="bar-info-item">
+              <image class="bar-info-item-icon" src="/images/icon/visit.png"></image>
+              <view class="bar-info-item-number">{{item.visit_count}}</view>
+            </view>
+
+            <view class="bar-info-item2"  wx:if="{{item.tab === 'good'}}">
+              <image class="bar-info-item-icon" src="/images/icon/type.png"></image>
+              <view class="bar-info-item-number">精华</view>
+            </view>
+            <view class="bar-info-item2"  wx:if="{{item.tab === 'share'}}">
+              <image class="bar-info-item-icon" src="/images/icon/type.png"></image>
+              <view class="bar-info-item-number">分享</view>
+            </view>
+            <view class="bar-info-item2"  wx:if="{{item.tab === 'ask'}}">
+              <image class="bar-info-item-icon" src="/images/icon/type.png"></image>
+              <view class="bar-info-item-number">问答</view>
+            </view>
+            <view class="bar-info-item2"  wx:if="{{item.tab === 'job'}}">
+              <image class="bar-info-item-icon" src="/images/icon/type.png"></image>
+              <view class="bar-info-item-number">招聘</view>
+            </view>
+          </view>
+      </navigator>
+      </view>
+    </block>
+  </view>
+</scroll-view>
+
+<loading class="loading" hidden="{{hidden}}">
+  <text class="loading-font">加载中...</text>
+</loading>
+</template>

@@ -1,0 +1,119 @@
+.mt20{
+  margin-top: 20rpx;
+}
+
+.add-page{
+  display: flex;
+  flex-direction: column;
+  font-size: 32rpx;
+  color: #676767;
+  padding: 30rpx 0;
+}
+
+.mod-a{
+  padding: 0 20rpx;
+  border: 1px solid #f0f0f0;
+  background-color: #fff;
+}
+
+.mod{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 90rpx;
+  padding: 0 20rpx;
+}
+
+.arrow-r{
+  width: 9rpx;
+  height: 17rpx;
+  margin-left: 10rpx;
+}
+.arrow-d{
+  width: 17rpx;
+  height: 9rpx;
+  margin-left: 10rpx;
+}
+
+.value{
+  color: #b2b2b2;
+}
+.t-sign-time .value{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.t-early .value{
+  padding-right: 20rpx;
+}
+.t-name .input, .t-address .value{
+  text-align: right;
+  width: 510rpx;
+  overflow: hidden;
+  color: #b2b2b2;
+  height: 44rpx;
+}
+
+.t-address, .t-sign-time, .t-time{
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.t-time{
+  justify-content:space-around;
+}
+.start, .end{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.pipe{
+  height: 48rpx;
+  border-left: 1px solid #f0f0f0;
+}
+.date{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 10rpx;
+  color: #2fcc85;
+}
+.week{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+  align-items: center;
+}
+.week .d{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 48rpx;
+  height: 48rpx;
+  border-radius: 50%;
+  background-color: #b2b2b2;
+  text-align: center;
+  color: #fff;
+  margin: 0 15rpx;
+}
+.week .on{
+  background-color: #2fcc85;
+}
+.create{
+  margin-top: 80rpx;
+  padding: 0 26rpx;
+}
+.create .btn{
+  height: 80rpx;
+  line-height: 80rpx;
+  background-color: #2fcc85;
+  color: #fff;
+}
+.create .button-hover{
+  background-color: #2caf6d;
+  color: #aadfc4;
+}
+
+.create .disabled{
+  opacity: 0.4
+}

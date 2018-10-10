@@ -1,0 +1,5 @@
+<view class="container">
+	<view class="video">
+	    <video src="{{path}}" binderror="videoErrorCallback"></video>
+	</view>
+</view>

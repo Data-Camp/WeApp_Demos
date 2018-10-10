@@ -1,0 +1,60 @@
+<!--index.wxml-->
+<!-- <view class="container">
+  <view  bindtap="bindViewTap" class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view> -->
+
+<view class="page me">
+    <view class="userinfo">
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      <!-- <view class="usermotto">
+        <text class="user-motto">{{motto}}</text>
+      </view> -->
+    </view>
+
+    <navigator url="/pages/login/login" wx:if="{{islogin == false}}">
+      <view class="view-cell view-cell-line">
+        <view class="view-cell-primary">
+          <image class="view-img"   mode="scaleToFill" src="/images/icon/login.png" />
+          <text class="view-name">登录conde</text>
+        </view>
+        <view class="view-cell-arrow"></view>
+      </view>
+    </navigator>
+
+    <view class="view-cell view-cell-line"  wx:if="{{islogin == true}}">
+      <view class="view-cell-primary">
+        <image class="view-img"   mode="scaleToFill" src="/images/icon/login.png" />
+        <text class="view-name">已登录conde</text>
+      </view>
+    </view>
+
+    <view class="about">
+        <view class="about-item">
+          <text class="about-item-title">关于项目</text>
+          <text class="about-item-content">使用cnode社区api做微信小应用（实现了数据的读取、展示，滑到底部加载下一页，loading加载）</text>
+        </view>
+        <view class="about-item">
+          <text class="about-item-title">源码地址</text>
+          <text class="about-item-content link">https://github.com/vincentSea</text>
+        </view>
+        <view class="about-item">
+          <text class="about-item-title">My GitHub</text>
+          <text class="about-item-content link">https://github.com/vincentSea</text>
+        </view>
+        <view class="about-item">
+          <text class="about-item-title">参考资料</text>
+          <text class="about-item-content link">https://github.com/coolfishstudio/wechat-webapp-cnode</text>
+        </view>
+        <view class="about-item">
+          <text class="about-item-title">当前版本</text>
+          <text class="about-item-content ">V1.0.0 Beta</text>
+        </view>
+    </view>
+</view>

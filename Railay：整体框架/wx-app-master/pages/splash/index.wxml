@@ -1,0 +1,4 @@
+<!-- splash/index.html -->
+<view class="container">
+  <image src="{{src}}" mode="scaleToFill" class="full-screen" />
+</view>

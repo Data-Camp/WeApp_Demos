@@ -1,0 +1,31 @@
+<view class="page">
+  <view class="page__hd">
+    <text class="page__title">icon</text>
+    <text class="page__desc">icon图标</text>
+  </view>
+  <view class="page__bd">
+    <view class="section section_gap">
+      <view class="group">
+        <block wx:for="{{iconSize}}">
+          <icon type="success" size="{{item}}"/>
+        </block>
+      </view>
+    </view>
+
+    <view class="section section_gap">
+      <view class="group">
+        <block wx:for="{{iconType}}">
+          <icon type="{{item}}" size="45"/>
+        </block>
+      </view>
+    </view>
+
+    <view class="section section_gap">
+      <view class="group">
+        <block wx:for="{{iconColor}}">
+          <icon type="success" size="45" color="{{item}}"/>
+        </block>
+      </view>
+    </view>
+  </view>
+</view>

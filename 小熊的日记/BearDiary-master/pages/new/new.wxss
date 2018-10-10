@@ -1,0 +1,82 @@
+/** new.wxss **/
+
+.container {
+  height: 91%;
+}
+
+.common-container {
+  margin: 0.1rem;
+}
+
+.item-group {
+  display: flex;
+  align-items: center;
+}
+
+.album-item {
+  flex-direction: column;
+  margin: 0.1rem;
+  background: white;
+  width: 6.4rem;
+  height: 6.4rem;
+}
+
+.content-text{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.content-text view {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 10px;
+  line-height: 15px;
+}
+
+.tabbar {
+  position: fixed;
+  width: 100%;
+  height: 8%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.tabbar .item {
+  width: 33.33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item .icon {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.input-container {
+  height: 80%;
+  background-color: #eceff4;
+  background-image: linear-gradient(#E1E6EA .1em, transparent .1em);
+  background-size: 100% 48rpx;
+  padding: 0;
+  box-sizing: border-box;
+  margin: 0 10rpx;
+}
+
+.input-container input{
+  height: 47rpx;
+  max-height: 47rpx;
+  font-size: 28rpx;
+  margin: 0px;
+}
+
+.action-item, .action-cacel {
+  font-size: 30rpx;
+  color: #39b5de;
+}

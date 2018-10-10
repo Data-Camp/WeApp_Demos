@@ -1,0 +1,77 @@
+<view class="container">
+    <!--酒店详情-->
+    <view class="hotelDetails">
+        <image src="{{selectHotelInfo.PictureAppURL}}" class="hotelImage" mode="aspectFill"></image>
+        <view class="hotelName">{{selectHotelInfo.HotelName}}</view>
+    </view>
+    <view class="mapImage">
+        <image class="mapIcon" src="/images/map.png"></image>
+        <text>{{selectHotelInfo.HotelAddress}}</text>
+    </view>
+    <view class="iconImage">
+        <view class="up">
+            <view class="leftIcon">
+                <icon type="success_circle" size="20" color="#7D8DA4" /> 酒店设施：
+            </view>
+            <view class="rightIcon">
+                <view hidden="{{!selectHotelInfo.Gym}}">
+                  <image class="Image_01" src="/images/training.png"></image>
+                </view>
+
+                <view hidden="{{!selectHotelInfo.Swimming}}">
+                  <image class="Image_02" src="/images/swim.png"></image>
+                </view>
+
+                <view hidden="{{!selectHotelInfo.WIFI}}">
+                  <image class="Image_03" src="/images/wifi.png"></image>
+                </view>
+
+            </view>
+        </view>
+        <view class="down">
+            <image class="timerImg" src="/images/dhhotel.png"></image>
+            <text class="timerIcon">{{selectHotelInfo.HotelDes}}</text>
+        </view>
+    </view>
+    <view class="leaveHotel">
+        <view class="leavehotel">
+            <text>{{hotelInfoDate.HotelCheckInDate}}</text>入住 —— <text>{{hotelInfoDate.HotelCheckOutDate}}</text>离店
+        </view>
+    </view>
+    <view class="allDetails">
+        <view class="Detailhotel" wx:for="{{selectHotelInfo.RoomList}}" wx:key="{{index}}">
+            <image class="leftHotel" src="{{item.PictureAppUrl}}"></image>
+            <view class="middleContent">
+                <text class="text_01">{{item.RoomType}}</text>
+                <text class="text_02">{{item.RoomType}}/{{item.Breakfast}}/{{item.CanAddBed}}{{item.BedType}}/可住{{item.MaxAdult}}人</text>
+                <view class="text_03">{{item.BookingQuantity}}间
+                    <image data-index="{{index}}" catchtap="changeRoom" class="reviseIcon" src="/images/revise.png"></image>
+                </view>
+            </view>
+            <view class="rightPrice">
+                <text class="{{item.PriceDifference >= 0 ? 'add' : 'reduce'}}">{{item.PriceDifference >= 0 ? '+' : '-'}} ￥{{(item.PriceDifference >= 0) ? item.PriceDifference : (-item.PriceDifference)}}</text>
+                <button catchtap="bindSelectRoom" data-index="{{index}}"  wx:if="{{selectHotelInfo.RoomList[index].IsDefault}}" class="Choose">
+                  <image class="ChooseIcon" src="/images/true_icon.png"></image>已选择
+                </button>
+
+                <button catchtap="bindSelectRoom" data-index="{{index}}" wx:else class="noChoose">选择</button>
+            </view>
+        </view>
+
+        <!--弹层修改间数-->
+        <view wx:if="{{changeRoom.show}}" class="position">
+            <view class="pop" catchtap="hideLayer"></view>
+            <view class="bg_gray">
+                <view class="upBlue">
+                    <text>修改间数</text>
+                </view>
+                <view class="roomcontainer">
+                  <view catchtap="bindRoomNum" wx:for="{{[0,1,2,3,4,5,6,7,8]}}" wx:key="{{index}}" data-num="{{index}}" class="number">
+                      <text class="leftFixed">{{item + 1}}间</text>
+                      <text class="rightFixed">{{(changeRoom.selectRoomInfo.PriceDifference + (item + 1 - changeRoom.selectRoomInfo.BookingQuantity) * changeRoom.selectRoomInfo.SalePrice) >= 0 ? '+￥' : '-￥'}}{{(changeRoom.selectRoomInfo.PriceDifference + (item + 1 - changeRoom.selectRoomInfo.BookingQuantity) * changeRoom.selectRoomInfo.SalePrice) >= 0 ?  (changeRoom.selectRoomInfo.PriceDifference + (item + 1 - changeRoom.selectRoomInfo.BookingQuantity) * changeRoom.selectRoomInfo.SalePrice): (-(changeRoom.selectRoomInfo.PriceDifference + (item + 1 - changeRoom.selectRoomInfo.BookingQuantity) * changeRoom.selectRoomInfo.SalePrice))}}</text>
+                  </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

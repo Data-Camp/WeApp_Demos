@@ -1,0 +1,231 @@
+.ng-weui-toast-forbidden .weui-toast {
+	color: #F76260;
+}
+
+.ng-weui-toast-forbidden .weui-icon_toast:before {
+	content: "\EA0B";
+	color: #F76260;
+}
+
+.weui-actionsheet .weui-actionsheet__cell.destructive, 
+.weui-actionsheet .weui-actionsheet__cell.destructive:hover {
+    color: #ff3b30;
+}
+
+.ng-weui-action-sheet-backdrop {
+	display: block;
+	position: fixed;
+	z-index: 1000;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0);
+	-webkit-transition: background .3s;
+	transition: background .3s;
+}
+
+.ng-weui-action-sheet-backdrop.active {
+	background: rgba(0, 0, 0, 0.6);
+}
+
+.ng-weui-dialog-wrapper.hidden {
+	visibility: hidden;
+}
+
+.ng-weui-dialog-wrapper.visible {
+	visibility: visible;
+}
+
+.ng-weui-dialog-wrapper .weui-dialog {
+	opacity: 0;
+	-webkit-transition: opacity .3s;
+	transition: opacity .3s;
+}
+
+.ng-weui-dialog-wrapper.active .weui-dialog {
+	opacity: 1;
+}
+
+.ng-weui-loading-wrapper, 
+.ng-weui-toast-wrapper {
+	position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1010;
+    display: block;
+    -webkit-transition: .2s opacity linear;
+    transition: .2s opacity linear;
+}
+
+.ng-weui-loading-wrapper.hidden, 
+.ng-weui-toast-wrapper.hidden {
+	visibility: hidden;
+    opacity: 0;
+}
+
+.ng-weui-loading-wrapper.visible, 
+.ng-weui-toast-wrapper.visible {
+	visibility: visible;
+}
+
+.ng-weui-loading-wrapper.active, 
+.ng-weui-toast-wrapper.active {
+	opacity: 1;
+}
+
+.weui-slider {
+    position: relative;
+    visibility: hidden;
+    overflow: hidden;
+}
+
+.weui-slider-slides {
+    position: relative;
+    height: 100%;
+}
+
+.weui-slider-slide {
+    position: relative;
+    display: block;
+    float: left;
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+}
+
+.weui-slider-slide > img {
+    width: 100%;
+}
+
+.weui-slider-pager {
+    position: absolute;
+    bottom: 20px;
+    z-index: 1;
+    width: 100%;
+    height: 15px;
+    text-align: center
+}
+
+.weui-slider-pager .weui-slider-pager-page {
+    display: inline-block;
+    margin: 0 3px;
+    width: 15px;
+    color: #000;
+    text-decoration: none;
+    opacity: .3
+}
+
+.weui-slider-pager .weui-slider-pager-page.active {
+    -webkit-transition: opacity .4s ease-in;
+    transition: opacity .4s ease-in;
+    opacity: 1
+}
+
+.weui-slider-pager.hide {
+    display: none !important;
+}
+
+.weui-slider-pager .icon {
+	display: block;
+	margin: 0 auto;
+    width: 12px;
+    height: 12px;
+    background: #000;
+    border-radius: 50%;
+}
+
+.weui-mask.hidden {
+	visibility: hidden;
+    opacity: 0;
+    -webkit-transition: .2s opacity linear;
+    transition: .2s opacity linear;
+}
+
+.weui-mask.visible {
+    visibility: visible;
+}
+
+.weui-mask.active {
+    opacity: 1;
+}
+
+.weui-gallery-wrapper.weui-slider {
+    height: 100%;
+    z-index: 1000;
+}
+
+.weui-gallery {
+	display: block;
+	overflow: hidden;
+	opacity: 1;
+}
+
+.fade-in {
+	opacity: 0;
+}
+
+.fade-in.ng-enter {
+	-webkit-transition: opacity .3s;
+	transition: opacity .3s;
+}
+
+.fade-in.ng-enter-active {
+	opacity: 1;
+}
+
+.fade-in.ng-leave {
+	-webkit-transition: opacity ease-in-out .25s;
+    transition: opacity ease-in-out .25s;
+}
+
+.fade-in-up {
+	opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+}
+
+.fade-in-right {
+	opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+}
+
+.fade-in-down {
+	opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+}
+
+.fade-in-left {
+	opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+}
+
+.fade-in-up.ng-enter, 
+.fade-in-right.ng-enter, 
+.fade-in-down.ng-enter, 
+.fade-in-left.ng-enter {
+    -webkit-transition: all cubic-bezier(.1, .7, .1, 1) 400ms;
+    transition: all cubic-bezier(.1, .7, .1, 1) 400ms;
+}
+
+.fade-in-up.ng-enter-active, 
+.fade-in-right.ng-enter-active, 
+.fade-in-down.ng-enter-active, 
+.fade-in-left.ng-enter-active {
+	opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.fade-in-up.ng-leave, 
+.fade-in-right.ng-leave, 
+.fade-in-down.ng-leave, 
+.fade-in-left.ng-leave {
+    -webkit-transition: all ease-in-out 250ms;
+    transition: all ease-in-out 250ms;
+}

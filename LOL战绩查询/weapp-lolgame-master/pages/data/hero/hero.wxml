@@ -1,0 +1,24 @@
+<!--index.wxml-->
+<view class="container">
+    <toast hidden="{{toastHidden}}" icon="info" bindchange="toastChange">名称不能为空</toast>
+    <view class="input-section">
+        <input placeholder="请输入英雄名称" bindinput="bindSearchInput" class="input-container"/>
+        <button class="{{display}}">取消</button>
+    </view>
+    <view class="heroes">
+        <block wx:for="{{display_champions}}">
+            <view class="heroes-row">
+                <navigator url="herodetail/herodetail?champion_id={{item.id}}">
+                    <view class="heroes-row-in">
+                        <image src="http://cdn.tgp.qq.com/pallas/images/champions_id/{{item.id}}.png"></image>
+                        <view class="one-tag">
+                            <text class="one-tag-title">{{item.title}}</text>
+                            <text class="one-tag-name">{{item.cname}}</text>
+                            <text class="one-tag-pos">{{item.ename}}</text>
+                        </view>
+                    </view>
+                </navigator>
+            </view>
+        </block>
+    </view>
+</view>

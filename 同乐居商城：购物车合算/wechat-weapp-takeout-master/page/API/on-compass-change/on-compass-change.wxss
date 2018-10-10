@@ -1,0 +1,10 @@
+.direction {
+  margin-top: 100rpx;
+  display: flex;
+}
+.direction-value {
+  font-size: 200rpx;
+}
+.direction-degree {
+  font-size: 40rpx;
+}

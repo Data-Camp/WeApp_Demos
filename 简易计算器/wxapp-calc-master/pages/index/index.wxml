@@ -1,0 +1,44 @@
+<!--weixin.wxml-->
+<view class="container">
+  <view class="panel-display" style="position: relative;">
+  <view>
+    <icon id="icon-about" type="info" size="28" color="#aaa" bindtap="showAbout"/></view>
+    <view id="display-num">{{calc.displayNum}}</view>
+    <view id="display-op">{{calc.displayOp}}</view>
+  </view>
+  <view class="panel-btns">
+    <view class="btns-rows">
+      <view id="btn-c" class="btn {{tapped['c']}}" bindtap="btnClicked" bindtouchstart="btnTouchStart"  bindtouchend="btnTouchEnd" data-op="c">AC</view>
+      <view class="btn {{tapped['d']}}" bindtap="btnClicked" bindtouchstart="btnTouchStart"  bindtouchend="btnTouchEnd"  data-op="d">DEL</view>
+      <view class="btn {{tapped['/']}}" bindtap="btnClicked" bindtouchstart="btnTouchStart"  bindtouchend="btnTouchEnd"  data-op="/" style="font-size: 24px;">÷</view>
+      <view class="btn {{tapped['x']}}" bindtap="btnClicked" bindtouchstart="btnTouchStart"  bindtouchend="btnTouchEnd"  data-op="x">×</view>
+    </view>
+    <view class="btns-rows">
+      <view class="btn {{tapped['7']}}" bindtap="btnClicked" bindtouchstart="btnTouchStart"  bindtouchend="btnTouchEnd"  data-op="7">7</view>
+      <view class="btn {{tapped['8']}}" bindtap="btnClicked" bindtouchstart="btnTouchStart"  bindtouchend="btnTouchEnd"  data-op="8">8</view>
+      <view class="btn {{tapped['9']}}" bindtap="btnClicked" bindtouchstart="btnTouchStart"  bindtouchend="btnTouchEnd"  data-op="9">9</view>
+      <view class="btn {{tapped['-']}}" bindtap="btnClicked" bindtouchstart="btnTouchStart"  bindtouchend="btnTouchEnd"  data-op="-">-</view>
+    </view>
+    <view class="btns-rows">
+      <view class="btn {{tapped['4']}}" bindtap="btnClicked" bindtouchstart="btnTouchStart"  bindtouchend="btnTouchEnd"  data-op="4">4</view>
+      <view class="btn {{tapped['5']}}" bindtap="btnClicked" bindtouchstart="btnTouchStart"  bindtouchend="btnTouchEnd"  data-op="5">5</view>
+      <view class="btn {{tapped['6']}}" bindtap="btnClicked" bindtouchstart="btnTouchStart"  bindtouchend="btnTouchEnd"  data-op="6">6</view>
+      <view class="btn {{tapped['+']}}" bindtap="btnClicked" bindtouchstart="btnTouchStart"  bindtouchend="btnTouchEnd"  data-op="+">+</view>
+    </view>
+    <view id="btns2" class="btns-rows">
+      <view id="btns2-left">
+        <view class="btns2-left-part">
+          <view class="btn {{tapped['1']}}" bindtap="btnClicked" bindtouchstart="btnTouchStart"  bindtouchend="btnTouchEnd"  data-op="1">1</view>
+          <view class="btn {{tapped['2']}}" bindtap="btnClicked" bindtouchstart="btnTouchStart"  bindtouchend="btnTouchEnd"  data-op="2">2</view>
+          <view class="btn {{tapped['3']}}" bindtap="btnClicked" bindtouchstart="btnTouchStart"  bindtouchend="btnTouchEnd"  data-op="3">3</view>
+        </view>
+        <view class="btns2-left-part">
+          <view class="btn {{tapped['%']}}" bindtap="btnClicked" bindtouchstart="btnTouchStart"  bindtouchend="btnTouchEnd"  data-op="%">%</view>
+          <view class="btn {{tapped['0']}}" bindtap="btnClicked" bindtouchstart="btnTouchStart"  bindtouchend="btnTouchEnd"  data-op="0">0</view>
+          <view class="btn {{tapped['.']}}" bindtap="btnClicked" bindtouchstart="btnTouchStart"  bindtouchend="btnTouchEnd"  data-op=".">.</view>
+        </view>
+      </view>
+      <view id="btns2-right" class="btn {{tapped['=']}}" bindtap="btnClicked" bindtouchstart="btnTouchStart"  bindtouchend="btnTouchEnd" data-op="=">=</view>
+    </view>
+  </view>
+</view>

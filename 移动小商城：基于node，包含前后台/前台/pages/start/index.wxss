@@ -1,0 +1,12 @@
+.start {
+	height: 100%;
+}
+
+.start swiper {
+	height: 100%;
+}
+
+.start image {
+	width: 100%;
+	height: 100%;
+}

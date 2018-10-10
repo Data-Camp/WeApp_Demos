@@ -1,0 +1,36 @@
+<view class="show-item">
+    <view class="title">标题</view>
+    <view class="content">
+        <text>{{item.title}}</text>
+    </view>
+</view>
+
+<view class="show-item">
+    <view class="title">内容</view>
+    <view class="content">
+        <text>{{item.content}}</text>
+    </view>
+</view>
+
+<view class="show-item">
+    <view class="title">事项等级</view>
+    <view class="content">
+        <view wx:if="{{item.level == 1}}" class="ball bg-normal"></view>
+        <view wx:elif="{{item.level == 2}}" class="ball bg-warning"></view>
+        <view wx:else class="ball bg-danger"></view>
+    </view>
+</view>
+
+<view class="show-item">
+    <view class="title">事项日期</view>
+    <view class="content">
+        <text>{{item.year}}年{{item.month+1}}月{{item.date}}日</text>
+    </view>
+</view>
+
+<view class="show-item">
+    <view class="title">添加日期</view>
+    <view class="content">
+        <text>{{item.addDate}}</text>
+    </view>
+</view>

@@ -1,0 +1,9 @@
+<scroll-view scroll-y="true" style="height:100%">
+    <input type="text" value="{{value}}" placeholder="输入消息" bindinput="inputfun"/>
+    <button bindtap="connect">websocket链接</button>
+    <button bindtap="msg">发送消息</button>
+    <button bindtap="stopws">关闭连接</button>
+    <view wx:for="{{message}}" wx:for-item="i">
+        <view>{{i}}</view>
+    </view>
+</scroll-view>

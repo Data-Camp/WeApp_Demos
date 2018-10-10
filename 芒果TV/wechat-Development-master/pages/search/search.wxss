@@ -1,0 +1,170 @@
+.search{
+    background: #f5f5f5;
+    font-size: 14px;
+}
+
+.search-rank{
+    margin: 10px 0 0;
+    background: #fff;
+    padding:10px;
+    overflow:hidden;
+}
+
+.search-rank .searchTxt{
+    border-left:2px solid #f56c10;
+    padding-left:5px;
+    color: #767676;
+    margin-bottom:10px;
+}
+
+.search-rank .cont{
+    width:100%;
+    overflow:hidden;
+}
+
+.search-rank .cont .leside{
+    position:relative;
+    width:43%;
+    height:202px;
+    margin-right:15px;
+}
+
+.search-rank .leside image{
+    width:100%;
+    height:100%;
+    border-radius: 4px;
+}
+
+.search-rank .leside text{
+    display:block;    
+}
+
+.search-rank .leside .contText{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.6);
+    color: #fff;
+    border-radius: 0 0 4px 4px;
+    width: 100%;
+    padding: 8px 0;
+    line-height: 15px;
+    text-align:left;
+    text-indent:8px;
+}
+
+.search-rank .leside .rankOne{
+    position:absolute;
+    left: 5px;
+    top: 0;
+    width: 22px;
+    height: 32px;
+    background-image:url('http://m.mgtv.com/94aa76ad4e9272227801a53dcaf07da4.png');
+    text-align: center;
+    line-height: 26px;
+    font-size: 18px;
+    color:#fff;
+    background-size: 100% 100%;
+}
+
+.search-rank .riside{
+    width:51%;
+    overflow:hidden;
+    margin-top:6px;
+} 
+
+.search-rank .riside .riside-l{
+    margin-bottom:15px;    
+}
+
+.search-rank .riside .riside-l .l-text{
+    width:10%;
+    color: #999;
+    font-size: 18px;
+}
+
+.search-rank .riside .riside-l .l-mess{
+    width:88%;
+}
+
+.search-rank .riside .riside-l .l-mess text{
+    display:block;
+}
+
+.search-rank .riside .riside-l .l-mess .messText1{
+    color: #333;
+    overflow: hidden;
+}
+
+.search-rank .riside .riside-l .l-mess .messText2{
+    color: #999;
+    font-size: 12px;
+    padding-top: 5px;
+}
+
+.search-rank .riside .riside-l .l-text,
+.search-rank .riside .riside-l .l-mess{
+    display:inline-block;
+    vertical-align:middle;
+}
+
+.searchRank{
+    width:100%;
+    height: 44px;
+    background-color: #2b2e33;
+    padding: 6px 0 0;
+}
+
+.searchRank .form{
+   
+    width:95%;
+    margin: 0 auto;
+    position: relative;
+    background: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+.searchRank .form input{
+    width: 100%;
+    border: none;
+    font-size: 15px;
+    height: 32px;
+    line-height: 32px;
+    padding-left: 5px;
+    background-color:#fff;
+}
+
+.searchRank .form input.cl{
+   color:#a9a5a5; 
+}
+
+.searchRank .nav{
+    width:20%;
+    display:inline-block;
+    vertical-align: middle;
+    color:#fff;
+    font-size:14px;
+    text-align:center;
+}
+
+.searchRank icon{
+    position: absolute;
+    right: 4px;
+    top: 5px;
+    display: block;
+    width: 20px;
+    height: 20px;
+    line-height: 18px;
+    background: #c8c8c8;
+    border-radius: 14px;
+    text-align: center;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.search-rank .riside .mb0{
+    margin-bottom:0px;    
+}

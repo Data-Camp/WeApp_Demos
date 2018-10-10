@@ -1,0 +1,16 @@
+<import src="../common/header.wxml" />
+<import src="../common/footer.wxml" />
+
+<view class="container">
+  <template is="header" data="{{title: 'WebSocket'}}"/>
+
+  <view class="page-body">
+    <view class="page-body-wording">
+      <text class="page-body-text">
+        搭建好自己的后台服务器后，可以跟服务器建立持久连接，实现即时聊天等功能。
+      </text>
+    </view>
+  </view>
+
+  <template is="footer" />
+</view>

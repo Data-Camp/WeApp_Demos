@@ -1,0 +1,27 @@
+<import src="../../common/nav.wxml"/>
+<import src="../../common/prompt.wxml"/>
+
+<template is="nav" data="{{ navList, activeIndex }}"/>
+
+<scroll-view class="scroll-list" scroll-y="true" style="height: 100%" bindscrolltolower="lower">
+    <view class="weui-form-preview" wx:if="{{ !!order.paginate.total }}" wx:for="{{ order.items }}" wx:key="" bindtap="navigateTo" data-id="{{ item._id }}">
+        <view class="weui-form-preview__hd">
+            <view class="weui-form-preview__item">
+                <view class="weui-form-preview__label">订单总价</view>
+                <view class="weui-form-preview__value_in-hd">¥ {{ item.totalAmount }}</view>
+            </view>
+        </view>
+        <view class="weui-form-preview__bd">
+            <view class="weui-form-preview__item" wx:for="{{ item.items }}" wx:key="">
+                <view class="weui-form-preview__label">{{ item.goods.name }}</view>
+                <view class="weui-form-preview__value">x{{ item.meta.total }} ¥ {{ item.meta.totalAmount }}</view>
+            </view>
+        </view>
+        <view class="weui-form-preview__ft">
+            <navigator class="weui-form-preview__btn weui-form-preview__btn_default" hover-class="weui-form-preview__btn_active">联系商家</navigator>
+            <navigator class="weui-form-preview__btn weui-form-preview__btn_primary" hover-class="weui-form-preview__btn_active">再来一单</navigator>
+        </view>
+    </view>
+
+    <template is="prompt" data="{{ prompt }}"/>
+</scroll-view>

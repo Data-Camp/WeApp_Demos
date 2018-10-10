@@ -1,0 +1,90 @@
+
+.page_list {
+  height: 100%;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  font-size: 20rpx;
+}
+
+.allItem {
+  display: flex;
+  flex-direction: row;
+  padding: 0rpx 0rpx;
+  border: 5rpx solid #eee;
+  cursor: pointer;
+  background: #fbf9fe;
+}
+
+/*图书封皮*/
+.bookcover {
+  width: 120px;
+  /*控制每栏的高度*/
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+}
+/*左侧索书号*/
+.booknum {
+  text-indent: 0em;
+  font-size: 30rpx;
+  font-family: 'Microsoft YaHei';
+  text-align: center;
+  margin-bottom: 20rpx;
+  color: #000;
+  padding: 0rpx;
+}
+
+/*右侧整体内容*/
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 1px;
+  margin-right: 1px;
+  margin-top: 1px;
+  /*border: 2px solid #f48a94;*//*border: 2px solid #f0f0f0;*/
+  box-shadow: 10px 10px 10px #e0e0e0;
+  background: #423f3a;
+}
+
+/*标题*/
+.title {
+  margin-top: 10rpx;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+  width: 95%;
+  text-align: left;
+  color: #fff;
+  font-family: 'KaiTi';
+  font-size: 33rpx;
+}
+/*到期时间及剩余日期 外框*/
+.content2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  background-color: #797671;
+  height: 70rpx;
+}
+
+
+/*到期日期*/
+.status {
+  font-size: 31rpx;
+  font-family: 'Microsoft YaHei';
+  text-align: right;
+  padding-top: 16rpx;
+  color: #ddd;
+}
+
+/*剩余日期*/
+.lasttime {
+  font-size: 45rpx;
+  font-family: 'Microsoft YaHei';
+  text-align: right;
+  padding-right: 10rpx;
+  padding-left: 10rpx;
+  padding-top: 2rpx;
+  color: #fff;
+}

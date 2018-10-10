@@ -1,0 +1,58 @@
+/**app.wxss**/
+page{
+ background: #f5f5f5;
+ font-family: PingFang-SC-Regular,sans-serif;
+ font-size: 40rpx;
+ -webkit-tap-highlight-color: transparent;
+ -webkit-font-smoothing: antialiased;
+ -webkit-overflow-scrolling: touch;
+}
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+
+/*fd swiper-tab*/
+
+.swiper-tab{ 
+  padding: 10px 0px;
+  height: 30px; 
+  line-height: 30px; 
+  background: #FFF; 
+  display: flex; 
+  position: relative; 
+  z-index: 2; 
+  flex-direction:row; 
+  justify-content:center; 
+  align-items:center;
+}
+.swiper-tab-list{ 
+  color: #f85f48;
+  text-align: center;
+  border: 1px solid #f85f48;
+  margin: 10px 0px;  
+  padding: 0 6px;
+  width: 60px; 
+  font-size: 28rpx; 
+  font-family: Helvetica, Arial, "Hiragino Sans GB", "Source Han Sans CN", "PingFang SC", Roboto, "微软雅黑", "Heiti SC", "Microsoft Yahei", sans-serif 
+}
+.swiper-left{
+  border-radius: .3rem 0 0 .3rem;
+}
+
+.swiper-right{
+  border-radius: 0 .3rem .3rem 0;
+}
+.on{
+  color: #fff; 
+  background: #f85f48;
+}
+
+
+
+

@@ -1,0 +1,33 @@
+.login-container {
+  padding: 20px;
+}
+
+.input {
+  border: 1px solid #ddd;
+  font-size: 12px;
+  padding: 0 10px;
+  line-height: 30px;
+  height: 30px;
+  margin: 20px 0;
+}
+
+.input-placeholder {
+  color: #aaa!important;
+}
+
+.login-btn {
+  margin: 20px 0;
+  border: 1px solid #ccc!important;
+  color: #777!important;
+  width: 100%;
+  border-radius: 0px;
+}
+
+.register {
+  color: #998c90;
+  font-size: 12px;
+}
+
+.btn-hover {
+  background-color: #eee!important;
+}

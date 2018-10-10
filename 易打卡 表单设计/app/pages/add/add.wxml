@@ -1,0 +1,78 @@
+<!-- 任务详情 -->
+<view class="detail-page">
+
+    <view class="mod-a">
+        <!-- 任务地点 -->
+        <view class="mod t-address">
+            <text class="key">任务地点</text>
+            <text class="value">{{task.address}}</text>
+        </view>
+
+        <!-- 打卡时间 -->
+        <view class="mod t-sign-time">
+            <text class="key">打卡时间</text>
+            <text class="value">{{task.signTime}}</text>
+        </view>
+
+        <!-- 最早打卡时间 -->
+        <view class="mod t-early">
+            <text class="key">最早可打卡时间</text>
+            <text class="value">07:30</text>
+        </view>
+    </view>
+
+    <view class="mod-a mt20">
+        <!-- 起始时间 -->
+        <view class="mod t-time">
+            <view class="start">
+                <text>开始于</text>
+                <text class="date">{{task.startTime}}</text>
+            </view>
+            <view class="pipe"></view>
+            <view class="end">
+                <text>结束于</text>
+                <text class="date">{{task.endTime}}</text>
+            </view>
+        </view>
+
+        <!-- 重复日 -->
+        <view class="mod days">
+            <view class="key">
+                <text>重复日</text>
+            </view>
+            <view class="week">
+                <text class="d {{task.repeat.monday ? 'on': ''}}">一</text>
+                <text class="d {{task.repeat.tuesday ? 'on': ''}}">二</text>
+                <text class="d {{task.repeat.wednesday ? 'on': ''}}">三</text>
+                <text class="d {{task.repeat.thursday ? 'on': ''}}">四</text>
+                <text class="d {{task.repeat.friday ? 'on': ''}}">五</text>
+                <text class="d {{task.repeat.saturday ? 'on': ''}}">六</text>
+                <text class="d {{task.repeat.sunday ? 'on': ''}}">日</text>
+            </view>
+        </view>
+    </view>
+
+    <view class="mod-a mt20">
+        <view class="user-list-tit">
+            <text>参与成员 {{task.userList.length}}</text>
+        </view>
+        <!-- 用户参与列表 -->
+        <view class="user-list">
+            <block wx:for="{{task.userList}}">
+                <view class="user">
+                    <view class="head">
+                        <image class="img" src="{{item.avatarUrl}}"></image>
+                    </view>
+                    <view class="nick-name">
+                        <text>{{item.nickName}}</text>
+                    </view>
+                </view>
+            </block>
+        </view>
+    </view>
+
+    <view id="task_{{task._id}}" class="add-btn {{added ? 'added' : ''}}" bindtap="addtask">
+        <text>{{btnTxt}}</text>
+    </view>
+    
+</view>

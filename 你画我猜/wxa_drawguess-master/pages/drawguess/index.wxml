@@ -1,0 +1,116 @@
+<view class="section">
+<view class="fix_label" catchtap="hideFix" wx:if="{{setShow}}">
+    <view class="fix_con" catchtap="stop">
+        <view class="fix_header">
+            <text>标题</text>
+        </view>
+        <view class="weui-cells">
+            <view class="weui-cell">
+                <view class="weui-cell__hd"></view>
+                <view class="weui-cell__bd">
+                    <text>金币</text>
+                </view>
+                <view class="weui-cell__ft">0</view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__hd"></view>
+                <view class="weui-cell__bd">
+                    <text>音乐</text>
+                </view>
+                <switch checked bindchange="switch1Change"/>
+            </view>
+            <view class="weui-cell weui-cell_access">
+                <view class="weui-cell__hd"></view>
+                <view class="weui-cell__bd">
+                    <text>成员列表</text>
+                </view>
+                <view class="weui-cell__ft_in-access"></view>
+            </view>
+        </view>
+        <button class="fix_btn" hover-class="fix_btn_hover">退出房间</button>
+    </view>
+</view>
+<view class="flex-wrp">
+    <view class="header_label">
+        <view class="weui-flex">
+            <view class="weui-flex__item">
+                <text>时间</text>
+                <text class="big_txt">20</text>
+            </view>
+            <view class="weui-flex__item">
+                <text>你画我猜 VIP</text>
+                <text class="big_txt">100房间</text>
+            </view>
+            <view class="weui-flex__item">
+                <text bindtap="set">设置</text>
+                <!--<icon type="info" color="#fff"/>-->
+            </view>
+        </view>
+    </view>
+    <!--等待进入房间界面-->
+    <view class="wait_label" wx:if="{{waiting}}">
+        <view class="header_label page__bd_spacing">
+            <view class="weui-row">
+                <view class="weui-col weui-col-33" wx:for="{{peoples}}" wx:for-item="people" wx:key="openId">
+                    <image src="{{people.avatarUrl}}" class="header_img"></image>
+                    <text data-id="{{people.openId}}">{{people.nickName}}</text>
+                    <view class="status_txt" wx:if="{{people.status}}">已准备</view>
+                </view>
+            </view>
+        </view>
+        <button class="ready_btn" hover-class="hover" bindtap="start">准备</button>
+        <view class="bottom_btns">
+            <view class="weui-flex">
+                <view class="weui-flex__item">
+                    <text>召好友</text>
+                </view>
+                <view class="weui-flex__item">
+                    <text>喊同房</text>
+                </view>
+                <view class="weui-flex__item">
+                    <text bindtap="quit">退出</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <!--画板界面-->
+    <view class="draw_label" wx:if="{{!waiting}}">
+        <canvas 
+        canvas-id="firstCanvas"
+        disable-scroll="true"
+        bindtouchstart="touchStart"
+        bindtouchmove="touchMove"
+        bindtouchend="touchEnd"
+        >
+        </canvas>
+    </view>
+    <!--玩家列表-->
+    <scroll-view class="scroll_user" scroll-x="true" wx:if="{{!waiting}}">
+            <image src="{{people.avatarUrl}}" wx:for="{{peoples}}" wx:for-item="people" wx:key="openId"></image>
+    </scroll-view>
+    <!--聊天界面-->
+    <scroll-view class="scroll_chat" scroll-y="true">
+        <!--<view class="message">
+            <view class="user-message me">我的:信息</view>
+        </view>
+        <view class="message">
+            <view class="user-message other">她的:信息</view>
+        </view>
+        <view class="system-message">
+            <text>系统消息</text>
+        </view>-->
+        <view wx:for="{{messages}}" wx:for-item="message" wx:key="id" id="{{message.id}}" class="message {{message.type}}">
+            <view wx:if="{{message.type == 'speak'}}" class="user-message {{message.isMe ? 'me' : 'other'}}">
+                <text>{{message.user.nickName}}:{{message.content}}</text>
+            </view>
+            <view wx:if="{{message.type == 'system'}}" class="system-message">
+                <text>{{message.content}}</text>
+            </view>
+        </view>
+    </scroll-view>
+    <!--输入框界面-->
+    <view class="foot_label">
+        <input placeholder=""/>
+    </view>
+</view>
+</view>

@@ -1,0 +1,33 @@
+<view class="content">
+    <view class="title" bindtap="changeStep">
+        <text class="pull-left">{{"<<"}}</text>{{currentStep.name}}<text class="pull-right">{{">>"}}            </text>
+    </view>
+
+    <view class="time">
+        <view class="big-circle blue first">
+        </view>
+         <view class="big-circle right light-blue first" animation="{{leftAnimationData}}">
+        </view>
+        <view class="circle white first">
+        </view>
+
+
+        <view class="big-circle blue second">
+        </view>
+         <view class="big-circle right light-blue second" animation="{{rightAnimationData}}">
+        </view>
+        <view class="circle white second">
+        </view>
+    </view>
+
+    <view class="btnGroup">
+        <button class="btn" bindtap="leftStart">正方发言</button>
+        <button class="btn" bindtap="rightStart">反方发言</button>
+    </view>
+
+
+    <view class="desc">
+        <text>{{currentStep.desc}}</text>
+    </view>
+    
+</view>

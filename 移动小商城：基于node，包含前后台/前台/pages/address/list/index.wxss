@@ -1,0 +1,23 @@
+.address-list {
+	height: 100%;
+	padding-bottom: 46px;	
+}
+
+.address-list .weui-media-box {
+	padding-right: 35px;
+}
+
+.address-list .edit {
+	position: absolute;
+	top: 50%;
+	right: 15px;
+	width: 20px; 
+    height: 20px;
+    -webkit-transform: translate3d(0, -50%, 0);
+    transform: translate3d(0, -50%, 0);
+}
+
+.address-list .edit .icon {
+    width: 20px; 
+    height: 20px;
+}

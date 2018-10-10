@@ -1,0 +1,48 @@
+{
+  "debug":true,
+  "pages":[
+    "pages/index/index",
+    "pages/home/home",
+    "pages/shoppingCart/shoppingCart",
+    "pages/providerList/providerList",
+    "pages/goldMall/goldMall",
+    "pages/purchaserCenter/purchaserCenter",
+    "pages/productDetail/productDetail"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "backgroundColor":"#ffffff",
+    "navigationBarBackgroundColor": "#fe4b00",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "borderStyle": "white",
+    "selectedColor": "#fe4b00",
+    "list": [{
+      "pagePath": "pages/home/home",
+      "iconPath": "images/icons/home-default.png",
+      "selectedIconPath": "images/icons/home-active.png",
+      "text": "首页"
+    }, {
+      "pagePath": "pages/providerList/providerList",
+      "iconPath": "images/icons/provider-default.png",
+      "selectedIconPath": "images/icons/provider-active.png",
+      "text": "商家"
+    },{
+      "pagePath": "pages/shoppingCart/shoppingCart",
+      "iconPath": "images/icons/buy-list-default.png",
+      "selectedIconPath": "images/icons/buy-list-active.png",
+      "text": "进货单"
+    },{
+      "pagePath": "pages/goldMall/goldMall",
+      "iconPath": "images/icons/jf-default.png",
+      "selectedIconPath": "images/icons/jf-active.png",
+      "text": "兑换"
+    },{
+      "pagePath": "pages/purchaserCenter/purchaserCenter",
+      "iconPath": "images/icons/my-default.png",
+      "selectedIconPath": "images/icons/my-active.png",
+      "text": "我的"
+    }]
+  }
+}

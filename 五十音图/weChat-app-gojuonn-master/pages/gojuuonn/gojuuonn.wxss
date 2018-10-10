@@ -1,0 +1,63 @@
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  padding:0;
+
+} 
+
+.mojicontainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width:100%;
+  align-items: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  padding:0;
+  overflow: scroll;
+  /*calc vh vw*/
+  max-height:calc(100vh - 100px);
+} 
+/*rpx（responsive pixel）: 可以根据屏幕宽度进行自适应。规定屏幕宽为750rpx。
+如在 iPhone6 上，屏幕宽度为375px，共有750个物理像素，则750rpx = 375px = 750物理像素，1rpx = 0.5px = 1物理像素*/
+.mojidiv{
+    width:20%;
+    border:1px solid #ccc;
+    box-sizing: border-box;
+}
+.mojidiv.sannbunn{
+    width:33.3333%;
+}
+.mojidiv view{
+    text-align: center;
+}
+.mojidiv .moji-gana{
+    height:30px;
+    line-height: 30px;
+}
+.moji-roomaji{
+    background-color:antiquewhite;
+    height:20px;
+}
+
+/*footTabBar*/
+.footTabBar{
+    display: flex;
+    position: absolute;
+    bottom:0;
+    height:50px;
+    width:100%;
+    border-top:1px solid #ccc;
+    justify-content: space-around;
+    align-items: center;
+    background-color:#fff;
+    /*box-shadow:0 -5px 15px 5px #ccc;*/
+}
+.tabnow{
+    color:#42b983;
+}

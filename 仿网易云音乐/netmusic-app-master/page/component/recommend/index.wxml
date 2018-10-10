@@ -1,0 +1,16 @@
+<import src="../../../utils/commentslist.wxml" />
+<scroll-view bindscrolltolower="loadmore" id="recpage" style="height:100%;" scroll-y="true" lower-threshold="20">
+  <view id="rec_header">
+    <view id="rch_img">
+      <image src="http://p4.music.126.net/EvguDWVJdOFUSG111mVIeA==/6641050232255971.jpg" />{{music.name}}
+    </view>
+    <view id="rch_info">
+      <text id="rchi_name">许茹芸精选集</text>
+      <text>by 小头头</text>
+    </view>
+    <view id="rch_arrow">
+      <image src="../../../image/a6a.png" />
+    </view>
+  </view>
+  <template is="commentslist" data="{{rec:rec,loading:loading}}" />
+</scroll-view>

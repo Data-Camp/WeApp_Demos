@@ -1,0 +1,65 @@
+.tab{
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+.tab-nav{
+	height: 80rpx;
+	background: #fff;
+	border-bottom: 1rpx solid #ddd;
+	display: flex;
+	line-height: 79rpx;
+	position: relative;
+}
+.tab-nav text{
+	display: block;
+	flex: 1;
+	text-align: center;
+	width: 25%;
+}
+.tab-nav text.active{
+	color: #f7982a;
+}
+.tab-line{
+	position: absolute;
+	left: 0;
+	bottom: -1rpx;
+	height: 4rpx;
+	background: #f7982a;
+	transition: all 0.3s;
+}
+.tab-content{
+	width: 400%;
+	height: 100%;
+	overflow: hidden;
+	display: flex;
+}
+.tab-content .tab-panel{
+	height: 100%;
+	overflow-y: auto;
+	overflow-x: hidden;
+	flex: 1;
+	/* flex: 0 0 20%; */
+}
+.test-list{
+	padding: 0 20rpx;
+}
+.question-list{
+	padding: 20rpx;
+}
+.test-item{
+	border-bottom: 1rpx solid #ddd;
+	padding: 20rpx 0;
+}
+.test-item-t{
+	font-size: 34rpx;
+}
+.test-item-b{
+	font-size: 30rpx;
+	color: #888;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-webkit-box-orient: vertical;
+}

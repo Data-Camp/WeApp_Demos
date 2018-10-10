@@ -1,0 +1,117 @@
+<!--
+  伪造类iOS tableView
+  index: int
+  msg: string
+  time: string
+-->
+<template name="wxTableList">
+    <view>
+        <!--wxTableListTop
+        - 放置上拉刷新等
+        -->
+        <view class="wxTableListTop">
+            wxTableListTop
+        </view>
+
+        <view class="wxTableListHeader">
+            {{test}}
+        </view>
+
+        <view class="wxTableListBody">
+            <view class="wxTableListPlainStyle">
+
+               <!--分组1-->
+               <view class="weui-cells__title">带说明的列表项</view>
+               <view class="weui-cells weui-first-cells">
+                    <view class="weui-cell">
+                        <view class="weui-cell__bd">
+                            <text>标题文字</text>
+                        </view>
+                        <view class="weui-cell__ft">说明文字</view>
+                    </view>
+               </view>
+               <!--分组2-->
+               <view class="weui-cells__title">带图标、说明的列表项</view>
+                <view class="weui-cells  weui-first-cells">
+                        <view class="weui-cell">
+                            <view class="weui-cell__hd">
+                                <image class="weui-cell__icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=" alt="" style="width:20px;margin-right:5px;display:block" />
+                            </view>
+                            <view class="weui-cell__bd">
+                                <text>标题文字</text>
+                            </view>
+                            <view class="weui-cell__ft">说明文字</view>
+                        </view>
+                        <view class="weui-cell">
+                            <view class="weui-cell__hd">
+                                <image class="weui-cell__icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=" alt="" style="width:20px;margin-right:5px;display:block" />
+                            </view>
+                            <view class="weui-cell__bd">
+                                <text>标题文字</text>
+                            </view>
+                            <view class="weui-cell__ft">说明文字</view>
+                        </view>
+                    </view>
+                    <!--分组三-->
+                    <view class="weui-cells__title">带跳转的列表项</view>
+                    <view class="weui-cells">
+                        <view class="weui-cell weui-cell_access">
+                            <view class="weui-cell__bd">
+                                <text>cell standard</text>
+                            </view>
+                            <view class="weui-cell_access__ft">
+                            </view>
+                        </view>
+                        <view class="weui-cell weui-cell_access">
+                            <view class="weui-cell__bd">
+                                <text>cell standard</text>
+                            </view>
+                            <view class="weui-cell_access__ft">
+                            </view>
+                        </view>
+                    </view>
+
+                    <!--disan-->
+                    <view class="weui-cells__title">带图标、说明、跳转的列表项</view>
+                    <view class="weui-cells">
+                        <view class="weui-cell weui-cell_access">
+                            <view class="weui-cell__hd">
+                                <image class="weui-cell__icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=" alt="" style="width:20px;margin-right:5px;display:block" />
+                            </view>
+                            <view class="weui-cell__bd">
+                                <text>cell standard</text>
+                            </view>
+                            <view class="weui-cell_access__ft">说明文字</view>
+                        </view>
+                        <view class="weui-cell weui-cell_access">
+                            <view class="weui-cell__hd">
+                                <image class="weui-cell__icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=" alt="" style="width:20px;margin-right:5px;display:block" />
+                            </view>
+                            <view class="weui-cell__bd">
+                                <text>cell standard</text>
+                            </view>
+                            <view class="weui-cell_access__ft">说明文字</view>
+                        </view>
+                    </view>
+
+
+            </view>
+
+            <view class="wxTableListGroupStyle">
+               
+            </view>
+
+        </view>
+
+        <view class="wxTableListfooter">
+            wxTableListfooter
+        </view>
+
+        <!--wxTableListTop
+        - 放置下拉加载等
+        -->
+        <view class="wxTableListBottom">
+            wxTableListBottom
+        </view>
+    </view>
+</template>

@@ -1,0 +1,29 @@
+<scroll-view scroll-y="true" style="height:100%;">
+    <view class="bigImg">
+        <view class="userAva">
+            <text class="userName">{{userInfo.nickName}}</text>
+            <image src="{{userInfo.avatarUrl}}"></image>
+        </view>
+    </view>
+    <view class="moments_content">
+        <view class="wa-row borderBot marginBot" wx:for="{{moments}}" wx:for-item="item">
+            <view class="wa-col-20">
+                <image class="otherAva" src="{{item.avaImg}}"></image>
+            </view>
+            <view class="wa-col" style="padding:0">
+                <view class="otherName">{{item.name}}</view>
+                <text wx:if="{{item.text}}">{{item.text}}</text>
+                <view class="weui-grids" style="overflow:hidden;width:100%;margin:10px 0" wx:if="{{item.img}}">
+                    <view class="weui-grid" wx:for="{{item.img}}" wx:for-item="i" style="background:url('{{i.imgUrl}}') no-repeat;background-size:cover;float:left;width:33%;height:190rpx"></view>
+                </view>
+                <view wx:if="{{item.address}}" class="padding_half">
+                    {{item.address}}
+                </view>
+                <view class="nickTime">
+                    <view class="padding_half">{{item.time}}</view>
+                    <view class="ion-ios-compose-outline nickIcon"></view>
+                </view>
+            </view>
+        </view>
+    </view>
+</scroll-view>

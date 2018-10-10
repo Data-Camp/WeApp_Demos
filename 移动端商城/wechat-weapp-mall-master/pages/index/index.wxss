@@ -1,0 +1,79 @@
+.container {
+    background-color: #F2f2f2;
+}
+
+.swiper_box {
+    width: 100%;
+}
+
+swiper-item image {
+    width: 100%;
+    display: inline-block;
+    overflow: hidden;
+}
+
+view.text {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 10px 10px 10px 12px;
+    font-size: 15px;
+    color: #656565;
+}
+
+view.text:before {
+    position: absolute;
+    display: block;
+    content: ' ';
+    left: -5px;
+    width: 2px;
+    height: 100%;
+    background-color: #09bb07;
+}
+
+.line_flag {
+    width: 3px;
+    height: 100%;
+    height: 15px;
+    display: inline-block;
+    background-color: #f9f027;
+}
+
+view.text text {
+    margin-left: 10px;
+    line-height: 18px;
+    font-weight: bold;
+}
+
+.venues_box {
+    padding: 0 10rpx;
+}
+
+.venues_item {
+    display: inline-block;
+    width: 49%;
+    margin: 0 0.5%;
+}
+
+.venues_item image{
+    width: 100%;
+    height: 90px;
+}
+
+.choice_box {
+    padding: 0 10rpx;
+}
+.choice_box .choice_list .choice_item{
+    margin-bottom: 15px;
+}
+.choice_box .choice_list image {
+    width: 100%;
+    height: 200px;
+}
+
+.choice_box .choice_list .title {
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+}

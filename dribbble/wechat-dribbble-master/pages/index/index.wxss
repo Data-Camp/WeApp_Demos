@@ -1,0 +1,20 @@
+.shot-menu {
+    border-bottom: 1px solid #e5e5e5;
+    background: rgba(255,255,255,0.6);
+}
+.shot-menu .shot-menu-item {
+    width: 33.33%;
+    text-align: center;
+    display: inline-block;
+    height: 37px;
+    line-height: 37px;
+    font-size: 12px;
+}
+.shot-menu .shot-menu-item:hover {
+    background: #fff;
+}
+.shot-menu .shot-menu-arrow {
+    width: 10px;
+    height: 6px;
+    padding-left: 3px;
+}

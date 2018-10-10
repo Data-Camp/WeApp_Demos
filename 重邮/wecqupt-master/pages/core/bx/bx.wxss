@@ -1,0 +1,136 @@
+/**bx.wxss**/
+.container{
+    background-color: #f7f7f7;
+}
+.service-nav{
+    display: flex;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 10rpx;
+}
+.service-nav-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 11pt;
+    line-height: 150%;
+    height: 160rpx;
+    padding: 20rpx;
+    border-right: 1rpx solid #eee;
+    background: #fcfcfc;
+}
+.service-history{
+    width: 200rpx;
+    flex-shrink: 0;
+}
+.service-apply-btn{
+    flex: 1;
+    flex-direction: row;
+    align-items: center;
+    font-size: 25pt;
+    font-weight: bold;
+    color: #7acfa6;
+    background: rgba(122,207,166,.05);
+}
+.service-apply-btn:active{
+    background: #fff;
+}
+.service-nav-hd {
+    color: #777;
+}
+.service-nav-bd {
+    display: flex;
+    justify-content: center;
+}
+.service-nav-value {
+    font-size: 30pt;
+    color: #7acfa6;
+    font-weight: bold;
+    line-height: 150%;
+    padding: 0 20rpx 0 30rpx;
+}
+.service-apply-icon{
+    flex-shrink: 0;
+    width: 100rpx;
+    height: 100rpx;
+    margin-right: 15rpx;
+}
+
+.service-process-title{
+    color: #888;
+    padding: 15rpx 20rpx;
+}
+.process{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20rpx;
+}
+.process-hd{
+    display: flex;
+    align-items: center;
+    height: 100rpx;
+    font-size: 11pt;
+    margin-left: 30rpx;
+    border-bottom: 1px solid #eee;
+}
+.review-process-icon{
+    flex-shrink: 0;
+    width: 45rpx;
+    height: 45rpx;
+    margin-right: 15rpx;
+}
+.order-number-name{
+    flex: 1 1 auto;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.process-state{
+    flex: 0 0 100rpx;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 30rpx;
+    font-weight: bold;
+}
+.process-state-waited{
+    color: #ffcb63;
+}
+.process-state-accepted{
+    color: #73b4ef;
+}
+.process-state-dispatched{
+    color: #e78ab0;
+}
+.process-state-finished{
+    color: #9f8bea;
+}
+.process-state-refused{
+    color: #999;
+}
+.process-bd{
+    padding: 10rpx 30rpx;
+}
+.process-item{
+    display: flex;
+    justify-content: space-between;
+    margin: 20rpx 5rpx;
+}
+.process-item-bd{
+    display:flex;
+}
+.process-item-ft{
+    display: flex;
+}
+.service-detail-open{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 25rpx;
+    border-top: 1px solid #eee;
+    color: #7acfa6;
+}

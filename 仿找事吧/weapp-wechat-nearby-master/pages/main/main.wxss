@@ -1,0 +1,57 @@
+/**main.wxss**/
+.swiper_box {
+    width: 100%;
+}
+
+swiper-item image {
+    width: 100%;
+    display: inline-block;
+    overflow: hidden;
+}
+
+
+.sv{
+  background-color:#efeff4;
+  margin-top: 10rpx
+}
+.items{
+  float:left;
+  width: 20%;
+  background-color:#fff;
+}
+.item-img{
+  width: 100%; 
+  height: 60rpx;
+}
+.item-text{
+  width: 100%; 
+  height: 60rpx;
+  font-size: 25rpx;
+  text-align:center;
+}
+.data{
+  margin-top: 10rpx;
+  background-color:#fff;
+  padding: 10rpx;
+}
+.data-title{
+  padding-left: 10rpx;
+  padding-top: 15rpx;
+}
+.data-items{
+  width: 100%;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+  overflow: hidden;
+}
+.data-item-img{
+  width: 20%;
+  height:120rpx;
+  float:left;
+}
+.data-item-text{
+   width: 75%;
+   padding: 5rpx;
+   height:120rpx;
+   float:left;
+}

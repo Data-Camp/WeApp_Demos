@@ -1,0 +1,143 @@
+/** item.wxss **/
+
+.container {
+  font-size: 26rpx;
+}
+
+.header {
+  height: 400rpx;
+}
+
+.toolbar {
+  height: 60rpx;
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toolbar .item {
+  width: 40rpx;
+  height: 40rpx;
+  margin: 10rpx 20rpx;
+}
+
+.title {
+  height: 120rpx;
+  position: absolute;
+  top: 280rpx;
+}
+
+.title .avatar {
+  margin: 20rpx;
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+  float: left;
+}
+
+.title .desc {
+  height: 100rpx;
+  width: 630rpx;
+  margin: 10rpx 0;
+  float: right;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.desc .item {
+  height: 50%;
+  padding: 12rpx 0;
+}
+
+.content {
+  padding: 10rpx;
+  border-bottom: 1px solid #E5E7ED;
+}
+
+.content .text {
+  line-height: 42rpx;
+}
+
+.content .media {
+  width: 730rpx;
+}
+
+.content .footer {
+  height: 60rpx;
+  margin-top: 10rpx;
+  font-size:22rpx;
+  color: #70899D;
+}
+
+.content .footer image {
+  width: 20rpx;
+  height: 20rpx;
+}
+
+.content .footer .left {
+  display: inline-block;
+  height: 40rpx;
+  margin: 10rpx 0;
+}
+
+.content .footer .right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  float: right;
+  height: 40rpx;
+  margin-left: 20rpx;
+  background-color: #E5E7ED;
+  font-size: 20rpx;
+}
+
+.content .footer .right image {
+  margin: 10rpx;
+}
+
+.content .footer .right text {
+  font-size: 20rpx;
+  padding:10rpx 10rpx 10rpx 0;
+}
+
+#footer {
+  width: 100%;
+  height: 300rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#footer .container {
+  height: 100rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#footer .container .item {
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+}
+
+.swiper-container image {
+  width: 100%;
+  height: 100%;
+}

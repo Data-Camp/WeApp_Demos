@@ -1,0 +1,17 @@
+<view class="view-request-fail" wx:if="{{request_fail}}">
+    <text class="text-request-fail">网络或服务器错误，请检查网络...</text>
+</view>
+<view wx:if="{{!request_fail}}">
+    <scroll-view scroll-y="true" bindscrolltolower="lower" style="height:{{windowHeight}};" lower-threshold="200">
+        <navigator wx:for="{{arr_res}}" url="{{url}}?id={{item.id}}&name={{item.name}}">
+            <view class="main">
+                <image class="img" src="http://tnfs.tngou.net/image{{item.img}}" />
+                <view class="text">
+                    <text class="title">{{item.name}}</text>
+                    <text class="subtitle">{{item.keywords}}</text>
+                </view>
+            </view>
+        </navigator>
+    </scroll-view>
+    <loading hidden="{{loadingHidden}}">{{lodingInfo}}</loading>
+</view>

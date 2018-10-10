@@ -1,0 +1,72 @@
+<!-- 热门推荐、动画区Item -->
+<template name="jiefItem1">
+    <!-- List Item begin -->
+    <view class="content-list">
+    <navigator class="item">
+        <view class="top">
+        <view class="cover-img" 
+        style="opacity: 1; background-image: url({{coverImg}});">
+        </view>
+        </view>
+        <view class="info">
+        <view class="title">{{title}}</view>
+        <view class="meta clearfix">
+            <view class="cell left">
+                <view class="bilibili-index-sprite bilibili-index-play"></view>
+                <text>{{playNum}}</text>
+            </view>
+            <view class="cell left">
+                <view class="bilibili-index-sprite bilibili-index-danmu"></view>
+                <text>{{commentNum}}</text>
+            </view>
+        </view>
+        </view>
+    </navigator>
+    </view>
+    <!-- List Item end -->
+</template>
+
+<!-- 直播Item -->
+<template name="jiefItem2">
+    <!-- List Item begin -->
+    <view class="content-list">
+        <navigator class="item">
+          <view class="top">
+            <view class="cover-img" 
+            style="opacity: 1; background-image: url({{coverImg}});">
+            </view>
+          </view>
+          <view class="info">
+              <view class="avatar">
+                 <image mode="scaleToFill" src="{{avatarImg}}"></image>
+              </view>
+              <view class="user">
+                  <view class="name text-overflow">{{name}}</view>
+                  <view class="desp text-overflow">{{desp}}</view>
+              </view>
+              <view class="online text-overflow">{{online}}</view>
+          </view>
+        </navigator>
+      </view>
+    <!-- List Item end -->
+</template>
+
+<!-- 番剧更新Item -->
+<template name="jiefItem3">
+    <!-- List Item begin -->
+    <view class="content-list bangumi-list">
+    <navigator class="item">
+        <view class="top">
+        <view class="cover-img" 
+        style="opacity: 1; background-image: url({{coverImg}});">
+        </view>
+        </view>
+        <view class="info">
+        <view class="bangumi-title text-overflow">{{bangumiTitle}}</view>
+        <view class="bangumi-page text-overflow">{{bangumiPage}}</view>
+        </view>
+    </navigator>
+    </view>
+    <!-- List Item end -->
+</template>
+

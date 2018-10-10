@@ -1,0 +1,83 @@
+<!--logs.wxml-->
+<view class="top-tab flex-wrp flex-tab">
+  <view class="toptab flex-item {{currentNavtab==idx ? 'active' : ''}}" wx:for="{{navTab}}" wx:for-index="idx" wx:for-item="itemName" data-idx="{{idx}}" bindtap="switchTab">
+    {{itemName}}
+  </view>
+</view>
+<scroll-view scroll-y="true" class="container notify withtab" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+  <view class="ctnt0" hidden="{{currentNavtab==0 ? '' : true}}">
+    <view class="unread">
+      <text>0 条未读</text>
+      <image src="../../images/allread.png"></image>
+    </view>
+    <view class="notify-item flex-wrp">
+      <view class="avatar flex-item">
+        <image src="../../images/icon1.jpeg"></image>
+      </view>
+      <view class="notify-content flex-item">
+        <text class="notify-source">Rebecca  回答了问题</text>
+        <text class="notify-title">C#如何在不覆盖原有文件的情况下直接修改某一部分的内容？</text>
+      </view>
+    </view>
+    <view class="notify-item flex-wrp">
+      <view class="avatar flex-item">
+        <image src="../../images/icon1.jpeg"></image>
+      </view>
+      <view class="notify-content flex-item">
+        <text class="notify-source">Rebecca  回答了问题</text>
+        <text class="notify-title">C#如何在不覆盖原有文件的情况下直接修改某一部分的内容？</text>
+      </view>
+    </view>
+    <view class="notify-item flex-wrp">
+      <view class="avatar flex-item">
+        <image src="../../images/icon1.jpeg"></image>
+      </view>
+      <view class="notify-content flex-item">
+        <text class="notify-source">Rebecca  回答了问题</text>
+        <text class="notify-title">C#如何在不覆盖原有文件的情况下直接修改某一部分的内容？</text>
+      </view>
+    </view>
+    <view class="notify-item flex-wrp">
+      <view class="avatar flex-item">
+        <image src="../../images/icon1.jpeg"></image>
+      </view>
+      <view class="notify-content flex-item">
+        <text class="notify-source">Rebecca  回答了问题</text>
+        <text class="notify-title">C#如何在不覆盖原有文件的情况下直接修改某一部分的内容？</text>
+      </view>
+    </view>
+    <view class="notify-item flex-wrp">
+      <view class="avatar flex-item">
+        <image src="../../images/icon1.jpeg"></image>
+      </view>
+      <view class="notify-content flex-item">
+        <text class="notify-source">Rebecca  回答了问题</text>
+        <text class="notify-title">C#如何在不覆盖原有文件的情况下直接修改某一部分的内容？</text>
+      </view>
+    </view>
+    <view class="notify-item flex-wrp">
+      <view class="avatar flex-item">
+        <image src="../../images/icon1.jpeg"></image>
+      </view>
+      <view class="notify-content flex-item">
+        <text class="notify-source">Rebecca  回答了问题</text>
+        <text class="notify-title">C#如何在不覆盖原有文件的情况下直接修改某一部分的内容？</text>
+      </view>
+    </view>
+    <view class="notify-item flex-wrp">
+      <view class="avatar flex-item">
+        <image src="../../images/icon1.jpeg"></image>
+      </view>
+      <view class="notify-content flex-item">
+        <text class="notify-source">Rebecca  回答了问题</text>
+        <text class="notify-title">C#如何在不覆盖原有文件的情况下直接修改某一部分的内容？</text>
+      </view>
+    </view>
+  </view>
+  <view class="ctnt1 placehold" hidden="{{currentNavtab==1 ? '' : true}}">
+    <text>赞与感谢</text>
+  </view>
+  <view class="ctnt2 placehold" hidden="{{currentNavtab==2 ? '' : true}}">
+    <text>关注</text>
+  </view>
+</scroll-view>

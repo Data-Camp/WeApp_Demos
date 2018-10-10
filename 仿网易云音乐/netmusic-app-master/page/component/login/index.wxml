@@ -1,0 +1,15 @@
+<view class="form-common">
+    <form bindsubmit="login">
+        <view class="formc-cnt">
+            <text>账号：</text>
+            <input auto-focus bindinput="textinput" data-type="1" placeholder="手机/邮箱" type="number"/>
+        </view>
+        <view class="formc-cnt">
+            <text>密码：</text>
+            <input auto-focus bindinput="textinput" data-type="2" type="text" password="true"/>
+        </view>
+        <view>
+            <button type="primary" hover-class="btnhover" formType="submit">登录</button>
+        </view>
+    </form>
+</view>

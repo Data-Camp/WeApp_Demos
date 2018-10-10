@@ -1,0 +1,57 @@
+/**index.wxss**/
+.topic-item {
+  display: flex;
+  flex-direction: row;
+  /*align-items: center;*/
+}
+
+.member-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin-right: 20rpx;
+  border-radius: 100%;
+}
+
+.topic-info {
+    flex:1;
+    font-size: 24rpx;
+}
+
+.topic-inner {
+    display: flex;
+    align-items: center;
+    color:#777;
+}
+
+.topic-title {
+    height:120rpx;
+    line-height: 1.4;
+    box-sizing: border-box;
+    padding-top: 5rpx;
+}
+
+.topic-left {
+    flex:1;
+}
+
+.node-name {
+    display: inline-block;
+    margin-right: 20rpx;
+    padding:5rpx 10rpx;
+    border-radius: 5rpx;
+    background-color: #eee;
+}
+
+.reply-num {
+    display: inline-block;
+    margin-left: 50rpx;
+    padding:10rpx;
+    height:22rpx;
+    background-color: #ddd;
+    border-radius: 5rpx;   
+    color:#777; 
+}
+
+.member-nickname {
+  color: #aaa;
+}

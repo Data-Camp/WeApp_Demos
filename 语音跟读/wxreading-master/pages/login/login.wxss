@@ -1,0 +1,141 @@
+.login_container {
+    position: absolute;
+    /*display: flex;*/
+    width: 100%;
+    min-height: 100%;
+    /*flex-direction: column;*/
+    /*align-items: center;*/
+    /*justify-content: space-between;*/
+    box-sizing: border-box;
+    background: #F5F5F5;
+    font: menu;
+}
+.login-header{
+    position: relative;
+    width: 100%;
+    height: 360rpx;
+    background-color: #21D2A9;
+}
+
+.login-header-bg {
+    position: absolute;
+    z-index: 9;
+    bottom: 0;
+    width: 100%;
+    height: 156rpx;
+}
+.login-header-swbg{
+    position: absolute;
+    z-index: 19;
+    top: 40rpx;
+    left: 156rpx;
+    width: 438rpx;
+    height: 236rpx;
+}
+.login-header-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow:column nowrap;
+    font-size: 32rpx;
+    color: #4A4a4a;
+    padding: 76rpx 0;
+}
+
+.login-article-control{
+    width: 100%;
+    height: 240rpx;
+    background-color: #FFFFFF;
+    box-sizing: border-box;
+    font-size: 28rpx;
+}
+.login-article-mobile{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 120rpx;
+    border-bottom: 2rpx solid #F7F7F7;
+    color: #808080;
+}
+.login-article-weixin{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 120rpx;
+    border-bottom: 2rpx solid #F7F7F7;
+    color: #808080;
+}
+.weixin-ico{
+    width: 60rpx;
+    height: 50rpx;
+    margin-right: 16rpx;
+}
+/* 手机号登录框 */
+.mobile-login-content{
+    width: 100%;
+    height: 240rpx;
+    background-color: #FFFFFF;
+    box-sizing: border-box;
+    font-size: 28rpx;
+}
+.mobile-login-content input{
+    display: block;
+    width: 10rem;
+}
+.mobile-login-number{
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 120rpx;
+    box-sizing: border-box;
+    border-bottom: 2rpx solid #F7F7F7;
+    padding-left: 50rpx;
+}
+.mobile-login-getvcode{
+    position: absolute;
+    top: 32rpx;
+    right: 20rpx;
+    background-color: #1ECFA7;
+    line-height: 56rpx;
+    width: 240rpx;
+    text-align: center;
+    border-radius: 28rpx;
+    color: #FFFFFF;
+}
+.mobile-login-getvcode.disable{
+    background-color: #D2D5D8;
+    color: #FFFFFF;
+}
+.mobile-login-vcode{
+    display: flex;
+    width: 100%;
+    height: 120rpx;
+    box-sizing: border-box;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 50rpx;
+}
+.mobile-login-submit{
+    width: 240rpx;
+    line-height: 56rpx;
+    background-color: #1ECFA7;
+    margin: 40rpx auto 24rpx auto;
+    text-align: center;
+    border-radius: 28rpx;
+    color: #FFFFFF;
+}
+/**/
+.login-footer{
+    padding-top: 28rpx;
+    font-size: 28rpx;
+    color: #9B9B9B;
+    text-align: center;
+}
+.agree-txt{
+    color: #2DD1AC;
+}

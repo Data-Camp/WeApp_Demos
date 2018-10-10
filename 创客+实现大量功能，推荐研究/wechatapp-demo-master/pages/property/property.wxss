@@ -1,0 +1,25 @@
+.multiple-select{
+	padding: 20rpx;
+	display: flex;
+	flex-wrap: wrap;
+}
+.multiple-select view{
+	flex: 0 0 25%;
+	max-width: 25%;
+	padding: 10rpx;
+	box-sizing: border-box;
+}
+.multiple-select text{
+	display: block;
+	border: 1rpx solid #ddd;
+	line-height: 66rpx;
+	color: #666;
+	font-size: 28rpx;
+	text-align: center;
+	border-radius: 4rpx;
+}
+.multiple-select text.active{
+	background: #f7982a;
+	color: #fff;
+	border-color: #f7982a;
+}

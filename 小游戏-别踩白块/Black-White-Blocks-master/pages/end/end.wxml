@@ -1,0 +1,5 @@
+<view class="current">{{gameType}}</view>
+<view class="current">本次分数：{{currentScore}}</view>
+<view class="highest">最高分数：{{heighestScore}}</view>
+<navigator url="{{backUrl}}" redirect class="go-again">再来一次</navigator>
+<navigator url="../index/index" redirect class="go-home">返回首页</navigator>

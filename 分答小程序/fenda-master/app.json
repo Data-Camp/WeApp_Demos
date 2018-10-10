@@ -1,0 +1,37 @@
+{
+  "pages":[
+    "pages/tem/tem",
+    "pages/index/index",
+    "pages/feed/feed",
+    "pages/me/me",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#3f3f3f",
+    "navigationBarTitleText": "分答",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#f85f48",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "list": [{
+      "pagePath": "pages/tem/tem",
+      "text": "公共"
+    },{
+      "pagePath": "pages/index/index",
+      "text": "限免"
+    }, {
+      "pagePath": "pages/feed/feed",
+      "text": "收听"
+    },{
+      "pagePath": "pages/index/index",
+      "text": "找人"
+    },{
+      "pagePath": "pages/me/me",
+      "text": "我的"
+    }]
+  }
+}

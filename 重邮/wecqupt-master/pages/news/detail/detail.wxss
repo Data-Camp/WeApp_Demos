@@ -1,0 +1,86 @@
+/**detail.wxss (common)**/
+.container{
+    background: #fff;
+    padding: 0 30rpx;
+}
+.title{
+    font-size: 18pt;
+    font-weight: bold;
+    margin-top: 40rpx;
+    line-height: 140%;
+    word-break: break-all;
+}
+.info{
+    margin-top: 30rpx;
+    color: #b2b2b2;
+}
+.info text{
+    padding: 0 20rpx 0 5rpx;
+}
+.detail{
+    font-size: 11pt;
+    line-height: 150%;
+    padding: 50rpx 15rpx 200rpx;
+    word-break: break-all;
+    text-align: justify;
+}
+.files_list {
+    position: fixed;
+    bottom: -10rpx;
+    left: 0;
+    right: 0;
+    height: 190rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+.file{
+    padding: 0 30rpx 0 50rpx;
+    height: 140rpx;
+    margin: 0 30rpx;
+    background-color: #fcfcfc;
+    border: 1rpx solid #ececec;
+    border-radius: 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.file:active{
+    background-color: #fff;
+}
+.fileNameSource{
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding-left: 40rpx;
+}
+.file-name{
+    font-size: 11pt;
+    line-height: 150%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 100%;
+    overflow: hidden;
+}
+.file-source{
+    font-size: 10pt;
+    color: #919191;
+}
+.file-remind{
+    flex: 0 0 25pt;
+    width: 25pt;
+    height: 25pt;
+    font-size: 10pt;
+    text-align: center;
+    padding: 0 10rpx;
+}
+.file-remind image {
+    width: 100%;
+    height: 100%;
+}
+.file-img{
+    flex: 0 0 39rpx;
+    width: 39rpx;
+    height: 48rpx;
+}

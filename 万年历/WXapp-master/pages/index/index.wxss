@@ -1,0 +1,44 @@
+.topBar{
+  font-family: '微软雅黑';
+  font-weight: 200;
+  font-size: 50rpx;
+  color: white;
+  background-color: #8D91FF;
+  padding: 0rpx 0rpx 10rpx 20rpx;
+}
+.teamInfo{
+  position: relative;
+  line-height: 120rpx;
+  padding-left: 50rpx;
+  border-bottom: 1px solid #eee;
+}
+.teamInfo .teamName{
+  font-family: '微软雅黑';
+  font-weight: 200;
+  font-size: 40rpx;
+  display: inline-block;
+}
+.teamInfo .teamMember{
+  display: inline-block;
+  vertical-align: top;
+  line-height: 30rpx;
+  font-size: 20rpx;
+  font-family: '微软雅黑';
+  color: #999;
+  padding-top: 30rpx;
+  padding-left: 30rpx;
+}
+.teamInfo .teamMember .members{
+  
+}
+.teamInfo .teamMember .memberNum{
+  line-height: 30rpx;
+  font-size: 20rpx;
+}
+.teamInfo .teamMember .right_arrow{
+  width: 30rpx;
+  height: 30rpx;
+  position: absolute;
+  right: 20rpx;
+  top: 50rpx;
+}

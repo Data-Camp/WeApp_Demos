@@ -1,0 +1,62 @@
+<view class="container">
+	<view class="container-body">
+		<view class="tab">
+			<view class="tab-nav">
+				<text wx:for="{{tabnav.tabitem}}" bindtap="setTab" class="{{showtab==index?'active':''}}" data-tabindex="{{index}}" data-type="{{item.type}}" wx:key="{{item.type}}">{{item.text}}</text>
+				<view class="tab-line" style="width:{{100/tabnav.tabnum}}%;transform:translateX({{100*showtab}}%);"></view>
+			</view>
+			<view class="tab-content" style="" bindtouchstart="scrollTouchstart" bindtouchmove="scrollTouchmove" bindtouchend="scrollTouchend" style="width: {{tabnav.tabnum*100}}%;transform:translateX(-{{showtab*100/tabnav.tabnum}}%);margin-left: {{marginleft}}px;">
+				<view class="tab-panel">
+					<view class="test-list">
+						<view class="test-item" wx:for="{{testdata1}}" wx:key="{{item.id}}">
+							<view class="test-item-t">类型：{{item.type}}</view>
+							<view class="test-item-b">{{item.text}}</view>
+						</view>
+					</view>
+				</view>
+				<view class="tab-panel">
+					<view class="test-list">
+						<view class="test-item" wx:for="{{testdata2}}" wx:key="{{item.id}}">
+							<view class="test-item-t">类型：{{item.type}}</view>
+							<view class="test-item-b">{{item.text}}</view>
+						</view>
+					</view>
+				</view>
+				<view class="tab-panel">
+					<view class="test-list">
+						<view class="test-item" wx:for="{{testdata3}}" wx:key="{{item.id}}">
+							<view class="test-item-t">类型：{{item.type}}</view>
+							<view class="test-item-b">{{item.text}}</view>
+						</view>
+					</view>
+				</view>
+				<view class="tab-panel">
+					<view class="test-list">
+						<view class="test-item" wx:for="{{testdata4}}" wx:key="{{item.id}}">
+							<view class="test-item-t">类型：{{item.type}}</view>
+							<view class="test-item-b">{{item.text}}</view>
+						</view>
+					</view>
+				</view>
+				<view class="tab-panel">
+					<view class="test-list">
+						<view class="test-item" wx:for="{{testdata5}}" wx:key="{{item.id}}">
+							<view class="test-item-t">类型：{{item.type}}</view>
+							<view class="test-item-b">{{item.text}}</view>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+<!-- 	<view class="footer-tab footer-tab-widthicon">
+		<view class="footer-tab-item {{showfootertab==0?'active':''}}" data-index="0" bindtap="showTab">
+			<image src="../../images/{{showfootertab==0?'xinxifill':'xinxi'}}.png" mode="aspectFit"></image>
+			<text>问题反馈</text>
+		</view>
+		<view class="footer-tab-item {{showfootertab==1?'active':''}}" data-index="1" bindtap="showTab">
+			<image src="../../images/{{showfootertab==1?'wenhaofill':'wenhao'}}.png" mode="aspectFit"></image>
+			<text>常见问题</text>
+		</view>
+	</view> -->
+</view>

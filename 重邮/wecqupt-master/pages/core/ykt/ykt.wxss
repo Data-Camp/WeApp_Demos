@@ -1,0 +1,205 @@
+/**ykt.wxss**/
+.container {
+    background-color: #f7f7f7;
+    padding: 30rpx 0;
+}
+
+/* 今日余额 */
+.ykt-card {
+    display: flex;
+    flex-direction: column;
+    height: 350rpx;
+    margin: 15rpx 50rpx 45rpx;
+    background: #ffcb63;
+    border-radius: 15rpx;
+    box-shadow: 5rpx 5rpx 15rpx #ccc;
+}
+.ykt-black-line {
+    width: 100%;
+    height: 80rpx;
+    margin: 40rpx 0 0;
+    background: #7b7b7b;
+}
+.ykt-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.ykt-ye {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding-right: 50rpx;
+    color: #777;
+}
+.ykt-ye-name {
+    font-size: 11pt;
+    line-height: 50rpx;
+    padding-left: 30rpx;
+}
+.ykt-ye-money {
+    text-align: center;
+    font-size: 10pt;
+}
+.ykt-ye-value {
+    font-size: 36pt;
+    font-weight: bold;
+    line-height: 80rpx;
+    padding-right: 25rpx;
+}
+.ykt-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200rpx;
+}
+.ykt-img image {
+    width: 125rpx;
+    height: 125rpx;
+    padding: 20rpx 30rpx;
+}
+.ykt-card-more {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 5rpx 25rpx 10rpx 25rpx;
+    line-height: 100%;
+    opacity: .6;
+}
+.ykt-ye-time {
+    font-size: 9pt;
+}
+.ykt-ye-id {
+    font-size: 10pt;
+}
+
+/* canvas */
+.grid-remind {
+    padding-left: 40rpx;
+    color: #999;
+    margin-bottom: 25rpx;
+}
+
+/* 余额、消费切换按钮 */
+.balance-consumption {
+    display: flex;
+    margin: 0 45rpx 10rpx;
+    border-radius: 5px;
+    box-shadow: 0 0 10rpx #ddd;
+    overflow: hidden;
+}
+.balance-consumption text {
+    flex: 1;
+    flex-shrink: 0;
+    line-height: 150%;
+    font-size: 10pt;
+    padding: 12rpx 0;
+    font-weight: bold;
+    text-align: center;
+    background: #fff;
+}
+.balance-consumption .current-btn {
+    color: #fff;
+    background: #ffcb63;
+}
+
+/* 网格 */
+.grid-wraper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: 50rpx;
+    width: 100%;
+    height: 300px;
+}
+#ykt-canvas {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+
+/* 详情竖线 */
+.line {
+    position: absolute;
+    z-index: 999;
+    top: 15px;
+    height: 265px;
+    width: 3px;
+    background: #e78ab0;
+}
+
+/* 横纵坐标的含义 */
+.y-text {
+    position: absolute;
+    left: 15rpx;
+    top: -40rpx;
+    padding: 0 10rpx;
+    font-size: 24rpx;
+    color: #999;
+}
+.x-text{
+    position: absolute;
+    right: 25rpx;
+    bottom: -10rpx;
+    padding: 0 10rpx;
+    font-size: 24rpx;
+    color: #999;
+}
+
+/* 详情盒子 */
+.detail-remind {
+    font-size: 9pt;
+    line-height: 100%;
+    color: #aaa;
+    text-align: center;
+    margin: 30rpx 5rpx;
+}
+.ykt-detail-wraper {
+    display: flex;
+    flex-direction: column;
+    margin: 0 30rpx 30rpx;
+    background: #fff;
+    border-radius: 3px;
+}
+.ykt-detail {
+    display: flex;
+    flex-direction: column;   
+    padding: 0 10rpx;
+    overflow: hidden;
+}
+.ykt-head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120rpx;
+}
+.ykt-type-name {
+    font-size: 11pt;
+}
+.detail-list {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0 35rpx 10rpx;
+}
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25rpx 5rpx 20rpx;
+    border-top: 1px solid #eee;
+}
+.detail-item-label {
+    color: #888;
+    width: 60pt;
+}
+.detail-item-value {
+    flex: 1;
+}

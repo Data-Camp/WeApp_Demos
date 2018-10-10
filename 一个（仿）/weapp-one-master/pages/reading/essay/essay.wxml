@@ -1,0 +1,30 @@
+<view class="container">
+  <view class="essay">
+    <view class="essay-header">
+      <view class="essay-author">
+        <image class="essay-author-avatar" src="{{essay.author[0].web_url}}"></image>
+        <view class="essay-author-username">
+          <text>{{essay.author[0].user_name}}</text>
+        </view>
+        <view class="essay-makettime">
+          <text>{{essay.hp_makettime}}</text>
+        </view>
+      </view>
+      <view class="essay-audio" bindtap="togglePlay">
+        <image class="essay-play-img" src="{{audioBtn.imgPath}}"></image>
+        <text class="essay-play-text">{{audioBtn.text}}</text>
+      </view>
+    </view>
+    <view class="essay-body">
+      <view class="essay-title">
+        <text>{{essay.hp_title}}</text>
+      </view>
+      <view class="essay-content">
+        <text>{{essay.hp_content}}</text>
+      </view>
+      <view class="essay-author-introduce">
+        <text>{{essay.hp_author_introduce}}</text>
+      </view>
+    </view>
+  </view>
+</view>

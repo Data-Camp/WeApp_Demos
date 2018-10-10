@@ -1,0 +1,40 @@
+<!--
+  为动态列表模版
+  index: int
+  msg: string
+  time: string
+-->
+<template name="dynamic">
+    <view class="dynamic">
+        <view>
+            <text class="dynamic-respondent">{{question.authorName}} 回答了</text>
+        </view>
+        <view>
+            <text class="dynamic-content">{{question.content}}</text>
+        </view>
+        
+        <view class="dynamic-answer">
+            <view class="avatar">
+                <image class="avatarImg" src="{{question.authorHead}}" />
+            </view>
+            <view class="voice">
+                <view wx:if="{{question.qtype == 0}}" class="bubble bubble-blue">
+                    <view class="bubble-tail" style="background-image: url('/images/bubble-tail-blue.png')"></view>
+                    <view class="wave3"></view>
+                    <view>限时免费</view>
+                </view>
+
+                <view wx:elif="{{question.qtype == 1}" class="bubble">
+                    <view class="bubble-tail"></view>
+                    <view class="wave3"></view>
+                    <view>一元偷偷听</view>
+                </view>
+            </view>
+        </view>
+        <view>
+            <text class="dynamic-time">{{question.createTime}} 天前</text>
+            <text class="dynamic-num">听过{{question.listenNum}}</text>
+        </view>
+
+    </view>
+</template>

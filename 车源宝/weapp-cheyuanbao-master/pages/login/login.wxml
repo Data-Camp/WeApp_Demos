@@ -1,0 +1,16 @@
+<view class="container">
+  <view class="login">
+    <view class="logo">
+      <image src="../../images/logo.png"></image>
+    </view>
+    <view class="login-form">
+      <input placeholder="请输入手机号码" auto-focus class="login-txt"/>
+      <input placeholder="请输入密码" class="login-txt"/>
+      <button class="login-btn">登录</button>
+    </view>
+    <view class="forget-reg">
+      <text class="forget">忘记密码</text>
+      <text class="reg">注册</text>      
+    </view>
+  </view>
+</view>

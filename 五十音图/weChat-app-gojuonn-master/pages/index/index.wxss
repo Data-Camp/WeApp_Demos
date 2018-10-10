@@ -1,0 +1,36 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+  color:#42b983;
+  font-size: 20pt;
+}
+/** wxss **/
+/** 修改button默认的点击态样式类**/
+.btn{
+  background:#42b983;
+  color:#fff;
+}
+.other-button-hover {
+  background-color: #42df83;
+}
+/** 添加自定义button点击态样式类**/
+/*.other-button-hover {
+  background-color: cadetblue;
+}*/

@@ -1,0 +1,170 @@
+/**index.wxss**/
+/*欢迎界面*/
+.welcome-container{
+  display: flex;
+  height:100%;
+  opacity: 0;
+  transform: scale(0);
+}
+.wel-pic{
+  
+  height:100%;
+  flex: 0 0 100%;
+  width:375px;
+}
+/*主界面*/
+.shz-container{
+  opacity: 0;
+}
+.flex-box{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background:#eee;
+  padding:20rpx;
+}
+
+.flex-item{
+  margin-bottom: 10rpx;
+  border:1rpx solid #ccc;
+  background: #fff;
+}
+
+.flex-item .inner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:150rpx;
+  height:120rpx;
+}
+
+.flex-item .name{
+  font-size:16rpx;
+  color:#A79E72;
+}
+.nav-item{
+  display: flex;
+    position: relative;
+}
+.arrow{
+    position: absolute;
+    top: 28rpx;
+    right: 44rpx;
+    width: 32rpx;
+    height: 32rpx;
+}
+
+.swiper-item{
+    display: block;
+    height: 150rpx;
+    margin-bottom: 20rpx;
+}
+/*画册*/
+.pic-box{
+  display: flex;
+  justify-content: space-around;
+  padding:10rpx;
+}
+
+.pic-box .left-box{
+ flex:1;
+ margin-right: 5px;
+}
+
+.pic-box .right-box{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.pic-box .l-pic{
+  width:160px;
+  height:240px;
+}
+.pic-box .r-pic{
+  width:200px;
+  height:115px;
+  background: #ccc;
+}
+/*英雄列表*/
+.hero-list{
+
+}
+
+.hero-list .item{
+    
+      border-bottom: 1px solid #eee;
+}
+.hero-list .nav-item{
+  position: relative;
+  display: flex;
+  height:40px;
+  padding:10px;
+  align-items: center;
+  justify-content: space-between;
+}
+/*固定长度*/
+.hero-list .item .sm-photo{
+  width:40px;
+  height:40px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+/*让中间的 flex为1 自适应长度*/
+.hero-list .item .name{
+  flex:1;
+  font-size: 16px;
+}
+/*固定长度*/
+.hero-list .item .arrow-r{
+  width:16px;
+  height:16px;
+}
+
+/*侧边菜单*/
+.slide-menu{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: fixed;
+  left:-120px;
+  top:0;
+  width:120px;
+  height:100%;
+  background:rgba(167, 158, 114, 0.84);
+  transition: left .5s 0s;
+}
+
+.menu-show{
+  left:0;
+}
+
+.user-info{
+  display: flex;
+  width:120px;
+  height:80px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-info .photo{
+  width:40px;
+  height:40px;
+  border-radius: 50%;
+  margin-bottom: 20rpx;
+  background: #ccc;
+}
+.user-info .nick{
+  font-size:14px;
+}
+
+.menu{
+  width:120px;
+  font-size:12px;
+}
+.menu .item{
+  padding:20rpx;
+  border-bottom: 1px solid #9F9460;
+}

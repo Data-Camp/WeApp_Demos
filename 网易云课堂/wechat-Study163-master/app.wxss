@@ -1,0 +1,73 @@
+/**app.wxss**/
+.pageContainer {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+} 
+.flex{
+  display: flex;
+}
+.flex-wrap{
+  flex-wrap: wrap;
+}
+.flex-col{
+  flex-direction: column;
+}
+
+/*head   search*/
+.pageContainer .search{
+  width: 735rpx;
+  height: 65rpx;
+  padding: 12.5rpx 0 12.5rpx 15rpx;
+  background: #4bbc93;
+}
+.pageContainer .search-left{
+  flex: 15;
+  background: #52CC9F;
+  text-align: left;
+}
+.pageContainer .search-left input{
+  display: inline-block;
+  height: 65rpx;
+  color:#FFF;
+  font-size: 26rpx;
+}
+.search-placeholder{
+  color: #FFF;
+  line-height: 26rpx;
+  padding-top: 5rpx;
+}
+.pageContainer .search .search-left image{
+  display: inline-block;
+  width: 35rpx;
+  height: 35rpx;
+  padding: 15rpx 15rpx 15rpx 20rpx;
+}
+.pageContainer .search .search-right{
+  flex: 2;
+  margin-left:20rpx;
+}
+.pageContainer .search .search-right image{
+  width: 35rpx;
+  height: 35rpx;
+  padding: 15rpx;
+}
+/*ad*/
+.ad ,.course-grp-item{
+  width:700rpx;
+  margin:20rpx 0;
+  flex-wrap:wrap;
+  justify-content:space-between;
+}
+.ad navigator:first-child image{
+  width:700rpx;
+  height: 160rpx;
+}
+.ad image,.course-grp-item image{
+  margin-top: 10rpx;
+  width:335rpx;
+  height: 160rpx;
+}

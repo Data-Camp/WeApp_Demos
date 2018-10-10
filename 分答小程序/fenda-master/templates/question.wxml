@@ -1,0 +1,36 @@
+<!--
+  为问题列表提供相关模版
+  index: int
+  msg: string
+  time: string
+-->
+<template name="question">
+    <view class="question">
+        <view>
+            <text class="question-content">{{question.content}}</text>
+        </view>
+        <view>
+            <text class="question-respondent">{{question.authorName}}|{{question.authorBio}}</text>
+        </view>
+        
+        <view class="question-answer">
+            <view class="avatar">
+                <image class="avatarImg" src="{{question.authorHead}}" />
+            </view>
+            <view class="voice">
+                <view wx:if="{{question.qtype == 0}}" class="bubble bubble-blue">
+                    <view class="bubble-tail" style="background-image: url('/images/bubble-tail-blue.png')"></view>
+                    <view class="wave3"></view>
+                    <view>限时免费</view>
+                </view>
+
+                <view wx:elif="{{question.qtype == 1}" class="bubble">
+                    <view class="bubble-tail"></view>
+                    <view class="wave3"></view>
+                    <view>一元偷偷听</view>
+                </view>
+
+            </view>
+        </view>
+    </view>
+</template>

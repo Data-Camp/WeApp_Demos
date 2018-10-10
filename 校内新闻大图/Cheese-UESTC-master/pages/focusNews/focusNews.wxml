@@ -1,0 +1,13 @@
+<!--/*本来和其他页面 布局一样*/-->
+<view class="mainFrame">
+  <swiper class="container" autoplay="true" interval="5000" duration="1000" bindchange="handleChange">
+    <block wx:for="{{caiItems}}" wx:for-index="index">
+      <swiper-item class="vol-swiper-item" data-detail-href-id="{{item.detailHrefId}}" bindtap="onItemClick">
+
+        <!--引入模板-->
+        <import src="templates/volItem.wxml" />
+        <template is="vol-item" data="{{item:item}}" />
+      </swiper-item>
+    </block>
+  </swiper>
+</view>

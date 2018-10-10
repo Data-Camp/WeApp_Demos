@@ -1,0 +1,86 @@
+<view>
+  <swiper indicator-dots="{{indicatorDots}}" 
+    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<view class="goods_infor_top">
+  <view class="goods_title">
+    木村耀司登山旅行大学生户外情侣双肩背包外带小背包
+    <view class="goods_collect_btn" bindtap="collect">
+      <view wx:if="{{iscollect}}">
+        <image src="../../image/icon-aixin.png" class="goods_collect_img"></image>
+      </view>
+      <view wx:else>
+        <image src="../../image/icon-aixin1.png" class="goods_collect_img"></image>
+      </view> 
+      <text wx:if="{{iscollect}}">已收藏</text>
+      <text wx:else>收藏</text>
+    </view>
+  </view>
+  <view class="goods_price">
+    <text>¥169</text>
+    <text class="goods_old_price">¥269</text>
+  </view>
+  <view class="goods_deliver">
+    *本产品由 品牌商 提供发货服务。
+  </view>
+</view>
+<view class="goods_infor_pre">
+  <view class="goods_infor_txt">
+    <view class="goods_infor_brand"></view>
+    <text>蜜蜂从植物的花中采取含水量约为75%的花蜜或分泌物，存入自己第二个胃中，在体内多种转化的作用下，经过15天左右反复酝酿各种维生素、矿物质和氨基酸丰富到一定的数值时，同时把花蜜中的多糖转变成人体可直接吸收的单糖葡萄糖、果糖，水分含量少于23%存贮到巢洞中，用蜂蜡密封。</text>
+  </view>
+</view>
+<view class="goods_infor_raw">
+  <view class="goods_infor_item">
+    <text>【品 牌】</text>蜂之堂
+  </view>
+  <view class="goods_infor_item">
+    <text>【产 地】</text>湖南长沙
+  </view>
+  <view class="goods_infor_item">
+    <text>【净 含 量】</text>300g/罐
+  </view>
+  <view class="goods_infor_item">
+    <text>【保 质 期】</text>12月
+  </view>
+  <view class="goods_infor_item">
+    <text>【生产日期】</text>2016/11/23
+  </view>
+  <view class="goods_infor_item">
+    <text>【储蓄方法】</text>低温避光存储
+  </view>
+  <view class="goods_infor_item">
+    <text>【适用人群】</text>老少皆宜
+  </view>
+  <view class="goods_infor_item">
+    <text>【食用方法】</text>直接食用或兑水
+  </view>
+  <view class="goods_infor_item">
+    <text>【温馨提示】</text>请使用60度一下温水
+  </view>
+</view>
+<view class="goods_detail">
+  <view class="goods_detail_title">商品详情</view>
+  <view>
+    <image bindload="cusImageLoad" src="../../image/IMG_0466.jpg" style="width:{{imageWidth}};height:{{imageHeight}}"></image>
+  </view>
+</view>
+<view class="goods_bottom"></view>
+<view class="goods_bottom_btn">
+  <view>
+    <view class="goods_one">
+      <view class="goods_car_num">
+        <span>0</span>
+      </view>
+    </view>
+    <view class="goods_half_half red">前往商城</view>
+    <view class="goods_half_half blue">加入购物车</view>
+    <view class="goods_half_half green">前往付款</view>
+  </view>
+</view>

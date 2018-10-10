@@ -1,0 +1,34 @@
+{
+  "name": "qcloud-weapp-client-sdk",
+  "version": "0.6.0",
+  "description": "QCloud 微信小程序客户端 SDK",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "coverage": "istanbul cover ./node_modules/mocha/bin/_mocha",
+    "samver-minor": "npm version minor && git push origin master --tags",
+    "samver-patch": "npm version patch && git push origin master --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/CFETeam/qcloud-weapp-client-sdk.git"
+  },
+  "keywords": [
+    "qcloud",
+    "weapp",
+    "wechat",
+    "sdk",
+    "client",
+    "auth",
+    "websocket"
+  ],
+  "author": "Tencent Cloud",
+  "license": "MIT",
+  "devDependencies": {
+    "istanbul": "^0.4.5",
+    "mocha": "^3.1.0",
+    "should": "^11.1.0",
+    "should-sinon": "0.0.5",
+    "sinon": "^1.17.6"
+  }
+}

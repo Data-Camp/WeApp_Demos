@@ -1,0 +1,92 @@
+page {
+	height:100%;
+}
+.container {
+	height: 100%;
+	font-size:32rpx;
+	padding-top: 84rpx;
+}
+
+.nav {
+	display: flex;
+	height: 80rpx;
+	width: 100%;
+	border-bottom:1px solid #C7C7C9;/*no*/
+	background-color: #fafafa;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1002;
+
+	view {
+		flex: 1;
+		text-align: center;
+		height: 79rpx;
+		line-height: 79rpx;
+		color:#4A586A;
+		&.active{
+			color:#59A5F0;
+			border-bottom: 2px solid #59A5F0;/*no*/
+		}
+	}
+}
+
+.wrapCity {
+	height: 100%;
+	swiper{
+		height: 100%;
+		width: 100%;
+		overflow: hidden;
+
+		scroll-view{
+			height: 100%;
+			.cityList{
+				view{
+					display: flex;
+					flex-direction: column;
+					padding-left: 1.067rem;
+					height: 2.667rem;
+					line-height: 2.667rem;
+					text-align: left;
+					border-bottom: 1px solid #eee;/*no*/
+				}
+
+				.letterList {
+				    background: #F0EFF5;
+				    margin-left: -0.267rem;
+				    height: 2.2rem;
+					line-height: 2.2rem;
+				}
+			}
+		}
+
+	}
+
+}
+
+
+.toolBar {
+	position: fixed;
+	z-index: 1001;
+	right: 0;
+	top: 2.2rem;
+	width: 1.6rem;
+	height:100%;
+	background: rgba(255,255,255,0.5);
+	color: #59A5F0;
+	font-size: 24rpx;
+	display: flex;
+	flex-direction: column;
+	scroll-view {
+		height: 90%;
+		view{
+			text-align: center;
+			width: 100%;
+			height: 1.1rem;
+			&:first-child{
+				padding-top: 0.3rem;
+			}
+		}
+	}
+
+}

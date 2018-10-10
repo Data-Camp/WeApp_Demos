@@ -1,0 +1,53 @@
+<form bindsubmit="submitForm">
+    <view class="weui-cells">
+        <radio-group name="gender">
+            <label class="weui-cell weui-check__label" wx:for="{{ radio }}" wx:key="{{ item.value }}">
+                <radio class="weui-check" value="{{ item.value }}" checked="{{ item.checked }}"/>
+                <view class="weui-cell__bd">{{ item.name }}</view>
+                <view class="weui-cell__ft weui-cell__ft_in-radio" wx:if="{{ item.checked }}">
+                    <icon class="weui-icon-radio" type="success_no_circle" size="16"></icon>
+                </view>
+            </label>
+        </radio-group>
+    </view>
+    <view class="weui-cells">
+        <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__hd">
+                <view class="weui-label">收货人</view>
+            </view>
+            <view class="weui-cell__bd">
+                <input name="name" value="{{ form.name }}" class="weui-input" type="text" placeholder="请输入收货人姓名" />
+            </view>
+        </view>
+        <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__hd">
+                <view class="weui-label">联系电话</view>
+            </view>
+            <view class="weui-cell__bd">
+                <input name="tel" value="{{ form.tel }}" class="weui-input" type="tel" placeholder="请输入收货人电话" />
+            </view>
+        </view>
+        <view class="weui-cell weui-cell_textarea">
+            <view class="weui-cell__hd">
+                <view class="weui-label">联系地址</view>
+            </view>
+            <view class="weui-cell__bd">
+                <textarea name="address" value="{{ form.address }}" class="weui-textarea" placeholder="请输入收货人地址" style="height: 3.3em" />
+                <view class="weui-textarea-icon" bindtap="chooseLocation">
+                    <image src="../../../assets/images/iconfont-addr-default.png"></image>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="weui-cells" wx:if="{{ show }}">
+        <view class="weui-cell weui-cell_switch">
+            <view class="weui-cell__bd">设为默认</view>
+            <view class="weui-cell__ft">
+                <switch name="is_def" checked="{{ form.is_def }}" />
+            </view>
+        </view>
+    </view>
+    <view class="button-sp-area">
+        <button class="weui-btn" type="primary" formType="submit">确定</button>
+    </view>
+</form>

@@ -1,0 +1,18 @@
+<view class="container">
+  <view class="articles">
+    <block wx:if="{{type === 'essay'}}" wx:for="{{articles}}" wx:key="content_id">
+      <import src="../templates/essayItem.wxml"/>
+      <template is="essay-item" data="{{item: item}}"/>
+    </block>
+
+    <block wx:if="{{type === 'serialcontent'}}" wx:for="{{articles}}" wx:key="id">
+      <import src="../templates/serialItem.wxml"/>
+      <template is="serial-item" data="{{item: item}}"/>
+    </block>
+
+    <block wx:if="{{type === 'question'}}" wx:for="{{articles}}" wx:key="question_id">
+      <import src="../templates/questionItem.wxml"/>
+      <template is="question-item" data="{{item: item}}"/>
+    </block>
+  </view>
+</view>

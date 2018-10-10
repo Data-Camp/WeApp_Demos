@@ -1,0 +1,8 @@
+/* pages/html/index.wxss */
+@import "/pages/components/html-parse/index.wxss";
+page {
+    background: #fff;
+}
+.topic__content {
+    padding: 30rpx;
+}

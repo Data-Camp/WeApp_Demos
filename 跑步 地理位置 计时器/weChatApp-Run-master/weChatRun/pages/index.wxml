@@ -1,0 +1,26 @@
+
+
+
+<view clas="mainView">
+    <!--标题-->
+
+    <view class="header">
+        <image class="icon" src="/resources/joyrun.png" mode="aspectFill"/>
+        <view class="bigTitle">悦跑圈</view>
+        <view class="desc">Let us run - Alan Wang</view>
+    </view>
+    
+    
+    
+    <view class="body">
+        <view class="widget">
+            <block wx:for="{{pageNames}}">
+                <view class="widgets__item">
+                    <navigator url="{{item.id}}/{{item.id}}">{{item.name}}</navigator>
+                </view>
+            </block>
+        </view>
+    </view>
+
+</view>
+    

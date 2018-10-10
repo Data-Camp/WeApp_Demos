@@ -1,0 +1,20 @@
+<view class ="detail-container">
+    <image class="head-img" src="{{isPlay ? posterData.music.coverImg : posterData.headImgSrc}}"></image>
+    <image class="music-img" catchtap="onMusicTap" src="{{isPlay ? '/images/music/music-stop.png' : '/images/music/music-start.png'}}"></image>
+    <view class="auto-container">
+        <image class="auto-img" src="{{posterData.avatar}}"></image>
+        <text class = "auto-name">{{posterData.author}}</text>
+        <text class="const-text">发表于</text>
+        <text class="pub-time">{{posterData.dateTime}}</text>
+    </view>
+    <text class="title">{{posterData.title}}</text>
+    <view class="operation-container">
+        <view class="operation-imgs" bindtap="onCollectedTap">
+            <image wx:if="{{collected}}"  class="collection-img"   src="/images/icon/collection.png"></image>
+            <image wx:else class="collection-img" src="/images/icon/collection-anti.png"></image>
+            <image class="share-img" catchtap="onShareTap" src="/images/icon/share.png"></image>
+        </view>
+        <view class="horizon-line"></view>
+    </view>
+    <text class="details-content"> {{posterData.detail}}</text>
+</view>

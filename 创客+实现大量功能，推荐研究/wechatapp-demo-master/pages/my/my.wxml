@@ -1,0 +1,24 @@
+<view class="container">
+	<view class="my-list">
+		<navigator class="my-item" url="../myconferencelist/myconferencelist">
+			<image src="../../images/icon_24.png" mode="aspectFit"></image>
+			<text>入驻申请</text>
+		</navigator>
+		<navigator class="my-item" url="../myconferencelist/myconferencelist">
+			<image src="../../images/icon_26.png" mode="aspectFit"></image>
+			<text>物业服务</text>
+		</navigator>
+		<navigator class="my-item" url="../myconferencelist/myconferencelist">
+			<image src="../../images/icon_28.png" mode="aspectFit"></image>
+			<text>会议室预订</text>
+		</navigator>
+		<navigator class="my-item" url="../myconferencelist/myconferencelist">
+			<image src="../../images/icon_30.png" mode="aspectFit"></image>
+			<text>问题反馈</text>
+		</navigator>
+		<navigator class="my-item" url="../myconferencelist/myconferencelist">
+			<image src="../../images/icon_32.png" mode="aspectFit"></image>
+			<text>云资源申请</text>
+		</navigator>
+	</view>
+</view>

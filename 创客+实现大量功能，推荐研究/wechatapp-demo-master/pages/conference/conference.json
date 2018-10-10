@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "会议室列表",
+    "backgroundColor": "#f9f9f9",
+    "backgroundTextStyle": "dark",
+    "enablePullDownRefresh": "true"
+}

@@ -1,0 +1,53 @@
+{
+  "pages": [
+    "pages/my-music/my-music",
+    "pages/for-you/for-you",
+    "pages/explore/explore",
+    "pages/broadcast/broadcast",
+    "pages/search/search",
+
+      "pages/index/index",
+      "pages/main/main",
+      "pages/logs/logs"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "AppleMusic",
+    "navigationBarBackgroundColor": "#ffffff",
+    "backgroundColor": "#ffffff"
+  },
+  "tabBar": {
+    "color": "#929292",
+    "selectedColor": "#ff2d55",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "list": [{
+      "pagePath": "pages/my-music/my-music",
+      "iconPath": "image/tabbar/1.png",
+      "selectedIconPath": "image/tabbar/1-hl.png",
+      "text": "我的音乐"
+    }, {
+      "pagePath": "pages/for-you/for-you",
+      "iconPath": "image/tabbar/2.png",
+      "selectedIconPath": "image/tabbar/2-hl.png",
+      "text": "为你推荐"
+    },{
+      "pagePath": "pages/explore/explore",
+      "iconPath": "image/tabbar/3.png",
+      "selectedIconPath": "image/tabbar/3-hl.png",
+      "text": "浏览"
+    },{
+      "pagePath": "pages/broadcast/broadcast",
+      "iconPath": "image/tabbar/4.png",
+      "selectedIconPath": "image/tabbar/4-hl.png",
+      "text": "广播"
+    },{
+      "pagePath": "pages/search/search",
+      "iconPath": "image/tabbar/5.png",
+      "selectedIconPath": "image/tabbar/5-hl.png",
+      "text": "搜索"
+    }]
+  },
+  
+  "debug": true
+}

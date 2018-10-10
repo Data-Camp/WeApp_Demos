@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/car_source/car_source",
+    "pages/search_car/search_car",
+    "pages/user/user",
+    "pages/login/login"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "车源宝微信版",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color":"#a0a0a0",
+    "selectedColor":"#ec5c30",
+    "backgroundColor":"#f2f2f2",
+    "borderStyle":"white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath":"images/tab_home_def@2x.png",
+        "selectedIconPath":"images/tab_home_sel@2x.png"
+      },
+      {
+        "pagePath": "pages/car_source/car_source",
+        "text": "车源",
+        "iconPath":"images/tab_car_source_def@2x.png",
+        "selectedIconPath":"images/tab_car_source_sel@2x.png"
+      },
+      {
+        "pagePath": "pages/search_car/search_car",
+        "text": "寻车",
+        "iconPath":"images/tab_search_def@2x.png",
+        "selectedIconPath":"images/tab_search_sel@2x.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我",
+        "iconPath":"images/tab_user_def@2x.png",
+        "selectedIconPath":"images/tab_user_sel@2x.png"
+      }
+    ]
+  }
+}

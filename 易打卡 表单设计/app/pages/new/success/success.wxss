@@ -1,0 +1,79 @@
+.success{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: #2fcc85;
+}
+
+.tit{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 40rpx;
+  color: #fff;
+  height: 118rpx;
+}
+
+.panel{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: 600rpx;
+  height: 800rpx;
+  background-color: #fff;
+  border-radius: 10rpx;
+  color: #676767;
+}
+.task-name{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 36rpx;
+}
+.intro{
+  padding: 20rpx 0  30rpx;
+}
+.intro .pic{
+  width: 520rpx;
+  height: 380rpx;
+}
+.dot-line image{
+  width: 600rpx;
+  height: 30rpx;
+}
+
+.tips{
+  font-size: 32rpx;
+  padding: 0 45rpx;
+}
+.code{
+  padding: 28rpx 0 40rpx;
+}
+.code input{
+  height: 72rpx;
+  border: 6rpx solid #2ecb84;
+  border-radius: 10rpx;
+  color: #2ecb84;
+  font-size: 36rpx;
+  font-weight: bold;
+  text-align: center;
+  width: 480rpx;
+  padding: 0 10rpx
+}
+
+.close{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 36rpx;
+  color: #fff;
+  margin-top: 20rpx;
+}
+.close image{
+  width: 88rpx;
+  height: 88rpx;
+}

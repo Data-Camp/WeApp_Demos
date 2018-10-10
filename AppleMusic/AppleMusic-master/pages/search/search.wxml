@@ -1,0 +1,59 @@
+<view class="search">
+    <view class="search-bar">
+        <view class="search-bar-warper">
+            <icon type="search" size="20"/>
+            <input bindchange="search" placeholder="歌曲/歌手/专辑"/>
+        </view>
+    </view>
+    <view class="result">
+        <view class="result-group"  wx:if="{{searchRes.song!=null}}" >
+            <view class="group">
+                <image class="group-image"  src="../../image/icon-music.png"></image>
+                <text class="group-text" >单曲</text>
+            </view>
+            <view class="result-item"  wx:for="{{searchRes.song.itemlist}}" bindtap="play"  data-num="{{index}}">
+                <text class="result-title">{{item.name}}</text>
+                <text class="result-author">-{{item.singer}}</text>
+            </view>
+            
+        </view>
+
+        <view class="result-group"  wx:if="{{searchRes.album!=null}}">
+            <view class="group">
+                <image class="group-image"  src="../../image/icon-album.png"></image>
+                <text class="group-text" >专辑</text>
+            </view>
+            <view class="album-item"  wx:for="{{searchRes.album.itemlist}}" >
+                <image class="album-image" src="{{item.pic}}"></image>
+                <view class="album-info">
+                    <text class="album-name">{{item.name}}</text>
+                    <text class="album-author">{{item.singer}}</text>
+                </view>
+            </view>
+        </view>
+
+        <view class="result-group"  wx:if="{{searchRes.singer!=null}}">
+            <view class="group">
+                <image class="group-image"  src="../../image/icon-singer.png"></image>
+                <text class="group-text" >歌手</text>
+            </view>
+            <view class="singer-item" wx:for="{{searchRes.singer.itemlist}}">
+                <image class="singer-image" src="{{item.pic}}"></image>
+                <view class="singer-text">
+                    <text>{{item.name}}</text>
+                </view>
+            </view>
+        </view>
+
+        <view class="result-group"  wx:if="{{searchRes.mv!=null}}">
+            <view class="group">
+                <image class="group-image"  src="../../image/icon-mv.png"></image>
+                <text class="group-text" >MV</text>
+            </view>
+            <view class="mv-item"  wx:for="{{searchRes.mv.itemlist}}">
+                <text class="mv-name">{{item.name}}</text>
+                <text class="mv-author">{{item.singer}}</text>
+            </view>
+        </view>
+    </view>
+</view>

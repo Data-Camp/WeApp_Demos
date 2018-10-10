@@ -1,0 +1,23 @@
+<view class="detail-container">
+    <view class="photo-box">
+        <image style="background-color: #eeeeee;" mode="aspectFit"  src="{{details[id].photo}}"></image>
+    </view>
+    <view class="details-info">
+        <view class="name">{{details[id].name}}</view>
+        <view class="title">英雄职位：{{details[id].title}}</view>
+        <view class="content">{{details[id].content}}</view>
+    </view>
+    <view class="zan-box" bindtap="{{tapMe}}">
+        <image src="/image/zan.png" class="zan-icon"></image><text>赞{{zanCounts}}</text>
+    </view>
+    <!--<map longitude="23.099994" latitude="113.324520"  style="width: 375px; height: 200px;"></map>-->
+    <!--函数名称不用加 {{}}-->
+    <view class="det-btns">
+        <button type="primary" bindtap="tapMe" loading="{{loading}}">点赞</button>
+        <button bindtap="tapHeroSrc">查看英雄出处</button>
+    </view>
+    
+    <toast hidden="{{toast1Hidden}}" duration="500" bindchange="bindToast">
+        点赞成功
+    </toast>
+</view>

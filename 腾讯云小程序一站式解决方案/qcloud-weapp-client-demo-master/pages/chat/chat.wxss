@@ -1,0 +1,96 @@
+.chat-container {
+    background: #EEE;
+    position: absolute;
+    top: 0;
+    bottom: 40px;
+    right: 0;
+    left: 0;
+    text-align: center;
+}
+
+.system-message {
+    background: #BBB;
+    color: white;
+    border-radius: 4px;
+    margin: 10px;
+    text-align: center;
+    font-size: 12px;
+    padding: 2px 6px;
+    width: auto;
+    display: inline-block;
+}
+
+.user-message {
+    display: flex;
+    margin: 10px;
+}
+
+.user-message .avatar {
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+    background: #DDD;
+}
+
+.user-message .text {
+    text-align: left;
+}
+
+.user-message .text .nickname {
+    color: #999;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.user-message .text .content {
+    display: inline-block;
+    background: white;
+    padding: 6px 8px;
+    border-radius: 5px;
+    margin-top: 5px;
+    max-width: 16rem;
+}
+
+.user-message.me {
+    flex-direction: row-reverse;
+}
+
+.user-message.me .avatar {
+    margin-left: 5px;
+    margin-right: 0;
+}
+
+.user-message.me .nickname {
+    display: none;
+}
+
+.input-panel {
+    background: #f3f3f3;
+    border-top: 1px solid #DDD;
+    height: 40px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+}
+
+.input-panel input {
+    flex: 8;
+    background: #f9f9f9;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #DDD;
+    margin: 4px; 
+    border-radius: 2px;
+    padding: 0 4px;
+}
+
+.input-panel button {
+    flex: 2;
+    margin: 4px;
+    margin-left: 0;
+    height: 32px;
+    line-height: 32px;
+}

@@ -1,0 +1,38 @@
+<!--index.wxml-->
+<view class="page">
+    <loading hidden="{{loadingHidden}}" bindchange="loadingChange" bindtap="tapLoading">
+        加载中...
+    </loading>
+    <modal no-cancel="true" hidden="{{modalHidden}}" bindconfirm="modalConfirm" bindcancel="modalCancel">
+        {{modalContent}}
+    </modal>
+    <view class="page__hd">
+    </view>
+    <view class="page__bd">
+        <form bindsubmit="formSubmit" bindreset="formReset">
+            <view class="section">
+                <view class="section__title">学号</view>
+                <input type="idcard" placeholder="" id="username" value="{{inputs['username']}}" bindinput="inputChange" />
+            </view>
+            <view class="section">
+                <view class="section__title">密码</view>
+                <input password type="text" placeholder="" id="password" value="{{inputs['username']}}" bindinput="inputChange" />
+            </view>
+            <view class="section">
+                <view class="section__title">记住学号和密码</view>
+                <view class="section_gap">
+                    <switch checked id="remind" bindchange="switchChange" />
+                </view>
+            </view>
+            <view class="btn-area">
+                <view class="button-wrapper">
+                    <button type="primary" formType="submit" class="primary">查询</button>
+                </view>
+                <view class="button-wrapper">
+                    <button type="default" formType="reset">重置</button>
+                </view>
+            </view>
+        </form>
+    </view>
+    <view class="page-footer" bindtap="tapnav"> 使用说明 </view>
+</view>

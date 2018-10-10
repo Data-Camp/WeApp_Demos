@@ -1,0 +1,50 @@
+<view class="container">
+    <view class="headline">
+        <text>{{longCommentCount}}条长评</text>
+    </view>
+
+    <view class="common-list">
+        <block wx:for="{{longCommentData}}">
+            <view class="list-item has-img" data-id="{{item.id}}">
+                <view class="content">
+                    <view class="header">
+                        <text class="title">{{item.author}}</text>
+                        <image class="vote" src="../../images/thumb_up.png" />
+                    </view>
+                    <text class="body">{{item.content}}</text>
+                    <text class="bottom">{{item.time}}</text>
+                </view>
+                <image src="{{item.avatar}}" class="cover" />
+            </view>  
+        </block>
+    </view>
+
+    <view class="headline" bindtap="loadShortCommentEvent">
+        <text>{{shortCommentCount}}条短评</text>
+    </view>
+
+    <view class="common-list">
+        <block wx:for="{{shortCommentData}}">
+            <view class="list-item has-img" data-id="{{item.id}}">
+                <view class="content">
+                    <view class="header">
+                        <text class="title">{{item.author}}</text>
+                        <image class="vote" src="../../images/thumb_up.png" />
+                    </view>
+                    <text class="body">{{item.content}}</text>
+                    <text class="bottom">{{item.time}}</text>
+                </view>
+                <image src="{{item.avatar}}" class="cover" />
+            </view>  
+        </block>
+    </view>
+
+</view>
+
+<toast hidden="{{toastHidden}}" duration="2000" bindchange="toastChangeEvent">
+    {{toastMsg}}
+</toast>
+
+<loading hidden="{{!loading}}">
+    {{loadingMsg}}
+</loading>

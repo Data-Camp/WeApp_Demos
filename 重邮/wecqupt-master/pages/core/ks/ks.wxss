@@ -1,0 +1,137 @@
+/**ks.wxss**/
+.container{
+    padding-left: 30rpx;
+    padding-right: 30rpx;
+    background-color: #f7f7f7;
+}
+.ks-header{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50rpx 0;
+}
+.ks-text{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    padding-left: 25rpx;
+}
+.ks-header-title{
+    font-size: 20pt;
+    font-weight: bold;
+    line-height: 150%;
+    margin-bottom: 15rpx;
+    color: #222;
+}
+.ks-header-info, .ks-header-info-ksName{
+    font-size: 11pt;
+    line-height: 160%; 
+    color: #888;
+}
+
+.ks-bg{
+    display: block;
+    width: 200rpx;
+    height: 200rpx;
+    padding-right: 5rpx;
+    opacity: .3;
+}
+
+.ks-class-ctn{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: stretch;
+}
+
+.ks-class-item {
+    display: flex;
+    flex-direction: column;
+    font-size: 11pt;
+    padding: 0 40rpx;
+    margin-bottom: 20rpx;
+    background-color: #fff;
+    border-radius: 3px;
+}
+.ks-hd {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 145rpx;
+}
+
+.ks-hd-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding-right: 30rpx;
+}
+
+/**列表展开时标题的颜色变化 **/
+.ks-hd-name {
+    font-size: 12pt;
+    line-height: 225%;
+    letter-spacing: 1px;
+    transition: color .15s ease-in-out;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.ks-item-show .ks-hd-name {
+    transition: color .15s ease-in-out;
+    color: #7acfa6;
+}
+.ks-hd-other {
+    font-size: 10pt;
+    line-height: 100%;
+    color: #aaa;
+}
+.ks-item-show .ks-hd-place {
+    display: none;
+}
+
+/**列表展开的icon旋转 **/
+.ks-item-icon{
+    flex-shrink: 0;
+    width: 30rpx;
+    height: 30rpx;
+    transition: transform .2s;
+    transform: rotate(0deg);
+}
+.ks-item-show .ks-item-icon{
+    transform: rotate(180deg);
+}
+
+.ks-detail {
+    display: none;
+    flex-direction: column;   
+    overflow: hidden;
+    padding: 0;
+}
+.ks-item-show .ks-detail {
+    display: flex;
+    padding: 5rpx 0 15rpx;
+}
+.ks-detail-item {
+    display: flex;
+    align-items: center;
+    padding: 25rpx 5rpx 20rpx;
+    border-top: 1px solid #eee;
+}
+.ks-detail-label {
+    color: #888;
+    width: 55pt;
+}
+.ks-detail-content {
+    flex: 1;
+}
+.ks-jxb {
+    /*background: url('/images/core/xs.png') no-repeat;*/
+    /*微信暂不支持静态bgimg文件，改用服务器url*/
+    background: url('https://we.cqu.pt/app/images/core/xs.png') no-repeat;
+    background-size: 30rpx 30rpx;
+    background-position: 0 50%;
+    padding-left: 40rpx;
+    color: #888;
+}

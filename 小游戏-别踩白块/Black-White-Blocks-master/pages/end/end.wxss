@@ -1,0 +1,31 @@
+/* pages/end/end.wxss */
+.current {
+    margin-top: 40rpx;
+    margin-bottom: 40rpx;
+    text-align: center;
+    font-size: 1.5rem;
+}
+.highest {
+    text-align: center;
+    font-size: 1.5rem;
+}
+.go-again {
+    text-align: center;
+    display: block;
+    width: 200rpx;
+    margin: 200rpx auto 0 auto;
+    padding: 20rpx;
+    border-radius: 10rpx;
+    color: #ffffff;
+    background: #fc2736;
+}
+.go-home {
+    text-align: center;
+    display: block;
+    width: 200rpx;
+    margin: 100rpx auto 0 auto;
+    padding: 20rpx;
+    border-radius: 10rpx;
+    color: #ffffff;
+    background: blue;
+}

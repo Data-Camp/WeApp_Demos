@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/index/detail/index",
+    "pages/analysis/index",
+    "pages/account/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#1B82D1",
+    "navigationBarTitleText": "MarsMina",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#707070",
+    "selectedColor": "#1B82D1",
+    "borderStyle": "white",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "public/images/home.png",
+        "selectedIconPath": "public/images/home_s.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/analysis/index",
+        "iconPath": "public/images/analys.png",
+        "selectedIconPath": "public/images/analys_s.png",
+        "text": "统计"
+      },
+      {
+        "pagePath": "pages/account/index",
+        "iconPath": "public/images/usr.png",
+        "selectedIconPath": "public/images/usr_s.png",
+        "text": "账户"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

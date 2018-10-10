@@ -1,0 +1,46 @@
+/**app.wxss**/
+page{
+  background-color: #336699;
+  height: 100%;
+}
+
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+
+
+/**************
+    工具样式
+*/
+/*右浮动*/
+.pull-right{
+     float: right;
+}
+.pull-left{
+  float: left
+}
+.margin-20rpx{
+    margin: 20rpx;
+}
+.hr{
+    height: 1px;
+    width: 100%;
+    background-color: gray
+}
+/*背景颜色*/
+.blue{
+  background-color: #99ccff;
+}
+.light-blue{
+  background-color: #0099ff;
+}
+.white{
+  background-color: #ffffff;
+}

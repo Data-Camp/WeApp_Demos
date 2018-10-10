@@ -1,0 +1,66 @@
+/**app.wxss**/
+page{
+  font-family: -apple-system-font, Helvetica Neue, Helvetica, sans-serif;
+  font-size: 10pt;
+  line-height: 150%;
+  color: #666;
+  height: 100%;
+}
+.container {
+  position: relative;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 100rpx;
+} 
+
+.remind-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 300rpx;
+}
+.remind-img {
+  width: 250rpx;
+  height: 250rpx;
+  padding-bottom: 25rpx;
+}
+.remind-text {
+  font-size: 12pt;
+  line-height: 150%;
+}
+.remind-btn {
+  margin-top: 20rpx;
+  font-size: 9pt;
+  padding: 5rpx 20rpx;
+  text-align: center;
+  background-color: #7acfa6;
+  border-radius: 3px; 
+  border-bottom: 2px solid #4fc08d;
+  color: #fff;
+}
+
+.fix_tip{
+    position: fixed;
+    bottom: 50rpx;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    transform: translate3d(0, 80rpx, 0);
+    transition: all .5s cubic-bezier(0.19, 1, 0.22, 1)
+}
+.fix_tip.active{
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+.fix_tip text{
+    font-size: 9pt;
+    line-height: 100%;
+    padding: 10rpx 20rpx;
+    border-radius: 10rpx;
+    background: rgba(66,66,66,.6);
+    color: #fff;
+}

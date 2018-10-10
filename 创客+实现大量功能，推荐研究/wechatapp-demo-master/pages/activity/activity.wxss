@@ -1,0 +1,25 @@
+@import '../conference/conference.wxss';
+
+.activity-item-info{
+    justify-content: space-between;
+}
+.activity-item-info text{
+	flex: none;
+}
+.conference-item-info text:before{
+	content: '';
+	display: inline-block;
+	width: 34rpx;
+	height: 34rpx;
+	vertical-align: -2rpx;
+	margin-right: 6rpx;
+}
+.icon-time:before{
+	background: url('../../images/shizhong.png') no-repeat 50% 50% / 100% auto;
+}
+.icon-xinxi:before{
+	background: url('../../images/xinxi.png') no-repeat 50% 50% / 100% auto;
+}
+.icon-zuobiao:before{
+	background: url('../../images/zuobiao.png') no-repeat 50% 50% / 100% auto;
+}

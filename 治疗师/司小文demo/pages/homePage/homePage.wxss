@@ -1,0 +1,44 @@
+
+
+.topImage {
+	width: 100%;
+}
+
+.nameBoard {
+  display: flex;
+  margin-right: 20rpx;
+  margin-left: 20rpx;
+  	margin-top: 10rpx;
+
+}
+
+.nameBoard swiper-item{
+	flex: 1;
+	margin: 10rpx;
+
+	/*边框： 1的宽度 实线 颜色*/
+	border: 1rpx solid #98bf21;
+}
+
+.nameBoard-btn {
+	line-height: 1;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.nameBoard-image{
+	margin-top: 20rpx;
+	height: 84rpx;
+	width: 84rpx;
+}
+
+.nameBoard-text{
+	display: block;
+	font-size: 26rpx;
+	margin-top: 20rpx;
+	margin-bottom: 20rpx;
+	/*文字居中*/
+	text-align:center;
+	/*强制不换行*/
+	/*white-space: nowrap;*/
+}

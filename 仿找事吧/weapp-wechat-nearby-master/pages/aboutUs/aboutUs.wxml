@@ -1,0 +1,10 @@
+<!--index.wxml-->
+<view class="container">
+  <view  bindtap="bindViewTap" class="userinfo">
+    <image class="userinfo-avatar" src="/image/logo.png" background-size="cover"></image>
+    <text class="userinfo-nickname">找事吧</text>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">Copyright (c) 2015-2016找事吧 版权所有</text>
+  </view>
+</view>

@@ -1,0 +1,174 @@
+<import src="../component/toast.wxml"/>
+
+<template is="loading" data="{{ loading }}"/>
+
+<view wx:if="{{!loading}}" class="container">
+  <template is="warn1" data="{{ toast1 }}"/>
+
+  <view class="pannel dateNum">
+    <view class="dateOuter">
+      <view class="date">
+        <text>{{productParams.AirGoDate}}</text>
+        <text class="small">出发</text>
+      </view>
+
+      <view wx:if="{{productParams.isBackFlight}}">
+        <text>—</text>
+      </view>
+
+      <view wx:if="{{productParams.isBackFlight}}" class="date">
+        <text>{{productParams.AirBackDate}}</text>
+        <text class="small">返程</text>
+      </view>
+    </view>
+
+    <view class="num">
+      {{productParams.AdultNum}}成人 {{productParams.ChildrenNum}}儿童
+    </view>
+  </view>
+
+  <view class="pannel flight">
+    <view class="goFlight">
+      <view class="flightDate">
+        <view>
+          <text>{{productParams.AirStartCityName}}</text>
+          <text class="time">{{productDetail.startfightinfo.FSTime}}</text>
+        </view>
+        <view>
+          <text class="date">{{productParams.AirGoDate2}}</text>
+          <image class="flightPic" src="/images/flight.png"></image>
+        </view>
+        <view>
+          <text>{{productParams.AirArriveCityName}}</text>
+          <text class="time">{{productDetail.startfightinfo.FETime}}</text>
+        </view>
+      </view>
+
+      <view class="flightLine airport">
+        <text>{{productDetail.startfightinfo.StartAirport}}</text>
+        <text class="small">{{productDetail.startfightinfo.IsDirectArrive}}</text>
+        <text>{{productDetail.startfightinfo.EndAirport}}</text>
+      </view>
+
+      <view class="flightLine flightDetail">
+        <view class="viewLeft">
+          <image src="/images/logo.png"></image>
+          <text class="flightName">{{productDetail.startfightinfo.AirlineName}}</text>
+          <text class="vertical">|</text>
+          <text class="flightType">{{productDetail.startfightinfo.AirType}}</text>
+        </view>
+        <text class="go">去程</text>
+      </view>
+    </view>
+
+    <view wx:if="{{productDetail.isBackFlight}}" class="backFlight">
+      <view class="flightDate">
+        <view>
+          <text>{{productParams.AirArriveCityName}}</text>
+          <text class="time">{{productDetail.endfightinfo.FSTime}}</text>
+        </view>
+        <view>
+          <text class="date">{{productParams.AirBackDate2}}</text>
+          <image class="flightPic" src="/images/flight.png"></image>
+        </view>
+        <view>
+          <text>{{productParams.AirStartCityName}}</text>
+          <text class="time">{{productDetail.endfightinfo.FETime}}</text>
+        </view>
+      </view>
+
+      <view class="flightLine airport">
+        <text>{{productDetail.endfightinfo.StartAirport}}</text>
+        <text class="small">{{productDetail.endfightinfo.IsDirectArrive}}</text>
+        <text>{{productDetail.endfightinfo.EndAirport}}</text>
+      </view>
+
+      <view class="flightLine flightDetail">
+        <view class="viewLeft">
+          <image src="/images/logo.png"></image>
+          <text class="flightName">{{productDetail.endfightinfo.AirlineName}}</text>
+          <text class="vertical">|</text>
+          <text class="flightType">{{productDetail.endfightinfo.AirType}}</text>
+        </view>
+        <text class="go">返程</text>
+      </view>
+    </view>
+
+    <view class="changeFlight" bindtap="changeFlight">更换机票</view>
+  </view>
+
+  <view class="pannel hotel">
+    <view class="hotelHead">
+      <view class="hotelName">
+        <text>{{productDetail.hotelinfo.HotelName}}</text>
+        <text class="pink">{{productParams.HotelCheckInDate}}至{{productParams.HotelCheckOutDate}}</text>
+      </view>
+      <view class="hotelDetail">
+        <text bindtap="bindHotelDetail">酒店详情 ></text>
+      </view>
+    </view>
+
+    <view class="hotelPic">
+      <image src="{{productDetail.hotelinfo.PictureAppURL}}"></image>
+    </view>
+
+    <view class="address">
+      <view class="addre">
+        <image src="/images/map.png"></image>
+        <text class="addressName">{{productDetail.hotelinfo.HotelAddress}}</text>
+      </view>
+      <text class="grey">{{productDetail.hotelinfo.RoomList[0].RoomType}}/{{productDetail.hotelinfo.RoomList[0].Breakfast}}/{{productDetail.hotelinfo.RoomList[0].CanAddBed}}{{productDetail.hotelinfo.RoomList[0].BedType}}/可住{{productDetail.hotelinfo.RoomList[0].MaxAdult}}人</text>
+    </view>
+
+    <view class="remark" bindtap="bindspecialWarn">
+      <icon type="warn" size="16" color="#ff7f00"/>
+      <text>政策/特别提示</text>
+    </view>
+
+    <view class="changeHotel" bindtap="changeHotel">更换酒店</view>
+
+  </view>
+
+  <view class="tabBar">
+    <text class="name">套餐总价</text>
+    <text class="totalPrice">￥{{nextStep.totalPrice}}</text>
+    <text class="priceDetail" catchtap="showCostDetail">费用明细</text>
+    <view class="nextStep" catchtap="nextStepOrder">{{nextStep.btnWord}}</view>
+  </view>
+
+  <view catchtap="hideWarnAlert" class="chargesDetails" wx:if="{{warnAlert.show}}">
+    <view class="warnAlertInfo">
+      {{warnAlert.info}}
+    </view>
+  </view>
+
+  <view class="chargesDetails" wx:if="{{costDetail.show}}">
+    <view class="chargesInfo">
+      <label>费用明细</label>
+    </view>
+    <view class="productPrice">
+      <label class="product_w1">产品</label>
+      <label class="product_w2">数量</label>
+      <label class="product_w3">价格</label>
+    </view>
+    <view class="productCon">
+      <text class="product_w1">机票+酒店（含税）</text>
+      <text class="product_w2"></text>
+    </view>
+    <view class="productCon">
+      <text class="product_w1">成人</text>
+      <text class="product_w2">{{productParams.AdultNum}}</text>
+    </view>
+    <view class="productCon">
+      <text class="product_w1">儿童</text>
+      <text class="product_w2">{{productParams.ChildrenNum}}</text>
+    </view>
+    <view class="productSum">
+      <text class="product_w1 font_32">套餐总价</text>
+      <text class="product_w2"></text>
+      <text class="product_w3 blue">￥{{nextStep.totalPrice}}</text>
+    </view>
+    <icon type="clear" size="40" color="#58A4EF" class="closeIcon" catchtap="hideCostDetail"></icon>
+  </view>
+
+</view>

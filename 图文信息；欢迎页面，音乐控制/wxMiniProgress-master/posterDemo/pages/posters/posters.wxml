@@ -1,0 +1,23 @@
+<!--pages/posters/posters.wxml-->
+<import src="../template/poster-template/poster-template.wxml" />
+
+<view>
+    <swiper class="swiper-container" indicator-dots="true" autoplay="true" interval="4000"  >
+        <swiper-item>
+            <image class="swiper-img" src="/images/wx.png"></image>
+        </swiper-item>
+        <swiper-item>
+            <image class="swiper-img" src="/images/vr.png"></image>
+        </swiper-item>
+        <swiper-item>
+            <image class="swiper-img" src="/images/iqiyi.png"></image>
+        </swiper-item>
+    </swiper>
+</view>
+<block wx:for="{{posterData}}" wx:for-item="item">
+    <view catchtap="onPostTap" data-postid="{{item.postId}}">
+        <template is="posterTemp" data="{{...item}}"/>
+    </view>
+    
+</block>
+

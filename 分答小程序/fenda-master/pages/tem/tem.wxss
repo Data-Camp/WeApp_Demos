@@ -1,0 +1,11 @@
+@import "/common.wxss";
+.tem-view{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.cus-fd-top-btn-2{
+    
+}

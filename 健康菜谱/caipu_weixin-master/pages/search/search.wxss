@@ -1,0 +1,29 @@
+.main{
+    display: flex;
+    flex-direction: column;
+}
+.view-search{
+    display: flex;
+    flex-direction: row;
+    height: 70rpx;
+    margin: 20rpx;
+    padding: 5rpx;
+    border-style: solid;
+    border-width: thin;
+    align-items: center;
+}
+.input{
+    flex: 1;
+    height: 60rpx;
+}
+.input-placeholder{
+    color: #999999;
+}
+.button{
+    width: 60rpx;
+    height: 60rpx;
+}
+.request_null{
+    display: flex;
+    margin-left: 20rpx;
+}

@@ -1,0 +1,77 @@
+<view class="page__bd page__bd_spacing">
+    <view class="weui-cells__title">录入方式</view>
+    <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_switch">
+            <view class="weui-cell__bd">扫码录入:</view>
+            <view class="weui-cell__ft">
+                <switch checked bindchange="screenInput" />
+            </view>
+        </view>
+        <view class="weui-cell weui-cell_switch">
+            <view class="weui-cell__bd">连续录入:</view>
+            <view class="weui-cell__ft">
+                <switch checked />
+            </view>
+        </view>
+    </view>
+    <form wx:if="{{isShowInputForm}}">
+        <view class="weui-cells__title">图书基本信息:</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">书名:</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" placeholder="请输入书名" />
+                </view>
+            </view>
+
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">作者:</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" placeholder="请输入作者" />
+                </view>
+            </view>
+
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">价格:</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" placeholder="请输入价格" />
+                </view>
+            </view>
+
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">出版社:</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" placeholder="请输入出版社" />
+                </view>
+            </view>
+
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">ISBN:</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" placeholder="请输入ISBN" type="number"/>
+                </view>
+            </view>
+
+            <!--<view class="weui-btn-area">
+                <button class="weui-btn" type="primary" bindtap="addBook">开始录入</button>
+            </view>-->
+
+
+
+        </view>
+    </form>
+
+    <view class="weui-btn-area">
+        <button class="weui-btn" type="primary" bindtap="addBook">开始录入</button>
+    </view>
+</view>

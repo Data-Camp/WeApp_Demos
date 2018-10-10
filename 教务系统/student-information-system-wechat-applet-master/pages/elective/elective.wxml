@@ -1,0 +1,7 @@
+<view class="page">
+    <view class="page__hd">
+        <view class="page__info"></view>
+    </view>
+    <view class="page__bd">
+    </view>
+</view>

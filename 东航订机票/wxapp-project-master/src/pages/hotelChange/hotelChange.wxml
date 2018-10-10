@@ -1,0 +1,29 @@
+<import src="../component/toast.wxml"/>
+
+<template is="loading" data="{{ loading }}"/>
+
+<scroll-view wx:if="{{!loading}}" scroll-y="true" scroll-x="false" class="container">
+    <view class="top">
+        <text>{{hotelCityName}}</text>
+        <view class="info">{{hotelCheckInDate}}<text class="left">入住  ——</text>{{hotelCheckOutDate}}<text class="right">离店</text></view>
+    </view>
+    <view class="main">
+        <view wx:for="{{hotelList}}" wx:key="{{index}}" class="hotelInfo" bindtap="gotoHotelDetails" data-index="{{index}}">
+            <view class="hotelTop">
+                <image class="rightIcon" src="{{item.PictureAppURL}}"></image>
+                <image wx:if="{{index === 0}}" class="relativeIcon" src="/images/right_icon.png"></image>
+                <view class="hotelName">{{item.HotelName}}</view>
+            </view>
+            <view class="messageDetail">
+                <view class="leftMap">
+                    <image class="mapIcon" src="/images/map.png"></image>
+                    <text>{{item.HotelAddress}}</text>
+                </view>
+                <view class="Priceright">
+                    <text class="{{item.PriceDiffrence >= 0 ? 'add' : 'reduce'}}">{{item.PriceDiffrence >= 0 ? '+' : '-'}}￥{{item.PriceDiffrence >= 0 ? item.PriceDiffrence : (-item.PriceDiffrence)}}</text>
+                </view>
+            </view>
+        </view>
+
+    </view>
+</scroll-view>

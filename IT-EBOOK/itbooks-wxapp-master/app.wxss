@@ -1,0 +1,80 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  font-size:62.5%;
+  display: flex;
+ 
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-between;
+  box-sizing: border-box; 
+  
+  font-family: Arial, Helvetica, sans-serif;
+}
+.page-index{
+ padding-top:65px;
+ background:#f5f5f5;
+}
+
+.books-list{
+  padding: 0 10px;
+}
+.books-item{
+  margin-bottom:15px;
+  overflow: hidden;
+  zoom: 1;
+  position: relative;
+}
+.books-item image{
+  float: left;
+  width: 80px;
+  margin-right: 10px;
+}
+.books-item .books-item-txt{
+  display: inline-block;
+  float: left;
+  width: 100%;
+  padding-left: 90px;
+  position: absolute;
+  left: 0;
+  box-sizing: border-box;
+}
+.txt-title{
+  font-size: 1.6em;
+  line-height: 1.2em;
+  word-break:break-all;
+  hyphens: manual;
+}
+.txt-source{
+  font-size: 1.2em;
+  color: #aaa;
+  margin-top: 5px;
+}
+
+
+.search-form{
+  padding:0 10px;
+  position: fixed;
+  top:10px;
+  left:0;
+  width: 100%;
+  box-sizing:border-box;
+  z-index: 999;
+}
+.search-form input{
+  border:1px solid #dedede;
+  height:40px;
+  padding: 0 5px;
+  background: #fff;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
+  border-radius: 3px;
+}
+.search-form icon{
+  display: inline-block;
+  border:none;
+  background:none;
+  position:absolute;
+  right:20px;
+  top:10px;
+}

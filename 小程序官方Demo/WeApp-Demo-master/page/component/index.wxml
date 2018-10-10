@@ -1,0 +1,28 @@
+<view class="index">
+    <view class="head">
+        <view class="title">小程序组件</view>
+        <view class="desc">这里就当前已支持的组件进行演示</view>
+    </view>
+
+    <view class="body">
+        <view class="widgets">
+            <block wx:for-items="{{list}}">
+                <view class="widgets__item">
+                    <view id="{{item.id}}" class="widgets__info {{item.open ? 'widgets__info_show' : ''}}" bindtap="widgetsToggle">
+                        <text class="widgets__info-name">{{item.name}}</text>
+                        <image class="widgets__info-img" src="/image/arrowright.png" mode="aspectFill" />
+                    </view>
+                    <view class="widgets__list {{item.open ? 'widgets__list_show' : ''}}">
+                        <block wx:for-items="{{item.pages}}" wx:for-item="page">
+                            <navigator url="component-pages/{{page}}/{{page}}" class="widget">
+                                <text class="widget__name">{{page}}</text>
+                                <image class="widget__arrow" src="/image/arrowright.png" mode="aspectFill" />
+                                <view class="widget__line {{index == 0 ? 'widget__line_first' : ''}}"></view>
+                            </navigator>
+                        </block>
+                    </view>
+                </view>
+            </block>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,23 @@
+<view class="sug-input">
+  <view class="transit-sug-click-hook">
+    <view class="transit-sug-search-icon">
+      <view class="transit-search-icon-img"></view>
+    </view>
+    <input placeholder="搜地点，查公交" bindinput="getSug"/>
+  </view>
+  <scroll-view scroll-y="true" class="transit-sug-list">
+    <view wx:for="{{suggests}}" wx:for-item="suggest" class="transit-list-item">
+     <navigator url="../line/line?line_id={{suggest.data.line_id}}">
+      <view wx:if="{{suggest.type=== 'line'}}" class="transit-list-item-inner">
+          <view class="transit-sug-icon">
+            <view class="sug-line-icon"></view>
+          </view>
+          <view class="transit-sug-text">
+            <view class="transit-sugitem-name">{{suggest.data.name}}</view>
+            <view class="transit-sugitem-desc">{{suggest.data.direction}}</view>
+          </view>
+      </view>
+      </navigator>
+    </view>
+  </scroll-view>
+</view>

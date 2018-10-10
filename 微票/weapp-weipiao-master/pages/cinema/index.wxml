@@ -1,0 +1,15 @@
+<!--index.wxml-->
+<view class="container">
+  <block wx:for-items="{{items}}">
+    <view class="flex item">
+      <view class="flex_auto item_left">
+        <view><text class="title">{{item.title}}</text></view>
+        <view><text class="sub_title">{{item.subTitle}}</text></view>
+        <view><text class="tag">{{item.tag}}</text></view>
+      </view>
+      <view class="item_right">
+        <view><text class="price">{{item.price}}</text></view>
+      </view>
+    </view>
+  </block>
+</view>

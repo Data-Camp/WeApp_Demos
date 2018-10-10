@@ -1,0 +1,29 @@
+/**append.wxss**/
+@import './login.wxss';
+.append-title {
+  position: absolute;
+  top: 75rpx;
+  width: 100%;
+  color: #777;
+  font-size: 22pt;
+  line-height: 200%;
+  text-align: center;
+}
+.append-form {
+  padding: 150rpx 0 50rpx;
+}
+.append-form .input-group {
+  padding: 20rpx 8rpx;
+  margin: 30rpx 3%;
+}
+.append-form .input-label {
+  font-size: 11pt;
+  height: 20rpx;
+  line-height: 20rpx;
+  padding: 0 20rpx;
+}
+.append-form .input-group input,
+.append-form .input-group picker {
+  font-size: 11pt;
+  padding: 0 20rpx;
+}

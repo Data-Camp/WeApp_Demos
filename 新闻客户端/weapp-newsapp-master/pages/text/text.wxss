@@ -1,0 +1,83 @@
+/**text.wxss**/
+.textmargin {
+  float: left;
+}
+
+.news-avatar {
+  width: 130rpx;
+  height: 130rpx;
+  margin: 5rpx;
+  border-radius: 10%;
+  float: left;
+}
+
+#wordscard text {
+  font-size: .8em;
+}
+
+.rowalign {
+    flex-direction: row;
+    float: left;
+}
+.rowalign text {
+  padding-left: 10rpx;
+}
+
+.card, #wordscard {
+    background: #fff;
+    margin: 20rpx 14px;
+    padding: 20px 32rpx;
+    border-radius: 2%;
+}
+
+.card {
+    background: #fff;
+}
+.short-card {
+    height: 250rpx;
+}
+
+.card button {
+    width: 400rpx;
+    margin-top: 30px;
+    margin-bottom: 25rpx;
+    /*margin: 10rpx 75rpx;*/
+}
+
+#wordscard {
+    height: 130px;
+}
+
+page, view {
+    font-family: arial,'pingfang sc',stheiti,"microsoft yahei",sans-serif
+}
+page {
+    background: #e0e0e0;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 1.2em;
+    padding-bottom: 20rpx;
+    padding-top: 20rpx;
+}
+
+.tag {
+    font-weight: 200;
+    font-size: .8em;
+    padding-bottom: 30rpx;
+    padding-top: 30rpx;
+    color: #006621;
+}
+
+.para {
+    font-size: .9em;
+    padding-bottom: 30rpx;
+    padding-top: 30rpx;
+}
+.tlink {
+    font-size: .7em;
+    color: #0e61af;
+    padding-top: 10rpx;
+    width: 100%;
+}

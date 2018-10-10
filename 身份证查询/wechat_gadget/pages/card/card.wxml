@@ -1,0 +1,22 @@
+<!--card.wxml-->
+<view class="container">
+    <form bindsubmit="formSubmit" >
+        <input class="seachInput" name="cardId" placeholder="请输入要查询的身份证号码"  />
+        <button class="seachButtom" formType="submit">查询</button>
+    </form>
+   
+    <view wx:if="{{flag == 0}}" class="hint">
+         <view class="hint">请输入要查询的身份证号码</view>
+    </view>
+
+     <view wx:if="{{flag == 1}}" class="paragraphs">
+        <view class="paragraph">结果：查询成功<icon type="success" size="20"/></view>
+        <view class="paragraph">发证地：{{cardInfo.area}}</view>
+        <view class="paragraph">性别：{{cardInfo.sex}}</view>
+        <view class="paragraph">出生日期：{{cardInfo.birthday}}</view>
+    </view>
+
+   
+   
+
+</view>

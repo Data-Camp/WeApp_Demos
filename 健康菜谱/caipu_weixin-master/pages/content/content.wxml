@@ -1,0 +1,18 @@
+<view class="view-request-fail" wx:if="{{request_fail}}">
+    <text class="text-request-fail">网络或服务器错误，请检查网络...</text>
+</view>
+<view class="main">
+    <view class="head">
+        <image class="img" mode="aspectFill" src="http://tnfs.tngou.net/image{{arr_res.img}}" />
+        <view class="title-view">
+            <text class="title">{{title}}</text>
+        </view>
+    </view>
+    <view class="text">
+        <text class="title-keywords">关键词</text>
+        <text class="keywords">{{arr_res.keywords}}</text>
+        <view class="line" />
+        <text class="title-detail">详 情</text>
+        <text class="detail" style="font-size:20px">{{message}}</text>
+    </view>
+</view>

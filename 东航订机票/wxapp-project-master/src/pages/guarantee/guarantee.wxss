@@ -1,0 +1,1 @@
+.guarantee{padding:2%;font-size:24rpx}.guarantee text{display:block;margin-bottom:2%;line-height:1.6;text-align:justify}.guarantee text.addBold{font-weight:700}.guarantee text.disInline{display:inline-block}.guarantee text.font26,.guarantee text.font28{font-size:28rpx}

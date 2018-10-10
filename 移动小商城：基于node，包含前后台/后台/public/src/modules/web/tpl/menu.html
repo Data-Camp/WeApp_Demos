@@ -1,0 +1,42 @@
+<ion-side-menus>
+	<ion-side-menu-content>
+		<ion-nav-bar class="bar-light">
+			<ion-nav-back-button></ion-nav-back-button>
+		</ion-nav-bar>
+		<ion-nav-view name="menu-content"></ion-nav-view>
+	</ion-side-menu-content>
+	<ion-side-menu side="left" width="256">
+		<ion-header-bar class="bar-dark">
+			<h1 class="title" ng-click="app.openThisLink($event, 'web.index.home')">后台管理系统</h1>
+		</ion-header-bar>
+		<ion-content>
+			<aside id="aside">
+				<div class="full-height-scroll">
+					<div class="page-sider">
+						<div class="aside-body">
+							<tabset class="aside-list">
+								<tab ng-repeat="item in ::app.menu.aside">
+									<a class="icon">{{ item.name }}</a>
+									<ul class="list-level-2">
+										<li ng-repeat="val in item.children">
+											<a ng-click="app.openThisLink($event, val.url)">{{ val.name }}</a>
+										</li>
+									</ul>
+								</tab>
+							</tabset>
+							<ul class="aside-list">
+								<li ng-repeat="item in app.menu.line">
+									<a ng-click="app.openThisLink($event, item.url)">{{ item.name }}</a>
+								</li>
+							</ul>
+						</div>
+						<div class="aside-footer">
+							<div class="panel-cover--overlay cover-slate"></div>
+							<button class="btn about-us"></button>
+						</div>
+					</div>
+				</div>
+			</aside>
+		</ion-content>
+	</ion-side-menu>
+</ion-side-menus>

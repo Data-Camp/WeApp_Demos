@@ -1,0 +1,33 @@
+.swiper_box {
+    width: 100%;
+    height: 320px;
+}
+
+.swiper_box .slide-image {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.shopping_container {
+    padding: 0 30rpx;
+}
+
+.shopping_container .name {
+    margin: 10px 0;
+    font-weight: bold;
+    color: #333;
+}
+
+.shopping_container .price {
+    margin: 10px 0;
+    font-weight: normal;
+    color: orangered;
+}
+
+.shopping_container .remark {
+    margin: 10px 0;
+    color: #939393;
+    line-height: 22px;
+}

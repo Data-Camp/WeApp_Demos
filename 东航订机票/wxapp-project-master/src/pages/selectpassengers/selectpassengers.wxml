@@ -1,0 +1,30 @@
+<!--index.wxml-->
+<view class="container">
+    <view class="head" bindtap="add">
+        <image src="/images/add.png" class="addIcon"></image>
+        <view class="cjr">新增乘机人</view>
+    </view>
+   <view class="wrap">
+   <!--信息完善-->
+      <block  wx:for="{{passengerList}}" >
+         <view class="sum">
+
+            <view class="sum-left" id='{{item.id}}' data-index="{{index}}" bindtap="selectHanlder">
+              <image class="ch-img" src="{{item.selected?'/images/bk.png':'/images/ck.png'}}"></image>
+              <image src="/images/person.png" class="user-left"></image>
+                <view class="user-right">
+                    <view>{{item.name}}</view>
+                    <view>{{item.CardNo}} <text style="color:#ff7f00;">（{{item.passengerType}}）</text></view>
+                </view>
+            </view>
+
+            <navigator catchtap="catchTapHandle" url="../createTraveller/createTraveller?id={{item.id}}&type=2" class="redack">
+              <image src="/images/xk.png" class="red-img"></image>
+            </navigator>
+
+         </view>
+       </block>
+   </view>
+
+   <button class="add" bindtap="confirm">确定</button>
+</view>

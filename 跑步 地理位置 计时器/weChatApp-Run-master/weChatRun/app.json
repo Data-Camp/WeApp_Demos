@@ -1,0 +1,14 @@
+{
+  "pages":[
+     "pages/index",
+     "pages/logs/logs",
+     "pages/run/run",
+     "pages/animation/animation"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "悦跑圈",
+    "navigationBarTextStyle":"black"
+  }
+}

@@ -1,0 +1,45 @@
+
+<!--选择护照以外的证件-->
+<form bindsubmit="formsubmit1">
+<view class="container">
+<!--主要信息-->
+   <view class="wrap">
+      <view class="sum"> 
+          <text class="txt">姓名（中文）</text> 
+          <input name="name" class="inp" type="text" placeholder="沈伯阳" placeholder-style="color:#4a586a; font-size:32.81rpx;font-family:'Microsoft YaHei';" value=""></input> 
+      </view>
+      <view class="sum">
+          <text class="txt">证件类型</text>
+          
+              <input name="cardtype" class="inp inp2"  placeholder="身份证" placeholder-style="color:#4a586a; font-size:32.81rpx;font-family:'Microsoft YaHei';" type="text" value=""></input> 
+              <view class="img"><image class="img1" src="../../images/_r2_c2.png"></image> </view>
+          
+      </view>
+      <view class="sum sumLine"> 
+          <text class="txt">证件号码</text> 
+          <input name="cardnumber"  placeholder="32061234567890" placeholder-style="color:#4a586a; font-size:32.81rpx;font-family:'Microsoft YaHei';" class="inp" type="text" value=""></input> 
+      </view>  
+   </view>
+<!--常用旅客卡选择-->
+   <view class="comuse"> 
+          <text class="usetxt">常用旅客卡（选填）</text>
+          <switch  class="swit" bindchange="bindswitchchange" checked="{{checked}}"/>
+   </view>
+<!--常用旅客卡详情-->
+   <view class="{{checked?'wrap':'hidden'}}">
+      <view class="sum"> 
+          <text class="txt">航空公司</text> 
+          <picker bindchange="bindpicker4" value="" range=""  >        
+               <input  name="company" class="inp inp2" placeholder="东方航空公司" placeholder-style="color:#4a586a; font-size:32.81rpx;font-family:'Microsoft YaHei';"  type="text" value=""></input>
+               <view class="img"><image class="img1" src="../../images/_r2_c2.png"></image> </view> 
+          </picker>
+      </view>
+      <view class="sum sumLine"> 
+          <text class="txt">卡号</text> 
+          <input name="cardid" class="inp" type="number" placeholder="32061234567890" placeholder-style="color:#4a586a; font-size:32.81rpx;font-family:'Microsoft YaHei';" type="text" ></input> 
+      </view>
+   </view> 
+  <button class="add" form-type="submit">完成</button>
+</view>
+</form>
+

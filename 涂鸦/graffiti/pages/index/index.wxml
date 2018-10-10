@@ -1,0 +1,20 @@
+<view class="container">
+    <!--画布区域-->
+    <view class="canvas_area">
+        <!--注意：同一页面中的 canvas-id 不可重复，如果使用一个已经出现过的 canvas-id，该 canvas 标签对应的画布将被隐藏并不再正常工作-->
+        <canvas canvas-id="myCanvas" class="myCanvas"
+            disable-scroll="false"
+            bindtouchstart="touchStart"
+            bindtouchmove="touchMove"
+            bindtouchend="touchEnd">
+        </canvas>
+    </view>
+    <!--画布工具区域-->
+    <view class="canvas_tools">
+        <view class="box box1" bindtap="penSelect" data-param="5"></view>
+        <view class="box box2" bindtap="penSelect" data-param="15"></view>
+        <view class="box box3" bindtap="colorSelect" data-param="#cc0033"></view>
+        <view class="box box4" bindtap="colorSelect" data-param="#ff9900"></view>
+        <view class="box box5" bindtap="clearCanvas"></view>
+    </view>
+</view>

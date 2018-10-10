@@ -1,0 +1,18 @@
+.picker{
+    padding: 26rpx;
+    background-color: #FFFFFF;
+}
+.section{
+    margin-bottom: 80rpx;
+}
+.section_gap{
+    padding: 0 30rpx;
+}
+.section__title{
+    padding:10px;
+    border-bottom: 1px solid #ccc;
+}
+.section_gap .section__title{
+    padding-left: 0;
+    padding-right: 0;
+}

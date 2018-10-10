@@ -1,0 +1,31 @@
+.container {
+    margin: 0 6px;
+}
+#car_title_cont {
+    margin-top: 5px;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+#car_title {
+    color: black;
+    font-style: oblique;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.car_names {
+    color: 	#888888;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.img_cont {
+    margin: 10px;
+    height: 225px;
+    width: auto;
+}
+.img_pic {
+    width: 100%;
+    height: 225px;
+}

@@ -1,0 +1,78 @@
+<!--logs.wxml-->
+<view class="container">
+	<view class="container-body space-content">
+	  <view class="space-top">
+	  	<view class="space-banner" bindtap="imgPreview">
+		  	<swiper
+		  	  autoplay="{{true}}" interval="{{4000}}" duration="{{1000}}" bindchange="setCurrent">
+		  	  <block wx:for="{{spaceimgs}}" wx:key="{{item.index}}">
+		  	    <swiper-item>
+		  	      <image src="{{item}}" mode="aspectFill" class="slide-image"/>
+		  	    </swiper-item>
+		  	  </block>
+		  	</swiper>
+	  	  <view class="number-banner">
+	  	  	<text>{{currentIndex>9?currentIndex:'0'+currentIndex}}</text>
+	  	  	<text>/{{spaceimgs.length>9?spaceimgs.length:'0'+spaceimgs.length}}</text>
+	  	  </view>
+	  	</view>
+  	  <view class="space-info">
+  	  	<view class="space-title">{{spacedata.ParkName}}</view>
+  	  	<view class="space-tags">
+  	  		<text wx:for="{{spacedata.TagIDs}}" wx:key="*this">{{item}}</text>
+  	  	</view>
+  	  	<view class="space-list">
+  	  		<view class="space-item">
+  	  			<text class="text-left">收费标准：</text>
+  	  			<text class="text-right">
+  	  				<text class="text-orange">{{spacedata.FeeScale}}</text>{{spacedata.FeeScaleRoomUnit}}
+  	  			</text>
+  	  		</view>
+  	  		<view class="space-item">
+  	  			<text class="text-left">可租面积：</text>
+  	  			<text class="text-right">{{spacedata.FeeScaleRoomUnitValue}}㎡</text>
+  	  		</view>
+  	  		<view class="space-item">
+  	  			<text class="text-left">地理位置：</text>
+  	  			<text class="text-right" data-address="{{spacedata.Address}}" data-latitude="{{spacedata.latitude}}" data-longitude="{{spacedata.longitude}}" bindtap="getAddress">{{spacedata.Address}}</text>
+  	  		</view>
+  	  	</view>
+  	  </view>
+	  </view>
+	  <view class="space-block">
+	  	<view class="space-block-title">基本介绍</view>
+	  	<view class="space-block-content">
+	  		<view class="space-list">
+	  			<view class="space-item">
+	  				<text class="text-left">总建筑面积：</text>
+	  				<text class="text-right">{{spacedata.TotalBulidingArea}}㎡</text>
+	  			</view>
+	  			<view class="space-item">
+	  				<text class="text-left">得房率：</text>
+	  				<text class="text-right">{{spacedata.RoomRate}}%</text>
+	  			</view>
+	  			<view class="space-item">
+	  				<text class="text-left">总工位：</text>
+	  				<text class="text-right">{{spacedata.TotalWorkstation}}个</text>
+	  			</view>
+	  			<view class="space-item">
+	  				<text class="text-left">总的独立办公室：</text>
+	  				<text class="text-right">{{spacedata.TotalRoom}}个</text>
+	  			</view>
+	  		</view>
+	  		<view class="space-passage">{{spacedata.Summary}}</view>
+	  	</view>
+	  </view>
+	  <view class="space-block">
+	  	<view class="space-block-title">优惠政策</view>
+	  	<view class="space-block-content">
+	  		<view class="space-passage">{{spacedata.Policy}}</view>
+	  	</view>
+  	</view>
+	</view>
+	<view class="container-footer">
+		<text>联系责任人</text>
+		<text bindtap="reserveHandle">预约看房</text>
+		<text class="apply-btn" bindtap="goApply">入驻申请</text>
+	</view>
+</view>

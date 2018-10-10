@@ -1,0 +1,10 @@
+<!-- 需要一个顶层元素，因为用到相对宽高 -->
+<view>
+  <canvas canvas-id="1"/>
+  <!-- 坑爹的三元运算符不能嵌套 -->
+  <button id="flyButton" type="primary" bindtouchstart="handleTouchStart" bindtouchend="handleTouchEnd"> 
+    {{status===0?'开始游戏':''}}
+    {{status===1?'I believe I can fly':''}}
+    {{status===2?'重新挑战':''}}
+  </button>
+</view>

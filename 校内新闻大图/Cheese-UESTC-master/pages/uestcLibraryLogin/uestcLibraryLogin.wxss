@@ -1,0 +1,97 @@
+/* pages/uestcLibraryLogin/uestcLibraryLogin.wxss */
+
+/*上方搜索框部分 开始*/
+
+.wxSearch-pancel {
+  display: flex;
+  flex-direction: row;
+}
+
+.wxSearch-input {
+  flex: 8;
+  background-color: #eee;
+  padding: 5px 10px;
+  margin-left: 20rpx;
+}
+
+.wxSearch-button {
+  flex: 1;
+  border: none !important;
+  color: cornflowerblue !important;
+}
+
+/*上方搜索框部分 结束*/
+
+/*图书馆登录标题 开始*/
+
+.user-motto {
+  display: block;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  text-align: center;
+  width: 300px;
+  margin-left: 50px;
+  font-size: 30rpx;
+  font-family: 'Microsoft YaHei';
+}
+
+/*图书馆登录标题 结束*/
+
+/*登录表单 开始*/
+
+.formContent {
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 10px;
+  padding-top: 0px;
+
+  font-size: 30rpx;
+  font-family: 'Microsoft YaHei';
+}
+
+/*输入表单*/
+
+.input {
+  border-radius: 10px;
+  border: 2px solid #48c23d;
+  /*text-indent: 2em;*/
+  padding-left: 10px;
+  font-size: 35rpx;
+  font-family: 'Microsoft YaHei';
+}
+
+/*登录方式*/
+
+.loginInStyle {
+  padding-left: 15rpx;
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: column;
+  font-size: 30rpx;
+  font-family: 'Microsoft JhengHei';
+}
+
+/*表单按钮*/
+
+.buttonContainer {
+  padding-top: 50rpx;
+  display: flex;
+  background-color: #fbf9fe;
+  font-family: 'Microsoft YaHei';
+  font-size: 35rpx;
+}
+
+/*登录表单 结束*/
+
+.advertisement {
+  margin-top: 20px;
+  width: 100%;
+  height: 200px;
+}
+
+.liblogo {
+  width: 100%;
+  height: 100px;
+    margin-top: 30px;
+}
+

@@ -1,0 +1,33 @@
+.hero-list{
+
+}
+
+.hero-list .item{
+    
+      border-bottom: 1px solid #eee;
+}
+.hero-list .nav-item{
+  position: relative;
+  display: flex;
+  height:40px;
+  padding:10px;
+  align-items: center;
+  justify-content: space-between;
+}
+/*固定长度*/
+.hero-list .item .sm-photo{
+  width:40px;
+  height:40px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+/*让中间的 flex为1 自适应长度*/
+.hero-list .item .name{
+  flex:1;
+  font-size: 16px;
+}
+/*固定长度*/
+.hero-list .item .arrow-r{
+  width:16px;
+  height:16px;
+}

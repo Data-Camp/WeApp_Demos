@@ -1,0 +1,17 @@
+<!--
+  人物列表模版
+  index: int
+  msg: string
+  time: string
+-->
+<template name="leader">
+
+    <view class="leader">
+        <image src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1702198402,2278399184&fm=111&gp=0.jpg" class="leader-avatar" />
+        <p data-reactid=".0.0.1:$0.0.1">协和张羽</p>
+        <p class="description" data-reactid=".0.0.1:$0.0.2">协和副教授，著《只有医生知道1-3》</p>
+        <p class="description" data-reactid=".0.0.1:$0.0.2">协和副教授，著《只有医生知道1-3》</p>
+    </view>
+
+    
+</template>

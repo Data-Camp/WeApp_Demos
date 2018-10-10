@@ -1,0 +1,22 @@
+<view class="container">
+  <view class="header">
+    <text class="h1">小程序反馈组件</text>
+    <text class="h1content">微信小程序统计hotapp支持的组件进行演示</text>
+  </view>
+  <view class="section" bindtap="bindViewTap">
+    <view class="button">
+      <text>反馈系统演示</text>
+      <text>></text>
+    </view>
+  <!--</view>
+   <view class="section" bindtap="scanCode">
+    <view class="button">
+      <text>扫一扫演示</text>
+      <text>></text>
+    </view>
+  </view>
+  <table>
+    <td><text>{{userInfo}}</text></td>
+  </table>-->
+  
+</view>

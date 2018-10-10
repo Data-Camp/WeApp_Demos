@@ -1,0 +1,16 @@
+<view class="container">
+  <text class="hint">修改账户登录信息</text>
+  <view class="form-wrap">
+    <view class="flex-wrap input-wrap">
+      <text class="label">用户名</text>
+      <input value="{{user.username}}" bindinput="updateUsername" id="username" class="account-info-input"/>
+    </view>
+    <view class="flex-wrap input-wrap">
+      <text class="label">新密码</text>
+      <input password bindinput="updatePassword" id="password" class="account-info-input"/>
+    </view>
+  </view>
+  <text wx:if="{{error}}" class="error">{{error}}</text>
+  <text class="hint">通过小程序登录的用户设置、修改用户名密码后可以在 LeanTodo 的其他平台的 App 中登录</text>
+  <button class="submit" type="primary" disabled="{{!(username || password)}}" bindtap="save">更新</button>
+</view>

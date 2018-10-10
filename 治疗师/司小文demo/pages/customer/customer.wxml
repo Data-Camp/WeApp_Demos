@@ -1,0 +1,32 @@
+<view class="downView">
+    <form bindsubmit="formBindsubmit" bindreset="formReset">
+        <view  class="board-view a">
+            <label class="board-lab">手机号</label>
+            <input type="number" class="board-input" name="tel" placeholder="请输入您的电话！" />
+        </view>
+         <view class="board-view">
+            <label class="board-lab">姓名</label>
+            <input type="number" class="board-input" name="name" placeholder="请输入您的姓名！" />
+        </view>
+        <view class="board-view">
+            <label class="board-lab">性别</label>
+            <radio-group class="radio-group" name="sex">
+                <label class="radio" wx:for="{{sexs}}">
+                    <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.name}}
+                </label>
+            </radio-group>
+        </view>
+        <view  class="board-view">
+            <label class="board-lab">性质</label>
+            <radio-group class="radio-group" name="type">
+                <label class="radio" wx:for="{{items}}">
+                    <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.name}}
+                </label>
+            </radio-group>
+        </view>
+
+        <!--<navigator url="../appointment/customerProject/customerProject">-->
+        <button class="submitBtn" formType="submit">下一步</button>
+        <!--</navigator>-->
+    </form>
+</view>

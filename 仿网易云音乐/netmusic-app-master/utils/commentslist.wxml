@@ -1,0 +1,68 @@
+<template name="commentslist">
+  <block wx:if="{{rec.hotComments.length}}">
+    <view class="sm_title">热门评论</view>
+    <view class="limg_list rec_list" wx:for-items="{{rec.hotComments}}" wx:key="{{item.commentId}}">
+      <view class="rec_avatar">
+        <navigator>
+          <image class="user_avator" src="{{item.user.avatarUrl}}" />
+        </navigator>
+      </view>
+      <view class="rec_main" data-commentId="{{item.commentId}}">
+        <view class="rm_header">
+          <view>
+            <text>{{item.likedCount}}</text>
+            <image src="../../../image/xg.png" />
+          </view>
+          <text class="fmh_name">{{item.user.nickname}}</text>
+          <text class="fmh_time">{{item.time}}</text>
+        </view>
+        <view class="rm_cnt">
+          <text wx:if="{{item.beReplied.length}}">回复<text class="replyname">@{{item.beReplied[0].user.nickname}}</text>：</text>
+          {{item.content}}
+          <view class="rmc_reply" wx:if="{{item.beReplied.length}}">
+            <text>
+              <text class="replyname">@{{item.beReplied[0].user.nickname}}</text>：{{item.beReplied[0].content}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="cntloading" wx:if="{{rec.moreHot1}}">查看更多热门评论</view>
+  </block>
+  <block wx:if="{{rec.comments}}">
+    <view class="sm_title">精彩评论({{rec.total}})</view>
+    <view class="limg_list rec_list" wx:for-items="{{rec.comments}}" wx:key="{{item.commentId}}">
+      <view class="rec_avatar">
+        <navigator>
+          <image class="user_avator" src="{{item.user.avatarUrl}}" />
+        </navigator>
+      </view>
+      <view class="rec_main" data-commentId="{{item.commentId}}">
+        <view class="rm_header">
+          <view>
+            <text>{{item.likedCount}}</text>
+            <image src="../../../image/xg.png" />
+          </view>
+          <text class="fmh_name">{{item.user.nickname}}</text>
+          <text class="fmh_time">{{item.time}}</text>
+        </view>
+        <view class="rm_cnt">
+          <text wx:if="{{item.beReplied.length}}">回复<text class="replyname">@{{item.beReplied[0].user.nickname}}</text>：</text>
+          {{item.content}}
+          <view class="rmc_reply" wx:if="{{item.beReplied.length}}">
+            <text>
+              <text class="replyname">@{{item.beReplied[0].user.nickname}}</text>：{{item.beReplied[0].content}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+  <view wx:if="{{!loading&&!rec.comments.length}}" class="cntloading">暂无评论</view>
+  <view wx:if="{{!rec.code||loading}}" class="cntloading">加载中...
+    <view>
+      <text class="cl1"></text>
+      <text class="cl2"></text>
+      <text class="cl3"></text>
+    </view>
+  </view>
+  <view wx:if="{{rec.more&&!loading}}" class="cntloading">上拉加载更多</view>
+</template>

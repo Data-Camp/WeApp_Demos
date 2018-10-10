@@ -1,0 +1,32 @@
+/**index.wxss**/
+.todos {
+  padding: 10px;
+}
+
+.todo-item.completed {
+  color: #999;
+}
+
+.add-todo {
+  margin-top: 100px;
+}
+
+.filters {
+  display: flex;
+} 
+
+.filters text {
+  margin: 0 10px;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #999;
+  border-radius: 4px;
+  text-align: center;
+  flex: 1
+}
+
+.filters text.active {
+  border-color: #09bb07;
+  background-color: #09bb07;
+  color: #ffffff;
+}

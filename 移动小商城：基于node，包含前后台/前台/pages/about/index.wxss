@@ -1,0 +1,20 @@
+.about-item {
+	padding:5px 15px;
+}
+
+.about-item-title {
+	display: block;
+	font-size: 16px;
+	line-height: 30px;
+}
+
+.about-item-content {
+	margin-top: 5px;
+	display: block;
+	text-indent: 20px;
+}
+
+.link {
+	color: #479de6;
+	text-decoration: underline;
+}

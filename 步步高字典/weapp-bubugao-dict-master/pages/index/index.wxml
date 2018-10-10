@@ -1,0 +1,17 @@
+<!--index.wxml-->
+
+<view class="container">
+  <text class="tips" wx:if="{{ !image }}">{{ tips }}</text>
+  <image class="userinfo-avatar" mode="center" src="{{ image }}" style="width:{{ width }}px; height:{{ height }}px" background-size="cover"></image>
+  
+  <view class="userinfo">
+  <scroll-view scroll-y="true" style="height: {{ height }}px;">
+    <text class="userinfo-tips" wx:for="{{ words }}" wx:key="*this" data-word="{{ item }}" bindtap="go">{{ item }}</text>
+  </scroll-view>
+  </view>
+  
+  <view class="usermotto">
+  <image bindtap="uploadImage" src="../../images/shot.png"></image>
+  </view>
+</view>
+

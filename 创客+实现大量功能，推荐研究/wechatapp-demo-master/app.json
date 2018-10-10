@@ -1,0 +1,51 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/space/space",
+    "pages/spacereserve/spacereserve",
+    "pages/service/service",
+    "pages/servicedetail/servicedetail",
+    "pages/conference/conference",
+    "pages/conferencedetail/conferencedetail",
+    "pages/resource/resource",
+    "pages/question/question",
+    "pages/property/property",
+    "pages/apply/apply",
+    "pages/activity/activity",
+    "pages/activitydetail/activitydetail",
+    "pages/my/my",
+    "pages/myconferencelist/myconferencelist"
+  ],
+  "window":{
+    "backgroundTextStyle":"white",
+    "navigationBarBackgroundColor": "#f7982a",
+    "navigationBarTitleText": "创客+",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "服务",
+      "iconPath":"images/xihuan.png",
+      "selectedIconPath":"images/xihuanfill.png"
+    }, {
+      "pagePath": "pages/activity/activity",
+      "text": "活动",
+      "iconPath":"images/biaoxing.png",
+      "selectedIconPath":"images/biaoxingfill.png"
+    }, {
+      "pagePath": "pages/my/my",
+      "text": "我发起的",
+      "iconPath":"images/yonghu.png",
+      "selectedIconPath":"images/yonghufill.png"
+    }],
+    "color":"#333",
+    "selectedColor":"#f7982a",
+    "backgroundColor":"#f6f6f6",
+    "borderStyle": "white"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  }
+}

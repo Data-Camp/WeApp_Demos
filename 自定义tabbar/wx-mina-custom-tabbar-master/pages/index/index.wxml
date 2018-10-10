@@ -1,0 +1,16 @@
+<!--index.wxml-->
+
+<!--不可滑动切换tabbar-->
+<view class="nav-tabs">
+    <view class="tab-list  {{currentTab == idx?'active':'default'}}" wx:for="{{tabArray}}" wx:for-index="idx" wx:for-item="itemName" data-current="{{idx}}" bindtap="swichNav">{{itemName}}</view>
+</view>
+<view class="{{currentTab == idx?'show':'hidden'}} tab-content" wx:for="{{tabArray}}" wx:for-index="idx" wx:for-item="itemName">{{itemName}}</view>
+<!--可滑动切换tanbar-->
+<view class="nav-tabs">
+    <view class="tab-list  {{currentTab == idx?'active':'default'}}" wx:for="{{tabArray}}" wx:for-index="idx" wx:for-item="itemName" data-current="{{idx}}" bindtap="swichNav">{{itemName}}</view>
+</view>
+<swiper current="{{currentTab}}" class="tab-content" duration="300"  bindchange="bindChange">  
+<swiper-item wx:for="{{tabArray}}" wx:for-index="idx" wx:for-item="itemName" class="">
+    <view class="">{{itemName}}</view> 
+</swiper-item>
+</swiper>  

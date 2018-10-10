@@ -1,0 +1,11 @@
+[ignore]
+.*/build/.*
+.*/dist/.*
+.*/node_modules/.*
+
+[libs]
+node_modules/labrador/flow
+
+[options]
+strip_root=true
+suppress_comment= \\(.\\|\n\\)*\\$Flow

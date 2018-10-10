@@ -1,0 +1,8 @@
+<!--index.wxml-->
+<view class="container">
+  <text class="title">{{x}}</text>
+  <view hidden="{{hidden}}"><image class="img" src="{{z}}"></image></view>
+  <text class="summary">{{y}}</text>
+  <!--<audio src='../../audio/5012.wav' id='sound'></audio>-->
+  <!--<text>s: {{s}}</text>-->
+</view>

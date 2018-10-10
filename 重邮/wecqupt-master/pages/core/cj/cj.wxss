@@ -1,0 +1,95 @@
+/**cj.wxss**/
+.container{
+    padding-left: 30rpx;
+    padding-right: 30rpx;
+    background-color: #f7f7f7;
+}
+.cj-header{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50rpx 0;
+}
+.cj-text{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    padding-left: 25rpx;
+}
+.cj-header-title{
+    font-size: 20pt;
+    font-weight: bold;
+    line-height: 150%;
+    margin-bottom: 15rpx;
+    color: #222;
+}
+.cj-header-info{
+    font-size: 11pt;
+    line-height: 160%; 
+    color: #888;
+}
+
+.cj-bg{
+    display: block;
+    width: 200rpx;
+    height: 200rpx;
+    padding-right: 5rpx;
+    opacity: .3;
+}
+
+.cj-info-ctn{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: stretch;
+    border-radius: 3px;
+    background: #fff;
+    margin-bottom: 50rpx;
+}
+.cj-grade{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    padding: 25rpx 30rpx;
+}
+.cj-grade-logo{
+    width: 100rpx;
+    height: 100rpx;
+}
+
+.cj-grade-term{
+    flex: 1;
+    padding-left: 30rpx; 
+    color: #666;
+    font-size: 11pt;
+    line-height: 160%;
+}
+.cj-grade-fst{
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.grade-comment{
+    color: #999;
+    font-size: 26rpx;
+}
+
+.cj-info-box{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: stretch;
+    padding: 5rpx 30rpx 15rpx;
+}
+.cj-info{
+    background: #fff;
+    font-size: 11pt;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #eee;
+    padding: 25rpx 10rpx 20rpx 5rpx;
+}
+.cj-info-socre{
+    padding-left: 100rpx;
+}

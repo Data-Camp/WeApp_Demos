@@ -1,0 +1,64 @@
+
+<view class="top-tab flex-wrp flex-tab " >
+  <view class="toptab flex-item {{currentNavtab==idx ? 'active' : ''}}" wx:for="{{navTab}}" wx:for-index="idx" wx:for-item="itemName" data-idx="{{idx}}" bindtap="switchTab">
+    {{itemName}}
+  </view>
+</view>
+
+<scroll-view scroll-y="true" class="container discovery withtab" bindscrolltoupper="upper" bindscrolltolower="lower"  scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+  <view class="ctnt0" hidden="{{currentNavtab==0 ? '' : true}}">
+    <swiper class="activity" indicator-dots="{{indicatorDots}}"
+            autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{imgUrls}}">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" width="355" height="155"/>
+        </swiper-item>
+      </block>
+    </swiper>
+
+    <block wx:for="{{feed}}" wx:for-index="idx" wx:for-item="item" data-idx="{{idx}}">
+      <view class="feed-item">
+        <view class="feed-source">
+          <a class="">
+            <view class="avatar">
+              <image src="{{item.feed_source_img}}"></image>
+            </view>
+            <text>{{item.feed_source_name}}</text>
+          </a>
+        </view>
+        <view class="feed-content">
+          <view class="question" qid="{{question_id}}" bindtap="bindQueTap">
+            <a class="question-link">
+              <text>{{item.question}}</text>
+            </a>
+          </view>
+          <view class="answer-body">
+            <view bindtap="bindItemTap">
+              <text class="answer-txt" aid="{{answer_id}}">{{item.answer_ctnt}}</text>
+            </view>
+            <view class="answer-actions" bindtap="bindItemTap">
+              <view class="like dot">
+                <a>{{item.good_num}} 赞同 </a>
+              </view>
+              <view class="comments dot">
+                <a>{{item.comment_num}} 评论 </a>
+              </view>
+              <view class="follow-it">
+                <a>关注问题</a>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view class="ctnt1 placehold" hidden="{{currentNavtab==1 ? '' : true}}">
+    <text>圆桌</text>
+  </view>
+  <view class="ctnt2 placehold" hidden="{{currentNavtab==2 ? '' : true}}">
+    <text>热门</text>
+  </view>
+  <view class="ctnt3 placehold" hidden="{{currentNavtab==3 ? '' : true}}">
+    <text>收藏</text>
+  </view>
+</scroll-view>

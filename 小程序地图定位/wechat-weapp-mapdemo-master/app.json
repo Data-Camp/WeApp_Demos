@@ -1,0 +1,36 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/location/location",
+    "pages/logs/logs"
+  ],
+  "tabBar": {
+    "color": "#dddddd",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "iconPath": "image/wechat.png",
+      "selectedIconPath": "image/wechatHL.png",
+      "text": "首页"
+    }, {
+      "pagePath": "pages/location/location",
+       "iconPath": "image/locate.png",
+      "selectedIconPath": "image/locateHL.png",
+      "text": "定位"
+    },{
+      "pagePath": "pages/logs/logs",
+      "iconPath": "image/wechat.png",
+      "selectedIconPath": "image/wechat.png",
+      "text": "其他项目"
+    }]
+  },
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Map",
+    "navigationBarTextStyle":"black"
+  },
+  "debug": true
+}

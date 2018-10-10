@@ -1,0 +1,58 @@
+.downView{
+    margin-left: 20rpx;
+    margin-top: 60rpx;
+    width: 730rpx;
+}
+
+.board-view{
+    display:flex;
+    flex-flow: wrap;
+    margin-left: 20rpx;
+    margin-top: 30rpx;
+    border-top-style:none;
+	border-right-style:none;
+	border-bottom-style:solid;
+	border-left-style:none;
+    border-color:#98bf21;
+    border-width:2rpx;
+    text-align:right;
+    height: 40rpx;
+    font-size: 32rpx;
+}
+
+.board-lab{
+    margin-top: -8rpx;
+    width: 20%;
+    text-align:left;
+    padding-left: 0;
+	padding-right: 0;
+}
+
+.board-input{
+    margin-top: -18rpx;
+    width: 75%;
+}
+
+.board-text{
+    margin-top: -10rpx;
+    width: 75%;
+}
+
+.radio-group{
+    margin-top: -10rpx;
+    width: 75%;
+}
+
+.radio{
+    margin: 40rpx;
+    margin-right: 0rpx;
+}
+
+.submitBtn{
+	font-size: 34rpx;
+	border: 2rpx solid #98bf21;	/*边框： 1的宽度 实线 颜色*/
+	width: 85%;
+	position:absolute;
+	left:7.5%;
+	bottom:100rpx;
+}

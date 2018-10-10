@@ -1,0 +1,20 @@
+<view class="flex-column">
+  <!-- //TODO 这里 scroll-view 在 flex 布局下视乎有个 Bug. -->
+  <scroll-view scroll-y="true" class="timeline flex-rest-height">
+    <block wx:for="{{messages}}">
+      <view class="message flex-row {{item.from === 'sent' ? 'message-sent' : ''}}">
+        <text wx:if="{{!item.image}}" class="message-text {{item.from === 'sent' ? 'message-sent-text' : 'message-received-text'}}">{{item.text}}</text>
+        <image wx:else src="{{item.text}}" class="message-image"></image>
+      </view>
+    </block>
+  </scroll-view>
+
+  <view class="footer flex-row">
+      <view class="input-container flex-rest-width">
+        <input id="message" value="{{inputValue}}" placeholder="message..." class="message-input" bindchange="bindChange"/>
+      </view>
+      <view class="btn-area">
+        <button bindtap="sendMessage" class="send-message-btn" type="primary" size="mini">Send</button>
+      </view>
+  </view>
+</view>

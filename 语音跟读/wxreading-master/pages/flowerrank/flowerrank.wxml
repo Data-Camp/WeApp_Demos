@@ -1,0 +1,70 @@
+<!-- flower_container.wxml -->
+<view class="container flower_container">
+    <image src="images/img_reward_bg.png" class="flower-header-bg" background-size="contain"/>
+    <view class="flower-list-content">
+        <!-- 前三名 -->
+        <view class="fist-line-user">
+            <block wx:for-items="{{firstLineRank}}" wx:for-item="fitem" wx:key="fitem">
+                <view wx:if="{{index == 0}}" class="fist-line-user-1">
+                    <view class="user-portrait-1"
+                          style="background: url({{fitem.user_info.portrait}}) no-repeat center center;background-size: cover;">
+                        <image class="user-rank-icon" src="images/img_reward_one.png"/>
+                    </view>
+                    <text class="user-name-1">{{fitem.user_info.user_name}}</text>
+                    <text class="user-age-1">{{fitem.user_info.age}}</text>
+                    <text class="user-flowernum-1">{{fitem.flower_num_show}}</text>
+                </view>
+                <view wx:if="{{index == 1}}" class="fist-line-user-2">
+                    <view class="user-portrait-2"
+                          style="background: url('{{fitem.user_info.portrait}}') no-repeat center center;background-size: cover;">
+                        <image wx:if="{{fitem.rank == 1}}" class="user-rank-icon" src="images/img_reward_one.png"/>
+                        <image wx:if="{{fitem.rank == 2}}" class="user-rank-icon" src="images/img_reward_two.png"/>
+                    </view>
+                    <text class="user-name-1">{{fitem.user_info.user_name}}</text>
+                    <text class="user-age-1">{{fitem.user_info.age}}</text>
+                    <text class="user-flowernum-1">{{fitem.flower_num_show}}</text>
+                </view>
+                <view wx:if="{{index == 2}}" class="fist-line-user-3">
+                    <view class="user-portrait-2"
+                          style="background: url('{{fitem.user_info.portrait}}') no-repeat center center;background-size: cover;">
+                        <image wx:if="{{fitem.rank == 1}}" class="user-rank-icon" src="images/img_reward_one.png"/>
+                        <image wx:if="{{fitem.rank == 2}}" class="user-rank-icon" src="images/img_reward_two.png"/>
+                        <image wx:if="{{fitem.rank == 3}}" class="user-rank-icon" src="images/img_reward_three.png"/>
+                    </view>
+                    <text class="user-name-1">{{fitem.user_info.user_name}}</text>
+                    <text class="user-age-1">{{fitem.user_info.age}}</text>
+                    <text class="user-flowernum-1">{{fitem.flower_num_show}}</text>
+                </view>
+            </block>
+        </view>
+        <!-- 主红花排行 -->
+        <view class="main-rank-list">
+            <block wx:for-items="{{mainRankList}}" wx:for-item="mitem" wx:key="mitem">
+                <view class="rank-item">
+                    <text class="rank-item-pos">{{mitem.rank}}</text>
+                    <image class="rank-item-portrait" src="{{mitem.user_info.portrait}}"/>
+                    <view class="rank-item-info">
+                        <text class="rank-item-info-name">{{mitem.user_info.user_name}}</text>
+                        <text class="rank-item-info-age">{{mitem.user_info.age}}</text>
+                    </view>
+                    <text class="rank-item-flowernum">{{mitem.flower_num_show}}</text>
+                </view>
+            </block>
+        </view>
+    </view>
+
+    <block wx:if="{{flowerData.has_more == 0}}">
+        <text class="has-nomore-data">{{defaultLoadContent}}</text>
+    </block>
+    <block wx:if="{{flowerData.user_info}}">
+        <view class="fixed-my-container">
+            <text class="fixed-my-index">我</text>
+            <image class="fixed-my-portrait" src="{{flowerData.user_info.portrait}}"/>
+            <view class="fixed-my-info">
+                <text class="fixed-my-info-pos">{{flowerData.user_rank.rank_show}}</text>
+                <text class="fixed-my-info-beat">{{flowerData.user_rank.beat_content}}</text>
+            </view>
+            <text class="fixed-my-flowernum">{{flowerData.user_rank.flower_num_show}}</text>
+        </view>
+    </block>
+</view>

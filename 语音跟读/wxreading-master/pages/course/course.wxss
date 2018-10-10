@@ -1,0 +1,125 @@
+.cs_container{
+  background: #B1F3E4;
+  padding: 24rpx 40rpx 124rpx 40rpx;
+}
+.cs-header{
+  width: 100%;
+  height: 284rpx;
+  margin-bottom: 10rpx;
+  position: relative;
+}
+/*cs-header-taskBg*/
+.cs-header-taskBg{
+  position: absolute;
+  width: 428rpx;
+  height: 284rpx;
+  left: 120rpx;
+}
+
+.cs-header-info{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  top: 90rpx;
+  width: 360rpx;
+  height: 144rpx;
+  margin: 0 auto;
+}
+.cs-header-info-img{
+  width: 112rpx;
+  height: 112rpx;
+  border-radius: 24rpx;
+  background-color: #B1F3E4;
+  flex-shrink: 0;
+}
+.cs-header-info-content{
+  display: flex;
+  flex-direction: column;
+  margin-left: 20rpx;
+}
+.cshic-text{
+  line-height: 52rpx;
+  height: 52rpx;
+  overflow: hidden;
+  text-align: center;
+}
+.go_this_task{
+  width: 128rpx;
+  height: 48rpx;
+}
+.finished_num{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-size: 24rpx;
+}
+.f-num{
+  color: #47D7B4;
+}
+/* cs-plan-table */
+.cs-plan-table{
+  position: relative;
+  display: flex;
+  flex-flow:row wrap;
+  border-color: #462418;
+  justify-content: space-between;
+  align-items: center;
+}
+.csItem{
+  position: relative;
+  width: 220rpx;
+  height: 220rpx;
+  background-color: #F0B098;
+  border: 2rpx solid #462418;
+  border-radius: 10rpx;
+  box-sizing: border-box;
+  margin-bottom: 6rpx;
+}
+.csItem-mask{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.4);
+  border-radius: 10rpx;
+}
+.task-status{
+  position: relative;
+  width: 104rpx;
+  height: 104rpx;
+}
+
+.plan-date{
+  display: block;
+  margin-top: 10rpx;
+  margin-left: 10rpx;
+  font-size: 28rpx;
+}
+
+/*fixed-buy-comment-card*/
+.fixed-buy-comment-card{
+    position: fixed;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    z-index: 199;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100rpx;
+    background-color: #1ECFA7;
+    color: #ffffff;
+}
+.buy-t1{
+    font-size: 36rpx;
+    font-weight: bold;
+}
+.buy-t2{
+    font-size: 28rpx;
+}
+
+

@@ -1,0 +1,21 @@
+/**index.wxss**/
+.swiper-lists{
+  position: relative;
+  width: 100%;
+  height:300rpx;
+  background: #eee;
+  overflow: hidden;
+}
+.swiper-lists .swiper-list{
+  position: absolute;
+  width: 100%;
+  height:100%;
+}
+.swiper-lists .swiper-list.prev{
+  top: 0;  
+	transform: translate3d(-100%, 0 , 0px); 
+}
+.swiper-lists .swiper-list.next{
+  top: 0;  
+	transform: translate3d(100%, 0 , 0px); 
+}

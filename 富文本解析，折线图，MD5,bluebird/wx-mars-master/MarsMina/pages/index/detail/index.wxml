@@ -1,0 +1,13 @@
+<import src="../../../mars/templates/component.wxml" />
+
+<template is="loading" data="{{loading}}" />
+<view hidden="{{loading}}" class="weui-article">
+  <view class="weui-article__h1">{{articleInfo.NTitle}}</view>
+  <view class="weui-article__section">
+    <view class="weui-article__title">
+      <text class="summary">摘要：</text>{{articleInfo.NAbout}}</view>
+    <view class="weui-article__section">
+      <template is="htmlpart" data="{{articleInfo}}" />
+    </view>
+  </view>
+</view>

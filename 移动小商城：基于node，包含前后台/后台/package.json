@@ -1,0 +1,60 @@
+{
+  "name": "m-mall-admin",
+  "version": "1.0.0",
+  "description": "## Overview",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "apidoc": "^0.16.1",
+    "babel-cli": "^6.14.0",
+    "babel-core": "^6.14.0",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-register": "^6.14.0",
+    "bluebird": "^3.4.6",
+    "body-parser": "^1.15.2",
+    "captchapng": "0.0.1",
+    "chai": "^3.5.0",
+    "cheerio": "^0.20.0",
+    "connect": "^2.30.2",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.1",
+    "crypto": "^0.0.3",
+    "express": "^4.14.0",
+    "express-handlebars": "^3.0.0",
+    "express-jwt": "^3.4.0",
+    "express-session": "^1.14.1",
+    "formidable": "^1.0.17",
+    "jsonwebtoken": "^7.1.9",
+    "log4js": "^0.6.38",
+    "mocha": "^3.0.2",
+    "mochawesome": "^1.5.2",
+    "moment": "^2.15.0",
+    "mongoomise": "0.0.8",
+    "mongoose": "^4.6.0",
+    "nodemailer": "^2.6.0",
+    "qn": "^1.3.0",
+    "redis": "^2.6.2",
+    "request": "^2.74.0",
+    "serve-favicon": "^2.3.0",
+    "session-mongoose": "^0.5.2",
+    "supertest": "^2.0.0"
+  },
+  "scripts": {
+    "start": "babel-node ./bin/www",
+    "test": "./node_modules/.bin/mocha -t 10000 --compilers js:babel-core/register --recursive --reporter mochawesome",
+    "apidoc": "./node_modules/.bin/apidoc -i controllers/ -o public/apidoc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skyvow/m-mall-admin.git"
+  },
+  "author": "skyvow",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/skyvow/m-mall-admin/issues"
+  },
+  "homepage": "https://github.com/skyvow/m-mall-admin#readme"
+}

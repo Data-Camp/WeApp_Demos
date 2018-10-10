@@ -1,0 +1,41 @@
+<!--cj.wxml-->
+<view class="container">
+    <view wx:if="{{remind}}" class="remind-box">
+        <image wx:if="{{remind == '加载中'}}" class="remind-img" src="/images/index/loading.gif"></image>
+        <block wx:else>
+          <image class="remind-img" src="/images/index/nothing.png"></image>
+          <text class="remind-text">{{remind}}</text>
+        </block>
+    </view>
+    <block wx:else>
+
+        <view class="cj-header">
+            <view class="cj-text">
+                <text class="cj-header-title">成绩查询</text>
+                <text class="cj-header-info">学号：{{id}}</text>
+                <text class="cj-header-info">姓名：{{name}}</text>
+            </view>
+            <image class="cj-bg" src="/images/core/cj.png"></image>
+        </view>
+
+        <view class="cj-info-ctn">
+        
+            <view class="cj-grade">
+                <image class="cj-grade-logo" src="/images/core/cj.png"></image>
+                <view class="cj-grade-term">
+                    <view class="cj-grade-fst">
+                        <text>{{xqName.term}}</text>
+                        <text class="grade-comment">大{{xqName.grade}}{{xqName.semester}}学期</text>
+                    </view>
+                </view>
+            </view>
+            <view class="cj-info-box">
+                <view class="cj-info" wx:for="{{cjInfo}}" wx:key="courseid">
+                    <text class="cj-info-name">{{item.course_name}}</text>
+                    <text class="cj-info-socre">{{item.socres}}</text>
+                </view>
+            </view>
+        </view>
+
+    </block>
+</view>

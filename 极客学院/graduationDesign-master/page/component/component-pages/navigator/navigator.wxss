@@ -1,0 +1,6 @@
+.navigator-hover button{
+  background-color:blue;
+}
+.other-navigator-hover button{
+  background-color:red;
+}

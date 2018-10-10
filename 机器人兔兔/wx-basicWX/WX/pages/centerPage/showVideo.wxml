@@ -1,0 +1,11 @@
+<!-- 循环播放 -->
+<audio poster="{{poster}}" name="{{name}}" author="{{author}}" src="{{src}}" action="{{action}}" controls loop></audio>
+<view style="text-align:center">
+    <button class="btn" type="primary" size="mini" bindtap="audioPlay">播放</button>
+    <button class="btn" type="primary" size="mini" bindtap="audioPause">暂停</button>
+    <button class="btn" type="primary" size="mini" bindtap="audioPlaybackRateSpeedUp">调为2倍速</button>
+    <button class="btn" type="primary" size="mini" bindtap="audioPlaybackRateNormal">调为1倍速</button>
+    <button class="btn" type="primary" size="mini" bindtap="audioPlaybackRateSlowDown">调为0.5倍速</button>
+    <button class="btn" type="primary" size="mini" bindtap="audio14">设置当前播放时间为14秒</button>
+    <button class="btn" type="primary" size="mini" bindtap="audioStart">回到开头</button>
+</view>

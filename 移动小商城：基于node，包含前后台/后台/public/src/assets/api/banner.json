@@ -1,0 +1,20 @@
+{
+    "meta": {
+        "code": 0,
+        "message": "操作成功"
+    },
+    "data": [
+        {
+            "image": "https://dn-img-seriousapps.qbox.me/business/17509282413911?imageView2/1/w/1080/h/810",
+            "title": "banner"
+        },
+        {
+            "image": "https://dn-img-seriousapps.qbox.me/business/17523787613710?imageView2/1/w/1080/h/810",
+            "title": "banner"
+        },
+        {
+            "image": "https://dn-img-seriousapps.qbox.me/business/17479315723436?imageView2/1/w/1080/h/810",
+            "title": "banner"
+        }
+    ]
+}

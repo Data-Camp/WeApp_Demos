@@ -1,0 +1,28 @@
+.scroll-list {
+    overflow: hidden;
+}
+
+.topbar {
+    margin-top: 0;
+    background: #fff;
+}
+
+.topbar-item {
+    color: #333;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.topbar-item.active {
+    color: #479de6;
+}
+
+.swiper_box {
+    width: 100%;
+}
+
+swiper-item image {
+    width: 100%;
+    display: inline-block;
+    overflow: hidden;
+}

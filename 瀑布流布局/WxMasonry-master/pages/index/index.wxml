@@ -1,0 +1,36 @@
+<swiper class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">
+    <swiper-item>
+        <scroll-view class="hot-box" scroll-y="true" upper-threshold="50" 
+                    lower-threshold="100" bindscrolltolower="scrolltolower">
+            <view class="hot-main">
+                <view class="hot-main-box">
+                    <view class="hot-main-title">精选</view>
+                    <view class="hot-main-subtitle">呈现最新的精选日报</view>
+                </view>
+            </view>
+
+            <view class="hot-box-main WxMasonryView" >
+                <block wx:for="{{datalist}}" wx:for-item="item" wx:for-index="i" wx:key="">
+                    <view class="hot-box-top">
+                        <text class="hot-box-title">{{datalist[i].dateDay}}</text>
+                    </view>
+                    <view class="WxMasonry" wx:for="{{datalist[i].stories}}" wx:for-index="j" wx:for-item="items" wx:key="">
+                        <navigator  id="{{datalist[i].stories[j].id}}" url="../detail/detail?id={{datalist[i].stories[j].id}}">
+                            <image class="WxMasonryImage" id="{{i*10+j}}" style="width:{{imagesHeightList[i*10+j].width}}px;height:{{imagesHeightList[i*10+j].height}}px" mode="aspectFill" bindload="WxMasonryImageLoad" src="{{datalist[i].stories[j].images[0]}}" />
+                            <view class="list-box-title">{{datalist[i].stories[j].title}}</view>
+                        </navigator>
+                    </view>
+                </block>
+            </view>
+            <view hidden="{{hotshidden}}" class="hot-box-more">
+                <view wx:if="{{hothidden}}">
+                    <image src="/static/loading.gif" mode="aspectFill"/>
+                </view>
+                <view wx:else>
+                    <text> 没有更多了 </text>
+                </view>
+            </view>
+
+        </scroll-view>
+    </swiper-item>
+</swiper>

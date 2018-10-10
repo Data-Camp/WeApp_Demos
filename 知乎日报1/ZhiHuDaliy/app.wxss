@@ -1,0 +1,105 @@
+page {
+  position: relative;
+  height: 100%;
+  font-family: 'microsoft yahei ui'
+}
+
+swiper.index-swiper {
+  position: relative;
+  height: 450rpx;
+}
+swiper .mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, .3)
+}
+swiper image {
+  display: block;
+  width: 100%;
+}
+swiper .desc {
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 20rpx 20rpx 50rpx 20rpx;
+  background: rgba(0, 0, 0, .3);
+  color: #FFF;
+  overflow: hidden;
+  white-space:nowrap;
+  text-overflow: ellipsis;
+}
+
+.float-action {
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 2px 2px 10px #AAA;
+  background: #1891D4;
+  z-index: 100;
+}
+
+/*common list*/
+.common-list .list-item {
+  position: relative;
+  border-bottom: 1px solid #EEE;
+  padding: 20rpx;
+  min-height: 150rpx;
+  overflow: hidden;
+}
+.common-list .list-item:active {
+ 	background: #FAFAFA;
+}
+.common-list .list-item.has-img image.cover {
+  position: absolute;
+  left: 20rpx;
+  top: 20rpx;
+  width: 150rpx;
+  height: 150rpx;
+}
+.common-list .list-item.has-img .content {
+  margin-left: 180rpx;
+}
+.common-list .list-item .content text {
+  font-size: 35rpx;
+}
+
+.common-list .list-spliter {
+  font-size: 30rpx;
+  background: #EEE;
+  padding: 20rpx;
+  color: #555
+}
+
+.refresh-block {
+  padding: 20rpx;
+  text-align: center
+}
+.refresh-block image {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.ellipsis {
+  overflow: hidden;
+  white-space:nowrap;
+  text-overflow: ellipsis;
+}
+
+.share-list .item {
+  display: inline-block;
+  width: 33.33333%;
+  text-align: center;
+}
+.share-list .item image {
+  width: 120rpx;
+  height: 120rpx;
+}

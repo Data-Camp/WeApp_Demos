@@ -1,0 +1,80 @@
+/* global style */
+page {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: #f4f4f4;
+    color: #444;
+}
+.hidden {
+    display: none;
+}
+
+/* shot components */
+.shot {
+    position: relative;
+    display: inline-block;
+    width: 45%;
+    padding: 5px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.07);
+    border-radius: 2px;
+    box-sizing: border-box;
+    background-color: #fff;
+    margin: 3.33% 0 0 3.33%;
+}
+.shot .shot-image-wrap {
+    height: 0;
+    padding-bottom: 75%;
+    background-size: cover;
+}
+.shot .animated {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 23px;
+    height: 14px;
+    background: url(../../images/animated-gif.png);
+    background-size: 100%;
+    z-index: 1;
+}
+.shot .shot-image {
+    width: 100%;
+    height: 100%;
+}
+.shot .shot-icon {
+    vertical-align: middle;
+    padding-left:10px;
+    padding-right:3px;
+}
+.shot .shot-icon.views-icon {
+    width: 15px;
+    height: 15px;
+}
+.shot .shot-icon.hearts-icon {
+    width: 14px;
+    height: 14px;
+}
+.shot .shot-info {
+    font-size: 12px;
+    text-align: right;
+    color: #aaa;
+    padding-top: 4px;
+}
+.shot .shot-info-text {
+    vertical-align: middle;
+}
+
+
+
+/* loading components */
+.loading {
+    text-align: center;
+    padding: 20rpx 0;
+    color: #777;
+}
+.loading .loading-img {
+    width: 80rpx;
+    height: 80rpx;
+    display: inline-block;
+    margin-right: 6rpx;
+    margin-bottom: 10rpx;
+    vertical-align:middle;
+}

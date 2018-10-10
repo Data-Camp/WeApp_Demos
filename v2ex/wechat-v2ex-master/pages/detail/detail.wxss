@@ -1,0 +1,86 @@
+.container {
+    padding:30rpx;
+}
+
+.topic-owner {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30rpx;
+}
+
+.owner-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin-right: 30rpx;
+  border-radius: 100%;
+}
+
+.topic-created {
+    margin-left: 30rpx;
+    font-size:14px;
+    color:#999;
+}
+
+.topic-tit {
+    flex:1;
+    box-sizing:border-box;
+    padding-right:10rpx;
+    line-height: 1.4;
+    font-size:14px;
+    color:#333;
+}
+
+.topic-info {
+    margin-bottom: 40rpx;
+    color:#777;
+}
+
+.topic-desc {
+    margin-bottom: 20rpx;
+    line-height: 1.4;
+    word-wrap: break-word; 
+    word-break: normal;
+    font-size:14px;
+    color:#333;
+}
+
+.replies {
+    margin-top:30rpx;
+    border-top:1px solid #ddd;
+}
+
+.replies-item {
+    padding:40rpx 0;
+    border-bottom:1px solid #eee;
+}
+
+.reply-owner {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40rpx;
+}
+
+.reply-avatar {
+    width:100rpx;
+    height:100rpx;
+    border-radius:100%;
+    margin-right:30rpx;
+}
+
+.reply-name, .reply-time, .reply-content {
+    font-size:14px;
+    color:#999;
+}
+
+.reply-time {
+    margin-left: 30rpx;
+    color:#ccc;
+}
+
+.reply-content {
+    padding:0 20rpx;
+    line-height:1.4;
+    word-wrap: break-word; 
+    word-break: normal; 
+    color:#999;
+}

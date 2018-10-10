@@ -1,0 +1,11 @@
+<import src="../common/prompt.wxml"/>
+
+<scroll-view class="scroll-list" scroll-y="true" style="height: 100%" bindscrolltolower="lower">
+	<view class="weui-cells" wx:if="{{ !!classify.paginate.total }}">
+	    <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active" wx:for="{{ classify.items }}" wx:key="" bindtap="navigateTo" data-id="{{ item._id }}">
+	        <view class="weui-cell__bd">{{ item.name }}</view>
+	        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+	    </navigator>
+	</view>
+    <template is="prompt" data="{{ prompt }}"/>
+</scroll-view>

@@ -1,0 +1,50 @@
+/**index.wxss**/
+
+.list {
+  background: #fff;
+  margin-top:10px;
+}
+.list .item{
+  padding:10px 15px;
+  font-size: 14px;
+  color:#333;
+  position: relative;
+  display: flex;
+  flex-direction:row;
+  border-bottom: 1px solid #f3f3f3;
+}
+.item::last-child{
+  border:none;
+}
+.item radio{
+  padding: 15rpx 25rpx 0 10rpx;
+}
+.item .right{
+  flex: 1;
+}
+.item image {
+  width:32rpx;
+  height: 32rpx;
+  display: inline-block;
+  vertical-align:middle;
+  margin:0 18rpx 0 9rpx;
+}
+.item .jump{
+  position: absolute;
+  right:20px;
+  top:20px;
+  color:#999;
+}
+.addto .jump{
+  top:10px;
+}
+.item .h1,.list .item .p{
+  display: block;
+  color:#ccc;
+  font-size: 12px;
+}
+.item .h1{
+  margin-bottom:5px;
+  color:#666;
+  font-size: 14px;
+}

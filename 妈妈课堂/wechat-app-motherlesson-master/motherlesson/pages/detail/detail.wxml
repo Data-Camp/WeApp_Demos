@@ -1,0 +1,6 @@
+<!--pages/detail/detail.wxml-->
+<view class="container">
+    <text style="padding: 20rpx">{{articlemodel.data.article.title}}</text>
+    <text style="padding: 20rpx">{{articlemodel.data.article.summary}}</text>
+    <image src="{{articlemodel.data.article.imgUrl}}" style="width: 100%;"></image>
+</view>

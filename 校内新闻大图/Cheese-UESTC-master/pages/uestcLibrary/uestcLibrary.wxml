@@ -1,0 +1,27 @@
+
+<!--<view class="mainFrame">-->
+<view class="page_list">
+  <view wx:for="{{newList}}">
+    <view class="allItem" data-detail-href="{{item.lasttime}}">
+
+      <!--封面-->
+      <view class="bookcover">
+        <image class="bookcover" src="../../image/labraryBookCover.png" mode="aspectFit"></image>
+        <view class="booknum">{{item.booknum}}</view>
+      </view>
+
+      <!--右侧内容-->
+      <view class="content">
+        <view class="title">{{item.title}}</view>
+
+        <!--到期时间及剩余日期 外框-->
+        <view class="content2">
+          <view class="status">{{item.status}} | 剩余</view>
+          <view class="lasttime">{{item.lasttime}}天</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!--</view>-->

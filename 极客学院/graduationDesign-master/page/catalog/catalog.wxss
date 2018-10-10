@@ -1,0 +1,114 @@
+.container{
+    position: relative;
+    max-width: 740rpx;
+    overflow:hidden;
+}
+
+.mask{
+    display: none;
+    position: fixed;
+    background: rgba(0,0,0,.2);
+    top: 0;
+    right: 0;
+    padding-left: 375rpx;
+    overflow-y: auto;
+    height: 100%;
+}
+
+.nav{
+    display: block;
+    width: 375rpx;
+    margin-left: 375rpx;
+    background: #fff;
+}
+
+.nav .nav-title{
+    height: 80rpx;
+    line-height: 80rpx;
+    font-size: 32rpx;
+    padding-left: 30rpx;
+}
+
+.nav .nav-list{
+    height: 80rpx;
+    line-height: 80rpx;
+    font-size: 28rpx;
+    padding-left: 50rpx;
+    color: #666;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.navKey{
+    position: fixed;
+    display: inline-block;
+    width: 50rpx;
+    height: 50rpx;
+    top: 500rpx;
+    right: 0;
+    transform: rotate(90deg);
+}
+
+.nav-show .mask{
+    display: block;
+}
+.nav-show .navKey{
+    right: 400rpx;
+    transform: rotate(-90deg);
+    z-index: 999;
+}
+
+
+
+
+.wxParse{
+    font-size: 28rpx;
+    line-height: 40rpx;
+    padding: 40rpx;
+}
+
+.wxParse-h1{
+    font-size: 36rpx;
+    font-weight: bold;
+    line-height: 60rpx;
+    height: 60rpx;
+    margin-top: 20rpx;
+}
+.wxParse-h2{
+    font-size: 32rpx;
+    font-weight: bold;
+    line-height: 50rpx;
+    height: 50rpx;
+    margin-top: 20rpx;
+}
+.wxParse-p{
+    text-indent: 40rpx;
+    margin-top: 20rpx;
+}
+
+.wxParse-li{
+    text-indent: 40rpx;
+    position: relative;
+}
+.wxParse-li-circle{
+    display: inline-block;
+    width: 10rpx;
+    height: 10rpx;
+    border-radius: 50%;
+    position: absolute;
+    top: 20rpx;
+    left: 10rpx;
+    background: #333;
+}
+.wxParse-code{
+    display: inline-block;
+    margin-left: 4rpx;
+    margin-right: 4rpx;
+    margin-top: 4rpx;
+    text-indent: -2rpx;
+    background: #e4e4e4;
+    border-radius: 8rpx;
+}
+
+

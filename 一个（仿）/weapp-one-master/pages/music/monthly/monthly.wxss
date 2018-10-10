@@ -1,0 +1,44 @@
+.musics {
+  padding: 0 10px;
+}
+
+.music-item {
+  min-height: 45px;
+  margin-top: 5px;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.music-cover {
+  float: left;
+}
+
+.music-cover-image {
+  width: 40px;
+  height: 40px;
+}
+
+.music-data {
+  width: 220px;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.music-title {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.music-author {
+  color: #89bdf7;
+  font-size: 12px;
+}
+
+.music-forward {
+  float: right;
+  margin-top: 10px;
+}
+
+.forward {
+  width: 20px;
+  height: 20px;
+}

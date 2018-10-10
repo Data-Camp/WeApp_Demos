@@ -1,0 +1,190 @@
+.root {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.my-side {
+    width: 40rem;
+    height: 40rem;
+    position: absolute;
+    bottom: -30rem;
+    left: -10rem;
+    border-radius: 100%;
+    background: lightskyblue;
+    overflow: visible;
+}
+
+.your-side {
+    width: 40rem;
+    height: 40rem;
+    position: absolute;
+    top: -40rem;
+    left: -10rem;
+    border-radius: 100%;
+    background: lightpink;
+    overflow: visible;
+    transition: top ease 0.6s;
+}
+
+.your-side.here {
+    top: -30rem;
+}
+
+.avatar {
+    position: absolute;
+    width: 4.6rem;
+    height: 4.6rem;
+    border-radius: 100%;
+    border: 0.2rem solid white;
+    background-color: #f0f0f0;
+}
+
+.hand {
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 100%;
+    overflow: visible;
+}
+
+.score, .streak {
+    position: absolute;
+    color: #334567;
+    width: 6rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.streak {
+    text-align: right;
+}
+
+.my-side .avatar {
+    left: 17.5rem;
+    top: -2.5rem;
+    transition: top ease .2s;
+}
+
+.my-side .hand {
+    left: 17.5rem;
+    top: 4rem;
+    transition: top ease .2s;
+}
+
+.root.playing .my-side .hand:active {
+    transform: scale(1.3);
+}
+
+.root.done .my-side .avatar {
+    top: 4.5rem;
+}
+
+.root.done .my-side .hand {
+    top: -3rem;
+}
+
+.my-side .score {
+    left: 11rem;
+    bottom: 31rem;
+}
+
+.my-side .streak {
+    right: 11rem;
+    bottom: 31rem;
+}
+
+.your-side .avatar {
+    left: 17.5rem;
+    bottom: -2.5rem;
+    transition: all ease .2s;
+    opacity: 0;
+}
+
+.your-side.here .avatar {
+    opacity: 1;
+}
+.your-side.move-1 .avatar {
+    transform: rotate(15deg);
+}
+.your-side.move-2 .avatar {
+    transform: rotate(-15deg);
+}
+
+.your-side .hand {
+    left: 17.5rem;
+    bottom: 4rem;
+    opacity: 0;
+    transition: bottom ease .2s;
+    transform: rotate(180deg);
+}
+
+.root.done .your-side .avatar {
+    bottom: 4.5rem;
+}
+
+.root.done .your-side .hand {
+    bottom: -2.5rem;
+    opacity: 1;
+}
+
+.your-side .score {
+    left: 11rem;
+    top: 29.5rem;
+}
+
+.your-side .streak {
+    right: 11rem;
+    top: 29.5rem;
+}
+
+
+.start-game {
+    position: absolute;
+    width: 8rem;
+    height: 3rem;
+    line-height: 3rem;
+    margin-top: -1.5rem;
+    margin-left: -4rem;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+}
+
+.root.connected .start-game {
+    opacity: 1;
+}
+
+.root.connected.playing .start-game {
+    opacity: 0;
+}
+
+.game-info {
+    font-size: 2rem;
+    position: absolute;
+    width: 20rem;
+    height: 3rem;
+    line-height: 3rem;
+    margin-top: -1.5rem;
+    top: 50%;
+    left: 0;
+    text-align: center;
+    opacity: 1;
+}
+
+.root.connected .game-info {
+    opacity: 0;
+}
+
+.root.connected.root.playing .game-info,
+.root.connected.root.done .game-info {
+    opacity: 1;
+}
+
+.root.done .hand.win {
+    
+}

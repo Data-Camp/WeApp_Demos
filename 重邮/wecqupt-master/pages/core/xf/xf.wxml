@@ -1,0 +1,76 @@
+<!--xf.wxml-->
+<view class="container">
+
+    <view wx:if="{{remind}}" class="remind-box">
+        <image wx:if="{{remind == '加载中'}}" class="remind-img" src="/images/index/loading.gif"></image>
+        <block wx:else>
+          <image class="remind-img" src="/images/index/nothing.png"></image>
+          <text class="remind-text">{{remind}}</text>
+        </block>
+    </view>
+    <block wx:else>
+
+        <!-- 学费查询标题 -->
+        <view class="xf-title-wraper">
+            <view class="xf-title-info">
+                <text class="xf-title">学费查询</text>
+                <view class="xf-stu-info" wx:if="{{id && name}}">
+                    <text>学号：{{id}}</text>
+                    <text>姓名：{{name}}</text>
+                </view>            
+            </view> 
+            <image class="xf-title-icon" src="/images/core/xf.png"></image>
+        </view>
+
+        <!-- 学费查询类型 -->
+        <view class="xf-types">
+            <block wx:for="{{xfData}}" wx:key="Schoolyears" wx:for-item="itemName">
+                <view class="xf-type-item {{itemName.open ? 'xf-item-show' : ''}}">
+                    <view class="xf-head" id="{{itemName.Schoolyears}}" bindtap="slideDetail">
+                        <text class="xf-type-name">{{itemName.Schoolyears}}学年</text>
+                        <image class="xf-item-icon" src="/images/core/common/down.png"></image>
+                    </view>                
+                    <view class="xf-detail">
+                        <view class="xf-detail-item">
+                            <text class="xf-detail-label">已缴金额</text>
+                            <text class="xf-detail-content">{{itemName.Payed}}</text>
+                        </view>
+                        <view class="xf-detail-item">
+                            <text class="xf-detail-label">未缴金额</text>
+                            <text class="xf-detail-content">{{itemName.NoPay}}</text>
+                        </view>
+                        <view class="xf-detail-item">
+                            <text class="xf-detail-label">应缴总金额</text>
+                            <text class="xf-detail-content">{{itemName.TotalPay}}</text>
+                        </view>
+                        <view class="xf-detail-item xf-TotalTuition">
+                            <text class="xf-detail-label">总学费</text>
+                            <text class="xf-detail-content">{{itemName.TotalTuition}}</text>
+                        </view>
+                        <view class="xf-detail-item xf-MajorTuition">
+                            <text class="xf-detail-label">学费</text>
+                            <text class="xf-detail-content">{{itemName.MajorTuition}}</text>
+                        </view>
+                        <view class="xf-detail-item xf-GradeTuition">
+                            <text class="xf-detail-label">学分费</text>
+                            <text class="xf-detail-content">{{itemName.GradeTuition}}</text>
+                        </view>
+                        <view class="xf-detail-item xf-SecMajorTuition">
+                            <text class="xf-detail-label">二专费</text>
+                            <text class="xf-detail-content">{{itemName.SecMajorTuition}}</text>
+                        </view>
+                        <view class="xf-detail-item xf-ApartmentPay">
+                            <text class="xf-detail-label">住宿费</text>
+                            <text class="xf-detail-content">{{itemName.ApartmentPay}}</text>
+                        </view>
+                        <view class="xf-detail-item xf-CollectingPay">
+                            <text class="xf-detail-label"> 书费</text>
+                            <text class="xf-detail-content">{{itemName.CollectingPay}}</text>
+                        </view>
+                    </view>
+                </view>
+            </block>
+        </view>
+
+    </block>
+</view>

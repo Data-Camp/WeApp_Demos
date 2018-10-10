@@ -1,0 +1,118 @@
+/*外部公共容器样式*/
+.flex-container{
+  display:flex;
+  height: 100vh;
+  background-color:#666666;
+  flex-direction : column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.dice-box{
+  padding: 10px;
+} 
+
+.second-row{
+  display:flex;
+  flex-direction : row;
+  justify-content: space-around;
+}
+
+/* 骰子容器公用样式 */
+.face {
+  display: flex;
+  margin: 5px;
+  padding: 4px;
+  background-color:#ffffff;
+  width: 108px;
+  height: 108px;
+  object-fit: contain;
+  border-radius:10%;
+  box-shadow: inset 0 5px white,
+              inset 0 -5px #bbb,
+              inset 5px 0 #d7d7d7,
+              inset -5px 0 #d7d7d7;
+}
+
+
+/* 筛子中的点的样式 */
+.pip {
+  display: block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  margin:4px;
+  background-color: #333;
+  box-shadow: inset 0 3px #111,
+              inset 0 -3px #555;
+}
+
+/* 面公用样式 */
+
+
+/* 第一面布局方式：元素水平居中且垂直居中 */
+.first {
+  justify-content: center;
+  align-items: center;
+}
+
+/* 第二面布局方式 */
+.second {
+  justify-content: space-between;
+}
+/* 右对齐 */
+.second .pip:last-child {
+  align-self: flex-end;
+}
+
+/* 第三面布局方式 */
+.third {
+  justify-content: space-between;
+}
+.third .pip.third-item-center {
+  align-self: center; 
+}
+.third .pip:last-child {
+  align-self: flex-end;
+}
+
+
+/* 第四面布局方式 */
+.fourth {
+  justify-content: space-between; 
+}
+.fourth .column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+}
+
+/* 第五面布局方式 */
+.fifth {
+  justify-content: space-between; 
+}
+.fifth .column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+}
+.fifth .column.fifth-column-center{
+  justify-content: center;
+}
+
+/* 第六面布局方式 */
+.sixth { 
+  justify-content:space-between;
+}
+.sixth .column {
+  display: flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+
+.button-box{
+  padding-top: 100px;
+  width:80%;
+
+}

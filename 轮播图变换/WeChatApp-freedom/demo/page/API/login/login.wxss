@@ -1,0 +1,26 @@
+.page-body-wrapper {
+  margin-top: 200rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0 50rpx;
+  box-sizing: border-box;
+}
+.page-body-title {
+  font-size: 60rpx;
+  /*TODO 使用 rpx */
+  line-height: 100px;
+}
+.page-body-text {
+  color: #bbb;
+  font-size: 28rpx;
+  /*TODO 使用 rpx */
+  line-height: 20px;
+  margin: 0 0 100rpx 0;
+  text-align: center;
+}
+.page-body-button {
+  width: 100%;
+}

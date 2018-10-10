@@ -1,0 +1,48 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/posts/posts",
+    "pages/classifys/classify",
+    "pages/carts/cart",
+    "pages/ui_v2ee/ui_v2ee"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#78C652",
+    "navigationBarTitleText": "我厨",
+    "navigationBarTextStyle":"whitle",
+    "enablePullDownRefresh":"true"
+  },
+  "tabBar":{
+    "color":"#9DACB7F",
+    "selectedColor":"#78C652",
+    "borderStyle":"white",
+    "list":[
+      {
+        "pagePath":"pages/index/index",
+        "text":"首页",
+        "iconPath":"images/tabBar/tabBar_button_home_nselected@2x.png",
+        "selectedIconPath":"images/tabBar/tabBar_button_home_default@2x.png"
+      },
+      {
+        "pagePath":"pages/classifys/classify",
+        "text":"分类",
+        "iconPath":"images/tabBar/tabBar_button_classification_nselected@2x.png",
+        "selectedIconPath":"images/tabBar/tabBar_button_classific_default@2x.png"
+      },
+      {
+        "pagePath":"pages/carts/cart",
+        "text":"购物车",
+        "iconPath":"images/tabBar/tabBar_button_shopping_nselected@2x.png",
+        "selectedIconPath":"images/tabBar/tabBar_button_shopping_default@2x.png"
+      },
+      {
+        "pagePath":"pages/ui_v2ee/ui_v2ee",
+        "text":"我的",
+        "iconPath":"images/tabBar/tabBar_button_center_nselected@2x.png",
+        "selectedIconPath":"images/tabBar/tabBar_button_center_default@2x.png"
+      }
+    ]
+  }
+}

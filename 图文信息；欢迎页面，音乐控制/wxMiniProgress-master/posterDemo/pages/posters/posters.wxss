@@ -1,0 +1,12 @@
+/* pages/posters/posters.wxss */
+@import "../template/poster-template/poster-template.wxss";
+.swiper-container{
+    width:100%;
+    height: 500rpx;
+}
+.swiper-img{
+    width:100%;
+    height:500rpx;
+}
+
+

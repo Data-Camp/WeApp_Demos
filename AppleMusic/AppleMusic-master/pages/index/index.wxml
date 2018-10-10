@@ -1,0 +1,4 @@
+<!--index.wxml-->
+<view class="music-play">
+    <text> 哈哈哈哈</text>
+</view>

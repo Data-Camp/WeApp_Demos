@@ -1,0 +1,51 @@
+<view class="container">
+    <swiper class="banners" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{imgUrls}}">
+            <swiper-item class="banner">
+                <image src="{{item.imgUrl}}" mode="aspectFill" class="banner-image" data-id="{{item.articleId}}" bindtap="bannerImageTap">
+                </image>
+            </swiper-item>
+        </block>
+    </swiper>
+    <view classs="items-container">
+        <block wx:for="{{list}}">
+            <view wx:if="{{item.type === 1}}" class="item-type1">
+                <text class="item-text-title"> {{item.data}} </text>
+            </view>
+            <navigator wx:elif="{{item.type === 2}}" url="../detail/detail?id={{item.data.id}}" hover-class="navigator-hover">
+                <view class="item-type2">
+                        <view class="item-type2-top">
+                            <view class="item-type2-left">
+                                <text class="item-type2-title">{{item.data.title}}</text>
+                            </view>
+                            <view class="item-type2-right">
+                                <image src="{{item.data.imgUrl}}" mode="aspectFill" class="item-type2-image"></image>
+                            </view>
+                        </view>
+                        <view class="bottom-line-view"></view>
+                </view>
+            </navigator>
+            <navigator wx:elif="{{item.type === 3}}" url="../detail/detail?id={{item.data.id}}" hover-class="navigator-hover">
+                <view class="item-type3">
+                    <view class="item-type3-top">
+                        <image src="../../images/iconLovePink.png" mode="aspectFill" class="item-type3-top-image"></image>
+                        <text class="item-type3-top-text">关爱提醒</text>
+                    </view>
+                    <view class="item-type3-bottom">
+                        <image src="{{item.data.imgUrl}}" mode="aspectFill" class="item-type3-bottom-image"></image>
+                        <view class="item-type3-bottom-right">
+                            <text class="item-type3-bottom-right-toptext">{{item.data.title}}</text>
+                            <text class="item-type3-bottom-right-bottomtext">{{item.data.summary}}</text>
+                        </view>
+                    </view>
+                </view>
+            </navigator>
+            <view wx:elif="{{item.type === 4}}" class="item-type4">
+                <image src="{{item.data[0].imgUrl}}" mode="aspectFill" data-id="{{item.data[0].articleId}}" bindtap="bannerImageTap" class="item-type4-left-image"></image>
+                <image src="{{item.data[1].imgUrl}}" mode="aspectFill" data-id="{{item.data[1].articleId}}" bindtap="bannerImageTap" class="item-type4-right-image"></image>
+            </view>
+        </block>
+    </view>
+</view>
+
+

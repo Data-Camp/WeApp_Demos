@@ -1,0 +1,18 @@
+/* components/image/index.wxss */
+.topic {
+    padding: 40rpx;
+}
+.topic__title {
+    font-size: 40rpx;
+    margin-bottom: 30rpx;
+}
+.topic__content {
+    font-size: 32rpx;
+}
+.topic__content__item__title {
+    margin-bottom: 20rpx;
+}
+.topic__content__item__img {
+    width: 100%;
+    margin-bottom: 20rpx;
+}

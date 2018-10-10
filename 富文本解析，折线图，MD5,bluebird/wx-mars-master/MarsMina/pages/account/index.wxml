@@ -1,0 +1,25 @@
+<view class="mine-wrapper">
+  <view class="avatar-wrapper">
+    <view>
+      <view class="avatar">
+        <image src="/public/images/avatar/avatar_01.png"></image>
+      </view>
+      <view class="text">
+        <text bindtap="toLogin">注册 / 登录</text>
+      </view>
+    </view>
+  </view>
+  <view class="list-wrapper">
+    <view class="weui-cells weui-cells_after-title">
+      <block wx:for="{{menuitems}}" wx:key="menu_for">
+        <navigator url="{{item.url}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <view class="weui-cell__hd">
+            <image src="{{item.icon}}"></image>
+          </view>
+          <view class="weui-cell__bd">{{item.text}}</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access">{{item.tips}}</view>
+        </navigator>
+      </block>
+    </view>
+  </view>
+</view>

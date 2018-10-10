@@ -1,0 +1,43 @@
+.detail-container{
+    padding:10rpx;
+    font-family: "microsoft yahei",
+}
+.photo-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.details-info{
+    padding:20rpx;
+}
+.name{
+    font-size:30rpx;
+}
+.title{
+    margin-top:10px;
+    font-size:14px;
+    color:chocolate;
+}
+.content{
+    margin-top:10px;
+    line-height: 20px;
+    font-size:12px;
+}
+
+.zan-box{
+    display: flex;
+    padding:10px 0;
+    align-items: center;
+    font-size:14px;
+}
+.zan-box .zan-icon{
+    width:24px;
+    height:24px;
+    margin-right:10px;
+}
+
+.det-btns{
+    display: flex;
+    
+}

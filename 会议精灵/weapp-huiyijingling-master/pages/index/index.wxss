@@ -1,0 +1,103 @@
+/**index.wxss**/
+page{
+	height: 100%;
+	background-color: #efeff4;
+}
+scroll-view{
+  height: 100%;
+}
+.swiper{
+  top: 0px;
+  width: 100%;
+  height: 240px;	
+}
+.swiper swiper{
+	height: 240px;
+}
+.slide-image{
+  width: 100%;
+}
+.mobi_title{
+	font-size: 15px;
+	color: #777;
+  line-height: 110%;
+  font-weight: normal;
+	width: 100%;
+  padding: 10px;
+  background-color: #f3f3f3;
+  position: relative;
+}
+.mobi_icon{
+	padding: 0px 1.5px;
+  border-radius: 1.5px;
+  background-color: #ff7777;
+  position: relative;
+  margin-right: 5px;
+}
+/*list*/
+.list{
+	overflow: hidden;
+	width: 100%;
+	padding: 0 20px 0 0;
+	border-top: 1px solid #eeeeee;
+	background-color: #fff;
+  margin-bottom: 15px;
+}
+.list-img{
+  position: relative;
+	float: left;
+	width: 120px;
+}
+.list-img .video-img{
+	width: 120px;
+	height: 120px;
+}
+.list-detail{
+	position: absolute;
+  margin-top: 15px;
+  margin-left: 135px;
+  margin-right: 10px;
+}
+.list-title text{
+	word-break: break-all;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+	font-size: 17px;
+  color: #333;
+	font-weight: bold;
+  line-height: 120%;
+}
+.list-tag view.state{
+    display: block;
+    font-size: 11px;
+    color: #81aaf7;
+    width: 50px;
+    padding: 2px;
+    border: 1px solid #93b9ff;
+    border-radius: 2px;
+    text-align: center;
+    margin-top: 10px;
+		float: left;
+}
+.list-tag .join{
+	font-size: 13px;
+  line-height: 120%;
+  color: #bbb;
+  position: absolute;
+  display: inline;
+  margin: 10px 0 0 20px;
+}
+.list-tag .list-num{
+	font-size: 16px;
+  color: #ff6666;
+}
+.list-info{
+	font-size: 13px;
+  color: #bbb;
+  line-height: 110%;
+  font-weight: normal;
+	margin-top: 40px;
+}

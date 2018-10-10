@@ -1,0 +1,31 @@
+<view>
+  <image wx:for="{{work.pics}}" src="{{_api.HOST_WORK}}{{item.pid}}!app.n720.webp"
+    style="width:{{systemInfo.windowWidth}}px;height:{{systemInfo.windowWidth*item.h/item.w}}px" mode="aspectFit">
+  </image>
+  <view class="work-header">
+    <text>{{work.name}}</text>
+    <view class="work-view">
+      <image src="../../images/eye.png" class="work-eye"></image>
+      {{work.num_view}} 浏览
+    </view>
+  </view>
+  <view class="work-category">
+    <text>{{work.category}}{{work.size_label?'/'+work.size_label:''}}{{work.times?'/'+work.times:''}}</text>
+  </view>
+  <view class="work-category">
+    <text wx:if="{{work.price==='0.00'}}">非卖品</text>
+    <view wx:else>价格  <text class="price-red">￥{{work.price}}</text></view>
+  </view>
+  <view class="work-category" wx:if="{{work.desc}}">
+    <text class="work-desc-title">创作手记</text>
+    <text>{{work.desc}}</text>
+  </view>
+
+  <view class="work-author">
+    <image src="{{_api.HOST_HEAD+owner.uid}}/{{owner.version}}/180" class="author-image"></image>
+    <view>
+      <view class="author-name">{{owner.uname}}</view>
+      <view class="author-misc">{{owner.num_work}}件作品 {{owner.num_followed}}位粉丝</view>
+    </view>
+  </view>
+</view>

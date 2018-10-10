@@ -1,0 +1,20 @@
+  <view class="book-content">
+    <view wx:for="{{bookList}}" wx:key="ISBN13" id="{{item.isbn13}}" data-qty="{{item.qty}}" bindtap="goToDetailPage">
+      <view class="book-list">
+        <view class="book-image">
+          <image src="{{item.image}}" mode="aspectFit"></image>
+        </view>
+        <view class="book-info">
+          <view class="book-info-style">
+            <view>书名:{{item.title}}</view>
+            <view>作者:{{item.author}}\n</view>
+            <view>价格:{{item.price}}\n</view>
+            <view>出版信息:{{item.publisher}}\n</view>
+            <view>借阅时间:{{item.borrowDate}}\n</view>
+            <view>应还时间:{{item.shouldBackDate}}\n</view>
+          </view>
+        </view>
+      </view>
+      <view class="line"></view>
+    </view>
+  </view>

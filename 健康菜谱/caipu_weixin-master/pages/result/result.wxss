@@ -1,0 +1,31 @@
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: auto;
+}
+
+.img {
+    width: 120rpx;
+    height: 90rpx;
+    margin-left: 20rpx;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 20rpx;
+    margin: 20rpx;
+}
+
+.title {
+    font-size: 20px;
+    color: #000;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: #999;
+}

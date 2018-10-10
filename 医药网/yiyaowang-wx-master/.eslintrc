@@ -1,0 +1,61 @@
+{
+  "extends": "airbnb",
+  "env": {
+    "node": true
+  },
+  "globals": {
+    "__DEV__": true,
+    "wx": true,
+    "getApp": true,
+    "getCurrentPages": true
+  },
+  "parser": "babel-eslint",
+  "plugins": ["flowtype", "flowtype-errors"],
+  "rules": {
+    "flowtype/define-flow-type": 1,
+    "flowtype/use-flow-type": 1,
+    "flowtype-errors/show-errors": 2,
+    "arrow-parens": [2, "always"],
+    "prefer-const": 0,
+    "prefer-template": 0,
+    "no-param-reassign": 0,
+    "comma-dangle": [1, "never"],
+    "spaced-comment": [0, "always"],
+    "func-names": 0,
+    "no-underscore-dangle": 0,
+    "import/prefer-default-export": 1,
+    "class-methods-use-this": 1,
+    "no-prototype-builtins": 0,
+    "import/no-extraneous-dependencies": 1,
+    "radix": 0,
+    "max-len": [2, {"code": 120, "ignoreComments": true}],
+    "require-yield": 1,
+    "react/forbid-prop-types": 0,
+    "react/no-unused-prop-types": 1,
+    "react/prefer-stateless-function": 0,
+    "react/sort-comp": [
+      2, {
+        "order": [
+          "static-methods",
+          "lifecycle",
+          "everything-else"
+        ],
+        "groups": {
+          "lifecycle": [
+            "propTypes",
+            "defaultProps",
+            "state",
+            "constructor",
+            "children",
+            "onLoad",
+            "onReady",
+            "onUpdate",
+            "onShow",
+            "onHide",
+            "onUnload"
+          ]
+        }
+      }
+    ]
+  }
+}

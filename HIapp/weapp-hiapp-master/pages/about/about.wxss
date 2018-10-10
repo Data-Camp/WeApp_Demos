@@ -1,0 +1,44 @@
+.container{
+  color: #666;
+}
+
+.logo {
+  width: 200rpx;
+  height: 200rpx;
+  border: 1rpx solid #dfdfdf;
+  border-radius: 10rpx;
+  background-color: #fff;
+  margin: 0 auto;
+  margin-top: 80rpx;
+  text-align: center;
+  line-height: 200rpx;
+}
+
+.logo-image{
+  width: 160rpx;
+  height: 160rpx;
+  vertical-align: middle;
+}
+
+.name{
+  text-align: center;
+  font-size: 50rpx;
+  margin-top: 50rpx;
+}
+
+.about{
+  font-size: 30rpx;
+  text-align: center;
+  margin-top: 80rpx;
+}
+
+.about-text{
+  margin-top: 20rpx;
+  display: block;
+}
+
+.bottom-container{
+  font-size: 25rpx;
+  text-align: center;
+  padding: 30rpx 0;
+}

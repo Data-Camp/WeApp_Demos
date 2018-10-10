@@ -1,0 +1,9 @@
+<!--index.wxml-->
+<view class="container">
+	<toast hidden="{{toastHidden}}" icon="info" bindchange="toastChange">名称不能为空</toast>
+    <view class="input-section">
+        <input placeholder="请输入召唤师的名称" bindinput="bindSearchInput" class="input-container"/>
+        <button size="default" type="primary" loading="{{loading}}" bindtap="bindSearchTap" >查询</button>
+    </view>
+    
+</view>

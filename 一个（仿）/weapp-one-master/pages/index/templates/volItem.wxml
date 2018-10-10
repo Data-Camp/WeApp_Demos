@@ -1,0 +1,15 @@
+<template name="vol-item">
+  <view class="vol-card">
+    <image class="vol-picture" src="{{item.hp_img_url}}" mode="aspectFill"></image>
+    <view class="vol-meta">
+      <text class="vol-number">{{item.hp_title}}</text>
+      <text class="vol-author">{{item.hp_author}}</text>
+    </view>
+    <view class="vol-content">
+      <text class="vol-content-text">{{item.hp_content}}</text>
+    </view>
+    <view class="vol-makettime">
+      <text class="vol-makettime-text">{{item.hp_makettime}}</text>
+    </view>
+  </view>
+</template>

@@ -1,0 +1,42 @@
+<view class="c-minheight wx-view_FhhAKO" data-c_e_id="wx_view_86db7491">
+    <swiper autoplay="True" class="wx-swiper_8qGeIP" data-c_e_id="wx_swiper_1a6df6a8" indicator-dots="True" lower-threshold="50">
+        <swiper-item class="c-full wx-swiper-item_JUTo8U" data-c_e_id="wx_swiper_item_56d06a33">
+            <view class="wx-view_9AHgoU" data-c_e_id="wx_view_37a0372e">
+                <text class="c-block wx-text_lun8Np" data-c_e_id="wx_texta8795c71">精选，真正的流行</text>
+                <text class="c-block wx-text_56NxjL" data-c_e_id="wx_text918aff5c">只收录最优商品，省去筛选烦恼。     
+                    随时在更新。</text>
+                <view class="wx-view_eJpe4z" data-c_e_id="wx_view5f80f6e6">
+                    <image class="wx-image_rxdS0O" data-c_e_id="wx_imageafdbd437" mode="aspectFit" src="http://qty83k.creatby.com/materials/origin/753631f21d00a44e67b111f71b24811d_origin.jpg"/>
+                </view>
+            </view>
+        </swiper-item>
+        <swiper-item class="c-full wx-swiper-item_PyBVYt" data-c_e_id="wx_swiper_item_e21b7d4e">
+            <view class="wx-view_9AHgoU" data-c_e_id="wx_view90265df0">
+                <text class="c-block wx-text_lun8Np" data-c_e_id="wx_text921073fc">图文，日常生活导读</text>
+                <text class="c-block wx-text_56NxjL" data-c_e_id="wx_textdf64bbed">对消费选择的苛求，衣食住行的洞见。     
+                    生活可以将就，也可以研。</text>
+                <view class="c-minheight wx-view_eJpe4z" data-c_e_id="wx_view024a5ef6">
+                    <image class="wx-image_rxdS0O" data-c_e_id="wx_image818be8ea" mode="aspectFit" src="http://qty83k.creatby.com/materials/origin/d6a662acf8888a67887ae3abb1fe1aac_origin.jpg"/>
+                </view>
+            </view>
+        </swiper-item>
+        <swiper-item class="c-full wx-swiper-item_TR9yQI" data-c_e_id="wx_swiper_item_1814a816">
+            <view class="wx-view_9AHgoU" data-c_e_id="wx_view369e101c">
+                <text class="c-block wx-text_lun8Np" data-c_e_id="wx_text43080aba">发现，购物正能量</text>
+                <text class="c-block wx-text_56NxjL" data-c_e_id="wx_text119e88d3">热门商品懒人包，寻找好物不再盲目。     
+                    工作再忙，也要跟紧潮流。</text>
+                <view class="c-minheight wx-view_eJpe4z" data-c_e_id="wx_view310897ec">
+                    <image class="wx-image_rxdS0O" data-c_e_id="wx_image04b7b983" mode="aspectFit" src="http://qty83k.creatby.com/materials/origin/4e3675d307eb837f998dd5cad22ebe83_origin.jpg" style="background-size: 100% 100%; background-position: 0% 0%; background-repeat: no-repeat; background-image: url(http://qty83k.creatby.com/materials/origin/4e3675d307eb837f998dd5cad22ebe83_origin.jpg); "/>
+                </view>
+            </view>
+        </swiper-item>
+    </swiper>
+    <view class="c-minheight wx-view_JjAvLE" data-c_e_id="wx_view_7ac6c7cf">
+        <navigator class="wx-navigator_91rIxS" data-c_e_id="wx_navigator_f466d04e" hover-class="navigator-hover">
+            <text class="c-block wx-text_T7Ctll" data-c_e_id="wx_text_85b91d3b">登录</text>
+        </navigator>
+        <navigator class="wx-navigator_91rIxS" data-c_e_id="wx_navigator44bab4ab" hover-class="navigator-hover">
+            <text class="c-block wx-text_T7Ctll" data-c_e_id="wx_text403f7ded">注册</text>
+        </navigator>
+    </view>
+</view>

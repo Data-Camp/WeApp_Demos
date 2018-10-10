@@ -1,0 +1,23 @@
+<!--issues.wxml-->
+<view class="container">
+  <view class="issues-panel">
+    <input class="issues-input" placeholder="请输入反馈标题" bindinput="listenerTitle" />
+    <textarea class="issues-textarea" placeholder="请输入反馈内容" bindblur="listenerTextarea" auto-height></textarea>
+  </view>
+  <block wx:if="{{upload}}">
+    <text class="issues-label">选择图片（可选）</text>
+    <view class="issues-img-panel">
+      <view class="issues-photo-item" wx:if="{{uploading}}">
+        <image class="remind-img" src="/images/index/loading.gif"></image>
+      </view>
+      <view class="issues-photo-item add-photo" wx:else bindtap="choosePhoto"></view>
+      <view class="issues-photo-item" wx:for="{{imgs}}" wx:key="*this">
+        <image src="{{item}}?imageView2/2/w/250/interlace/1/q/88" mode="aspectFill" data-index="{{index}}" bindtap="previewPhoto"></image>
+      </view>
+    </view>
+  </block>
+  <text class="issues-remind">您的反馈将会以Issues的形式提交至We重邮的Github，您可通过访问 https://github.com/lanshan-studio/wecqupt/issues 来了解反馈动态；此外，您也可以直接在该网站进行详细反馈。另注：频繁恶意反馈的用户将取消其反馈资格。</text>
+  <view class="submit-btn" bindtap="submit">
+    <text>提交反馈</text>
+  </view>
+</view>

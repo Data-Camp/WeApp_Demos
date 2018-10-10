@@ -1,0 +1,10 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <image class="userinfo-avatar" src="{{img}}" background-size="cover"></image>
+    <text>Hi, {{username}}</text>
+  </view>
+  <view class="usermotto">
+    <button type="primary" class="user-motto" bindtap="bindViewTap">{{welcome}}</button>
+  </view>
+</view>

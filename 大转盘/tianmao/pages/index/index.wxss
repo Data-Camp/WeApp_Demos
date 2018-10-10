@@ -1,0 +1,76 @@
+/**index.wxss**/
+
+.container-out {
+  height: 600rpx;
+  width: 650rpx;
+  background-color: #b136b9;
+  margin: 100rpx auto;
+  border-radius: 40rpx;
+  box-shadow: 0 10px 0 #871a8e;
+  position: relative;
+}
+
+.container-in {
+  width: 580rpx;
+  height: 530rpx;
+  background-color: #871a8e;
+  border-radius: 40rpx;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+/**小圆球
+box-shadow: inset 3px 3px 3px #fff2af;*/
+
+.circle {
+  position: absolute;
+  display: block;
+  border-radius: 50%;
+  height: 20rpx;
+  width: 20rpx;
+}
+
+.content-out {
+  position: absolute;
+  height: 150rpx;
+  width: 166.6666rpx;
+  background-color: #f5f0fc;
+  border-radius: 15rpx;
+  box-shadow: 0 5px 0 #d87fde;
+}
+
+/**居中 加粗*/
+
+.start-btn {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 15rpx;
+  height: 150rpx;
+  width: 166.6666rpx;
+  background-color: #ffe400;
+  box-shadow: 0 5px 0 #e7930a;
+  color: #f6251e;
+  text-align: center;
+  font-size: 55rpx;
+  font-weight: bolder;
+  line-height: 150rpx;
+}
+
+.award-image {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 140rpx;
+  width: 130rpx;
+}

@@ -1,0 +1,6 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="page-title">
+    <text class="page-title-text">{{pageInfo.title}}</text>
+  </view>
+</view>

@@ -1,0 +1,47 @@
+/**index.wxss**/
+.container {
+  background: '#27c1dd';
+  padding: 0;
+}
+
+.no-data {
+  color: #333333;
+  font-size: 30rpx;
+}
+
+.item-box {
+  margin-bottom: 30rpx;
+}
+
+.item-title {
+  color: #999999;
+  font-size: 30rpx;
+  display: block; 
+  width: 750rpx; 
+  overflow: hidden; 
+  white-space: nowrap;
+  word-wrap: break-word;
+  text-overflow: ellipsis;
+}
+
+.item-image {
+  width: 750rpx; 
+  height: 400px; 
+  background-color: #eeeeee;
+}
+
+.item-buttons {
+  height: 20px;
+  flex-direction:row;
+}
+
+.item-button {
+  width: 350rpx;
+  margin: 12rpx;
+  height: 20px;
+  float: left;
+  color: #999999;
+  font-size: 30rpx;
+  text-align: center;
+  flex-direction:row;
+}

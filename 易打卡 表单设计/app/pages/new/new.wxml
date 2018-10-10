@@ -1,0 +1,93 @@
+<!-- 新建任务 -->
+<view class="add-page">
+
+    <view class="mod-a">
+        <!-- 任务名称 -->
+        <view class="mod t-name">
+            <text class="key">任务名称</text>
+            <input bindinput="bindKeyInput" class="input" maxlength="100" placeholder="请输入任务名称" />
+            <image class="arrow-r" src="../../image/arrow-r-0.png"></image>
+        </view>         
+    </view>
+
+    <view class="mod-a mt20">
+        <!-- 任务地点 -->
+        <view class="mod t-address" bindtap="chooseLocation">
+            <text class="key">任务地点</text>
+            <text class="value">{{task.address}}</text>
+            <image class="arrow-r" src="../../image/arrow-r-0.png"></image>
+        </view>
+
+        <!-- 打卡时间 -->
+        <view class="mod t-sign-time">
+            <text class="key">打卡时间</text>
+            
+            <picker mode="time" value="{{task.signTime}}" bindchange="setSignTime">
+                <view class="value">{{task.signTime}}<image class="arrow-r" src="../../image/arrow-r-0.png"></image></view>
+            </picker>
+            
+            
+        </view>
+
+        <!-- 最早打卡时间 -->
+        <view class="mod t-early">
+            <text class="key">最早可打卡时间</text>
+            <text class="value">{{task.signEarlyTime}}</text>
+        </view>
+
+    </view>
+
+    <view class="mod-a mt20">
+        <!-- 起始时间 -->
+        <view class="mod t-time">
+            <view class="start">
+                <text class="key">开始于</text>
+                <picker mode="date" value="{{task.startDay}}" start="{{task.startDay}}" bindchange="startDateChange">
+                    <view class="date">{{task.startDay}}<image class="arrow-d" src="../../image/arrow-d-0.png"></image></view>
+                </picker>
+            </view>
+            <view class="pipe"></view>
+            <view class="end">
+                <text class="key">结束于</text>
+                <picker mode="date" value="{{task.endDay}}" start="{{task.endDay}}" bindchange="endDateChange">
+                    <view class="date">{{task.endDay}}<image class="arrow-d" src="../../image/arrow-d-0.png"></image></view>
+                </picker>
+            </view>
+        </view>
+
+        <!-- 重复日 -->
+        <view class="mod days">
+            <view class="key">
+                <text>重复日</text>
+            </view>
+            <view class="week">
+                <text id="monday" bindtap="changeMonday" class="d {{task.repeat.monday ? 'on' : ''}}">一</text>
+                <text id="tuesday" bindtap="changeTuesday" class="d {{task.repeat.tuesday ? 'on' : ''}}">二</text>
+                <text id="wednesday" bindtap="changeWednesday" class="d {{task.repeat.wednesday ? 'on' : ''}}">三</text>
+                <text id="thursday" bindtap="changeThursday" class="d {{task.repeat.thursday ? 'on' : ''}}">四</text>
+                <text id="friday" bindtap="changeFriday" class="d {{task.repeat.friday ? 'on' : ''}}">五</text>
+                <text id="saturday" bindtap="changeSaturday" class="d {{task.repeat.saturday ? 'on' : ''}}">六</text>
+                <text id="sunday" bindtap="changeSunday" class="d {{task.repeat.sunday ? 'on' : ''}}">日</text>
+            </view>
+        </view>
+    </view>
+
+    <!-- 我的昵称 -->
+    <view class="mod-a mt20">
+        <view class="mod my-nick">
+            <text>我的昵称</text>
+            <text>{{userInfo.nickName}}</text>
+        </view>
+    </view>
+
+    <!-- 创建按钮 -->
+    <view class="create">
+        <button class="btn {{creating ? 'disabled' : ''}}" bindtap="bindSubmit">{{button.txt}}</button>
+    </view>
+    
+    <!-- 提示信息 -->
+    <modal confirm-text="确定"no-confirm  no-cancel hidden="{{modalHidden}}" mask bindconfirm="modalChange">
+        请完善新建任务信息
+    </modal>
+
+</view>

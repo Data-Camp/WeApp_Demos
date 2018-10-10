@@ -1,0 +1,74 @@
+/**index.wxss**/
+.pageHead
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+ 
+.addCur
+{
+  font-family:"serif";
+    font-size: 28pt;
+    color: blue;
+    margin-top: -24rpx;
+    margin-right: 24rpx;
+    overflow: hidden; 
+}
+.datetimeTxt
+{
+    margin-top: -10rpx;
+}
+.addImage
+{
+  margin-right: 30rpx;
+}
+.cur_main {
+  display: flex;
+  flex-direction: row;
+  padding: 24rpx;
+  margin-top: 28rpx;
+      background-color: #f3f3f3;
+  border-top: 1rpx solid #d0d0d0;
+  border-bottom: 1rpx solid #d0d0d0;
+}
+
+.cur_logo{
+    width: 108rpx; 
+    height: 78rpx;
+}
+.amountInput{
+    padding-left: 10rpx;
+    margin-top: 6rpx;
+  margin-right: 60rpx;
+    border: 1rpx solid #888;
+    font-size: 14pt; 
+}
+.rateTxt{
+    margin-top: 1rpx;
+    font-size: 16pt;
+}
+.middle{
+    flex: 1;
+    margin-left: 20rpx;
+}
+.right{
+    font-size: 9pt; 
+    margin-top: 50rpx;
+}
+.top
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+ 
+.item {
+      display: flex;
+      padding: 24rpx;
+      margin-left: 8rpx;
+      margin-right: 8rpx;
+  background-color: #fff;
+      border-bottom: 1rpx solid #d0d0d0;
+}
+ 

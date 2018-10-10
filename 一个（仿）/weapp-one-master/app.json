@@ -1,0 +1,51 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/index/monthly/monthly",
+    "pages/index/detail/detail",
+    "pages/reading/reading",
+    "pages/reading/monthly/monthly",
+    "pages/reading/essay/essay",
+    "pages/reading/serial/serial",
+    "pages/reading/question/question",
+    "pages/music/music",
+    "pages/music/monthly/monthly",
+    "pages/music/detail/detail",
+    "pages/movie/movie",
+    "pages/movie/detail/detail",
+    "pages/history/history"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "ONE",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#888",
+    "selectedColor": "#89bdf7",
+    "backgroundColor": "#fff",
+    "borderStyle": "white",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "image/home.png",
+      "selectedIconPath": "image/home_active.png"
+    }, {
+      "pagePath": "pages/reading/reading",
+      "text": "阅读",
+      "iconPath": "image/reading.png",
+      "selectedIconPath": "image/reading_active.png"
+    },{
+      "pagePath": "pages/music/music",
+      "text": "音乐",
+      "iconPath": "image/music.png",
+      "selectedIconPath": "image/music_active.png"
+    },{
+      "pagePath": "pages/movie/movie",
+      "text": "电影",
+      "iconPath": "image/movie.png",
+      "selectedIconPath": "image/movie_active.png"
+    }]
+  }
+}

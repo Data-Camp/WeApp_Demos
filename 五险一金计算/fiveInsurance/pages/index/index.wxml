@@ -1,0 +1,79 @@
+<!--index.wxml-->
+<!-- <view class="container">
+  <view  bindtap="bindViewTap" class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view> -->
+
+<template name="insurance_item">
+  <view class="insurance_item">
+      <text class="item_text">{{category}}</text>
+      <view class="people_ins">
+        <input type="number" placeholder="" value="{{private_percentage}}" disabled="{{false}}" />
+        <text>%</text>
+        <text>{{salary * private_percentage/100}}</text>
+      </view>
+      <view class="compony_ins">
+        <input class="compony_ins_input" type="number" placeholder="12" value="{{company_percentage}}" disabled="{{false}}"/>
+        <text>%</text>
+        <text>{{salary * company_percentage/100}}</text>
+      </view>
+    </view>
+</template>
+
+<view class="area_view">
+  <text class="area_text">所在地区:</text>
+  <view class="area_input">
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+      {{array[index]}}
+    </view>
+  </picker>
+  </view>
+</view>
+
+<view class="area_view">
+  <text class="area_text">税前月收入:</text>
+  <input class="area_input" type="number" onblur="bindKeyInput" placeholder="" value="{{inputValue}}" focus="{{focus}}" />
+</view>
+
+<view class="compute_button">
+  <button class="left"  size="mini"
+    plain="false" bindtap="startCount" hover-class="other-button-hover">开始计算</button>
+  <button class="right" size="mini"
+    plain="false"  bindtap="resetData" hover-class="other-button-hover">重新计算</button>
+</view>
+
+<view style="border:1rpx dotted #000000"></view>
+<view>
+  <view style="text-align:center; padding: 20px 0 20px 0;">
+    <text>社保公积金缴费明细</text>
+  </view>
+  <view>
+    <view class="insurance_title">
+      <text>缴费项目</text>
+      <text>个人比例</text>
+      <text>单位比例</text>
+    </view>
+
+    <block wx:for="{{insurance}}" wx:key="{{index}}">
+      <template is="insurance_item" data="{{...item, salary}}"></template>
+    </block>
+
+    <view class="total">
+      <text>合计</text>
+      <text class='people_total'>个人缴纳</text>
+      <text class="people_value">{{ private_total * salary / 100 }}</text>
+      <text class="compony_total">公司缴纳</text>
+      <text class='compony_value'>{{ company_total * salary / 100}}</text>
+    </view>
+  </view>
+</view>
+
+
+  
+

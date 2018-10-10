@@ -1,0 +1,30 @@
+<view class="container">
+	<view  bindtap="bindViewTap" class="userinfo">
+		<image class="userinfo-avatar" src="{{ userInfo.avatarUrl }}" background-size="cover"></image>
+		<text class="userinfo-nickname">{{ userInfo.nickName }}</text>
+	</view>
+	<view class="info_list">
+		<view class="weui-cells">
+			<navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active" wx:for="{{ items }}" wx:key="" data-path="{{ item.path }}" data-index="{{ index }}" bindtap="navigateTo">
+                <view class="weui-cell__hd">
+                    <image src="{{ item.icon }}" style="margin-bottom: 2px;margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+                </view>
+                <view class="weui-cell__bd">{{ item.text }}</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access">
+                	<text wx:if="{{ index === 2 }}">{{ item.path }}</text>
+                </view>
+            </navigator>
+        </view>
+        <view class="weui-cells">
+            <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active" wx:for="{{ settings }}" wx:key="" data-path="{{ item.path }}" data-index="{{ index }}" bindtap="bindtap">
+                <view class="weui-cell__hd">
+                    <image src="{{ item.icon }}" style="margin-bottom: 2px;margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+                </view>
+                <view class="weui-cell__bd">{{ item.text }}</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access">
+                    <text wx:if="{{ index === 0 }}">{{ item.path }}</text>
+                </view>
+            </navigator>
+        </view>
+	</view>
+</view>

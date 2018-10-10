@@ -1,0 +1,55 @@
+.userinfo{
+  word-break:break-word;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding-top: 20px;
+}
+.userinfo-avatar {
+  width: 100px;
+  display: block;
+  height: 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.2;
+}
+
+.userinfo-tips {
+  color: #333;
+  display: inline-block;
+  border:1px solid #e3e3e3;
+  padding: 10px;
+  margin: 0 5px 5px 0;
+  border-radius:3px;
+  font-size: 21px;
+  width: 20px;
+  height: 20px;
+  background-color:white;
+}
+
+.usermotto {
+  position:fixed;
+  bottom: 5px;
+  width: 100%;
+  text-align: center;
+  z-index: 9000;
+}
+
+.usermotto image{
+  width: 32px;
+  height: 32px;
+  z-index: 10000;
+}
+
+.button{
+  background:#00e5ff !important;
+}
+
+.tips{
+  color: bisque;
+}

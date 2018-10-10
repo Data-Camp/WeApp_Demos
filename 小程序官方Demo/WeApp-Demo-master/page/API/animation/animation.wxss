@@ -1,0 +1,32 @@
+.page-body-wrapper {
+  flex-grow: 1;
+}
+.animation-element-wrapper {
+  display: block;
+  margin-bottom: 100rpx;
+}
+.animation-element {
+  width: 200rpx;
+  height: 200rpx;
+  background-color: #1AAD19;
+}
+.animation-buttons {
+  padding: 50rpx 50rpx 10rpx;
+  border-top: 1px solid #ccc;
+  display: flex;
+  flex-grow: 1;
+  overflow-y: scroll;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 400rpx;
+  box-sizing: border-box;
+}
+.animation-button {
+  width: 290rpx;
+  margin: 20rpx auto; 
+}
+.animation-button-reset {
+  width: 610rpx;
+  margin: 20rpx auto; 
+}

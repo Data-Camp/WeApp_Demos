@@ -1,0 +1,22 @@
+{
+  "name": "wechat",
+  "version": "1.0.0",
+  "description": "wechatmg",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/web-Marker/wechat-Development.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/web-Marker/wechat-Development/issues"
+  },
+  "homepage": "https://github.com/web-Marker/wechat-Development#readme",
+  "devDependencies": {
+    "es6-promise": "^4.0.5"
+  }
+}

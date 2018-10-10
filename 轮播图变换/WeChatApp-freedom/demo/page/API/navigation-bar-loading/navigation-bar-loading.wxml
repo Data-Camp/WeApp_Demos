@@ -1,0 +1,17 @@
+<import src="../common/header.wxml" />
+<import src="../common/footer.wxml" />
+
+<view class="container">
+  <template is="header" data="{{title: 'navigationBarLoading'}}"/>
+
+  <view class="page-body">
+    <view class="page-body-wrapper">
+      <view class="page-body-buttons">
+        <button class="page-body-button" type="primary" bindtap="showNavigationBarLoading">显示加载动画</button>
+        <button class="page-body-button" bindtap="hideNavigationBarLoading">隐藏加载动画</button>
+      </view>
+    </view>
+  </view>
+
+  <template is="footer" />
+</view>

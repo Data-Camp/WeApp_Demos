@@ -1,0 +1,19 @@
+<!--index.wxml-->
+<view class="container">
+
+<block wx:for="{{parentItem}}">
+  <view class="menu-parent-item">
+    <view class="index_h1">{{item.itemTiele}}</view>
+    <view class="menu-wrp">
+      <block wx:for="{{item.imgUrls}}" wx:for-item="son_item" wx:for-index="son_index">
+        <view bindtap="goTools" data-sel="{{index}}-{{son_index}}" class="menu-item" >
+          <image data-sel="{{index}}-{{son_index}}" class="menu-icon" src="{{son_item}}" />
+          <view data-sel="{{index}}-{{son_index}}" class="menu-font">{{item.texts[son_index]}}</view>
+        </view>
+      </block>
+    </view>
+  </view>
+ <view wx:if="{{(parentItem.length-1)!=index}}" class="line"></view>
+</block>
+
+</view>

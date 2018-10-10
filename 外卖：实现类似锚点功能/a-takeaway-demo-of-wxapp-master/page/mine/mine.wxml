@@ -1,0 +1,23 @@
+<view class="container">
+	<view class="header">
+		<image class="avatar" src="{{userInfo.avatarUrl}}" />
+		<view class="nickname">{{userInfo.nickName}}</view>
+	</view>
+	<view class="section">
+		<view class="line judgement">我的评价</view>
+		<view class="line judgement">我的好友</view>
+		<view class="line judgement">我的收藏</view>
+		<view class="line judgement">我的地址</view>
+	</view>
+	<view class="section">
+		<view class="line judgement">我的钱包<text class="tl">余额：￥0</text></view>
+	</view>
+	<view class="section">
+		<view class="line judgement">邀请有奖</view>
+		<view class="line judgement">商家入驻</view>
+	</view>
+	<view class="section">
+		<view class="line judgement">帮助与反馈</view>
+		<view class="line judgement">在线客服<text class="tl">9:00 - 23:00</text></view>
+	</view>
+</view>

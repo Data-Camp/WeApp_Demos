@@ -1,0 +1,19 @@
+<view class="container container-gray">
+	<view class="group">
+		<view class="group-header">选择报销物品</view>
+		<view class="group-body">
+			<view class="multiple-select">
+				<view wx:for="{{checitems}}" wx:key="{{item.id}}">
+					<text data-id="{{item.id}}"bindtap="onSelectTag" class="{{selectedid==item.id?'active':''}}">{{item.text}}</text>
+				</view>
+			</view>
+		</view>
+		<view class="group-header">问题描述</view>
+		<view class="group-body">
+			<textarea placeholder="请输入您的详细问题，我们将尽快解决"></textarea>
+		</view>
+	</view>
+	<view class="btn-submit">
+		<button class="btn-block btn-orange">提交</button>
+	</view>
+</view>

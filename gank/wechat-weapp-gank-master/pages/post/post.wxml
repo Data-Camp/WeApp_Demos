@@ -1,0 +1,22 @@
+<form bindsubmit="formSubmit">
+    <toast hidden="{{toastHidden}}" bindchange="onToastChanged">
+        {{toastText}}
+    </toast>
+
+    <view class="text">请选择分类</view>
+
+    <picker bindchange="onPickerChanged" value="{{index}}" range="{{array}}">
+        <input class="picker" disabled="disabled" name="type" value="{{array[index]}}"/>
+    </picker>
+
+    <view class="text">请写入干货URL</view>
+    <input class="input" placeholder="input here" name="url"/>
+
+    <view class="text">请说明推荐理由</view>
+    <input class="input" placeholder="input here" name="desc"/>
+
+    <view class="text">请输入您的网络ID</view>
+    <input class="input" placeholder="input here" name="who"/>
+
+    <button class="button" type="primary" formType="submit">我要投稿</button>
+</form>

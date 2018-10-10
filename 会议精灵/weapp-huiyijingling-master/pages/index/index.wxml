@@ -1,0 +1,28 @@
+<scroll-view scroll-y="true" bindscroll="scroll">
+  <view class="swiper">
+    <swiper indicator-dots="true" autoplay="true" interval="5000" duration="1000">
+      <block wx:for="{{imgUrls}}" wx:key="item.id">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image"/>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class="mobi_title">
+    <text class="mobi_icon"></text>
+    <text>会议精灵为你推荐</text>
+  </view>
+  <block wx:for-items="{{lists}}" wx:for-item="list" wx:key="list.id">
+    <view class="list" data-id="{{list.id}}">
+      <view class="list-img">
+        <image class="video-img" mode="scaleToFill" src="{{list.image}}"></image>
+      </view>
+      <view class="list-detail">
+        <view class="list-title"><text>{{list.title}}</text></view>
+        <view class="list-tag"><view class="state">{{list.state}}</view><view class="join"><text class="list-num">{{list.num}}</text>人报名</view></view>
+        <view class="list-info"><text>{{list.address}}</text>|<text>{{list.time}}</text></view>
+      </view> 
+    </view>
+  </block>
+</scroll-view>
+<include src="../layout/footer.wxml"/>

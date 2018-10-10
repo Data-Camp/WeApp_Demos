@@ -1,0 +1,96 @@
+<view class="menu">
+    <scroll-view scroll-x="true" class="top-nav">
+        <view bindtap="toHot" class="top-btn {{hot}}">热门</view>
+        <view bindtap="toFilm" class="top-btn {{film}}">电影</view>
+        <view bindtap="toReadBook" class="top-btn {{book}}">读书</view>
+        <view bindtap="toTelv" class="top-btn {{telv}}">电视</view>
+        <view bindtap="toActive" class="top-btn {{active}}">活动</view>
+        <view bindtap="toMusic" class="top-btn {{music}}">音乐</view>
+        <view bindtap="toOther" class="top-btn {{other}}">其他</view>
+        <view bindtap="toOther1" class="top-btn {{other1}}">其他1</view>
+    </scroll-view>
+</view>
+<scroll-view scroll-y="true" class="content">
+    <view class="img-poster">
+        <image mode="scaleToFill" class="actual-img" src="https://qnmob.doubanio.com/img/files/file-1475046357.jpg?imageView2/2/q/60/w/600/h/0/format/jpg"></image>
+    </view>
+    <view class="col3">
+         <view class="col3-h">
+            <text>影院热映</text>
+            <icon type="search" size="16" style="float:right"></icon>
+        </view>
+        <scroll-view scroll-x="true" class="col3-img-list">
+            <view class="col3-img">
+                <image class="c3-actual-img" mode="scaleToFill" src="https://qnmob.doubanio.com/view/movie_poster_cover/lpst/public/p2382076389.jpg?imageView2/0/q/80/w/9999/h/300/format/jpg"></image>
+            </view>
+            <view class="col3-img">
+                <image class="c3-actual-img" mode="scaleToFill" src="https://qnmob.doubanio.com/view/movie_poster_cover/lpst/public/p2377470803.jpg?imageView2/0/q/80/w/9999/h/300/format/jpg"></image>
+            </view>
+            <view class="col3-img">
+                <image class="c3-actual-img" mode="scaleToFill" src="https://qnmob.doubanio.com/view/movie_poster_cover/lpst/public/p2380677316.jpg?imageView2/0/q/80/w/9999/h/300/format/jpg"></image>
+            </view>
+            <view class="col3-img">
+                <image class="c3-actual-img" mode="scaleToFill" src="https://qnmob.doubanio.com/view/movie_poster_cover/lpst/public/p2380681527.jpg?imageView2/0/q/80/w/9999/h/300/format/jpg"></image>
+            </view>
+        </scroll-view>
+    </view>
+    <view class="col3">
+         <view class="col3-h">
+            <text>免费在线观看新篇</text>
+            <icon type="search" size="16" style="float:right"></icon>
+        </view>
+        <scroll-view scroll-x="true" class="col3-img-list">
+            <view class="col3-img">
+                <image class="c3-actual-img" mode="scaleToFill" src="https://qnmob.doubanio.com/view/movie_poster_cover/lpst/public/p2351313845.jpg?imageView2/0/q/80/w/9999/h/300/format/jpg"></image>
+            </view>
+            <view class="col3-img">
+                <image class="c3-actual-img" mode="scaleToFill" src="https://qnmob.doubanio.com/view/movie_poster_cover/lpst/public/p2324130130.jpg?imageView2/0/q/80/w/9999/h/300/format/jpg"></image>
+            </view>
+            <view class="col3-img">
+                <image class="c3-actual-img" mode="scaleToFill" src="https://qnmob.doubanio.com/view/movie_poster_cover/lpst/public/p2332944143.jpg?imageView2/0/q/80/w/9999/h/300/format/jpg"></image>
+            </view>
+            <view class="col3-img">
+                <image class="c3-actual-img" mode="scaleToFill" src="https://qnmob.doubanio.com/view/movie_poster_cover/lpst/public/p2367899630.jpg?imageView2/0/q/80/w/9999/h/300/format/jpg"></image>
+            </view>
+            <view class="col3-img">
+                <image class="c3-actual-img" mode="scaleToFill" src="https://qnmob.doubanio.com/view/movie_poster_cover/lpst/public/p2346212678.jpg?imageView2/0/q/80/w/9999/h/300/format/jpg"></image>
+            </view>
+        </scroll-view>
+    </view>
+    <view class="col3">
+         <view class="col3-h">
+            <text>新篇速递</text>
+            <icon type="search" size="16" style="float:right"></icon>
+        </view>
+        <scroll-view scroll-x="true" class="col3-img-list">
+            <view class="col3-img">
+                <image class="c3-actual-img" mode="scaleToFill" src="https://qnmob.doubanio.com/view/movie_poster_cover/lpst/public/p2355441956.jpg?imageView2/0/q/80/w/9999/h/300/format/jpg"></image>
+            </view>
+            <view class="col3-img">
+                <image class="c3-actual-img" mode="scaleToFill" src="https://qnmob.doubanio.com/view/movie_poster_cover/lpst/public/p2318975149.jpg?imageView2/0/q/80/w/9999/h/300/format/jpg"></image>
+            </view>
+            <view class="col3-img">
+                <image class="c3-actual-img" mode="scaleToFill" src="https://qnmob.doubanio.com/view/movie_poster_cover/lpst/public/p2371503931.jpg?imageView2/0/q/80/w/9999/h/300/format/jpg"></image>
+            </view>
+            <view class="col3-img">
+                <image class="c3-actual-img" mode="scaleToFill" src="https://qnmob.doubanio.com/view/movie_poster_cover/lpst/public/p2322079398.jpg?imageView2/0/q/80/w/9999/h/300/format/jpg"></image>
+            </view>
+        </scroll-view>
+    </view>
+    <view class="nav">
+        <button type="primary" class="tag" size="mini">经典</button>
+        <button type="primary" class="tag" size="mini">动画</button>
+        <button type="primary" class="tag" size="mini">冷门佳片</button>
+        <button type="primary" class="tag" size="mini">豆瓣高分</button>
+        <button type="primary" class="tag" size="mini">动作</button>
+        <button type="primary" class="tag" size="mini">喜剧</button>
+        <button type="primary" class="tag" size="mini">悬疑</button>
+        <button type="primary" class="tag" size="mini">文艺</button>
+        <button type="primary" class="tag" size="mini">治愈</button>
+        <button type="primary" class="tag" size="mini">科幻</button>
+        <button type="primary" class="tag" size="mini">成长</button>
+        <button type="primary" class="tag" size="mini">华语</button>
+        <button type="primary" class="tag" size="mini">韩国</button>
+        <button type="primary" class="tag" size="mini">日本</button>
+    </view>
+</scroll-view>

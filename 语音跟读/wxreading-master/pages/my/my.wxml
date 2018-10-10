@@ -1,0 +1,12 @@
+<!--index.wxml-->
+<view class="my_container">
+    <view style="background:url({{userInfo.portrait}}) no-repeat center center;background-size: cover;"
+           class="my-portrait"></view>
+    <view class="my-user-content">
+        <text class="my-user_name">{{userInfo.user_name}}</text>
+        <text class="my-age">{{userInfo.age}}</text>
+    </view>
+
+    <view class="my-logout" bindtap="tapLogOut">退出登录</view>
+
+</view>

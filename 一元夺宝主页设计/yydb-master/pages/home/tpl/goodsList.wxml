@@ -1,0 +1,24 @@
+<!-- goodsList.wxml -->
+<template name="goodsItem">
+    <view class="goods-item{{index % 2 == 0?' odd':''}}">
+            <view class="goods">
+                <view class="goods-tag ten" />
+                <image class="goods-image" src="{{goods.goods.imgUrl}}" />
+                <view class="desc-wrapper">
+                    <view class="goods-desc">{{goods.goods.name}}</view>
+                </view>
+            </view>
+            <view class="operating">
+                <view class="tips">揭晓进度<span>{{goods.takeRate * 100}}%</span></view>
+                <view class="progress" style="width: calc(100% - 76px);"></view>
+                <view class="progress-take" style="width: calc((100% - 76px) * {{goods.takeRate}} );"></view>
+                <view class="btn">加入清单</view>
+            </view>
+        </view>
+</template>
+
+<template name="goodsList">
+    <block wx:for="{{goodsList}}">
+        <template is="goodsItem" data="{{index:index,goods:item}}"/>
+    </block>
+</template>

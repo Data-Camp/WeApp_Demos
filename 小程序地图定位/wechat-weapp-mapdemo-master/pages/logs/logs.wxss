@@ -1,0 +1,12 @@
+.project-list {
+  display: flex;
+  flex-direction: column;
+ 
+}
+.project-item {
+  margin: 10rpx 0 0 5rpx;
+}
+.project-git {
+  font-size: 28rpx;
+  color: blue;
+}

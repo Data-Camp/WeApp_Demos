@@ -1,0 +1,66 @@
+@import 'al-ui';
+
+.category-category {
+  background: @color-page;
+  font-size: @font-size-medium;
+  display: flex;
+  background-color: #fff;
+}
+
+.left-content, .right-content {
+  height: 1200rpx;
+}
+
+.left-item {
+  width: 200rpx;
+  height: 100rpx;
+  font-size: 30rpx;
+
+  line-height: 98rpx;
+  text-align: center;
+
+  border-bottom: 1rpx solid #e5e5e5;
+  border-right: 1rpx solid #e5e5e5;
+  .item-normal {
+    border-left: 6rpx solid #fff;
+    color: #333;
+  }
+  .item-select {
+    border-left: 6rpx solid red;
+    color: red;
+  }
+}
+
+.third-content {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+}
+
+.third-item {
+  width: 183rpx;
+  height: 190rpx;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-around;
+
+  image {
+    width: 120rpx;
+    height: 120rpx;
+  }
+  text {
+    font-size: 24rpx;
+    text-align: center;
+  }
+}
+
+.right-title {
+  font-size: 26rpx;
+  line-height: 64rpx;
+  margin-left: 40rpx;
+  border-bottom: 1px solid #e5e5e5;
+  color: #191919;
+  width: 550rpx;
+  height: 64rpx;
+}

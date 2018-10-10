@@ -1,0 +1,4 @@
+<import src="../components/html-parse/index.wxml"/>
+<view class="topic__content">
+    <template is="html-parse" data="{{text: text,htmlData:topic.json_content, htmlParseImageStyle: htmlParseImageStyle}}"/>
+</view>

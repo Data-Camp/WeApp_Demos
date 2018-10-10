@@ -1,0 +1,32 @@
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 50rpx;
+ 
+} 
+.header{
+  display: flex;
+  flex-direction: column;
+}
+.h1{
+   font-weight: bold;
+}
+.h1content{
+  font-size: 12px;
+}
+.section{
+  margin: 100rpx 0;
+  height: 120rpx;
+  line-height: 120rpx;
+  border-radius: 10rpx;
+  background: #fff;
+  padding:0 20rpx;
+ 
+}
+.button{
+  display: flex;
+   justify-content: space-between;
+}

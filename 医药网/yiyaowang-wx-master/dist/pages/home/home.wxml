@@ -1,0 +1,34 @@
+<view class="home-home">
+  <view class="banner banner-banner">
+  <swiper class="slide banner-slide" indicator-dots="{{banner.props.indicatorDots}}" autoplay="{{banner.props.autoplay}}" interval="{{banner.props.interval}}" duration="{{banner.props.duration}}">
+    <block xmlns:wx="" wx:for="{{banner.props.itemArr}}" wx:key="{{item.key}}">
+      <swiper-item>
+        <image src="{{item.pic}}" catchtap="_dispatch" data-catchtap="foo" data-path="banner"/>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+  <view class="navibtns navibtns-navibtns">
+  <block wx:for="{{navibtns.props.itemArr}}" wx:key="{{item.index}}">
+    <view class="navi-item navibtns-navi-item">
+      <image src="{{item.pic}}"/>
+      <text>{{item.title}}</text>
+    </view>
+  </block>
+</view>
+  <view>
+    <block wx:for="{{speciallist}}" wx:key="__k" wx:for-index="_k2" wx:for-item="_v2"><view class="specialitem speciallist-specialitem">
+  <image class="cover-image speciallist-cover-image" src="{{_v2.props.content.pic}}"/>
+  <scroll-view scroll-x="true" class="content-items speciallist-content-items">
+    <view class="scroll-content speciallist-scroll-content">
+      <view class="drugitem speciallist-drugitem" wx:for="{{_v2.props.itemsToTemplate}}" wx:key="{{index}}" catchtap="_dispatch" data-catchtap="tap1" data-path="speciallist.{{_k2}}">
+        <image catchtap="_dispatch" src="{{item.mainimg1}}" data-catchtap="foo" data-path="speciallist.{{_k2}}"/>
+        <text class="name speciallist-name">{{item.gift}}</text>
+        <text class="prize speciallist-prize">￥{{item.originalPrice}}</text>
+      </view>
+    </view>
+  </scroll-view>
+</view></block>
+  </view>
+
+</view>

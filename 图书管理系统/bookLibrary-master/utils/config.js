@@ -1,0 +1,16 @@
+module.exports={
+    url:'http://**********',
+    doubanUrl:'https://api.douban.com/v2/book/isbn/',
+    appKey:'**********',
+    appID:'**********',
+    appSecret:'**********',
+    showSuccessTime:1000,
+    clubApi:{
+        put:'https://api.wxappclub.com/put',
+        get:'https://api.wxappclub.com/get',
+        del:'https://api.wxappclub.com/del',
+        match:'https://api.wxappclub.com/match',
+        list:'https://api.wxappclub.com/list',
+        wxUser:'https://api.wxappclub.com/wxUser'
+    }
+}

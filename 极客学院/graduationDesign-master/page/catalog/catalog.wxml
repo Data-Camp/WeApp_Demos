@@ -1,0 +1,20 @@
+<import src="../../markdown/wxParse.wxml"/>
+
+<view class="container {{navClass}}">
+
+  <view class="wxParse">
+      <template is="wxParse" data="{{wxParseData}}"/>
+  </view>
+
+  <scroll-view scroll-y="true" class="mask" >
+      <view  class="nav" wx:for="{{dataList}}" wx:for-item="itemList" wx:key="item.id">
+          <view class="nav-title" data-link="{{itemList.link}}" bindtap="getLink">{{itemList.title}}</view>
+          <view wx:for="{{itemList.childNode}}" wx:for-item="navList" wx:key="navList.id" >
+              <view class="nav-list" data-link="{{navList.link}}" bindtap="getLink">{{navList.title}}</view>
+          </view>
+      </view>
+  </scroll-view>
+  <view class="navKey" bindtouchstart="navShow">
+      <icon type="download" size="26" color="#35b558"/>
+  </view>
+</view>

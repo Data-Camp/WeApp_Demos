@@ -1,0 +1,12 @@
+{
+  "pages":[
+    "pages/index/index" ,
+    "pages/posters/posters",
+    "pages/posters/posters-detail/posters-detail"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#405f80",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "小程序"
+  }
+}

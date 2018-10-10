@@ -1,0 +1,27 @@
+<template name="music-play-list">
+<view class="music-play-list">
+            <view class="music-paly-list-item">
+                <image class="music-paly-list-image" src="../../image/default-photo.png"></image>
+                <view class="music-paly-list-text" >
+                    <text>最近播放</text>
+                </view>
+                
+            </view>
+
+            <view class="music-paly-list-item">
+                <image class="music-paly-list-image" src="../../image/play-list.png"></image>
+                <view class="music-paly-list-text" >
+                    <text>我喜欢</text>
+                </view>
+                
+            </view>
+
+            <view class="music-paly-list-item">
+                <image class="music-paly-list-image" src="../../image/yulan.png"></image>
+                <view class="music-paly-list-text" >
+                    <text>录音</text>
+                </view>
+                
+            </view>
+</view>
+</template>

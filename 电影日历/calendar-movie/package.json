@@ -1,0 +1,21 @@
+{
+  "name": "leadream-wechat-movie-calendar",
+  "description": "getting started with wechat tiny app",
+  "version": "0.0.1",
+  "private": true,
+  "author": {
+    "name": "leadream",
+    "email": "leadream4@qq.com"
+  },
+  "dependencies": {
+    "cheerio": "^0.22.0",
+    "express": "^4.13.4",
+    "request": "^2.79.0"
+  },
+  "engines": {
+    "node": "0.10.36"
+  },
+  "scripts": {
+    "start": "node server.js"
+  }
+}

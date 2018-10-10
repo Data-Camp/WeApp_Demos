@@ -1,0 +1,14 @@
+{
+  "name": "student-information-system-wechat-applet",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "zonghua",
+  "license": "MIT",
+  "description": "",
+  "dependencies": {
+    "iconv-lite": "^0.4.13"
+  }
+}

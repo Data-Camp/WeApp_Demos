@@ -1,0 +1,131 @@
+<view  class="content">
+    <view class="section-title">
+        立论阶段
+        <switch class="pull-right" type="switch" checked="{{configs.step1.state}}" bindchange="switchChange" id="step1"/>
+    </view>
+
+    <view class="time-limit margin-20rpx">
+        <text>时间限制(秒)</text>
+        <slider step="5" value="{{configs.step1.time}}" show-value="true" min="10" max="360" bindchange="sliderChange" id="step1"/>
+    </view>
+
+    <view class="voice margin-20rpx">
+        <text>声音提醒</text>
+        <radio-group bindchange="radioChange" id="step1">
+            <label>
+                <radio checked value="15"/>提前15s
+            </label>
+            <label>
+                <radio value="10"/>提前10s
+            </label>
+            <label>
+                <radio value="5"/>提前5s
+            </label>
+        </radio-group>
+    </view>
+
+    <view class="hr"></view>
+    <view class="section-title">
+        驳立论阶段
+        <switch class="pull-right" type="switch" checked="{{configs.step2.state}}" bindchange="switchChange" id="step2"/>
+    </view>
+
+    <view class="time-limit margin-20rpx">
+        <text>时间限制(秒)</text>
+        <slider step="5" value="{{configs.step2.time}}" show-value="true" min="10" max="360" bindchange="sliderChange" id="step2"/>
+    </view>
+
+    <view class="voice margin-20rpx">
+        <text>声音提醒</text>
+        <radio-group bindchange="radioChange" id="step2">
+            <label>
+                <radio checked value="15"/>提前15s
+            </label>
+            <label>
+                <radio value="10"/>提前10s
+            </label>
+            <label>
+                <radio value="5"/>提前5s
+            </label>
+        </radio-group>
+    </view>
+
+    <view class="hr"></view>
+    <view class="section-title">
+        质辩阶段
+        <switch class="pull-right" type="switch" checked="{{configs.step3.state}}" bindchange="switchChange" id="step3"/>
+    </view>
+
+    <view class="time-limit margin-20rpx">
+        <text>时间限制(秒)</text>
+        <slider step="5" value="{{configs.step3.time}}" show-value="true" min="10" max="360" bindchange="sliderChange" id="step3"/>
+    </view>
+
+    <view class="voice margin-20rpx">
+        <text>声音提醒</text>
+        <radio-group bindchange="radioChange" id="step3">
+            <label>
+                <radio checked value="15"/>提前15s
+            </label>
+            <label>
+                <radio value="10"/>提前10s
+            </label>
+            <label>
+                <radio value="5"/>提前5s
+            </label>
+        </radio-group>
+    </view>
+
+    <view class="hr"></view>
+    <view class="section-title">
+        自由辩论
+        <switch class="pull-right" type="switch" checked="{{configs.step4.state}}" bindchange="switchChange" id="step4"/>
+    </view>
+
+    <view class="time-limit margin-20rpx">
+        <text>时间限制(秒)</text>
+        <slider step="5" value="{{configs.step4.time}}" show-value="true" min="10" max="360" bindchange="sliderChange" id="step4"/>
+    </view>
+
+    <view class="voice margin-20rpx">
+        <text>声音提醒</text>
+        <radio-group bindchange="radioChange" id="step4">
+            <label>
+                <radio checked value="15"/>提前15s
+            </label>
+            <label>
+                <radio value="10"/>提前10s
+            </label>
+            <label>
+                <radio value="5"/>提前5s
+            </label>
+        </radio-group>
+    </view>
+
+    <view class="hr"></view>
+    <view class="section-title">
+        陈词阶段
+        <switch class="pull-right" type="switch" checked="{{configs.step5.state}}" bindchange="switchChange" id="step5"/>
+    </view>
+
+    <view class="time-limit margin-20rpx">
+        <text>时间限制(秒)</text>
+        <slider step="5" value="{{configs.step5.time}}" show-value="true" min="10" max="360" bindchange="sliderChange" id="step5"/>
+    </view>
+
+    <view class="voice margin-20rpx">
+        <text>声音提醒</text>
+        <radio-group bindchange="radioChange" id="step5">
+            <label>
+                <radio checked value="15"/>提前15s
+            </label>
+            <label>
+                <radio value="10"/>提前10s
+            </label>
+            <label>
+                <radio value="5"/>提前5s
+            </label>
+        </radio-group>
+    </view>
+
+</view>

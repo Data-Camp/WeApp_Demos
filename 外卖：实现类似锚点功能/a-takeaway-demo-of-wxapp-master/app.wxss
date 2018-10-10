@@ -1,0 +1,32 @@
+page {
+	background-color: #efefef;
+}
+
+.section {
+	background: #fff;
+	border-bottom: 1rpx solid #dedede;
+	margin-bottom: 15rpx;
+	padding: 20rpx;
+}
+
+.ellipsis {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+/*特殊按钮*/
+button.yellow {
+	color: #fff;
+	background: #feb70f;
+}
+button.yellow:after {
+	border-color: rgba(255, 133, 111, 0.3);
+}
+button.yellow.hover {
+	background: #e4b203;
+}
+button.yellow.disabled {
+	background: #f4e283;
+}
+

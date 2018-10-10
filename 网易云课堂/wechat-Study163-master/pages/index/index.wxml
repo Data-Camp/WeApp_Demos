@@ -1,0 +1,73 @@
+<!--index.wxml-->
+<view class="pageContainer  bgC">
+  <!--search-->
+  <view class="search flex">
+    <view class="search-left">
+      <image src="../../images/search.png"></image>
+      <input placeholder="网易云课堂" placeholder-class="search-placeholder"/>
+    </view>
+    <view class="search-right flex-item" bindtap="upper">
+      <image src="../../images/email.png"></image>
+    </view>
+  </view>
+
+
+  <!--banner-->
+  <view class="bannerbox">
+    <!--bannerImg-->
+    <view class="banner flex">
+      <block wx:for="{{banner.bannerimg}}"  wx:for-index="idx" wx:for-item="item"    >
+        <view class="banner-item">
+          <navigator url="{{item.navigator}}">
+            <image src="{{item.imgurl}}" class="bannerimg {{item.class}}"></image>
+          </navigator>
+        </view>
+      </block>
+    </view>
+    <!--bannerBtn-->
+    <view  class="banner-btn flex">
+      <block wx:for="{{banner.bannerimg}}" wx:for-index="idx" wx:for-item="item">
+          <view data-index="{{idx}}" bindtap="bindStlBanner" class="{{item.class}}"></view>
+      </block>
+    </view>
+  </view>
+  <!--nav-->
+  <view class="nav flex">
+    <block wx:for="{{nav}}" wx:for-item="item">
+      <navigator url="{{item.navigator}}" class="nav-item">
+        <image src="{{item.imgurl}}"></image>
+        <text>{{item.title}}</text>
+      </navigator>
+    </block>
+  </view>
+  <!--ad-->
+  <view class="ad flex">
+    <block wx:for="{{ad}}" wx:for-item="item">
+      <navigator url="{{item.navigator}}">
+        <image src="{{item.imgurl}}"></image>
+      </navigator>
+    </block>
+  </view>
+  <!--courses grow-->
+  <view class="course-grp flex" >
+    <block wx:for="{{course_grp}}" wx:for-idx="idx" wx:for-item="block_item">
+      <view class="course-grp-name flex">
+        <text>{{block_item.title.left}}</text>
+        <navigator url="{{block_item.navigator}}">{{block_item.title.right}} >;</navigator>
+      </view>
+      <view class="course-grp-item flex">
+        <block wx:for="{{block_item.courses}}" wx:for-item="item">
+          <navigator url="{{item.navigator}}" class="flex flex-col">
+            <image src="{{item.imgurl}}"></image>
+            <text>{{item.title}}</text>
+            <text>{{item.price}}</text>
+          </navigator>
+        </block>
+      </view>
+    </block>
+  </view>
+  <!--全部课程-->
+  <view class="navigator-course">
+    <navigator url="{{moreCourses.url}}">{{moreCourses.title}}</navigator>
+  </view>
+</view>

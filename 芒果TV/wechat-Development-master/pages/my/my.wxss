@@ -1,0 +1,21 @@
+.container{
+    background:#a02503;
+    width:100%;
+    height:100%;
+}
+
+.user-avatar{
+    display:block;
+    margin:30px auto;
+    width:270px;
+    height:350px;
+}
+
+.user text{
+    text-align:center;
+    color:#fff;
+    width:100%;
+    display:inline-block;
+}
+
+    

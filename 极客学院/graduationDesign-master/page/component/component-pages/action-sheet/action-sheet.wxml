@@ -1,0 +1,17 @@
+<view class="page">
+  <view class="page__hd">
+    <text class="page__title">action-sheet</text>
+    <text class="page__desc">action-sheet</text>
+  </view>
+  <view class="page__bd">
+    <view class="section section_gap">
+      <button type="default" bindtap="actionSheetTap">弹出action sheet</button>
+      <action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetChange">
+        <block wx:for="{{actionSheetItems}}">
+          <action-sheet-item class="item" bindtap="bind{{item}}">{{item}}</action-sheet-item>
+        </block>
+        <action-sheet-cancel class="cancel">取消</action-sheet-cancel>
+      </action-sheet>
+    </view>
+  </view>
+</view>

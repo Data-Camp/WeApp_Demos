@@ -1,0 +1,23 @@
+<ion-view view-title="主页">
+	<ion-nav-buttons side="left">
+		<a menu-toggle="left" class="button button-clear icon ion-navicon"></a>
+	</ion-nav-buttons>
+	<ion-content>
+		<ion-slide-box>
+			<ion-slide ng-repeat="item in vm.banners.items">
+				<div class="box">
+					<img ng-src="{{ item.images[0].path }}" class="img-responsive">
+				</div>
+			</ion-slide>
+		</ion-slide-box>
+		<section>
+			<div class="bs-row">
+				<div class="col-xs-4 margin-top-20 text-center" ng-repeat="item in app.menu.flat">
+					<skyvow-btn btn-class="{{ item.bg }}" title="{{ item.name }}" btn-href="{{ item.url }}">
+						<i class="fa {{ item.icon }}"></i>
+					</skyvow-btn>
+				</div>
+			</div>
+		</section>
+	</ion-content>
+</ion-view>

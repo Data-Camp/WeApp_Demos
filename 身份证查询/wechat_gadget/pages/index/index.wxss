@@ -1,0 +1,38 @@
+/**index.wxss**/
+.menu-parent-item{
+  width:100%;
+}
+.index_h1 {
+  font-size:14px;
+  line-height: 20px;
+  width: 90%; 
+  margin: 0 auto; 
+}
+.menu-wrp{
+  width: 90%;
+  margin: 0 auto;
+  
+}
+.menu-item{
+  width: 25%;
+  box-sizing: border-box;
+  float:left;
+  text-align: center;
+}
+.menu-icon{
+  width:30px;
+  height: 30px;
+  margin-top: 20px;
+}
+.menu-font{
+  font-size: 12px;
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+.line{
+  width: 100%;
+  height: 1px;
+  margin: 20px 0;
+  background: #F5F4F9;
+}

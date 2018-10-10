@@ -1,0 +1,48 @@
+/**index.wxss**/
+.WxMasonryView{
+  column-count:2;
+  column-gap: 2px;
+  width: 100%;
+}
+.WxMasonry{
+  width: 95%;
+  background: #fefefe;
+  border: 2px solid #fcfcfc;
+  box-shadow: 0px 2px 2px rgba(34, 25, 25, 0.4);
+  margin: 5px 2px 2px 2px;
+  padding: 1px;
+  padding-bottom: 5px;
+  transition: opacity .4s ease-in-out;
+  display: inline-block;
+}
+.WxMasonryImage{
+  width: 100% !important;
+  display: inline-block;
+}
+
+
+
+.swiper-box{ display: block; height: 100%; width: 100%; overflow: hidden; }
+
+.hot-box{ display: block; height: 100%; font-family: Helvetica, Arial, "Hiragino Sans GB", "Source Han Sans CN", "PingFang SC", Roboto, "微软雅黑", "Heiti SC", "Microsoft Yahei", sans-serif }
+.hot-box-main{ display: block; overflow: hidden; margin-bottom: 20px; background: #FFF; }
+
+.hot-main{ height: 50px; background: url("../../static/001.jpg") #FFF no-repeat 0 50%; background-size: cover; padding: 30px 20px; position: relative; z-index: 1; }
+.hot-main::before{ position: absolute; top: 0; bottom: 0; left: 0; right: 0; content: ''; background-image: linear-gradient(180deg, rgba(0,0,0,0.05) 5%,rgba(0,0,0,0.85) 100%); }
+
+.hot-main-box{ position: relative; z-index: 2; }
+.hot-main-title{ color: #FFF; font-size: 34rpx;  }
+.hot-main-subtitle{ color: #FFF; font-size: 26rpx; margin-top: 4px; }
+
+.hot-box-top{ padding: 20px; border-bottom: 1px solid #F6F6F6; text-align: center; }
+.hot-box-title{ font-size: 32rpx; height: 30px; line-height: 32px; font-weight: 400; color: #444; padding: 5px 10px; border: 1px solid #444; }
+
+.list-box{ 
+  padding: 0; 
+  display: inline-block; 
+  font-size: 30rpx;
+  border-bottom: 1px solid #F6F6F6; 
+}
+.list-box-title{ font-weight: 300; line-height: 42rpx; }
+
+

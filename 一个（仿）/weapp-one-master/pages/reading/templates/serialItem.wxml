@@ -1,0 +1,14 @@
+<template name="serial-item">
+  <view class="article-item" data-id="{{item.id}}" bindtap="tapSerial">
+    <view class="article-header">
+      <text class="article-title">{{item.title}}</text>
+      <text class="article-type">连载</text>
+      <view class="article-author">
+        <text>{{item.author.user_name}}</text>
+      </view>
+    </view>
+    <view class="article-content">
+      <text>{{item.excerpt}}</text>
+    </view>
+  </view>
+</template>

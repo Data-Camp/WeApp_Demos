@@ -1,0 +1,39 @@
+/**detail.wxss**/
+.container {
+  background: '#27c1dd';
+  padding: 0;
+}
+
+.detail-title {
+  padding: 50rpx 20rpx;
+}
+
+.detail-title-text {
+  color: #666666;
+  font-size: 32rpx;
+  display: block; 
+  width: 700rpx; 
+  overflow: hidden; 
+  word-wrap: break-word;
+  text-overflow: ellipsis;
+}
+
+.detail-image {
+  width: 750rpx; 
+  background-color: #eeeeee;
+}
+
+.detail-content {
+  padding: 50rpx 10rpx;
+}
+
+.detail-content-text {
+  color: #999999;
+  font-size: 30rpx;
+  display: block; 
+  width: 700rpx; 
+  overflow: hidden; 
+  word-wrap: break-word;
+  text-overflow: ellipsis;
+  line-height: 1.5;
+}

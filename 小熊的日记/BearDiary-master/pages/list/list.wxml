@@ -1,0 +1,17 @@
+<!--list.wxml-->
+
+<scroll-view scroll-y="true">
+  <view wx:for="{{diaries}}" wx:for-index="idx" class="item-container" bindtap="showDetail" id="{{idx}}">
+    <image mode="aspectFit" src="{{item.meta.cover}}" class="cover"></image>
+    <view class="desc">
+      <view class="left">
+        <view style="font-size:32rpx;margin:10rpx 0;">{{item.meta.title}}</view>
+        <view style="font-size:24rpx;color:darkgray">{{item.meta.meta}}</view>
+      </view>
+      <view class="right">
+        <image mode="aspectFit" src="{{item.meta.avatar}}"></image>
+        <text style="font-size:24rpx;margin-top:10rpx;color:darkgray">{{item.meta.nickName}}</text>
+      </view>
+    </view>
+  </view>
+</scroll-view>

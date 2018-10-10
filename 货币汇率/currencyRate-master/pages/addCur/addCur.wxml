@@ -1,0 +1,30 @@
+<view class="container">
+    <view  bindtap="bindViewTap"  class="pageHead" >
+        <view class="userinfo" >
+            <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+            <text class="userinfo-nickname">{{userInfo.nickName}},请选择您要增加的货币！</text>
+        </view>
+    </view>
+ 
+    <view class="currencyList">
+            <block wx:for="{{curNameList}}"   wx:for-item="items"  wx:key="" >
+                <view   class="rowList">
+                    <view wx:for="{{[0,1, 2]}}" wx:key="*this"  wx:for-item="i"  >
+                            <view class="itemImage" 
+                                        data-text="{{items[i].cn}}"
+                                        data-id="{{items[i].name}}" 
+                                        bindtap="bindlogoTap"> 
+                                    <image src="/images/id128/{{items[i].name}}.png" 
+                                        class="cur_logo"  />                                                     
+                                    <view class="nameTxt">
+                                        <text>{{items[i].cn}}</text>
+                                    </view> 
+                            </view> 
+                    </view> 
+                </view> 
+                <view  class="line"></view>
+            </block>
+      </view>
+   
+      
+</view>

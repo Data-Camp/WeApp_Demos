@@ -1,0 +1,21 @@
+#fm-covermain{margin:60rpx auto;border-radius: 20rpx;overflow: hidden;position: relative;z-index: 3;width:610rpx;height:610rpx;}
+#coverbg{position: absolute;left: 0;bottom:0;width:750rpx;height:1334rpx;z-index:-2;display:block}
+#fm-cmpic{position: absolute;left:0;top: 0;z-index: 2; opacity: 0;}
+#fm-covermain .fadein{ animation:  fadein linear 1s; opacity: 1; transition:  all linear 1s}
+#fm-covermain image{width:610rpx;height: 610rpx;}
+#fm-covermain #fm-cmbg{width:610rpx;height: 610rpx;}
+@keyframes fadein{
+    0%{ opacity: 0}
+    100%{ opacity: 1}
+}
+
+
+#fm-mdes{ text-align: center;color: #fff;line-height: 2;}
+#fm-martist{font-size:24rpx; display: block;color: #eee}
+
+#fm-fixed{position: absolute;left: 0;bottom:0;width: 100%;}
+#fm-action{margin:30rpx 0;display: flex}
+#fm-action view{flex: 1;text-align: center;position: relative;width: 100%}
+#fm-action .playbtn{flex: 0 0 200rpx}
+#fm-action image{width: 98rpx;height:98rpx; vertical-align: top;margin-top:19rpx;}
+#fm-action .playbtn image{width: 136rpx;height: 136rpx;margin-top: 0}

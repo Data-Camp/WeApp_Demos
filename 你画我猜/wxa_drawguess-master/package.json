@@ -1,0 +1,13 @@
+{
+  "name": "qcloud-weapp-client-demo",
+  "version": "1.0.0",
+  "description": "腾讯云微信小程序客户端 DEMO",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tencentyun/weapp-client-demo.git"
+  },
+  "keywords": [],
+  "author": "CFETeam",
+  "license": "MIT"
+}

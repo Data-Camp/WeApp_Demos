@@ -1,0 +1,12 @@
+<view class="hero-list"  data-index="{{index}}" data-name="{{item.name}}">
+    <view wx:for="{{hero}}"  class="item">
+        <navigator url="./../detail/detail?id={{index}}" >
+            <view class="nav-item">
+                <image class="sm-photo" src="{{item.photo}}" background-size="cover" />
+                <text class="name">{{index+1}}-{{item.name}}</text>
+                <image class="arrow-r" src="/image/arrowright.png" background-size="cover" />
+            </view>
+        </navigator>
+        
+    </view>
+  </view>

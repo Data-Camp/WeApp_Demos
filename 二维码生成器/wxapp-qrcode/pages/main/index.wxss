@@ -1,0 +1,20 @@
+/* pages/main/index.wxss */
+.container-box{background-color: #efeff4;height: 100vh}
+.img-box{padding: 32rpx;background-color: #fff;border-bottom: 1rpx solid #e5e5e5;position: relative}
+.img-box image{width: 686rpx;height: 686rpx;background-color: #f9f9f9}
+.input-row{
+    margin: 30rpx auto;
+    border-bottom: 1rpx solid #e5e5e5;
+    border-top: 1rpx solid #e5e5e5;
+    display: flex;
+    align-items: center;
+    height: 88rpx;
+    padding: 0 32rpx; 
+    background-color: #fff;
+    font-size: 34rpx;
+    color: #000
+}
+
+.input-row input{margin-left: 100rpx;flex: 1}
+.mybtn{width:686rpx;margin: 60rpx auto }
+.mask{position: fixed;top: 0;left: 0;z-index: 3; width: 100%;height: 100%;opacity: 0;}

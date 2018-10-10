@@ -1,0 +1,24 @@
+.most-read-item{
+    margin-top: 10rpx;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#title{
+    font-size: 12rpx;
+
+}
+
+#author{
+    color: #a00;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+#type{
+    color: #0a0;
+    align-items: flex-end;
+}
+

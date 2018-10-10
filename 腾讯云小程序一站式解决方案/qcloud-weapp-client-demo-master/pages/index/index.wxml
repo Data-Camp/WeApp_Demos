@@ -1,0 +1,21 @@
+<view class="root">
+    <view class="line">
+        <text>登录测试</text>
+        <input type="text" value="{{loginUrl}}" disabled></input>
+        <button bindtap="doLogin" type="primary">登录</button>
+        <button bindtap="clearSession">清除登录会话</button>
+    </view>
+    <view class="line">
+        <text>请求测试</text>
+        <input type="text" value="{{requestUrl}}" disabled></input>
+        <button bindtap="doRequest" type="primary">请求</button>
+    </view>
+    <view class="line">
+        <text>信道服务测试</text>
+        <input type="text" value="{{tunnelServiceUrl}}" disabled />
+        <button bindtap="openTunnel" type="primary">打开信道</button>
+        <button bindtap="sendMessage">发送消息</button>
+        <button bindtap="closeTunnel">关闭信道</button>
+    </view>
+    <view class="chat"></view>
+</view>

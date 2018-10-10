@@ -1,0 +1,11 @@
+<scroll-view scroll-y="true">
+    <view wx:for="{{list}}" wx:for-item="item">
+            <view class="graySpace"></view>
+            <view class="item-avatar-xs" wx:for="{{item.list_tool}}" wx:for-item="i" data-url="{{i.url}}" bindtap="goPage">
+                <image src="{{i.img}}" />
+                <view style="padding-left:10px">
+                    <text class="title">{{i.name}}</text>
+                </view>
+            </view>
+    </view>
+</scroll-view>

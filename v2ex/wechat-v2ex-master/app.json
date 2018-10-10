@@ -1,0 +1,38 @@
+{
+  "pages":[
+    "pages/latest/latest",
+    "pages/hotest/hotest",
+    "pages/node/node",
+    "pages/topicList/topicList",
+    "pages/detail/detail"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "V2EX",
+    "navigationBarTextStyle":"black",
+    "enablePullDownRefresh":"true"
+  },
+  "tabBar": {
+    "color":"#000",
+    "selectedColor":"#56abe4",
+    "backgroundColor":"#fff",
+    "borderStyle":"white",
+    "list": [{
+      "pagePath": "pages/latest/latest",
+      "text": "最新",
+      "iconPath":"images/latest.png",
+      "selectedIconPath":"images/lastest_on.png"
+    }, {
+      "pagePath": "pages/hotest/hotest",
+      "text": "最热",
+      "iconPath":"images/hotest.png",
+      "selectedIconPath":"images/hotest_on.png"
+    }, {
+      "pagePath": "pages/node/node",
+      "text": "节点",
+      "iconPath":"images/node.png",
+      "selectedIconPath":"images/node_on.png"
+    }]
+  }
+}

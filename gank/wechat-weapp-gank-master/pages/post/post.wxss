@@ -1,0 +1,22 @@
+.text{
+    font-size: 14px;
+    margin: 16px 16px 4px 16px;
+}
+
+.picker{
+    font-size: 14px;
+    padding: 8px 16px;
+    color: darkgray;
+    background-color: #ffffff;
+}
+
+.input{
+    font-size: 14px;
+    padding: 8px 16px;
+    color: darkgray;
+    background-color: #ffffff;
+}
+
+.button{
+    margin: 32px 16px;
+}

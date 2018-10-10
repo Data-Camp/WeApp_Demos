@@ -1,0 +1,61 @@
+<!--kjs.wxml-->
+<view class="container">
+    <!--显示空教室信息-->
+    <view class="main-roomUl" hidden="{{errObj.errorDisplay ? false : true}}">
+        <!--楼层-->
+        <block wx:for="{{testData}}" wx:key="">
+            <view class="roomUl-floor" >
+                <!--楼层的空教室-->
+                <view class="floor">
+                    <block wx:for="{{item.room}}" wx:key="">
+                        <text>{{item}}</text>
+                    </block>
+                </view>
+            </view>
+        </block>
+    </view>
+
+    <!--选择要查询的条件-->
+    <view class="main-condition">
+        <!--选择教学楼-->
+        <view class="building-condition condition-building condition" catchtap="chooseBuilding">
+            <view class="scroll-space"></view>
+            <block wx:for="{{DATA.BUILDING_DATA}}" wx:key="*this">
+                <block wx:if="{{item != ''}}">
+                    <view class="condition-li {{index == active.buildingNo ? 'building-active' : ''}}"  data-buildingNo="{{index}}">{{item}}</view>
+                </block>
+            </block>
+            <view class="scroll-space"></view>
+        </view>
+        <!--选择课程时间段-->
+        <view class="day-condition condition-classTime condition" catchtap="chooseClaasTime">
+            <view class="scroll-space"></view>
+            <block wx:for="{{DATA.CLASSTIME_DATA}}" wx:key="index">
+                <block wx:if="{{!!item}}">
+                    <view class="condition-li {{index == active.classNo ? 'classTime-active' : ''}}"  data-classNo="{{index}}">{{item.time}}</view>
+                </block>
+            </block>
+            <view class="scroll-space"></view>
+        </view>
+        <!--选择天-->
+        <scroll-view scroll-x class="condition-day condition" catchtap="chooseDay">
+            <view class="scroll-space"></view>
+            <block wx:for="{{DATA.DAY_DATA}}" wx:key="*this">
+                <block wx:if="{{!!item}}">
+                    <view class="condition-li {{index == active.weekDay ? 'day-active' : ''}}"  data-dayNo="{{index}}">{{item}}</view>
+                </block>
+            </block>
+            <view class="scroll-space"></view>
+        </scroll-view>
+        <!--选择周-->
+        <scroll-view scroll-x class="condition-week condition" catchtap="chooseWeek">
+            <view class="scroll-space"></view>
+            <block wx:for="{{DATA.WEEK_DATA}}" wx:key="*this">
+                <block wx:if="{{!!item && index >= nowWeekNo}}">
+                    <view class="condition-li {{index == active.weekNo ? 'week-active' : ''}}" data-weekNo="{{index}}">{{item}}</view>
+                </block>
+            </block>
+            <view class="scroll-space"></view>
+        </scroll-view>
+    </view>
+</view>

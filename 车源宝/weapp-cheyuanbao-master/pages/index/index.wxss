@@ -1,0 +1,69 @@
+/**index.wxss**/
+.home-wrap{
+  background: #f2f2f2;
+}
+.banner{
+  width: 100%;
+  height: 300rpx;
+}
+.scroll-txt{
+  text-align: center;
+  background: #fff; 
+  margin: 10rpx 0;
+  padding: 10rpx 0 15rpx 0;
+  color: #333;
+}
+.scroll-ads{
+  text-align: center;
+  font-size: 20rpx;
+}
+.ads-list{
+  display: flex;
+  flex-direction: row;
+  flex:1;
+  margin-bottom: 1rpx;
+}
+.ads-item{
+  flex:1;
+}
+.sub-banner{
+  width: 100%;
+  height: 120px;
+}
+
+.workbench{
+  font-size: 20rpx;
+  background: #fff;
+  padding-bottom: 30rpx;
+  margin-bottom:10rpx;
+  color: #333;
+}
+.workbench .title{
+  font-size:20rpx;
+  padding: 20rpx 20rpx;
+  margin-bottom: 40rpx;
+  display: block;
+}
+.workbench .list{
+  display: flex;
+  flex-direction: row;
+  flex:1;
+}
+.workbench .items{
+  width: 100rpx;
+  flex:1;
+  text-align: center;
+}
+.workbench .items image{
+  width: 100rpx;
+  height: 100rpx;
+}
+.workbench .items image.service-icon{
+  width: 50rpx;
+  height: 50rpx;
+}
+.workbench .items text{
+  display: block;
+  text-align: center;
+  margin-top: 10rpx;
+}

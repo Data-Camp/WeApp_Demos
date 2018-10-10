@@ -1,0 +1,9 @@
+ <view class="classify_recommendeds_right" wx:for="{{feed}}">
+    <view class="recommended_item_text">{{item.name}}</view>
+    <view class="recommended_item_content">
+      <view class="recommended_item_content_cell" wx:for="{{item.children}}" wx:for-item="modelItem">
+        <image src="{{modelItem.imgUrl}}" />
+        <view class="recommended_item_content_cell_text"> {{modelItem.name}}</view>
+      </view>
+    </view>
+  </view>

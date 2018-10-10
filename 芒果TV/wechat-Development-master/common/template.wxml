@@ -1,0 +1,104 @@
+<!-- loading 和列表部分  -->
+
+<template name="loadings">
+    <view class="tips {{loading ? 'hide': ''}}">
+        <image src="../image/loading.gif" mode="aspectFit" />
+        <text>{{loadtxt}}...</text>
+    </view>
+    <loading hidden="{{loading}}">
+        {{loadtxt}}...
+    </loading>
+</template>
+
+
+<template name="ub-list">
+    <template is="{{item.type=='small'?'listSmall':'listBig'}}" data="{{item}}" wx:for="{{newList}}" wx:key="indexs"/>
+</template>
+
+<template name="listBig">
+    <view class="listBigNews">
+        <view class="listTitle">
+            <text>{{item.name1}}</text>
+        </view>
+        <navigator url="Play/play?name={{item.name1}}">
+            <view class="listBox">
+                <image src="{{item.bigPic}}"  />
+                <text class="listText">{{item.name2}}</text>
+            </view>
+        </navigator>
+    </view>
+    <template is="listSmall" data="{{item}}">
+</template>
+
+
+<template name="listSmall">
+    <view class="listNews">
+        <view class="listTitle {{item.type=='small'?'show':'hide'}}">
+            <view class="listText">
+                <text class="text">{{item.title}}</text>
+            </view>
+            <text class="more {{item.more?'show':'hide'}}">更多></text>
+        </view>
+        <view class="list-flex">
+            <block wx:for="{{item.list}}" wx:key="picUrl">
+                <view class="listBox">
+                    <navigator url="Play/play?name={{item.name}}">
+                        <view class="boxPic">
+                            <image src="{{item.picUrl}}"/>
+                            <image src="{{item.icon}}" class="icon {{item.icon ? 'show' : 'hide'}}"/>
+                            <view class="time {{item.tag?'show':'hide'}}" >
+                                {{item.tag}}
+                            </view>
+                        </view>
+                        <view class="boxTitle1">
+                            <text>{{item.name}}</text>
+                        </view>
+                        <view class="boxTitle2">
+                            <text>{{item.desc}}</text>
+                        </view>
+                    </navigator>
+                </view>
+            </block>
+        </view>
+        <view class="textLink {{item.links?'show':'hide'}}">
+            <text>{{item.links}}</text>
+            <image src="../image/icon1.png" class="linkPic"/>
+        </view>
+    </view>
+</template>
+
+<template name="searchTxt">
+    <block wx:for="{{ranking}}" wx:key="section">
+        <view class="search-rank">
+            <view class="searchTxt">
+                {{item.section}}
+            </view>
+            <view class="cont">
+                <navigator url="../Play/play?name={{item.bigTitle}}">
+                    <view class="fl leside">
+                        <image src="{{item.bigImgea}}" />
+                        <view class="contText">
+                            <text>{{item.bigTitle}}</text>
+                            <text class="ft10">{{item.bigSubtitle}}</text>
+                        </view>
+                        <view class="rankOne">1</view>
+                    </view>
+                </navigator>
+                <view class="fl riside">
+                    <block wx:for="{{item.rankArr}}">
+                        <navigator url="../Play/play?name={{item.title}}">
+                            <view class="riside-l {{ index == (3) ? 'mb0':'' }}">
+                                <text class="l-text" >{{index+2}}</text>
+                                <view class="l-mess">
+                                    <text class="messText1">{{item.title}}</text>
+                                    <text class="messText2">{{item.subtitle}}</text>
+                                </view>
+                            </view>
+                        </navigator>
+                    </block>
+                </view>
+            </view>
+        </view>
+    </block>
+</template>
+

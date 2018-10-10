@@ -1,0 +1,183 @@
+.main-list-header .title,
+.main-list-header .date {
+  display: inline-block;
+  color: #FFF;
+  font-size: 30rpx;
+  padding: 25rpx;
+}
+.main-list-header .title {
+  background: #20B4F0;
+}
+.main-list-header .date {
+  background: #019DD6;
+}
+.list-item{
+  width: 90%;
+  margin:30rpx 2%;
+  padding: 5px 10px 6px;
+  border-radius: 0;
+  border-bottom: 1px solid rgba(0,0,0,0.25);
+  box-shadow:0 1px 2px rgba(0,0,0,0.5);
+}
+
+/*slide-menu*/
+.slide-mask {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, .3);
+  z-index: 800;
+}
+.slide-menu {
+  position: fixed;
+  top: 0;
+  background: #FFF;
+  z-index: 900;
+}
+/*.slide-menu .slide-inner {
+  padding: 40rpx;
+}*/
+.slide-menu .header {
+  background: #019DD6;
+  height: 200rpx;
+  color: #FFF;
+  padding: 20rpx 40rpx 0 40rpx;
+}
+
+.userinfo {
+  height: 80rpx;
+  line-height: 80rpx;
+  overflow: hidden;
+}
+.userinfo .avatar {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  margin-right: 40rpx;
+  float: left;
+}
+.userinfo text {
+  float: left;
+  font-size: 35rpx;
+}
+.toolbar {
+  height: 100rpx;
+  padding-top: 25rpx;
+  line-height: 75rpx;
+}
+.toolbar .item {
+  width: 50%;
+  display: inline-block;
+  overflow: hidden;
+  text-align: center
+}
+.toolbar .item text {
+  display: inline-block;
+  font-size: 30rpx
+}
+.toolbar .item image {
+  display: inline-block;
+  position: relative;
+  top: 10rpx;
+  margin-right: 10rpx;
+  height: 50rpx;
+  width: 50rpx;
+}
+
+.slide-menu .menu-item {
+  position: relative;
+  height: 100rpx;
+  line-height: 100rpx;
+  padding: 0 40rpx;
+  font-size: 35rpx;
+}
+.slide-menu .menu-item:active {
+  background: #FAFAFA;
+}
+.slide-menu .menu-item image {
+  position: absolute;
+  top: 25rpx;
+  right: 40rpx;
+  width: 50rpx;
+  height: 50rpx;
+}
+.home-icon {
+  position: absolute;
+  top: 25rpx;
+  left: 40rpx;
+}
+.home-text {
+  position: absolute;
+  left: 100rpx;
+}
+.slide-menu .home {
+  color: #019DD6
+}
+
+.slide-menu .close-btn {
+  position: absolute;
+  top: 20rpx;
+  right: 40rpx;
+  z-index: 1000
+}
+
+
+/*合并theme的*/
+.list-item{
+  width: 90%;
+  margin:30rpx 2%;
+  padding: 5px 10px 6px;
+  border-radius: 5rpx;
+  border-bottom: 1px solid rgba(0,0,0,0.25);
+  box-shadow:0 1px 2px rgba(0,0,0,0.5);
+}
+
+.header-cover {
+  position: relative;
+  height: 500rpx;
+  overflow: hidden
+}
+.header-cover image {
+  width: 100%;
+}
+.header-cover .mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, .3);
+}
+.header-cover .desc {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 0 20rpx 60rpx 20rpx;
+  font-size: 40rpx;
+  color: #FFF;
+  z-index: 10
+}
+
+.editors {
+  padding: 20rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  background: #FAFAFA;
+}
+.editors text,
+.editors image {
+  float: left
+}
+.editors text {
+  color: #AAA;
+  margin-right: 40rpx;
+  font-size: 30rpx;
+}
+.editors image {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}

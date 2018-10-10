@@ -1,0 +1,94 @@
+/* pages/posters/posters-detail/posters-detail.wxss */
+.detail-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.head-img{
+    width: 100%;
+    height: 450rpx;
+}
+
+.music-img{
+    width:100rpx;
+    height: 100rpx;
+    position: absolute;
+    margin:20rpx 0 0 82%;
+    opacity: 0.8;
+}
+
+.auto-container{
+    flex-direction: row;
+    margin-top: 25rpx;
+}
+
+.auto-img{
+    width:64rpx;
+    height: 64rpx;
+    margin-left:25rpx;
+    vertical-align: middle;
+}
+
+.auto-name{
+    font-size: 26rpx;
+    font-weight: 300;
+    margin-left: 20rpx;
+    color:#666;
+}
+
+.const-text{
+    color: #999;
+    margin-left: 20rpx;
+}
+
+.pub-time{
+    font-size: 26rpx;
+    margin-left:20rpx;
+    vertical-align: middle;
+    color:#666;
+}
+
+.title{
+    margin-left: 40rpx;
+    margin-top: 30rpx;
+    font-size: 40rpx;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #4b556c;
+}
+
+.operation-container{
+    margin-top:20rpx;
+}
+.operation-imgs {
+    float:right;
+    margin-right:40rpx;
+    vertical-align: middle;
+}
+
+.operation-imgs image{
+    width:90rpx;
+    height:90rpx;
+}
+
+.operation-imgs .share-img{
+    margin-left: 20rpx;
+}
+
+.horizon-line{
+    width:660rpx;
+    height: 1px;
+    background-color: #e5e5e5;
+    vertical-align: middle;
+    position: relative;
+    top:45rpx;
+    margin: 0 auto;
+    z-index: -99;
+}
+
+.details-content{
+    margin:20rpx 30rpx 0;
+    color:#666;
+    letter-spacing: 2px;
+    line-height: 44rpx;
+}

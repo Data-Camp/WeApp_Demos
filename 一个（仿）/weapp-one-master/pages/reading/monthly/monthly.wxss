@@ -1,0 +1,39 @@
+.container {
+  border-bottom: 0;
+}
+
+.article-item {
+  padding: 10px 15px;
+}
+
+.article-header {
+  margin-bottom: 5px;
+}
+
+.article-title {
+  width: 80%;
+  display: inline-block;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.article-type {
+  float: right;
+  font-size: 10px;
+  font-weight: 200;
+  padding: 5px 5px 5px 8px;
+  color: #89bdf7;
+  border: 1px solid #89bdf7;
+  border-radius: 5px;
+  letter-spacing: 3px;
+}
+
+.article-author {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.article-content {
+  font-size: 14px;
+  line-height: 1.5;
+}

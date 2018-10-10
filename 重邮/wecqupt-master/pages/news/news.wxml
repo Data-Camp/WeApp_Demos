@@ -1,0 +1,34 @@
+<!--news.wxml-->
+<view class="container">
+  <!--新闻分类-->
+  <scroll-view class="filter" scroll-x="true">
+    <block wx:for="{{list}}" wx:key="id">
+      <image wx:if="{{item.enabled[user_type]}}" class="filter-item" data-id="{{item.id}}" id="{{item.type}}" bindtap="changeFilter" src="/images/news/{{item.type + (active.type === item.type ? '@colour.png' : '@gray.png')}}"></image>
+      <image wx:else class="filter-item" data-id="{{item.id}}" id="{{item.type}}" bindtap="changeFilterDisabled" src="/images/news/{{item.type}}@gray.png"></image>
+    </block>
+  </scroll-view>
+  
+  <!--新闻列表-->
+  <view class="content">
+    <view class="loader">
+      <image src="/images/index/loading.gif" wx-if="{{loading}}"></image>
+    </view>
+    <block wx:for="{{active.data}}" wx:key="item.articleid">
+      <navigator url="/pages/news/{{item.type}}/{{item.type}}_detail?type={{item.type}}&id={{item.articleid}}">
+        <view class="list-item {{item.type}}">
+          <view class="list-item-left">
+            <text class="list-item-title">{{item.title}}</text>
+            <text class="list-item-time">{{item.time}}</text>
+          </view>
+          <image class="list-item-icon" src="/images/news/{{item.type}}.png"></image>
+        </view>
+      </navigator>
+    </block>
+  </view>
+  <!--提醒消息-->
+  <text class="content-ending">{{active.remind}}</text>
+  <!--悬浮消息-->
+  <view class="fix_tip {{disabledRemind?'active':''}}">
+    <text>无权限查阅</text>
+  </view>
+</view>

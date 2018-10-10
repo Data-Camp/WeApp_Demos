@@ -1,0 +1,108 @@
+.reading_container{
+    background-color: #B1F3E4;
+}
+.swiper_container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+.readingItem{
+    padding: 44rpx;
+    box-sizing: border-box;
+}
+/*readingItem-image*/
+.readingItem-img{
+    width: 100%;
+    height: 656rpx;
+    box-sizing: border-box;
+    border:4rpx solid #452317;
+    border-radius: 10rpx;
+}
+/*readingItem-content*/
+.readingItem-content{
+    display: flex;
+    flex-flow:column wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20rpx;
+    padding: 10rpx 30rpx 40rpx 30rpx;
+    background-color: #FCAEA0;
+    border:4rpx solid #452317;
+    border-radius: 10rpx;
+}
+.item-index{
+    margin-bottom: 16rpx;
+    font-size: 32rpx;
+}
+/* readingItem-audio-content */
+.readingItem-audio-content{
+    display: flex;
+    flex-flow:row nowrap;
+    justify-content: flex-start;
+    height: 100rpx;
+    width: 100%;
+}
+.read-audio-icon{
+    display: flex;
+    width: 100rpx;
+    height: 100rpx;
+    flex-shrink: 0;
+    margin-right: 16rpx;
+}
+
+/* read-audio-info */
+.read-audio-info{
+    display: flex;
+    flex-flow:column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 28rpx;
+}
+.ri-en_content{
+
+}
+.ri-content{
+    color: #FFFFFF;
+}
+
+/*read-audio-control*/
+.read-audio-control{
+    display: flex;
+    flex-flow:row wrap;
+    align-items: center;
+    width: 100%;
+    height: 70rpx;
+}
+
+.read-audio-progress{
+    width: 340rpx;
+}
+.read-audio-duration{
+    margin-left: 20rpx;
+    font-size: 32rpx;
+}
+.audio-listen{
+    width: 70rpx;
+    height: 70rpx;
+    margin-left: 30rpx;
+}
+.audio-record{
+    width: 70rpx;
+    height: 70rpx;
+    margin-left: 24rpx;
+}
+
+.fixed_submit_btn{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100rpx;
+    background-color: #1ECFA7;
+    font-size: 32rpx;
+    color: #FFFFFF;
+}

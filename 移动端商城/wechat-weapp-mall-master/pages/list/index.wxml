@@ -1,0 +1,20 @@
+<view class="container">
+    <block wx:for="{{list}}">
+        <navigator url="../details/index?id={{item.id}}">
+        <view class="brand_item">
+            
+                <image src="{{item.goodspics}}" class="pic"></image>
+                <view class="right_cont">
+                    <text class="country">{{item.country}}直采 {{item.bigname}}发货</text>
+                    <text class="name">{{item.title}}</text>
+                    <view class="price">
+                        <text class="ourprice">￥{{item.ourprice}}.00</text>
+                        <text class="discount">8折</text>
+                        <text class="marketprice">{{item.marketprice}}.00</text>
+                    </view>
+                </view>
+            
+        </view>
+        </navigator>
+    </block>
+</view>

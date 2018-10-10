@@ -1,0 +1,23 @@
+<!--index.wxml-->
+<view class="container menu_container">
+    <block wx:for-items="{{materialList}}" wx:for-item="mItem" wx:key="mItem">
+        <view class="material_item" bindtap="tapMaterialItem" id="{{mItem.cs_id}}" data-material="{{mItem.cs_name}}">
+            <block wx:if="{{mItem.flower_num != 0}}">
+                <view class="flower-icon">
+                    <text class="flower-num">{{mItem.flower_num}}</text>
+                </view>
+            </block>
+            <image src="{{mItem.cs_img}}" data-src="{{mItem.cs_img}}" class="cs-img">
+            </image>
+            <view class="content_box">
+                <view class="cs-text-title">{{mItem.cs_name}}</view>
+
+                <progress percent="{{mItem.percent}}" stroke-width="6" class="cs-progress" color="#1ECFA7"/>
+                <text class="cs-text">学习进度：{{mItem.read_num}}/{{mItem.plan_num}}</text>
+            </view>
+        </view>
+    </block>
+    <view class="fixed-flower-rank" bindtap="tapShowFlowerRank">
+        <text>榜单</text>
+    </view>
+</view>

@@ -1,0 +1,6 @@
+.text{
+    font-size: 20px;
+    align-content: center;
+    height: 50px;
+    
+}

@@ -1,0 +1,13 @@
+<!--index.wxml-->
+<view class="container">
+    <text class="title">查询结果：</text>
+    <block wx:for="{{rank.skillRank}}">
+        <navigator url="../../../userinfo/userinfo?qquin={{item.uin}}&area_id={{item.area_id}}">
+            <view class="widgets__info">
+                <image class="widgets__info-img" src="http://cdn.tgp.qq.com/pallas/images/usericon/{{item.iconId}}.png" background-size="cover" />
+                <text class="widgets__info-name">{{item.uName}}</text>
+                <text class="widgets__info-area">{{item.areaName}}</text>
+            </view>
+        </navigator>
+    </block>
+</view>

@@ -1,0 +1,242 @@
+<!--kb.wxml-->
+<view class="container">
+    <view wx:if="{{remind}}" class="remind-box">
+        <image wx:if="{{remind == '加载中'}}" class="remind-img" src="/images/index/loading.gif"></image>
+        <block wx:else>
+          <image class="remind-img" src="/images/index/nothing.png"></image>
+          <text class="remind-text">{{remind}}</text>
+        </block>
+    </view>
+    <block wx:else>
+
+        <!-- 主体 -->
+        <view class="main-box {{blur?'main-box-active':''}}">
+            <!-- 左边课数，34节和78节marginBottom为12rpx，其他均为8rpx，课程卡片与这相同 -->
+            <view class="kb-num-ctn blur-area {{blur?'blur kb-num-ctn-hide':''}}">
+                <view class="kb-mon kb-date">
+                    <block wx:if="{{week != '*'}}"><text>{{dates[week-1][0].month}}</text><text>月</text></block>
+                </view>
+                <view class="mg-t">1</view>
+                <view class="mg-8">2</view>
+                <view>3</view>
+                <view class="mg-12">4</view>
+                <view>5</view>
+                <view class="mg-8">6</view>
+                <view>7</view>
+                <view class="mg-12">8</view>
+                <view>9</view>
+                <view class="mg-8">10</view>
+                <view>11</view>
+                <view>12</view>
+                <view class="kb-timeline-tri" style="top:{{timelineTop}}rpx"></view>
+            </view>
+            <scroll-view class="kb-ctn" catchscroll="scrollXHandle" scroll-x="true" scroll-left="{{scroll.left}}" >
+                <!-- 头部星期数 -->
+                <view class="kb-title blur-area {{blur?'blur':''}}">
+                    <block wx:if="{{week != '*'}}">
+                        <view wx:for="{{dates[week-1]}}" wx:key="date" class="kb-title-item">
+                            <text class="kb-date">{{item.date === 1 ? item.month+'月' : item.date}}</text>
+                            <text>周{{_days[index]}}</text>
+                        </view>
+                    </block>
+                    <block wx:else>
+                        <view wx:for="{{_days}}" wx:key="*this" class="kb-title-item">
+                            <text>周{{item}}</text>
+                        </view>
+                    </block>
+                </view>
+                <view class="kb-num-ctn kb-num-ctn-inner blur-area blur" wx:if="{{blur}}">
+                    <view class="kb-mon kb-date">
+                        <block wx:if="{{week != '*'}}"><text>{{dates[week-1][0].month}}</text><text>月</text></block>
+                    </view>
+                    <view class="mg-t">1</view>
+                    <view class="mg-8">2</view>
+                    <view>3</view>
+                    <view class="mg-12">4</view>
+                    <view>5</view>
+                    <view class="mg-8">6</view>
+                    <view>7</view>
+                    <view class="mg-12">8</view>
+                    <view>9</view>
+                    <view class="mg-8">10</view>
+                    <view>11</view>
+                    <view>12</view>
+                    <view class="kb-timeline-tri" style="top:{{timelineTop}}rpx"></view>
+                </view>
+
+                <!-- 卡片部分 -->
+                <view class="kb-cards-ctn blur-area {{blur?'blur':''}}">
+                    <!-- 每一列为一组 -->
+                    <view class="kb-cards-column" wx:for="{{lessons}}" wx:key="{{day}}" wx:for-item="day_lesson" wx:for-index="day">
+                        <!-- today 0周一,1周二 -->
+                        <block wx:if="{{(today===day) && (toweek == week)}}">
+                            <view class="kb-bg" style="background:-webkit-gradient(linear,left top,left bottom,from(#eff7ff),color-stop({{(timelineTop+4)/1260}}, #8cc4ff),to(#eff7ff));"></view>
+                            <view class="kb-timeline" style="top:{{timelineTop}}rpx"></view>
+                        </block>
+                        <!-- 循环当天的的6节课 -->
+                        <view class="kb-card {{wid%2==0?'mg-8':'mg-12'}}" wx:for="{{day_lesson}}" wx:key="{{wid}}" wx:for-index="wid">
+                            <!-- 循环重叠课 -->
+                            <block wx:for="{{day_lesson[wid]}}" wx:key="{{cid}}" wx:for-item="cards" wx:for-index="cid">
+                                <!-- 循环周数，与当前周相同或当前周为*时显示 -->
+                                <view style="height:{{cards.number*100}}rpx" data-day="{{day}}" data-wid="{{wid}}" data-cid="{{cid}}" bindtap="showDetail" wx:for="{{cards.weeks}}" wx:key="*this" wx:for-item="iweek" class="mg-8 kb-card-content {{cards.conflictWeeks[iweek] || (week == '*' && cards.klen > 1) ?'k-sec':''}} {{iweek==week || week == '*' ?cards.color:''}}" wx:if="{{iweek==week || week == '*'}}">
+                                    <!-- 判断上课地点是数字还是汉字 -->
+                                    <text wx:if="{{cards.place < '99999'}}" class="kb-card-place-num">{{cards.place}}</text>
+                                    <text wx:else class="kb-card-place-words">{{cards.place}}</text>
+                                    <view class="kb-card-name">
+                                        <text class="kb-card-name-text" style="-webkit-line-clamp:{{3*(cards.number-1)}};">{{cards.name}}</text>
+                                    </view>
+                                </view>
+                            </block>
+                        </view>
+                    </view>
+                </view>
+
+                <!-- 遮罩层 -->
+                <view bindtap="hideDetail" class="kb-detail" wx:if="{{blur}}">
+                    <view class="kb-detaile-card-ctn" style="top:{{targetY}}rpx;left:{{targetX}}rpx;">
+                        <block wx:for="{{targetLessons}}" wx:key="{{cid}}" wx:for-index="cid" wx:for-item="cards">
+                            <view style="height:{{cards.number*100}}rpx;left:{{cards.left}}rpx;" class="kb-card-content kb-detail-card-content {{cards.color}} {{targetI == cid ? 'kb-detail-card-content-active':''}}" data-index="{{cid}}" catchtap="infoCardTap">
+                                <text wx:if="{{cards.place < '99999'}}" class="kb-card-place-num">{{cards.place}}</text>
+                                <text wx:else class="kb-card-place-words">{{cards.place}}</text>
+                                <view class="kb-card-name">
+                                    <text class="kb-card-name-text" style="-webkit-line-clamp:{{3*(cards.number-1)}};">{{cards.name}}</text>
+                                </view>               
+                            </view>
+                        </block>
+                    </view>
+                </view> 
+
+            </scroll-view>        
+        </view>
+
+        <!-- 底部 -->
+        <view class="kb-info-ctn {{blur?'kb-info-ctn-open':''}}">
+
+            <view class="kb-info-title" wx:if="{{!blur}}">
+                <block wx:if="{{week != '*'}}">
+                    <text class="kb-info-week" wx:if="{{toweek==week}}">星期{{_days[today]}}</text>
+                    <text class="kb-info-week" wx:else bindtap="returnCurrent">返回{{toweek}}周</text>
+                    <view class="kb-swipers" wx:if="{{week != '*'}}">
+                        <view class="kb-swiper-mask-left" data-target="week" data-direction="left" bindtap="swiperChangeBtn">
+                            <image src="/images/core/common/left_g.png"></image>
+                        </view>
+                        <swiper class="kb-week-swiper" bindchange="currentChange" current="{{week-1}}" duration="300">
+                            <block wx:for="{{_weeks}}" wx:key="{{index}}">
+                                <swiper-item class="kb-week-swiper-item">
+                                    <text class="{{index==toweek-1?'active':''}}">{{item}}</text>
+                                </swiper-item>
+                            </block>
+                        </swiper>  
+                        <view class="kb-swiper-mask-right" data-target="week" data-direction="right" bindtap="swiperChangeBtn">
+                            <image src="/images/core/common/right_g.png"></image>
+                        </view>        
+                    </view>
+                </block>
+                <block wx:else>
+                    <text class="kb-info-week">{{toweek}}周周{{_days[today]}}</text>
+                    <text class="kb-term">{{term}}</text>
+                </block>
+                <!--切换视图-->
+                <view class="kb-choose-view-box" bindtap="chooseView">
+                    <view class="kb-choose-view">
+                        <text class="active">{{week=='*'?'期':'周'}}</text>
+                        <text>{{week=='*'?'周':'期'}}</text>
+                    </view>
+                </view>
+            </view>
+            <block wx:else>
+                <view class="kb-info-title">
+                    <block>
+                        <text wx:if="{{week != '*'}}" class="kb-info-week">{{toweek}}周周{{_days[targetDay]}}</text>
+                        <text wx:else class="kb-info-week">星期{{_days[targetDay]}}</text>
+                        <text class="kb-lesson-time">{{targetWid*2+1}}-{{targetWid*2+targetLessons[targetI].number}}节</text>
+                        <image class="kb-info-card-close" src="/images/core/common/down_w.png" bindtap="hideDetail"></image>
+                    </block>
+                </view>
+            </block>
+
+            <view class="kb-info-card-tabs" wx:if="{{targetLen<=2}}" catchtouchstart="touchStartDetail" catchtouchend="touchEndDetail">
+                <block wx:for="{{targetLessons}}" wx:key="{{cid}}" wx:for-index="cid" style="z-index:{{cid}};">
+                    <view class="kb-info-card {{!cid ? '' : 'kb-info-card-shadow'}} {{targetI == cid ? 'kb-info-card-active' : 'kb-info-card-static'}}" data-index="{{cid}}" bindtap="infoCardTap">
+                        <view class="kb-info-card-content">
+                            <view class="info-name">
+                                <text>{{item.name}}</text>
+                            </view>
+                            <view class="info-bd">
+                                <view class="info-type">
+                                    <text>{{item.type}}</text>
+                                    <text wx:if="{{item.more && !teacher}}">{{item.more}}</text>
+                                </view> 
+                                <view class="info-list">
+                                    <text class="info-text" wx:if="{{item.xf_num}}">{{item.xf_num}}</text>
+                                    <view class="info-item">
+                                        <text class="info-item-value">{{item.teacher}}</text>（任课教师）
+                                    </view>
+                                    <view class="info-item">
+                                        <text class="info-item-value">{{item.place}}</text>（上课地点）
+                                    </view>
+                                    <view class="info-item">
+                                        <text class="info-item-value">{{item.all_week}}</text>（课程周数）
+                                    </view>
+                                    <view class="info-item">
+                                        <text class="info-item-value">{{item.class_id}}</text>（教学班）
+                                    </view>
+                                    <view class="info-item">
+                                        <image class="info-item-icon" src="/images/core/xs.png"></image>
+                                        <navigator redirect="true" url="/pages/core/xs/xs?key=教学班:{{item.class_id}}">查看学生名单</navigator>
+                                    </view>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </block>
+            </view>
+            <view class="kb-info-card-swipers" wx:else>
+                <view class="kb-info-swiper-mask-left" data-target="targetI" data-direction="left" bindtap="swiperChangeBtn">
+                    <image src="/images/core/common/left_g.png"></image>
+                </view>
+                <swiper indicator-dots="true" current="{{targetI}}" bindchange="infoCardChange" duration="250">
+                    <block wx:for="{{targetLessons}}" wx:key="{{cid}}" wx:for-index="cid" style="z-index:{{cid}};">
+                        <swiper-item class="kb-info-card">
+                            <view class="kb-info-card-content">
+                                <view class="info-name">
+                                    <text>{{item.name}}</text>
+                                </view>
+                                <view class="info-bd">
+                                    <view class="info-type">
+                                        <text>{{item.type}}</text>
+                                        <text wx:if="{{item.more && !teacher}}">{{item.more}}</text>
+                                    </view> 
+                                    <view class="info-list">
+                                        <text class="info-text" wx:if="{{item.xf_num}}">{{item.xf_num}}</text>
+                                        <view class="info-item">
+                                            <text class="info-item-value">{{item.teacher}}</text>（任课教师）
+                                        </view>
+                                        <view class="info-item">
+                                            <text class="info-item-value">{{item.place}}</text>（上课地点）
+                                        </view>
+                                        <view class="info-item">
+                                            <text class="info-item-value">{{item.all_week}}{{item.number===3?' / 三节连上':''}}</text>（课程周数）
+                                        </view>
+                                        <view class="info-item">
+                                            <text class="info-item-value">{{item.class_id}}</text>（教学班）
+                                        </view>
+                                        <view class="info-item">
+                                            <image class="info-item-icon" src="/images/core/xs.png"></image>
+                                            <navigator redirect="true" url="/pages/core/xs/xs?key=教学班:{{item.class_id}}">查看学生名单</navigator>
+                                        </view>
+                                    </view>
+                                </view>
+                            </view>
+                        </swiper-item>
+                    </block>
+                </swiper>
+                <view class="kb-info-swiper-mask-right" data-target="targetI" data-direction="right" bindtap="swiperChangeBtn">
+                    <image src="/images/core/common/right_g.png"></image>
+                </view>
+            </view>
+
+        </view>
+    </block>
+</view>
+

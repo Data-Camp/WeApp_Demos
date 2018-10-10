@@ -1,0 +1,48 @@
+<view class="weui-form-preview">
+    <view class="weui-form-preview__hd">
+        <view class="weui-form-preview__item">
+            <view class="weui-form-preview__label">订单总价</view>
+            <view class="weui-form-preview__value_in-hd">¥ {{ order.item.totalAmount }}</view>
+        </view>
+    </view>
+    <view class="weui-form-preview__bd">
+        <view class="weui-form-preview__item" wx:for="{{ order.item.items }}" wx:key="">
+            <view class="weui-form-preview__label">{{ item.goods.name }}</view>
+            <view class="weui-form-preview__value">x{{ item.meta.total }} ¥ {{ item.meta.totalAmount }}</view>
+        </view>
+    </view>
+    <view class="weui-form-preview__ft">
+        <navigator class="weui-form-preview__btn weui-form-preview__btn_default" hover-class="weui-form-preview__btn_active">联系商家</navigator>
+        <navigator class="weui-form-preview__btn weui-form-preview__btn_primary" hover-class="weui-form-preview__btn_active">再来一单</navigator>
+    </view>
+</view>
+
+<view class="weui-panel weui-panel_access">
+    <view class="weui-panel__hd">配送信息</view>
+    <view class="weui-panel__bd">
+        <view class="weui-media-box weui-media-box_text">
+            <view class="weui-media-box__desc">送达时间：尽快送达</view>
+        </view>
+        <view class="weui-media-box weui-media-box_text">
+            <view class="weui-media-box__desc">收货地址：{{ order.item.recipientName }} {{ order.item.recipientGender === 'female' ? '女士' : '先生' }} {{ order.item.recipientTel }} {{ order.item.recipientAddress }}</view>
+        </view>
+        <view class="weui-media-box weui-media-box_text">
+            <view class="weui-media-box__desc">配送方式：商家配送</view>
+        </view>
+    </view>
+</view>
+
+<view class="weui-panel weui-panel_access">
+    <view class="weui-panel__hd">订单信息</view>
+    <view class="weui-panel__bd">
+        <view class="weui-media-box weui-media-box_text">
+            <view class="weui-media-box__desc">订单号：{{ order.item._id }}</view>
+        </view>
+        <view class="weui-media-box weui-media-box_text">
+            <view class="weui-media-box__desc">支付方式：货到付款</view>
+        </view>
+        <view class="weui-media-box weui-media-box_text">
+            <view class="weui-media-box__desc">下单时间：{{ order.item.create_at }}</view>
+        </view>
+    </view>
+</view>

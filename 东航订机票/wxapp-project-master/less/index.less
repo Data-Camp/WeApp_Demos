@@ -1,0 +1,254 @@
+page{
+	width: 100%;
+	height: 100%;
+	background: #F0EFF5;
+}
+.pd-70{
+	padding:0 70px;
+}
+.wrap {
+	display: flex;
+	flex-direction: column;
+	justify-content:flex-start;
+}
+.borderBo{
+  position: relative;
+  &:before{
+    content: '';
+    width: 200%;
+    height: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-bottom: 1px solid #D6D6D6; /*no*/
+    transform: scale(0.5);
+    transform-origin: 0 0;
+	box-sizing: border-box;
+  }
+}
+.borderTop{
+  position: relative;
+  &:before{
+    content: '';
+    width: 200%;
+    height: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-bottom: 1px solid #D6D6D6; /*no*/
+    transform: scale(0.5);
+    transform-origin: 0 0;
+	box-sizing: border-box;
+  }
+}
+.btn {
+	width: 100%;
+	display:flex;
+	flex-direction:row;
+	font-size:32rpx;
+	justify-content: center;
+    background: #FAFAFA;
+	.borderBo();
+	box-sizing: border-box;
+	view {
+		width: 40%;
+		height: 2rem;
+		line-height: 2rem;
+		text-align: center;
+		color: #000;
+	    font-weight: 500;
+		&.active{
+		  color:#59A5F0;
+		  position: relative;
+		  &:after{
+			  content: '';
+			  width: 200%;
+			  height: 0;
+			  position: absolute;
+			  left: 0;
+			  bottom: -2px;
+			  border-bottom: 4px solid #59A5F0; /*no*/
+			  transform: scale(0.5);
+			  transform-origin: 0 0;
+		  }
+		}
+	}
+
+}
+
+.chooseCity {
+	box-sizing: border-box;
+	padding-top: 0.96rem;
+	background-color: #fff;
+	.borderBo();
+	overflow: hidden;
+	&.pdt-0{
+		padding-top: 0;
+	}
+	.citySelect {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		height: 2.667rem;
+		line-height: 2.667rem;
+		font-size: 42rpx;
+		position: relative;
+		.hotelCity {
+			width: 100%;
+			.borderBo();
+			color:#4A586A;
+		}
+		.startCity {
+			width: 6.187rem;
+			color:#4A586A;
+		}
+		.endCity {
+			width: 6.187rem;
+			text-align:right;
+			color:#4A586A;
+		}
+		.citySelect_img {
+			width: 100px;
+			height: 100px;
+			position: relative;
+			margin-top: 0.533rem;
+			view {
+				position:absolute;
+				z-index:99;
+				left:0;
+				right:0;
+				top:0;
+				bottom:0;
+				margin:auto;
+				.changeCity_bg {
+					width: 100px;
+					height: 100px;
+					display: block;
+				}
+			}
+
+			.samll_plane {
+				width: 60px;
+				height: 40px;
+				position: absolute;
+				top: 54%;
+				left: 52%;
+				transform: translate(-50%,-50%);
+			}
+
+		}
+	}
+
+	.chooseDate {
+		display:flex;
+		width:100%;
+		justify-content:space-between;
+		line-height: 2.4rem;
+		.date{
+			font-size: 30rpx;
+			margin-right: 1rem;
+		}
+		.week{
+			color: #929fb1;
+			font-size: 26rpx;
+		}
+		.pickerLine{
+			.borderTop();
+			&:before{
+				width: 160%;
+			}
+			&.leftPicker{
+				&:before{
+                   left: 20%;
+				}
+			}
+		}
+	}
+
+}
+
+.title{
+	color: #888;
+	width: 100%;
+	height: 2.13rem;
+	line-height: 2.13rem;
+	padding:0 1rem;
+	.borderBo();
+	font-size: 30rpx;
+}
+
+.person{
+	display: flex;
+	justify-content: space-between;
+	background-color: #fff;
+	height: 68px;
+	line-height: 68px;
+	padding: 30px 20px;
+	.borderBo();
+	.ml-30{
+		margin-left: 30px;
+	}
+	.personNum{
+		display: flex;
+		flex: 1;
+		.text{
+			font-size: 24rpx;
+			color: #536277;
+			margin-right: 10px;
+		}
+
+		.outer{
+			display: flex;
+			flex: 1;
+			flex-direction: row;
+			justify-content: center;
+			border: 1.5px solid #a9b1bb; /*no*/
+			border-radius: 8px; /*no*/
+			view{
+				flex: 1;
+				text-align: center;
+
+				&.num{
+					border-left: 1.5px solid #a9b1bb; /*no*/
+					border-right: 1.5px solid #a9b1bb; /*no*/
+				}
+
+				&.minus, &.plus{
+					width: 25%;
+					height: 68px;
+					display: block;
+					text-align: center;
+				}
+
+				&.minus{
+					font-size: 28rpx;
+					line-height: 68px;
+					font-weight: bold;
+				}
+
+				&.plus{
+					font-size: 48rpx;
+					line-height: 60px;
+				}
+			}
+		}
+	}
+
+	.remind{
+		width: 50px;
+		height: 68px;
+		text-align: center;
+		image{
+			width: 30px;
+			height: 30px;
+			margin-top: 19px;
+		}
+	}
+}
+
+.sureBtn{
+	color: #fff;
+	background-color: #58a4ef;
+	width: 90%;
+	margin-top: 50px;
+}

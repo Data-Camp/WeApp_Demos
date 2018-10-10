@@ -1,0 +1,24 @@
+<template name="vol-item">
+  <view class="vol-card">
+    <!--<view data-detail-href="{{item.detailHref}}" class="item">-->
+
+      <!--图片-->
+      <image class="vol-picture" src="http://www.news.uestc.edu.cn{{item.imgHref}}" mode="aspectFill"></image>
+
+      <!--标题-->
+      <view class="vol-meta-title">
+        <text class="vol-number">{{item.title}}</text>
+      </view>
+
+      <!--时间-->
+      <view class="vol-meta-time">
+        <text class="vol-number">{{item.time}}</text>
+      </view>
+
+      <!--描述信息-->
+      <view class="vol-content">
+        <text class="vol-content-text">{{item.desc}}</text>
+      </view>
+    <!--</view>-->
+  </view>
+</template>

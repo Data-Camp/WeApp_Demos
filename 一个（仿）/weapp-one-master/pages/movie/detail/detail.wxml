@@ -1,0 +1,31 @@
+<view class="container">
+  <view class="movie-video">
+    <video class="video" src="{{detail.video}}" controls></video>
+  </view>
+  <view class="movie-story">
+    <view class="movie-story-header">
+      <text>电影故事</text>
+    </view>
+    <view class="movie-story-body">
+      <view class="story-header">
+        <view class="story-author">
+          <image class="story-author-avatar" src="{{story.user.web_url}}"></image>
+          <view class="story-author-username">
+            <text>{{story.user.user_name}}</text>
+          </view>
+          <view class="story-makettime">
+            <text>{{story.input_date}}</text>
+          </view>
+        </view>
+      </view>
+      <view class="story-body">
+        <view class="story-title">
+          <text>{{story.title}}</text>
+        </view>
+        <view class="story-content">
+          <text>{{story.content}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

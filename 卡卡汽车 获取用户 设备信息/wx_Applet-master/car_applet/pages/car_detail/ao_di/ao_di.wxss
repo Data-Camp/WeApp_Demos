@@ -1,0 +1,52 @@
+.detail_cont {
+    margin: 10px;
+    margin-bottom: 0px;
+}
+
+#detail {
+    font-weight: bolder;
+}
+
+.info_cont {
+    margin: 0px 10px;
+}
+
+#info {
+    color: #888888;
+}
+
+.car_cont {
+    margin: 10px;
+    height: 225px;
+    width: auto;
+}
+.car_pic {
+    height: 225px;
+}
+
+.name_cont {
+    margin-top: 10px;
+}
+
+.car_name {
+    font-weight: bold;
+    margin-left: 10px;
+}
+.car_price {
+    display: block;
+    margin-top: 10px;
+    margin-left: 10px;
+    color: #FF6600;
+    font-weight: bold;
+}
+
+.car_detail {
+    border-top: 1px solid #C0C0C0;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+#btn {
+    width: 93%;
+    margin: 10px;
+}

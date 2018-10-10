@@ -1,0 +1,11 @@
+<view class="container">
+  <swiper class="musics-swiper" current="{{current}}" bindchange="handleChange">
+    <block wx:for="{{musics}}" wx:key="id" wx:for-index="idx">
+      <swiper-item class="musics-swiper-item">
+        <import src="templates/musicItem.wxml"/>
+        <template is="music-item" data="{{item: item}}"/>
+      </swiper-item>
+    </block>
+    <swiper-item></swiper-item>
+  </swiper>
+</view>

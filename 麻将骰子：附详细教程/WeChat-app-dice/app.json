@@ -1,0 +1,18 @@
+{
+  "pages":[
+    "pages/index/index"
+  ],
+  "window":{
+    "navigationBarBackgroundColor": "#333333",  
+    "navigationBarTextStyle":"white",
+    "navigationBarTitleText": "麻将骰子",
+    "backgroundColor":"#ffffff",
+    "backgroundTextStyle":"light",
+    "enablePullDownRefresh":false
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

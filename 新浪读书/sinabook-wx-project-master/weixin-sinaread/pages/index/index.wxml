@@ -1,0 +1,110 @@
+<!--index.wxml-->
+
+<view class="container">
+<!--搜索 开始-->
+	<view class="user-section">
+        <image class="user_headimg" src="{{userInfo.avatarUrl}}"></image>
+        <navigator url="../search/index">
+            <view class="search_ico" ></view>
+        </navigator>
+        <view class="user_hello">
+            <text>欢迎, {{userInfo.nickName}}{{date}}</text>
+        </view>      
+    </view>
+</view>
+<!--搜索结束-->
+<!--滑动图片开始-->
+<view class="user_img_top">
+	<swiper class="banner-box" indicator-dots="true" autoplay="true" interval="5000" duration="1000">
+            <block wx:for="{{imgUrls}}" wx:key="unique">
+                <swiper-item>
+                    <image bindtap="goToDetail" src="{{item}}" class="slide-image" width="100%" height="100%"  url="../search/index" />
+                </swiper-item>
+            </block>
+        </swiper>
+</view>
+<!--滑动图片结束-->
+<!--本周最火-->
+<view class='floortitle'>
+    <view class='floortitlemoreicon'>本周最火</view>
+    <view class='floortitlemoretext' bindtap="goToDetail" >更多> </view>
+</view>
+<view>
+<block wx:for="{{bookList}}" wx:key="unique" >
+            <navigator hover-class="nav-hover" url="../detail/index?id={{item.id}}">
+                <view class="book_item"> 
+                    <image mode="aspectFit" class="book_item_img" src="{{item.img}}"></image>
+                    <view class="book_item_infos">
+                        <view class="book_title">{{item.title}}</view>
+                        <view class="book_author">作者：{{item.author}}</view>
+                        <view class="book_tags">标签：{{item.tags}}</view>
+                        <view class="book_item_summary">摘要：{{item.info}}</view>
+                    </view>
+                </view>
+            </navigator>
+</block>
+</view>
+<!--今日限免-->
+<view class='floortitle'>
+    <view class='floortitlemoreicon'>今日限免</view>
+    <view class='floortitlemoretext' bindtap="goToDetail" >更多> </view>
+</view>
+<view>
+<block wx:for="{{bookList}}" wx:key="unique">
+            <navigator hover-class="nav-hover" url="../detail/index?id={{item.id}}">
+                <view class="book_item"> 
+                    <image mode="aspectFit" class="book_item_img" src="{{item.img}}"></image>
+                    <view class="book_item_infos">
+                        <view class="book_title">{{item.title}}</view>
+                        <view class="book_author">作者：{{item.author}}</view>
+                        <view class="book_tags">标签：{{item.tags}}</view>
+                        <view class="book_item_summary">摘要：{{item.info}}</view>
+                    </view>
+                </view>
+            </navigator>
+</block>
+</view>
+<!--今日限免结束-->
+<!--男生在看-->
+<view class='floortitle'>
+    <view class='floortitlemoreicon'>男生在看</view>
+    <view class='floortitlemoretext' bindtap="goToDetail" >更多> </view>
+</view>
+<view>
+<block wx:for="{{bookList}}" wx:key="unique">
+            <navigator hover-class="nav-hover" url="../detail/index?id={{item.id}}">
+                <view class="book_item"> 
+                    <image mode="aspectFit" class="book_item_img" src="{{item.img}}"></image>
+                    <view class="book_item_infos">
+                        <view class="book_title">{{item.title}}</view>
+                        <view class="book_author">作者：{{item.author}}</view>
+                        <view class="book_tags">标签：{{item.tags}}</view>
+                        <view class="book_item_summary">摘要：{{item.info}}</view>
+                    </view>
+                </view>
+            </navigator>
+</block>
+</view>
+<!--男生在看结束-->
+<!--女生在看-->
+<view class='floortitle'>
+    <view class='floortitlemoreicon'>女生在看</view>
+    <view class='floortitlemoretext' bindtap="goToDetail" >更多> </view>
+</view>
+<view>
+<block wx:for="{{bookList}}" wx:key="unique">
+            <navigator hover-class="nav-hover" url="../detail/index?id={{item.id}}">
+                <view class="book_item"> 
+                    <image mode="aspectFit" class="book_item_img" src="{{item.img}}"></image>
+                    <view class="book_item_infos">
+                        <view class="book_title">{{item.title}}</view>
+                        <view class="book_author">作者：{{item.author}}</view>
+                        <view class="book_tags">标签：{{item.tags}}</view>
+                        <view class="book_item_summary">摘要：{{item.info}}</view>
+                    </view>
+                </view>
+            </navigator>
+</block>
+</view>
+<!--女生在看结束-->
+

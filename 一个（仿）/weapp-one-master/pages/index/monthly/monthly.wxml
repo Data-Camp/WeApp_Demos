@@ -1,0 +1,18 @@
+<view class="container">
+  <view class="monthly">
+    <block wx:for="{{monthly}}" wx:key="hpcontent_id">
+      <view class="vol-card" data-id="{{item.hpcontent_id}}" bindtap="handleTap">
+        <view class="vol-header">
+          <image class="vol-cover" src="{{item.hp_img_url}}" mode="aspectFill"></image>
+          <view class="vol-data">
+            <text class="vol-title">{{item.hp_title}}</text>
+            <text class="vol-makettime">{{item.hp_makettime}}</text>
+          </view>
+        </view>
+        <view class="vol-desc">
+          <text class="vol-content">{{item.hp_content}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

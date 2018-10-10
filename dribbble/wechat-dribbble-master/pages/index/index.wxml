@@ -1,0 +1,46 @@
+<view class="container">
+    <scroll-view style="height: {{windowHeight}}px;" bindscrolltolower="loadMore" lower-threshold="600" scroll-y="true">
+        <view class="shot-menu">
+            <view class="shot-menu-item" bindtap="actionSheetChange" data-name="sort">
+                <text>{{ activeMenu.sort }}</text>
+                <image src="../../images/icon-arrow.png" class="shot-menu-arrow"></image>
+            </view>
+            <view class="shot-menu-item" bindtap="actionSheetChange" data-name="list">
+                <text>{{ activeMenu.list }}</text>
+                <image src="../../images/icon-arrow.png" class="shot-menu-arrow"></image>
+            </view>
+            <view class="shot-menu-item" bindtap="actionSheetChange" data-name="timeframe">
+                <text>{{ activeMenu.timeframe }}</text>
+                <image src="../../images/icon-arrow.png" class="shot-menu-arrow"></image>
+            </view>
+        </view>
+
+        <!-- each shots -->
+        <block wx:for="{{shots}}" wx:for-index="idx" wx:for-item="shot" wx:key="shot.id">
+            <navigator 
+                url="../shots/shots?title={{shot.title}}&id={{shot.id}}&image={{shot.images.hidpi || shot.images.normal}}&likes_count={{shot.likes_count}}&views_count={{shot.views_count}}&comments_count={{shot.comments_count}}&buckets_count={{shot.buckets_count}}&user_name={{shot.user.name}}&user_id={{shot.user.id}}&attachments_count={{shot.attachments_count}}&created_at={{shot.created_at}}&description={{shot.description}}&user_avatar={{shot.user.avatar_url}}"
+                class="shot"
+            >
+                <include src="../../components/shot.wxml" />
+            </navigator>
+        </block>
+
+        <block wx:if="{{isShowLoading}}">
+            <include src="../../components/loading.wxml" />
+        </block>
+    </scroll-view>
+
+    <action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetChange">
+        <block wx:for="{{menu[activeMenuText]}}" wx:for-index="index" wx:key="index">
+            <action-sheet-item class="item" 
+                bindtap="changeSort"
+                data-name="{{activeMenuText}}"
+                data-index="{{index}}"
+                data-value="{{ item }}"
+            >
+                {{ item }}
+            </action-sheet-item>
+        </block>
+    <action-sheet-cancel class="cancel">取消</action-sheet-cancel>
+    </action-sheet>
+</view>

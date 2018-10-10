@@ -1,0 +1,58 @@
+.tweet-container {
+  background-color: white;
+  margin: 20rpx;
+  border-radius: 4rpx;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+.top-container {
+  padding: 20rpx;
+  border-bottom: 1rpx solid #e1e1e1;
+}
+.user-container {
+  display: flex;
+  flex-direction: column;
+}
+.card-avatar {
+  background-color: #c8c8c8;
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 8rpx;
+  margin-right: 12rpx
+}
+.card-time {
+  font-size: 26rpx;
+  color: #8999a5;
+  margin-top: 8rpx;
+}
+.card-name {
+  color: #ff9630;
+  font-weight: bold;
+  font-size: 32rpx;
+  margin-top: 8rpx;
+}
+.middle-container {
+  padding: 20rpx;
+  border-bottom: 1rpx solid #e1e1e1;
+}
+.message-text{
+  color: #333;
+  font-size: 30rpx;
+  line-height: 40rpx;
+}
+.message-image {
+  width: 100%;
+  margin-top: 16rpx;
+  background-color: #e1e1e1;   
+}
+.bottom-container {
+  height: 66rpx;
+  background-color: #fafafa;
+}
+.bottom-tool {   
+  justify-content: center;
+  align-items: center;
+}
+.bottom-tool-text {
+  color: #6D6D78;
+  font-size: 26rpx;
+}

@@ -1,0 +1,19 @@
+<view class="container">
+  <view wx:if="{{page === 'reading'}}">
+    <view class="types">
+      <view wx:for="{{types}}" class="type-item" wx:key="type">
+        <text wx:if="{{type === item.type}}" class="seleted">{{item.name}}</text>
+        <text wx:else data-type="{{item.type}}" bindtap="setType">{{item.name}}</text>
+      </view>
+    </view>
+    <view class="fix-fixed"></view>
+  </view>
+  <scroll-view scroll-y="true">
+    <block wx:for="{{dateList}}" wx:key="value">
+      <view class="history-bymonth" data-month="{{item.value}}" data-title="{{item.title}}" bindtap="getMonthly">
+        <text class="history-date">{{item.title}}</text>
+        <image class="forward" src="../../../image/forward.png"></image>
+      </view>
+    </block>
+  </scroll-view>
+</view>

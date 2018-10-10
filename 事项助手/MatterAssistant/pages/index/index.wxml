@@ -1,0 +1,126 @@
+<view class="wrapper">
+  <view class="og-calendar">
+    <view class="header">
+      <view class="btn month-pre" bindtap="changeDateEvent" data-year="{{data.beforeYear}}" data-month="{{data.beforMonth}}"> 
+        <image src="../../images/prepage.png"></image>
+      </view>
+      <view class="date-info">
+        <picker mode="date" fields="month" value="{{pickerDateValue}}" bindchange="datePickerChangeEvent">
+          <text>{{data.showYear}}年{{data.showMonth > 9 ? data.showMonth : ('0' + data.showMonth)}}月</text>
+        </picker>
+      </view>
+      <view class="btn month-next" bindtap="changeDateEvent" data-year="{{data.afterYear}}" data-month="{{data.afterMonth}}">
+        <image src="../../images/nextpage.png"></image>
+      </view>
+    </view>
+    <view class="week row">
+      <view class="col">
+        <text>一</text>
+      </view>
+      <view class="col">
+        <text>二</text>
+      </view>
+      <view class="col">
+        <text>三</text>
+      </view>
+      <view class="col">
+        <text>四</text>
+      </view>
+      <view class="col">
+        <text>五</text>
+      </view>
+      <view class="col">
+        <text>六</text>
+      </view>
+      <view class="col">
+        <text>日</text>
+      </view>
+    </view>
+    <view class="body row">  
+      <block wx:for="{{data.dates}}" wx:key="_id">
+        <view bindtap="dateClickEvent" data-year="{{item.year}}" data-month="{{item.month}}" data-date="{{item.date}}" class="col {{data.showMonth == item.month ? '' : 'old'}} {{data.currentDate == item.date && data.currentYear==item.year && data.currentMonth == item.month ? 'current' : ''}} {{item.active ? 'active' : ''}}">
+          <text>{{item.date}}</text>
+        </view> 
+      </block>
+    </view>
+  </view>
+
+  <view class="show-date">
+    <text>{{data.selectDateText}}</text>
+  </view>
+
+  <view class="common-list">
+    <view class="header" wx:if="{{itemList.length > 0}}">
+      <text>事项信息</text>
+    </view>
+
+    <block wx:for="{{itemList}}" wx:key="id">
+      <view class="item" bindtap="listItemClickEvent" data-id="{{item._id}}" bindlongtap="listItemLongTapEvent">
+        <view class="inner {{isEditMode ? 'with-check' : ''}}">
+          <view class="checker" wx:if="{{isEditMode}}">
+            <icon type="circle" wx:if="{{!item.checked}}" color="#FFF" size="20" />
+            <icon type="success" wx:else color="#E14848" size="20" />
+          </view>
+          <image wx:if="{{item.level == 1}}" class="icon" src="../../images/success.png" />
+          <image wx:if="{{item.level == 2}}" class="icon" src="../../images/notice.png" />
+          <image wx:if="{{item.level == 3}}" class="icon" src="../../images/fav-round.png" />
+          <view class="content">
+            <text class="title">{{item.title}}</text>
+          </view>
+        </view>
+      </view>
+    </block> 
+
+    <view class="header text-center" wx:if="{{!itemList || itemList.length <= 0}}">
+      <text>当前日期没有事项记录</text>
+    </view>
+  </view>
+
+
+  <!--float actions-->
+  <view class="float-container">
+    <view class="float-action" bindtap="showUpdatePanelEvent" wx:if="{{!isEditMode}}">
+      <image src="../../images/plus.png" />
+    </view>
+
+    <view class="float-action operate" bindtap="editClickEvent" wx:if="{{!isEditMode && itemList.length > 0}}">
+      <image src="../../images/edit.png" />
+    </view>
+
+    <view class="float-action operate" wx:if="{{isEditMode && editItemList.length > 0}}" bindtap="removeRangeTapEvent">
+      <image src="../../images/remove.png" />
+    </view>
+
+    <view class="float-action cancel" bindtap="cancelEditClickEvent" wx:if="{{isEditMode}}">
+      <image src="../../images/cancel.png" />
+    </view>
+  </view>
+
+</view>
+
+<view class="mask" hidden="{{!isMaskShow}}"></view>
+
+<view class="modal" hidden="{{!isModalShow}}">
+  <view class="content">
+    {{modalMsg}}
+  </view>
+  <view class="footer">
+    <!--<view class="btn cancel" bindtap="closeAddModalEvent"><text>取消</text></view>-->
+    <view class="btn" bindtap="closeModalEvent"><text>确认</text></view>
+  </view>
+</view>
+
+<view class="updatePanel" style="top: {{updatePanelTop}}px;height:{{updatePanelTop}}px" animation="{{updatePanelAnimationData}}">
+  <!--<view class="title"><text>添加事项</text></view>-->
+  <input placeholder="请输入事项标题" value="{{todoInputValue}}" bindchange="todoInputChangeEvent" />
+  <textarea placeholder="请输入事项内容" value="{{todoTextAreaValue}}" bindblur="todoTextAreaChangeEvent"></textarea>
+  <view class="level">
+    <block wx:for="{{levelSelectData}}" wx:key="*this">
+      <view bindtap="levelClickEvent" data-level="{{item}}" class="item {{item == 1 ? 'border-normal' : ''}} {{item == 2 ? 'border-warning' : '' }} {{item == 3 ? 'border-danger' : ''}} {{item == levelSelectedValue && item == 1 ? 'bg-normal' : ''}} {{item == levelSelectedValue && item == 2 ? 'bg-warning' : ''}} {{item == levelSelectedValue && item == 3 ? 'bg-danger' : ''}}"></view>
+    </block>
+  </view>
+  <view class="footer">
+    <view class="btn" bindtap="closeUpdatePanelEvent">取消</view>
+    <view class="btn primary" bindtap="saveDataEvent">保存</view>
+  </view>
+</view>

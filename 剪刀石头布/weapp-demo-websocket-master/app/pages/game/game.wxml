@@ -1,0 +1,32 @@
+<view class="root {{connected && 'connected'}} {{playing && 'playing'}} {{done && 'done'}}">
+    <view class="my-side">
+        <image class="avatar" src="{{myAvatar}}" mode="aspectFill" />
+
+        <image class="hand {{win == 'me' && 'win'}}" src="../../images/{{myChoice}}.png" bindtap="switchChoice"></image>
+
+        <text class="score">
+            {{myName}}
+            得分 {{myScore}}
+        </text>
+        <text class="streak">
+            连胜 {{myStreak}}
+        </text>
+    </view>
+    <view class="your-side {{youHere && 'here'}} {{yourMove && 'move-' + yourMove}}">
+        <image class="avatar" src="{{yourAvatar}}" mode="aspectFill" />
+
+        <image class="hand {{win == 'you' && 'win'}}" src="../../images/{{yourChoice}}.png"></image>
+
+        <text class="score">
+            {{yourName}}
+            得分 {{yourScore}}
+        </text>
+        <text class="streak">
+            连胜 {{yourStreak}}
+        </text>
+    </view>
+
+    <view class="game-info">{{gameInfo}}</view>
+
+    <button class="start-game" type="primary" bindtap="startGame">{{startButtonText}}</button>
+</view>

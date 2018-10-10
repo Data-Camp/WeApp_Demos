@@ -1,0 +1,124 @@
+.classify_page {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /*position: relative;*/
+  background-color: #f4f5f7;
+}
+
+.classify_page_left {
+  width: 18%;
+  height: 100%;
+  background-color: white;
+}
+
+.classify_page_right {
+  width: 82%;
+  height: 100%;
+  background-color: #f4f5f7;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+}
+
+/*template  css*/
+
+.classify_recommendeds_right {
+  background-color: #f4f5f7;
+  width: 100%;
+}
+
+.recommended_item_text {
+  font-size: 25rpx;
+  padding: 10rpx 0 10rpx 10rpx;
+}
+
+.recommended_item_content {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  background-color: white;
+  padding-left: 10rpx;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+}
+
+.recommended_item_content_cell {
+}
+
+.recommended_item_content_cell image {
+  width: 145rpx;
+  height: 145rpx;
+}
+
+.recommended_item_content_cell_text {
+  font-size: 25rpx;
+  text-align: center;
+  height: 30rpx;
+  line-height: 30rpx;
+}
+
+.classify_recommendeds_left {
+  height: 90rpx;
+  width: 100%;
+  font-size: 30rpx;
+  text-align: center;
+  line-height: 80rpx;
+  background-color: white;
+  border-bottom-style: solid;
+  border-bottom-width: 6rpx;
+  border-bottom-color: #f4f5f7;
+}
+
+/*其他（非一级）一级分类的二级分类*/
+
+.classify_other_category {
+  width: 100%;
+  background-color: #f4f5f7;
+  
+}
+
+.goodsCell_flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding-left: 10rpx;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  padding-right: 10rpx;
+  background-color: white;
+}
+
+.classify_other_category_cell {
+  /*height: 130rpx;
+  width: 130rpx;*/
+}
+
+.classify_other_category_cell image {
+  height: 145rpx;
+  width: 145rpx;
+}
+
+.classify_other_category_cell_text {
+  font-size: 25rpx;
+  text-align: center;
+  height: 30rpx;
+  line-height: 30rpx;
+}
+
+.bigImage {
+  width: 100%;
+  height: 250rpx;
+  display: flex;
+}
+.bigImage image {
+  width: 100%;
+  height: 250rpx;
+  padding-left: 10rpx;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  padding-right: 10rpx;
+  background-color: white;
+}

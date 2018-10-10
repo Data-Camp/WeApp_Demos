@@ -1,0 +1,72 @@
+<view class="index">
+  <view id="plist-header">
+    <view class="music_cover blurbg" style="background-image:url({{result.picUrl}})" id="plh-filterbg"></view>
+    <view id="plh-main">
+      <view id="plh-cover">
+        <image class="music_cover" src="{{result.picUrl}}" />
+      </view>
+      <view id="plh-cnt">
+        <text id="music_h_name">{{result.name||""}}</text>
+        <view data-userid="{{list.artist.id}}" bindtap="artlist">
+          <text>{{result.artist.name}}</text>
+        </view>
+      </view>
+    </view>
+    <view id="plh_action">
+      <view>
+        <image src="../../../image/w7.png" />
+        <text>{{'收藏'}}</text>
+      </view>
+      <view>
+        <navigator url="../recommend/index?id={{result.info.threadId}}&from=playlist">
+          <image src="../../../image/w3.png" />
+          <text>{{result.info.commentCount||'评论'}}</text>
+        </navigator>
+      </view>
+      <view>
+        <image src="../../../image/wd.png" />
+        <text>{{result.info.shareCount||'分享'}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="plist-detail">
+    <block  wx:if="{{result.songs.length}}">
+      <view id="playall" bindtap="playall">
+        <image src="../../../image/pl-playall.png" />
+        <text id="pa-count">播放全部<text> (共{{result.songs.length}}首)</text>
+        </text>
+      </view>
+      <block wx:for-items="{{result.songs}}" wx:for-index="idx" wx:key="{{item.id}}">
+        <view class="pldetail-item" data-mid="{{item.id}}" bindtap="playmusic" data-idx="{{idx}}">
+          <view class="pld-item-sort">
+            <block wx:if="{{item.id===curplay}}">
+              <image src="../../../image/aal.png" class="playingidx" />
+            </block>
+            <block wx:else>
+              <text>{{idx<9?( '0'+(idx+1)):(idx+1)}}</text>
+              
+            </block>
+          </view>
+          <view class="pld-item">
+            <text class="pld-item-name">{{item.name}}
+              <text class="transNames" wx:if="{{item.transNames}}"> ({{item.transNames}})</text>
+            </text>
+            <text class="pld-item-info">{{item.artists[0].name}} - {{item.album.name}}</text>
+          </view>
+          <view class="pld-item-action">
+            <text catchtap="mv" data-mvid="{{item.mvid}}" class="pld-mv" wx-if="{{item.mvid!=0}}">MV</text>
+          </view>
+        </view>
+      </block>
+    </block>
+    <block wx:if="{{!result.songs.length}}">
+      <view class="cntloading">加载中...
+        <view>
+          <text class="cl1"></text>
+          <text class="cl2"></text>
+          <text class="cl3"></text>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

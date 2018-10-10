@@ -1,0 +1,31 @@
+/**index.wxss**/
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.item_size {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 200rpx;
+}
+
+.img {
+    width: 96rpx;
+    height: 96rpx;
+    margin-top: 15rpx
+}
+
+.text {
+    font-size: 18px;
+    align-content: flex-end;
+    margin-top: 15rpx;
+    margin-bottom: 15rpx
+}

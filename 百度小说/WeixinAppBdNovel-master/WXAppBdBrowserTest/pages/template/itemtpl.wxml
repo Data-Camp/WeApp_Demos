@@ -1,0 +1,7 @@
+<template name="most-read-item">
+   
+        <view id="title">{{item.title}}</view>
+        <view id="author">{{item.author}} {{item.status}}</view>
+        <view id="type">{{item.type}}</view>
+  
+</template>

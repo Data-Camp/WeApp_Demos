@@ -1,0 +1,13 @@
+/**app.wxss**/
+page{
+    background: #efeff4;
+}
+.container {
+  display: flex;
+  display:-webkit-flex;
+  box-sizing: border-box;
+} 
+.placeholder{
+    font-size: 30rpx;
+    color: #999;
+}

@@ -1,0 +1,13 @@
+<!--index.wxml-->
+<view class="container">
+    <view class="paper">
+    	<view class="paper-column" wx:for="{{paper_item}}">
+    		<view class="paper-item" wx:for="{{item}}" wx:for-item="j">
+                <navigator url="{{j.path}}">
+        			<image class="paper-item-img" src="{{j.img}}"></image>
+        			<view class="paper-item-text">{{j.tag}}</view>
+                </navigator>
+    		</view>
+    	</view>
+    </view>
+</view>

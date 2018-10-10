@@ -1,0 +1,59 @@
+<!--index.wxml-->
+<view class="container">
+  <view  bindtap="bindViewTap" class="header">    
+    欢迎<text class="userinfo-nickname">{{userInfo.nickName}}</text>使用
+  </view>
+<form bindsubmit="formSubmit" bindreset="formReset">
+ <view class="input-wrap">    
+      <input type="text" value='{{curIpt}}' returnKeyType='send' placeholder="请输入待做的事" class="ipt-main"  bindinput='iptChange' />     
+      <view class="flex-row flex-time" wx:if="{{curIpt}}">
+            <picker range='{{curRange}}' value='{{curBegin}}' bindchange='beginChange'  class="pick-time time">
+                <text>
+                    开始时间：{{curRange[curBegin]}}
+                </text>
+            </picker>  
+            <picker range='{{curRange}}' value='{{curFinish}}' bindchange='finishChange'  class="pick-time time">
+                <text>
+                    结束时间：{{curRange[curFinish]}}
+                </text>
+            </picker>  
+            <label class="time"><switch class="switch" checked bindchange="switch1Change" />提醒</label>
+        </view>
+        <view class="flex-row" wx:if="{{curIpt}}">        
+          <button class="btn btn-submit" formType="submit" hover-class="btn-hover">提交</button>
+          <button class="btn btn-cancel" formType="reset">清空</button>
+       </view>
+  </view>
+  </form>
+  <view class="list-wrap" wx:if="{{lists.length>0}}">
+    <view wx:for="{{lists}}" wx:if="{{showAll ||(!showAll && !item.done)}}" id="{{item.id}}" class="{{item.done?'done list':'list'}}">        
+        <text>{{index+1}}:</text>
+        <text data-id ="{{index}}"  class="cnt" bindtap="toChange" >{{item.content}}</text>
+        <view hidden="{{!item.editing}}" class="edit-wrap">
+            <input class="ipt-edit" value="{{item.content}}"  data-id="{{index}}" bindinput='iptEdit' />
+            <button class="btn btn-edit" data-id="{{index}}" bindtap="saveEdit">修改</button>
+        </view>
+        
+        <text class="time"> {{item.beginTime}}-{{item.finishTime}}</text>
+        <icon class="ico-done" bindtap="setDone" data-id="{{index}}" type="success_no_circle" size='18' color="{{item.done?'#d7d7d7':'#6fa6cf'}}" />
+        <icon class="ico-delete" bindtap="toDelete" data-id="{{index}}" type='cancel' size='20' color="#6fa6cf" />
+    </view>
+    <view class="footer">
+        <view class="ft-area">
+            <text>{{lists.length}}条</text>
+        </view>
+         <view class="ft-area ft-mid">
+            <text wx:if="{{showAll}}" bindtap="showUnfinished" class="ft-action">显示未完成</text>
+            <text wx:else bindtap="showAll" class="ft-action">显示全部</text>
+        </view>
+        <view class="ft-area">
+            <text bindtap="doneAll" class="ft-action">全部完成</text>
+            <text bindtap="deleteAll" class="ft-action">全删</text>
+        </view>
+    </view>
+  </view>
+  <view class="input-wrap mt" wx:if="{{lists.length>0}}">
+    <button class="btn btn-save" bindtap="saveData">保存数据</button>
+  </view>
+</view>
+ 

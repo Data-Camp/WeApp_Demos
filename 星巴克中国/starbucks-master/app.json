@@ -1,0 +1,14 @@
+{
+  "pages":[
+    "pages/index2/index2",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/login/login"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#158447",
+    "navigationBarTitleText": "星巴克中国",
+    "navigationBarTextStyle":"#fff"
+  }
+}

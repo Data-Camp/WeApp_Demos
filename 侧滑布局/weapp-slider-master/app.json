@@ -1,0 +1,21 @@
+{
+  "pages": [
+    "page/one/index",
+    "page/two/index",
+    "page/three/index",
+    "page/four/index"
+  ],
+  "window": {
+    "navigationBarTextStyle": "light",
+    "navigationBarTitleText": "侧滑布局",
+    "navigationBarBackgroundColor": "#009688",
+    "backgroundColor": "#fbf9fe"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

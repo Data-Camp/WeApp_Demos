@@ -1,0 +1,89 @@
+.container{
+    display: block;
+}
+.searchform{
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    padding: .3rem;
+    background-color: gainsboro;
+}
+.searchinput{
+    float: left;
+    line-height: 1.6rem;
+    padding: .3rem;
+    height:1.6rem;
+    margin-right: .5rem;
+    vertical-align: middle;
+}
+
+
+.bookitems-section{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 3.2rem;
+    bottom: 0;
+    padding: 0 .1rem;
+    overflow: auto;
+    background-color: #fdfdfd;
+}
+
+.book_item{
+    padding: .4rem;
+    position: relative;
+    overflow: hidden;   
+    box-shadow: 0 0 1px rgba(117, 180, 153,.8);
+}
+.book_item_img{
+    float: left;
+    width: 30%;
+    height: 6.9rem;
+}
+.book_item_infos{
+    width:68%;
+    padding-left: 2%;
+    float: right;
+}
+.book_title{
+    display: inline-block;
+    width: 100%;
+    line-height: 1rem;
+    font-family:Helvetica,Arial,sans-serif;
+    font-size: .8rem;
+    color: rgb(96, 147, 122);
+    overflow: hidden;
+    word-break: keep-all;
+    text-overflow: ellipsis;
+}
+.book_star,.book_author,.book_tags,.book_item_summary,.book_price{
+    font-size: .7rem;
+    color: #666;
+}
+.book_star{
+    color: coral;
+    padding-bottom:4px;
+    position: absolute; 
+    right: 1rem; 
+    top: -2px;
+    font-size: .8rem; 
+}
+
+.book_item_summary{
+    display: inline-block;
+    margin-top: .1rem;
+    height: 1.85rem;
+    color: #333;
+    overflow: hidden;
+}
+.top_bangdan{
+    height:2rem;
+    background-color: red;
+    margin-top:0rem;
+    color: white;
+    font-size: 22px;
+    text-align: center;
+    vertical-align: middle;
+}

@@ -1,0 +1,22 @@
+<ion-view view-title="注册">
+	<ion-content>
+		<form name="form" ng-submit="vm.submitForm(form.$valid)" novalidate>
+			<div class="list">
+				<label class="item item-input">
+					<i class="icon ion-ios-person-outline positive"></i>
+					<input input-clear name="username" type="text" placeholder="请输入您的用户名" ng-model="vm.form.username" required>
+				</label>
+				<label class="item item-input">
+					<i class="icon ion-ios-unlocked-outline positive"></i>
+					<input input-clear name="password" type="password" placeholder="请输入您的密码" ng-model="vm.form.password" required>
+				</label>
+			</div>
+			<div class="padding-left padding-right">
+				<button type="submit" class="button button-block button-positive">立即注册</button>
+			</div>
+			<div class="padding-left padding-right">
+				<button type="button" class="button button-block" ui-sref="web.login">前往登录</button>
+			</div>
+		</form>
+	</ion-content>
+</ion-view>

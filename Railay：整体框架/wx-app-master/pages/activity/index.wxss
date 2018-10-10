@@ -1,0 +1,8 @@
+/**index.wxss**/
+.page-title {
+  color: #aaa;
+}
+
+.page-title-text {
+  margin-top: 200px;
+}

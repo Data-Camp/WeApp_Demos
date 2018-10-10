@@ -1,0 +1,266 @@
+.container {
+    width: 100%;
+    font-family: '微软雅黑';
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+.container .border{
+    position: relative;
+}
+.container .border:after{
+    content: '';
+    width: 200%;
+    height: 0;
+    border-bottom: 1px solid #cececf; /*no*/
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: scale(0.5);
+    transform-origin: 0 0;
+}
+.grey {
+    color: #aaa;
+}
+/*toast*/
+.alert {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 60%;
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: translate(-50%, -50%);
+    z-index: 1001;
+    padding: 1.066667rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-weight: 200;
+}
+
+.alert.info {
+    text-align: left;
+}
+
+.alert view {
+    color: white;
+    font-size: 30rpx;
+    margin-top: 0.533333rem;
+}
+
+/*tabBar*/
+
+.tabBar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 2.8rem;
+    line-height: 2.8rem;
+    width: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    background: rgba(74, 88, 106, 0.9);
+    color: #fff;
+    padding-left: 1.066667rem;
+    box-sizing: border-box;
+}
+
+.tabBar .name {
+    font-size: 30rpx;
+    font-weight: 200;
+}
+
+.tabBar .totalPrice {
+    font-size: 34rpx;
+}
+
+.tabBar .priceDetail {
+    font-size: 30rpx;
+    text-decoration: underline;
+}
+
+.tabBar .nextStep {
+    width: 5.333333rem;
+    height: 2.8rem;
+    line-height: 2.8rem;
+    background-color: #ff7f00;
+    text-align: center;
+    font-weight: 200;
+    font-size: 34rpx;
+    border-radius: 0;
+    margin: 0;
+}
+
+
+/*loading*/
+
+.loadingOuter {
+  width: 100%;
+  height: 100vh;
+  height: 100%;
+  overflow: hidden;
+  background-color: #fff;
+  font-family: "微软雅黑";
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.loadmore {
+  width: 100%;
+  font-size: 14px;
+  margin-top: 100px;
+  text-align: center;
+}
+
+.loading {
+    margin: 0 5px;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-animation: weuiLoading 1s steps(12, end) infinite;
+    animation: weuiLoading 1s steps(12, end) infinite;
+    background: transparent url(data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iciIgd2lkdGg9JzEyMHB4JyBoZWlnaHQ9JzEyMHB4JyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICAgIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSJub25lIiBjbGFzcz0iYmsiPjwvcmVjdD4KICAgIDxyZWN0IHg9JzQ2LjUnIHk9JzQwJyB3aWR0aD0nNycgaGVpZ2h0PScyMCcgcng9JzUnIHJ5PSc1JyBmaWxsPScjRTlFOUU5JwogICAgICAgICAgdHJhbnNmb3JtPSdyb3RhdGUoMCA1MCA1MCkgdHJhbnNsYXRlKDAgLTMwKSc+CiAgICA8L3JlY3Q+CiAgICA8cmVjdCB4PSc0Ni41JyB5PSc0MCcgd2lkdGg9JzcnIGhlaWdodD0nMjAnIHJ4PSc1JyByeT0nNScgZmlsbD0nIzk4OTY5NycKICAgICAgICAgIHRyYW5zZm9ybT0ncm90YXRlKDMwIDUwIDUwKSB0cmFuc2xhdGUoMCAtMzApJz4KICAgICAgICAgICAgICAgICByZXBlYXRDb3VudD0naW5kZWZpbml0ZScvPgogICAgPC9yZWN0PgogICAgPHJlY3QgeD0nNDYuNScgeT0nNDAnIHdpZHRoPSc3JyBoZWlnaHQ9JzIwJyByeD0nNScgcnk9JzUnIGZpbGw9JyM5Qjk5OUEnCiAgICAgICAgICB0cmFuc2Zvcm09J3JvdGF0ZSg2MCA1MCA1MCkgdHJhbnNsYXRlKDAgLTMwKSc+CiAgICAgICAgICAgICAgICAgcmVwZWF0Q291bnQ9J2luZGVmaW5pdGUnLz4KICAgIDwvcmVjdD4KICAgIDxyZWN0IHg9JzQ2LjUnIHk9JzQwJyB3aWR0aD0nNycgaGVpZ2h0PScyMCcgcng9JzUnIHJ5PSc1JyBmaWxsPScjQTNBMUEyJwogICAgICAgICAgdHJhbnNmb3JtPSdyb3RhdGUoOTAgNTAgNTApIHRyYW5zbGF0ZSgwIC0zMCknPgogICAgPC9yZWN0PgogICAgPHJlY3QgeD0nNDYuNScgeT0nNDAnIHdpZHRoPSc3JyBoZWlnaHQ9JzIwJyByeD0nNScgcnk9JzUnIGZpbGw9JyNBQkE5QUEnCiAgICAgICAgICB0cmFuc2Zvcm09J3JvdGF0ZSgxMjAgNTAgNTApIHRyYW5zbGF0ZSgwIC0zMCknPgogICAgPC9yZWN0PgogICAgPHJlY3QgeD0nNDYuNScgeT0nNDAnIHdpZHRoPSc3JyBoZWlnaHQ9JzIwJyByeD0nNScgcnk9JzUnIGZpbGw9JyNCMkIyQjInCiAgICAgICAgICB0cmFuc2Zvcm09J3JvdGF0ZSgxNTAgNTAgNTApIHRyYW5zbGF0ZSgwIC0zMCknPgogICAgPC9yZWN0PgogICAgPHJlY3QgeD0nNDYuNScgeT0nNDAnIHdpZHRoPSc3JyBoZWlnaHQ9JzIwJyByeD0nNScgcnk9JzUnIGZpbGw9JyNCQUI4QjknCiAgICAgICAgICB0cmFuc2Zvcm09J3JvdGF0ZSgxODAgNTAgNTApIHRyYW5zbGF0ZSgwIC0zMCknPgogICAgPC9yZWN0PgogICAgPHJlY3QgeD0nNDYuNScgeT0nNDAnIHdpZHRoPSc3JyBoZWlnaHQ9JzIwJyByeD0nNScgcnk9JzUnIGZpbGw9JyNDMkMwQzEnCiAgICAgICAgICB0cmFuc2Zvcm09J3JvdGF0ZSgyMTAgNTAgNTApIHRyYW5zbGF0ZSgwIC0zMCknPgogICAgPC9yZWN0PgogICAgPHJlY3QgeD0nNDYuNScgeT0nNDAnIHdpZHRoPSc3JyBoZWlnaHQ9JzIwJyByeD0nNScgcnk9JzUnIGZpbGw9JyNDQkNCQ0InCiAgICAgICAgICB0cmFuc2Zvcm09J3JvdGF0ZSgyNDAgNTAgNTApIHRyYW5zbGF0ZSgwIC0zMCknPgogICAgPC9yZWN0PgogICAgPHJlY3QgeD0nNDYuNScgeT0nNDAnIHdpZHRoPSc3JyBoZWlnaHQ9JzIwJyByeD0nNScgcnk9JzUnIGZpbGw9JyNEMkQyRDInCiAgICAgICAgICB0cmFuc2Zvcm09J3JvdGF0ZSgyNzAgNTAgNTApIHRyYW5zbGF0ZSgwIC0zMCknPgogICAgPC9yZWN0PgogICAgPHJlY3QgeD0nNDYuNScgeT0nNDAnIHdpZHRoPSc3JyBoZWlnaHQ9JzIwJyByeD0nNScgcnk9JzUnIGZpbGw9JyNEQURBREEnCiAgICAgICAgICB0cmFuc2Zvcm09J3JvdGF0ZSgzMDAgNTAgNTApIHRyYW5zbGF0ZSgwIC0zMCknPgogICAgPC9yZWN0PgogICAgPHJlY3QgeD0nNDYuNScgeT0nNDAnIHdpZHRoPSc3JyBoZWlnaHQ9JzIwJyByeD0nNScgcnk9JzUnIGZpbGw9JyNFMkUyRTInCiAgICAgICAgICB0cmFuc2Zvcm09J3JvdGF0ZSgzMzAgNTAgNTApIHRyYW5zbGF0ZSgwIC0zMCknPgogICAgPC9yZWN0Pgo8L3N2Zz4=) no-repeat;
+    background-size: 100%;
+}
+
+.loadmore__tips {
+  display: inline-block;
+  vertical-align: middle;
+  color: #ccc;
+}
+
+.loadingImage{
+  width: 100%;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.loadingImage image{
+  height: 26px;
+}
+
+/*费用明细*/
+.chargesDetails {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2001;
+  width: 100%;
+  height: 100%;
+  padding: 0 0.613333rem;
+  color: #fff;
+  font-weight: normal;
+  background: rgba(0, 0, 0, 0.9);
+  box-sizing: border-box;
+}
+
+.chargesDetails .warnAlertInfo{
+  width: 100%;
+  height: 100%;
+  font-size: 32rpx;
+  padding-top: 0.6rem;
+  overflow-y: auto;
+}
+
+.chargesDetails .chargesInfo {
+  padding-bottom: 0.693333rem;
+  position: relative;
+}
+.chargesDetails .chargesInfo:before{
+  content: '';
+  width: 200%;
+  height: 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-bottom: 1px solid #808080; /*no*/
+  transform: scale(0.5);
+  transform-origin: 0 0;
+}
+
+.chargesDetails .chargesInfo label {
+  display: block;
+  padding: 0.906667rem 0 0.48rem 0;
+  font-size: 34rpx;
+}
+
+.chargesDetails .chargesInfo text {
+  display: block;
+  font-size: 26rpx;
+  line-height: 1.8;
+}
+
+.chargesDetails .productPrice {
+  margin-bottom: 0.266667rem;
+  padding: 0.8rem 0;
+  font-size: 30rpx;
+  border-bottom: 1rpx dashed #808080;
+}
+
+.chargesDetails .product_w1 {
+  display: inline-block;
+  width: 10.666667rem;
+  padding-left: 0.4rem;
+}
+
+.chargesDetails .product_w2 {
+  display: inline-block;
+  width: 4rem;
+}
+
+.chargesDetails .product_w3 {
+  display: inline-block;
+  width: 3.626667rem;
+}
+
+.chargesDetails .productCon {
+  padding-top: 0.506667rem;
+  font-size: 28rpx;
+}
+
+.chargesDetails .productSum {
+  margin-top: 0.773333rem;
+  padding-top: 0.8rem;
+  font-size: 28rpx;
+  border-top: 1rpx dashed #808080;
+}
+
+.chargesDetails .font_32 {
+  font-size: 34rpx;
+}
+
+.chargesDetails .blue {
+  color: #007FFF;
+  font-size: 38rpx;
+  font-weight: 400;
+}
+
+.chargesDetails .closeIcon {
+  display: block;
+  width: 3.36rem;
+  margin: 2.666667rem auto;
+}
+
+/*加载中*/
+.tips {
+  font-size: 28rpx;
+  text-align: center;
+  padding: 50rpx;
+  color: #ccc;
+}
+
+.tips image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+}
+
+.tips image,
+.tips text {
+  vertical-align: middle;
+}

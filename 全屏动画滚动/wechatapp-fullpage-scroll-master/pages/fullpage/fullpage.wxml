@@ -1,0 +1,24 @@
+<view class="container container-fill">
+	<view class="scroll-fullpage" bindtouchstart="scrollTouchstart" bindtouchmove="scrollTouchmove" bindtouchend="scrollTouchend" style="transform:translateY(-{{scrollindex*100}}%);margin-top: {{margintop}}px">
+		<view class="section section01 {{scrollindex==0?'active':''}}" style="background: #3399FF;">
+			<text class="section-maintitle">无缝对接双创服务1</text>
+			<text class="section-subtitle">构筑“云上孵化基地”1</text>
+		</view>
+		<view class="section section02 {{scrollindex==1?'active':''}}" style="background: #00CC66;">
+			<text class="section-maintitle">无缝对接双创服务2</text>
+			<text class="section-subtitle">构筑“云上孵化基地”2</text>
+		</view>
+		<view class="section section03 {{scrollindex==2?'active':''}}" style="background: #33CCCC;">
+			<text class="section-maintitle">无缝对接双创服务3</text>
+			<text class="section-subtitle">构筑“云上孵化基地”3</text>
+		</view>
+		<view class="section section04 {{scrollindex==3?'active':''}}" style="background: #6699FF;">
+			<text class="section-maintitle">无缝对接双创服务4</text>
+			<text class="section-subtitle">构筑“云上孵化基地”4</text>
+		</view>
+		<view class="section section05 {{scrollindex==4?'active':''}}" style="background: #9966FF;">
+			<text class="section-maintitle">无缝对接双创服5</text>
+			<text class="section-subtitle">构筑“云上孵化基地”5</text>
+		</view>
+	</view>
+</view>

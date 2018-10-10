@@ -1,0 +1,224 @@
+<view class="ui-index has-toolbar">
+
+  <view class="group-header">颜色</view>
+  <view class="flex-row flex-wrap items-start bg-white">
+    <view class="color-block">
+      <view class="bg-primary color-view"/>
+      <text class="color-name">primary</text>
+    </view>
+    <view class="color-block">
+      <view class="bg-secondary color-view"/>
+      <text class="color-name">secondary</text>
+    </view>
+    <view class="color-block">
+      <view class="bg-success color-view"/>
+      <text class="color-name">success</text>
+    </view>
+    <view class="color-block">
+      <view class="bg-warning color-view"/>
+      <text class="color-name">warning</text>
+    </view>
+    <view class="color-block">
+      <view class="bg-danger color-view"/>
+      <text class="color-name">danger</text>
+    </view>
+    <view class="color-block">
+      <view class="bg-info color-view"/>
+      <text class="color-name">info</text>
+    </view>
+    <view class="color-block">
+      <view class="bg-dark color-view"/>
+      <text class="color-name">dark</text>
+    </view>
+    <view class="color-block">
+      <view class="bg-aqua color-view"/>
+      <text class="color-name">aqua</text>
+    </view>
+    <view class="color-block">
+      <view class="bg-blue color-view"/>
+      <text class="color-name">blue</text>
+    </view>
+    <view class="color-block">
+      <view class="bg-navy color-view"/>
+      <text class="color-name">navy</text>
+    </view>
+    <view class="color-block">
+      <view class="bg-teal color-view"/>
+      <text class="color-name">teal</text>
+    </view>
+    <view class="color-block">
+      <view class="bg-green color-view"/>
+      <text class="color-name">green</text>
+    </view>
+    <view class="color-block">
+      <view class="bg-olive color-view"/>
+      <text class="color-name">olive</text>
+    </view>
+    <view class="color-block">
+      <view class="bg-lime color-view"/>
+      <text class="color-name">lime</text>
+    </view>
+    <view class="color-block">
+      <view class="bg-yellow color-view"/>
+      <text class="color-name">yellow</text>
+    </view>
+    <view class="color-block">
+      <view class="bg-orange color-view"/>
+      <text class="color-name">orange</text>
+    </view>
+    <view class="color-block">
+      <view class="bg-red color-view"/>
+      <text class="color-name">red</text>
+    </view>
+    <view class="color-block">
+      <view class="bg-fuchsia color-view"/>
+      <text class="color-name">fuchsia</text>
+    </view>
+    <view class="color-block">
+      <view class="bg-purple color-view"/>
+      <text class="color-name">purple</text>
+    </view>
+    <view class="color-block">
+      <view class="bg-maroon color-view"/>
+      <text class="color-name">maroon</text>
+    </view>
+    <view class="color-block">
+      <view class="bg-white color-view"/>
+      <text class="color-name">white</text>
+    </view>
+    <view class="color-block">
+      <view class="bg-light color-view"/>
+      <text class="color-name">light</text>
+    </view>
+    <view class="color-block">
+      <view class="bg-gray color-view"/>
+      <text class="color-name">gray</text>
+    </view>
+    <view class="color-block">
+      <view class="bg-black color-view"/>
+      <text class="color-name">black</text>
+    </view>
+    <view class="color-block">
+      <view class="bg-page color-view"/>
+      <text class="color-name">page</text>
+    </view>
+    <view class="color-block">
+      <view class="bg-text color-view"/>
+      <text class="color-name">text</text>
+    </view>
+    <view class="color-block">
+      <view class="bg-link color-view"/>
+      <text class="color-name">link</text>
+    </view>
+    <view class="color-block">
+      <view class="bg-border color-view"/>
+      <text class="color-name">border</text>
+    </view>
+  </view>
+
+  <view class="group-header">按钮</view>
+  <view class="padding bg-white break-word">
+    <view class="btn btn-primary">btn btn-primary</view>
+    <view class="btn btn-secondary">btn btn-secondary</view>
+    <view class="btn btn-success">btn btn-success</view>
+    <view class="btn btn-warning">btn btn-warning</view>
+    <view class="btn btn-danger">btn btn-danger</view>
+    <view class="btn btn-dark">btn btn-dark</view>
+    <view class="btn btn-aqua">btn btn-aqua</view>
+    <view class="btn btn-blue">btn btn-blue</view>
+    <view class="btn btn-navy">btn btn-navy</view>
+    <view class="btn btn-teal">btn btn-teal</view>
+    <view class="btn btn-green">btn btn-green</view>
+    <view class="btn btn-olive">btn btn-olive</view>
+    <view class="btn btn-lime">btn btn-lime</view>
+    <view class="btn btn-yellow">btn btn-yellow</view>
+    <view class="btn btn-orange">btn btn-orange</view>
+    <view class="btn btn-red">btn btn-red</view>
+    <view class="btn btn-fuchsia">btn btn-fuchsia</view>
+    <view class="btn btn-purple">btn btn-purple</view>
+    <view class="btn btn-maroon">btn btn-maroon</view>
+    <view class="btn btn-white">btn btn-white</view>
+    <view class="btn btn-light">btn btn-light</view>
+    <view class="btn btn-gray">btn btn-gray</view>
+    <view class="btn btn-black">btn btn-black</view>
+  </view>
+  <view class="group-header">镂空按钮</view>
+  <view class="padding bg-white break-word">
+    <view class="btn btn-primary-hollow">btn btn-primary-hollow</view>
+    <view class="btn btn-secondary-hollow">btn btn-secondary-hollow</view>
+    <view class="btn btn-success-hollow">btn btn-success-hollow</view>
+    <view class="btn btn-warning-hollow">btn btn-warning-hollow</view>
+    <view class="btn btn-danger-hollow">btn btn-danger-hollow</view>
+    <view class="btn btn-dark-hollow">btn btn-dark-hollow</view>
+  </view>
+  <view class="group-header">按钮状态</view>
+  <view class="padding bg-white break-word">
+    <view class="btn btn-primary block">btn btn-primary block</view>
+    <view class="btn btn-primary block disabled">btn btn-primary block disabled</view>
+    <view class="btn btn-success btn-small">btn-small</view>
+    <view class="btn btn-success btn-large">btn-large</view>
+    <view class="btn btn-warning-hollow block btn-large">btn btn-hollow btn-large block</view>
+  </view>
+  <view class="group-header">工具栏</view>
+  <view class="toolbar margin-bottom-small">toolbar</view>
+  <view class="toolbar toolbar-dark margin-bottom-small">toolbar toolbar-dark</view>
+  <view class="toolbar toolbar-primary margin-bottom-small">toolbar toolbar-primary</view>
+  <view class="group-header">布局</view>
+  <view class="padding bg-white break-word">
+    <view class="tips">flex-row</view>
+    <view class="border flex-row">
+      <view class="box col-1"/>
+      <view class="box col-2">col-2</view>
+      <view class="box col-3">col-3</view>
+      <view class="box col-4">col-4</view>
+      <view class="box col-2">col-2</view>
+    </view>
+    <view class="border flex-row">
+      <view class="box col-5">col-5</view>
+      <view class="box col-6">col-6</view>
+      <view class="box col-1"/>
+    </view>
+    <view class="border flex-row">
+      <view class="box col-7">col-7</view>
+      <view class="box col-5">col-5</view>
+    </view>
+    <view class="border flex-row">
+      <view class="box col-4">col-4</view>
+      <view class="box col-8">col-8</view>
+    </view>
+    <view class="tips">flex-wrap</view>
+    <view class="border flex-row flex-wrap">
+      <view class="box col-1"/>
+      <view class="box col-2">col-2</view>
+      <view class="box col-3">col-3</view>
+      <view class="box col-4">col-4</view>
+      <view class="box col-2">col-3</view>
+      <view class="box col-2">col-3</view>
+      <view class="box col-2">col-3</view>
+    </view>
+    <view class="tips">flex</view>
+    <view class="border flex-row">
+      <view class="box col-2">col-2</view>
+      <view class="box flex">flex</view>
+    </view>
+    <view class="tips">items-start</view>
+    <view class="border flex-row items-start">
+      <view class="box col-2">col-2</view>
+      <view class="box-large col-3">large</view>
+    </view>
+    <view class="tips">items-center</view>
+    <view class="border flex-row items-center">
+      <view class="box col-2">col-2</view>
+      <view class="box-large col-3">large</view>
+    </view>
+    <view class="tips">items-end</view>
+    <view class="border flex-row items-end">
+      <view class="box col-2">col-2</view>
+      <view class="box-large col-3">large</view>
+    </view>
+  </view>
+  
+  <view class="footer">footer</view>
+
+  <view class="toolbar toolbar-bottom justify-center">toolbar toolbar-bottom justify-center</view>
+</view>

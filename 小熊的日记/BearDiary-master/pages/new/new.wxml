@@ -1,0 +1,72 @@
+<!--new.wxml-->
+
+<template name="common">
+  <scroll-view class="container" scroll-y="true">
+    <view class="common-container">
+      <view class="item-group" wx:for="{{layoutList}}" wx:for-item="group">
+        <block wx:for="{{group}}" wx:for-item="item">
+          <block wx:if="{{item.type == 'TEXT'}}">
+            <view class="album-item content-text">
+              <view>{{item.content}}</view>
+            </view>
+          </block>
+          <block wx:elif="{{item.type == 'IMAGE'}}">
+            <image src="{{item.content}}" class="album-item" mode="aspectFill"></image>
+          </block>
+          <block wx:elif="{{item.type == 'VIDEO'}}">
+            <video class="album-item" src="{{item.content}}"></video>
+          </block>
+        </block>
+      </view>
+    </view>
+  </scroll-view>
+
+  <view class="tabbar" style="display:{{showTab ? 'flex' : 'none'}};">
+    <view class="item" bindtap="inputTouch">
+      <image class="icon" mode="aspectFit" src="../../images/tabbar/text.png"></image>
+    </view>
+    <view class="item" bindtap="mediaTouch">
+      <image class="icon" mode="aspectFit" src="../../images/tabbar/image.png"></image>
+    </view>
+    <view class="item">
+      <image class="icon" mode="aspectFit" src="../../images/tabbar/more.png"></image>
+    </view>
+  </view>
+
+  <action-sheet hidden="{{mediaActionSheetHidden}}" bindchange="mediaActionSheetChange">
+    <block wx:for-items="{{mediaActionSheetItems}}" wx:for-index="id">
+      <action-sheet-item class="action-item" bindtap="{{mediaActionSheetBinds[id]}}">
+        {{item}}
+      </action-sheet-item>
+    </block>
+    <action-sheet-cancel class='action-cacel'>取消</action-sheet-cancel>
+  </action-sheet>
+</template>
+
+<template name="inputText">
+  <view class="input-container">
+    <view style="height:47rpx" wx:for="{{inputStatus.lines}}" wx:for-index="idx">
+      <input type="text" data-index="{{idx}}" placeholder="" bindinput="textInput" bindchange="textInputChange" value="{{item}}" auto-focus="{{idx == inputStatus.row ? true : false}}" bindfocus="focusInput"/>
+    </view>
+  </view>
+  <view class="tabbar">
+    <view class="item" style="width:50%" bindtap="inputCancel">
+      <image class="icon" mode="aspectFit" src="../../images/tabbar/cancel.png"></image>
+    </view>
+    <view class="item" style="width:50%" bindtap="inputDone">
+      <image class="icon" mode="aspectFit" src="../../images/tabbar/ok.png"></image>
+    </view>
+  </view>
+</template>
+
+<view style="width:100%;height:100%">
+  <block wx:if="{{showMode == 'common'}}">
+    <template is="{{showMode}}" data="{{showTab: showTab, mediaActionSheetHidden: mediaActionSheetHidden, mediaActionSheetItems: mediaActionSheetItems, mediaActionSheetBinds: mediaActionSheetBinds, layoutList: layoutList}}"></template>
+  </block>
+  <block wx:if="{{showMode == 'inputText'}}">
+    <template is="{{showMode}}" data="{{inputStatus}}"></template>
+  </block>
+  <loading hidden="{{!showLoading}}" bindchange="hideLoading">
+    {{loadingMessage}}
+  </loading>
+</view>

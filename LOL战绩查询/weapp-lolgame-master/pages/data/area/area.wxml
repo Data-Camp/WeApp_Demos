@@ -1,0 +1,9 @@
+<!--index.wxml-->
+<view class="container">
+  <block wx:for="{{area}}">
+  	<view class="widgets__info">
+	    <text class="widgets__info-name">{{item.isp}}</text>
+	    <text class="widgets__info-area">{{item.name}}</text>
+		</view>
+  </block>
+</view>

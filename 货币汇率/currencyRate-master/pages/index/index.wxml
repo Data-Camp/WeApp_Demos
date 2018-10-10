@@ -1,0 +1,56 @@
+<!--index.wxml-->
+<view class="container">
+    <view  bindtap="bindAddCur"  class="pageHead" >
+        <view class="userinfo" >
+            <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+            <text class="userinfo-nickname">{{userInfo.nickName}},欢迎您！</text>
+        </view>
+          
+        <view class="addCur"  bindtap="bindAddCur">
+            <text>+</text>
+        </view>
+    </view>
+    <view class="cur_main" >
+            <view>
+                  <image src="/images/id128/{{myMainCur.name}}.png" class="cur_logo" />
+            </view>
+            <view class="middle">
+                  <view  class="top">
+                        <view>
+                              <text>{{myMainCur.name}} {{myMainCur.cn}}</text>
+                        </view> 
+                        <view class="datetimeTxt">
+                              <text>{{curDate}}</text>
+                        </view>
+                  </view>           
+                  <view   class="amountInput">
+                        <input  bindinput="bindKeyInput"   placeholder="100" maxlength="180"  type="digit"  />
+                  </view>
+            </view>
+
+    </view>
+    <scroll-view scroll-y="true" style="height: 400px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll"> 
+            <block wx:for="{{mySelectCurs}}"  wx:key=""  >
+                  <view class="item" bindlongtap="longtapFormSet" 
+                                        data-text="{{item.cn}}"
+                                        data-id="{{item.name}}"  >
+                        <view>
+                              <image src="/images/id128/{{item.name}}.png" class="cur_logo" />
+                        </view>
+                        <view class="middle">
+                              <view>
+                                    <text>{{item.name}} {{item.cn}}</text>
+                              </view> 
+                              <view  class="rateTxt">
+                                    <text>{{item.amount}}</text>
+                              </view> 
+                        </view>
+
+                        <view class="right">
+                                     <text>1 {{myMainCur.name}}＝{{item.rate}} {{item.name}}</text>
+                        </view>
+
+                  </view>
+            </block>
+      </scroll-view>
+</view>

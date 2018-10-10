@@ -1,0 +1,56 @@
+.title{
+  text-align: center;
+  margin-top: 10px;
+}
+
+#tit {
+  letter-spacing: 10px;
+  color: black;
+  font-weight: bold;
+}
+
+.car_type {
+  margin-top: 10px;
+  width: 100%;
+  height: auto;
+}
+
+.type_style {
+  background-color: #E8E8E8;
+  border-top: 1px solid #C8C8C8;
+  border-bottom: 1px solid #C8C8C8;
+}
+
+.type_name {
+  margin-left: 10px;
+  font-size: 10px;
+  font-weight: bold;
+  color: #707070;
+}
+
+.content_img {
+  width: 60px;
+  height: 60px;
+  display: inline-table;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.icons_title {
+  width: 100%;
+  height: 60px;
+  border-bottom: 1px solid #C8C8C8;
+  display: flex;
+}
+.icons {
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.car_title {
+  font-size: 12px;
+  font-weight: bold;
+  margin: auto 20px; 
+}

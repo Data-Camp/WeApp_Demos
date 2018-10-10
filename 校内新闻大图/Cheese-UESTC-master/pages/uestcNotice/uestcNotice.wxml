@@ -1,0 +1,14 @@
+<scroll-view class="page_list" scroll-y="true" bindscrolltolower="loadMore" bindscrolltoupper="refresh">
+
+  <view wx:for="{{newList}}">
+
+    <view data-detail-href-id="{{item.detailHrefId}}" class="item" bindtap="onItemClick">
+      <view class="news-item">
+        <view class="title">{{item.title}}</view>
+        <text class="time">{{item.time}}</text>
+        <view class="desc">{{item.desc}}</view>
+
+      </view>
+    </view>
+  </view>
+</scroll-view>

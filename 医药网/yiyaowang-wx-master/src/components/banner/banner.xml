@@ -1,0 +1,9 @@
+<view class="banner">
+  <swiper class="slide" indicator-dots="{{props.indicatorDots}}" autoplay="{{props.autoplay}}" interval="{{props.interval}}" duration="{{props.duration}}">
+    <block wx:for="{{props.itemArr}}" wx:key="{{item.key}}">
+      <swiper-item>
+        <image src= "{{item.pic}}" catchtap="foo" />
+      </swiper-item>
+    </block>
+  </swiper>
+</view>

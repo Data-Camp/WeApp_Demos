@@ -1,0 +1,9 @@
+<!--index.wxml-->
+<view class="entry-container">
+  <view class="entry-title">
+    <text>{{item.title}}</text>
+  </view>
+  <view class="entry-content">
+    <text>{{item.content}}</text>
+  </view>
+</view>

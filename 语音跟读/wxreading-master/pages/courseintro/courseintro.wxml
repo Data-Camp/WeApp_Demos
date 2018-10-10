@@ -1,0 +1,72 @@
+<!--csintro.wxml-->
+<view class="container csintro_container">
+    <block wx:if="{{courseInfo.courseInfo.show_type === 2}}">
+        <view class="csintro-header"
+              style="background: url({{courseInfo.courseInfo.course_img}}) no-repeat center center;background-size: cover;">
+            <text class="csih-content">Jett to control room package pick up Jam and Jett</text>
+            <image class="csi-play-btn" bindtap="tapPlayIntroAudio" src="images/btn_read_voicePlay.png">
+                <audio src="{{courseInfo.courseInfo.full_audio_url}}" id="courseIntroAudio"></audio>
+            </image>
+        </view>
+    </block>
+    <block wx:if="{{courseInfo.courseInfo.show_type === 1}}">
+        <view class="csintro-header"
+              style="background: url({{courseInfo.courseInfo.course_img}}) no-repeat center center;background-size: cover;">
+            <text class="csih-content">Jett to control room package pick up Jam and Jett</text>
+            <image class="csi-play-btn" bindtap="tapPlayIntroAudio" src="images/btn_read_voicePlay.png">
+                <audio src="{{courseInfo.courseInfo.full_audio_url}}" id="courseIntroAudio"></audio>
+            </image>
+        </view>
+    </block>
+    <!-- 重点单词 -->
+    <block wx:if="{{courseInfo.courseInfo.word_list.length != 0}}">
+        <view class="csintro-article">
+            <text class="csiart-title">重点单词：</text>
+            <view class="word-list">
+                <block wx:for-items="{{courseInfo.courseInfo.word_list}}" wx:for-item="wordItem" wx:key="wordItem">
+                    <view class="word-item" id="{{index}}" bindtap="tapPlayWordAudio">
+                        <text class="word-item-text">{{wordItem.resource_en_content}}</text>
+                        <image class="word-item-play" src="images/btn_read_wordVoice.png"></image>
+                        <audio src="{{wordItem.audio_url}}" id="audio-{{index}}"></audio>
+                    </view>
+                </block>
+            </view>
+        </view>
+    </block>
+
+    <!-- 作业记录 -->
+    <view wx:if="{{courseInfo.recordList}}" class="record-list">
+        <image class="record-list-icon" src="images/btn_read_homework.png"></image>
+        <block wx:for-items="{{courseInfo.recordList}}" wx:for-item="recordItem" wx:key="recordItem">
+            <view class="recordItem">
+                <image class="recordItem-portrait" src="{{recordItem.user_portrait}}" backgound-size="contain">
+                </image>
+                <view class="recordItem-info">
+                    <text class="recordItem-uname">{{recordItem.user_name}}</text>
+                    <view class="recordItem-audio" id="{{index}}" bindtap="tapPlayUserRecord">
+                        <image class="recordItem-audio-icon" src="images/btn_read_voice.png"></image>
+                        <audio src="{{recordItem.full_audio_url}}" id="reaudio-{{index}}"></audio>
+                    </view>
+                    <text class="recordItem-time">{{recordItem.create_time_show}}</text>
+                </view>
+            </view>
+        </block>
+    </view>
+    <view wx:else class="record-list">
+        <image class="record-list-icon" src="images/btn_read_homework.png"></image>
+        <view class="default-record-text">
+            <text>这节课还没人跟读哦，赶快抢沙发~</text>
+        </view>
+    </view>
+
+    <view wx:if="{{course_status != 2}}" class="fixed_study_btn" bindtap="tapJoinReadingBtn">
+        <text>做作业</text>
+    </view>
+
+    <!--<view class="fixed_study_btn" bindtap="tapJoinReadingBtn">-->
+        <!--<text>做作业</text>-->
+    <!--</view>-->
+
+
+</view>
+

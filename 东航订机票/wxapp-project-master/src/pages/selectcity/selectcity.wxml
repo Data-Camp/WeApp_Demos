@@ -1,0 +1,54 @@
+
+<view class="container">
+    <view class="nav" bindtap="handleTapEvent">
+        <view class="home {{currentIndex==0?'active':''}}" data-index="0">国内</view>
+        <view class="abroad {{currentIndex==1?'active':''}}" data-index="1">国际/地区</view>
+    </view>
+    <view class="toolBar">
+        <scroll-view scroll-y="true">
+            <view wx:for="{{currentIndex==0?internalLetters:foreignLetters}}" wx:for-item="le" bindtap="handleLetterTap" data-id="{{le}}" >{{le}}</view>
+        </scroll-view>
+    </view>
+    <view class="wrapCity">
+        <swiper current="{{currentIndex}}" duration="100" bindchange="handleChangeEvent">
+            <swiper-item>
+                <scroll-view scroll-y="true" scroll-into-view="{{letterId}}">
+                    <!-- <view class="wrap">
+                        <view class="now">
+                            <view>当前城市</view><image class="line" src="../../images/line.png"></image>
+                        </view>
+                        <view class="cities">
+                            <button class="city" wx:for="{{array}}" wx:key="id">
+                                {{item.message}}
+                            </button>
+                        </view>
+                        <view class="hot">
+                            <view>热门城市</view><image class="line" src="../../images/line.png"></image>
+                        </view>
+                        <view class="cities">
+                             <button class="city" wx:for="{{arrayHot}}" wx:key="id">
+                                {{item.message}}
+                             </button>
+                        </view>
+                    </view> -->
+                    <view class="cityList">
+                        <block wx:for="{{internalLetters}}" wx:key="*this"  wx:for-item='le'>
+                            <view class="letterList" id="{{le+'0'}}">{{le}}</view>
+                            <view wx:for="{{internalCity[le]}}" wx:key="name" wx:for-item='ct'  bindtap="bindChangeCity" data-city="{{ct.CityName}}">{{ct.CityName}}</view>
+                        </block>
+                    </view>
+                </scroll-view>
+            </swiper-item>
+            <swiper-item>
+                <scroll-view scroll-y="true" scroll-into-view="{{letterId}}">
+                    <view class="cityList">
+                        <block wx:for="{{foreignLetters}}" wx:key="*this"  wx:for-item='le'>
+                            <view class="letterList" id="{{le+'0'}}">{{le}}</view>
+                            <view wx:for="{{foreignCity[le]}}" wx:key="name" wx:for-item='ct'  bindtap="bindChangeCity" data-city="{{ct.CityName}}">{{ct.CityName}}</view>
+                        </block>
+                    </view>
+                </scroll-view>
+            </swiper-item>
+        </swiper>
+    </view>
+</view>

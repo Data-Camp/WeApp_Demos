@@ -1,0 +1,4 @@
+.price {
+    font-weight: normal;
+    color: #ec5e15;
+}

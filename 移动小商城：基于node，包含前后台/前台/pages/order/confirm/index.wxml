@@ -1,0 +1,32 @@
+<view class="address">
+    <view class="weui-panel">
+        <view class="weui-panel__bd">
+            <view class="weui-media-box weui-media-box_text" bindtap="redirectTo">
+                <view class="weui-media-box__title weui-media-box__title_in-text">{{ address.item.name }} {{ address.item.gender === 'female' ? '女士' : '先生' }} {{ address.item.tel }}</view>
+                <view class="weui-media-box__desc">{{ address.item.address }}</view>
+                <view class="addr">
+                    <image class="icon" src="../../assets/images/iconfont-addr-default.png" />
+                </view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </view>
+        </view>
+    </view>
+</view>
+
+<view class="weui-form-preview">
+    <view class="weui-form-preview__hd">
+        <view class="weui-form-preview__item">
+            <view class="weui-form-preview__label">订单总价</view>
+            <view class="weui-form-preview__value_in-hd">¥ {{ carts.totalAmount }}</view>
+        </view>
+    </view>
+    <view class="weui-form-preview__bd">
+        <view class="weui-form-preview__item" wx:for="{{ carts.items }}" wx:key="">
+            <view class="weui-form-preview__label">{{ item.goods.name }}</view>
+            <view class="weui-form-preview__value">x{{ item.total }} ¥ {{ item.totalAmount }}</view>
+        </view>
+    </view>
+    <view class="weui-form-preview__ft">
+        <navigator url="" class="weui-form-preview__btn weui-form-preview__btn_primary" hover-class="weui-form-preview__btn_active" bindtap="addOrder">提交订单</navigator>
+    </view>
+</view>

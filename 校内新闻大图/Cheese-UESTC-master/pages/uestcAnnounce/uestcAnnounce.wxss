@@ -1,0 +1,81 @@
+/* pages/uestcAnnounce/uestcAnnounce.wxss */
+
+.page_list {
+  height: 100%;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+
+/*瀑布流列表 开始*/
+.item {
+  display: flex;
+  flex-direction: column;
+  padding: 20rpx 20rpx;
+  border-bottom: 1rpx solid #eee;
+  cursor: pointer;
+
+  background:#fbf9fe;
+}
+
+.news-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 1px;
+  padding-top: 1px;
+  padding-right: 1px;
+  padding-bottom: 1px;
+  margin-left: 1px;
+  margin-right: 1px;
+  margin-top: 1px;
+  /*border: 2px solid #f48a94;*/
+  border: 2px solid #f0f0f0;
+  box-shadow: 10px 10px 10px #e0e0e0;
+  border-radius: 10px;
+
+  background:#fff;
+}
+
+.title {
+  margin-top: 13rpx;
+  padding: 2rpx;
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: #e81123;
+  font-family: 'KaiTi';
+  font-size: 35rpx;
+}
+
+.time {
+  font-size: 28rpx;
+  font-family: 'KaiTi';
+  text-align: right;
+  padding-right: 30rpx;
+  color: #ccc;
+
+}
+
+.desc {
+  text-indent: 2em;
+  font-size: 30rpx;
+  font-family: 'KaiTi';
+  color: #34495e;
+  padding: 20rpx;
+}
+/*瀑布流列表 结束*/
+
+
+/*加载过程的提示 开始*/
+.tips image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+}
+
+.tips image, .tips text {
+  vertical-align: middle;
+}
+/*加载过程的提示 结束*/

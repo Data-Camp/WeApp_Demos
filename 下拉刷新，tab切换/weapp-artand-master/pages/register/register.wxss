@@ -1,0 +1,72 @@
+.register-container {
+  padding: 20px;
+  display: flex;
+}
+
+form {
+  width: 100%;
+}
+
+.section {
+  display: flex;
+}
+
+.picker {
+  padding: 0 0 0 10px;
+}
+
+.country {
+  display: flex;
+  font-size: 12px;
+  border: 1px solid #ddd;
+  width: 70px;
+  height: 30px;
+  line-height: 30px;
+}
+
+.triangle {
+  width: 8px;
+  height: 6px;
+}
+
+.phone {
+  flex: 1;
+  margin-left: -1px;
+}
+
+.verification {
+  flex: 1;
+  margin: 20px 0;
+}
+
+.input {
+  border: 1px solid #ddd;
+  font-size: 12px;
+  padding: 0 10px;
+  line-height: 30px;
+  height: 30px;
+}
+
+.input-placeholder {
+  color: #aaa!important;
+}
+
+.verification-btn {
+  border: 1px solid #bbb!important;
+  color: #777!important;
+  border-radius: 0px;
+  height: 32px;
+  margin: 20px 0 20px 20px;
+}
+
+.btn-hover {
+  background-color: #eee!important;
+}
+
+.next-btn {
+  margin: 20px 0;
+  border: 1px solid #bbb!important;
+  color: #777!important;
+  width: 100%;
+  border-radius: 0px;
+}

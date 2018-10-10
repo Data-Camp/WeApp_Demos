@@ -1,0 +1,60 @@
+.result-container {
+  flex: 1;
+  width: 100%;
+  height: 300rpx;
+  background-color: #222;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-right: 40rpx;
+  padding-bottom: 20rpx;
+}
+
+.result {
+  color: #fff;
+  font-size: 110rpx;
+  font-family: Courier New, Courier, monospace;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+button {
+  width: 188.5rpx;
+  height: 188.5rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0;
+  font-size: 36px;
+  font-family: Courier New, Courier, monospace;
+}
+
+button::after{
+  border-radius: 0;
+}
+
+.number {
+  background-color: lightgrey;
+}
+
+.large {
+  width: 377rpx;
+}
+
+.operator {
+  background-color: darkorange;
+  color: #fff;
+}
+
+.optActive {
+  border: 2px #222 solid;
+}

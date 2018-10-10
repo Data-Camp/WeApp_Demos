@@ -1,0 +1,17 @@
+
+<!--index.wxml-->
+<view class="circle-out" >
+  <view class="circle-in"  > 
+  <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}"></image>
+  <view class="menu-list"  catchtouchmove="buttonMove" catchtouchstart="buttonStart" catchtouchend="buttonEnd">
+    <view class="menu-item" wx:for="{{menuList}}" wx:key="unique"  animation="{{animationData}}">
+      <view class="menu-circle-item" style="-webkit-transform: rotate({{item.deg}}deg);" data-menu="{{item.menu}}"  >
+        <image class="image-style" src="{{item.src}}"></image>
+      </view>
+      <view class="menu-circle-text-item" style="-webkit-transform: rotate({{item.deg}}deg);">
+        <text class="text-style">{{item.menu}}</text>
+      </view>
+    </view>
+  </view>
+ </view>
+</view>

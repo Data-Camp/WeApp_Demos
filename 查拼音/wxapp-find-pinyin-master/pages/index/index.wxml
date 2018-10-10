@@ -1,0 +1,9 @@
+<!--index.wxml-->
+
+<view class="container">
+  <view class="info-container">
+    <text class="pinyin-text">{{pinyinText}}</text>
+    <input focus="{{true}}" maxlength="1" bindinput="onInput" placeholder="" />
+    <text class="tip">输入汉字</text>
+  </view>
+</view>

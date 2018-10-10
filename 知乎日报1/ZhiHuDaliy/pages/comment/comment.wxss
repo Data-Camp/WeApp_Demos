@@ -1,0 +1,41 @@
+.headline {
+    font-size: 30rpx;
+    padding: 30rpx 40rpx;
+    border-bottom: 1px solid #EEE;
+}
+
+.common-list .list-item.has-img image.cover {
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50%;
+}
+.common-list .list-item.has-img .content {
+    margin-left: 140rpx;
+    margin-right: 20rpx;
+}
+.common-list .header {
+    position: relative;
+}
+.common-list .header .vote {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40rpx;
+    height: 40rpx;
+}
+.common-list .header .title {
+    font-weight: bold;
+}
+.common-list .body {
+    display: block;
+    margin-top: 20rpx;
+    color: #333;
+    text-align: justify;
+    line-height: 55rpx;
+}
+.common-list .bottom {
+    display: block;
+    margin-top: 20rpx;
+    font-size: 20rpx;
+    color: #CCC;
+}

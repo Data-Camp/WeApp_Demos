@@ -1,0 +1,15 @@
+{
+  "pages": [
+    "pages/splash/splash",
+    "pages/index/index",
+    "pages/comment/comment",
+    "pages/detail/detail",
+    "pages/setting/setting"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#019DD6",
+    "navigationBarTitleText": "知乎日报",
+    "navigationBarTextStyle": "white"
+  }
+}

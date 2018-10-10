@@ -1,0 +1,50 @@
+{
+    "pages": [
+        "pages/index",
+        "pages/Play/play",
+        "pages/my/my",
+        "pages/search/search",
+        "pages/trump/trump"
+    ],
+    "window": {
+        "navigationBarBackgroundColor":"#2b2e33",
+        "navigationBarTextStyle": "white",
+        "navigationBarTitleText": "芒果TV",
+        "backgroundColor": "#fff",
+        "backgroundTextStyle": "#dark"
+    },
+    "tabBar": {
+        "color": "#74777e",
+        "selectedColor": "#f06000",
+        "borderStyle": "white",
+        "backgroundColor": "#fff",
+    "list": [{
+        "pagePath": "pages/index",
+        "iconPath": "image/jx.png",
+        "selectedIconPath": "image/jxselect.png",
+        "text": "精选"
+    }, {
+        "pagePath": "pages/search/search",
+        "iconPath": "image/ss.png",
+        "selectedIconPath": "image/ssselect.png",
+        "text": "搜索"
+    },{
+        "pagePath": "pages/trump/trump",
+        "iconPath": "image/wp.png",
+        "selectedIconPath": "image/wpselect.png",
+        "text": "王牌强档"
+    },{
+        "pagePath": "pages/my/my",
+        "iconPath": "image/my.png",
+        "selectedIconPath": "image/myselect.png",
+        "text": "我的"
+    }]
+    },
+    "networkTimeout": {
+        "request": 10000,
+        "connectSocket": 10000,
+        "uploadFile": 10000,
+        "downloadFile": 10000
+    },
+    "debug": true
+}

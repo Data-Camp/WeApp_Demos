@@ -1,0 +1,58 @@
+<!--course.wxml-->
+<view class="container cs_container">
+    <!-- 每日任务信息 -->
+    <view class="cs-header">
+        <image src="images/img_read_taskBg.png" class="cs-header-taskBg"/>
+        <view class="cs-header-info">
+            <image class="cs-header-info-img" src="{{courseList.todayTask.course_img}}"></image>
+            <view class="cs-header-info-content">
+                <text class="cshic-text">{{courseList.todayTask.sub_cs_name}}</text>
+                <image class="go_this_task" src="images/btn_read_go.png" background-size="contain"></image>
+                <text class="finished_num">已学：<text class="f-num">{{courseList.todayTask.finished_num}}</text>人
+                </text>
+            </view>
+        </view>
+    </view>
+    <!-- 日历卡 start-->
+    <view class="cs-plan-table">
+        <block wx:for-items="{{courseList.courseList}}" wx:for-item="csItem" wx:key="csItem">
+            <view bindtap="tapCsPlanItem" class="csItem" id="{{index}}" data-status="{{csItem.status}}"
+                  data-sub_cs_id="{{csItem.sub_cs_id}}" data-relate_record_id="{{csItem.relate_record_id}}"
+                  style="background: url({{csItem.course_img}}) no-repeat center center;background-size: cover;">
+                <!-- （将来）暂时不可跟读 -->
+                <block wx:if="{{csItem.status === 1}}">
+                    <view class="csItem-mask"></view>
+                </block>
+                <!-- （将来）可以预习 -->
+                <block wx:if="{{csItem.status === 2}}">
+                    <view class="csItem-mask"></view>
+                </block>
+                <!-- （今天）计划完成的任务 -->
+                <block wx:if="{{csItem.status === 3}}"></block>
+                <!-- （过去）正常完成的跟读 -->
+                <block wx:if="{{csItem.status === 4}}">
+                    <view class="csItem-mask">
+                        <image class="task-status" src="images/img_read_flower_pink.png"></image>
+                    </view>
+                </block>
+                <!-- （过去）补录 -->
+                <block wx:if="{{csItem.status === 5}}">
+                    <view class="csItem-mask">
+                        <image class="task-status" src="images/img_read_flower_red.png"></image>
+                    </view>
+                </block>
+                <!-- （过去）未跟读，也未补录 -->
+                <block wx:if="{{csItem.status === 6}}">
+                    <view class="csItem-mask">
+                        <image class="task-status" src="images/img_read_flower_white.png"></image>
+                    </view>
+                </block>
+                <text class="plan-date">{{csItem.plan_date}}</text>
+            </view>
+        </block>
+    </view>
+    <view class="fixed-buy-comment-card">
+        <view class="buy-t1">购买点评卡</view>
+        <view class="buy-t2">（专业老师指导孩子每次发音）</view>
+    </view>
+</view>

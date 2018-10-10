@@ -1,0 +1,55 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/search/index",
+    "pages/logs/logs",
+    "pages/booklist/index",
+    "pages/category/index",
+    "pages/free/index",
+    "pages/rank/index",
+    "pages/detail/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "rgb(6, 195, 173)",
+    "navigationBarTitleText": "新浪读书",
+    "navigationBarTextStyle":"whirte"
+  },
+  "tabBar":{
+    "color":"#444",
+    "selectedColor":"#dd514c",
+    "borderStyle":"white",
+    "background-color":"#fff",
+    "list":[
+      {
+        "pagePath":"pages/index/index",
+        "iconPath":"img/topBar/navBar1.png",
+        "selectedIconPath":"img/topBar/navBar11.png",
+        "text":"首页"
+      },
+      {
+        "pagePath":"pages/free/index",
+        "iconPath":"img/topBar/navBar3.png",
+        "selectedIconPath":"img/topBar/navBar33.png",
+        "text":"免费"
+      },
+      {
+        "pagePath":"pages/booklist/index",
+        "iconPath":"img/topBar/navBar4.png",
+        "selectedIconPath":"img/topBar/navBar44.png",
+        "text":"书单"
+      },{
+        "pagePath":"pages/category/index",
+        "iconPath":"img/topBar/navBar2.png",
+        "selectedIconPath":"img/topBar/navBar22.png",
+        "text":"分类"
+      },{
+        "pagePath":"pages/rank/index",
+        "iconPath":"img/topBar/navBar55.png",
+        "selectedIconPath":"img/topBar/navBar5.png",
+        "text":"榜单"
+      }
+      
+    ]
+  }
+}

@@ -1,0 +1,223 @@
+page {
+	height:100%;
+	background: #EEEEEE;
+}
+.container {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items:center;
+	font-size:26rpx;
+}
+.head{
+	width:100%;
+	background:rgba(74,88,106,0.9);
+	display: flex;
+	color:#fff;
+	font-size:24rpx;
+	height: 6%;
+	line-height: 6%;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 20px;
+	box-sizing: border-box;
+	.headLeft{
+		align-items: center;
+	    justify-content: space-between;
+		display: flex;
+	}
+	.go{
+		width: 70px;
+		height: 36px;
+		line-height: 1rem;
+		background:#FFFFFF;
+		color:#647184;
+		border-radius: 8rpx;
+		margin: 0 30px 0 0;
+		text-align: center;
+	}
+	.time{
+		margin-left: 30px;
+	}
+}
+
+.wrap {
+	width:100%;
+	height: 94%;
+	.airticket {
+		height:100%;
+		padding: 10px 10px 0;
+		.ticketList{
+			background: #fff;
+			margin-bottom: 10px;
+			border-radius: 10px;
+		}
+	}
+}
+.wrap .ticketList .ticketList_top {
+	height:2.8rem;
+	display:flex;
+	flex-direction:row;
+	justify-content:space-between;
+	padding:20px 25px 12px;
+	border-bottom:1px dashed #D2D2D5;/*no*/
+	.flight_info{
+		.flight_info_t {
+			display:flex;
+			flex-direction:row;
+			height:55%;
+			align-items: center;
+			text {
+				font-size:40rpx;
+				color:#4A586A;
+			}
+			.timeLine {
+				display:flex;
+				flex-direction:column;
+				text-align:center;
+				margin:0 0.533rem;
+				image{
+					width: 84px;
+					height: 15px;
+					display: block;
+				}
+			}
+		}
+		.flight_info_b {
+			display:flex;
+			flex-direction:row;
+			justify-content:space-between;
+		}
+	}
+	.flight_price {
+		text-align:right;
+		color:#FF7F00;
+		font-size: 22rpx;
+		.price {
+			height:1.467rem;
+		}
+		text{
+            font-size: 40rpx;
+		}
+		.yuan{
+			font-size: 24rpx;
+		}
+	}
+}
+.wrap .ticketList .ticketList_btm {
+	padding:0 25px;
+	height: 60px;
+	line-height: 60px;
+	display:flex;
+	justify-content:space-between;
+	position: relative;
+	.shadow{
+		width: 0;
+		height: 0;
+		position:absolute;
+		top: 42%;
+		right: 60px;
+		transform: translate(0,-50%);
+		border-width: 12px;
+		border-style: solid;
+		border-color: transparent transparent #627083 transparent;
+		&.shadDow{
+		transform: rotateX(-180deg);
+		}
+	}
+}
+.ticketList .ticketDetail{
+	background: #F9F9F9;
+	position: relative;
+	&:after{
+		content: '';
+		width: 200%;
+		height: 0;
+		position: absolute;
+		left: 0;
+		top: 0;
+        border-top:1px dashed #F1F1F1; /*no*/
+		transform: scale(0.5);
+		transform-origin: 0 0;
+	}
+}
+
+.wrap .ticketList .ticketDetailList {
+	margin:0 0 0.272rem;
+	color:#7A8CA4;
+	padding:0.4rem 1.333rem 0.4rem 0.8rem;
+	border-bottom:1px dashed #D2D2D5;/*no*/
+	&:last-child {
+		border-bottom: none;
+	}
+	.book {
+		display:flex;
+		justify-content:space-between;
+		.cabinType{
+			font-size:32rpx;
+			color:#000;
+			display:flex;
+			.privilege {
+				font-size:24rpx;
+				color:#FF7F00;
+				text-align:center;
+				line-height:1.333rem;
+				margin-left:0.267rem;
+			}
+		}
+		.price {
+			font-size:40rpx;
+			color:#FF7F00;
+			margin-left:0.4rem;
+			.rmb{
+				font-size:22rpx;
+			}
+			.addj{
+                font-size:24rpx;
+			}
+		}
+	}
+	.priceInfo {
+		display:flex;
+		justify-content:space-between;
+		.reminder {
+			display:flex;
+			.mealService {
+				text-align:left;
+				font-size:22rpx;
+				position:relative;
+				image{
+					width:0.667rem;
+					height:0.667rem;
+					top:10%;
+					position:absolute;
+				}
+				text{
+					margin:0.267rem 0.933rem;
+				}
+			}
+		}
+		.moreTicket {
+			font-size:22rpx;
+		}
+	}
+}
+
+.foot {
+	position:fixed;
+	bottom:0;
+	left:0;
+	width:100%;
+	height: 2.186rem;
+	background:rgba(74,88,106,0.9);
+	display: flex;
+	flex-direction: row;
+	color:#FFFFFF;
+	font-size:24rpx;
+}
+.img {
+	width:0.453rem;
+	height:0.533rem;
+	margin-top: 0.907rem;
+}

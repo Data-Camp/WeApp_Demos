@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/home/home"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#d93b56",
+    "navigationBarTitleText": "一元夺宝",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#888989",
+    "selectedColor": "#da3751",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "list": [{
+      "text": "夺宝",
+      "pagePath": "pages/home/home",
+      "iconPath": "resources/images/ic_home.png",
+      "selectedIconPath":"resources/images/ic_home_selected.png"
+    },{
+      "text": "开奖",
+      "pagePath": "pages/home/home",
+      "iconPath": "resources/images/ic_win.png",
+      "selectedIconPath":"resources/images/ic_win_selected.png"
+    },{
+      "text": "发现",
+      "pagePath": "pages/home/home",
+      "iconPath": "resources/images/ic_find.png",
+      "selectedIconPath":"resources/images/ic_find_selected.png"
+    },{
+      "text": "清单",
+      "pagePath": "pages/home/home",
+      "iconPath": "resources/images/ic_listing.png",
+      "selectedIconPath":"resources/images/ic_listing_selected.png"
+    },{
+      "text": "我",
+      "pagePath": "pages/home/home",
+      "iconPath": "resources/images/ic_user.png",
+      "selectedIconPath":"resources/images/ic_user_selected.png"
+    }]
+  }
+}

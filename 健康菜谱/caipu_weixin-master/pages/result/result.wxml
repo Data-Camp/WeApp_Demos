@@ -1,0 +1,11 @@
+<view>
+    <navigator wx:for="{{arr_res}}" url="{{url}}?id={{item.id}}&name={{item.name}}">
+        <view class="main">
+            <image class="img" src="http://tnfs.tngou.net/image{{item.img}}" />
+            <view class="text">
+                <text i class="title">{{item.name}}</text>
+                <text class="subtitle">{{item.keywords}}</text>
+            </view>
+        </view>
+    </navigator>
+</view>

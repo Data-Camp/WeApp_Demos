@@ -1,0 +1,22 @@
+ <view class="line-header">
+    <view class="line-title">
+        <view class="line-name-area">
+            <text class="line-name">
+                {{lineData.name}}
+            </text>
+            <text class="line-from">
+                {{lineData.starting_station}} -> 
+            </text>
+           
+            <text class="line-to">
+                {{lineData.terminal_station}}
+            </text>
+        </view>
+        <view class="line-time-area">
+            <view  class="line-start">首班</view>
+            <view  class="line-start-time">{{lineData.first_time}}</view>
+            <view  class="line-end">末班</view>
+            <view class="line-end-time">{{lineData.last_time}}</view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,44 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/index/play/play",
+    "pages/data/data",
+    "pages/data/search/search",
+    "pages/data/search/result/result",
+    "pages/data/rank/rank",
+    "pages/data/rank/rankdetail/rankdetail",
+    "pages/data/hero/hero",
+    "pages/data/hero/herodetail/herodetail",
+    "pages/data/hero_free/hero_free",
+    "pages/data/area/area",
+    "pages/userinfo/userinfo",
+    "pages/userinfo/battledetail/battledetail"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#403e3e",
+    "navigationBarTitleText": "英雄联盟",
+    "navigationBarTextStyle":"white",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "selectedColor":"#ea8010",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "视频",
+      "iconPath": "img/tab/video.png",
+      "selectedIconPath": "img/tab/video_checked.png"
+    }, {
+      "pagePath": "pages/data/data",
+      "text": "数据库",
+      "iconPath": "img/tab/discovery.png",
+      "selectedIconPath": "img/tab/discovery_checked.png"
+    }, {
+      "pagePath": "pages/userinfo/userinfo",
+      "text": "我",
+      "iconPath": "img/tab/user.png",
+      "selectedIconPath": "img/tab/user_checked.png"
+    }]
+  },
+  "debug": "true"
+}

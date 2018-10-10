@@ -1,0 +1,25 @@
+<view class="container">
+    <view class="searchform ">
+        <input id="bookname" bindinput="changeValue" class="searchinput pct80 bg-white" placeholder="请输入书ID" value=""/>
+        <view class="btn" style="background:rgba(6, 195, 173,0.85)" bindtap="toSearch">搜索</view>
+    </view>
+    <scroll-view scroll-y="true" class="bookitems-section" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-top="100">
+        <view class='floortitle' wx:if="{{view_show}}">
+          <view class='floortitlemoreicon' style="font-size:12px">共：<span style="color:red;font-size:12px">{{count}}</span> 条数据</view>
+        </view>
+        <block wx:for="{{bookList}}" wx:key="unique">
+            <navigator hover-class="nav-hover" url="../detail/index?id={{item.id}}">
+                <view class="book_item"> 
+                    <image mode="aspectFit" class="book_item_img" src="{{item.img}}"></image>
+                    <view class="book_item_infos">
+                        <view class="book_title">{{item.title}}</view>
+                        <view class="book_author">作者：{{item.author}}</view>
+                        <view class="book_tags">标签：{{item.tags}}</view>
+                        <view class="book_item_summary">摘要：{{item.info}}</view>
+                    </view>
+                </view>
+            </navigator>
+        </block> 
+    
+    </scroll-view>
+</view>

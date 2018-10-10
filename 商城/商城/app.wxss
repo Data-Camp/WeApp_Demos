@@ -1,0 +1,6 @@
+page {
+  background-color: #f5f6f7;
+  height: 100%;
+  letter-spacing: 1px;
+}
+

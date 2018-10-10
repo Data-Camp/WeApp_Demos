@@ -1,0 +1,13 @@
+{
+  "pages":[
+    "pages/index/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "backgroundColor":"#f6f6f6",
+    "navigationBarBackgroundColor": "#ffff00",
+    "navigationBarTitleText": "题库demo",
+    "navigationBarTextStyle":"black",
+    "enablePullDownRefresh":true
+  }
+}

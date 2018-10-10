@@ -1,0 +1,5 @@
+<view class="play">
+    <video src="http://61.184.192.170/c1/2016/dianshiju/qingyunzhi_22955/AF2527DA30D84C87ED5371FF3FE4A026_20160806_1_1_209.mp4?uuid=45c6e2146c194c74873f92877f305797&t=57fbb3cd&pno=1031&sign=954c5dd70283b75fc69a6b6822f93dc8&win=300&srgid=41&urgid=1556&srgids=41&nid=991&payload=usertoken%3dhit%3d1%5eruip%3d2095616649&rdur=21600&arange=0&limitrate=0&fid=AF2527DA30D84C87ED5371FF3FE4A026&ver=0x03" binderror=""></video>
+    <view class="videoName v">{{name}}</view>
+    <view class="videoDesc v v2">牵扯版权问题,视频接口暂时没有,你懂得~</view>
+</view>

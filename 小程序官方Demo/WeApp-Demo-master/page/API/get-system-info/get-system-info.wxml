@@ -1,0 +1,44 @@
+<import src="../common/header.wxml" />
+<import src="../common/footer.wxml" />
+
+<view class="container">
+  <template is="header" data="{{title: 'getSystemInfo'}}"/>
+
+  <view class="page-body">
+    <view class="page-body-wrapper">
+      <view class="page-body-form">
+        <view class="page-body-form-item">
+          <text class="page-body-form-key">手机型号</text>
+          <input class="page-body-form-value" type="text" disabled="{{true}}" placeholder="未获取" value="{{systemInfo.model}}"></input>
+        </view>
+        <view class="page-body-form-item">
+          <text class="page-body-form-key">微信语言</text>
+          <input class="page-body-form-value" type="text" disabled="{{true}}" placeholder="未获取" value="{{systemInfo.language}}"></input>
+        </view>
+        <view class="page-body-form-item">
+          <text class="page-body-form-key">微信版本</text>
+          <input class="page-body-form-value" type="text" disabled="{{true}}" placeholder="未获取" value="{{systemInfo.version}}"></input>
+        </view>
+        <view class="page-body-form-item">
+          <text class="page-body-form-key">屏幕宽度</text>
+          <input class="page-body-form-value" type="text" disabled="{{true}}" placeholder="未获取" value="{{systemInfo.windowWidth}}"></input>
+        </view>
+        <view class="page-body-form-item">
+          <text class="page-body-form-key">屏幕高度</text>
+          <input class="page-body-form-value" type="text" disabled="{{true}}" placeholder="未获取" value="{{systemInfo.windowHeight}}"></input>
+        </view>
+        <view class="page-body-form-item">
+          <text class="page-body-form-key">DPI</text>
+          <input class="page-body-form-value" type="text" disabled="{{true}}" placeholder="未获取" value="{{systemInfo.pixelRatio}}"></input>
+        </view>
+      </view>
+      <view class="page-body-buttons">
+        <button class="page-body-button" type="primary" bindtap="getSystemInfo">获取手机系统信息</button>
+      </view>
+    </view>
+  </view>
+
+  <template is="footer" />
+</view>
+
+

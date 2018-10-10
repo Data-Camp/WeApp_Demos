@@ -1,0 +1,67 @@
+<!--pages/feedback/index.wxml-->
+<view class="container">
+    <import src="/template/addtell.wxml"/>
+    <template is="addtell" data="{{...addtell}}"/>
+  <!--反馈内容-->
+     <ul class="scrollwechat"  bindtap="closeimg">
+      <scroll-view class="scrollview" scroll-y="true" >
+      <block  wx:for="{{feedback}}" wx:key="index">
+       <li wx:if="{{item.myDate}}" class="mydate">
+            <view class="mydatebox">
+              <text class="mydatetext">{{item.myDate}}</text>
+             </view>
+        </li>
+      <li class="{{item.role?'sys':'user'}}">
+      <!--头像-->
+        <view class="{{item.role?'imgview1':'imgview2'}}"><image class="headimg" src="{{item.img}}"></image></view>
+        <!--三角-->
+         <view class="triangle">
+              <image wx:if="{{item.role}}"  src="../../images/triangleRight.png"></image>
+              <image wx:else  src="../../images/triangleLeft.png"></image>
+         </view>
+         <!--内容 ：图片/文字-->
+        <view class="{{item.role?'textview2':'textview'}}">
+          <view class="feedbackimg" wx:if="{{item.content_type}}">  <image  src="{{item.content}}"></image></view>
+          <text class="feedbacktext" wx:else>{{item.content}}</text>
+        </view>
+        <view wx:if="{{networkType=='fail'}}"><icon type="warn" size="20"/></view>
+        <view class="{{item.role?'imgview1':'imgview2'}}"></view>
+      </li>
+      </block>
+      <view class="link"></view>
+       </scroll-view>
+    </ul>
+
+ 
+  <!--提交框-->
+  <view  class="footer">
+      <view  class="footinput">
+        <view class="input"><input bindfocus="bindfocus" bindblur='bindblur'  value="{{addinput}}" type="text" /></view>
+      </view>
+      <view wx:if="{{sendflag}}" class="foodsend">
+        <view class="send">发送</view>
+      </view>
+      <view wx:else class="footadd" bindtap="bindtapimg">
+        <view class="addbroder">
+            <image src="../../images/add.png"/>
+        </view>
+      </view>
+  </view>
+  <!--提交图片-->
+  <view class="footaddbox"  hidden="{{flag ? true : false}}">
+      <ul>
+        <li bindtap="footaddimg">
+          <view class="footaddimg"><image src="../../images/img.png"></image></view>
+          <text>添加图片</text>  
+        </li>
+        <li bindtap="footaddtell">
+          <view class="footaddtext"><image src="../../images/tell.png"></image></view>
+          <text>联系方式</text>
+        </li>
+        <li bindtap="footaddmore">
+          <view class="footaddtext"><image src="../../images/add.png"></image></view>
+          <text>更多</text>
+        </li>
+      </ul>
+  </view>
+</view>

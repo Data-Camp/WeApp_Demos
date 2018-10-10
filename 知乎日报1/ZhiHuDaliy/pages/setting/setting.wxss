@@ -1,0 +1,42 @@
+.setting-header {
+    margin: 40rpx 40rpx 0 40rpx;
+    margin-bottom: 20rpx;
+    font-size: 30rpx;
+    color: #1891D4
+}
+
+.setting-item:active {
+    background: #FAFAFA;
+}
+.setting-item .inner {
+    padding: 20rpx 0;
+    margin: 0 40rpx;
+    position: relative;
+    border-bottom: 1px solid #EEE;
+}
+.setting-item.option .content {
+    margin-right: 120rpx;
+}
+.setting-item.option .checker{
+    position: absolute;
+    top: 30rpx;
+    right: 0;
+    margin-top: -10rpx;
+}
+
+.setting-item .title,
+.setting-item .desc  {
+    display: block;
+    overflow: hidden;
+    white-space:nowrap;
+    text-overflow: ellipsis
+}
+
+.setting-item .title {
+    font-size: 35rpx;
+}
+.setting-item .desc {
+    margin-top: 20rpx;
+    font-size: 30rpx;
+    color: #AAA;
+}

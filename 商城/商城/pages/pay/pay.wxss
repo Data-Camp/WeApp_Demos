@@ -1,0 +1,103 @@
+.pay_address_wrap {
+	background-color: #FFF;
+	padding: 10px 0;
+	position: relative;
+	padding-left: 50px;
+	padding-right: 40px;
+	height: 50px;
+}
+.address_icon {
+	position: absolute;
+	top: 10px;
+	left: 0;
+	width: 50px;
+	height: 50px;
+	background-image: url(../../image/icon-dw.png);
+	background-size: 28px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.pay_address {
+	font-size: 14px;
+}
+.pay_contact {
+	margin-bottom: 8px;
+}
+.pay_address_sel {
+	position: absolute;
+	width: 40px;
+    height: 50px;
+    right: 0;
+    top: 10px;
+    background-image: url(../../image/icon-arrow.png);
+    background-repeat: no-repeat;
+    background-size: 16px;
+    background-position: center;
+}
+.pay_order_wrap {
+	background-color: #FFF;
+	margin-top: 10px;
+}
+.table_header {
+	padding: 10px;
+	font-size: 14px;
+	border-bottom: 1px solid #E5E5E5;
+}
+.table_goods_name {
+	display: inline-block;
+	width: 60%;
+	white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+.table_goods_num {
+	display: inline-block;
+	width: 15%;
+	text-align: right;
+}
+.table_goods_con {
+	display: inline-block;
+	width: 25%;
+	text-align: right;
+}
+.table_content {
+	font-size: 12px;
+	padding: 0 10px;
+	padding-bottom: 10px;
+}
+.table_content_item {
+	padding-top: 10px;
+}
+.pay_remarks {
+	background-color: #FFF;
+	font-size: 14px;
+	padding: 10px;
+	margin-top: 10px;
+}
+.car_bot {
+    position: fixed;
+    width: 100%;
+    background-color: #FFF;
+    bottom: 0;
+    border-bottom: 1px solid #E5E5E5;
+    font-size: 14px;
+}
+.car_bot_wrap {
+    padding: 10px;
+    height: 30px;
+    line-height: 30px;
+}
+.car_order_confirm {
+    display: inline-block;
+    float: right;
+    background-color: #ff7e3a;
+    color: #FFF;
+    border-radius: 3px;
+    width: 80px;
+    text-align: center;
+}
+.car_total_money {
+    display: inline-block;
+    color: #FF0000;
+    margin-left: 5px;
+}

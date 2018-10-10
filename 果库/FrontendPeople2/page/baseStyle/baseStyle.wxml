@@ -1,0 +1,12 @@
+<view class="c-minheight bottomGrayboder" data-c_e_id="wx_view_fcfbf70f">
+    <text class="c-block wx-text_P3cI8S" data-c_e_id="wx_text_eddee6b6">bottomGrayboder</text>
+</view>
+<view class="c-minheight wx-view_BngLPK" data-c_e_id="wx_view_4ea2b587">
+    <text class="c-block placeholderstyle" data-c_e_id="wx_text_c5816536">placeholderstyle</text>
+</view>
+<view class="c-minheight rightGrayboder" data-c_e_id="wx_viewe9994826">
+    <text class="c-block wx-text_P3cI8S" data-c_e_id="wx_textf8f496ca">rightGrayboder</text>
+</view>
+<view bindtap="tap_5d3eb4bb" class="c-minheight topGrayboder" data-c_e_id="wx_viewdd13f818">
+    <text class="c-block wx-text_P3cI8S" data-c_e_id="wx_textdd0e8ae4">topGrayboder</text>
+</view>

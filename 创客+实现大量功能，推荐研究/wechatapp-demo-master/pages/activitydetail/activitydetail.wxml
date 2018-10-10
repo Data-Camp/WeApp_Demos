@@ -1,0 +1,59 @@
+<!--logs.wxml-->
+<view class="container">
+	<view class="container-body space-content">
+	  <view class="space-top">
+	  	<view class="space-banner" bindtap="imgPreview">
+		  	<swiper
+		  	  autoplay="{{true}}" interval="{{4000}}" duration="{{1000}}" bindchange="setCurrent">
+		  	  <block wx:for="{{spaceimgs}}" wx:key="*this">
+		  	    <swiper-item>
+		  	      <image src="{{item}}" mode="aspectFill" class="slide-image"/>
+		  	    </swiper-item>
+		  	  </block>
+		  	</swiper>
+	  	  <view class="number-banner">
+	  	  	<text>{{currentIndex>9?currentIndex:'0'+currentIndex}}</text>
+	  	  	<text>/{{spaceimgs.length>9?spaceimgs.length:'0'+spaceimgs.length}}</text>
+	  	  </view>
+	  	</view>
+  	  <view class="space-info">
+  	  	<view class="space-title">{{activitydata.name}}</view>
+  	  	<view class="space-list">
+  	  		<view class="space-item">
+  	  			<text class="text-left">活动时间：</text>
+  	  			<text class="text-right">{{activitydata.date}}</text>
+  	  		</view>
+  	  		<view class="space-item">
+  	  			<text class="text-left">活动地点：</text>
+  	  			<text class="text-right">{{activitydata.address}}</text>
+  	  		</view>
+  	  		<view class="space-item">
+  	  			<text class="text-left">报名情况：</text>
+  	  			<text class="text-right">已报名<text class="text-orange">{{activitydata.hasentered}}</text>人/限额<text class="text-orange">{{activitydata.total}}</text>人</text>
+  	  		</view>
+  	  		<view class="space-item">
+  	  			<text class="text-left">主办方：</text>
+  	  			<text class="text-right">{{activitydata.hoster}}</text>
+  	  		</view>
+  	  	</view>
+  	  </view>
+	  </view>
+	  <view class="space-block">
+	  	<view class="space-block-title">活动介绍</view>
+	  	<view class="space-block-content">
+	  		<view class="space-passage">平台工作室配置办公桌、椅、文件柜等办公家具，提供空调、网络配套到位，入驻机构可以实现“拎包试制”的便捷创业梦想。平台设立了集商务洽谈、产品展示、沙龙论坛等多功能为一体的商务中心，以及会议室，供学习交流，参观访问。</view>
+	  		<view class="space-passage">特色描述：长三角创业汇免费办理公司注册、创业辅导、财务记账、税务咨询、创业孵化、创新大赛、创业营活动、项目转化、创新基金申报、交流合作、市场调研、宣传推广、会务会展、评估认证、法律援助、资金扶持等，为青年创业者提供信息、渠道、场地、资金等支持和服务。</view>
+	  		<view class="space-passage">地点描述：交通便利，可乘坐公交或地铁，及多处基础设施建设，银行、医院、餐饮、超市等。</view>
+	  	</view>
+  	</view>
+  	<view class="space-block">
+	  	<view class="space-block-title">评论</view>
+	  	<view class="space-block-content">
+
+	  	</view>
+  	</view>
+	</view>
+	<view class="container-footer">
+		<text class="apply-btn">我要报名</text>
+	</view>
+</view>

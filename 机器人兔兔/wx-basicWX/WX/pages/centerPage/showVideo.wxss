@@ -1,0 +1,5 @@
+.btn{
+    width:200px;
+    background: rgba(200, 0, 50, 0.5) !important;
+    margin:10px auto;
+}

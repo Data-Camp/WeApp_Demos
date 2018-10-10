@@ -1,0 +1,36 @@
+<template name="lrc">
+  <view id="lrclist" class="{{!showlrc?'playinghidden':''}}" bindtap="loadlrc" style="overflow:{{lrc.scroll&&!lrc.nolyric&&!lrc.uncollected?'auto':'hidden'}}">
+    <view id="lrcwrap" hidden="{{!lrc}}" style="transform: translateY(-{{lrcindex*100/(lrc.lrc.length+6)}}%)">
+      <view wx:if="{{lrc.nolyric}}">纯音乐，无歌词</view>
+      <view wx:if="{{lrc.scroll&&!lrc.nolyric&&!lrc.uncollected}}">*歌词不支持滚动*</view>
+      <view wx:if="{{lrc.uncollected}}">暂无歌词</view>
+      <view wx:for-items="{{lrc.lrc}}" wx:key="{{item.lrc_sec||idx}}" wx:for-index="idx" class="{{(idx==lrcindex)&&!lrc.scroll?'lrcur':''}} {{((idx==lrcindex-7)||(idx==lrcindex-(-7)))&&!lrc.scroll?'siblings2':''}} {{((idx==lrcindex-6)||(idx==lrcindex-(-6)))&&!lrc.scroll?'siblings2':''}} {{((idx==lrcindex-5)||(idx==lrcindex-(-5)))&&!lrc.scroll?'siblings1':''}}">
+        <text data-time="{{item.lrc_sec}}">{{item.lrc}}</text>
+      </view>
+      <view>
+        <text> </text>
+      </view>
+      <view>
+        <text> </text>
+      </view>
+      <view>
+        <text> </text>
+      </view>
+      <view>
+        <text> </text>
+      </view>
+      <view>
+        <text> </text>
+      </view><view>
+        <text> </text>
+      </view>
+    </view>
+    <view hidden="{{lrc.lrc}}" class="cntloading">歌词加载中...
+      <view>
+        <text class="cl1"></text>
+        <text class="cl2"></text>
+        <text class="cl3"></text>
+      </view>
+    </view>
+  </view>
+</template>

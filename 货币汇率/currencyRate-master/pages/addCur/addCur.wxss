@@ -1,0 +1,44 @@
+.pageHead
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+
+.nameTxt{
+    margin-top: 5rpx; 
+}
+
+.cur_logo{
+    width: 72rpx; 
+    height: 48rpx;
+}
+
+.currencyList{
+    margin-top: 30rpx;
+  background-color: #f2f2f2;
+  }
+ .rowList
+{
+  display: flex;
+  flex-direction:row;
+  justify-content: space-between;
+  align-items: center;
+} 
+.itemImage
+{
+  width: 180rpx;
+  padding: 18rpx; 
+  margin-left: 18rpx;
+  margin-right: 18rpx;
+    text-align: center; 
+  border-bottom: 1rpx solid #d0d0d0;
+  align-items: center;
+}
+ 
+.line{
+    height: 0rpx;
+    width:100%;
+}

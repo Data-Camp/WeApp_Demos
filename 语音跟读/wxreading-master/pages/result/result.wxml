@@ -1,0 +1,67 @@
+<!--logs.wxml-->
+<view class="container result_container">
+    <swiper class="swiper_container">
+        <block wx:for-items="{{readingResult.courseList}}" wx:key="item">
+            <swiper-item class="readingItem">
+                <view class="readingItem-img"
+                      style="background: url({{item.img_url}}) no-repeat center center;background-size: cover;">
+                </view>
+                <view class="readingItem-content">
+                    <text class="item-index">{{index + 1}}/{{readingResult.courseList.length}}</text>
+                    <view class="readingItem-audio-content">
+                        <image class="read-audio-icon" src="images/btn_read_listenB.png" id="{{index}}"
+                               bindtap="tapPlayPartAudio">
+                            <audio src="{{item.audio_url}}" id="partaudio-{{index}}"></audio>
+                        </image>
+                        <view class="read-audio-info">
+                            <text class="ri-en_content">{{item.resource_en_content}}</text>
+                            <text class="ri-content">{{item.resource_content}}</text>
+                        </view>
+                    </view>
+
+                    <!-- 底部 控制区域 -->
+                    <view class="read-audio-control">
+                        <progress percent="20" stroke-width="6" class="read-audio-progress" color="#1ECFA7"/>
+                        <text class="read-audio-duration">{{item.audio_duration}}'</text>
+                        <image class="audio-teacher-intro" src="images/btn_read_teach.png" bindtap="tapBackToCourseIntro" data-sub_cs_id="{{sub_cs_id}}"></image>
+                    </view>
+                </view>
+            </swiper-item>
+        </block>
+    </swiper>
+    <!-- swiper 下面的内容-->
+    <view class="plugin_info_container">
+        <!-- 老师点评 -->
+        <block wx:if="{{readingResult.comment_info}}">
+            <view class="teacher-comment">
+                <image class="teacher-comment-icon" src="images/btn_read_command.png"></image>
+                <view class="teacher-comment-content">{{readingResult.comment_info.comment_content}}</view>
+            </view>
+        </block>
+
+        <!-- 作业记录 -->
+        <view wx:if="{{recordList}}" class="record-list">
+            <image class="record-list-icon" src="images/btn_read_homework.png"></image>
+            <block wx:for-items="{{recordList}}" wx:for-item="recordItem" wx:key="recordItem">
+                <view class="recordItem">
+                    <image class="recordItem-portrait" src="{{recordItem.user_portrait}}" backgound-size="contain">
+                    </image>
+                    <view class="recordItem-info">
+                        <text class="recordItem-uname">{{recordItem.user_name}}</text>
+                        <view class="recordItem-audio" id="{{index}}" bindtap="tapPlayUserRecord">
+                            <image class="recordItem-audio-icon" src="images/btn_read_voice.png"></image>
+                            <audio src="{{recordItem.full_audio_url}}" id="reaudio-{{index}}"></audio>
+                        </view>
+                        <text class="recordItem-time">{{recordItem.create_time_show}}</text>
+                    </view>
+                </view>
+            </block>
+        </view>
+        <view wx:else class="record-list">
+            <image class="record-list-icon" src="images/btn_read_homework.png"></image>
+            <view class="default-record-text">
+                <text>这节课还没人跟读哦，赶快抢沙发~</text>
+            </view>
+        </view>
+    </view>
+</view>

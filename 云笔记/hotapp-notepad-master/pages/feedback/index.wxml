@@ -1,0 +1,21 @@
+<!--/*
+***HotApp云笔记，基于HotApp小程序统计云后台
+***免费云后台申请地址 https://weixin.hotapp.cn/cloud
+***API 文档地址：https://weixin.hotapp.cn/api
+***小程序技术讨论QQ群：173063969
+*/-->
+<!--用户反馈-->
+<form bindsubmit="onSubmit" bindreset="">
+<view class="container">
+    <view class='row text_box'>
+        <textarea class='text' name="content" value="{{content}}" placeholder="请输入您的反馈" />
+    </view>
+    <view class='row btn_box'>
+        <button formType="submit" class='submit'>提交反馈</button>
+    </view>
+    <view class='row version'>
+        <view class='txt'>版本1.0</view>
+        <view class='txt'>本小程序基于HotApp小程序统计云后台开发</view>
+    </view>
+</view>
+</form>

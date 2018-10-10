@@ -1,0 +1,23 @@
+<view class="register-container">
+  <form bindsubmit="formSubmit">
+    <view class="section">
+      <picker class="country" bindchange="bindPickerChange" value="{{index}}"
+        range="{{array}}" bindchange="bindPickerChange">
+        <view class="picker">
+          {{array[index]}}
+          <image src="/images/ic_triangle.png" class="triangle"></image>
+        </view>
+      </picker>
+      <input class="input phone" name="mobile" value="{{mobile}}" placeholder="手机号"
+        placeholder-class="input-placeholder" bindinput="bindMobileInput" />
+    </view>
+
+    <view class="section">
+      <input class="input verification" name="verification" value="{{verification}}" placeholder="验证码" placeholder-class="input-placeholder" />
+      <button size="mini" plain="true" class="verification-btn" hover-class="btn-hover" bindtap="bindGetVerification"> 获取验证码 </button>
+    </view>
+    <view>
+      <button formType="submit" size="mini" plain="true" class="next-btn" hover-class="btn-hover"> 下一步 </button>
+    </view>
+  </form>
+</view>

@@ -1,0 +1,15 @@
+<view id="header"></view>
+<view id="top" class="tab">
+    <view class="tab-item">私人FM</view>
+    <view class="tab-item">每日歌曲推荐</view>
+    <view class="tab-item">云音乐热歌榜</view>
+</view>
+<view id="main">
+    <view class="st_title"><image src="../../../image/cm2_discover_icn_recmd@2x.png"/>推荐歌单
+        <navigator url="../playlistall">更多</navigator>
+    </view>
+
+    <view class="st_title"><image src="../../../image/cm2_discover_icn_newest@2x.png"/>最新音乐
+        <navigator url="../songsa">所有</navigator>
+    </view>
+</view>

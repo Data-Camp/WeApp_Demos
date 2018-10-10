@@ -1,0 +1,44 @@
+.type-body{
+	display: flex;
+	flex-flow: wrap;
+	margin: 20rpx;
+	width: 710rpx;
+}
+
+.type-btn{
+	background: coral;
+	line-height: 1;
+  	text-align:center;
+	color: black !important;
+	border: 2rpx solid #98bf21  !important;
+	width: 153rpx;
+	height: 155rpx;
+	margin: 12rpx;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.type-image{
+	display: block;
+	padding-left: 34.5rpx;
+	padding-right: 34.5rpx;
+    width: 84rpx;
+	height: 84rpx;
+	margin-top: 15rpx;
+}
+
+.type-text{
+	font-size: 24rpx;
+	height: 40rpx;
+	margin-top: 20rpx;
+	white-space: nowrap;/*强制不换行*/
+}
+
+.submitBtn{
+	font-size: 34rpx;
+	border: 2rpx solid #98bf21;	/*边框： 1的宽度 实线 颜色*/
+	width: 85%;
+	position:absolute;
+	left:7.5%;
+	bottom:100rpx;
+}

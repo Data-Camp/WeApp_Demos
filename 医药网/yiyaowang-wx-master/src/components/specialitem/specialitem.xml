@@ -1,0 +1,12 @@
+<view class="specialitem">
+  <image class="cover-image" src="{{props.content.pic}}"></image>
+  <scroll-view scroll-x="true" class="content-items" >
+    <view class="scroll-content">
+      <view class="drugitem" wx:for="{{props.itemsToTemplate}}" wx:key= "{{index}}" catchtap="tap1">
+        <image catchtap="foo"  src="{{item.mainimg1}}"></image>
+        <text class="name">{{item.gift}}</text>
+        <text class="prize">￥{{item.originalPrice}}</text>
+      </view>
+    </view>
+  </scroll-view>
+</view>

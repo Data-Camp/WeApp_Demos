@@ -1,0 +1,44 @@
+<import src="../common/header.wxml" />
+<import src="../common/footer.wxml" />
+
+<view class="container">
+  <template is="header" data="{{title: 'chooseVideo'}}"/>
+
+  <view class="page-body">
+    <view class="page-body-wrapper">
+      <view class="page-body-form">
+        <picker range="{{sourceType}}" bindchange="sourceTypeChange" value="{{sourceTypeIndex}}">
+          <view class="page-body-form-picker">
+            <view class="page-body-form-picker-key">视频来源</view>
+            <view class="page-body-form-picker-value">{{sourceType[sourceTypeIndex]}}</view>
+          </view>
+        </picker>
+        <picker range="{{camera}}" bindchange="cameraChange" value="{{cameraIndex}}">
+          <view class="page-body-form-picker">
+            <view class="page-body-form-picker-key">摄像头</view>
+            <view class="page-body-form-picker-value">{{camera[cameraIndex]}}</view>
+          </view>
+        </picker>
+        <picker range="{{duration}}" bindchange="durationChange" value="{{durationIndex}}">
+          <view class="page-body-form-picker" style="border-bottom: none;">
+            <view class="page-body-form-picker-key">拍摄长度</view>
+            <view class="page-body-form-picker-value">{{duration[durationIndex]}}</view>
+          </view>
+        </picker>
+      </view>
+
+      <view class="page-body-info">
+        <block wx:if="{{src === ''}}">
+          <view class="image-plus" bindtap="chooseVideo">
+            <view class="image-plus-horizontal"></view>
+            <view class="image-plus-vertical"></view>
+          </view>
+        </block>
+        <block wx:if="{{src != ''}}">
+          <video src="{{src}}" class="video"></video>
+        </block>
+      </view>
+    </view>
+  </view>
+</view>
+

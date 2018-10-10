@@ -1,0 +1,158 @@
+<view class="wpp_warp">
+	<!-- <text>测试测试测试</text>  
+-->
+<!-- <div style="width:100%; display: inline-block; background: red; height: 30px;">dsadsadsa</div>
+<div style="width:100%;  display: inline-block; background: orange; height: 30px;">符合迪斯科解放和独守空房几乎都是开放</div>
+-->
+<template is="left" data="{{...item,act_index,scrollLeft}}"/>
+
+<!-- <template is="right" data="{{...item,text,list}}"/> -->
+<template is="new_list"  data="{{...item,animationData}}"/>
+<template is="dialog_setting" data="{{...item,...channels,setMenuListShow,mychannelsShow,recommchannelsShow}}"/>
+
+<action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetChange" class="action_sheet">
+    <action-sheet-item class="item" bindtap="binditem" data-type="1">不感兴趣</action-sheet-item>
+    <action-sheet-cancel class="cancel">取消</action-sheet-cancel>
+</action-sheet>
+
+
+<toast hidden="{{toastHidden}}" duration="1500" bindchange="toastChange">
+    <text  class="toast_text">将减少推荐此类内容</text>
+</toast>
+
+</view>
+
+<template name="left">
+	<view  class="wpp_left">
+		<scroll-view scroll-x="true" class="scroll_box"   bindscrolltoupper="upper" bindscrolltolower="lower" scroll-left="{{scrollLeft}}"   >
+			<block  wx:for-items="{{menu}}" wx:for-item="item">
+				<!-- <view wx:if="{{index==0}}" data-url="{{item.url}}"  class="btn cur"  bindtap="clickHandler" >{{item.title}}</view>
+				-->
+				<text   data-url="{{item.url}}" data-text="{{item.title}}" data-scrollleft="{{index*46}}" data-index="{{index}}" class="btn {{act_index==index ?'cur':''}}"  bindtap="clickHandler" >{{item.title}}</text>
+			</block>
+		</scroll-view>
+		<view class="plus" bindtap="clicksetting">+</view>
+	</view>
+<!--  <canvas canvas-id="1" />
+-->
+</template>
+
+<template name="right">
+	<view class="wpp_right">
+
+	<scroll-view scroll-y="true" style="height: 100%;"  bindscrolltoupper="upper" bindscrolltolower="lower"  scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+	<block  wx:for-items="{{list}}" wx:for-item="item">
+		<navigator url="../detail/detail?id={{item.id}}&title={{item.nm}}">
+			<view class="list_item" data-id="{{item.id}}" data-title="{{item.title}}" data-time="{{item.time}}"  bindtap="clickHandler">
+				<image class="userinfo-avatar-img" src="{{item.img}}" background-size="cover"></image>
+				<view class="u-info">
+					<view class="u-name">
+						<text class="i_text">{{item.nm}}   </text>
+						<text wx:if="{{item['3d']}}" class="is3d">3D</text>
+					</view>
+					<view class="u-time">评分：{{item.sc}}</view>
+					<view class="u-time">{{item.scm}}</view>
+				</view>
+			</view>
+		</navigator>
+	</block>
+	<view class="tips1">
+		<view wx:if="{{hasMore}}" style="display: flex;  color:#999; flex-direction: row;align-items: center;align-self: center;justify-content: center;">
+			<icon type="waiting" size="30"/>
+			<text>玩命的加载中...</text>
+		</view>
+		<view wx:else style="display: flex; color:#999; padding:10px 0; flex-direction: row;align-items: center;align-self: center;justify-content: center;">
+			<text>没有更多内容了</text>
+		</view>
+	</view>
+	</scroll-view>
+	</view>
+</template>
+
+
+<template name="new_list">
+	<view class="wpp_right"> 
+		<scroll-view scroll-y="true" style="height: 100%;"  bindscrolltoupper="upper" bindscrolltolower="lower"  scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+			<block wx:for="{{[1, 2,3,4,5]}}" wx:for-item="i">
+				<view class="news_wrap"   >
+					<view class="click_news">
+						<view class="desc">
+							<text class="dotdot line3 image-margin-right">白恩培被判死缓终身监禁第一人其受贿2白恩培被判死缓终身监禁第一人其受贿2.46亿元创落马官员新高</text>
+							<view class="item_info"> 
+					            <text class="src space">新京报</text>
+					            <text class="cmt space">评论18</text> 
+					            <text class="dislike-news fr" data-id="0000000111__{{i}}"  bindtap="clickInterest"></text>
+							</view>
+						</view>
+						<view class="img">
+							<image src="http://p3.pstatp.com/list/ebd00098cd24c8d0ecf"   />
+						</view>
+					</view>
+				</view>
+
+				<view class="news_wrap">
+					<view class="click_news">
+						<text class="dotdot line3 image-margin-right">湄公河反派原型糯康：花10年从马仔到毒王，被抓后装死对抗审讯</text>
+						<view class="list_image">
+				            <view class="clearfix">
+				                <view class="list_img_holder">
+				                	<image src="http://p3.pstatp.com/list/e59000273578f3d5c2c" />
+				                </view>
+				                <view class="list_img_holder">
+				                	<image src="http://p3.pstatp.com/list/e58000e41b7b913ad42" />
+				                </view>
+				                <view class="list_img_holder">
+				                	<image src="http://p3.pstatp.com/list/ef40002de89dca77616" />
+				                </view>
+				            </view>
+				        </view>
+				        <view class="item_info"> 
+				        	<view class="um_logo">
+				        		<image  src="http://p3.pstatp.com/list/e59000273578f3d5c2c" />
+				        	</view>
+				            <text class="src space">每日人物</text>
+				            <text class="cmt space">评论 4622</text> 
+				            <text class="time space" title="2016-10-11 01:22">21分钟前</text> 
+				            <text class="hot_label space">热</text>
+				            <text class="dislike-news  fr" bindtap="clickInterest" data-id="0000000112__{{i}}"></text>
+				        </view>
+					</view>
+				</view>
+
+				<view class="news_wrap">
+					<view class="click_news">
+						<text class="dotdot line3 image-margin-right">湄公河反派原型糯康：花10年从马仔到毒王，被抓后装死对抗审讯</text>
+						<view class="list_image_large">
+				             <image src="http://p3.pstatp.com/list/efc000637b5ade2dea6" />
+				        </view>
+				        <view class="item_info"> 
+				            <text class="src space">每日人物</text>
+				            <text class="cmt space">评论 4622</text> 
+				            <text class="time space" title="2016-10-11 01:22">21分钟前</text> 
+				            <text class="dislike-news  fr" bindtap="clickInterest" data-id="0000000113__{{i}}"></text>
+				        </view>
+					</view>
+				</view>
+			</block> 
+		</scroll-view>
+	</view>
+</template>
+
+
+<template name="dialog_setting">
+	<view class="menu_list_box {{!setMenuListShow? 'show' :''}}"  animation="{{animationData}}">
+		<view class="close" bindtap="closeHandler"></view>
+		<view class="title">我的频道</view>
+		<view>
+			<block wx:for="{{mychannels}}" wx:for-item="i">
+				<view class="news_menu_item" bindlongtap="longtap" data-type="my">{{i}}<view class="close {{!mychannelsShow? 'show' :''}}"></view></view>
+			</block> 
+		</view>
+		<view  class="title">频道推荐</view>
+		<view>
+			<block wx:for="{{recommchannels}}" wx:for-item="i">
+				<view class="news_menu_item" bindlongtap="longtap" data-type="recom">{{i}}<view class="close {{!recommchannelsShow? 'show' :''}}"></view></view>
+			</block> 
+		</view>
+	</view> 
+</template>

@@ -1,0 +1,348 @@
+<template name="html-parse">
+    <block wx:for="{{htmlData}}" wx:key="html">
+        <template is="html-parse-1" data="{{ item:item, htmlParseImageStyle:htmlParseImageStyle }}"/>
+    </block>
+</template>
+<!--图片模板-->
+<template name="html-parse-img">
+    <image bindtap="htmlParseImageTab" 
+            bindload="htmlParseImageLoad" 
+            style="{{htmlParseImageStyle[item.attr.src]}}" 
+            data-src="{{item.attr.src}}" 
+            src="{{item.attr.src}}" 
+            class="html-parse__img"/>
+</template>
+<!--模板嵌套循环1-->
+<template name="html-parse-1">
+    <!--文本节点-->
+    <block wx:if="{{item.node == 'text' && item.text}}"><text>{{item.text}}</text></block>
+    <!--元素节点-->
+    <block wx:if="{{item.node == 'element'}}">
+        <!--图片节点-->
+        <block wx:if="{{item.tag == 'img'}}">
+            <template is="html-parse-img" data="{{ item:item, htmlParseImageStyle:htmlParseImageStyle }}"/>
+        </block>
+        <!--a链接节点-->
+        <block wx:elif="{{item.tag == 'a'}}">
+            <view class="html-parse__{{item.tag}}" data-src="{{item.attr.href}}" bindtap="htmlParseLinkTab" style="{{item.attr.style}}">
+                <block  wx:for="{{item.child}}" wx:key="">   
+                    <template is="html-parse-2" data="{{ item:item, htmlParseImageStyle:htmlParseImageStyle }}"/>
+                </block>
+            </view>
+        </block>
+        <!--换行-->
+        <block wx:elif="{{item.tag == 'br'}}">
+            <text>\n</text>
+        </block>
+        <!--video节点-->
+        <block wx:elif="{{item.tag == 'video'}}">
+            <view class="html-parse__{{item.tag}}" style="{{item.attr.style}}">
+                <video src="{{item.attr.src}}"></video>
+            </view>
+        </block>
+        <!--其他节点-->
+        <view wx:else class="html-parse__element html-parse__{{item.tag}}" style="{{item.attr.style}}">
+            <block wx:for="{{item.child}}" wx:key="">   
+                <template is="html-parse-2" data="{{ item:item, htmlParseImageStyle:htmlParseImageStyle }}"/>
+            </block>
+        </view>
+    </block>
+</template>
+<!--模板嵌套循环1-->
+<template name="html-parse-2">
+    <!--文本节点-->
+    <block wx:if="{{item.node == 'text' && item.text}}"><text>{{item.text}}</text></block>
+    <!--元素节点-->
+    <block wx:if="{{item.node == 'element'}}">
+        <!--图片节点-->
+        <block wx:if="{{item.tag == 'img'}}">
+            <template is="html-parse-img" data="{{ item:item, htmlParseImageStyle:htmlParseImageStyle }}"/>
+        </block>
+        <!--a链接节点-->
+        <block wx:elif="{{item.tag == 'a'}}">
+            <view class="html-parse__{{item.tag}}" data-src="{{item.attr.href}}" bindtap="htmlParseLinkTab" style="{{item.attr.style}}">
+                <block  wx:for="{{item.child}}" wx:key="">   
+                    <template is="html-parse-3" data="{{ item:item, htmlParseImageStyle:htmlParseImageStyle }}"/>
+                </block>
+            </view>
+        </block>
+        <!--换行-->
+        <block wx:elif="{{item.tag == 'br'}}">
+            <text>\n</text>
+        </block>
+        <!--video节点-->
+        <block wx:elif="{{item.tag == 'video'}}">
+            <view class="html-parse__{{item.tag}}" style="{{item.attr.style}}">
+                <video src="{{item.attr.src}}"></video>
+            </view>
+        </block>
+        <!--其他节点-->
+        <view wx:else class="html-parse__element html-parse__{{item.tag}}" style="{{item.attr.style}}">
+            <block wx:for="{{item.child}}" wx:key="">   
+                <template is="html-parse-3" data="{{ item:item, htmlParseImageStyle:htmlParseImageStyle }}"/>
+            </block>
+        </view>
+    </block>
+</template><!--模板嵌套循环1-->
+<template name="html-parse-3">
+    <!--文本节点-->
+    <block wx:if="{{item.node == 'text' && item.text}}"><text>{{item.text}}</text></block>
+    <!--元素节点-->
+    <block wx:if="{{item.node == 'element'}}">
+        <!--图片节点-->
+        <block wx:if="{{item.tag == 'img'}}">
+            <template is="html-parse-img" data="{{ item:item, htmlParseImageStyle:htmlParseImageStyle }}"/>
+        </block>
+        <!--a链接节点-->
+        <block wx:elif="{{item.tag == 'a'}}">
+            <view class="html-parse__{{item.tag}}" data-src="{{item.attr.href}}" bindtap="htmlParseLinkTab" style="{{item.attr.style}}">
+                <block  wx:for="{{item.child}}" wx:key="">   
+                    <template is="html-parse-4" data="{{ item:item, htmlParseImageStyle:htmlParseImageStyle }}"/>
+                </block>
+            </view>
+        </block>
+        <!--换行-->
+        <block wx:elif="{{item.tag == 'br'}}">
+            <text>\n</text>
+        </block>
+        <!--video节点-->
+        <block wx:elif="{{item.tag == 'video'}}">
+            <view class="html-parse__{{item.tag}}" style="{{item.attr.style}}">
+                <video src="{{item.attr.src}}"></video>
+            </view>
+        </block>
+        <!--其他节点-->
+        <view wx:else class="html-parse__element html-parse__{{item.tag}}" style="{{item.attr.style}}">
+            <block wx:for="{{item.child}}" wx:key="">   
+                <template is="html-parse-4" data="{{ item:item, htmlParseImageStyle:htmlParseImageStyle }}"/>
+            </block>
+        </view>
+    </block>
+</template>
+
+<template name="html-parse-4">
+    <!--文本节点-->
+    <block wx:if="{{item.node == 'text' && item.text}}"><text>{{item.text}}</text></block>
+    <!--元素节点-->
+    <block wx:if="{{item.node == 'element'}}">
+        <!--图片节点-->
+        <block wx:if="{{item.tag == 'img'}}">
+            <template is="html-parse-img" data="{{ item:item, htmlParseImageStyle:htmlParseImageStyle }}"/>
+        </block>
+        <!--a链接节点-->
+        <block wx:elif="{{item.tag == 'a'}}">
+            <view class="html-parse__{{item.tag}}" data-src="{{item.attr.href}}" bindtap="htmlParseLinkTab" style="{{item.attr.style}}">
+                <block  wx:for="{{item.child}}" wx:key="">   
+                    <template is="html-parse-5" data="{{ item:item, htmlParseImageStyle:htmlParseImageStyle }}"/>
+                </block>
+            </view>
+        </block>
+        <!--换行-->
+        <block wx:elif="{{item.tag == 'br'}}">
+            <text>\n</text>
+        </block>
+        <!--video节点-->
+        <block wx:elif="{{item.tag == 'video'}}">
+            <view class="html-parse__{{item.tag}}" style="{{item.attr.style}}">
+                <video src="{{item.attr.src}}"></video>
+            </view>
+        </block>
+        <!--其他节点-->
+        <view wx:else class="html-parse__element html-parse__{{item.tag}}" style="{{item.attr.style}}">
+            <block wx:for="{{item.child}}" wx:key="">   
+                <template is="html-parse-5" data="{{ item:item, htmlParseImageStyle:htmlParseImageStyle }}"/>
+            </block>
+        </view>
+    </block>
+</template>
+<template name="html-parse-5">
+    <!--文本节点-->
+    <block wx:if="{{item.node == 'text' && item.text}}"><text>{{item.text}}</text></block>
+    <!--元素节点-->
+    <block wx:if="{{item.node == 'element'}}">
+        <!--图片节点-->
+        <block wx:if="{{item.tag == 'img'}}">
+            <template is="html-parse-img" data="{{ item:item, htmlParseImageStyle:htmlParseImageStyle }}"/>
+        </block>
+        <!--a链接节点-->
+        <block wx:elif="{{item.tag == 'a'}}">
+            <view class="html-parse__{{item.tag}}" data-src="{{item.attr.href}}" bindtap="htmlParseLinkTab" style="{{item.attr.style}}">
+                <block  wx:for="{{item.child}}" wx:key="">   
+                    <template is="html-parse-6" data="{{ item:item, htmlParseImageStyle:htmlParseImageStyle }}"/>
+                </block>
+            </view>
+        </block>
+        <!--换行-->
+        <block wx:elif="{{item.tag == 'br'}}">
+            <text>\n</text>
+        </block>
+        <!--video节点-->
+        <block wx:elif="{{item.tag == 'video'}}">
+            <view class="html-parse__{{item.tag}}" style="{{item.attr.style}}">
+                <video src="{{item.attr.src}}"></video>
+            </view>
+        </block>
+        <!--其他节点-->
+        <view wx:else class="html-parse__element html-parse__{{item.tag}}" style="{{item.attr.style}}">
+            <block wx:for="{{item.child}}" wx:key="">   
+                <template is="html-parse-6" data="{{ item:item, htmlParseImageStyle:htmlParseImageStyle }}"/>
+            </block>
+        </view>
+    </block>
+</template>
+<template name="html-parse-6">
+    <!--文本节点-->
+    <block wx:if="{{item.node == 'text' && item.text}}"><text>{{item.text}}</text></block>
+    <!--元素节点-->
+    <block wx:if="{{item.node == 'element'}}">
+        <!--图片节点-->
+        <block wx:if="{{item.tag == 'img'}}">
+            <template is="html-parse-img" data="{{ item:item, htmlParseImageStyle:htmlParseImageStyle }}"/>
+        </block>
+        <!--a链接节点-->
+        <block wx:elif="{{item.tag == 'a'}}">
+            <view class="html-parse__{{item.tag}}" data-src="{{item.attr.href}}" bindtap="htmlParseLinkTab" style="{{item.attr.style}}">
+                <block  wx:for="{{item.child}}" wx:key="">   
+                    <template is="html-parse-7" data="{{ item:item, htmlParseImageStyle:htmlParseImageStyle }}"/>
+                </block>
+            </view>
+        </block>
+        <!--换行-->
+        <block wx:elif="{{item.tag == 'br'}}">
+            <text>\n</text>
+        </block>
+        <!--video节点-->
+        <block wx:elif="{{item.tag == 'video'}}">
+            <view class="html-parse__{{item.tag}}" style="{{item.attr.style}}">
+                <video src="{{item.attr.src}}"></video>
+            </view>
+        </block>
+        <!--其他节点-->
+        <view wx:else class="html-parse__element html-parse__{{item.tag}}" style="{{item.attr.style}}">
+            <block wx:for="{{item.child}}" wx:key="">   
+                <template is="html-parse-7" data="{{ item:item, htmlParseImageStyle:htmlParseImageStyle }}"/>
+            </block>
+        </view>
+    </block>
+</template>
+<template name="html-parse-7">
+    <!--文本节点-->
+    <block wx:if="{{item.node == 'text' && item.text}}"><text>{{item.text}}</text></block>
+    <!--元素节点-->
+    <block wx:if="{{item.node == 'element'}}">
+        <!--图片节点-->
+        <block wx:if="{{item.tag == 'img'}}">
+            <template is="html-parse-img" data="{{ item:item, htmlParseImageStyle:htmlParseImageStyle }}"/>
+        </block>
+        <!--a链接节点-->
+        <block wx:elif="{{item.tag == 'a'}}">
+            <view class="html-parse__{{item.tag}}" data-src="{{item.attr.href}}" bindtap="htmlParseLinkTab" style="{{item.attr.style}}">
+                <block  wx:for="{{item.child}}" wx:key="">   
+                    <template is="html-parse-8" data="{{ item:item, htmlParseImageStyle:htmlParseImageStyle }}"/>
+                </block>
+            </view>
+        </block>
+        <!--换行-->
+        <block wx:elif="{{item.tag == 'br'}}">
+            <text>\n</text>
+        </block>
+        <!--video节点-->
+        <block wx:elif="{{item.tag == 'video'}}">
+            <view class="html-parse__{{item.tag}}" style="{{item.attr.style}}">
+                <video src="{{item.attr.src}}"></video>
+            </view>
+        </block>
+        <!--其他节点-->
+        <view wx:else class="html-parse__element html-parse__{{item.tag}}" style="{{item.attr.style}}">
+            <block wx:for="{{item.child}}" wx:key="">   
+                <template is="html-parse-8" data="{{ item:item, htmlParseImageStyle:htmlParseImageStyle }}"/>
+            </block>
+        </view>
+    </block>
+</template>
+<template name="html-parse-8">
+    <!--文本节点-->
+    <block wx:if="{{item.node == 'text' && item.text}}"><text>{{item.text}}</text></block>
+    <!--元素节点-->
+    <block wx:if="{{item.node == 'element'}}">
+        <!--图片节点-->
+        <block wx:if="{{item.tag == 'img'}}">
+            <template is="html-parse-img" data="{{ item:item, htmlParseImageStyle:htmlParseImageStyle }}"/>
+        </block>
+        <!--a链接节点-->
+        <block wx:elif="{{item.tag == 'a'}}">
+            <view class="html-parse__{{item.tag}}" data-src="{{item.attr.href}}" bindtap="htmlParseLinkTab" style="{{item.attr.style}}">
+                <block  wx:for="{{item.child}}" wx:key="">   
+                    <template is="html-parse-9" data="{{ item:item, htmlParseImageStyle:htmlParseImageStyle }}"/>
+                </block>
+            </view>
+        </block>
+        <!--换行-->
+        <block wx:elif="{{item.tag == 'br'}}">
+            <text>\n</text>
+        </block>
+        <!--video节点-->
+        <block wx:elif="{{item.tag == 'video'}}">
+            <view class="html-parse__{{item.tag}}" style="{{item.attr.style}}">
+                <video src="{{item.attr.src}}"></video>
+            </view>
+        </block>
+        <!--其他节点-->
+        <view wx:else class="html-parse__element html-parse__{{item.tag}}" style="{{item.attr.style}}">
+            <block wx:for="{{item.child}}" wx:key="">   
+                <template is="html-parse-9" data="{{ item:item, htmlParseImageStyle:htmlParseImageStyle }}"/>
+            </block>
+        </view>
+    </block>
+</template>
+<template name="html-parse-9">
+    <!--文本节点-->
+    <block wx:if="{{item.node == 'text' && item.text}}"><text>{{item.text}}</text></block>
+    <!--元素节点-->
+    <block wx:if="{{item.node == 'element'}}">
+        <!--图片节点-->
+        <block wx:if="{{item.tag == 'img'}}">
+            <template is="html-parse-img" data="{{ item:item, htmlParseImageStyle:htmlParseImageStyle }}"/>
+        </block>
+        <!--a链接节点-->
+        <block wx:elif="{{item.tag == 'a'}}">
+            <view class="html-parse__{{item.tag}}" data-src="{{item.attr.href}}" bindtap="htmlParseLinkTab" style="{{item.attr.style}}">
+                <block  wx:for="{{item.child}}" wx:key="">   
+                    <template is="html-parse-10" data="{{ item:item, htmlParseImageStyle:htmlParseImageStyle }}"/>
+                </block>
+            </view>
+        </block>
+        <!--换行-->
+        <block wx:elif="{{item.tag == 'br'}}">
+            <text>\n</text>
+        </block>
+        <!--video节点-->
+        <block wx:elif="{{item.tag == 'video'}}">
+            <view class="html-parse__{{item.tag}}" style="{{item.attr.style}}">
+                <video src="{{item.attr.src}}"></video>
+            </view>
+        </block>
+        <!--其他节点-->
+        <view wx:else class="html-parse__element html-parse__{{item.tag}}" style="{{item.attr.style}}">
+            <block wx:for="{{item.child}}" wx:key="">   
+                <template is="html-parse-10" data="{{ item:item, htmlParseImageStyle:htmlParseImageStyle }}"/>
+            </block>
+        </view>
+    </block>
+</template>
+
+<!--最后一嵌套-->
+<template name="html-parse-10">
+    <!--文本节点-->
+    <block wx:if="{{item.node == 'text'}}"><text>{{item.text}}</text></block>
+    <!--元素节点-->
+    <block wx:if="{{item.node == 'element'}}">
+        <!--图片节点-->
+        <block wx:if="{{item.tag == 'img'}}">
+            <template is="html-parse-img" data="{{item}}"/>
+        </block>
+        <block wx:elif="{{item.tag == 'br'}}">
+            <text>\n</text>
+        </block>
+    </block>
+</template>

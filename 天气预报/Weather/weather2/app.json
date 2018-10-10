@@ -1,0 +1,38 @@
+{
+  "pages":[
+    "pages/main/main",
+    "pages/life/life",
+    "pages/future/future"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "天气",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar":{
+    "color": "#8a8a8a",
+    "selectedColor": "#fff",
+    "backgroundColor": "#004fa5",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/main/main",
+        "text": "首页",
+        "iconPath": "pages/assets/img/home-s.png",
+        "selectedIconPath": "pages/assets/img/home.png"
+      },{
+        "pagePath": "pages/life/life",
+        "text": "生活",
+        "iconPath": "pages/assets/img/life-s.png",
+        "selectedIconPath": "pages/assets/img/life.png"
+      },
+      {
+        "pagePath": "pages/future/future",
+        "text": "未来",
+        "iconPath": "pages/assets/img/future-s.png",
+        "selectedIconPath": "pages/assets/img/future.png"
+      }
+    ]
+  }
+}

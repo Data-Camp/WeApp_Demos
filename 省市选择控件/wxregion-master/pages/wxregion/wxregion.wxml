@@ -1,0 +1,8 @@
+<!--index.wxml-->
+<import src="../../tpls/wxregion.wxml"/>
+
+<view class="container">
+    <text class="title">选择地址</text>
+</view>
+
+<template is="wxregion" data="{{provinceData, cityData, region, isShowRegion}}"/>

@@ -1,0 +1,36 @@
+<!--menubar-->
+<scroll-view scroll-x="true" class="menubar">
+    <view class="menu_more">
+        <image src="../../images/menu_more.png"></image>
+    </view>
+    <view class="menu">
+        <text class="{{dataId=='0'?'active':''}}" bindtap="check" id="top" data-id="0">头条</text>
+        <text class="{{dataId=='1'?'active':''}}" bindtap="check" id="shehui" data-id="1">社会</text>
+        <text class="{{dataId=='2'?'active':''}}" bindtap="check" id="guonei" data-id="2">国内</text>
+        <text class="{{dataId=='3'?'active':''}}" bindtap="check" id="guoji" data-id="3">国际</text>
+        <text class="{{dataId=='4'?'active':''}}" bindtap="check" id="yule" data-id="4">娱乐</text>
+        <text class="{{dataId=='5'?'active':''}}" bindtap="check" id="tiyu" data-id="5">体育</text>
+        <text class="{{dataId=='6'?'active':''}}" bindtap="check" id="junshi" data-id="6">军事</text>
+        <text class="{{dataId=='7'?'active':''}}" bindtap="check" id="keji" data-id="7">科技</text>
+        <text class="{{dataId=='8'?'active':''}}" bindtap="check" id="caijing" data-id="8">财经</text>
+        <text class="{{dataId=='9'?'active':''}}" bindtap="check" id="shishang" data-id="9">时尚</text>
+    </view>
+</scroll-view>
+<!--content-->
+<scroll-view scroll-y="true" class="content" style="height: {{windowHeight}}px; width: {{windowWidth}}px;" scroll-y="true" bindscrolltoupper="pullDownRefresh" bindscrolltolower="pullUpLoad">
+    <!--top-->
+    <view class="newsBox top">
+        <block wx:for="{{title}}">
+            <navigator class="details">
+                <text class="title">{{title[index]}}</text>
+                <view class="picBox">
+                    <image src="{{imgUrls[index]}}"></image>
+                </view>
+                <view class="info">
+                    <text class="author">{{author[index]}}</text>
+                    <text class="date">{{date[index]}}</text>
+                </view>
+            </navigator>
+        </block>
+    </view>
+</scroll-view>

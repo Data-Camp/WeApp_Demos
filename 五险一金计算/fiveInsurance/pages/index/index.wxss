@@ -1,0 +1,122 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.area_view {
+  overflow: hidden;
+  text-align: center;
+  padding: 0px 0 10px 20px;
+}
+.area_input {
+  width: 100px;
+  height: 20px;
+  border: 1px solid green;
+  float: left;
+  border-radius: 5px;
+}
+.area_input .picker {
+  padding-top: 5px;
+  color: royalblue;
+  font-size: 14px;
+}
+.area_text {
+  float: left;
+  margin-right: 9px;
+  line-height: 30px;
+}
+.compute_button {
+  position: relative;
+  height: 72px;
+}
+.compute_button .left {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  background: lightgreen;
+  border: 0;
+}
+.compute_button .right {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  background: lightgreen;
+  border: 0;
+}
+.other-button-hover {
+  background-color: #aaa;
+}
+
+.insurance_title {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 20px;
+}
+.insurance_title text {
+  float: left;
+  width: 33%;
+  text-align: left;
+}
+.insurance_item {
+  border-bottom:1rpx dotted #000000;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  height: 20px;
+}
+.insurance_item .item_text {
+  float: left;
+}
+.people_ins{
+  float: left;
+  margin-left: 30px;
+}
+.people_ins input{
+  float: left;
+  width: 40px;
+  height: 20px;
+  margin-left: 20px;
+  border: 1px solid gray;
+}
+.people_ins text, .compony_ins text {
+  margin-left: 10px;
+}
+.compony_ins {
+  float: left;
+}
+.compony_ins input {
+  float: left;
+  width: 40px;
+  height: 20px;
+  margin-left: 20px;
+  border: 1px solid gray;
+}
+.total {
+  padding-top: 30px;
+}
+.total text{
+  float: left;
+  margin-left: 20px;
+}
+.people_total,.compony_total {
+  color: green;
+}
+.compony_value,.people_value {
+  color: red;
+}

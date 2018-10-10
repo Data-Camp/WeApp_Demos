@@ -1,0 +1,171 @@
+<import src="../component/toast.wxml"/>
+
+<template is="loading" data="{{ loading }}"/>
+
+<view wx:if="{{!loading}}" class="container">
+<!--头部-->
+   <view class="head">
+     <view class="inhead">
+       <view class="payment">
+           <view class="paymentLeft">
+             <image src="/images/clock.png" class="clock"></image>
+              <view class="pay-r">{{orderModel.OrderStatus}}</view>
+           </view>
+           <!-- <view wx:if="{{orderModel.NextState == 1 || orderModel.NextState == 2}}" catchtap="gotoPay" class="pay-l">{{orderModel.NextState == 2 ? '补款' : '去支付'}}</view> -->
+       </view>
+       <view class="time">
+            <text>订单：</text>
+            <text>{{orderModel.OrderID}}</text>
+       </view>
+       <view class="time">
+            <text>下单时间：</text>
+            <text>{{orderModel.CreateTime}}</text>
+       </view>
+    </view>
+   </view>
+<!--订单概述和金额-->
+ <view class="point">
+     <view class="inhead points">
+       <view class="points-t">
+          <text class="txt">{{orderModel.OrderTitle}}</text>
+       </view>
+       <view class="time jr">
+          <text>订单金额</text>
+          <text class="number"><text class="rmb">¥</text>{{orderModel.OrderAmount}}</text>
+       </view>
+       <view class="time timePay">
+          <text class="way">支付方式</text>
+          <image src="/images/icon64_appwx_logo.png" class="xxl"></image>
+          <text class="wx">微信支付</text>
+       </view>
+       <view class="cancelOrder">
+         <view class="cancel sure" wx:if="{{orderModel.NextState == 1 || orderModel.NextState == 2}}" catchtap="cancelOrder">取消订单</view>
+         <view wx:else class="cancel">取消订单</view>
+       </view>
+    </view>
+    <image src="/images/huabian.jpg" class="bt-img"></image>
+</view>
+<view class="pannelMain">
+  <!--机票-->
+    <view wx:if="{{orderModel.AirTickets.length > 0}}" class="pannel">
+      <view class="ticket ticket_color">
+          <image src="/images/jpp.jpg" class="ticket-l"></image>
+          <view class="ticket-r">机票</view>
+      </view>
+
+    <block wx:for="{{orderModel.AirTickets}}" wx:key="{{index}}">
+      <view class="goFlight">
+        <view class="flightLine flightDetail">
+          <image src="/images/logo.png"></image>
+          <text class="flightName">{{item.AirCompanyName}}<text class="flightNum">{{item.AirLineCode}}</text></text>
+          <text>|</text>
+          <text>{{item.FlightStyle}}</text>
+        </view>
+
+        <view class="flightDate">
+          <view>
+            <text>{{item.DepartTime1}}</text>
+            <text class="times">{{item.DepartCityName}}</text>
+          </view>
+          <view>
+            <text class="date">{{item.DepartTime0}}</text>
+            <image src="/images/orderLine.png" class="orderLine"></image>
+          </view>
+          <view>
+            <text>{{item.DestinationTime1}}</text>
+            <text class="times times_right">{{item.DestinationCityName}}</text>
+          </view>
+        </view>
+        <view class="flightLine airport">
+          <text>{{item.DepartAirPort}}</text>
+          <text>{{item.DestinationAirPort}}</text>
+        </view>
+      </view>
+    </block>
+    </view>
+
+  <!--酒店-->
+    <view wx:if="{{orderModel.Hotels.length > 0}}" class="pannel">
+      <view class="ticket">
+          <image src="/images/xfz.png" class="ticket-l grogshop-img"></image>
+          <view class="ticket-r">酒店</view>
+      </view>
+      <block wx:for="{{orderModel.Hotels}}" wx:key="{{index}}">
+          <view class="grogshop-m">
+          <view class="inshop">
+            <view class="act actTop">
+                <text class="grod">{{item.HotelName}}</text>
+                <view class="type" catchtap="bindroomInfo" data-index="{{index}}" wx:if="{{!!item.HotelDesc}}">入住提示</view>
+            </view>
+            <view class="act">{{item.RoomName}}</view>
+            <view class="act">{{item.JoinTime0}} 至 {{item.OutTime0}}</view>
+            <view class="act act3">
+                <text>{{item.IntervalDays}}晚</text> |
+                <text>{{item.BookNumber}}间</text> |
+                <text>{{item.IsWifi === true ? '有WIFI' : '无WIFI'}}</text> |
+                <text>{{item.BreakFastType}}</text>
+            </view>
+          </view>
+          </view>
+        </block>
+    </view>
+
+  <!-- 联系人 -->
+    <view class="pannel">
+    <view class="ticket">
+        <image src="/images/person.png" class="ticket-l grogshop-img"></image>
+        <view class="ticket-r">联系人</view>
+    </view>
+    <view class="sum">
+        <text class="sum-l">联系人</text>
+        <view class="sum-r">{{orderModel.ContactUserName}}</view>
+    </view>
+    <view class="sum">
+        <text class="sum-l">邮箱</text>
+        <view class="sum-r">{{orderModel.ContactEmail}}</view>
+    </view>
+    <view class="sum">
+        <text class="sum-l">手机号</text>
+        <view class="sum-r">{{orderModel.ContactMobile}}</view>
+    </view>
+
+    </view>
+
+  <!--旅客信息-->
+    <view wx:if="{{orderModel.Passengers.length > 0}}" class="pannel">
+      <block wx:for="{{orderModel.Passengers}}" wx:key="{{index}}">
+        <view class="sum sum1">
+            <text class="sum-l">旅客</text>
+            <view class="sum-r">
+              <text>{{item.PassengerName}}</text>
+              <text class="add">{{item.CardType}} {{item.CardNo}}</text>
+            </view>
+        </view>
+
+        <view class="sum">
+            <text class="sum-l">手机号</text>
+            <view class="sum-r">{{item.MobilePhone}}</view>
+        </view>
+      </block>
+    </view>
+
+    <view class="pannel cost">
+    <view class="sum">
+        <text class="sum-l">发票</text>
+        <view class="sum-r">{{orderModel.IsNeedInvoince === true ? '需要' : '不需要'}}</view>
+    </view>
+    </view>
+  </view>
+
+  <view class="roomDetails" wx:if="{{roomInfo.show}}">
+    <view>
+      {{roomInfo.infos}}
+    </view>
+    <icon type="clear" size="40" color="#58A4EF" class="closeIcon" catchtap="hideCostDetail"></icon>
+  </view>
+
+</view>
+
+<view wx:elif="{{!login}}" class="tips">
+  <text>抱歉，您登陆失败！</text>
+</view>

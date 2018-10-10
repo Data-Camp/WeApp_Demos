@@ -1,0 +1,117 @@
+.car_item_wrap {
+    position: relative;
+    height: 100px;
+    background-color: #FFF;
+    padding-left: 100px;
+    border-bottom: 1px solid #E7E7EB;
+}
+.car_image_wrap {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.car_item_image {
+    width: 80px;
+    height: 80px;
+}
+.car_item_title {
+    padding: 10px 10px 10px 0;
+    font-size: 14px;
+}
+.car_item_bot {
+   padding: 0 10px 0 0;
+   height: 28px;
+   line-height: 28px;
+}
+.car_item_price {
+    color: #ff0000;
+    font-size: 14px;
+}
+.car_item_operate {
+    display: inline-block;
+    float: right;
+}
+.car_item_btn {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    line-height: 28px;
+    border: 1px solid #B2B2B2;
+    color: #929292;
+}
+.car_item_num {
+    display: inline-block;
+    width: 40px;
+    height: 26px;
+    text-align: center;
+    line-height: 28px;
+    border-top: 1px solid #B2B2B2;
+    border-bottom: 1px solid #B2B2B2;
+    font-size: 14px;
+    position: relative;
+    color: #929292;
+}
+.car_item_del {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background-image: url(../../image/shanchu.png);
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+    float: right;
+    margin-left: 15px;
+}
+.car_bot {
+    position: fixed;
+    width: 100%;
+    background-color: #FFF;
+    bottom: 0;
+    border-bottom: 1px solid #E5E5E5;
+    font-size: 14px;
+}
+.car_bot_wrap {
+    padding: 10px;
+    height: 30px;
+    line-height: 30px;
+}
+.car_order_confirm {
+    display: inline-block;
+    float: right;
+    background-color: #ff7e3a;
+    color: #FFF;
+    border-radius: 3px;
+    width: 80px;
+    text-align: center;
+}
+.car_total_money {
+    display: inline-block;
+    color: #FF0000;
+    margin-left: 5px;
+}
+.car_list_bot {
+    background-color: #FFF;
+    padding: 10px;
+    font-size: 14px;
+    height: 25px;
+    line-height: 25px;
+    padding-right: 50px;
+    text-align: right;
+    position: relative;
+    color: #929292;
+}
+.arrow_wrap {
+    position: absolute;
+    width: 50px;
+    height: 45px;
+    right: 0;
+    top: 0;
+    background-image: url(../../image/icon-arrow.png);
+    background-repeat: no-repeat;
+    background-size: 16px;
+    background-position: 17px 14px;
+}
+.red {
+    color: #FF0000;
+}

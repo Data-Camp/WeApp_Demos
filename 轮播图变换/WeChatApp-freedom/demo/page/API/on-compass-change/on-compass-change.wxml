@@ -1,0 +1,20 @@
+<import src="../common/header.wxml" />
+<import src="../common/footer.wxml" />
+
+<view class="container">
+  <template is="header" data="{{title: 'onCompassChange'}}"/>
+
+  <view class="page-body">
+    <view class="page-body-wrapper">
+      <text class="page-body-text">旋转手机即可获取方位信息</text>
+      <view class="direction">
+        <text class="direction-value">{{direction}}</text>
+        <text class="direction-degree">o</text>
+      </view>
+    </view>
+  </view>
+
+  <template is="footer" />
+</view>
+
+

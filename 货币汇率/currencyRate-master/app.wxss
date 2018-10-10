@@ -1,0 +1,32 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: block;
+  flex-direction: row;
+  align-items: left;
+  justify-content: space-between;
+  padding: 40rpx 0;
+  box-sizing: border-box;
+  font-family:"微软雅黑";
+  font-size: 9pt;
+} 
+.userinfo {
+  display: flex;
+  flex-direction: row;
+  align-items: left;
+}
+
+.userinfo-avatar {
+  width: 60rpx;
+  height:60rpx;
+  margin-left: 30rpx;
+  margin-top: -6rpx;
+  margin-right: 10rpx;
+  margin-bottom: 0rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  font-size: 12pt;
+  color: black;
+}

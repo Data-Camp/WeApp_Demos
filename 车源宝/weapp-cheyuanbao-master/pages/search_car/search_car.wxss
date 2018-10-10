@@ -1,0 +1,51 @@
+.container {
+  height: 100%;
+  background: #f2f2f2;
+  font-size: 24rpx;
+  color:#333;
+}
+
+.find-list{
+  background: #fff; 
+  margin-top: 20rpx; 
+  padding: 20rpx 30rpx 10rpx 20px;
+  /*border-top: 1px #f1f1f1 solid;*/
+  /*border-bottom: 1px #c2c2c2 solid;*/
+}
+.find-items{
+  display: flex;
+  flex: 1;
+  margin-bottom: 15rpx;
+  flex-direction: row;
+  position: relative;
+}
+.find-icon{
+  width: 30rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  margin-right: 10rpx;
+}
+.series{
+  padding-top: 5rpx;
+}
+.find-type{
+  color:#ec5c30;
+  padding-top: 5rpx;
+  position: absolute;
+  right:0;
+  text-align: right;
+}
+.font-type{
+  color:#aaa;
+}
+.font-type-1{
+  position: absolute;
+  right:0;
+  text-align: right;
+}
+.channel{
+  margin-right: 10rpx;
+}
+.earnest-money{
+  color:#ec5c30;
+}

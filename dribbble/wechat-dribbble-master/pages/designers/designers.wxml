@@ -1,0 +1,15 @@
+<scroll-view style="height: {{windowHeight}}px;" bindscrolltolower="loadMore" lower-threshold="800" scroll-y="true">
+<view class="container">		
+	<view class="header-title" bindtap="loadMore">
+		<text class="title">Find Designers</text>
+		<text class="description">by location, skills, availability, and more</text>
+	</view>
+
+	<block wx:for="{{designers}}" wx:for-index="index" wx:key="index">
+    <include src="../../components/designer.wxml" />
+	</block>
+    <block wx:if="{{isShowLoading}}">
+	    <include src="../../components/loading.wxml" />
+    </block>
+</view>
+</scroll-view>

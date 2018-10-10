@@ -1,0 +1,58 @@
+<import src="/templates/dynamic.wxml"/>
+<import src="/templates/leader.wxml"/>
+<!-- loading模块 -->
+<loading hidden="{{hidden}}">
+    加载中...
+</loading>
+
+<!-- 顶部切换 -->
+<view class="swiper-tab">
+    <view class="swiper-tab-list swiper-left {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">收听动态</view>
+    <view class="swiper-tab-list swiper-right {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">收听的人</view>
+</view>
+
+<!-- 内容页 -->
+<view class="no-data" style="display:none;" >
+    <text>没有数据</text>
+</view>
+
+<!--收听动态-->
+<view id="dynamics" wx:if="{{currentTab == 0}}">
+    <!--嵌套模版-->
+        <block wx:for="{{questions}}" wx:for-item="question">
+            <template is="dynamic" data="{{question}}" />
+        </block>
+</view>
+
+<!--收听的人-->
+<view id="leaders" wx:if="{{currentTab == 1}}">
+
+    <view>
+        <text class="category-banner">我收听的人 100</text>
+    </view>
+
+    <view>
+        <template is="leader"/>
+    </view>
+
+    <view>
+        <text class="category-banner">为你推荐</text>
+    </view>
+
+    <view>
+        
+    </view>
+
+</view>
+
+
+
+
+
+
+
+
+
+
+
+

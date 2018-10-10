@@ -1,0 +1,32 @@
+<view>
+      <scroll-view scroll-Y="true" scroll-X="false"> 
+          <view class="wuge" wx:if="{{allGoods == '' || allGoods.length == 0}}">没有任何商品</view>
+          <view wx:for="{{allGoods}}" wx:key="item.id"  class="list" >
+                <view class="item" >
+                      <view class="image" bindtap="toDetail" data-id="{{item.id}}">
+                          <image src="{{item.img}}"/>
+                      </view>
+                      <view class="content">
+                          <text class="h1">{{item.name}}</text>
+                          <!--<text class="p">1个／不低于120斤</text>-->
+                          <text class="p"></text>
+                          <text class="p myp">¥{{item.price}}</text>
+                      </view>
+                      <view class="number">
+                          <view class="plus" bindtap="jian" data-id="{{item.id}}">-</view>
+                          <view class="sum">{{item.buycount}}</view>
+                          <view class="plus" bindtap="jia" data-id="{{item.id}}">+</view>
+                      </view>
+                </view>
+          </view>
+      </scroll-view>
+      <view class="footer" wx:if="{{sumPrice != 0}}">
+          <view class="left">
+                <text class="p">总价:</text>
+                <text class="span">¥ {{sumPrice}}</text>
+          </view>
+          <view class="right">
+                <button bindtap="settlement">去结算</button>
+          </view>
+      </view>
+</view>

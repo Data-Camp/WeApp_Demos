@@ -1,0 +1,5 @@
+@import './../service/service.wxss';
+
+.service-detail{
+	padding:20rpx;
+}

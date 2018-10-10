@@ -1,0 +1,37 @@
+.keyboard{
+  width: 100vw;
+}
+.key-rows{ 
+  display:flex;
+  width: 100vw;
+}
+.key{
+  width: 25vw;
+}
+.key button{
+  margin: 1vh 1vw;
+  height:8.6vh;
+  line-height:8.6vh;
+}
+.screen{
+  width: 98vw;
+  height:44vh;
+  margin: 1vh 1vw;
+  padding: 1vh 1.4vw;
+  border:1px solid #353535;
+  box-sizing:border-box;
+  border-radius:4px;
+}
+.screen button{
+  text-align:right;
+  margin: 0;
+  line-height:8vh;
+  height:8vh;
+  border:none;
+  color: gainsboro;
+  font-size:7vw; 
+}
+.screen .current{
+  color: black;
+  font-size:12vw; 
+}

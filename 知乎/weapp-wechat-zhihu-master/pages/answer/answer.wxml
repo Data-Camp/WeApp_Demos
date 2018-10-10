@@ -1,0 +1,86 @@
+<!--answer.wxml-->
+<view class="container">
+    <view class="question" bindtap="toQuestion">
+        <text class="question-title">选择 Kindle 而不是纸质书的原因是什么？</text>
+    </view>
+    <view class="answerer-wrp">
+        <view class="bg-half"></view>
+        <view class="answerer flex-wrp">
+            <view class="avatar flex-item">
+                <image src="../../images/icon1.jpeg"></image>
+            </view>
+            <view class="answerer-info flex-item">
+                <text class="answerer-name">Rebecca</text>
+                <text class="answerer-des">WEB前端*不靠谱天气预报员*想做代码小仙女</text>
+            </view>
+            <view class="follow flex-item">
+                <text>十 关注</text>
+            </view>
+        </view>
+    </view>
+    <view class="answer-content">
+        <text>难道不明白纸质书更贵啊！！！
+
+            若觉得kindle更贵，我觉得要么阅读量太少，那确实没有买kindle的必要。要么买的都是盗版的纸质书？我不清楚不加以评论。。。
+
+            另外，用kindle看小说的怎么真心不懂了。题主不看小说么？难道题主拿来看教科书还是技术文档？还是题主觉得小说就是小时代内样的？（对小时代没偏见，尊重多样性）
+
+            而且纸质书搬起来真心困难啊！当初毕业带不回来，忍痛卖了不少好桑心！
+
+            碎片时间阅读总不能天天背着一本书吧，那么占地方。
+
+            看到描述最后一段，感觉有骗答案的嫌疑
+
+        </text>
+        <image src="../../images/1444983318907-_DSC1826.jpg"></image>
+        <text>
+            难道不明白纸质书更贵啊！！！
+
+            若觉得kindle更贵，我觉得要么阅读量太少，那确实没有买kindle的必要。要么买的都是盗版的纸质书？我不清楚不加以评论。。。
+
+            另外，用kindle看小说的怎么真心不懂了。题主不看小说么？难道题主拿来看教科书还是技术文档？还是题主觉得小说就是小时代内样的？（对小时代没偏见，尊重多样性）
+
+            而且纸质书搬起来真心困难啊！当初毕业带不回来，忍痛卖了不少好桑心！
+
+            碎片时间阅读总不能天天背着一本书吧，那么占地方。
+
+            看到描述最后一段，感觉有骗答案的嫌疑
+
+        </text>
+        <image src="../../images/1444983318907-_DSC1826.jpg"></image>
+    </view>
+
+    <view class="answer-footer flex-wrp">
+        <view class="good flex-item">
+            <view class="good-bad">
+                <image src="../../images/good-bad.png"></image>
+            </view>
+            <view class="good-num">2.1k</view>
+        </view>
+        <view class="operation-wrp flex-item">
+            <view class="operation flex-wrp flex-tab">
+                <view class="operation-btn flex-item">
+                    <image src="../../images/flag.png"></image>
+                    <text>没有帮助</text>
+                </view>
+                <view class="operation-btn flex-item">
+                    <image src="../../images/heart2.png"></image>
+                    <text>感谢</text>
+                </view>
+                <view class="operation-btn flex-item">
+                    <image src="../../images/star2.png"></image>
+                    <text>收藏</text>
+                </view>
+                <view class="operation-btn flex-item">
+                    <image src="../../images/comment.png"></image>
+                    <text>302</text>
+                </view>
+
+            </view>
+        </view>
+
+
+
+    </view>
+</view>
+

@@ -1,0 +1,528 @@
+<html>
+
+<head>
+    <title>学生成绩查询</title>
+    <meta name="vs_snapToGrid" content="False">
+    <meta charset="UTF-8">
+    <meta name="GENERATOR" content="Microsoft Visual Studio .NET 7.0">
+    <meta name="CODE_LANGUAGE" content="Visual Basic 7.0">
+    <meta name="vs_defaultClientScript" content="JavaScript">
+    <meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
+    <link href="css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <form name="Form1" id="Form1" action="xscj.aspx?xh=2333" method="post">
+        <input name="__VIEWSTATE" type="hidden" value="2333">
+
+        <table width="100%" height="100%" bgcolor="#5e85b1" border="0" cellspacing="1" cellpadding="0">
+            <tbody>
+                <tr>
+                    <td height="20" background="images/main_top_bg.gif">
+                        <table width="100%" id="title" border="0" cellspacing="0" cellpadding="0">
+                            <tbody>
+                                <tr>
+                                    <td width="3%">
+                                        <div align="center"><img width="15" height="20" src="images/main_top_1.gif"></div>
+                                    </td>
+                                    <td width="63%">当前位置:学生—&gt;学生成绩查询</td>
+                                    <td width="34%">
+                                        <div align="right"><img width="10" height="20" src="images/main_top_2.gif"></div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" bgcolor="#e8f3fd">
+                        <table width="99%" align="center" id="kk" border="0" cellspacing="0" cellpadding="0">
+                            <tbody>
+                                <tr>
+                                    <td height="3"></td>
+                                </tr>
+                                <tr>
+                                    <td bgcolor="#5e85b1">
+                                        <table width="100%" id="mid" bgcolor="#5e85b1" border="0" cellspacing="1" cellpadding="2">
+                                            <tbody>
+                                                <tr>
+                                                    <td valign="top" bgcolor="#ffffff">
+                                                        <table width="100%" id="table1" border="0" cellspacing="0" cellpadding="0">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>
+                                                                        <table width="100%" id="cxtj" border="0" cellspacing="1" cellpadding="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td><img width="80" height="18" src="images/search_tj.gif"></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <table width="100%" align="center" id="cx" bgcolor="#197bcb" border="0" cellspacing="1" cellpadding="4">
+                                                                                            <tbody>
+                                                                                                <tr>
+                                                                                                    <td bgcolor="#ffffff">学年:
+                                                                                                        <select name="xn" id="xn">
+	<option value="2013-2014">2013-2014</option>
+	<option value="2012-2013">2012-2013</option>
+	<option value="2015-2016">2015-2016</option>
+	<option value="2014-2015">2014-2015</option>
+	<option selected="selected" value=""></option>
+
+</select>&nbsp;&nbsp;学期:
+                                                                                                        <select name="xq" id="xq">
+	<option value="2">2</option>
+	<option value="1">1</option>
+	<option selected="selected" value=""></option>
+
+</select>&nbsp;&nbsp;
+                                                                                                        <input name="Button2" class="button" id="Button2" type="submit" value="按学年学期查询">
+                                                                                                        <input name="Button4" class="button" id="Button4" type="submit" value="全部学期查询">
+                                                                                                        <input name="Button1" class="button" id="Button1" type="submit" value="成绩输出"></td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td bgcolor="#ffffff">
+                                                                                                        <font face="宋体">课程类型：
+                                                                                                            <select name="ddlKCLX" id="ddlKCLX">
+	<option value="本学院专业自选课">本学院专业自选课</option>
+	<option value="必修课">必修课</option>
+	<option value="公共选修课">公共选修课</option>
+	<option value="跨学院专业自选课">跨学院专业自选课</option>
+	<option value="特色课">特色课</option>
+	<option value="限选课">限选课</option>
+	<option value="专业自选课">专业自选课</option>
+	<option value=""></option>
+
+</select>
+                                                                                                            <input name="Button3" class="button" id="Button3" type="submit" value="按课程类型查询">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </tbody>
+                                                                                        </table>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td height="5"></td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <table width="100%" id="DataGrid1" bordercolor="#adceef" border="1" rules="rows" cellspacing="0" cellpadding="3">
+                                                                            <tbody>
+                                                                                <tr bgcolor="#c1d8f0">
+                                                                                    <td>学年</td>
+                                                                                    <td>学期</td>
+                                                                                    <td>课程名称</td>
+                                                                                    <td>课程类型</td>
+                                                                                    <td>任课教师</td>
+                                                                                    <td>考核方式</td>
+                                                                                    <td>总评成绩</td>
+                                                                                    <td>补考成绩</td>
+                                                                                    <td>重修成绩</td>
+                                                                                    <td>重修成绩2</td>
+                                                                                    <td>重修成绩3</td>
+                                                                                    <td>绩点</td>
+                                                                                    <td>应得学分</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>2012-2013</td>
+                                                                                    <td>1</td>
+                                                                                    <td>C 从入门到精通</td>
+                                                                                    <td>必修课</td>
+                                                                                    <td>吴讲得</td>
+                                                                                    <td>集中</td>
+                                                                                    <td>59</td>
+                                                                                    <td>&nbsp;</td>
+                                                                                    <td>&nbsp;</td>
+                                                                                    <td>&nbsp;</td>
+                                                                                    <td>&nbsp;</td>
+                                                                                    <td>0</td>
+                                                                                    <td>10</td>
+                                                                                </tr>
+                                                                                <tr bgcolor="#EEF3F9">
+                                                                                    <td>2012-2013</td>
+                                                                                    <td>2</td>
+                                                                                    <td>Java 从入门到精通</td>
+                                                                                    <td>必修课</td>
+                                                                                    <td>吴讲得</td>
+                                                                                    <td>集中</td>
+                                                                                    <td>59</td>
+                                                                                    <td>&nbsp;</td>
+                                                                                    <td>&nbsp;</td>
+                                                                                    <td>&nbsp;</td>
+                                                                                    <td>&nbsp;</td>
+                                                                                    <td>0</td>
+                                                                                    <td>10</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>2013-2014</td>
+                                                                                    <td>1</td>
+                                                                                    <td>C++ 从入门到精通</td>
+                                                                                    <td>必修课</td>
+                                                                                    <td>吴讲得</td>
+                                                                                    <td>集中</td>
+                                                                                    <td>59</td>
+                                                                                    <td>&nbsp;</td>
+                                                                                    <td>&nbsp;</td>
+                                                                                    <td>&nbsp;</td>
+                                                                                    <td>&nbsp;</td>
+                                                                                    <td>0</td>
+                                                                                    <td>10</td>
+                                                                                </tr>
+                                                                                <tr bgcolor="#EEF3F9">
+                                                                                    <td>2013-2014</td>
+                                                                                    <td>2</td>
+                                                                                    <td>Python 从入门到精通</td>
+                                                                                    <td>必修课</td>
+                                                                                    <td>吴讲得</td>
+                                                                                    <td>集中</td>
+                                                                                    <td>59</td>
+                                                                                    <td>&nbsp;</td>
+                                                                                    <td>&nbsp;</td>
+                                                                                    <td>&nbsp;</td>
+                                                                                    <td>&nbsp;</td>
+                                                                                    <td>0</td>
+                                                                                    <td>10</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>2014-2015</td>
+                                                                                    <td>1</td>
+                                                                                    <td>C# 从入门到精通</td>
+                                                                                    <td>必修课</td>
+                                                                                    <td>吴讲得</td>
+                                                                                    <td>集中</td>
+                                                                                    <td>59</td>
+                                                                                    <td>&nbsp;</td>
+                                                                                    <td>&nbsp;</td>
+                                                                                    <td>&nbsp;</td>
+                                                                                    <td>&nbsp;</td>
+                                                                                    <td>0</td>
+                                                                                    <td>10</td>
+                                                                                </tr>
+                                                                                <tr bgcolor="#EEF3F9">
+                                                                                    <td>2014-2015</td>
+                                                                                    <td>2</td>
+                                                                                    <td>PHP 从入门到精通</td>
+                                                                                    <td>必修课</td>
+                                                                                    <td>吴讲得</td>
+                                                                                    <td>集中</td>
+                                                                                    <td>59</td>
+                                                                                    <td>&nbsp;</td>
+                                                                                    <td>&nbsp;</td>
+                                                                                    <td>&nbsp;</td>
+                                                                                    <td>&nbsp;</td>
+                                                                                    <td>0</td>
+                                                                                    <td>10</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>2015-2016</td>
+                                                                                    <td>1</td>
+                                                                                    <td>Javascript 从入门到精通</td>
+                                                                                    <td>必修课</td>
+                                                                                    <td>吴讲得</td>
+                                                                                    <td>集中</td>
+                                                                                    <td>59</td>
+                                                                                    <td>&nbsp;</td>
+                                                                                    <td>&nbsp;</td>
+                                                                                    <td>&nbsp;</td>
+                                                                                    <td>&nbsp;</td>
+                                                                                    <td>0</td>
+                                                                                    <td>10</td>
+                                                                                </tr>
+                                                                                <tr bgcolor="#EEF3F9">
+                                                                                    <td>2015-2016</td>
+                                                                                    <td>2</td>
+                                                                                    <td>Visual Basic 入门经典</td>
+                                                                                    <td>必修课</td>
+                                                                                    <td>吴讲得</td>
+                                                                                    <td>集中</td>
+                                                                                    <td>59</td>
+                                                                                    <td>&nbsp;</td>
+                                                                                    <td>&nbsp;</td>
+                                                                                    <td>&nbsp;</td>
+                                                                                    <td>&nbsp;</td>
+                                                                                    <td>0</td>
+                                                                                    <td>10</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>2015-2016</td>
+                                                                                    <td>2</td>
+                                                                                    <td>Visual Basic 语言应用实践</td>
+                                                                                    <td>必修课</td>
+                                                                                    <td>吴讲得</td>
+                                                                                    <td>集中</td>
+                                                                                    <td>59</td>
+                                                                                    <td>&nbsp;</td>
+                                                                                    <td>&nbsp;</td>
+                                                                                    <td>&nbsp;</td>
+                                                                                    <td>&nbsp;</td>
+                                                                                    <td>0</td>
+                                                                                    <td>10</td>
+                                                                                </tr>
+                                                                                <tr bgcolor="#EEF3F9">
+                                                                                    <td>2015-2016</td>
+                                                                                    <td>2</td>
+                                                                                    <td>Visual Basic 语言高阶编程</td>
+                                                                                    <td>必修课</td>
+                                                                                    <td>吴讲得</td>
+                                                                                    <td>集中</td>
+                                                                                    <td>59</td>
+                                                                                    <td>&nbsp;</td>
+                                                                                    <td>&nbsp;</td>
+                                                                                    <td>&nbsp;</td>
+                                                                                    <td>&nbsp;</td>
+                                                                                    <td>0</td>
+                                                                                    <td>10</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>2015-2016</td>
+                                                                                    <td>2</td>
+                                                                                    <td>Visual Basic 语言的科学与艺术</td>
+                                                                                    <td>必修课</td>
+                                                                                    <td>吴讲得</td>
+                                                                                    <td>集中</td>
+                                                                                    <td>59</td>
+                                                                                    <td>&nbsp;</td>
+                                                                                    <td>&nbsp;</td>
+                                                                                    <td>&nbsp;</td>
+                                                                                    <td>&nbsp;</td>
+                                                                                    <td>0</td>
+                                                                                    <td>10</td>
+                                                                                </tr>
+                                                                                <tr bgcolor="#EEF3F9">
+                                                                                    <td>2015-2016</td>
+                                                                                    <td>2</td>
+                                                                                    <td>编程之美</td>
+                                                                                    <td>必修课</td>
+                                                                                    <td>吴讲得</td>
+                                                                                    <td>集中</td>
+                                                                                    <td>59</td>
+                                                                                    <td>&nbsp;</td>
+                                                                                    <td>&nbsp;</td>
+                                                                                    <td>&nbsp;</td>
+                                                                                    <td>&nbsp;</td>
+                                                                                    <td>0</td>
+                                                                                    <td>10</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>2015-2016</td>
+                                                                                    <td>2</td>
+                                                                                    <td>编程之道</td>
+                                                                                    <td>必修课</td>
+                                                                                    <td>吴讲得</td>
+                                                                                    <td>集中</td>
+                                                                                    <td>59</td>
+                                                                                    <td>&nbsp;</td>
+                                                                                    <td>&nbsp;</td>
+                                                                                    <td>&nbsp;</td>
+                                                                                    <td>&nbsp;</td>
+                                                                                    <td>0</td>
+                                                                                    <td>10</td>
+                                                                                </tr>
+                                                                                <tr bgcolor="#EEF3F9">
+                                                                                    <td>2015-2016</td>
+                                                                                    <td>2</td>
+                                                                                    <td>编程之禅</td>
+                                                                                    <td>必修课</td>
+                                                                                    <td>吴讲得</td>
+                                                                                    <td>集中</td>
+                                                                                    <td>59</td>
+                                                                                    <td>&nbsp;</td>
+                                                                                    <td>&nbsp;</td>
+                                                                                    <td>&nbsp;</td>
+                                                                                    <td>&nbsp;</td>
+                                                                                    <td>0</td>
+                                                                                    <td>10</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>2015-2016</td>
+                                                                                    <td>2</td>
+                                                                                    <td>颈椎病康复指南</td>
+                                                                                    <td>必修课</td>
+                                                                                    <td>吴讲得</td>
+                                                                                    <td>集中</td>
+                                                                                    <td>59</td>
+                                                                                    <td>&nbsp;</td>
+                                                                                    <td>&nbsp;</td>
+                                                                                    <td>&nbsp;</td>
+                                                                                    <td>&nbsp;</td>
+                                                                                    <td>0</td>
+                                                                                    <td>10</td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <table width="100%" align="center" bordercolor="#e6e6e6" border="1" cellspacing="1" cellpadding="2">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td><b>历年未通过课程：</b></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <font face="宋体">
+                                                                                            <table width="100%" id="Datagrid2" bordercolor="#adceef" border="1" rules="rows" cellspacing="0" cellpadding="3">
+                                                                                                <tbody>
+                                                                                                    <tr bgcolor="#c1d8f0">
+                                                                                                        <td>学年</td>
+                                                                                                        <td>学期</td>
+                                                                                                        <td>课程名称</td>
+                                                                                                        <td>课程类型</td>
+                                                                                                        <td>任课教师</td>
+                                                                                                        <td>考核方式</td>
+                                                                                                        <td>总评成绩</td>
+                                                                                                        <td>补考成绩</td>
+                                                                                                        <td>重修成绩</td>
+                                                                                                        <td>重修成绩2</td>
+                                                                                                        <td>重修成绩3</td>
+                                                                                                        <td>绩点</td>
+                                                                                                        <td>应得学分</td>
+                                                                                                    </tr>
+                                                                                                </tbody>
+                                                                                            </table>
+                                                                                        </font>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td></td>
+                                                                                </tr>
+                                                                                <tr id="TB">
+                                                                                    <td>
+                                                                                        <table width="100%" id="Table1" bordercolor="threedlightshadow" style="WIDTH: 100%; HEIGHT: 103px" border="1" cellspacing="1"
+                                                                                            cellpadding="1">
+                                                                                            <tbody>
+                                                                                                <tr>
+                                                                                                    <td colspan="4">
+                                                                                                        <font face="宋体"><span id="yhzxf"><font color="darkred">对应实得总学分为：0分。</font></span></font>
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td width="25%">
+                                                                                                        <font color="#ff0000">应修</font>必修课学分</td>
+                                                                                                    <td width="25%"> 分</td>
+                                                                                                    <td width="25%">
+                                                                                                        <font color="#ff0000">实得</font>必修课学分</td>
+                                                                                                    <td width="25%">0分</td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td width="25%">
+                                                                                                        <font color="#ff0000">应修</font>限选课学分</td>
+                                                                                                    <td width="25%">
+                                                                                                        分</td>
+                                                                                                    <td width="25%">
+                                                                                                        <font color="#ff0000">实得</font>限选课学分</td>
+                                                                                                    <td width="25%">0分</td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td width="25%">
+                                                                                                        <font color="#ff0000">应修</font>专业自选课学分</td>
+                                                                                                    <td width="25%">
+                                                                                                        分</td>
+                                                                                                    <td width="25%">
+                                                                                                        <font color="#ff0000">实得</font>专业自选课学分</td>
+                                                                                                    <td width="25%">0分</td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td width="25%">
+                                                                                                        <font color="#ff0000">应修</font>公共选修课学分</td>
+                                                                                                    <td width="25%">
+                                                                                                        分</td>
+                                                                                                    <td width="25%">
+                                                                                                        <font color="#ff0000">实得</font>公共选修课学分</td>
+                                                                                                    <td width="25%">0分</td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td width="25%">
+                                                                                                        <font color="#ff0000">应修</font>跨学院专业自选课学分</td>
+                                                                                                    <td width="25%">
+                                                                                                        分</td>
+                                                                                                    <td width="25%">
+                                                                                                        <font color="#ff0000">实得</font>跨学院专业自选课学分</td>
+                                                                                                    <td width="25%">0分</td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td width="25%">
+                                                                                                        <font color="#ff0000">应修</font>本学院专业自选课学分</td>
+                                                                                                    <td width="25%">
+                                                                                                        分</td>
+                                                                                                    <td width="25%">
+                                                                                                        <font color="#ff0000">实得</font>本学院专业自选课学分</td>
+                                                                                                    <td width="25%">0分</td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td width="25%">
+                                                                                                        <font color="#ff0000">应修</font>特色课学分</td>
+                                                                                                    <td width="25%">
+                                                                                                        分</td>
+                                                                                                    <td width="25%">
+                                                                                                        <font color="#ff0000">实得</font>特色课学分</td>
+                                                                                                    <td width="25%">0分</td>
+                                                                                                </tr>
+                                                                                                <tr id="TRZXF">
+                                                                                                    <td>
+                                                                                                        <font face="宋体">
+                                                                                                            <font color="#ff0000">应修</font>总学分小计</font>
+                                                                                                    </td>
+                                                                                                    <td><span id="Yzxf"><font color="mediumblue">0分</font></span></td>
+                                                                                                    <td>
+                                                                                                        <font face="宋体">
+                                                                                                            <font color="#ff0000">实得</font>总学分小计</font>
+                                                                                                    </td>
+                                                                                                    <td><span id="Szxf"><font color="mediumblue">0分</font></span></td>
+                                                                                                </tr>
+
+                                                                                                <tr>
+                                                                                                    <td style="HEIGHT: 24px">
+                                                                                                        <font face="宋体"><span id="l_pjxfjd">平均学分绩点</span></font>
+                                                                                                    </td>
+                                                                                                    <td style="HEIGHT: 24px"><span id="pjxfjd"><font color="darkred">0</font></span></td>
+                                                                                                    <td style="HEIGHT: 24px">
+                                                                                                        <font face="宋体"><span id="l_zxfjd">总学分绩点</span></font>
+                                                                                                    </td>
+                                                                                                    <td style="HEIGHT: 24px"><span id="zxfjd"><font color="darkred">0</font></span></td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td colspan="4"><span id="Label2">说明：学分完成情况统计（仅作参考，具体数值以教学计划文本为准）</span></td>
+                                                                                                </tr>
+                                                                                            </tbody>
+                                                                                        </table>
+                                                                                    </td>
+                                                                                </tr>
+
+                                                                                <tr>
+                                                                                    <td style="HEIGHT: 2px">
+                                                                                        <font face="宋体">&nbsp;</font>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td height="3"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+
+
+</body>
+
+</html>

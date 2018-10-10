@@ -1,0 +1,17 @@
+<view class="login-container">
+  <form bindsubmit="formSubmit">
+    <view>
+      <input class="input" name="email" placeholder="邮箱 / 手机号" placeholder-class="input-placeholder" />
+    </view>
+    <view>
+      <input class="input" name="password" placeholder="请输入密码" placeholder-class="input-placeholder" password="true" />
+    </view>
+    <view>
+      <button formType="submit" size="mini" plain="true" class="login-btn"
+        hover-class="other-button-hover" hover-class="btn-hover"> 登 录 </button>
+    </view>
+    <view>
+      <navigator url="/pages/register/register" redirect class="register">30秒快速注册</navigator>
+    </view>
+  </form>
+</view>

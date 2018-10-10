@@ -1,0 +1,17 @@
+<view class="comment-item">
+    <view class="comment-user">
+        <image class="comment-user-avatar" src="{{ comment.user.avatar_url }}"></image>
+        <text class="comment-user-name">{{ comment.user.name }}</text>
+    </view>
+    <view class="comment-content">{{ comment.body }}</view>
+    <view class="comment-info">
+        <view class="comment-left">
+            <text class="comment-date">{{ comment.created_at }}</text>
+            <text class="comment-like-btn" data-commentId="{{ comment.id }}">Like?</text>
+        </view>
+        <view class="comment-right">
+            <image class="comment-hearts" src="../../images/icon-hearts.png"></image>
+            <text class="comment-like">{{ comment.likes_count }}</text>
+        </view>
+    </view>
+</view>

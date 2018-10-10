@@ -1,0 +1,40 @@
+<!--/*
+***HotApp云笔记，基于HotApp小程序统计云后台
+***免费云后台申请地址 https://weixin.hotapp.cn/cloud
+***API 文档地址：https://weixin.hotapp.cn/api
+***小程序技术讨论QQ群：173063969
+*/-->
+<!--index.wxml-->
+<view class="container">
+    <!--写笔记-->
+    <view class='col'>
+        <view class='item add_box'  bindtap="onNewItem">
+            <image class="add_bg" src="../../images/add.png" style="width:120rpx;height:120rpx;"></image>
+        </view> 
+        <!--没有笔记时的提示-->
+        <block wx:if="{{items.length < 1}}">
+            <view class='tips'>
+                <view class='tips_box'>
+                    <image class='tips_icon' src="../../images/tips_icon.png"style="width:70rpx;height:70rpx;"></image>
+                </view>
+                <view class='tips_txt'>点此添加新记事本</view>
+            </view>
+        </block>
+    </view>
+
+    <!--笔记列表-->
+    <block wx:for="{{items}}">
+        <view class="col" wx:if="{{ item.state != 3 }}">
+            <view class='item notepad {{item.class}}' data-key="{{item.key}}" bindtap="onEditItem">
+                <view class='content'>
+                    <view class='txt'>{{item.value.title}}</view>
+                </view>
+                <view class='bottom'>
+                    <view class='txt'>
+                        {{item.year}} {{item.month}} {{item.date}}
+                    </view>
+                </view>
+            </view>
+        </view>
+    </block>
+</view>

@@ -1,0 +1,12 @@
+<template name="prompt">
+	<view class="prompt-container" hidden="{{ prompt.hidden }}">
+	    <view class="prompt-message">
+	        <image src="{{ prompt.icon || '../../assets/images/iconfont-empty.png' }}" class="prompt-icon" />
+	        <view class="prompt-title">{{ prompt.title || '空空如也' }}</view>
+	        <view class="prompt-text">{{ prompt.text || '暂时没有相关数据' }}</view>
+	        <view class="prompt-button-area" wx:if="{{ prompt.buttons && !!prompt.buttons.length }}">
+	        	<button type="{{ item.type || 'default' }}" size="{{ item.size || 'default' }}" loading="{{ item.loading }}" plain="{{ item.plain }}" disabled="{{ item.disabled }}" class="prompt-button {{ item.className }}" hover-class="{{ item.haveClass || 'button-hover' }}" wx:for="{{ prompt.buttons }}" wx:key="" bindtap="{{ item.bindtap }}" data-index="{{ index }}">{{ item.text }}</button>
+	        </view>
+	    </view>
+	</view>
+</template>

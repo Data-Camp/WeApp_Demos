@@ -1,0 +1,26 @@
+<view class="address-list">
+    <scroll-view class="scroll-list"  scroll-y="true" style="height: 100%" bindscrolltolower="lower">
+        <radio-group class="radio-group" bindchange="radioChange">
+            <view class="weui-panel" wx:if="{{ !!address.paginate.total }}">
+                <view class="weui-panel__bd">
+                    <view class="weui-media-box weui-media-box_text" wx:for="{{ address.items }}" wx:key="">
+                        <view class="weui-media-box__title weui-media-box__title_in-text">{{ item.name }} {{ item.gender === 'female' ? '女士' : '先生' }} {{ item.tel }}</view>
+                        <view class="weui-media-box__desc">{{ item.address }}</view>
+                            <view class="weui-media-box__info">
+                            <view class="weui-media-box__info__meta text-orangered" wx:if="{{ item.is_def }}">默认地址</view>
+                        </view>
+                        <label class="radio">
+                            <radio value="{{ item._id }}" checked="{{ item.checked }}" />
+                        </label>
+                    </view>
+                </view>
+            </view>
+        </radio-group>
+        <loading hidden="{{ hidden }}">
+            加载中...
+        </loading>
+        <view class="weui-loadmore weui-loadmore_line" wx:if="{{ !address.paginate.total }}">
+            <view class="weui-loadmore__tips weui-loadmore__tips_in-line">没有更多数据了</view>
+        </view>
+    </scroll-view>
+</view>

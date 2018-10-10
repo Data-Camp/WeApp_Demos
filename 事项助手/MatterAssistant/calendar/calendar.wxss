@@ -1,0 +1,131 @@
+.og-calendar {
+    background-color: #1D1D26;
+    color: #FFF;
+    padding: 0 0 40rpx 0;
+}
+.og-calendar .header {
+    position: relative;
+    height: 120rpx;
+    line-height: 120rpx;
+    font-size: 35rpx;
+    text-align: center;
+    background: #E14848
+}
+.og-calendar .header .month-pre,
+.og-calendar .header .month-next {
+    position: absolute;
+    top: 0;
+    width: 120rpx;
+    height: 120rpx
+}
+.og-calendar .header .btn:active {
+    background: #D64343
+}
+.og-calendar .header .month-pre {
+    left: 0;
+}
+.og-calendar .header .month-next {
+    right: 0;
+}
+.og-calendar .header .month-pre image,
+.og-calendar .header .month-next image {
+    margin-top: 30rpx;
+    width: 60rpx;
+    height: 60rpx;
+}
+
+.og-calendar .week {
+    border-top: 2rpx solid #333;
+    border-bottom: 2rpx solid #333;
+}
+
+.og-calendar .col {
+    width: 14.28571428571429%;
+    display: inline-flex;
+    justify-content: center;
+    text-align: center;
+    padding: 15rpx 0;
+}
+.og-calendar .col text {
+    display: block;
+    width: 60rpx;
+    height: 60rpx;
+    font-size: 32rpx;
+    line-height: 60rpx;
+    border: 2rpx solid transparent;
+}
+.og-calendar .body .col text {
+    border-radius: 50%;
+}
+.og-calendar .body .col.active text {
+    border-color: #E04343;
+}
+.og-calendar .body .col.old {
+    color: #7A7A7F
+} 
+.og-calendar .body .col.current text,
+.og-calendar .body .col text:active {
+    background-color: #E04343;
+    color: #FFF;
+}
+
+
+/*.og-picker {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -300rpx;
+    margin-top: -320rpx;
+    width: 600rpx;
+    height: 620rpx;
+    background: #FFF;
+    border-radius: 10rpx;
+    overflow: hidden;
+    color: #555;
+}
+.og-picker .button {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100rpx;
+    font-size: 32rpx;
+    line-height: 100rpx;
+    border-top: 2rpx solid #EEE;
+    text-align: center;
+    border-radius: 0 0 10rpx 10rpx;
+}
+.og-picker .button:active {
+    background: #FAFAFA;
+}
+.og-picker .content {
+    position: absolute;
+    top: 20rpx;
+    left: 0;
+    right: 0;
+    bottom: 100rpx;
+    overflow: hidden;
+}
+.og-picker .scroll-left,
+.og-picker .scroll-right {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50%;
+}
+.og-picker .scroll-left {
+    left: 0;
+}
+.og-picker .scroll-right {
+    left: 50%;
+}
+
+.scroll-view-item  {
+    text-align: center;
+    line-height: 80rpx;
+    height: 80rpx;
+}
+.scroll-view-item:active,
+.scroll-view-item.current {
+    background: #EEE;
+}*/

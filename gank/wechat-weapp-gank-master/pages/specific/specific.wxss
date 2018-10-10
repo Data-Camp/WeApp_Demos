@@ -1,0 +1,43 @@
+.image {
+    width: 100%;
+    height: 200px;
+    background-color: #ffffff;
+}
+
+.frame {
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 4px 1px 1px #cccccc;
+    margin: 8px;
+    padding: 16px;
+    position: relative;
+}
+
+.tag {
+    font-size: 14px;
+    font-weight: 900;
+    margin-bottom: 8px;
+}
+
+.singleItem {
+    font-size: 12px;
+    margin-bottom: 6px;
+    color: darkgray;
+}
+.videoFrame{
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 4px 1px 1px #cccccc;
+    margin: 8px;
+    position: relative;
+}
+
+.video {
+    width: 100%;
+}
+
+.modalImage{
+    margin: auto;
+    width: 100%;
+    height: 1000rpx
+}

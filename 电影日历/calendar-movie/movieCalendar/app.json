@@ -1,0 +1,11 @@
+{
+  "pages":[
+    "pages/index/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"white",
+    "navigationBarBackgroundColor": "#FFF",
+    "navigationBarTitleText": "电影日历",
+    "navigationBarTextStyle":"black"
+  }
+}

@@ -1,0 +1,21 @@
+<view class="page">
+  <view class="page__hd">
+    <text class="page__title">modal</text>
+    <text class="page__desc">模式对话框</text>
+  </view>
+  <view class="page__bd">
+    <modal title="标题" confirm-text="确定" cancel-text="取消" hidden="{{modalHidden}}" mask bindconfirm="modalChange" bindcancel="modalChange">
+      这是对话框的内容。
+    </modal>
+
+    <modal class="modal" hidden="{{modalHidden2}}" no-cancel bindconfirm="modalChange2" bindcancel="modalChange2">
+      <view> 没有标题没有取消的对话框 </view>
+      <view> 内容可以插入节点 </view>
+    </modal>
+
+    <view class="btn-area">
+      <button type="default" bindtap="modalTap">点击弹出modal</button>
+      <button type="default" bindtap="modalTap2">点击弹出modal2</button>
+    </view>
+  </view>
+</view>

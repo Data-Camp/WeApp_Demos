@@ -1,0 +1,88 @@
+<!-- detail -->
+<page class="page detail">
+  <view class="detail-post-meta">
+    <view class="detail-post-avatar">
+      <image class="detail-post-avatar-img" mode="scaleToFill" src="{{ detail.author.avatar_url }}" />
+    </view>
+    <view class="detail-post-info">
+      <view class="detail-post-author-name">
+        <text>{{ detail.author.loginname }}</text>
+        <view class="detail-type-item"  wx:if="{{detail.tab === 'good'}}">
+          <view class="detail-type-item-font">#精华#</view>
+        </view>
+        <view class="detail-type-item"  wx:if="{{detail.tab === 'share'}}">
+          <view class="detail-type-item-font">#分享#</view>
+        </view>
+        <view class="detail-type-item"  wx:if="{{detail.tab === 'ask'}}">
+          <view class="detail-type-item-font">#问答#</view>
+        </view>
+        <view class="detail-type-item"  wx:if="{{detail.tab === 'job'}}">
+          <view class="detail-type-item-font">#招聘#</view>
+        </view>
+      </view>
+      <view class="detail-post-time">楼主 发表于{{ detail.create_at }}</view>
+    </view>
+
+    <view class="detail-collect-item" id="{{detail.id}}" catchtap="collect" wx:if="{{detail.is_collect == true}}">取消收藏</view>
+    <view class="detail-collect-item" id="{{detail.id}}" catchtap="collect" wx:if="{{detail.is_collect == false}}">收藏</view>
+  </view>
+
+  <view class="detail-post-header">
+
+    <view class="detail-post-title">
+      <view class="detail-posts-tag hot" wx:if="{{detail.top === true}}">置顶</view>
+      <view class="detail-posts-tag" wx:if="{{detail.good === true}}">精华</view>
+      {{ detail.title }}
+    </view>
+  </view>
+
+  <view class="detail-post-content">
+    <text class="content-info">{{ detail.content }}</text>
+  </view>
+
+  <view class="detail-post-comment">
+    <view class="detail-post-comment-title">评论</view>
+    <view class="detail-post-comment-list">
+      <block wx:for="{{ detail.replies }}" wx:if="{{detail.replies.length > 0}}">
+        <view class="detail-post-comment-item" index="{{index}}" id="{{item.id}}">
+          <view class="detail-post-comment-avatar">
+            <image class="detail-post-comment-avatar-img" mode="scaleToFill" src="{{ item.author.avatar_url }}"></image>
+          </view>
+          <view class="detail-post-comment-cell">
+            <view class="detail-post-comment-info">
+              <view class="detail-post-comment-info-cell">
+                <view class="detail-post-comment-author-name">{{ item.author.loginname }}</view>
+                <view class="detail-post-comment-time">{{index + 2}}楼 发表于{{ item.create_at }}</view>
+              </view>
+              <view class="detail-post-comment-info-cell" style="text-align:right" id="{{item.id}}" data-index="{{index}}" catchtap="reply">
+                <image class="detail-post-zan" mode="scaleToFill" src="/images/icon/zan.png"></image>
+                <text class="detail-post-zan-num" wx:if="{{item.zanNum > 0}}">{{item.zanNum}}</text>
+              </view>
+            </view>
+            <view class="detail-comment-content">
+              <text class="detail-comment-text">{{ item.content }}</text>
+            </view>
+          </view>
+        </view>
+      </block>
+
+      <block wx:if="{{detail.replies.length < 0}}">
+        <view class="detail-post-comment-null">
+          <image class="imgnull" mode="scaleToFill" src="/images/icon/null.png"></image>
+          <text class="textnull">暂无收录评论 </text>
+        </view>
+      </block>
+
+    </view>
+  </view>
+
+  <loading hidden="{{hidden}}">
+    加载中...
+  </loading>
+
+  <modal title="消息" confirm-text="确认" cancel-text="关闭" hidden="{{modalHidden}}" bindconfirm="confirmChange" bindcancel="cancelChange">
+    您还没未登录conde，是否前往认证登录？
+  </modal>
+
+
+</page>

@@ -1,0 +1,26 @@
+<!--index.wxml-->
+<view class="container">
+  <view wx:if="{{noData}}">
+    <text class="no-data">No Data</text>
+  </view>
+  <view wx:if="!{{noData}}" wx:for="{{items}}" class="item-box">
+    <text class="item-title">{{item.nickname}}</text>
+    <image class="item-image" mode="aspectFill" src="{{item.photo}}" bindtap="tappedImage" data-id="{{item.useridx}}"></image>
+    <view class="flex-item item-buttons">
+      <view class="flex-item item-button" bindtap="tappedLove" data-id="{{item.id}}">
+        <image src="/assets/icons/chat.png" style="width: 16px;height: 16px;" />
+        <text>Love</text>
+      </view>
+      <view class="flex-item item-button" bindtap="tappedComment" data-id="{{item.id}}">
+        <image src="/assets/icons/book.png" style="width: 16px;height: 16px;" />
+        <text>Comments</text>
+      </view>
+    </view>
+  </view>
+  <loading hidden="{{hideLoading}}">
+    加载中…
+  </loading>
+  <toast hidden="{{hideToast}}" duration="2000" bindchange="hideToast">
+    你点击了按钮
+  </toast>
+</view>

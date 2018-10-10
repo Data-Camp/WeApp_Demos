@@ -1,0 +1,29 @@
+<view class="downView">
+
+
+	<view class="search"> 
+	    <input class="search-input" placeholder="按客户姓名/联系方式搜索" bindtap="bindFocus" auto-focus >
+	        <icon type="search" size="20" color="purple" class="search-icon inside"/>
+	    </input>
+	</view>
+
+<!--style="height: 200rpx;"-->
+	<scroll-view class="scr" scroll-y="true" >
+		<block wx:for="{{names}}" wx:for-index="index" wx:for-item="aaa">
+			<swiper-item>
+				<navigator url="../appointment/customerProject/customerProject?name={{aaa.name}}">
+					<view class="scroll-btn-item bc_green">
+						<text class="nameBoard-text">{{aaa.time}}</text>
+						<text class="nameBoard-text">{{aaa.type}}</text>
+						<text class="nameBoard-text">{{aaa.num}}</text>
+						<text class="nameBoard-text">{{aaa.name}}</text>
+						<text class="nameBoard-text">{{aaa.tel}}</text>
+						<text class="nameBoard-text">></text>
+					</view>
+				</navigator>
+			</swiper-item>
+		</block>
+    </scroll-view>
+
+</view>
+

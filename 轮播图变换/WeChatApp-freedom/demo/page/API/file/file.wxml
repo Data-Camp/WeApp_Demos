@@ -1,0 +1,34 @@
+<import src="../common/header.wxml" />
+<import src="../common/footer.wxml" />
+
+<view class="container">
+  <template is="header" data="{{title: 'saveFile'}}"/>
+
+  <view class="page-body">
+    <view class="page-body-wrapper">
+      <view class="page-body-info">
+        <text class="page-body-text-small">请选择图片</text>
+        <block wx:if="{{tempFilePath != ''}}">
+          <image src="{{tempFilePath}}" class="image"></image>
+        </block>
+        <block wx:if="{{tempFilePath === '' && savedFilePath != ''}}">
+          <image src="{{savedFilePath}}" class="image"></image>
+        </block>
+        <block wx:if="{{tempFilePath === '' && savedFilePath === ''}}">
+          <view class="image-plus" bindtap="chooseImage">
+            <view class="image-plus-horizontal"></view>
+            <view class="image-plus-vertical"></view>
+          </view>
+        </block>
+      </view>
+      <view class="page-body-buttons">
+        <button class="page-body-button" type="primary" bindtap="saveFile">保存文件</button>
+        <button class="page-body-button" bindtap="clear">删除文件</button>
+      </view>
+    </view>
+  </view>
+
+  <modal title="{{dialog.title}}" hidden="{{dialog.hidden}}" no-cancel bindconfirm="confirm">{{dialog.content}}</modal>
+
+  <template is="footer" />
+</view>

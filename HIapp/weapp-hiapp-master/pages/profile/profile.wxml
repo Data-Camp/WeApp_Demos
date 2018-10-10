@@ -1,0 +1,43 @@
+<view class="container">
+  <view class="wx-cells">
+    <view class="wx-cell-inner flex-row">
+      <view class="wx-cell-left flex-row flex-rest-width">
+        <text class="wx-cell-left-text">Profile Photo</text>
+      </view>
+      <view class="wx-cell-right flex-row">
+         <image class="user-avatar" src="{{userInfo.avatarUrl}}"></image>
+        <image class="wx-cell-arrow" src="../../assets/right-gray.png"></image>
+      </view>
+    </view>
+    <view class="wx-cell-inner flex-row no-border">
+      <view class="wx-cell-left flex-row flex-rest-width">
+        <text class="wx-cell-left-text">Name</text>
+      </view>
+      <view class="wx-cell-right flex-row">
+        <text class="wx-cell-right-text">{{userInfo.nickName}}</text>
+        <image class="wx-cell-arrow" src="../../assets/right-gray.png"></image>
+      </view>
+    </view>
+  </view>
+
+  <view class="wx-cells">
+    <view class="wx-cell-inner flex-row">
+      <view class="wx-cell-left flex-row flex-rest-width">
+        <text class="wx-cell-left-text">Gender</text>
+      </view>
+      <view class="wx-cell-right flex-row">
+        <text class="wx-cell-right-text">{{userInfo.gender}}</text>
+        <image class="wx-cell-arrow" src="../../assets/right-gray.png"></image>
+      </view>
+    </view>
+    <view class="wx-cell-inner flex-row no-border">
+      <view class="wx-cell-left flex-row flex-rest-width">
+        <text class="wx-cell-left-text">Region</text>
+      </view>
+      <view class="wx-cell-right flex-row">
+        <text class="wx-cell-right-text">{{userInfo.city}}, {{userInfo.province}}</text>
+        <image class="wx-cell-arrow" src="../../assets/right-gray.png"></image>
+      </view>
+    </view>
+  </view>
+</view>

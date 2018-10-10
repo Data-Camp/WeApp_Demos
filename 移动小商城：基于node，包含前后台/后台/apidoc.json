@@ -1,0 +1,10 @@
+{
+  "name": "微信小程序-小商城后台",
+  "version": "0.1.0",
+  "description": "API接口文档",
+  "apidoc": {
+    "title": "API接口文档",
+    "url" : "/api"
+  },
+  "sampleUrl": "/api"
+}

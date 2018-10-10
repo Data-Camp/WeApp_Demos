@@ -1,0 +1,43 @@
+
+<!--index.wxml-->
+<view class="talk">
+  <view class="talk_title"> {{ message }} </view>
+  <view class="talk_record"> 
+  <view id="jp-container" class="jp-container jspScrollable"> 
+   <view class="jspScrollable"> 
+    <view class="jspPane"> 
+
+    <block  wx:for="{{tmpleData}}"> 
+
+    <view class="talk_recordboxme" wx:if="{{item.id == '1'}}">
+        <view class="user">
+          <image  src="/images/11.jpg" width="45px" height="45px"></image>
+        </view>
+        <view class="talk_recordtextbg"></view>
+				<view class="talk_recordtext">
+					<lable class="talk_label">{{item.msg}}</lable>
+					<lable class="talk_time">{{item.dateTime}}</lable>
+        </view>
+    </view>
+    <view class="talk_recordbox" wx:if="{{item.id == '2'}}">
+        <view class="user">
+          <image  src="/images/11.jpg" width="45px" height="45px"></image>
+        </view>
+        <view class="talk_recordtextbg"></view>
+				<view class="talk_recordtext">
+					<lable class="talk_label">{{item.msg}}</lable>
+					<lable class="talk_time">{{item.dateTime}}</lable>
+        </view>
+    </view>
+    </block>
+   </view>
+   </view>
+  </view>
+  </view>
+</view>
+
+<!-- 按钮 -->
+<view class="opgroup">
+      <input class="input"  bindinput="bindKeyInput" placeholder="请输入" />
+      <button class="_button"  type="default"  bindtap="sendBt">发送</button>
+</view>

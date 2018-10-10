@@ -1,0 +1,36 @@
+<scroll-view scroll-y="true" style="height: 750px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}" upper-threshold="10" lower-threshold="5">
+  <view class="homePage"><!--//首页的轮播图-->
+    <swiper class="home_swiper" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{carousels}}">
+        <swiper-item>
+          <image src="{{item.picUrl}}" />
+        </swiper-item>
+      </block>
+    </swiper><!--//首页推荐类型-->
+    <view class="recommendedContent">
+      <block wx:for="{{recommendeds}}">
+        <image src="{{item.imgUrl}}" />
+      </block>
+    </view><!--//首页货架-->
+    <view class="home_Goods">
+      <block wx:for="{{acts}}">
+        <block wx:if="{{item.templateType==4 ? true : false}}">
+          <import src="templates/indexCell.wxml" />
+          <template is="homePagePageType4" data="{{commonItems:item.items}}" />
+        </block>
+        <block wx:if="{{item.templateType==5 ? true : false}}">
+          <import src="templates/indexCell.wxml" />
+          <template is="homePagePageType5" data="{{commonItems:item.items}}" />
+        </block>
+        <block wx:if="{{item.templateType==6 ? true : false}}">
+          <import src="templates/indexCell.wxml" />
+          <template is="homePagePageType6" data="{{commonItems:item.items}}" />
+        </block>
+        <block wx:if="{{item.templateType==7 ? true : false}}">
+          <import src="templates/indexCell.wxml" />
+          <template is="homePagePageType7" data="{{commonItems:item.items}}" />
+        </block>
+      </block>
+    </view>
+  </view>
+</scroll-view>

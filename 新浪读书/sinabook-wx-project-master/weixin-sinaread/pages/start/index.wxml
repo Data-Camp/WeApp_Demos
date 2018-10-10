@@ -1,0 +1,8 @@
+<view class="welcome">
+    <image animation="{{animationData}}" class="" src="http://static.book.weibo.com/static/paidRead/assets/images/logo.png"></image>
+    <view animation="{{animationData}}" class="title">微博读书</view>
+    <view animation="{{animationData}}" class="slogan">发现好书</view>
+    <view class="f8 n mb5">数据版权来源：微博读书</view>
+    <view class="f8 fa n mt10">微博读书(BETA)由中文在线提供运营支持</view>
+</view>
+<include src="../templete/loading.wxml"/>

@@ -1,0 +1,7 @@
+<!--project.wxml-->
+<view class="container project-list">
+  <block wx:for-items="{{projects}}" wx:for-item="project">
+    <text class="project-item">{{project.name}}</text>
+    <text class="project-git"  bindtap="clickName">{{project.git}}</text>
+  </block>
+</view>

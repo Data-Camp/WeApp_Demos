@@ -1,0 +1,19 @@
+<view class="container">
+	<view class="container-body">
+		<view class="service-item service-detail">
+			<view class="service-img">
+				<image src="{{servicedetail.imgurl}}" mode="aspectFill"></image>
+			</view>
+			<view class="service-text">
+				<view class="service-tite">{{servicedetail.name}}</view>
+				<view class="service-tags">
+					<text>{{servicedetail.tag}}</text>
+				</view>
+				<text class="service-city">服务城市：{{servicedetail.city}}</text>
+			</view>
+		</view>
+	</view>
+	<view class="container-footer">
+		<button class="btn-orange btn-block">立即咨询</button>
+	</view>
+</view>

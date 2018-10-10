@@ -1,0 +1,2 @@
+/**new_detail.wxss**/
+@import "../detail/detail.wxss";

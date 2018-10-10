@@ -1,0 +1,7 @@
+<view class='swiper-lists' bindtouchend='click' bindtouchstart='setEvent'>
+  <block wx:for="{{lists}}">
+      <view  wx:if="{{index == active-1}}" class='swiper-list prev' animation="{{animationO}}">{{item}}</view>
+      <view  wx:if="{{index == active}}" class='swiper-list' animation="{{animationT}}">{{item}}</view>
+      <view  wx:if="{{index == active+1}}" class='swiper-list next' animation="{{animationS}}">{{item}}</view>
+  </block>
+</view>

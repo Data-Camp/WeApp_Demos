@@ -1,0 +1,57 @@
+
+
+<!--使用问题列表单项模版-->
+<import src="/templates/question.wxml"/>
+<import src="/templates/reward.wxml"/>
+
+
+<!-- loading模块 -->
+<loading hidden="{{hidden}}">
+    加载中...
+</loading>
+
+<!-- 顶部切换 -->
+<view class="swiper-tab">
+    <view class="swiper-tab-list swiper-left {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">问题榜</view>
+    <view class="swiper-tab-list swiper-right {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">悬赏</view>
+</view>
+
+
+<!--广告模块TODO: image属性的自适应-->
+<view id="banner">
+    <image class="banner" mode="aspectFit" src="/images/test-ad.jpg" /> 
+</view>
+
+<view id="questions" wx:if="{{currentTab == 0}}">
+    <!-- 问题列表-->
+    <view>
+        <!--嵌套模版-->
+        <block wx:for="{{questions}}" wx:for-item="question">
+            <template is="question" data="{{question}}"/>
+        </block>
+    </view>
+</view>
+
+
+<view id="rewards"  wx:if="{{currentTab == 1}}">
+    <view class="rewards-header">
+        <view class="reward-btn">
+            <view class="icon-pencil"></view>
+            <text>发布悬赏</text>
+        </view>
+        <view class="switch-btns">
+            <view class="switch-btn {{rewardsCurrentTab==0 ? 'switch-current' : ''}}" data-rewardcurrent="0" bindtap="swichRewardNav">已解答</view>
+            <view class="switch-btn {{rewardsCurrentTab==1 ? 'switch-current' : ''}}" data-rewardcurrent="1" bindtap="swichRewardNav">最新</view>
+        </view>
+    </view>
+
+    <view class="rewards">
+        <block wx:for="{{rewardsCurrentTab==0 ? rewardeds:rewardings}}" wx:for-item="reward">
+            <template is="reward" data="{{reward}}"/>
+        </block>
+    </view>
+    
+
+</view>
+
+

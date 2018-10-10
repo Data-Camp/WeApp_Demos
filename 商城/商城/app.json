@@ -1,0 +1,48 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/faxian/faxian",
+        "pages/xiaoxi/xiaoxi",
+        "pages/wode/wode",
+        "pages/spdetail/spdetail",
+        "pages/pay/pay"
+    ],
+    "window": {
+        "navigationBarTextStyle": "white",
+        "navigationBarTitleText": "演示",
+        "navigationBarBackgroundColor": "#69c3aa",
+        "backgroundColor": "#fbf9fe"
+    },
+    "tabBar": {
+        "color": "#929292",
+        "backgroundColor": "#ffffff",
+        "selectedColor": "#69C3AA",
+        "borderStyle": "white",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "首页",
+                "iconPath": "image/shouye1.png",
+                "selectedIconPath": "image/shouye.png"
+            },
+            {
+                "pagePath": "pages/faxian/faxian",
+                "text": "活动",
+                "iconPath": "image/huodong1.png",
+                "selectedIconPath": "image/huodong.png"
+            },
+            {
+                "pagePath": "pages/xiaoxi/xiaoxi",
+                "text": "购物车",
+                "iconPath": "image/car1.png",
+                "selectedIconPath": "image/car.png"
+            },
+            {
+                "pagePath": "pages/wode/wode",
+                "text": "我的",
+                "iconPath": "image/wode1.png",
+                "selectedIconPath": "image/wode.png"
+            }
+        ]
+    }
+}

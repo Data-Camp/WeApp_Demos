@@ -1,0 +1,37 @@
+<ion-view view-title="商品详情">
+	<ion-content ng-class="{'no-footer': tabsHidden}">
+		<ion-slide-box>
+			<ion-slide ng-repeat="item in vm.goods.item.images">
+				<div class="box">
+					<img ng-src="{{ item.path }}" class="img-responsive">
+				</div>
+			</ion-slide>
+		</ion-slide-box>
+		<div class="weui-form-preview">
+            <div class="weui-form-preview__hd">
+                <div class="weui-form-preview__item">
+                    <label class="weui-form-preview__label">{{ vm.goods.item.name}}</label>
+                    <em class="weui-form-preview__value">{{ vm.goods.item.price }}</em>
+                </div>
+            </div>
+            <div class="weui-form-preview__bd">
+            	<div class="weui-form-preview__item" ng-repeat="item in vm.goods.item.types">
+                    <label class="weui-form-preview__label">{{ item.name }}</label>
+                    <span class="weui-form-preview__value">{{ item.remark }}</span>
+                </div>             
+                <div class="weui-form-preview__item">
+                    <label class="weui-form-preview__label">描述</label>
+                    <span class="weui-form-preview__value">{{ vm.goods.item.remark }}</span>
+                </div>
+                <div class="weui-form-preview__item">
+                    <label class="weui-form-preview__label">创建时间</label>
+                    <span class="weui-form-preview__value">{{ vm.goods.item.create_at | date : 'yyyy-MM-dd HH:mm:ss' }}</span>
+                </div>
+                <div class="weui-form-preview__item" ng-if="vm.goods.item.update_at">
+                    <label class="weui-form-preview__label">更新时间</label>
+                    <span class="weui-form-preview__value">{{ vm.goods.item.update_at | date : 'yyyy-MM-dd HH:mm:ss' }}</span>
+                </div>
+            </div>
+        </div>
+	</ion-content>
+</ion-view>

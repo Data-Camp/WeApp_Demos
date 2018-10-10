@@ -1,0 +1,30 @@
+<view class="container flex-wrap flex-direction-row">
+	<!-- left aside -->
+	<view class="aside flex-wrap flex-direction-col">
+		<block wx:for="{{navList}}">
+			<text class="type-nav {{curNav == item.id ? 'selected' : ''}}" bindtap="selectNav" data-index="{{index}}" data-id="{{item.id}}">{{item.name}}</text>
+		</block>
+	</view>
+
+	<!-- content -->
+	<view class="content flex-item">
+		<block wx:for="{{dishesList[curIndex]}}">
+			<view class="dish flex-wrap flex-direction-row" catchtap="selectDish" data-dish="{{item.id}}">
+				<view class="flex-item">
+					<text class="title">{{item.name}}</text>
+					<p>￥{{item.price}}</p>
+				</view>
+				<view class="add-btn"><icon type="{{item.status ? 'success' : 'circle'}}" color="orange" size="30"></icon></view>
+			</view>
+		</block>
+
+	</view>
+
+</view>
+
+<!-- cart -->
+<view class="cart">
+	<text class="total">购物车：{{cartTotal}}</text>
+</view>
+
+<loading hidden="{{hidden}}">玩命加载中…</loading>

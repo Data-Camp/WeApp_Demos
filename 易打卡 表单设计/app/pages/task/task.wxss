@@ -1,0 +1,242 @@
+.task-page{
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.t-menu{
+  flex: none;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  background-color: #fff;
+  border-bottom: 1px solid #f0f0f0;
+  height: 80rpx;
+}
+.t-menu-btn{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 50%;
+  font-size: 32rpx;
+}
+.selected{
+  color: #2fcc85;
+  border-bottom: 1px solid #2fcc85;
+}
+.t-inner{
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
+  height: 100%;
+  padding: 0 26rpx;
+}
+.invitation{
+  flex: none;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  align-items: center;
+  background-color: #2fcc85;
+  height: 80rpx;
+  padding: 0 40rpx;
+  margin-top: 30rpx;
+  font-size: 36rpx;
+  color: #fff;
+  border-radius: 10rpx;
+}
+.write{
+  width: 43rpx;
+  height: 40rpx;
+}
+.t-content-wrap{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+.t-content{
+  margin-top: 20rpx;
+  width: 100%;
+  display: none;
+}
+.t-content-show{
+  display: block;
+}
+
+
+
+
+.new-task{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  font-size: 36rpx;
+  font-weight: bold;
+  height: 114rpx;
+  border-radius: 10rpx;
+  background-color: #2fcc85;
+  padding: 0 40rpx;
+  margin-top: 30rpx;
+}
+.new-task .txt{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.new-task .add{
+  width: 44rpx;
+  height: 44rpx;
+}
+
+.task-icon{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.task-icon .more{
+  width: 44rpx;
+  height: 44rpx;
+  transition: transform .4s;
+}
+
+.task{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin: 20rpx 0 30rpx;
+}
+
+.task-item-wrap{
+  margin-bottom: 20rpx;
+  width: 100%;
+}
+
+.task-item{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
+  border: 1px solid #f0f0f0;
+  border-radius: 10rpx;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.type0 .flag{
+  background-color: #fb7a7a;
+}
+.type1 .flag{
+  background-color: #2fcc85;
+}
+.type2 .flag{
+  background-color: #facb5b;
+}
+.type3 .flag{
+  background-color: #facb5b;  
+}
+.type4 .flag{
+  background-color: #b2b2b2;  
+}
+.type3 .task-name{
+  color: #b2b2b2;
+}
+
+.task-item .flag{
+  width: 16rpx;
+}
+
+.task-item-inner{
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 28rpx 40rpx 28rpx 24rpx;
+}
+
+.task-info{
+  width: 560rpx;
+}
+.task-info-show .task-icon .more{
+  transform: rotate(-180deg);
+}
+
+.task-name{
+  font-size: 36rpx;
+  font-weight: 400;
+  line-height: 56rpx;
+  color:#676767;
+}
+
+.cate-item{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 46rpx;
+}
+.cate-item text{
+  height: 46rpx;
+  line-height: 46rpx;
+  width: 520rpx;
+  overflow: hidden
+}
+.cate-item .cate-icon{
+  width: 40rpx;
+  height: 40rpx;
+}
+.statistics{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 42rpx;
+  margin-top: 7rpx;
+}
+.statistics-cate{
+  display: flex;
+  flex-direction: row;
+  align-items:flex-end;
+  color: #b2b2b2;
+  margin-right: 40rpx;
+  font-size: 32rpx;
+  line-height: 38rpx;
+}
+.statistics-cate .cate-icon{
+  width: 42rpx;
+  height: 42rpx;
+  margin-right: 5rpx;
+}
+
+
+.task-item-controls{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items:center;
+  height: 88rpx;
+  margin-top: 10rpx;
+  border: 1px solid #f0f0f0;
+  border-radius: 10rpx;
+  background-color: #fff;
+}
+.task-item-controls-show{
+  display: block;
+}
+.task-item-controls-hide{
+  display: none;
+}
+.task-item-controls .icon{
+  width: 44rpx;
+  height: 44rpx;
+}
+.empty-tips{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100rpx;
+}

@@ -1,0 +1,40 @@
+<form bindsubmit="formBindsubmit" bindreset="formReset">
+
+  <!--上方搜索框-->
+  <view class="wxSearch-pancel">
+    <input class="wxSearch-input" name="wxSearchInput" bindinput="librarySearchInput" placeholder="搜索" value="{{librarySearchInputValue}}" />
+    <button class="wxSearch-button" bindtap="wxSearchButton" size="mini" plain="true">搜索</button>
+  </view>
+
+  <!--图书馆登录标题-->
+
+  <!--<text class="user-motto">{{motto}}</text>-->
+  <image class="liblogo" src="http://www.lib.uestc.edu.cn/newsiconcat/1461128021267.jpg" mode="aspectFill"></image>
+
+  <!--登录表单-->
+  <view class="formContent">
+    用户名：
+    <input class="input" type="text" name="userName" value="{{userName}}" /> 密码：
+    <input class="input" type="text" name="userPassword" value="{{userPassword}}" password="true" />
+
+    <!--登录方式-->
+    <view class="loginInStyle">
+      <view class="section__title">登录方式</view>
+      <view>----------------------</view>
+      <radio-group name="gender">
+        <label>
+          <radio value="schoolId" checked="true" />校园ID </label>
+        <label>
+          <radio value="cardId" /> 学号</label>
+      </radio-group>
+    </view>
+
+    <!--提交按钮-->
+    <view class="buttonContainer">
+      <button style="" formType="submit">登录</button>
+      <button style="" formType="reset">重置</button>
+    </view>
+    <view>{{tip}}</view>
+  </view>
+  <image class="advertisement" src="http://p1.bqimg.com/1949/25f4758fad10448b.png" mode="aspectFill"></image>
+</form>

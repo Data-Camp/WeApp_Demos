@@ -1,0 +1,64 @@
+<!--mine.wxml-->
+
+<template name="tab1">
+    <view>
+    </view>
+</template>
+
+<template name="tab2">
+    <view>
+    </view>
+</template>
+
+<template name="tab3">
+    <view>
+    </view>
+</template>
+
+<template name="tab4">
+    <view>
+    </view>
+</template>
+
+<view>
+  <!--一个全屏模态对话框-->
+  <view class="modal" style="{{modalShowStyle}}">
+    <view class="dialog">
+      <view class="modal-item" style="display:flex;justify-content:center;align-items:center;">
+      请输入日记标题
+      </view>
+      <view class="modal-item" style="margin:0 auto;width:90%;">
+        <input type="text" bindinput="titleInput" style="background-color:white;border-radius:2px;" value="{{diaryTitle}}" placeholder="请输入日记标题"></input>
+      </view>
+      <view class="modal-button" style="width:100%">
+        <view style="color:green;border-right:1px solid #E5E7ED;" bindtap="touchAddNew">确定</view>
+        <view bindtap="touchCancel">取消</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="header">
+    <view class="profile">
+      <image class="avatar" mode="aspectFit" src="{{userInfo.avatar}}"></image>
+      <view class="description">
+        <view class="item">
+          <view style="margin-right:5px">{{userInfo.nickname}}</view>
+          <view>{{userInfo.sex}}</view>
+        </view>
+        <view class="item">{{userInfo.meta}}</view>
+      </view>
+      <image class="add" mode="aspectFill" src="../../images/icons/add.png" bindtap="touchAdd"></image>
+    </view>
+
+    <view class="tablist">
+      <view wx:for="{{tabs}}" wx:for-index="idx" class="tab" bindtap="touchTab" style="{{item.extraStyle}}" id="{{idx}}">
+        <view class="content" style="color:{{highLightIndex == idx ? '#54BFE2' : ''}};">
+          <image class="image" mode="aspectFit" src="{{highLightIndex == idx ? item.iconActive : item.icon}}"></image>
+          <view style="margin-top:2px;">{{item.title}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+    <template is="{{currentTab}}"></template>
+</view>

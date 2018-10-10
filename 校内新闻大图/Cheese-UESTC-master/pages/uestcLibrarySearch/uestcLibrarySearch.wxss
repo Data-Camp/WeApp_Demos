@@ -1,0 +1,114 @@
+.page_list {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  font-size: 20rpx;
+}
+
+
+/*整体布局*/
+.allItem {
+  display: flex;
+  flex-direction: row;
+  padding: 0rpx 0rpx;
+  border: 5rpx solid #eee;
+  cursor: pointer;
+  background: #fbf9fe;
+}
+
+
+/*左侧封面*/
+.bookcover {
+  width: 120px;
+  /*控制每栏的高度*/
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+}
+
+/*左侧 索书号*/
+.booknum {
+  text-indent: 0em;
+  font-size: 30rpx;
+  font-family: 'Microsoft YaHei';
+  text-align: center;
+  margin-bottom: 20rpx;
+  color: #000;
+  padding: 0rpx;
+}
+
+/*右侧整体容器*/
+.content {
+  display: flex;
+  flex-direction: column;
+width: 100%;
+  box-shadow: 10px 10px 10px #e0e0e0;
+  background: #423f3a;
+}
+
+/*标题*/
+.title {
+  margin-top: 10rpx;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+  /*width: 95%;*/
+  text-align: left;
+  color: #fff;
+  font-family: 'KaiTi';
+  font-size: 33rpx;
+}
+
+/*出版社 容器*/
+.publisherContainer {
+  background-color: #797671;
+  height: 45rpx;
+}
+/*出版社*/
+.publisher {
+  font-size: 23rpx;
+  font-family: 'Microsoft YaHei';
+  text-align:left;
+  padding-top: 0rpx;
+  color: #ddd;
+  margin-left: 10rpx;
+}
+
+/*搜索的图书记录 容器*/
+.bookRecordsContainer{
+  background-color: #A2B5CD;
+  margin-top:0px;
+  flex:auto;
+}
+
+/*搜索的图书记录标题 容器*/
+.bookRecordsTitle{
+    display:flex;
+    flex-direction:row;
+    font-size: 23rpx;
+    font:bold;
+    
+}
+
+/*搜索的图书记录 子容器*/
+.bookRecords{
+  font-size: 22rpx;
+}
+
+/*馆藏*/
+.bookAddress{
+    width:40%;
+    margin-left: 10rpx;
+    margin-top: 10rpx;
+}
+/*图书状态*/
+.bookStatus{
+    width:30%;
+    color:#4876FF;
+    margin-left: 25rpx;
+    margin-top: 10rpx;
+}
+/*条码和位置*/
+.bookBarCode{
+    width:30%;
+    margin-top: 10rpx;
+}

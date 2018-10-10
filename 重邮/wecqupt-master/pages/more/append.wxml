@@ -1,0 +1,35 @@
+<!--append.wxml-->
+<view class="container">
+    <view class="remind-box" wx:if="{{remind}}">
+        <image class="remind-img" src="/images/index/loading.gif"></image>
+    </view>
+    <block wx:else>
+        <image class="title" src="/images/more/title.png"></image>
+        <view class="content">
+            <view class="hd" style="transform:rotateZ({{angle}}deg);">
+                <image class="logo" src="/images/more/logo.png"></image>
+                <image class="wave" src="/images/more/wave.png" mode="aspectFill"></image>
+                <image class="wave wave-bg" src="/images/more/wave.png" mode="aspectFill"></image>
+            </view>
+            <view class="bd">
+                <text class="append-title">完善信息</text>
+                <form class="append-form">
+                    <view class="input-group">
+                        <text class="input-label">寝室楼栋</text>
+                        <picker class="{{!ibuilding?'placeholder':''}}" bindchange="buildingPicker" value="{{ibuilding}}" range="{{buildings}}">
+                            <text wx:if="{{ibuilding === false}}">请选择寝室楼栋</text>
+                            <text wx:else>{{buildings[ibuilding]}}</text>
+                        </picker>
+                    </view>
+                    <view class="input-group {{room_focus ? 'active' : ''}}">
+                        <text class="input-label">寝室号</text>
+                        <input type="number" value="{{room}}" id="room" maxlength="3" placeholder="请输入寝室号（三位）" bindinput="roomInput" bindfocus="inputFocus" bindblur="inputBlur" />
+                    </view>
+                </form>
+                <view class="confirm-btn" bindtap="confirm">
+                    <text>保存</text>
+                </view>
+            </view>
+        </view>
+    </block>
+</view>

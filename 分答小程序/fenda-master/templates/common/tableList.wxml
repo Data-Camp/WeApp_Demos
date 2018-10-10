@@ -1,0 +1,12 @@
+<!--
+  伪造类iOS tableView
+  index: int
+  msg: string
+  time: string
+-->
+<template name="wxTableList">
+    <view>
+        <view>wxTableList</view>
+
+    </view>
+</template>

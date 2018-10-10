@@ -1,0 +1,26 @@
+<!--index.wxml-->
+<view class="calendar-container">
+    <image src="../../image/loading.gif" mode="aspectFit" class="loading" style="opacity:{{loading_opacity}}"></image>
+    <view animation="{{animationData}}" class="container-inner">
+        <view class="inner-date">
+            <view class="date-year-month"><text class="year-month">{{year}}年{{month}}月</text><text>星期{{week}}</text></view>
+            <view class="date-day">{{day}}</view>
+            <view class="date-show-year">在{{show_year}}年前上映</view>
+            <view class="date-directors">
+                <text wx:for="{{directors}}"  wx:for-item="item">{{item.name}}<text>/</text></text>
+            </view>
+        </view>
+        <view class="inner-comment"><text>“</text>{{comment}}</view>
+        <view class="inner-movie">
+            <view class="movie-average">{{average}}</view>
+            <view class="movie-info">
+                <text class="title">《{{title}}》</text>
+                <view class="stars">
+                    <block wx:for="{{stars}}"  wx:for-item="item">
+                        <image src="../../image/{{item}}-star.png" mode="aspectFit" class="star"></image>
+                    </block>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

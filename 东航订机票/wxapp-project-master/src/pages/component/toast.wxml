@@ -1,0 +1,34 @@
+<template name="warn1">
+  <block wx:if="{{toast1.show}}">
+    <view class="alert">
+      <icon type="{{toast1.alertWarn}}" size="30" color="#ccc"/>
+      <view>{{toast1.info}}</view>
+    </view>
+  </block>
+</template>
+
+
+<template name="warn2">
+  <block wx:if="{{toast2.show}}">
+    <view class="alert info">
+      <view>最少1人起订</view>
+      <view>成人+儿童最多支持9人</view>
+      <view>1名成人最多可携带2名儿童出行</view>
+      <view>儿童入住需要遵循酒店儿童政策</view>
+      <view>儿童年龄以最晚航班起飞日期为准</view>
+    </view>
+  </block>
+</template>
+
+<!-- loading -->
+<template name="loading">
+  <view wx:if="{{loading}}" class="loadingOuter">
+      <view class="loadmore">
+        <view class="loading"></view>
+        <view class="loadmore__tips">这里要久一点……</view>
+      </view>
+      <view class="loadingImage">
+        <image mode="aspectFit" src="/images/logotext.png"></image>
+      </view>
+  </view>
+</template>

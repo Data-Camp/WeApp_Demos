@@ -1,0 +1,95 @@
+
+$color: #479de6;
+
+@for $i from 0 to 50 by 5 {
+    .margin-top-$i { 
+        margin-top: $(i)px; 
+    }
+    .margin-bottom-$i { 
+        margin-bottom: $(i)px; 
+    }
+}
+
+::selection {
+	color: #fff;
+	background: $color;
+}
+
+html {
+	height: 100%;
+	color: #000;
+	font-size: 62.5%;
+	font-family: sans-serif;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+	height: 100%;
+	position: relative;
+	font: 1.4rem/1.5 -apple-system, SF UI Text, "Helvetica Neue", Helvetica, "Hiragino Sans GB", "STHeitiSC-Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+	color: #333;
+	overflow-x: hidden;
+	transition: background 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+ol,ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+a {
+	color: $color;
+	text-decoration: none;
+	transition: color .3s ease;
+}
+
+a:focus, a:hover {
+    color: $color;
+    text-decoration: none;
+}
+
+label {
+	font-weight: normal;
+	margin-bottom: 0;
+}
+
+img {
+    vertical-align: middle;
+}
+
+.img-responsive,
+.thumbnail > img,
+.thumbnail a > img,
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.img-rounded {
+    border-radius: 6px;
+}
+
+.img-thumbnail {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+    padding: 4px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    -webkit-transition: all .2s ease-in-out;
+       -o-transition: all .2s ease-in-out;
+          transition: all .2s ease-in-out;
+}
+
+.img-circle {
+    border-radius: 50%;
+}

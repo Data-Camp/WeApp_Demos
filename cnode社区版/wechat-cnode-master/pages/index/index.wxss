@@ -1,0 +1,57 @@
+/**index.wxss**/
+.me{
+  height: 100%;
+}
+.userinfo{
+  position: relative;
+  width: 750rpx;
+  height: 320rpx;
+  background: #444;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.userinfo-avatar {
+  display: block;
+  width: 160rpx;
+  height: 160rpx;
+  margin: 20rpx;
+  margin-top: 50rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #fff;
+  font-size: 28rpx;
+}
+
+.usermotto{
+  margin-top: 10rpx;
+}
+
+.about{
+
+}
+.about-work{
+
+}
+
+.about-item{
+  padding:10rpx 30rpx;
+}
+.about-item-title{
+  display: block;
+  font-size: 32rpx;
+  line-height: 60rpx;
+}
+.about-item-content{
+  margin-top: 10rpx;
+  display: block;
+  text-indent: 40rpx;
+}
+
+.link{
+  color: #80bd01;
+  text-decoration: underline;
+}

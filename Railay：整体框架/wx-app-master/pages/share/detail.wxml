@@ -1,0 +1,13 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="detail-title">
+    <text class="detail-title-text">{{detail.title}}</text>
+  </view>
+  <image src="{{detail.thumb}}" class="detail-image"></image>
+  <view class="detail-content">
+    <text class="detail-content-text">{{detail.content}}</text>
+  </view>
+  <loading hidden="{{hideLoading}}">
+    加载中…
+  </loading>
+</view>

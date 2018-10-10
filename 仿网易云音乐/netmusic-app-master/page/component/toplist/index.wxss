@@ -1,0 +1,3 @@
+.listheader{margin:25rpx 15rpx 15rpx;border-bottom:1px solid #eee;padding-bottom: 20rpx;}
+.listheader:before{display: inline-block;width: 5rpx;background-color: red;height: .8em;content:"";vertical-align: middle;margin-right: 15rpx;
+border-radius: 10rpx;}

@@ -1,0 +1,11 @@
+<template name="future">
+        <view class="future-item">
+          <view class="future-time" wx:if="{{index == 0}}">今天</view>
+          <view class="future-time" wx:else>{{item.date}}</view>
+          <view class="future-img-container">
+            <image src="{{item.dayPictureUrl}}" class="future-img"></image>
+            <image src="{{item.nightPictureUrl}}" class="future-img"></image>
+          </view>
+          <view class="future-tem">{{item.temperature}}</view>
+       </view>
+</template>

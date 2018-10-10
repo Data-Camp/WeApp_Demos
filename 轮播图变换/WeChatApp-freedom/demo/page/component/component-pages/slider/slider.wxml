@@ -1,0 +1,28 @@
+<view class="page">
+  <view class="page__hd">
+    <text class="page__title">slider</text>
+    <text class="page__desc">滑块</text>
+  </view>
+  <view class="page__bd">
+    <view class="section section_gap">
+      <text class="section__title">设置step</text>
+      <view class="body-view">
+        <slider value="60" bindchange="slider2change" step="5"/>
+      </view>
+    </view>
+
+    <view class="section section_gap">
+      <text class="section__title">显示当前value</text>
+      <view class="body-view">
+        <slider value="50" bindchange="slider3change" show-value/>
+      </view>
+    </view>
+
+    <view class="section section_gap">
+      <text class="section__title">设置最小/最大值</text>
+      <view class="body-view">
+        <slider value="100" bindchange="slider4change" min="50" max="200" show-value/>
+      </view>
+    </view>
+  </view>
+</view>

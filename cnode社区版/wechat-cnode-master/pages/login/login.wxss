@@ -1,0 +1,42 @@
+/*login.wxss*/
+.login{
+  overflow: hidden;
+  height: 100%;
+  background: #444;
+}
+
+.login-item{
+  text-align: center;
+}
+
+.login-item-img{
+  width:  543rpx;
+  height: 128rpx;
+  margin-top: 180rpx;
+  margin-bottom:30rpx;
+}
+.login-item-section{
+  width:  460rpx;
+  margin: 20rpx auto;
+  padding: 10rpx 15rpx;
+  border-bottom: 1rpx solid rgba(136, 136, 136, 0.6);
+  background: rgba(136, 136, 136, 0.6);
+}
+.login-item-section .login-item-input{
+  color: #fff;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 28rpx;
+}
+
+.login-item-button{
+  width: 490rpx;
+  margin: 50rpx auto 20rpx auto;
+}
+.login-button{
+  font-size: 28rpx;
+}
+
+.error-msg{
+  color: red;
+}

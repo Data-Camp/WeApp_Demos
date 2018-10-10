@@ -1,0 +1,13 @@
+<!--play.wxml-->
+<view class="time">时间：{{time}}s</view>
+<view class="score">分数：{{score}}</view>
+<view class="play-box">
+    <block wx:for="{{blockData}}" wx:for-index="i" wx:key="i">
+        <view class="block-line" id="line-{{blockData[i].id}}">
+            <block wx:for="{{blockData[i].block}}" wx:key="*this" wx:for-index="j">
+                <view wx:if="{{blockData[i].block[j] == 0}}" id="block-{{blockData[i].id}}-{{j}}-{{0}}" class="block" bindtap="handleClick"></view>
+                <view wx:else class="block black" id="block-{{blockData[i].id}}-{{j}}-{{1}}" bindtap="handleClick"></view>
+            </block>  
+        </view>
+    </block>
+</view>

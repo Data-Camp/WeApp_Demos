@@ -1,0 +1,36 @@
+.container {
+  padding: 4px 12px;
+}
+
+.hint,
+.error {
+  display: block;
+  margin: 8px 0;
+  color: #888;
+  font-size: 14px;
+}
+.error {
+  color: #e64240;
+}
+.form-wrap {
+  border-top: 1px solid #eee;
+  margin: 10px 0;
+}
+.input-wrap {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  margin: 0 -12px;
+  padding: 0 12px;
+  height: 46px;
+  line-height: 46px;
+}
+.label {
+  color: #999;
+  width: 4.5em;
+}
+.account-info-input {
+  font-size: 18px;
+  line-height: 100%;
+  height: 100%;
+  width: 100%;
+}

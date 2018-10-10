@@ -1,0 +1,51 @@
+.wrap{
+    width:100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+.handleBox{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background: #eee;
+    flex-direction: row;
+}
+.containerBox {
+    width: 100%;
+    display: flex;
+    flex-direction:column;
+    padding-bottom:56px; 
+}
+.textBox{
+display:block;text-align: left;
+max-width: 82%;border-radius:5px;font-size:13px;line-height: 26px;
+margin:15px 10px 5px;
+box-sizing: border-box;
+padding: 0 5px; 
+}
+.fr{float:right;background:#eee;}
+.fl{float:left;background:paleturquoise;}
+
+.handleBox {
+    width:100%;
+    height: 34px;
+    position: fixed;
+    bottom:0;
+    background: #efefef;
+    border-top:1px solid #ddd;
+    padding: 10px 0;
+}
+.btn_submit{
+float: right; 
+right: 5px;
+}
+.input_submit{
+    max-width:80%;
+    width:80%;
+    display: inline;
+    float: left;
+    background: #fff;
+    margin:2px 5px;
+    border-radius: 5px;
+}

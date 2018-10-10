@@ -1,0 +1,23 @@
+.section{
+  margin-top: 30rpx;
+}
+.section input{
+  font-size: 36rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0; 
+  background-color: #fff;
+  padding: 0 36rpx;
+}
+.next-btn{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 80rpx;
+  color: #fff;
+  font-size: 36rpx;
+  margin: 50rpx 26rpx;
+  border-radius: 10rpx;
+  background-color: #2fcc85;
+}

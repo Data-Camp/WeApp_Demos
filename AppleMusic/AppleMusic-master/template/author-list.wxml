@@ -1,0 +1,28 @@
+<template name="author-list">
+    <view class="author-list">
+        <view class="author-item">
+            <image class="author-image" src="../../image/headimg.jpg"></image>
+            <view class="author-text">
+                <text>赵丽颖</text>
+            </view>
+        </view>
+        <view class="author-item">
+            <image class="author-image" src="../../image/headimg.jpg"></image>
+            <view class="author-text">
+                <text>赵丽颖</text>
+            </view>
+        </view>
+        <view class="author-item">
+            <image class="author-image" src="../../image/headimg.jpg"></image>
+            <view class="author-text">
+                <text>赵丽颖</text>
+            </view>
+        </view>
+        <view class="author-item">
+            <image class="author-image" src="../../image/headimg.jpg"></image>
+            <view class="author-text">
+                <text>赵丽颖</text>
+            </view>
+        </view>
+    </view>
+</template>

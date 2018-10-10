@@ -1,0 +1,36 @@
+.container {
+  height: 100%;
+}
+.logo{
+  border-top: 1px #f2f2f2 solid;
+  padding: 100px 0;
+  text-align: center;
+}
+.logo image{
+  width: 280rpx;
+  height: 85rpx;
+}
+.login-txt{
+  background: #fff2e9;
+  font-size: 24rpx;
+  text-align: center;
+  color:#333;
+  padding: 15rpx;
+  margin-bottom: 5rpx;
+}
+.login-btn{
+  background: #ec6238;
+  border: 0;
+  color: #fff;
+  font-size: 24rpx;
+  padding: 15rpx;
+  margin: 100rpx 20rpx 20rpx 20rpx;
+}
+.forget-reg{
+  font-size: 24rpx;
+  color: #ec6238;
+  margin: 0 30rpx;
+}
+.reg{
+  float: right;
+}

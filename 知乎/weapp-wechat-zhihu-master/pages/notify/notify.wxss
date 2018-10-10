@@ -1,0 +1,54 @@
+.unread{
+  color: #9A9C9B;
+  height: 60rpx;
+  padding: 10rpx 40rpx;
+  text-align: left;
+  width: 670rpx;
+}
+.unread text{
+  display: inline-block;
+  line-height: 60rpx;
+  font-size: 22rpx;
+}
+.unread image{
+  display: inline-block;
+  width: 50rpx;
+  height: 50rpx;
+  vertical-align: middle;
+  float: right;
+}
+.notify-item{
+  width: 680rpx;
+  background: #ffffff;
+  padding: 25rpx 70rpx 25rpx 0;
+  border-bottom: solid 1px #ebebeb;
+}
+.notify-item  image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 80rpx;
+}
+.notify-item .avatar{
+  flex: 1;
+}
+.notify-item .notify-content{
+  flex: 4;
+  text-align: left;
+}
+.notify-item .notify-content text{
+  display: block;
+}
+.notify-item .notify-content .notify-source{
+  color: #818A8F;
+  font-size: 28rpx;
+  padding: 0 0 8rpx 0;
+}
+.notify-item .notify-content .notify-title{
+  color: #AFAFAF;
+  font-size: 30rpx;
+  line-height: 34rpx;
+}
+.placehold{
+  padding: 80rpx 0;
+  font-size: 28rpx
+}

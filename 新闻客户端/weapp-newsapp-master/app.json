@@ -1,0 +1,12 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/text/text"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#FF7017",
+    "navigationBarTitleText": "NEWS APP",
+    "navigationBarTextStyle":"white"
+  }
+}

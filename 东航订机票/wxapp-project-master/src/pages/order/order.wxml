@@ -1,0 +1,197 @@
+<import src="../component/toast.wxml"/>
+
+<template is="loading" data="{{ loading }}"/>
+
+<!--头部固定-->
+<view wx:if="{{!loading}}" class="container">
+    <view class="head">
+        <view class="containerSmall">
+            <text class="line">{{productName}}</text>
+        </view>
+        <view class="state containerSmall">
+            <view class="gostate">
+                <view class="gostateLeft">
+                    <text class="txtstate_01">出发日期：{{departureDate}}</text>
+                    <text class="txtstate_02">|</text>
+                </view>
+                <view class="gostateRight">
+                    <text class="txtstate_03">出行人数: 成人X{{adultNum}}</text>
+                    <text class="txtstate_04" wx:if="{{childrenNum>0?true:false}}">儿童X{{childrenNum}}</text>
+                </view>  
+            </view>
+        </view>
+    </view>
+    <!--旅客-->
+    <form bindsubmit="formBindsubmit">
+        <view class="ordergood">
+            <view class="banner">
+                <view class="airpeople border_none">
+                    <text class="airp">旅客</text>
+                    <view class="addp" bindtap="addp">
+                        <image mode="aspectFit" src="/images/add.png" class="add"></image>
+                    </view>
+                </view>
+                <view class="person" wx:for="{{passengerList}}" wx:for-item="pl" wx:key="index">
+
+                    <view class="delete" data-id="{{pl.id}}" bindtap="deleteHandle">
+                        <image src="/images/delete.png" class="del"></image>
+                    </view>
+                    <view class="pers">
+                        <image src="/images/person.png" class="per"></image>
+                    </view>
+                    <view class="message" data-id="{{pl.id}}" bindtap="editHandle">
+                        <view class="personInfo">
+                          <view>{{pl.name}}</view>
+                          <view>
+                            <text>{{pl.CardNo}}</text>
+                            <text style="color:#ff7f00;">（{{pl.passengerType}}）</text>
+                          </view>
+                        </view>
+                        <view class="arrow">
+                          <image src="/images/arow.png" class="arow_01"></image>
+                        </view>
+                    </view>
+                </view>
+            </view>
+
+            <!--联系人信息-->
+            <view class="banner banner_02">
+                    <view class="airpeople">
+                        <label class="airp">联系人</label>
+                        <input placeholder="请填写姓名" type="text" placeholder-style="color:#929FB1; font-family:'Microsoft YaHei';" value="{{contactName||''}}" name="contactName" />
+                    </view>
+                    <view class="airpeople">
+                        <label class="airp">手机号</label>
+                        <input placeholder="请填写手机号" type="number" placeholder-style="color:#929FB1; font-family:'Microsoft YaHei';" value="{{contactPhone||''}}" name="contactPhone" />
+                    </view>
+                    <view class="airpeople">
+                        <label class="airp">邮箱</label>
+                        <input placeholder="请填写邮箱" type="text" placeholder-style="color:#929FB1; font-family:'Microsoft YaHei';" value="{{contactEmail||''}}" name="contactEmail" />
+                    </view>
+            </view>
+            <!--发票信息-->
+            <view class="banner banner_02">
+
+                    <view class="airpeople border_none">
+                        <label class="airp">发票 </label>
+                        <view class="body-view_01">
+                            <switch id="hasInvoice" checked="{{hasInvoice}}" bindchange="switch1Change" />
+                        </view>
+                    </view>
+                    <view hidden="{{!hasInvoice}}">
+                        <view class="airpeople">
+                            <label class="airp">抬头</label>
+                            <input class="hot_02" placeholder="请以个人/公司名称作为发票抬头" type="text" name="invoiceTitle" placeholder-style="color:#929FB1; font-family:'Microsoft YaHei';" value="{{invoiceTitle}}" />
+                        </view>
+                        <view class="airpeople">
+                            <label class="airp">收件人</label>
+                            <input class="hot_02" placeholder="收件人姓名" type="text" name="invoiceName" placeholder-style="color:#929FB1; font-family:'Microsoft YaHei';" value="{{invoiceName}}" />
+                        </view>
+                        <view class="airpeople">
+                            <label class="airp">手机号</label>
+                            <input class="hot_02" placeholder="收件人手机号" type="number" name="invoicePhone" placeholder-style="color:#929FB1; font-family:'Microsoft YaHei';" value="{{invoicePhone}}" />
+                        </view>
+                        <view class="airpeople">
+                            <label class="airp">地址</label>
+                            <input  placeholder="省/市/区（县）" type="text" name="invoiceAddress" placeholder-style="color:#929FB1; font-family:'Microsoft YaHei';" value="{{invoiceAddress}}" />
+                        </view>
+                        <view class="airpeople">
+                            <label class="airp">邮编</label>
+                            <input class="hot_02" placeholder="邮政编码" type="text" name="postCode" placeholder-style="color:#929FB1; font-family:'Microsoft YaHei';" value="{{postCode}}" />
+                        </view>
+                    </view>
+            </view>
+            <!--优惠券-->
+            <!-- <view class="bannerHot">
+                    <view class="airpeople airpeople_Line">
+                        <label class="airp">优惠券 </label>
+                        <view class="body-view_01">
+                            <switch id="hasCoupon" checked="{{hasCoupon}}" bindchange="switch1Change" />
+                        </view>
+                    </view>
+                    <view hidden="{{!hasCoupon}}" class="airpeople airpeople_01 airLine">
+                        <label class="airp">选择优惠券</label>
+                        <picker mode=" selector" value="{{index}}" range="{{array}}" bindchange="">
+                            <view class="picker">
+                            当前选择
+                            </view>
+                        </picker>
+                    </view>
+
+            </view> -->
+            <!--保险信息-->
+           <!--  <view class="banner insure">
+
+                    <view class="airsure">
+                        <navigator url="../safe/safe">
+                            <text class="airinsure">万里行积分</text>
+                            <input placeholder="共100000分可用" type="number" name="phone" placeholder-style="color:#929FB1;font-family:'Microsoft YaHei'; font-size:25.78rpx;" />
+                        </navigator>
+                    </view>
+                    <view class="body-view_01">
+                        <switch checked bindchange="switch1Change" />
+                    </view>
+
+            </view> -->
+
+            <!--相关规定条款-->
+            <view class="read">
+              <view id="hasAgree" bindtap="agreeChange" class="agree">
+                <view class="{{hasAgree?'nochoose':'choose'}}"  >
+                  <image  src="{{hasAgree?'/images/checked.png':'/images/check.png'}}" class="{{hasAgree?'check':'checked'}}" ></image>
+                </view>
+                <view class="txt">
+                    我阅读并同意
+                  <navigator catchtap="catchTapHandle" url="../guarantee/guarantee">《东航旅游度假以及附加产品预订须知》</navigator>
+                </view>
+              </view>
+            </view>
+        </view>
+
+        <!--tabBar-->
+        <view class="tabBar">
+          <text class="name">套餐总价</text>
+          <text class="totalPrice">￥{{totalPrice}}</text>
+          <text class="priceDetail" catchtap="showCostDetail">费用明细</text>
+          <button type="primary" class="nextStep" formType="submit">{{nextStep.btnWord}}</button>
+        </view>
+
+        <view class="chargesDetails" wx:if="{{costDetail.show}}">
+            <view class="chargesInfo">
+                <label>费用明细</label>
+            </view>
+            <view class="productPrice">
+                <label class="product_w1">产品</label>
+                <label class="product_w2">数量</label>
+                <label class="product_w3">价格</label>
+            </view>
+            <view class="productCon">
+                <text class="product_w1">机票+酒店</text>
+                <text class="product_w2"></text>
+            </view>
+            <view class="productCon" hidden="{{taxPrice>0?false:true}}">
+                <text class="product_w1">{{isInternational?'税费':'机建/燃油'}}</text>
+                <text class="product_w2"></text>
+                <text class="product_w3">￥{{taxPrice}}</text>
+            </view>
+            <view class="productCon" hidden="{{adultNum>0?false:true}}">
+                <text class="product_w1">成人</text>
+                <text class="product_w2">{{adultNum}}</text>
+            </view>
+            <view class="productCon" hidden="{{childrenNum>0?false:true}}">
+                <text class="product_w1" >儿童</text>
+                <text class="product_w2">{{childrenNum}}</text>
+            </view>
+            <view class="productSum">
+                <text class="product_w1 font_32">套餐总价</text>
+                <text class="product_w2"></text>
+                <text class="product_w3 blue">￥{{totalPrice}}</text>
+            </view>
+            <icon type="clear" size="40" color="#58A4EF" class="closeIcon" catchtap="hideCostDetail"></icon>
+        </view>
+
+
+
+
+    </form>
+</view>

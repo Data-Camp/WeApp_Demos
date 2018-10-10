@@ -1,0 +1,32 @@
+<!--
+  为悬赏列表提供相关模版
+  index: int
+  msg: string
+  time: string
+-->
+<template name="reward">
+        <view class="a-reward">
+            <view class="reward-header">
+                <view class="user">
+                    <image class="user-avatar" src="{{reward.authorHead}}" />
+                    <text class="user-nickname">{{reward.authorName}}|{{reward.authorBio}}</text>
+                </view>
+                <view class="offer">
+                    <text>¥</text>
+                    <text>{{reward.price}}</text>
+                </view>
+            </view>
+
+            <view class="">
+                <view class="reward-body">{{reward.content}}</view>
+                <view class="reward-footer">
+                    <view class="status">
+                        <text>{{reward.status == '1'?'悬赏成功':'正在悬赏'}}</text>
+                        <text class="answers">{{reward.answersNum}}个回答免费听</text>
+                    </view>
+                    
+                </view>
+            </view>
+
+        </view>
+</template>

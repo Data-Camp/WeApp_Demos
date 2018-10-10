@@ -1,0 +1,43 @@
+<template name="msgItem">
+    <scroll-view  scroll-Y="true" style="height: 100%" id="{{item.type}}" bindscrolltolower="bindlower">
+      <!--<view class="banner">
+            <swiper indicator-dots="true"
+                autoplay="true" interval="5000"  duration="1000" >
+                <block wx:for="{{item.banner}}" wx:key="index">
+                    <swiper-item>
+                        <image mode="aspectFill" src="{{item.thumb}}" bindtap="todetail" id="{{item.id}}"/>
+                    </swiper-item>
+                </block>
+            </swiper>
+      </view>-->
+      <!--
+      <view class = "topMall">
+            <block wx:for="{{item.top}}" wx:key="index">
+                  <view bindtap="todetail" id="{{item.id}}">
+                        <image src="{{item.thumb}}" mode="aspectFill"/>
+                        <view class="name">{{item.title}}</view>
+                        <view><text class="now_price">{{item.price}}</text><text class="org_price"></text></view>
+                  </view>
+             </block>
+      </view>
+      <view class="promotion">
+            <image src="{{item.sales.thumb}}" mode="scaleToFill"/>
+            <view class="pinfo" id="{{item.sales.id}}" bindtap="todetail">
+                <view class="pinfo-1">{{item.sales.title}}</view>
+                <view class="pinfo-3">特卖</view>
+            </view>
+      </view>
+      -->
+      <view class="listMall">
+        <block wx:for="{{item.list}}" wx:key="index">
+            <view bindtap="todetail" id="{{item.id}}">
+                <view class="img"><image src="{{item.thumb}}" mode="aspectFill"/></view>
+                <view class="name">{{item.title}}</view>
+                <view>
+                    <text class="now_price">￥{{item.price}}</text>
+                </view>
+              </view> 
+          </block>        
+      </view>
+    </scroll-view>
+</template>

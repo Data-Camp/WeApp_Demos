@@ -1,0 +1,18 @@
+<form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="downView">
+
+        <view class="type-body">
+            <block wx:for="{{types}}" wx:for-index="index" wx:for-item="item">
+                <button  name="checkbox" class="type-btn" bindtap="goToNextA" plain="{{item.plains}}" id="{{index}}">
+                    <image class="type-image" src="{{item.image}}"></image>
+                    <text name="checkbox" class="type-text" >{{item.type}}</text>
+                </button>
+            </block>
+        </view>
+
+        <navigator url="../appointment/customerProject/customerProject">
+           <button class="submitBtn" formType="submit">下一步</button>
+        </navigator>
+
+    </view>
+</form>

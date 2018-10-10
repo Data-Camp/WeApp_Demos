@@ -1,0 +1,87 @@
+<import src="../component/toast.wxml"/>
+
+<template is="loading" data="{{ loading }}"/>
+
+<view wx:if="{{!loading}}" class="container">
+<!--头部-->
+  <template is="warn1" data="{{ toast1 }}"/>
+  <view class="head">
+     <view class="headLeft">
+        <view class="go">{{type!=1?"返程":"去程"}}</view>
+        <text class="city">{{orgCity}}-{{destCity}}</text>
+        <text class="time">{{dateTxt}}</text>
+     </view>
+     <text class="number" hidden="{{!count}}">共{{count}}条</text>
+  </view>
+    <view class="wrap">
+        <view class="airticket">
+        <!--机票信息start-->
+            <view class="ticketList" wx:for="{{list}}" wx:for-index="index" wx:key="mId" wx:for-item="fl" >
+                <view data-index="{{index}}" bindtap="changeDownHandle">
+                    <view class="ticketList_top">
+                        <view class="flight_info">
+                            <view class="flight_info_t">
+                                <text>{{fl.FightStartDate}}</text>
+                                <view class="timeLine">
+                                    <image src="/images/blue.png"></image>
+                                </view>
+                                <text>{{fl.FightEndDate}}</text>
+                            </view>
+                            <view class="flight_info_b">
+                                <text>{{fl.StartAirportName}}</text>
+                                <text>{{fl.EndAirportName}}</text>
+                            </view>
+                        </view>
+                        <view class="flight_price">
+                            <view class="price">
+                                <text>{{fl.asy}}</text>
+                                <text class="yuan">¥</text>
+                                <text>{{fl.minPrice}}</text>起
+                            </view>
+                        </view>
+                    </view>
+                    <view class="ticketList_btm">
+                        <view>
+                            <text>{{fl.AirlineName}}{{fl.FightCode}}</text><text style="margin:0 15rpx;">|</text>
+                            <text>{{fl.AirType}}</text>
+                        </view>
+                        <view wx:if="{{!!fl.hidden}}" class="shadow shadDow"></view>
+                        <view wx:if="{{!fl.hidden}}" class="shadow"></view>
+                    </view>
+                </view>
+                <!--机票价格及预订-->
+                <view class="ticketDetail" wx:if="{{!fl.hidden}}" >
+                    <view class="ticketDetailList" wx:for="{{fl.AirSpaceList}}" wx:for-item="al" wx:for-index="idx" wx:key="id" bindtap="ticketSearch_back" data-al-index="{{idx}}" data-fl-index="{{index}}">
+                        <!--<image class="arrow" src="/images/arow.png"></image>-->
+                        <view class="book">
+                            <view class="cabinType">
+                                <text class="privilege">{{al.AirSpaceName}}</text>
+                            </view>
+                            <view class="price">
+                                <text class="addj">{{al.asy}}</text>
+                                <text class="rmb">¥</text>
+                                <text>{{al.asyPrice}}</text>
+                            </view>
+                        </view>
+                        <view class="priceInfo">
+                            <view class="reminder" catchtap="catchTapHandle">
+                                <view class="mealService">
+                                    <image src="/images/visa_gray.png"></image>
+                                    <text data-al-index="{{idx}}" data-fl-index="{{index}}" bindtap='showExitChangeSignRule'>退改签详情</text>
+                                </view>
+                            </view>
+                            <view class="moreTicket" style='{{al.color?"color:red":""}}'>{{al.storeStatus}}</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        <!--wrap结束-->
+        </view>
+    </view>
+<!--尾部-->
+  <!-- <view class="foot">
+            <view class="go">返程</view>
+            <text class="city">北京-上海</text>
+            <text class="time">09月15日</text>
+  </view> -->
+</view>

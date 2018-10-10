@@ -1,0 +1,70 @@
+<!--index.wxml-->
+  <!--一个块级区域-->
+<view class="welcome-container" animation="{{animationData}}" style="display:{{welcome ? 'flex' : 'none'}}">
+  <image src="/image/welcome-lc.jpg" background-size="cover" class="wel-pic"></image>
+</view>
+<view class="shz-container"  style="opacity:{{welcome ? 0 : 1}};display:{{!welcome ? 'block' : 'none'}}" >
+  <view class="swiper-box" >
+      <swiper indicator-dots="{{indicatorDots}}" vertical="{{vertical}}"
+              autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+          <block wx:for-items="{{swiperImgs}}">
+              <swiper-item>
+                  <image src="{{item.src}}" mode="scaleToFill"></image>
+              </swiper-item>
+          </block>
+      </swiper>
+  </view>
+  <view  ontouchstart="ontouchStart" ontouchmove="ontouchMove" ontouchend="ontouchEnd">
+        <view class="flex-box" animation="{{animationData}}"> 
+  <!--for循环 内置了了当前字段为item，当前索引为index -->
+  <!--通过data获取绑定的数据-->
+    <view wx:for="{{hero}}" class="flex-item" data-index="{{index}}" data-name="{{item.name}}">
+        <navigator url="./../detail/detail?id={{index}}" class="nav-item">
+            <view class="inner"><text class="name">{{index+1}}-{{item.name}}</text></view>
+        </navigator>
+    </view>
+  </view>
+  <view class="pic-box">
+    <view class="left-box">
+        <image src="http://www.hosane.com/hosane/upload1/picC08121/big/c08121445.jpg" class="l-pic" mode="scaleToFill" ></image>
+    </view>
+    <view class="right-box">
+        <image src="http://www.336500.com.cn/imgall/obuwgltcmfuwwzjoonxxg3zomnxw2/p/20131221/20131221045913-1064682661.jpg" class="r-pic" mode="scaleToFill" ></image>
+        <image src="http://pic.baike.soso.com/p/20130628/20130628085301-1920749756.jpg" class="r-pic" mode="scaleToFill"></image>
+    </view>
+  </view>
+    <view class="hero-list"  data-index="{{index}}" data-name="{{item.name}}" >
+        <view wx:for="{{hero}}"  class="item">
+            <navigator url="./../detail/detail?id={{index}}" >
+                <view class="nav-item">
+                    <image class="sm-photo" src="{{item.photo}}" background-size="cover" />
+                    <text class="name">{{index+1}}-{{item.name}}</text>
+                    <image class="arrow-r" src="/image/arrowright.png" background-size="cover" />
+                </view>
+            </navigator>
+            
+        </view>
+    </view>
+  </view>
+  
+  
+  <view class="slide-menu {{menuIsopen ? 'menu-show' : ''}}">
+        <view class="user-info">
+            <image src="http://images.missyuan.com/attachments/day_090414/20090414_0de8f1da5efc111b7856I157FKFiplFP.jpg"  class="photo"></image>
+            <view><text class="nick">关胜</text></view>
+        </view>
+        <view class="menu">
+            <view class="item">水浒来由</view>
+            <view class="item">聚义厅</view>
+            <view class="item">三打方腊</view>
+            <view class="item">宋江招安</view>
+            <view class="item">武松断臂</view>
+        </view>
+  </view>
+</view>
+
+
+
+
+
+

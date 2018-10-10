@@ -1,0 +1,44 @@
+
+.head{
+    padding: 80rpx;
+    line-height: 1;
+}
+.body{
+    padding-left: 20rpx;
+    padding-right: 20rpx;
+    overflow: hidden;
+}
+.title{
+    font-size: 52rpx;
+}
+.desc{
+    margin-top: 10rpx;
+    font-size: 28rpx;
+}
+
+.widgets__item{
+    overflow: hidden;
+   cursor: pointer;
+   
+}
+.widgets__info{
+    padding:15rpx 0 0 15rpx;
+    overflow: hidden;
+    line-height: 1;
+}
+.widgets__info-img{
+    width:100rpx;
+    height:100rpx;margin-right: 15rpx;
+    float:left;
+}
+
+.widgets__info-name{display: block;height:50rpx;padding-top:15rpx;margin-right: 15rpx;
+white-space: nowrap;overflow: hidden;text-overflow: ellipsis;font-size: 28rpx}
+.widgets__info-info{color:#aaa;font-size:22rpx;display: block;border-bottom:1rpx solid #eee;padding-bottom: 20rpx;margin-left: 115rpx}
+
+
+#user{position: relative;height:0;padding-top:55%;width:100%;background-size:cover;background-position: center center;
+background-repeat: no-repeat;background-color: #eee;border-bottom:1rpx solid #fff;}
+#usergender{width: 32rpx;height: 32rpx;margin:0 10rpx}
+#user_info{position: absolute;left:60rpx;bottom:60rpx;color: #fff;overflow: hidden}
+#user_ava{width:80rpx;height:80rpx;border-radius: 50%;border:2rpx solid #fff;vertical-align: middle;margin-right:20rpx;}

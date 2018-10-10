@@ -1,0 +1,12 @@
+<template name="future-item">
+    <view class="future-item">
+        <view>{{item.date}}</view>
+        <view>
+            <image src="{{item.dayPictureUrl}}" class="weather-img"></image>
+            <image src="{{item.nightPictureUrl}}" class="weather-img"></image>
+        </view>
+        <view>{{item.weather}}</view>
+        <view>{{item.wind}}</view>
+        <view>{{item.temperature}}</view>
+    </view>
+</template>

@@ -1,0 +1,31 @@
+<view class="page">
+    <view class="page__hd">
+        <view class="page__info">学号 {{username}} 的成绩</view>
+    </view>
+    <view class="page__bd">
+        <view class="widgets">
+            <block wx:for-items="{{list}}">
+                <view class="widgets__item">
+                    <view id="{{item.id}}" class="widgets__info {{item.open ? 'widgets__info_show' : ''}}" bindtap="widgetsToggle">
+                        <text class="widgets__info-name">{{item.years}} 学年 第 {{item.term}} 学期</text>
+                        <image class="widgets__info-img" src="/image/arrowright.png" mode="aspectFill" />
+                    </view>
+                    <view class="widgets__table {{item.open ? 'widgets__table_show' : ''}}">
+                        <view class="table__row table_row_header">
+                            <view class="table__grid table__grid_4_2">课程</view>
+                            <view class="table__grid table__grid_4_1">成绩</view>
+                            <view class="table__grid table__grid_4_1">绩点</view>
+                        </view>
+                        <block wx:for-items="{{item.table}}" wx:for-index="index" wx:for-item="row">
+                            <view class="table__row {{index % 2 !=0? 'shading':''}}">
+                                <view class="table__grid table__grid_4_2">{{row[0]}}</view>
+                                <view class="table__grid table__grid_4_1">{{row[1]}}</view>
+                                <view class="table__grid table__grid_4_1">{{row[2]}}</view>
+                            </view>
+                        </block>
+                    </view>
+                </view>
+            </block>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,57 @@
+<scroll-view scroll-y="true" scroll-top="100000000000000000" style="height:90%;background:#eee" animation="{{animation_2}}">
+    <view wx:for="{{message}}" wx:for-item="i">
+        <view class="padding clearfix" wx:if="{{i.me}}">
+            <image class="right-Avatar padding_half" src="{{userInfo.avatarUrl}}"></image>
+            <view class="right-Triangle"></view>
+            <view class="right-message padding_half">
+                <text wx:if="{{i.text}}">{{i.text}}</text>
+                <image wx:if="{{i.imgList}}" style="max-width:150px;max-height:120px" src="{{i.imgList}}"></image>
+                <map wx:if="{{i.map}}" style="width: 220px; height: 160px;"
+                    latitude="{{latitude}}"
+                    longitude="{{longitude}}"
+                    scale="16"
+                    markers="{{markers}}"
+                    covers="{{covers}}"
+                    >
+                </map>
+            </view>
+        </view>
+        <view class="padding clearfix" wx:if="{{!i.me}}">
+            <image class="left-Avatar padding_half" src="{{i.img}}"></image>
+            <view class="left-Triangle"></view>
+            <view class="left-message padding_half">
+                <text>{{i.text}}</text>
+            </view>
+        </view>
+    </view>
+    <view class="weui-icon_success"></view>
+</scroll-view>
+<view class="wa-row" style="height:10%;">
+    <view class="wa-col-10 text-center icon ion-ios-mic" style="line-height:30px" bindtap="getvoice">麦</view>
+    <view class="wa-col-66 padding_half">
+        <input placeholder="请输入消息" />
+    </view>
+    <view class="wa-col-10 text-center icon ion-happy-outline" style="line-height:30px">表</view>
+    <view class="wa-col-10 text-center icon ion-ios-plus-outline text-center" style="line-height:30px" bindtap="elseBtn">+</view>
+</view>
+<view id="elsePanel" animation="{{animation}}">
+    <view class="wa-row">
+        <view class="wa-col-33" bindtap="chooseImg"><view class="text-center" style="line-height:50px">图片</view></view>
+        <view class="wa-col-33" bindtap="getlocat"><view class="text-center" style="line-height:50px">位置</view></view>
+        <view class="wa-col-33" bindtap="stopvoice"><view class="text-center" style="line-height:50px">test</view></view>
+        
+    </view>
+    <view class="wa-row">
+        <view class="wa-col-33"><view class="text-center" style="line-height:50px">test</view></view>
+        <view class="wa-col-33"><view class="text-center" style="line-height:50px">test</view></view>
+        <view class="wa-col-33"><view class="text-center" style="line-height:50px">test</view></view>
+    </view>
+</view>
+    <!--<map
+        style="width: 100%; height: 300px;"
+        latitude="{{latitude}}"
+        longitude="{{longitude}}"
+        markers="{{markers}}"
+        covers="{{covers}}"
+        >
+      </map>-->

@@ -1,0 +1,13 @@
+.flex-wrp{
+  height: 100px;
+  display:flex;
+  background-color: #FFFFFF;
+}
+.flex-item{
+  width: 100px;
+  height: 100px;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

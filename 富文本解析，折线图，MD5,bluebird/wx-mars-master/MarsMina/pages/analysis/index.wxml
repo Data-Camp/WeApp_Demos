@@ -1,0 +1,5 @@
+<canvas class="graphCanvas" canvas-id="pieGraph"></canvas>
+
+<canvas class="graphCanvas" canvas-id="ringGraph"></canvas>
+
+<canvas class="graphCanvas" canvas-id="lineGraph"></canvas>

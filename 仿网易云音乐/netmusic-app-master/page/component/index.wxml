@@ -1,0 +1,44 @@
+<view class="index">
+  <view id="user" style="background-image:url({{user.backgroundUrl}})">
+    <view id="user_info">
+      <image id="user_ava" class="user_avator" src="{{user.avatarUrl}}" />
+      <text id="user_nn">{{user.nickname}}</text>
+      <image src="../../image/rt.png" id="usergender" wx:if="{{user.gender==1}}" />
+      <image src="../../image/s1.png" id="usergender" wx:if="{{user.gender==2}}" />
+      <text id="user_sig">{{user.signature1}}</text>
+    </view>
+  </view>
+  <view class="playlist" wx:if="{{list.length}}">
+    <text class="sm_title">{{user.nickname}}创建的歌单</text>
+    <block wx:for-items="{{list}}" wx:key="{{item.id}}">
+      <view class="widgets__item" wx:if="{{item.userId==user.userId}}">
+        <navigator url="playlist/index?pid={{item.id}}&name={{item.name}}" class="widget">
+          <view id="{{item.id}}" class="widgets__info">
+            <image class="widgets__info-img music_cover" src="{{item.coverImgUrl}}" mode="aspectFill" />
+            <text class="widgets__info-name">{{item.name}}</text>
+            <text class="widgets__info-info">{{item.trackCount}}首，播放{{item.playCount}}次</text>
+          </view>
+        </navigator>
+      </view>
+    </block>
+    <text class="sm_title">{{user.nickname}}收藏的歌单</text>
+    <block wx:for-items="{{list}}" wx:key="{{item.id}}">
+      <view class="widgets__item" wx:if="{{item.userId!=user.userId}}">
+        <navigator url="playlist/index?pid={{item.id}}&name={{item.name}}" class="widget">
+          <view id="{{item.id}}" class="widgets__info">
+            <image class="widgets__info-img music_cover" src="{{item.coverImgUrl}}" mode="aspectFill" />
+            <text class="widgets__info-name">{{item.name}}</text>
+            <text class="widgets__info-info">{{item.trackCount}}首，by{{item.creator.nickname}}，播放{{item.playCount}}次</text>
+          </view>
+        </navigator>
+      </view>
+    </block>
+  </view>
+  <view wx:else class="cntloading">加载中...
+    <view>
+      <text class="cl1"></text>
+      <text class="cl2"></text>
+      <text class="cl3"></text>
+    </view>
+  </view>
+</view>

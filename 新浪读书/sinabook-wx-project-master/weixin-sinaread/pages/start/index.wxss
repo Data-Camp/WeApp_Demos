@@ -1,0 +1,38 @@
+/**启动页面style**/
+.welcome{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #fcfcfc;
+  text-align: center;
+  font-weight: bold;
+  background: url("../../img/s_bg.jpg") center no-repeat;
+  background-size: cover;
+}
+.welcome image{
+  width: 100px;
+  height: 100px;
+  margin-top: 15%;
+  border-radius: 20%;
+  box-shadow: 0 0 10px palegreen;
+}
+.welcome .title,.welcome .slogan{
+  margin:1rem auto;
+}
+.welcome image,.welcome .title,.welcome .slogan{
+  transform: translateY(-30px);
+  opacity: 0;
+}
+.welcome .title{
+  font-size: 2rem;
+}
+.welcome .slogan{
+  width: 80%;
+  padding: 5px 0;
+  font-size: 1.4rem;
+  font-family: "楷体";
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}

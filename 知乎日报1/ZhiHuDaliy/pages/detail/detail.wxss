@@ -1,0 +1,168 @@
+page {
+    background: #FAFAFA;
+}
+.header-cover {
+    position: relative;
+    height: 500rpx;
+    overflow: hidden
+}
+.header-cover image {
+    width: 100%;
+}
+.header-cover .mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, .3);
+}
+.header-cover .desc { 
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 0 20rpx 60rpx 20rpx;
+    font-size: 40rpx;
+    color: #FFF;
+    z-index: 10
+}
+.header-cover .cover-source {
+    position: absolute;
+    right: 20rpx;
+    bottom: 20rpx;
+    font-size: 30rpx;
+    color: #FFF;
+}
+.black-desc{
+    padding: 50rpx;
+    font-weight: bold;
+}
+/*article*/
+.article {
+    padding: 40rpx;
+    margin-bottom: 20rpx;
+    background: #FFF;
+}
+.article .title {
+    padding-bottom: 40rpx;
+    font-size: 40rpx;
+    font-weight: bold
+}
+.article .author-info {
+    overflow: hidden;
+    height: 60rpx;
+    line-height: 60rpx;
+    font-size: 35rpx;
+    white-space:nowrap;
+    text-overflow: ellipsis;
+    margin-bottom: 20rpx;
+}
+.article .author-info .avatar {
+    float: left;
+    width: 60rpx;
+    height: 60rpx;
+    border-radius: 5rpx;
+}
+.article .author-info .author-mark {
+    color: #6A6A6A;
+}
+/*.author-mark{*/
+    /*width: 60rpx;*/
+    /*height: 60rpx;*/
+/*}*/
+.author-mark{
+    position:relative;
+    bottom:0px;
+    padding:0px;
+    margin:0px;
+    font-size:10px;
+    height: 60rpx;
+    overflow: hidden; /*自动隐藏文字*/
+    text-overflow: ellipsis;/*文字隐藏后添加省略号*/
+    white-space: nowrap;/*强制不换行*/
+    color:#6699ff;
+    width: 300rpx;
+}
+.article .author-info text {
+    display: block;
+    float: left;
+    padding-left: 10rpx;
+}
+.article .content text {
+    display: block;
+    font-size: 35rpx;
+    color: #6A6A6A;
+    line-height: 60rpx;
+    margin-bottom: 40rpx;
+    text-align: justify;
+    overflow: hidden;
+    word-wrap:  break-word; 
+}
+.article .content .em {
+    font-style: italic;
+}
+.article .content .strong {
+    font-weight: bold;
+}
+.article .content text.qoute {
+    border-left: 2px solid #CDE3F1;
+    padding-left: 20rpx;
+}
+.article .content image {
+    display: block;
+    width: 100%;
+    margin-bottom: 40rpx;
+}
+.article .discuss {
+    margin: 40rpx;
+    text-align: center
+}
+.article .discuss navigator{
+    font-size: 30rpx;
+    background: #EEE;
+    color: #555;
+    padding: 10rpx;
+    border-radius: 4rpx;
+}
+.article .discuss navigator:active {
+    background-color: #CDE3F1;
+}
+
+.toolbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100rpx;
+    border-top: 1px solid #DDD;
+    background: #FFF
+}
+.toolbar .inner {
+    padding: 0 20rpx;
+}
+.toolbar .item {
+    position: relative;
+    padding-top: 20rpx;
+    text-align: center;
+    width: 20%;
+    display: inline-block;
+}
+.toolbar .item .tip {
+    position: absolute;
+    display: block;
+    top: 20rpx;
+    right: 50%;
+    margin-right: -30rpx;
+    background: #019DD6;
+    color: #FFF;
+    width: 20rpx;
+    height: 20rpx;
+    border-radius: 20rpx;
+}
+.toolbar .item:active {
+    background: #FAFAFA;
+}
+.toolbar .item image {
+    width: 60rpx;
+    height: 60rpx;
+}

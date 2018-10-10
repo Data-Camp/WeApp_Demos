@@ -1,0 +1,28 @@
+page {
+  display: block;
+  min-height: 100%;
+  background-color: #fff;
+  font-family: "微软雅黑";
+  font-size: 28rpx;
+}
+
+.loading {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 200rpx;
+    height: 200rpx;
+    margin: -100rpx 0 0 -100rpx;
+    line-height: 300rpx;
+    font-family: "微软雅黑";
+    border-radius: 16rpx;
+    background-image: url('http://139.196.214.241:8093/cdn/images/loading.gif');
+    background-position: center 40rpx;
+    background-repeat: no-repeat;
+    background-size: 80rpx;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: #fff;
+    text-align: center;
+    font-size: 24rpx;
+    animation: bounceIn .3s;
+}

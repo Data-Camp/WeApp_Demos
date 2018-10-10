@@ -1,0 +1,72 @@
+<view class="container">
+	<view class="filter-flex">
+		<view class="filter-tab">
+			<text bindtap="setFilterPanel" data-findex="1" class="{{showfilterindex==1?'active':''}}">排序</text>
+			<text bindtap="setFilterPanel" data-findex="2" class="{{showfilterindex==2?'active':''}}">筛选</text>
+		</view>
+		<view class="filter-content" wx:if="{{showfilter}}">
+			<view class="filter-panel filter-sort" wx:if="{{showfilterindex==1}}">
+				<view wx:for="{{filterdata.sort}}" wx:key="{{item.id}}" bindtap="setSort" data-sortindex="{{index}}" data-sortid="{{item.id}}" class="{{sortindex==index?'active':''}}">{{item.title}}</view>
+			</view>
+			<view class="filter-panel filter-multiple" wx:if="{{showfilterindex==2}}">
+				<view class="group">
+					<view class="group-header">会议时间</view>
+					<view class="group-body">
+						<view class="input-list">
+							<view class="input-item">
+								<text class="input-item-label">开始时间</text>
+								<view class="input-item-content">
+									<input type="time" placeholder="" bindinput="inputStartTime"></input>
+								</view>
+							</view>
+							<view class="input-item">
+								<text class="input-item-label">结束时间</text>
+								<view class="input-item-content">
+									<input type="time" placeholder="" bindinput="inputEndTime"></input>
+								</view>
+							</view>
+						</view>
+					</view>
+					<view class="group-header">容纳人数</view>
+					<view class="group-body">
+						<view class="filter-tags">
+							<text wx:for="{{filterdata.contain}}" wx:key="{{item.id}}" data-id="{{item.id}}" bindtap="chooseContain" class="{{filter.containid==item.id?'active':''}}">{{item.title}}</text>
+						</view>
+					</view>
+					<view class="group-header">提供设备</view>
+					<view class="group-body">
+						<view class="filter-tags">
+							<text wx:for="{{filterdata.equipments}}" data-id="{{item.id}}" wx:key="{{item.id}}" bindtap="chooseEquipment">{{item.title}}</text>
+						</view>
+					</view>
+				</view>
+				<view class="filter-btns">
+					<button class="btn-block btn-gray" bindtap="cleanFilter">清空</button>
+					<button class="btn-block btn-orange" bindtap="submitFilter">提交</button>
+				</view>
+			</view>
+		</view>
+		<view class="filter-shadow" wx:if="{{showfilter}}" bindtap="hideFilter"></view>
+	</view>
+	<scroll-view class="container-body" scroll-y="true" scroll-top="{{scrolltop}}" bindscroll="scrollHandle" lower-threshold="50" bindscrolltolower="scrollLoading">
+		<view class="conference-list">
+			<navigator class="conference-item" wx:for="{{conferencelist}}" wx:key="{{item.id}}" url="../conferencedetail/conferencedetail?id={{item.id}}&price={{item.price}}&name={{item.name}}&area={{item.area}}&contain={{item.contain}}&equipments={{item.equipments}}">
+				<view class="conference-item-img">
+					<image src="{{item.imgurl}}" mode="aspectFill"></image>
+					<text>{{item.price}}元/小时</text>
+				</view>
+				<view class="conference-item-text">
+					<view class="conference-item-title">{{item.name}}</view>
+					<view class="conference-item-info">
+						<text>容纳人数：{{item.contain}}人</text>
+						<text>面积：{{item.area}}㎡</text>
+					</view>
+				</view>
+				<view class="conference-item-tags">
+					<text wx:for="{{item.equipments}}" wx:key="*this">{{item}}</text>
+				</view>
+			</navigator>
+		</view>
+		<view class="gototop {{scrolltop>200?'active':''}}" bindtap="goToTop"></view>
+	</scroll-view>
+</view>

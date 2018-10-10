@@ -1,0 +1,19 @@
+<view class="category-category">
+  <scroll-view class="left-content" scroll-y="true">
+    <view class="left-item" xmlns:wx="" wx:for="{{state.leftArr}}" wx:key="{{index}}" catchtap="_dispatch" id="{{index}}" data-catchtap="handleTap">
+      <view wx:if="{{state.selectIndex == index}}" class="item-select">{{item.name}}</view>
+      <view wx:else="{{state.selectIndex == index}}" class="item-normal">{{item.name}}</view>
+    </view>
+  </scroll-view>
+  <scroll-view class="right-content" scroll-y="true" scroll-top="{{state.scrollTop}}">
+    <view class="right-item" wx:for="{{state.rightArr}}" wx:key="{{index}}">
+      <view class="right-title">{{item.name}}</view>
+      <view class="third-content">
+        <view class="third-item" wx:for="{{item.thridCategory}}" wx:key="{{index}}">
+          <image src="{{item.icon}}"/>
+          <text>{{item.name}}</text>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

@@ -1,0 +1,19 @@
+<!--index.wxml-->
+<view class="container">
+    <view class="heroes">
+        <block wx:for="{{champions_free}}">
+            <view class="heroes-row">
+                <navigator url="herodetail/herodetail?champion_id={{item.id}}">
+                    <view class="heroes-row-in">
+                        <image src="http://ossweb-img.qq.com/images/lol/img/champion/{{item.id}}.png"></image>
+                        <view class="one-tag">
+                            <text class="one-tag-title">{{item.name}}</text>
+                            <text class="one-tag-name">{{item.title}}</text>
+                            <text class="one-tag-pos">{{item.id}}</text>
+                        </view>
+                    </view>
+                </navigator>
+            </view>
+        </block>
+    </view>
+</view>

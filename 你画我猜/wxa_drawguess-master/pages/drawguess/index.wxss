@@ -1,0 +1,229 @@
+.section {
+    height: 100%;
+}
+.dsn {
+    display: none;
+}
+.flex-wrp {
+    height: 100%;
+    flex-direction:column;
+    display: flex;
+}
+.text-left {
+    text-align: left;
+}
+.weui-col {
+    text-align: center;
+    float: left;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%
+}
+.weui-col-33 {
+    width: 33.3333%;
+}
+.fix_label {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+.fix_label .fix_con {
+    position: absolute;
+    width: 15rem;
+    border-radius: 0.8rem;
+    background-color: #fff;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    overflow: hidden;
+}
+.fix_label .fix_con .weui-cells {
+    color: #f5a923;
+}
+.fix_con .weui-cell__ft {
+    color: #f5a923;
+}
+.fix_label .fix_con .fix_header {
+    height: 2.5rem;
+    width: 100%;
+    background-color: #f5a923;
+}
+.fix_label .fix_con .fix_header text {
+    color: #fff;
+    display: inline-block;
+    width: 100%;
+    line-height: 2.5rem;
+    text-align: center;
+}
+.fix_con switch {
+    display: block;
+    height: 1.7rem;
+}
+.fix_con .fix_btn {
+    margin: 0.5rem auto;
+    background-color: #fff;
+    width: 12rem;
+    border-radius: 2rem;
+    border: 1px solid #f5a923;
+    color: #f5a923;
+}
+.fix_btn_hover {
+    opacity: 0.5;
+}
+.header_label {
+    background-color: #f8777b;
+    color: #fff;
+    text-align: center;
+    height: 60px;
+}
+.header_label text {
+    display: inline-block;
+    width: 100%;
+}
+text.big_txt {
+    font-size: 1.2rem;
+}
+.wait_label {
+    height: 20rem;
+    width: 100%;
+    display: flex;
+    background-color: #f8777b;
+    position: relative; 
+}
+.wait_label .header_label {
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
+}
+.wait_label .header_label text {
+    display: inline-block;
+    width: 100%;
+    color: #fff;
+}
+.wait_label .header_label .weui-col {
+    position: relative;
+    margin-bottom: 0.4rem;
+}
+.wait_label .header_label .status_txt {
+    position: absolute;
+    top: 2.2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.2rem;
+    border-radius: 1rem;
+    border: 1px solid #fff;
+    background-color: #ffad00;
+    color: #fff;
+}
+.wait_label .bottom_btns {
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    bottom: 0.5rem;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 2rem;
+}
+.wait_label .ready_btn {
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 4rem;
+    line-height: 4rem;
+    background-color: #ffab00;
+    bottom: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #fff;
+    font-size: 1rem;
+    border: 2px solid #fff;
+    padding: 0;
+}
+.hover {
+    opacity: 0.5;
+}
+.header_img {
+    display: inline-block;
+    background-color: #fff;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 4rem;
+}
+.draw_label {
+    position: relative;
+    width: 100%; 
+    height: 15rem;
+    display: flex;
+    box-sizing: border-box;
+}
+.draw_label canvas {
+    width: 100%;
+    height: 100%;
+    background-color: #ebe8bb;
+}
+.scroll_user {
+    width: 100%;
+    height: 3rem;
+    background-color: #f1f1d0;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    white-space: nowrap;
+}
+.scroll_user image {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 2rem;
+    background-color: #ffffff;
+    margin: 0 0.2rem;
+}
+.scroll_chat {
+    width: 100%;
+    height: 8rem;
+    padding: 0.5rem 0.5rem 0 0.5rem;
+    box-sizing: border-box;
+}
+.scroll_chat text {
+    display: inline-block;
+    width: 100%;
+    margin: 0.2rem 0;
+    line-height: 1.2;
+    color: #cbcad0;
+    font-size: 0.8rem;
+}
+.foot_label {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+    padding: 0.2rem 0.4rem;
+    box-sizing: border-box;
+    background-color: #ccc;
+}
+.foot_label input {
+    background-color: #fff;
+    height: 100%;
+    border-radius: 10rem;
+    padding: 0 1rem;
+}
+.message {
+    color: #666666;
+}
+.system-message {
+    width: 100%;
+    text-align: center;
+}
+.system-message text {    
+    font-size: 14px;
+    line-height: 20px;
+    color: #fff;
+    background: #cecece;
+    border-radius: 4px;
+    padding: 0 15rpx;
+    margin: 0 10rpx;
+    display: inline;
+}

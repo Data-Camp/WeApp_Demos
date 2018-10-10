@@ -1,0 +1,13 @@
+{
+  "name": "qcloud-weapp-client-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/CFETeam/qcloud-weapp-client-demo.git"
+  },
+  "keywords": [],
+  "author": "CFETeam",
+  "license": "MIT"
+}

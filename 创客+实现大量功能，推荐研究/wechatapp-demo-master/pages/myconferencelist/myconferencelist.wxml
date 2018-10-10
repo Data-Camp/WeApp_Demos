@@ -1,0 +1,16 @@
+<view class="container">
+	<!-- <view class="container-body"> -->
+		<view class="my-reserve-list">
+			<view class="my-reserve-item" wx:for="{{reservelist}}" wx:key="{{item.id}}">
+				<view class="my-reserve-img">
+					<image src="{{item.imgurl}}" mode="aspectFill"></image>
+				</view>
+				<view class="my-reserve-text">
+					<view class="my-reserve-title">{{item.name}}</view>
+					<text>预定时间：{{item.time}}</text>
+					<text>预订人：{{item.reserver}}</text>
+				</view>
+			</view>
+		</view>
+	<!-- </view> -->
+</view>

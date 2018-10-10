@@ -1,0 +1,10 @@
+<view class="container">
+  <scroll-view class="movies" scroll-y="true" bindscrolltolower="getMovies">
+    <view wx:for="{{movies}}" class="movie" wx:key="id" data-id="{{item.id}}" bindtap="getDetail">
+      <image class="movie-cover" src="{{item.cover}}" mode="scaleToFill"></image>
+      <view class="movie-score">
+        <text>{{item.score}}</text>
+      </view>
+    </view>
+  </scroll-view>
+</view>

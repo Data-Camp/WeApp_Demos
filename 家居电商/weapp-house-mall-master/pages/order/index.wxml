@@ -1,0 +1,38 @@
+
+<view class="swiper">
+      <block wx:for="{{orderList}}" wx:key="index">
+            <template is="myorder" data="{{item}}"/>
+      </block>
+      <view class="prompt" wx:if="{{orderList.length == 0}}">
+            <image src="../../images/dd.png"/>
+            <text>您没有任何订单</text>
+      </view>
+  </view>
+
+<template name="myorder">
+    <view class="item">
+        <view class="ddhead">
+              <text class="ddhao">订单号：{{item.code}}</text>
+              <text class="state">
+                    <block wx:if="{{item.status == '0'}}"> 未支付 </block>
+                    <block wx:elif="{{item.status == '1'}}"> 已支付 </block>
+                    <block wx:else > 已取消 </block>
+              </text>
+        </view>
+        <block wx:for="{{item.goods}}" wx:key="index">
+            <view class="ddimg">
+                <image src="{{item.thumb}}"/>
+            </view>
+        </block>
+        <view class="ddfooter">
+            <text class="jr">订单金额：</text>
+            <text class="jr">￥{{item.amount}}</text>
+            <view wx:if = "{{item.status == 0}}">
+                    <view class="btn" id="{{item.id}}" bindtap="pay">去支付</view>
+            </view> 
+            <view wx:if = "{{item.status == 0}}">
+                    <view class="btn cancel" id="{{item.id}}" bindtap="cancelOrder">取消订单</view>
+            </view>
+        </view>
+     </view>
+</template>

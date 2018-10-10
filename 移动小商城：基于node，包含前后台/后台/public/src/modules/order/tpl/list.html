@@ -1,0 +1,23 @@
+<ion-view view-title="所有订单">
+	<ion-nav-buttons side="right">
+		<a class="button button-clear icon icon ion-ios-more" on-tap="vm.showSheet()"></a>
+	</ion-nav-buttons>
+	<ion-content ng-class="{'no-footer': tabsHidden}">
+		<ion-refresher pulling-icon="ion-arrow-down-c" pulling-text="下拉刷新" on-refresh="vm.doRefresh()">
+		</ion-refresher>
+		<ion-list>
+			<ion-item ng-repeat="item in vm.order.items" ui-sref="web.order.detail({id: item._id})">
+				<h2>订单号：{{ item._id }}</h2>
+				<h2>订单总价：¥ {{ item.totalAmount }}</h2>
+				<p>下单时间：{{ item.create_at | date : 'yyyy-MM-dd HH:mm:ss' }}</p>
+				<p>收货地址：{{ item.recipientName }} {{ item.recipientGender === 'female' ? '女士' : '先生' }} {{ item.recipientTel }} {{ item.recipientAddress }}</p>
+				<p>订单状态：<span ng-bind-html="vm.renderStatus(item.status)"></span></p>
+				<ion-option-button class="button-calm icon ion-edit" ui-sref="web.order.edit({id: item._id})"></ion-option-button>
+				<ion-option-button class="button-assertive icon ion-close" on-tap="vm.order.delete({id: item._id})"></ion-option-button>
+			</ion-item>
+		</ion-list>
+		<ion-infinite-scroll ng-if="vm.order.paginate.hasNext" on-infinite="vm.loadMore()">
+		</ion-infinite-scroll>
+		<prompt-message ng-if="!vm.order.items.length" text="暂无订单"></prompt-message>
+	</ion-content>
+</ion-view>

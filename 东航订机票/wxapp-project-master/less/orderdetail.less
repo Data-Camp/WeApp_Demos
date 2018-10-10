@@ -1,0 +1,481 @@
+@import "./imgUrl/imgUrl.less";
+page{
+  background: #F0EFF5;
+}
+.borderBot{
+  position: relative;
+  &:after{
+    content: '';
+    width: 200%;
+    height: 0;
+    transform: scale(0.5);
+    transform-origin: 0 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-bottom: 1px solid #E2E2E3;     /*no*/
+  }
+}
+.borderTop{
+  position: relative;
+  &:after{
+    content: '';
+    width: 200%;
+    height: 0;
+    transform: scale(0.5);
+    transform-origin: 0 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-top:1px solid #E2E2E3;/*no*/
+  }
+}
+.head{
+  width: 100%;
+  background: #58A4EF;
+  display: flex;
+  flex-direction: column;
+  padding:0 1rem 0.6rem 1rem;
+  box-sizing: border-box;
+  color:#FFFFFF;
+  font-size: 26rpx;
+  .inhead{
+    .payment{
+      height: 1.867rem;
+      font-size: 30rpx;
+      padding-top:10rpx;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .paymentLeft{
+          display: flex;
+          align-content: center;
+          .clock{
+            width: 30px;
+            height: 30px;
+            margin: 0 0.267rem 0 0;
+            display: block;
+          }
+      }
+    }
+    .time{
+      margin-top: 5px;
+      text{
+        &:last-child{
+          font-weight: lighter;
+        }
+      }
+    }
+  }
+}
+
+.point{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background:#FFFFFF;
+}
+.points{
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  .points-t{
+    border-bottom: 1px solid #EEEEEE; /*no*/
+    overflow: hidden;
+    padding: 20px 0;
+    .txt{
+        display: block;
+        width:100%;
+        color: #43505F;
+        font-weight:500;
+        font-size: 30rpx;
+    }
+  }
+  .time{
+    display: flex;
+    align-items: center;
+    text{
+      display: block;
+    }
+  }
+  .jr{
+    margin: 0.533rem 0 0.533rem 0;
+    color:#43505F;
+    text{
+      font-size: 24rpx;
+    }
+    .number{
+      color:#FF7F00;
+      font-size:36rpx;
+      font-weight: bold;
+      margin-left: 0.8rem;
+      .rmb{
+        font-size:20rpx;
+        display: inline-block;
+      }
+    }
+  }
+  .timePay{
+    .way,.wx{
+      color:#43505F;
+      font-size: 24rpx;
+    }
+  }
+
+  .cancelOrder{
+    display: flex;
+    justify-content: flex-end;
+    .cancel{
+      width: 7rem;
+      height: 1.867rem;
+      line-height: 1.867rem;
+      text-align: center;
+      border-radius: 10rpx;
+      color: #FFFFFF;
+      background: #B8C0CD;
+      font-size: 30rpx;
+      &.sure{
+        background: #59a5f0;
+      }
+    }
+  }
+}
+.xxl{
+  width: 0.96rem;
+  height: 0.96rem;
+  margin:0rpx 0.267rem 0 0.8rem;
+  vertical-align:middle;
+}
+.bt-img{
+  width: 100%;
+  height: 1.307rem;
+}
+/*机票*/
+.pannelMain{
+  width: 100%;
+  padding: 0 4%;
+  box-sizing: border-box;
+}
+.pannel {
+  padding-top: 0.533333rem;
+  margin-bottom: 1.066667rem;
+  position: relative;
+  border-radius: 10px; /*no*/
+  &:before{
+    content: '';
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 1px solid #E2E2E3;/*no*/
+    transform: scale(0.5);
+    transform-origin: 0 0;
+    border-radius: 10px; /*no*/
+    z-index: -1;
+    background-color: #fff;
+    box-sizing: content-box;
+  }
+  &.cost{
+    padding-top: 0;
+  }
+}
+.goFlight {
+  border-bottom: 1px  dashed  #E2E2E3;  /*no*/
+  padding-bottom: 0.533rem;
+  width: 88%;
+  margin: 0 auto;
+  &:last-child{
+    border-bottom: none;
+  }
+}
+
+.flightDate {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.flightDate view {
+  display: flex;
+  flex-direction: column;
+  text {
+    font-size: 40rpx;
+  }
+  .times {
+    font-size: 26rpx;
+    margin-top: 10px;
+  }
+  .times_right{
+      text-align: right;
+  }
+  .date {
+    color: #aaa;
+    text-align: center;
+    margin-bottom: 0.266667rem;
+    font-size: 30rpx;
+  }
+  .orderLine{
+    width: 331px;
+    height: 42px;
+  }
+}
+.flightLine {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  image{
+    width: 25px;
+    height: 20px;
+    margin-right: 5px;
+  }
+}
+.airport {
+  color: #aaa;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.airport text {
+  font-size: 28rpx;
+}
+.flightDetail {
+  height: 2.346667rem;
+  line-height: 2.346667rem;
+  text {
+    font-size: 30rpx;
+    color: #9caabc;
+    &:last-child{
+      margin-left: 5px;
+    }
+  }
+  .flightName {
+    .flightNum{
+      color: #444400;
+      margin: 0 5px;
+      display: inline-block;
+    }
+  }
+  .go {
+    background-color: #ff7f00;
+    color: #fff;
+    display: block;
+    font-size: 28rpx;
+    width: 2.293333rem;
+    height: 1.226667rem;
+    line-height: 1.226667rem;
+    text-align: center;
+    margin-top: 0.56rem;
+  }
+}
+.changeFlight {
+  font-size: 30rpx;
+  text-align: center;
+  color: #aaa;
+  margin-top: 0.533333rem;
+  height: 1.333333rem;
+  line-height: 1.6rem;
+  border-top: 1px solid #cacaca;       /*no*/
+}
+.changeHotel {
+  font-size: 30rpx;
+  text-align: center;
+  color: #aaa;
+  margin-top: 0.533333rem;
+  height: 1.333333rem;
+  line-height: 1.6rem;
+  border-top: 1px solid #cacaca;         /*no*/
+}
+.ticket{
+  width: 100%;
+  height: 1.867rem;
+  display: flex;
+  &.ticket_color{
+    .borderBot();
+  }
+  .borderBot();
+}
+
+.ticket-l{
+  width: 1.573rem;
+  height: 1.067rem;
+  margin: 0.16rem 0.533rem 0 0.533rem;
+}
+.grogshop-img{
+  width:1.067rem;
+  height: 1.093rem;
+}
+.ticket-r{
+  font-size: 26rpx;
+  color:#526176;
+  line-height: 1.333rem;
+}
+.user{
+  width: 100%;
+  height: 2.533rem;
+  background: #F4F4F9;
+  border-top:1px solid #E2E2E3;     /*no*/
+  border-radius: 0 0 14rpx 14rpx;
+  font-size: 26rpx;
+  color:#536277;
+}
+.per-img{
+  width: 1.067rem;
+  height: 1.013rem;
+  margin:0.72rem 0.533rem 0 0.533rem;
+}
+.name{
+  line-height: 2.533rem;
+}
+.rule{
+  color:#FF7F00;
+  line-height: 2.533rem;
+  margin-right: 1.867rem;
+}
+.grogshop-m{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.grogshop-b{
+  height: 2.133rem;
+  line-height: 2.133rem;
+  color: #58A4EE;
+  font-size: 26rpx;
+  //background-color: pink;
+
+}
+.inshop{
+  width: 84%;
+  margin-top: 0.533rem;
+  .act{
+    font-size: 26rpx;
+    color:#A6B2BF;
+    height: 1.333rem;
+    line-height: 1.333rem;
+    &.actTop{
+      display: flex;
+      justify-content: space-between;
+    }
+    .grod{
+      width: 11rem;
+      font-size: 30rpx;
+      color: #526177;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    .type{
+      padding: 0 20px;
+      text-align: center;
+      font-size: 26rpx;
+      color:#58A4EE;
+      border: 1px solid #58A4EE;/*no*/
+      border-radius: 50rpx;
+    }
+  }
+  .act_short{
+    width:65%;
+  }
+  .act3{
+    color:#FF7F00;
+  }
+}
+/*用户信息*/
+.sum{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 50px;
+  line-height: 2rem;
+  box-sizing: border-box;
+  &.sum1{
+    line-height: 1.2rem;
+    text{
+      display: block;
+    }
+    .add{
+        color: #A7B2C0;
+        font-weight: 300;
+    }
+    .sum-l,.sum-r{
+      padding-bottom: 20px;
+    }
+  }
+  &:last-child{
+     .sum-r:after{
+       border-bottom: none;
+     }
+  }
+  .sum-l{
+    font-size: 28rpx;
+    text-align: left;
+    width: 16%;
+  }
+  .changeFlight {
+    font-size: 30rpx;
+    text-align: center;
+    color: #aaa;
+    margin-top: 0.533333rem;
+    height: 1.333333rem;
+    line-height: 1.6rem;
+    border-top: 1px solid #cacaca;/*no*/
+  }
+  .sum-r{
+    flex: 1;
+    color: #526077;
+    font-size: 26rpx;
+    .borderBot();
+  }
+  .grod{
+    width: 11rem;
+    font-size: 30rpx;
+    color: #526177;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .type{
+    width: 3.44rem;
+    line-height: 1.253rem;
+    text-align: center;
+    font-size: 26rpx;
+    color:#58A4EE;
+    border: 1rpx solid #58A4EE;
+    border-radius: 50rpx;
+  }
+  .inshop{
+    width: 84%;
+    margin-top: 0.533rem;
+    &:last-child{
+      .sum-r:after{
+        border-bottom: none;
+      }
+    }
+  }
+  .cost{
+    padding-top: 0;
+  }
+}
+.roomDetails{
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2001;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  font-weight: 200;
+  font-size: 32rpx;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.8);
+  .closeIcon{
+    margin-bottom: 50px;
+  }
+}

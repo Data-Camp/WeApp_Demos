@@ -1,0 +1,30 @@
+<template name="loading">
+  <view class="spinner" wx:if="{{loading}}">
+    <view class="rect1"> </view>
+    <view class="rect2"> </view>
+    <view class="rect3"> </view>
+    <view class="rect4"> </view>
+    <view class="rect5"> </view>
+  </view>
+</template>
+
+<!--html2json解析视图模板-->
+<template name="htmlpart">
+  <block wx:for="{{content}}" wx:for-index="idy" wx:key="celldata_for" wx:for-item="cellData">
+    <block wx:if="{{cellData.type == 'view'}}">
+      <view class="p">
+        <block wx:for="{{cellData.child}}" wx:key="text">
+          <block wx:if="{{item.type == 'a'}}">
+            <text class="a" data-seccode="{{item.attr['data-seccode']}}" data-secname="{{item.attr['data-secname']}}" bindtap="stockClick">{{item.text}}</text>
+          </block>
+          <block wx:else>
+            <text>{{item.text}}</text>
+          </block>
+        </block>
+      </view>
+    </block>
+    <block wx:if="{{cellData.type == 'img'}}">
+      <image class="img" data-index="{{idy}}" style="height: {{cellData.attr.height?cellData.attr.height:0}}px" mode="aspectFit" src="{{cellData.attr.src}}" bindload="imageLoad"></image>
+    </block>
+  </block>
+</template>

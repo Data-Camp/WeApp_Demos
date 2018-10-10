@@ -1,0 +1,33 @@
+<import src="../../../utils/commentslist.wxml" />
+<view id="mvpage">
+  <view id="mvheader">
+    <video id="mvideo" src="{{main.brs['720']}}" autoplay="true"></video>
+  </view>
+  <view class="tab">
+    <view class="tab-item {{tab==0?'tbi-cur':''}}" bindtap="tab" data-tab="0">
+      <text class="tbi-text">详情</text>
+    </view>
+    <view class="tab-item {{tab==1?'tbi-cur':''}}" data-tab="1" bindtap="tab">
+      <text class="tbi-text">评论<text class="tbi-des">{{main.commentCount}}</text></text>
+    </view>
+  </view>
+  <view id="mvmain">
+    <view class="tab-cnt" id="mv-detail" hidden="{{tab==1}}">
+      <view id="mvinfo">
+        <text id="mvname">{{main.name}}</text>
+        <view><navigator url="../artist/index?id={{main.artistId}}"> 歌手：{{main.artistName}}</navigator></view>
+        <view>播放：{{main.playCount}}</view>
+      </view>
+      <view id="mvdes">
+        <view class="fc_gray">发行：{{main.publishTime}}</view>
+        <view>{{main.briefDesc}}</view>
+        <view>{{main.desc}}</view>
+      </view>
+    </view>
+    <view class="tab-cnt" hidden="{{tab==0}}">
+      <scroll-view id="mv-comment" bindscrolltolower="loadmore" style="height:100%;" scroll-y="true" lower-threshold="20">
+        <template is="commentslist" data="{{rec:rec,loading:loading}}" />
+      </scroll-view>
+    </view>
+  </view>
+</view>

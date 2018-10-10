@@ -1,0 +1,49 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/detail/index",
+    "pages/shoppingcar/index",
+    "pages/user/index",
+    "pages/address/index",
+    "pages/address/addto/index",
+    "pages/settlement/index",
+    "pages/order/index",
+    "pages/userdata/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#F5B223",
+    "navigationBarTitleText": "家具时尚",
+    "navigationBarTextStyle":"#fff"
+  },
+  "tabBar": {
+    "selectedColor": "#F5B223",
+    "color": "#9A9A9A",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "推荐",
+      "iconPath": "images/dianpu.png",
+      "selectedIconPath": "images/dianpu_s.png"
+    },
+    {
+      "pagePath": "pages/shoppingcar/index",
+      "text": "购物车",
+      "iconPath": "images/gouwuche.png",
+      "selectedIconPath": "images/gouwuche_s.png"
+    },
+    {
+      "pagePath": "pages/user/index",
+      "text": "我",
+       "iconPath": "images/user.png",
+      "selectedIconPath": "images/user_s.png"
+    }]
+  },
+  "debug": true,
+    "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  }
+}

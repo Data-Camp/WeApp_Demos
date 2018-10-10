@@ -1,0 +1,167 @@
+.profile-header {
+	background: url(../../../img/profile_header.jpg) no-repeat 50% 50%;
+	width: 100%;
+	height:100px;
+}
+.profile-bg {
+	padding-top:30px;
+	width: 100%;
+}
+.profile-header-icon {
+	width: 50px;
+	height: 50px;
+	border-radius: 100px;
+	margin:0 auto;
+	display:block;
+	
+}
+.profile-header-name {
+	display: block;
+	color: white;
+}
+.profile-container {
+	display: flex;
+	flex-direction: column;
+}
+.profile-tab {
+	flew: 1;
+	display: flex;
+	flex-direction: row;
+	font-size: 16px;
+}
+.profile-tab-sub {
+	width:30%;
+	border:1px solid #d2d2d2;
+	position: relative;
+	padding:.5rem .3rem;
+	text-align: center;
+	z-index: 10;
+}
+.select {
+	color: #ea8010;
+	border-bottom: 0;
+}
+.content-info {
+	flew: 1;
+	display: flex;
+	flex-direction: row;
+	text-align: center;
+	font-size: 14px;
+	height: 100px;
+}
+/*段位*/
+.content-info-division {
+	display: flex;
+	width:25%;
+	border-right:1px solid #d2d2d2;
+	flex-direction: column;
+}
+.division-img {
+	width: 80px;
+	height: 80px;
+}
+/*胜率*/
+.content-info-win {
+	padding: 0 10px;
+	display: flex;
+	width:75%;
+	flex-direction: column;
+}
+.win-num {
+	margin: 10px 0;
+	text-align: left;
+}
+
+.win-honor {
+	display: flex;
+	flex-direction: row;
+
+}
+.win-honor-item {
+	margin-right:10px;
+	width: 60px;
+	height:50px;
+}
+.win-honor-times {
+	margin-top: 35px;
+}
+.win-honor-times text{
+	color: yellow;
+	font-size: 12px;
+}
+
+.content-info-history {
+	display: flex;
+	flex-direction: column;
+	margin: 10px 0;
+	border-top: 1px solid #d2d2d2;
+	border-radius: 20px;
+}
+.history-header {
+	font-size: 20px;
+	margin: 10px 0;
+}
+.history-content {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	height: 50px;
+	border-bottom: 1px solid #d2d2d2;
+}
+.history-content-img {
+	flex: 1;
+	width:40px;
+	height:40px;
+}
+.history-content-img image {
+	margin-top:5px;
+	width:40px;
+	height:40px;
+	border-radius: 30px;
+}
+.history-content-data {
+	margin-top:5px;
+	margin-bottom:5px;
+	flex: 2;
+	text-align:left;
+}
+.history-content-time {
+	margin-top:5px;
+	margin-bottom:5px;
+	flex: 3;
+	text-align:right;
+	padding-right:10px;
+}
+.canvas-abilty {
+	width: 100%;
+	heigth: 200px;
+}
+.canvas-abilty canvas {
+	margin: 0 auto;
+}
+.ability-tag {
+	border-left: 3px solid #ea8010;
+	padding-left: 10px;
+	margin: 20px 0;
+}
+.ability-tag-position {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	heigth: 60px;
+}
+.position-item {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+}
+.position-item image {
+	width: 40px;
+	height: 40px;
+	border-radius: 50px;
+	margin:0 auto;
+}
+.position-item text {
+	display: block;
+	text-align: center;
+}

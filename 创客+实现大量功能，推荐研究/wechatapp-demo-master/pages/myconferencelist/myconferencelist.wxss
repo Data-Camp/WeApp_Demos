@@ -1,0 +1,31 @@
+.my-reserve-item{
+	display: flex;
+	padding: 20rpx;
+	border-bottom: 1rpx solid #ddd;
+}
+.my-reserve-img{
+	width: 220rpx;
+	height: 156rpx;
+}
+.my-reserve-img image{
+	width: 220rpx;
+	height: 156rpx;
+}
+
+.my-reserve-text{
+	flex: 1;
+	margin-left: 20rpx;
+	width: 100%;
+}
+.my-reserve-title{
+	color: #333;
+	width: 100%;
+	font-size: 34rpx;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.my-reserve-text text{
+	display: block;
+	color: #888;
+}

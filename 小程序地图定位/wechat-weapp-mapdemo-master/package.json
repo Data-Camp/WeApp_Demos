@@ -1,0 +1,25 @@
+{
+  "name": "wechat-weapp-mapdemo",
+  "version": "1.0.0",
+  "description": "微信小程序demo,地图",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giscafer/wechat-weapp-mapdemo.git"
+  },
+  "keywords": [
+    "微信小程序demo"
+  ],
+  "author": "giscafer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/giscafer/wechat-weapp-mapdemo/issues"
+  },
+  "homepage": "https://github.com/giscafer/wechat-weapp-mapdemo#readme",
+  "dependencies": {
+    "mapbox-gl": "^0.24.0"
+  }
+}

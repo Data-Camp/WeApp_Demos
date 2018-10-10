@@ -1,0 +1,10 @@
+<view class="weui-panel">
+    <view class="weui-panel__hd">
+    	<text class="title">{{ helps.item.title }}</text>
+    </view>
+    <view class="weui-panel__bd">
+        <view class="weui-media-box weui-media-box_text">
+            <view class="content">{{ helps.item.content }}</view>
+        </view>
+    </view>
+</view>

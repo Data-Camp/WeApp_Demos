@@ -1,0 +1,42 @@
+/**index.wxss**/
+.container{
+  background:-moz-linear-gradient(top,#fff,#a0fefb);/*Mozilla*/
+  background:-webkit-gradient(linear,0 50%,100% 50%,from(#fff),to(#a0fefb));/*Old gradient for webkit*/
+  background:-webkit-linear-gradient(top,#fff,#a0fefb);/*new gradient for Webkit*/
+  background:-o-linear-gradient(top,#fff,#a0fefb); /*Opera11*/
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.loginBtn{
+  display: block;
+  width:128px;
+  height: 30px;
+  color: #232;
+  
+  font-size: 20px;
+  line-height: 30px;
+  margin:5px;
+  font-weight: normal;
+  font-family: '微软雅黑';
+  border:none;
+}

@@ -1,0 +1,28 @@
+<view class="container">
+	<view class="filter-flex">
+		<view class="filter-tab sort-tab">
+			<text bindtap="setSortBy" data-sortindex="{{index}}" data-sortid="{{item.id}}" class="{{sortindex==index?'active':''}}" wx:for="{{sort}}" wx:key="{{item.id}}">{{item.title}}</text>
+		</view>
+	</view>
+	<scroll-view class="container-body" scroll-y="true" scroll-top="{{scrolltop}}" bindscroll="scrollHandle" lower-threshold="50" bindscrolltolower="scrollLoading">
+		<view class="conference-list">
+			<navigator class="conference-item" wx:for="{{activitylist}}" wx:key="{{item.id}}" url="../activitydetail/activitydetail?id={{item.id}}">
+				<view class="conference-item-img">
+					<image src="{{item.imgurl}}" mode="aspectFill"></image>
+					<text class="hover{{index}}" data-status="{{item.status}}">{{item.status}}</text>
+				</view>
+				<view class="conference-item-text">
+					<view class="conference-item-title">{{item.name}}</view>
+					<view class="conference-item-info activity-item-info">
+						<text class="icon-time">{{item.time}}</text>
+						<text class="icon-xinxi">{{item.coments}}</text>
+					</view>
+					<view class="conference-item-info">
+						<text class="icon-zuobiao">{{item.address}}</text>
+					</view>
+				</view>
+			</navigator>
+		</view>
+		<view class="gototop {{scrolltop>200?'active':''}}" bindtap="goToTop"></view>
+	</scroll-view>
+</view>

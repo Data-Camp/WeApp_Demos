@@ -1,0 +1,46 @@
+.serial {
+  padding: 15px;
+}
+
+.serial-author {
+  display: inline-block;
+  width: 80%;
+  margin-bottom: 10px;
+  font-weight: 200;
+  font-size: 12px;
+}
+
+.serial-author-avatar {
+  width: 40px;
+  height: 40px;
+  float: left;
+  margin-right: 15rpx;
+  border-radius: 50%;
+}
+
+.serial-author-username {
+  padding: 5px;
+  color: #89bdf7;
+}
+
+.serial-makettime {
+  margin-top: 3px;
+  color: #888;
+}
+
+.serial-title {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.serial-content {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.serial-charge-edt {
+  margin-top: 20px;
+  color: #888;
+  font-size: 12px;
+}

@@ -1,0 +1,9 @@
+<!--出现错误-->
+<view class="container verySorry">
+    <view class="sorryIcon">
+        <icon type="warn" size="120" color="#b6b5b7"/>
+    </view>
+    <view class="textBold">很抱歉！</view>
+    <view class="reChoose">{{errMsg}}</view>
+    <button class="dateBtn" bindtap="rebackIndex">点击选择日期</button>
+</view>

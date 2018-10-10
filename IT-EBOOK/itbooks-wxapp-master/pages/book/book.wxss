@@ -1,0 +1,46 @@
+.book-detail{
+    padding:10px;
+}
+.book-detail .books-item{
+    overflow: auto;
+}
+.books-item-author{
+    margin-top: 10px;
+}
+.avatar{
+    clear: both;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 3px;
+}
+.book-detail .book-image{
+    width:100%;
+}
+.txt-title{
+  font-size: 2.0em;
+  line-height: 1.2em;
+}
+.txt-source{
+  font-size: 1.4em;
+}
+.author-txt{
+    display: inline-block;
+}
+
+.download-icon{
+    vertical-align: middle;
+    margin-right: 10px;
+    background:#fff;
+    border-radius: 50%;
+    border:none;
+}
+.book-download{
+    margin-top:20px;
+    display: block;
+    text-align: center;
+    background: #2fb109;
+    color:#fff;
+    font-size:1.6em;
+    border-radius: 3px;
+    padding:8px 0;
+}

@@ -1,0 +1,36 @@
+<!-- <view class="downView">
+	<image class="topImage" src="/image/图片1.png"></image>
+	<view class="nameBoard">
+		<button class="nameBoard-btn">
+			<image class="nameBoard-image" src="/image/图片1.png"></image>
+			<text class="nameBoard-text">{{names[0]}}</text>
+		</button>
+		<button class="nameBoard-btn">
+			<image class="nameBoard-image" src="/image/图片1.png"></image>
+			<text class="nameBoard-text">{{names[1]}}</text>
+		</button>
+		<button class="nameBoard-btn">
+			<image class="nameBoard-image" src="/image/图片1.png"></image>
+			<text class="nameBoard-text">{{names[2]}}</text>
+		</button>
+		<button class="nameBoard-btn">
+			<image class="nameBoard-image" ></image>
+			<text class="nameBoard-text">{{names[3]}}</text>
+		</button>
+	</view>
+</view> -->
+
+<view class="downView">
+	<image class="topImage" src="/image/图片1.png"></image>
+	<view class="nameBoard">
+	<block wx:for="{{names}}" wx:for-index="index" >
+		<swiper-item>
+			<button class="nameBoard-btn" bindtap="changeMotto" id="{{index}}">
+				<image class="nameBoard-image" src="/image/icon_API_HL.png"></image>
+				<text class="nameBoard-text">{{item}}</text>
+			</button>
+		</swiper-item>
+	</block>
+	</view>
+</view>
+

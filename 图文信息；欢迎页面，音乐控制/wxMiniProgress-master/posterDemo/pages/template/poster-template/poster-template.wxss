@@ -1,0 +1,70 @@
+.poster-container{
+    display:flex;
+    flex-direction: column;
+    margin-top:20px 0 40px 0;
+    border-top:1px solid #ededed;
+    border-bottom: 1px solid #ededed;
+    padding-bottom:5px;
+    background-color: #fff;
+}
+
+.poster-auto{
+    margin: 20rpx 0 20rpx 10rpx;
+}
+
+.poster-auto-img{
+    width:60rpx;
+    height:60rpx;
+    vertical-align: middle;
+}
+
+.poster-auto-time{
+    margin-left: 20rpx;
+    margin-bottom: 5px;
+    vertical-align: middle;
+    font-size: 26rpx;
+}
+
+.poster-title{
+    margin-left: 25rpx;
+    margin-bottom: 10px;
+    font-size: 34rpx;
+    font-weight: 600;
+    color:#333;
+}
+
+.poster-img{
+    width:100%;
+    height: 340rpx;
+    margin: auto 0;
+    margin-bottom: 15px;
+}
+
+.poster-content{
+    margin-left:20rpx;
+    margin-bottom:10px;
+    font-size: 28rpx;
+    color: #666;
+    line-height: 40rpx;
+    letter-spacing: 2rpx;
+}
+
+.poster-like-container{
+    display: flex;
+    flex-direction: row;
+    font-size: 26rpx;
+    line-height: 32rpx;
+    margin-left: 20rpx;
+}
+
+.poster-like-img{
+    width:32rpx;
+    height: 32rpx;
+    vertical-align: middle;
+    margin-right: 16rpx;
+}
+
+.poster-like-num{
+    margin-right: 40rpx;
+    vertical-align: middle;
+}

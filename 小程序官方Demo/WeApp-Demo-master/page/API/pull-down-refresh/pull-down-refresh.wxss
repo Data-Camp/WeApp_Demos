@@ -1,0 +1,10 @@
+.page-body-info {
+  background-color: transparent;
+}
+.page-body-buttons button {
+  color: #21c932;
+  margin: 0 100rpx;
+}
+.page-body-buttons button:after {
+  border-color: #21c932;
+}

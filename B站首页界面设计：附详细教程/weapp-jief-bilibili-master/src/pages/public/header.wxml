@@ -1,0 +1,38 @@
+<!-- 顶部工具条-begin -->
+<view class="nav-bar">
+    <view class="nav-wrp">
+        <!-- LOGO -->
+        <navigator class="a logo"></navigator>
+        <!-- 观看历史 -->
+        <navigator class="a cell">
+            <view class="nav-icon bili-icon-history"></view>
+        </navigator>
+        <!-- 搜索框 -->
+        <view class="a cell">
+            <view class="nav-icon bili-icon-search"></view>
+        </view>
+    </view>
+</view>
+<!-- 顶部工具条-end -->
+
+<!-- 导航菜单-begin -->
+<view class="flex-bar main">
+    <view class="flex-bar-in">
+        <view class="li nav-item on">
+            <navigator url="" class="a">首页</navigator>
+        </view>
+        <view class="li nav-item">
+            <navigator url="" class="a">频道</navigator>
+        </view>
+        <view class="li nav-item">
+            <navigator url="" class="a">直播</navigator>
+        </view>
+        <view class="li nav-item">
+            <navigator url="" class="a">排行</navigator>
+        </view>
+        <view class="li nav-item">
+            <navigator url="" class="a">我的</navigator>
+        </view>
+    </view>
+  </view>
+  <!-- 导航菜单-end -->

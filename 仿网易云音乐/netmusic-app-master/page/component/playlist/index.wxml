@@ -1,0 +1,94 @@
+<view class="index">
+  <view id="plist-header">
+    <view class="blurbg" style="background-image:url({{list.coverImgUrl}})" id="plh-filterbg"></view>
+    <view id="plh-main">
+      <view id="plh-cover">
+        <image class="music_cover" src="{{list.coverImgUrl}}" />
+        <view class="img_playcount"><image src="../../../image/p0.png" style="width:24rpx;height:24rpx;" />{{list.playCount}}</view>
+        <view id="plh-playinfo">
+          <image src="../../../image/cm2_list_detail_icn_infor@2x.png" />
+        </view>
+      </view>
+
+      <view id="plh-cnt">
+        <text id="music_h_name">{{list.name||" "}}</text>
+        <view data-userid="{{list.userId}}" wx:if="{{list}}" bindtap="userplaylist">
+          <image id="user_ava" class="user_avator" src="{{list.creator.avatarUrl}}" />
+          <text>{{list.creator.nickname||" "}} </text>
+          <image src="../../../image/cm2_list_detail_icn_arr@2x.png" style="width:16rpx;height:24rpx;"/>
+        </view>
+      </view>
+    </view>
+
+    <view id="plh_action">
+      <view>
+        <image src="../../../image/cm2_list_detail_icn_fav_new@2x.png" />
+        <text>{{list.subscribedCount||'收藏'}}</text>
+      </view>
+      <view>
+        <navigator url="../recommend/index?id={{list.commentThreadId}}&from=playlist">
+          <image src="../../../image/cm2_list_detail_icn_cmt@2x.png" />
+          <text>{{list.commentCount||'评论'}}</text>
+        </navigator>
+      </view>
+      <view>
+        <image src="../../../image/cm2_list_detail_icn_share@2x.png" />
+        <text>{{list.shareCount||'分享'}}</text>
+      </view>
+    </view>
+  </view>
+  
+  <view class="plist-detail">
+    <block wx:if="{{!list.tracks.length}}" wx:if="{{list.tracks.length}}">
+      <view id="playall" bindtap="playall">
+        <image src="../../../image/pl-playall.png" />
+        <text id="pa-count">播放全部<text> (共{{list.tracks.length}}首)</text>
+        </text>
+      </view>
+      <block wx:for-items="{{list.tracks}}" wx:for-index="idx" wx:key="{{item.id}}">
+        <view class="pldetail-item" data-mid="{{item.id}}" bindtap="playmusic" data-idx="{{idx}}">
+          <view class="pld-item-sort">
+            <block wx:if="{{item.id===curplay}}">
+              <image src="../../../image/aal.png" class="playingidx" />
+            </block>
+            <block wx:else>
+              <text class="{{toplist&&idx<3?'topindex':''}}">{{idx<9?( '0'+(idx+1)):(idx+1)}}</text>
+              <block wx:if="{{toplist}}">
+                    <view class="ftp" wx:if="{{item.ratio!=undefined}}">
+                      <image src="../../../image/xv.png" />{{item.ratio}}%</view>
+                    <view class="ftp" wx:if="{{item.ratio==undefined&&item.lastRank!=undefined}}">
+                      <image src="../../../image/wu.png" wx:if="{{idx>item.lastRank}}" />
+                      <image src="../../../image/xu.png" wx:if="{{item.lastRank>idx}}" />
+                      <image src="../../../image/xr.png" wx:if="{{item.lastRank==idx}}" />
+                      <text>{{item.lastRank <idx?(idx-item.lastRank):(item.lastRank-idx)}}</text>
+                    </view>
+                    <view class="ftp" wx:if="{{item.ratio==undefined&&item.lastRank==undefined}}">
+                      <image src="../../../image/xy.png" class="tpnew" />
+                    </view>
+               </block>
+            </block>
+          </view>
+          <view class="pld-item">
+            <text class="pld-item-name">{{item.name}}<text class="transNames" wx:if="{{item.transNames}}"> ({{item.transNames}})</text>
+            </text>
+            <text class="pld-item-info">{{item.artists[0].name}} - {{item.album.name}}</text>
+          </view>
+          <view class="pld-item-action">
+            <view catchtap="mv" data-mvid="{{item.mvid}}" class="pld-mv" wx-if="{{item.mvid!=0}}">
+              <image src="../../../image/cm2_list_btn_icn_mv_new@2x.png"/>
+            </view>
+          </view>
+        </view>
+      </block>
+    </block>
+    <block wx:if="{{!list.tracks.length}}">
+      <view class="cntloading">加载中...
+        <view>
+          <text class="cl1"></text>
+          <text class="cl2"></text>
+          <text class="cl3"></text>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

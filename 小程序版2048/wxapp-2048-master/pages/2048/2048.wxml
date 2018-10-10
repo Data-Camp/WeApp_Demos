@@ -1,0 +1,46 @@
+<view class="container">
+
+  <view class="game-body">
+    <loading hidden="{{hidden}}">
+        加载中...
+    </loading>
+    <view class="heading">
+      	<text class="title">2048</text>
+      	<view class="scores-container">
+        	<view class="score-container">{{score}}</view>
+      		<view class="best-container">{{highscore}}</view>
+      	</view>
+    </view>
+
+    <view class="above-game">
+      	<text class="game-intro">你能拿到2048吗？</text>
+      	<text class="restart-button" bindtap="restart">新游戏</text>
+    </view>
+
+    <view class="game-container">
+        <view class="game-message game-{{over ? (win ? 'won' : 'over') : ''}}">
+          	<text class="over-msg">{{overMsg}}</text>
+          	<view class="lower">
+	        	<!-- <text class="keep-playing-button">继续</text> -->
+          		<text class="retry-button" bindtap="restart">再试一次</text>
+        	</view>
+        </view>
+
+	    <view class="grid-container" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd">
+			<view wx:for="{{grids}}" wx:for-index="rowIdx" wx:for-item="row" class="grid-row">
+			  	<view wx:for="{{row}}" wx:for-index="colIdx" wx:for-item="cell" class="grid-cell">
+			  		<view class="tile tile-{{cell.value}}">
+			  			<view wx:if="{{cell}}" class="tile-inner">
+			      			{{cell.value}}
+			      		</view>
+			  		</view>
+			  	</view>
+			</view>
+	    </view>
+
+  	</view>
+  	<!-- <view class="game-explanation">
+      <view class="important">如何开始：</view> 手指上下左右滑动
+    </view> -->
+
+</view>

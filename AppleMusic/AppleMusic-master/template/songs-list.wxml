@@ -1,0 +1,12 @@
+<template name="songs-list">
+    <view class="songs-list">
+        <view class="songs-item"  wx:for="{{templateData}}"  bindtap="play" data-num="{{index}}">
+            <image class="songs-image" src="{{item.coverImgUrl}}"></image>
+            <view class="songs-info">
+                <text class="songs-name">{{item.name}}</text>
+                <text class="songs-author">{{item.singer}}</text>
+            </view>
+            <image class="songs-action-button" src="../../image/icon-...pink.png"></image>
+        </view>
+    </view>
+</template>

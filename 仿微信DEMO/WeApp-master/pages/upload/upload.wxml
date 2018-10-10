@@ -1,0 +1,6 @@
+<scroll-view scroll-y="true" style="height:100%">
+    <image src="{{img}}" alt="上传图片"></image>
+    <button bindtap="selectImg" >上传</button>
+    <button bindtap="download" >下载</button>
+    <image src="{{img2}}" alt="下载图片"></image>
+</scroll-view>

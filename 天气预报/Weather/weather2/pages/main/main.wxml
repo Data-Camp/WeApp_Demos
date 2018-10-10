@@ -1,0 +1,18 @@
+<view class="content">
+    <image class="main-bg" src="../assets/img/bg2.jpg"></image>
+    <view class="today">
+        <view class="info">
+            <view class="city">{{city}}</view>
+            <view class="temp">{{temp}}</view>
+            <view class="weather-img">
+                <image src="{{todayDayImg}}" class="today-img"></image>
+                <image src="{{todayNightImg}}" class="today-img"></image>
+            </view>
+            <view class="weather">{{weather}}</view>      
+        </view>
+        <view class='time'>
+            <view class="today-time">{{todayTime}}</view>
+            <view class="today-date">{{todayDate}}</view>
+        </view>
+    </view>
+</view>

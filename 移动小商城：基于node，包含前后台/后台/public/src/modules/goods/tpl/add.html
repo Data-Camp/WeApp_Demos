@@ -1,0 +1,78 @@
+<ion-view view-title="添加商品">
+	<script id="modal.html" type="text/ng-template">		
+		<ion-modal-view>
+			<ion-header-bar>
+				<a class="button" on-tap="vm.modal.close()">关闭</a>
+				<h1 class="title">选择分类</h1>
+				<a class="button" on-tap="vm.modal.close()">保存</a>
+			</ion-header-bar>
+			<ion-content>
+				<div class="list">
+					<ion-checkbox name="classify" ng-repeat="item in vm.classify.items" ng-model="item.selected">
+						{{ item.name }}
+					</ion-checkbox>
+				</div>
+			</ion-content>
+		</ion-modal-view>
+	</script>
+	<ion-content ng-class="{'no-footer': tabsHidden}">
+		<form name="form" ng-submit="vm.submitForm(form.$valid)" novalidate>
+			<div class="weui-cells__title">商品分类</div>
+			<ion-list>
+				<ion-item ng-repeat="item in vm.categorys">
+					<h2>{{ item.name }}</h2>
+					<ion-option-button class="button-assertive icon ion-close" on-tap="vm.onPull(item)"></ion-option-button>
+				</ion-item>
+				<ion-item>
+					<h2 class="text-center" on-tap="vm.modal.open()"><i class="fa fa-plus"></i></h2>
+				</ion-item>
+			</ion-list>
+			<div class="weui-cells weui-cells_form">
+		        <div class="weui-cell">
+		            <div class="weui-cell__hd">
+		            	<label class="weui-label">名称</label>
+		            </div>
+		            <div class="weui-cell__bd">
+		                <input name="name" class="weui-input" type="text" placeholder="名称" ng-model="vm.form.name" required>
+		            </div>
+		        </div>
+		        <div class="weui-cell">
+		            <div class="weui-cell__hd">
+		            	<label class="weui-label">价格</label>
+		            </div>
+		            <div class="weui-cell__bd">
+		                <input name="price" class="weui-input" type="number" placeholder="价格" ng-model="vm.form.price" required>
+		            </div>
+		        </div>
+		        <div class="weui-cell">
+		            <div class="weui-cell__bd">
+		                <textarea name="remark" class="weui-textarea" placeholder="简介" rows="6" ng-model="vm.form.remark" required></textarea>
+		            </div>
+		        </div>
+		    </div>
+            <div class="weui-cells weui-cells_form">
+                <div class="weui-cell">
+                    <div class="weui-cell__bd">
+                        <div class="weui-uploader">
+                        	<div class="weui-uploader__hd">
+	                            <p class="weui-uploader__title">图片上传</p>
+	                            <div class="weui-uploader__info">{{ vm.form.images.length }}/{{ vm.max }}</div>
+	                        </div>
+                            <div class="weui-uploader__bd">
+                                <ul class="weui-uploader__files">
+                                    <li class="weui-uploader__file" style="background-image:url({{item.path}})" ng-repeat="item in vm.form.images track by $index" on-tap="vm.showGallery(item._id, $index)"></li>
+                                </ul>
+                                <div class="weui-uploader__input-box" ng-hide="vm.form.images.length === vm.max">
+                                    <input class="weui-uploader__input" name="file" type="file" accept="image/jpg,image/jpeg,image/png,image/gif" weui-file-model="vm.file" file-fn="vm.getFile()">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		    <div class="weui-btn-area">
+		        <button type="submit" class="weui-btn weui-btn_primary">保存</button>
+		    </div>
+	    </form>
+	</ion-content>
+</ion-view>

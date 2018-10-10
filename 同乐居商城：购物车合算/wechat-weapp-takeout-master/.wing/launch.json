@@ -1,0 +1,11 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "调试微信小程序",
+            "type": "weapp",
+            "request": "launch",
+            "project": "${workspaceRoot}"
+        }
+    ]
+}

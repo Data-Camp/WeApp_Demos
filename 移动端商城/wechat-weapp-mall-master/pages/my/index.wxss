@@ -1,0 +1,69 @@
+/**index.wxss**/
+.container {
+  background-color: #F2f2f2;
+}
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  padding: 50rpx 0;
+  align-items: center;
+  background: #f9f027;
+}
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+.userinfo-nickname {
+  color: #333;
+}
+.weui_cell{
+    position: relative;
+    display: flex;
+    padding: 15px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-bottom: 1px solid #dadada;
+}
+.weui_cell_hd{
+  display: inline-block;
+  width: 20px;
+  margin-right: 5px;
+}
+.weui_cell_hd image{
+  width: 100%;
+  height: 20px;
+  vertical-align: -2px;
+}
+.weui_cell_bd{
+  display: inline-block;
+}
+.weui_cell_bd_p{
+  font-size: 14px;
+  color: #939393;
+}
+.badge{
+  position: absolute;
+  top: 18px;
+  right: 40px;
+  width: 15px;
+  height: 15px;
+  line-height: 15px;
+  background: #ff0000;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 8px;
+}
+.with_arrow{
+  position: absolute;
+  top: 18px;
+  right: 15px;
+  width: 15px;
+  height: 15px;
+  background-image: url(../../images/icon-arrowdown.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}

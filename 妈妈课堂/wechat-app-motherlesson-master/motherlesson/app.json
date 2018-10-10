@@ -1,0 +1,37 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/mine/mine",
+    "pages/detail/detail"
+  ],
+  "window": {
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#000000",
+    "navigationBarTextStyle":"white",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "妈妈课堂",
+      "iconPath": "images/ICON_MotherClass.png",
+      "selectedIconPath": "images/ICON_MotherClassHL.png"
+    }, {
+      "pagePath": "pages/logs/logs",
+      "text": "我的",
+      "iconPath": "images/ICON_My_home.png",
+      "selectedIconPath": "images/ICON_My_homeHL.png"
+    }],
+    "color": "#999999",
+    "selectedColor": "#2FD0E6",
+    "backgroundColor": "#f6f6f6",
+    "borderStyle": "white"
+  },
+  "networkTimeout": {
+    "request": 60000,
+    "connectSocket": 60000,
+    "uploadFile": 60000,
+    "downloadFile": 60000
+  }
+}

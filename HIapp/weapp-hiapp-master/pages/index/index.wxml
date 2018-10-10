@@ -1,0 +1,32 @@
+<scroll-view scroll-y="true" bindscrolltolower="scrollToLower" class="timeline">
+  <view class="tweet-container" wx:for="{{timeline}}" wx:key="id">
+    <view class="top-container flex-row">
+      <image class="card-avatar" src="{{item.avatar}}"></image>                
+      <view class="user-container">
+        <text class="card-name">{{item.nickname}}</text>
+        <text class="card-time">#{{item.id}} {{item.time}}</text>
+      </view>
+    </view>
+    <view class="middle-container flex-column">
+      <text class="message-text">{{item.text}}</text>
+      <image class="message-image"
+        data-original-pic="{{item.original_pic}}" 
+        wx:if="{{item.original_pic}}" 
+        src="{{item.original_pic}}" 
+        mode="aspectFill"
+        catchtap="previewImage"
+      ></image>
+    </view>
+    <view class="bottom-container flex-row">
+      <view class="bottom-tool flex-row flex-rest-width">
+        <text class="bottom-tool-text">Forward</text>
+      </view>
+      <view class="bottom-tool flex-row flex-rest-width">
+        <text class="bottom-tool-text">Comment</text>
+      </view>
+      <view class="bottom-tool flex-row flex-rest-width">
+        <text class="bottom-tool-text">Forward</text>
+      </view>
+    </view>
+  </view>
+</scroll-view>

@@ -1,0 +1,12 @@
+/**app.wxss**/
+.container {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    min-height: 100%;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+    font: menu;
+}

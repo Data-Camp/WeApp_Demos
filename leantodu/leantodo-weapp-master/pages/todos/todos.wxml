@@ -1,0 +1,40 @@
+<view class="flex-wrap header">
+  <input
+    placeholder="添加一个任务" 
+    bindinput="updateDraft" 
+    value="{{draft}}" 
+    class="new-todo"/>
+  <text style="display: {{draft ? 'inline': 'none'}}" class="add tappable" ontap="addTodo">添加</text>
+</view>
+<view class="todo-list">
+<block wx:for="{{todos}}" wx:for-item="todo" wx:key="objectId">
+  <view class="flex-wrap todo">
+    <icon
+      type="{{todo.done ? 'success_circle' : 'circle'}}" 
+      data-id="{{todo.objectId}}" 
+      ontap="toggleDone"
+      class="todo-icon tappable" 
+      size="24"/>
+    <text
+      wx:if="{{todo.objectId != editedTodo.objectId}}"
+      data-id="{{todo.objectId}}" 
+      class="todo-text tappable {{todo.done ? 'done': ''}}"
+      ontap="editTodo">
+      {{todo.content}}
+    </text>
+    <input 
+      wx:if="{{todo.objectId == editedTodo.objectId}}" 
+      data-id="{{todo.objectId}}" 
+      value="{{todo.content}}" 
+      auto-focus 
+      bindinput="updateEditedContent" 
+      bindblur="doneEdit" 
+      class="todo-input"/>
+  </view>
+</block>
+</view>
+<view class="footer">
+  <text ontap="setting" class="setting tappable">设置</text>
+  <text class="status">{{activeTodos.length}} / {{todos.length}}</text>
+  <text ontap="removeDone" class="remove-done tappable" wx-if="{{activeTodos.length !== todos.length}}">清除已完成</text>
+</view>

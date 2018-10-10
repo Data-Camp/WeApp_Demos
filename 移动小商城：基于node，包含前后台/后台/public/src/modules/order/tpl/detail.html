@@ -1,0 +1,48 @@
+<ion-view view-title="订单详情">
+	<ion-content ng-class="{'no-footer': tabsHidden}">
+		<div class="weui-form-preview">
+            <div class="weui-form-preview__hd">
+                <div class="weui-form-preview__item">
+                    <label class="weui-form-preview__label">订单总价</label>
+                    <em class="weui-form-preview__value">¥ {{ vm.order.item.totalAmount }}</em>
+                </div>
+            </div>
+            <div class="weui-form-preview__bd">
+            	<div class="weui-form-preview__item" ng-repeat="item in vm.order.item.items">
+                    <label class="weui-form-preview__label">{{ item.goods.name }}</label>
+                    <span class="weui-form-preview__value">x{{ item.meta.total }} ¥ {{ item.meta.totalAmount }}</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="weui-panel weui-panel_access">
+		    <div class="weui-panel__hd">配送信息</div>
+		    <div class="weui-panel__bd">
+		        <div class="weui-media-box weui-media-box_text">
+		            <div class="weui-media-box__desc">送达时间：尽快送达</div>
+		        </div>
+		        <div class="weui-media-box weui-media-box_text">
+		            <div class="weui-media-box__desc">收货地址：{{ vm.order.item.recipientName }} {{ vm.order.item.recipientGender === 'female' ? '女士' : '先生' }} {{ vm.order.item.recipientTel }} {{ vm.order.item.recipientAddress }}</div>
+		        </div>
+		        <div class="weui-media-box weui-media-box_text">
+		            <div class="weui-media-box__desc">配送方式：商家配送</div>
+		        </div>
+		    </div>
+		</div>
+
+		<div class="weui-panel weui-panel_access">
+		    <div class="weui-panel__hd">订单信息</div>
+		    <div class="weui-panel__bd">
+		        <div class="weui-media-box weui-media-box_text">
+		            <div class="weui-media-box__desc">订单号：{{ vm.order.item._id }}</div>
+		        </div>
+		        <div class="weui-media-box weui-media-box_text">
+		            <div class="weui-media-box__desc">支付方式：货到付款</div>
+		        </div>
+		        <div class="weui-media-box weui-media-box_text">
+		            <div class="weui-media-box__desc">下单时间：{{ vm.order.item.create_at }}</div>
+		        </div>
+		    </div>
+		</div>
+	</ion-content>
+</ion-view>

@@ -1,0 +1,33 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="top_img">
+    <swiper indicator-dots="true" autoplay="true" duration="{{duration}}" interval="{{interval}}">
+      <block wx:for="{{img_urls}}">
+        <swiper-item>
+          <image src="{{item}}" style="width: 100%; height: 100%"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <view class="title">
+    <text id="font">热点资讯</text>
+  </view>
+
+  <view class="news">
+    <block wx:for="{{contents}}">
+      <view class="new" >
+        <view class="text">
+          <text>{{items[index]}}</text>
+        </view>
+        <view class="pic">
+          <image src="{{new_pic[item]}}" style="height: 60px; width: 60px"></image>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <button id="btn" type="primary" size="mini" plain loading="{{load}}" bindtap="setLoad">
+   更多
+  </button>
+</view>

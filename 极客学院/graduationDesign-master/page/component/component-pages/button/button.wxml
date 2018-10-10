@@ -1,0 +1,35 @@
+<view class="page">
+  <view class="page__hd">
+    <text class="page__title">button</text>
+    <text class="page__desc">按钮</text>
+  </view>
+  <view class="page__bd">
+    <view class="btn-area" id="buttonContainer">
+      <view class="button-wrapper">
+        <button type="default" size="{{defaultSize}}" loading="{{loading}}" plain="{{plain}}"
+          disabled="{{disabled}}" bindtap="default"> default
+        </button>
+      </view>
+
+      <view class="button-wrapper">
+        <button type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}"
+          disabled="{{disabled}}" bindtap="primary"> primary
+        </button>
+      </view>
+      <view class="button-wrapper">
+        <button type="warn" size="{{warnSize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}"
+          bindtap="warn"> warn
+        </button>
+      </view>
+      <view class="button-wrapper">
+        <button bindtap="setDisabled">点击设置以上按钮disabled属性</button>
+      </view>
+      <view class="button-wrapper">
+        <button bindtap="setPlain">点击设置以上按钮plain属性</button>
+      </view>
+      <view class="button-wrapper">
+        <button bindtap="setLoading">点击设置以上按钮loading属性</button>
+      </view>
+    </view>
+  </view>
+</view>

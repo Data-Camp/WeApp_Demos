@@ -1,0 +1,71 @@
+/**home.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+  color: #a01;
+}
+
+.news-list{
+  display: flex;
+  flex-direction: column;
+  padding: 40rpx;
+}
+.news-item{
+  display: flex;
+  flex-direction: row;
+  height: 200rpx;
+  width: 100%;
+}
+
+.news-text {
+  display: flex;
+  flex-direction:column;
+}
+
+.news-stamp{
+  font-size: 25rpx;
+  color:darkgray;
+  padding: 0 20rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.news-title{
+  margin: 10rpx;
+  font-size: 30rpx;
+}
+
+.container{
+  height: 5000rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.list-image{
+  width: 150rpx;
+  height: 100rpx;
+}
+
+.swiper-image{
+  width: 100%;
+}

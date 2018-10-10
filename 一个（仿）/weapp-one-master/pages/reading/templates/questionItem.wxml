@@ -1,0 +1,14 @@
+<template name="question-item">
+  <view class="article-item" data-id="{{item.question_id}}" bindtap="tapQuestion">
+    <view class="article-header">
+      <text class="article-title">{{item.question_title}}</text>
+      <text class="article-type">问答</text>
+      <view class="article-author">
+        <text>{{item.answer_title}}</text>
+      </view>
+    </view>
+    <view class="article-content">
+      <text>{{item.answer_content}}</text>
+    </view>
+  </view>
+</template>

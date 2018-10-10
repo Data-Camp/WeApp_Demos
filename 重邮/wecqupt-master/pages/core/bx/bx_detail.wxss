@@ -1,0 +1,127 @@
+/**bx_detail.wxss**/
+.container{
+    background-color: #f7f7f7;
+}
+
+.repair-state-panel, .work-sheet-panel{
+    display: flex;
+    flex-direction: column;
+    margin-top: 15rpx; 
+}
+.repair-state-title, .work-sheet-title{
+    color: #888;
+    padding: 5rpx 0 10rpx 30rpx;
+}
+.repair-state, .work-sheet{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    overflow: hidden;
+}
+.repair-state{
+    padding: 30rpx 0 20rpx 20rpx;
+}
+.repair-state-item{
+    display: flex;
+    align-items: flex-start;
+    margin: 10rpx 0 5rpx;
+}
+.repair-state-icon{
+    position: relative;
+    z-index: 2;
+    width: 25rpx;
+    height: 25rpx;
+    border-radius: 50rpx;
+    background: #d8d8d8;
+    border: 5rpx solid #eee;
+    margin: 15rpx 30rpx;
+}
+.repair-state-icon-waited{
+    background: #ffcb63;
+}
+.repair-state-icon-accepted{
+    background: #73b4ef;
+}
+.repair-state-icon-dispatched{
+    background: #e78ab0;
+}
+.repair-state-icon-finished{
+    background: #9f8bea;
+}
+.repair-state-icon-refused{
+    background: #999;
+}
+.repair-state-info{
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 15rpx;
+    border-bottom: 1rpx solid #eee;
+}
+.repair-state-info::before{
+    position: absolute;
+    top: 30rpx;
+    left: -47rpx;
+    content: '';
+    width: 5rpx;
+    background: #eee;
+    height: 100%;
+}
+.repair-state-info.repair-state-info-last{
+    border: none;
+}
+.repair-state-info.repair-state-info-last::before{
+    background: transparent;
+    width: 0;
+    height: 0;
+}
+.repair-info-bd {
+    color: #888;
+}
+.repair-info-bd.repair-state-name{
+    flex: 1;
+    color: #777;
+    font-size: 11pt;
+    font-weight: bold;
+    margin: 5rpx 0;
+}
+.repair-info-item{
+    display: flex;
+    align-items: center;
+    height: 55rpx;
+}
+.repair-note-ft{
+    padding-left: 120rpx;
+}
+
+.work-sheet{
+    padding: 30rpx;
+}
+.repair-info-ft{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 45rpx;
+}
+.repair-note-ft{
+    text-align: right;
+}
+
+.work-sheet-item{
+    display: flex;
+    align-items: flex-start;
+    min-height: 65rpx;
+}
+.work-sheet-bd{
+    color: #888;
+    width: 55pt;
+}
+.work-sheet-ft{
+    flex: 1;
+    display: flex;
+    align-items: center;
+}

@@ -1,0 +1,26 @@
+<view class="index">
+    <view class="order-address">
+        地址
+    </view>    
+    
+    <view class="order-info">
+    </view>
+
+    <view class="order-list">
+    
+    </view>
+
+    <view class="order-cert-wrp">
+        <view class="order-total-info">
+            <text>
+                104.0
+            </text>
+            <text>
+                含包装费用7.0元，配送费9.0元
+            </text>
+        </view>
+        <view class="">
+            <navigator url="../Order/cert/cert?title=确认" class="cart-tab-item-btn" hover-class="navigator-hover">确认</navigator>
+        </view>
+    </view>
+</view>

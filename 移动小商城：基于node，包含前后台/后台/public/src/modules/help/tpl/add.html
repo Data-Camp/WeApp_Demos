@@ -1,0 +1,24 @@
+<ion-view view-title="使用帮助">
+	<ion-content ng-class="{'no-footer': tabsHidden}">
+		<form name="form" ng-submit="vm.submitForm(form.$valid)" novalidate>
+			<div class="weui-cells weui-cells_form">
+		        <div class="weui-cell">
+		            <div class="weui-cell__hd">
+		            	<label class="weui-label">标题</label>
+		            </div>
+		            <div class="weui-cell__bd">
+		                <input name="title" class="weui-input" type="text" placeholder="标题" ng-model="vm.form.title" required>
+		            </div>
+		        </div>
+		        <div class="weui-cell">
+		            <div class="weui-cell__bd">
+		                <textarea name="content" class="weui-textarea" placeholder="内容" rows="6" ng-model="vm.form.content" required></textarea>
+		            </div>
+		        </div>
+		    </div>
+		    <div class="weui-btn-area">
+		        <button type="submit" class="weui-btn weui-btn_primary">保存</button>
+		    </div>
+	    </form>
+	</ion-content>
+</ion-view>

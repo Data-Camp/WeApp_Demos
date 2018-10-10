@@ -1,0 +1,88 @@
+.info-meta {
+	padding-right: 1em;
+}
+
+.weui-media-box__bd_in-appmsg {
+	position: relative;
+}
+
+.weui-cell_active {
+	background-color: #fff;
+}
+
+.quantity-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+}
+
+.quantity-wrapper .customize-qua {
+	width: 84px;
+    height: 24px;
+    box-sizing: border-box;
+}
+
+.quantity-decrease, 
+.quantity-increase,
+.quantity {
+	display: inline-block;
+    position: relative;
+    width: 25px;
+    height: 100%;
+    border: 1px solid transparent;
+	border-radius: 4px;
+	border-color: #ccc;
+	box-sizing: border-box;
+}
+
+.quantity {
+	-webkit-appearance: none;
+    text-align: center;
+    width: 34px;
+    vertical-align: top;
+    font-size: 14px;
+    line-height: 24px;
+    color: #232326;
+    min-height: 0;
+}
+
+.quantity-decrease {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-left: 0;
+}
+
+.quantity-decrease:before,
+.quantity-increase:before {
+	content: "";
+	position: absolute;
+	top: 11px;
+	left: 6px;
+	width: 12px;
+	height: 1px;
+	background-color: #ccc;
+}
+
+.quantity-increase {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    margin-left: -1px;
+}
+
+.quantity-increase:after {
+	content: "";
+	position: absolute;
+	top: 6px;
+	left: 11px;
+	width: 1px;
+	height: 12px;
+	background-color: #ccc;
+}
+
+.quantity {
+	border-radius: 0;
+	margin-left: -1px;
+}

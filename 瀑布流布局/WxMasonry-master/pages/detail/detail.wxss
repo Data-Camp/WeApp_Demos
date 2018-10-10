@@ -1,0 +1,41 @@
+page{ background: #FFF; font-family: 'Helvetica Neue',Helvetica,Arial,Sans-serif; }
+.contain_detail_cnt { height: 100%; width: 100%; overflow: hidden; }
+
+.box-title{ padding: 25px 20px; background: #f9f9f9; }
+.title{ font-size: 18px; line-height: 25px; color: #000; font-weight: 600; }
+
+.content{ line-height: 1.8em; margin: 20px 0; font-size: 14px; color: #666; }
+.scrollLoading{ width: 100%; height: 220px; display: block; margin: 10px 0; }
+.contView{ padding: 0 20px 10px; }
+
+/* 评论 */
+.content-comments{ margin-bottom: 20px; }
+.comments-title{ font-size: 14px; font-weight: bold; display: block; text-align: center; padding: 10px; }
+
+.comments-list{ margin-top: 10px; position: relative; padding: 10px; min-height: 40px;}
+.comments-avatar{ position: absolute; top: 10px; left: 10px; width: 40px; height: 40px; }
+.comments-avatar-img{ width: 40px; height: 40px; border-radius: 50%; border: 1px solid #F2F2F2; }
+.comments-main{ margin-left: 50px; font-size: 14px; }
+.comments-author{ margin-bottom: 6px; color: #999; font-weight: bold; height: 20px; line-height: 20px; }
+.comments-zan{ float: right; padding-left: 18px; position: relative; font-weight: normal; line-height: 20px; }
+.comments-zan::before{ content: ''; height: 14px; width: 14px; background: url("../../static/zan.png")  #FFF no-repeat 50% 50%; background-size: cover; position: absolute; top: 2px; left: 0; }
+.comments-content{ color: #666; line-height: 20px; }
+.comments-data{ height: 18px; margin-top: 5px; line-height: 18px; font-size: 12px; color: #999; }
+
+.not-comments{ text-align: center; padding: 30px 20px; font-size: 14px; color: #999; }
+
+/* 浮动 */
+.extra{ height: 40px; background: #FFF; border-top: 1px solid #F2F2F2; position: fixed; bottom: 0px; left: 0; right: 0px; width: 100%; box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1); }
+.extra-input{ width: 50%; height: 20px; margin: 10px; font-size: 13px; font-weight: 300; line-height: 20px; padding: 0 6px; border-left: 2px solid #48C23D; color: #444; }
+.extra-placeholder{ font-size: 13px; font-weight: 300; color: #999; }
+/* 点赞 评论 分享 */
+.extra-share{ position: absolute; right: 5px; width: 50%; }
+.extra-share-img{ width: 20px; height: 20px; float: right; padding: 10px 15px; }
+
+/* 分享box */
+.extra-share-box{ display: none; width: 100%; position: fixed; bottom: 0; left: 0; right: 0; top: 0; height: 100%; }
+.share-box-show{ position: absolute; left: 0; right: 0; bottom: -210px; z-index: 2; height: 200px; background: #FFF; }
+.share-box-img-box{ padding: 10px 20px; width: 240px; margin: 0 auto; display: block; overflow: hidden; }
+.share-box-img{ width: 40px; height: 40px; padding: 10px; margin: 5px 10px; float: left; }
+.share-box-opacity{ background: #000; opacity: 0; position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 1; }
+.share-box-close{ width: 100%; background: #F5F5F5; text-align: center; line-height: 40px; font-size: 14px; }

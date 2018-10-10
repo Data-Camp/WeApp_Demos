@@ -1,0 +1,11 @@
+{
+  "pages":[
+    "pages/swipertab/swipertab"
+  ],
+  "window":{
+    "backgroundTextStyle":"white",
+    "navigationBarBackgroundColor": "#FF9933",
+    "navigationBarTitleText": "滑动标签页",
+    "navigationBarTextStyle": "white"
+  }
+}

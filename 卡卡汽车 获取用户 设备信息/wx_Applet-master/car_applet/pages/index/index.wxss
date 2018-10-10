@@ -1,0 +1,66 @@
+/**index.wxss**/
+.top_img {
+  width: 100%;
+  height: 150px;
+}
+
+.title {
+  margin-top: 10px;
+  padding: 10px;
+}
+
+#font {
+  color: black;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.news {
+  width: 100%;
+  height: auto;
+}
+
+.new {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 60px;
+  border: 1px solid #eaeaea;
+  border-bottom: 1ps solid #d0d0d0;
+  border-radius: 5px;
+  margin: 10px;
+  margin-bottom: 20px;
+  padding: 8px;
+  background-color: white;
+  box-shadow: 5px 5px 5px #888888;
+}
+
+#btn {
+  width: 93%;
+  margin:0 10px;
+  margin-bottom: 10px;
+}
+
+/*top: 0px;*/
+/*position: absolute;*/
+
+/*.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}*/

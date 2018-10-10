@@ -1,0 +1,57 @@
+{
+  "debug": true, 
+  "window": {
+    "navigationBarTextStyle": "black", 
+    "navigationBarBackgroundColor": "#ebebeb", 
+    "navigationBarTitleText": "\u679c\u5e93", 
+    "backgroundColor": "#bdbdbd", 
+    "enablePullDownRefresh": true, 
+    "backgroundTextStyle": "dark"
+  }, 
+  "pages": [
+    "page/feature/feature", 
+    "page/discover/discover", 
+    "page/notify/notify", 
+    "page/profile/profile", 
+    "page/detail/detail", 
+    "page/baseStyle/baseStyle"
+  ], 
+  "tabBar": {
+    "color": "#7F8389", 
+    "selectedColor": "#000000", 
+    "borderStyle": "black", 
+    "list": [
+      {
+        "text": "feature", 
+        "pagePath": "page/feature/feature", 
+        "iconPath": "resources/e12860cb450a4c012c47ac95c933fb3a.png", 
+        "selectedIconPath": "resources/f78f9afcd0b4998bdfc816203bb4c6dd.png"
+      }, 
+      {
+        "text": "discover", 
+        "pagePath": "page/discover/discover", 
+        "iconPath": "resources/9ed52ecc6de7058a799290b08296230a.png", 
+        "selectedIconPath": "resources/1c95a1701b58f4dc4d5f768d6f148714.png"
+      }, 
+      {
+        "text": "notify", 
+        "pagePath": "page/notify/notify", 
+        "iconPath": "resources/9a68600a4eeb9fb2b9173d901e704971.png", 
+        "selectedIconPath": "resources/1f2fab45b574b53079a632db488cf240.png"
+      }, 
+      {
+        "text": "profile", 
+        "pagePath": "page/profile/profile", 
+        "iconPath": "resources/f27bd7cf9958fc5000f18d7f19714c96.png", 
+        "selectedIconPath": "resources/a0d0f70cdd378be88638c61a9cfff0f7.png"
+      }
+    ], 
+    "backgroundColor": "#F7F7FA"
+  }, 
+  "networkTimeout": {
+    "connectSocket": "", 
+    "request": "", 
+    "downloadFile": "", 
+    "uploadFile": ""
+  }
+}

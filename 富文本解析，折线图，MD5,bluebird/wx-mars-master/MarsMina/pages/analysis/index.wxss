@@ -1,0 +1,4 @@
+.graphCanvas {
+  width: 750rpx;
+  height: 400px;
+}

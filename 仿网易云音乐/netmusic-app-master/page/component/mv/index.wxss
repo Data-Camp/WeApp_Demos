@@ -1,0 +1,12 @@
+#mvpage{background-color: #fbfcfd;height: 100%;padding-top: 401rpx; box-sizing: border-box}
+
+#mvheader,#mvideo{height: 320rpx;width: 100%;}
+#mvheader{flex: 0 0 320rpx;margin-top: -401rpx;}
+#mvpage .tab{height: 81rpx;width: 100%;margin-top: -81prx }
+#mvmain{background-color: red;height: 100%}
+#mvmain .tab-cnt{height:100%;background-color: #fff}
+
+#mvinfo,#mvdes{padding:24rpx;font-size: 28rpx;color: #666;line-height: 1.8}
+#mvdes{border-top: 1rpx solid #eee;}
+#mvname{font-size: 34rpx;white-space: 2rpx;color: #000;padding-bottom: 16rpx;display:block}
+#mvinfo navigator{color:#537fb0 }

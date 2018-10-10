@@ -1,0 +1,70 @@
+
+.nav{
+  background: #fff;
+  padding:0 10px;
+}
+.list{
+  display: flex;
+  font-size: 16px;
+  color: #9A9A9A;
+}
+.list .item {
+  flex: 1;
+  text-align: center;
+  padding: 15px 0 5px 0;
+  margin:0 10px 10px 10px;
+  border-bottom: 2px solid #fff;
+}
+.list .action {
+  border-bottom: 2px solid #F5B223;
+  color:#F5B223;
+}
+
+.swiper {
+  height: 90%;
+}
+
+swiper-item{
+  overflow-y: scroll;
+}
+.banner swiper{
+  height: 410rpx;
+}
+swiper-item image{
+  width:100%;
+  height: 400rpx;
+}
+.listMall{
+  display:-webkit-flex;
+	display:flex;
+	width:100%;
+  flex-wrap:wrap; 
+}
+.listMall view{
+    width: 230rpx; 
+    margin-top: 10rpx;
+    margin-left: 12rpx;
+}
+.listMall .img{
+  text-align:center;
+}
+.listMall view image{
+    width: 230rpx;
+    height: 230rpx;
+}
+.listMall .name{
+  font-size: 25rpx;
+  height: 44px;
+  color: #9A9A9A;
+  overflow : hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  line-height: 22px;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.listMall .now_price{
+  color:#F98809;
+  font-size: 30rpx;
+}
+

@@ -1,0 +1,8 @@
+/**index.wxss**/
+.post-list{
+  overflow: scroll;
+}
+.post-item{
+  width: 100%;
+  height:50px;
+}

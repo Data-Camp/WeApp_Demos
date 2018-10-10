@@ -1,0 +1,17 @@
+<view class="weui-search-bar">
+    <view class="weui-search-bar__form">
+        <view class="weui-search-bar__box">
+            <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+            <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{ inputVal }}" bindinput="inputTyping" auto-focus/>
+            <view class="weui-icon-clear" bindtap="clearInput">
+                <icon type="clear" size="14"></icon>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="weui-cells searchbar-result" wx:if="{{ !!inputVal && !!items.length }}">
+    <navigator url="" class="weui-cell" hover-class="weui-cell_active" wx:for="{{ items }}" wx:key="" bindtap="redirectTo" data-keyword="{{ item._id }}">
+        <view class="weui-cell__bd">{{ item._id }}</view>
+        <view class="weui-cell__ft">约 {{ item.num }} 个结果</view>
+    </navigator>
+</view>

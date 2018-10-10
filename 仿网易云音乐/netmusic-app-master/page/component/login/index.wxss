@@ -1,0 +1,6 @@
+.form-common{padding: 48rpx;}
+.formc-cnt{padding: 16rpx 0; display: flex;border-bottom: 1px solid #eee;margin: 16rpx 0}
+.form-common button,.btnhover{margin-top: 48rpx;display: block;background-color: #d43c33;height: 2.4em;padding: 0;line-height: 2.4;border-radius: 5rpx;
+font-size: 32rpx}
+.formc-cnt text{text-align: left}
+.formc-cnt input{flex: 1;display: block}

@@ -1,0 +1,38 @@
+{
+  "pages":[
+    "pages/login/login",
+    "pages/flowerrank/flowerrank",
+    "pages/index/index",
+    "pages/course/course",
+    "pages/courseintro/courseintro",
+    "pages/reading/reading",
+    "pages/result/result",
+    "pages/my/my"
+  ],
+  "window":{
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "SuperwingsABC",
+    "navigationBarTextStyle":"#242424",
+    "backgroundColor" : "#1ECFA7",
+    "enablePullDownRefresh": true,
+    "backgroundTextStyle":"dark"
+  },
+  "tabBar": {
+    "color": "#dddddd",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "iconPath": "res/images/wechat.png",
+      "selectedIconPath": "res/images/wechatHL.png",
+      "text": "跟读"
+    }, {
+      "pagePath": "pages/my/my",
+      "iconPath": "res/images/wechat.png",
+      "selectedIconPath": "res/images/wechatHL.png",
+      "text": "我的"
+    }]
+  },
+  "debug": false
+}

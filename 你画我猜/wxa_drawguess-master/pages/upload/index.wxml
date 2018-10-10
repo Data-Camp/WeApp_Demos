@@ -1,0 +1,45 @@
+<view class="container">
+
+  <view class="page-body">
+    <view class="page-body-wrapper">
+      <form>
+        <view class="page-body-form">
+          <picker range="{{sourceType}}" bindchange="sourceTypeChange" value="{{sourceTypeIndex}}">
+            <view class="page-body-form-picker">
+              <view class="page-body-form-picker-key">图片来源</view>
+              <view class="page-body-form-picker-value">{{sourceType[sourceTypeIndex]}}</view>
+            </view>
+          </picker>
+          <picker range="{{sizeType}}" bindchange="sizeTypeChange" value="{{sizeTypeIndex}}">
+            <view class="page-body-form-picker">
+              <view class="page-body-form-picker-key">图片质量</view>
+              <view class="page-body-form-picker-value">{{sizeType[sizeTypeIndex]}}</view>
+            </view>
+          </picker>
+          <picker range="{{count}}" bindchange="countChange" value="{{countIndex}}">
+            <view class="page-body-form-picker" style="border-bottom: none;">
+              <view class="page-body-form-picker-key">数量限制</view>
+              <view class="page-body-form-picker-value">{{count[countIndex]}}</view>
+            </view>
+          </picker>
+        </view>
+        <view class="images-wrapper">
+          <text class="images-text">请选择图片</text>
+          <view class="images-list">
+            <block wx:for="{{imageList}}" wx:for-item="image">
+              <image src="{{image}}" class="images-image" data-src="{{image}}" bindtap="previewImage"></image>
+            </block>
+            <view class="images-image image-plus" bindtap="chooseImage">
+              <view class="image-plus-horizontal"></view>
+              <view class="image-plus-vertical"></view>
+            </view>
+          </view>
+        </view>
+      </form>
+    </view>
+    <view class="page__bd page__bd_spacing">
+      <button class="weui-btn" type="primary" bindtap="upload">上传</button>
+    </view>
+  </view>
+
+</view>

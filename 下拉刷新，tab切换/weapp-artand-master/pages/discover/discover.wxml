@@ -1,0 +1,15 @@
+<view class="section">
+  <view wx:for="{{imgList}}">
+    <image src="{{item}}" class="discover-image"
+      style="width:{{systemInfo.windowWidth-20}}px;height: {{(systemInfo.windowWidth-20)/2.742}}px;">
+    </image>
+  </view>
+  <view wx:for="{{imgListTwo}}" class="discover-image-two" style="width:{{systemInfo.windowWidth-20}}px;">
+    <image src="{{item[0]}}" class="discover-image"
+      style="width:{{(systemInfo.windowWidth-30)/2}}px;height: {{(systemInfo.windowWidth-30)/2*187/344}}px;">
+    </image>
+    <image src="{{item[1]}}" class="discover-image"
+      style="width:{{(systemInfo.windowWidth-30)/2}}px;height: {{(systemInfo.windowWidth-30)/2*187/344}}px;">
+    </image>
+  </view>
+</view>

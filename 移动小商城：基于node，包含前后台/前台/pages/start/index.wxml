@@ -1,0 +1,7 @@
+<view class="start">
+	<swiper class="swiper_box" indicator-dots="{{ indicatorDots }}" autoplay="{{ autoplay }}" current="{{ current }}" interval="{{ interval }}" duration="{{ duration }}" circular="{{ circular }}" bindchange="swiperchange">
+	    <swiper-item>
+            <image src="https://www.skyvow.cn/uploads/sr4BFtg4yI7mCvPbXeX1fBpLRnjCcRZKYHpWHyIHo3OxOfSVdWhhcdk6GGzrqIbsCcXFIyJx5bShEQT5VXJskDizAOaw1yOvSR1482316297000.png" class="slide-image" bindload="bindload" />
+        </swiper-item>
+	</swiper>
+<view>

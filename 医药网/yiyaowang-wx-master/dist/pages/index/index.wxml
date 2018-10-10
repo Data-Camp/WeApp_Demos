@@ -1,0 +1,40 @@
+<view class="todo-list has-toolbar">
+  <view class="list">
+    <block wx:for="{{unfinished}}" wx:key="__k" wx:for-index="_k2" wx:for-item="_v2"><view class="list-item unfinished-list-item flex-row unfinished-flex-row items-center unfinished-items-center todo unfinished-todo {{_v2.state.className}} unfinished-{{_v2.state.className}}">
+  <icon class="todo-icon unfinished-todo-icon" type="{{_v2.state.icon}}" size="20" color="#999" catchtap="_dispatch" data-catchtap="handleFinish" data-path="unfinished.{{_k2}}"/>
+  <view class="block unfinished-block flex unfinished-flex todo-title unfinished-todo-title {{_v2.state.className}}-title unfinished-{{_v2.state.className}}-title"> {{_v2.props.title}} </view>
+  <view class="btn unfinished-btn btn-small unfinished-btn-small {{_v2.props.finished?'btn-gray-hollow':'btn-danger'}} unfinished-{{_v2.props.finished?'btn-gray-hollow':'btn-danger'}}" catchtap="_dispatch" data-catchtap="handleRemove" data-path="unfinished.{{_k2}}">删除</view>
+</view></block>
+  </view>
+  <block xmlns:wx="" wx:if="{{state.finished}}">
+    <view class="group-header">已完成</view>
+    <view class="list">
+      <block wx:for="{{finished}}" wx:key="__k" wx:for-index="_k3" wx:for-item="_v3"><view class="list-item finished-list-item flex-row finished-flex-row items-center finished-items-center todo finished-todo {{_v3.state.className}} finished-{{_v3.state.className}}">
+  <icon class="todo-icon finished-todo-icon" type="{{_v3.state.icon}}" size="20" color="#999" catchtap="_dispatch" data-catchtap="handleFinish" data-path="finished.{{_k3}}"/>
+  <view class="block finished-block flex finished-flex todo-title finished-todo-title {{_v3.state.className}}-title finished-{{_v3.state.className}}-title"> {{_v3.props.title}} </view>
+  <view class="btn finished-btn btn-small finished-btn-small {{_v3.props.finished?'btn-gray-hollow':'btn-danger'}} finished-{{_v3.props.finished?'btn-gray-hollow':'btn-danger'}}" catchtap="_dispatch" data-catchtap="handleRemove" data-path="finished.{{_k3}}">删除</view>
+</view></block>
+    </view>
+    <view wx:if="{{state.finished>3}}" class="padding-h-xxlarge padding-top-large">
+      <view class="btn btn-gray-hollow block" catchtap="_dispatch" data-catchtap="handleShowFinished">查看全部已完成</view>
+    </view>
+  </block>
+  <view wx:if="{{props.todos.length}}" class="gray padding text-right">总数 {{props.todos.length}} 已完成
+    {{state.finished}}
+  </view>
+  <view wx:else="wx:else" class="msg">
+    <icon class="msg-icon" type="info" size="80" color="#ccc"/>
+    <view class="msg-title">当前没有任务</view>
+    <view class="msg-desc">请在下方输入框中填入新任务然后点击新增</view>
+  </view>
+  <view class="toolbar toolbar-bottom padding-h-xsmall">
+    <view class="form-group flex">
+      <input class="form-control" type="text" placeholder="请输入新的任务" value="{{state.titleInput}}" bindinput="_dispatch" data-bindinput="handleInput"/>
+    </view>
+    <view class="btn btn-success btn-toolbar" catchtap="_dispatch" data-catchtap="handleCreate">新增</view>
+  </view>
+  <view class="footer">
+    <view>Powered by Labrador</view>
+    <text class="link" catchtap="_dispatch" data-catchtap="handleShowUI">AL UI</text>
+  </view>
+</view>

@@ -1,0 +1,10 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <image class="userinfo-avatar" mode="aspectFit" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-tips">{{userInfo.tips}}</text>
+  </view>
+  <view class="usermotto">
+  <button class="button" type="primary" bindtap="uploadImage">{{motto}}</button>
+  </view>
+</view>

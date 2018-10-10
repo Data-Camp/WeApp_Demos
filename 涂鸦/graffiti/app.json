@@ -1,0 +1,13 @@
+{
+  "debug": true,
+  "pages":[
+    "pages/index/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#1FDA9A",
+    "navigationBarTitleText": "涂鸦",
+    "navigationBarTextStyle":"white",
+    "enablePullDownRefresh":true
+  }
+}

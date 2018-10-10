@@ -1,0 +1,69 @@
+<scroll-view scroll-y="true" class="contain_detail_cnt" style="height:{{winHeight - 40}}px;">
+    
+	<!-- 标题 -->
+	<view class="box-title">
+		<text class="title">{{data.title}}</text>
+	</view>
+
+	<!-- 内容 -->
+	<view class="content" scroll-y="true">
+		<block wx:for="{{databody}}">
+			<image class="scrollLoading" src="{{item[0]}}" mode="aspectFill" wx:if="{{item.length === 3}}"/>
+			<view class="contView" wx:else>{{item}}</view>
+		</block>
+	</view>
+
+	<!-- 评论 -->
+	<view class="content-comments">
+		<text class="comments-title">最新评论</text>
+		<view class="comments-box" wx:if="{{comments.length > 0}}">
+			<view class="comments-list" wx:for="{{comments}}" wx:for-item="item" wx:for-index="i">
+				<view class="comments-avatar"><image class="comments-avatar-img" src="{{item.avatar}}"/></view>
+				<view class="comments-main">
+					<view class="comments-author">
+						<view class="comments-zan">{{item.likes}}</view>
+						<text>{{item.author}}</text>
+					</view>
+					<view class="comments-content">{{item.content}}</view>
+					<view class="comments-data">{{item.times}}</view>
+				</view>
+			</view>
+		</view>
+		<!-- 没有评论 -->
+		<view class="not-comments" wx:else> 暂时还没有评论喔! </view>
+	</view>
+
+
+</scroll-view>
+
+<!-- 评论 点赞 分享  -->
+<view class="extra">
+	<view class="extra-share">
+		<image src="../../static/share.png" class="extra-share-img" bindtap="showShare"/>
+		<image src="../../static/comments.png" class="extra-share-img"/>
+		<image src="../../static/zan.png" class="extra-share-img"/>
+	</view>
+	<input class="extra-input" type="text" maxlength="255" placeholder="你有什么看法?" placeholder-class="extra-placeholder" />
+</view>
+
+
+<!-- 分享层 -->
+<view class="extra-share-box" style="display:{{shareShow}}">
+
+	<view class="share-box-show" animation="{{shareBottom}}">
+		<view class="share-box-img-box">
+			<image class="share-box-img" bindtap="modalTap" data-share="分享给微信朋友" src="../../static/weixin.png"/>
+			<image class="share-box-img" bindtap="modalTap" data-share="分享到微信朋友圈" src="../../static/pengyou.png"/>
+			<image class="share-box-img" bindtap="modalTap" data-share="分享到QQ朋友" src="../../static/qq.png"/>
+			<image class="share-box-img" bindtap="modalTap" data-share="分享到微博" src="../../static/weibo.png"/>
+		</view>
+		<view class="share-box-close" bindtap="shareClose">关闭</view>
+	</view>
+	
+	<view class="share-box-opacity" animation="{{shareOpacity}}" bindtap="shareClose"></view>
+</view>
+
+<!-- 点击分享弹出层 -->
+<modal class="modal" hidden="{{modalHidden}}" no-cancel bindconfirm="modalChange">
+  <view> {{modalValue}} </view>
+</modal>

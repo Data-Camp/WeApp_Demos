@@ -1,0 +1,45 @@
+<import src="../../../utils/playpercent.wxml" />
+<import src="../../../utils/lrc.wxml" />
+<view id="playingpage">
+  <image src="../../../image/cm2_default_play_bg-ip6@2x.jpg" id="coverbg"/>
+  <view id="fm-bg" class="blurbg" style="background-image:url({{music.album.blurPicUrl}})"></view>
+  <view id="fm-covermain" class="{{showlrc?'playinghidden':''}}" bindtap="loadlrc">
+    <image id="fm-cmbg" src="../../../image/fm/cm2_default_cover_fm-ip6@2x.png" />
+    <image id="fm-cmpic" bindload="loadimg" class="{{imgload?'fadein':''}}" src="{{music.album.picUrl}}" />
+  </view>
+  <view id="fm-mdes" class="{{showlrc?'playinghidden':''}}">
+    <text id="fm-mname">{{music.name}}</text>
+    <text id="fm-martist">{{music.artists[0].name}}</text>
+  </view>
+  <template is="lrc" data="{{lrc:lrc,showlrc:showlrc,lrcindex:lrcindex}}" />
+  <view id="fm-fixed">
+    <template is="playingpercent" data="{{playtime:playtime,percent:percent,duration:duration,downloadPercent:downloadPercent}}" />
+    <view id="fm-action">
+      <view data-id="{{music.id}}">
+        <image src="../../../image/fm/cm2_fm_btn_delete@2x.png" />
+      </view>
+      <view data-id="{{music.id}}" hidden="{{music.stared}}">
+        <image src="../../../image/fm/cm2_fm_btn_love@2x.png" />
+      </view>
+      <view data-id="{{music.id}}" hidden="{{!music.stared}}">
+        <image src="../../../image/fm/cm2_fm_btn_loved@2x.png" />
+      </view>
+      <view class="playbtn" bindtap="play" hidden="{{!playing}}">
+        <image src="../../../image/fm/cm2_fm_btn_pause@2x.png" />
+      </view>
+      <view class="playbtn" bindtap="play" hidden="{{playing}}">
+        <image src="../../../image/fm/cm2_fm_btn_play@2x.png" />
+      </view>
+      <view bindtap="nextplay">
+        <image src="../../../image/fm/cm2_fm_btn_next@2x.png" />
+      </view>
+      <view class="commentscount">
+        <navigator url="../recommend/index?id={{music.commentThreadId}}&from=song">
+          <image wx:if="{{!commentscount}}" src="../../../image/fm/cm2_fm_btn_cmt@2x.png" />
+          <image wx:if="{{commentscount}}" src="../../../image/fm/cm2_fm_btn_cmt_number@2x.png" />
+          <text wx:if="{{commentscount}}">{{commentscount>999?'999+':(commentscount>99?'99+':commentscount)}}</text>
+        </navigator>
+      </view>
+    </view>
+  </view>
+</view>

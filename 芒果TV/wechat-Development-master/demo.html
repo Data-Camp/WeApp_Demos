@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+    <script src="http://cdn.bootcss.com/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript">
+        !(function(){
+
+            var Api = {
+
+                API_URL : 'http://m.api.hunantv.com/channel/getDetail',
+
+                fetchApi : function() {
+
+                    var _this = this;
+
+                    return new Promise((resolve,reject) => {
+                        $.ajax({ //一个Ajax过程
+                            type: "GET", //以get方式与后台沟通
+                            url : _this.API_URL, //与此php页面沟通
+                            dataType:'jsonp',//从php返回的值以 JSON方式 解释
+                            jsonpCallback:"jsonpCallback",
+                            data: {
+                                'channelId':'1001',
+                                'type':'normal'
+                            }, //发给php的数据有两项，分别是上面传来的u和p
+                            success: resolve,
+                            error: reject
+
+                        });
+
+                    })
+
+                },
+
+                result : function(){
+
+                    var _this = this;
+
+                    _this.fetchApi().then(
+                        (res) => {
+                            console.log(res)
+                        },
+                        (err) => {
+                            console.log(err)
+                        }
+                    )
+
+                }
+
+            }
+
+            Api.result();
+
+
+        })()
+    </script>
+</html>

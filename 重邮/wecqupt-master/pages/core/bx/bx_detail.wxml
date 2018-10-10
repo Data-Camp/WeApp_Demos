@@ -1,0 +1,83 @@
+<!--bx_detail.wxml-->
+<view class="container">
+    <view wx:if="{{remind}}" class="remind-box">
+        <image wx:if="{{remind == '加载中'}}" class="remind-img" src="/images/index/loading.gif"></image>
+        <block wx:else>
+          <image class="remind-img" src="/images/index/nothing.png"></image>
+          <text class="remind-text">{{remind}}</text>
+        </block>
+    </view>
+    <block wx:else>
+
+        <view class="repair-state-panel">
+            <text class="repair-state-title">处理详情</text>
+            <view class="repair-state">
+                <block wx:for="{{state}}" wx:key="name">
+                    <view class="repair-state-item" wx:if="{{item.status}}">
+                        <view class="repair-state-icon {{index===0?'repair-state-icon-'+item.type:''}}"></view>
+                        <view class="repair-state-info {{item.name=='申请'?'repair-state-info-last':''}}">
+                            <view class="repair-info-item">
+                                <text class="repair-info-bd repair-state-name">{{item.name}}</text>
+                            </view>
+                            <view class="repair-info-item" wx:for="{{item.list}}" wx:key="key" wx:for-index="key" wx:for-item="value">
+                                <text class="repair-info-bd">{{key}}</text>
+                                <view class="repair-info-ft">
+                                    <text>{{value}}</text>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </block>
+            </view>
+        </view>
+            
+        <view class="work-sheet-panel">
+            <text class="work-sheet-title">工单详情</text>  
+            <view class="work-sheet">
+                <view class="work-sheet-item">
+                    <text class="work-sheet-bd">服务项目</text>
+                    <view class="work-sheet-ft">
+                        <text>{{detail.wx_bxlxm}}</text>
+                    </view>
+                </view>
+                <view class="work-sheet-item">
+                    <text class="work-sheet-bd">服务区域</text>
+                    <view class="work-sheet-ft">
+                        <text>{{detail.wx_fwqym}}</text>
+                    </view>
+                </view>
+                <view class="work-sheet-item">
+                    <text class="work-sheet-bd">申报人</text>
+                    <view class="work-sheet-ft">
+                        <text>{{detail.wx_bxr}}</text>
+                    </view>
+                </view>
+                <view class="work-sheet-item">
+                    <text class="work-sheet-bd">联系电话</text>
+                    <view class="work-sheet-ft">
+                        <text>{{detail.wx_bxdh}}</text>
+                    </view>
+                </view>
+                <view class="work-sheet-item">
+                    <text class="work-sheet-bd">报修地址</text>
+                    <view class="work-sheet-ft">
+                        <text>{{detail.wx_bxdd}}</text>
+                    </view>
+                </view>
+                <view class="work-sheet-item">
+                    <text class="work-sheet-bd">申报标题</text>
+                    <view class="work-sheet-ft">
+                        <text>{{detail.wx_bt}}</text>
+                    </view>
+                </view>
+                <view class="work-sheet-item">
+                    <text class="work-sheet-bd">申报内容</text>
+                    <view class="work-sheet-ft">
+                        <text>{{detail.wx_bxnr}}</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+
+    </block>
+</view>

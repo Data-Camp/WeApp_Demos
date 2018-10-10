@@ -1,0 +1,9 @@
+<view class="container">
+    
+    <view class="user" bindtap="getUserInfo">
+        <image class="user-avatar" src="{{userInfo.avatarUrl}}" />
+        <text class="user-nickname">{{userInfo.nickName}}</text>
+        <text class="user-nickname">{{userInfo.city}} {{userInfo.province}}</text>
+    </view>
+    
+</view>

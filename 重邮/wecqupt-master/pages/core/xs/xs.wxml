@@ -1,0 +1,90 @@
+<!--xs.wxml-->
+<view class="container {{main.mainDisplay?'home':'active'}}">
+
+  <!--头部-->
+  <view class="header">
+    <image class="xs-logo" src="/images/core/xs.png"></image>
+    <!--搜索框-->
+    <view class="search-input">
+      <view class="search-icon-box">
+        <image class="search-icon" src="/images/core/xs/search-sign.png"></image>
+      </view>
+      <form class="input-form" bindreset="bindClearSearchTap" bindsubmit="bindConfirmSearchTap">
+        <input class="input-text" value="{{header.defaultValue}}" auto-focus="{{!header.defaultValue}}" bindinput="bindSearchInput" type="text" name="search" placeholder="姓名 / 学号 / 班级" />
+        <button class="input-clear-button" formType="reset" hover-class="none" wx:if="{{header.inputValue}}">
+          <image class="clear-icon" src="/images/core/xs/clear.png"></image>
+        </button>
+        <button class="input-confirm-button" formType="submit" hover-class="none">
+          <text>搜索</text>
+        </button>
+      </form>
+    </view>
+  </view>
+
+  <!--页面主体部分-->
+  <view class="main" wx:if="{{main.total}}">
+    <!--主体部分标题-->
+    <view class="main-title">
+      <text class="title-text">学生名单 （{{main.total}}人）</text>
+    </view>
+    <!--主体部分内容列表-->
+    <view class="main-list" wx:for="{{testData}}" wx:key="xh">
+      <!--列表的一个元素的模板结构-->
+      <view class="list-item">
+        <!--信息直接显示部分-->
+        <view class="item" data-index="{{index}}" bindtap="bindOpenList">
+          <view class="item-content">
+            <image class="item-content-image" src="{{item.headImg}}"></image>
+            <view class="item-content-state">
+              <view class="content-state-name">
+                <text class="state-name-active">{{item.activeName}}</text>{{item.normalXm}}
+              </view>
+              <view class="content-state-stuId">学号：<text class="state-name-active">{{item.activeXh}}</text>{{item.normalXh}}</view>
+            </view>
+          </view>
+          <!--信息直接显示部分的下拉标识-->
+          <view class="list-sign">
+            <image class="list-sign-icon {{!item.display ? 'list-sign-icon-show' : ''}}" src="/images/core/common/up.png"></image>
+          </view>
+        </view>
+        <!--信息隐藏的下拉列表-->
+        <view class="item-ul" hidden="{{!item.display}}">
+          <view class="item-ul-gendor item-ul-li">
+            <text class="ul-li-label">性别</text>
+            <text class="ul-li-content">{{item.xb}}</text>
+          </view>
+          <view class="item-ul-college item-ul-li">
+            <text class="ul-li-label">学院名</text>
+            <text class="ul-li-content">{{item.yxm}}</text>
+          </view>
+          <view class="item-ul-major item-ul-li">
+            <text class="ul-li-label">专业名</text>
+            <text class="ul-li-content">{{item.zym}}</text>
+          </view>
+          <view class="item-ul-grade item-ul-li">
+            <text class="ul-li-label">年级</text>
+            <text class="ul-li-content">{{item.nj}}</text>
+          </view>
+          <view class="item-ul-class item-ul-li">
+            <text class="ul-li-label">班级</text>
+            <text class="ul-li-content">{{item.bj}}</text>
+          </view>
+          <view class="item-ul-kb item-ul-li">
+            <text class="ul-li-label">课表</text>
+            <navigator redirect="true" url="/pages/core/kb/kb?id={{item.xh}}&name={{item.xm}}" class="ul-li-kb">点击查看</navigator>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!--提示消息-->
+    <view class="search-message">
+      <text class="message-title">{{main.message}}</text>
+    </view>
+  </view>
+
+  <!--提示消息-->
+  <view class="search-message" hidden="{{messageObj.messageDisplay}}">
+    <text class="message-title">{{messageObj.message}}</text>
+  </view>
+
+</view>

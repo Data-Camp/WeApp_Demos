@@ -1,0 +1,33 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/my/my",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#3f3f3f",
+    "navigationBarTitleText": "聚梦相册",
+    "backgroundColor": "#fff",
+    "navigationBarTextStyle":"#dark"
+  },
+  "tabBar":{
+    "color": "#74777e",
+    "selectedColor": "#11cd6e",
+    "borderStyle": "white",
+    "backgroundColor": "#f7f7fa",
+    "list":[
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "image/fx.png",
+        "selectedIconPath": "image/fxselect.png",
+        "text": "发现"
+    }, {
+        "pagePath": "pages/my/my",
+        "iconPath": "image/my.png",
+        "selectedIconPath": "image/myselect.png",
+        "text": "我的"
+    }
+    ]
+  }
+}

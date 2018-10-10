@@ -1,0 +1,43 @@
+.index-banner{
+	width: 100%;
+	height: 474rpx;
+}
+.index-banner .slide-image{
+	width: 100%;
+}
+.wx-swiper-dot text{
+	background: #f00;
+}
+.index-menu{
+	width: 100%;
+	display: -webkit-flex;
+	display: -webkit-box;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	        flex-wrap: wrap;
+	background: #fff;
+}
+.index-menu-item{
+	-webkit-flex: 0 0 25%;
+	-webkit-box-flex: 0;
+	        flex: 0 0 25%;
+	max-width: 25%;
+	text-align: center;
+	margin-top: 10rpx;
+/* 	border-top: 1rpx solid #ddd;
+	border-bottom: 1rpx solid #ddd;
+	border-right: 1rpx solid #ddd; */
+	padding: 20rpx 20rpx;
+	box-sizing: border-box;
+	margin-bottom: -1rpx;
+}
+.index-menu-item image{
+	width: 110rpx;
+	height: 110rpx;
+}
+.index-menu-item text{
+	display: block;
+	font-size: 30rpx;
+	line-height: 1.4;
+	white-space: nowrap;
+}

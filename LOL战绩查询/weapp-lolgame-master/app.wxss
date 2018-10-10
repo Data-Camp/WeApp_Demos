@@ -1,0 +1,55 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.hidden {
+    display: none;
+}
+.display {
+    display: block;
+}
+.widgets__item{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #FFFFFF;
+    overflow: hidden;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.widgets__info{
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    flex-direction: row;
+    border:1px solid #d2d2d2;
+    border-radius: 10px;
+    margin-bottom:20px;
+}
+.widgets__info_show{
+    opacity: .4;
+}
+.widgets__info-name{
+    text-align: left;
+    color: green;
+    flex: 2;
+    padding-left:20px;
+}
+.widgets__info-area{
+    text-align: right;
+    flex: 1;
+    padding-left:20px;
+}
+.widgets__info-img{
+    width: 40px;
+    height: 40px;
+}
+
+.widgets__list{
+    display: none;
+}
+.widgets__list_show{
+    display: block;
+}

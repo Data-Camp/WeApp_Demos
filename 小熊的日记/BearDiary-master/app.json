@@ -1,0 +1,36 @@
+{
+  "pages":[
+    "pages/list/list",
+    "pages/mine/mine",
+    "pages/new/new",
+    "pages/entry/entry"
+  ],
+  "window":{
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#39b5de",
+    "navigationBarTitleText": "小熊の日记",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#eceff4"
+  },
+  "tabBar": {
+    "color": "#858585",
+    "selectedColor": "#39b5de",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list":[
+      {
+        "pagePath": "pages/list/list",
+        "iconPath": "images/icons/mark.png",
+        "selectedIconPath": "images/icons/markHL.png",
+        "text": "印记"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "iconPath": "images/icons/mine.png",
+        "selectedIconPath": "images/icons/mineHL.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "debug": true
+}

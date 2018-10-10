@@ -1,0 +1,31 @@
+<view class="container">
+    <block wx:if="{{showLoading}}">
+        <view class="loading">玩命加载中…</view>
+    </block>
+    <block wx:else>
+        <!-- pd: person detail -->
+        <view class="pd-hd">
+            <view class="pd-hd-bg" style="background-image: url({{personDetail.avatars.medium}})"></view>
+            <view class="pd-intro">
+                <view class="pd-avatar" style="background-image: url({{personDetail.avatars.medium}})"></view>
+                <view class="pd-name-cn">{{personDetail.name}}</view>
+                <view class="pd-name-en">{{personDetail.name_en}}</view>
+                <view class="pd-address">{{personDetail.born_place}}</view>
+            </view>
+        </view>
+        <view class="pd-bd">
+            <view class="pd-work">
+                <block wx:for="{{personDetail.works}}" wx:for-item="psersonWorkItem" wx:key="psersonWorkItem">
+                    <view class="pd-work-item" data-id="{{psersonWorkItem.subject.id}}" bindtap="viewFilmDetail">
+                        <image class="pd-work-cover" src="{{psersonWorkItem.subject.images.large}}"></image>
+                        <view class="pd-work-intro">
+                            <view class="pd-work-title">{{psersonWorkItem.subject.title}}</view>
+                            <view class="pd-work-roles">担任：{{psersonWorkItem.roles}}</view>
+                        </view>
+                    </view>
+                </block>
+            </view>
+        </view>
+    </block>
+
+</view>

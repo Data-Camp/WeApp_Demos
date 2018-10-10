@@ -1,0 +1,71 @@
+/**index.wxss**/
+.time-container {
+  background: #e0e0e0;
+  padding: 0;
+}
+.time-card {
+    background: pink;
+    width: 750rpx; 
+    height: 610rpx;
+    background: #fff;
+    margin-bottom: 10rpx;
+}
+.time-card.no-img {
+    height: 210rpx;
+}
+.time-card-img {
+  width: 750rpx;
+  height: 400rpx; 
+  background-color: #e0e0e0;
+}
+.time-card-cotent-box {
+  padding: 10rpx 20px;
+  height: 210rpx;
+  font-size: 10rpx;
+}
+.time-card-top {
+  display: flex;
+}
+.time-card-title {
+  width: 650rpx;
+  height: 60rpx;
+  margin-top: 15rpx;
+}
+.time-card-title-text {
+  font-size: 26rpx;
+  line-height: 30rpx;
+}
+.time-card-sub {
+  color: #989898;
+  height: 40rpx;
+  padding-top: 15rpx;
+}
+.time-card-avatar-box {
+  width: 50rpx;
+  padding-left: 10rpx;
+  justify-content: flex-end;
+}
+.time-card-avatar {
+  width: 40rpx;
+  height: 40rpx;
+}
+.time-card-action {
+  flex-shrink: 0;
+  display: flex;
+  width: 40rpx;
+  justify-content: flex-end;
+}
+.time-card-bottom {
+  display: flex;
+}
+.time-card-tags {
+  padding-top: 20rpx;
+  width: 650rpx;
+}
+.time-card-tag {
+  margin-right: 10rpx;
+}
+.time-card-action {
+  height: 40rpx;
+  width: 50rpx;
+}

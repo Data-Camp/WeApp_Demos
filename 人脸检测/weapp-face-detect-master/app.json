@@ -1,0 +1,12 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#00e5ff",
+    "navigationBarTitleText": "人脸检测",
+    "navigationBarTextStyle":"light"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/word/word"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#795548",
+    "navigationBarTitleText": "步步高字典",
+    "navigationBarTextStyle":"light"
+  }
+}

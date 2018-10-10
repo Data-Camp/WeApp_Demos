@@ -1,0 +1,17 @@
+<import src="../../component/message/message.wxml"/>
+<template is="message" data="{{message: message}}"/>
+<view class="search-hd">
+    <view class="search-area">
+        <form bindsubmit="search">
+            <view class="search-type" bindtap="changeSearchType">{{searchType == 0 ? '默认' : '类型'}}</view>
+            <input class="search-txt" name="keyword" auto-focus placeholder="{{searchType == 0 ? '请输入电影标题、演员或导演' : '请输入影片类型，如：爱情、喜剧'}}"/>
+            <button class="search-btn" formType="submit">搜索</button>
+        </form>
+    </view>
+    <view class="search-keyword">
+        <view class="search-keyword-title">热门搜索</view>
+        <view wx:for="{{hotKeyword}}" wx:for-item="hotKeywordItem" wx:key="hotKeywordItem" class="search-keyword-item" data-keyword="{{hotKeywordItem}}" bindtap="searchByKeyword">{{hotKeywordItem}}</view>
+        <view class="search-keyword-title">热门标签</view>
+        <view wx:for="{{hotTag}}" wx:for-item="hotTagItem" wx:key="hotTagItem" class="search-keyword-item" data-keyword="{{hotTagItem}}" bindtap="searchByTag">{{hotTagItem}}</view>        
+    </view>
+</view>

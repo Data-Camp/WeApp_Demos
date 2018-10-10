@@ -1,0 +1,6 @@
+<image src="{{splash.img}}" class="cover" style="height:{{screenHeight}}px;width:{{screenWidth}}px"></image>
+<view class="mask">
+    <image class="logo" src="../../images/logo.jpg"></image>
+    <text class="cover-author">{{splash.text}}</text>
+    <text class="app-author">Designed by Oopsguy</text>
+</view>

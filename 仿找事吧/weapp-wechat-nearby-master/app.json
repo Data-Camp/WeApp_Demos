@@ -1,0 +1,36 @@
+{
+  "pages": [
+    "pages/main/main",
+    "pages/aboutUs/aboutUs",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "demo",
+    "navigationBarTextStyle": "black",
+    "backgroundColor":"#2345bf"
+    
+  },
+  "tabBar": {
+    "color": "#a9a9a9",
+    "selectedColor": "#1f1f1f",
+    "backgroundColor": "#fefefe",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/main/main",
+        "text": "首页",
+        "iconPath": "image/icon_home.png",
+        "selectedIconPath": "image/icon_home_select.png"
+      },
+      {
+        "pagePath": "pages/aboutUs/aboutUs",
+        "text": "关于我们",
+        "iconPath": "image/icon_person.png",
+        "selectedIconPath": "image/icon_person_select.png"
+      }
+    ]
+  }
+}

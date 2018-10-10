@@ -1,0 +1,32 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/config/config"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#336699",
+    "navigationBarTitleText": "辩论计时器",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "color":"#ddd",
+    "selectedColor": "#3cc51f",
+    "backgroundColor": "#336699",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "计时",
+        "iconPath": "/assets/images/time.png",
+        "selectedIconPath": "/assets/images/time-selected.png"
+      },
+      {
+        "pagePath": "pages/config/config",
+        "text": "设置",
+        "iconPath": "/assets/images/config.png",
+        "selectedIconPath": "/assets/images/config-selected.png"
+      }
+    ]
+  }
+}

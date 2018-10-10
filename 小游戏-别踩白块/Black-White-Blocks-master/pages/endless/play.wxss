@@ -1,0 +1,33 @@
+/*page {
+    display: flex;
+    flex-direction: column-reverse;
+}*/
+.score {
+    position: fixed;
+    top: 2rem;
+    left: 50%;
+    font-size: 3rem;
+    color: #fc2736;
+    transform: translate(-50%, 0);
+    z-index: 10;
+}
+.play-box {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0; 
+}
+.block-line {
+    width: 100%;
+    overflow: hidden;        
+}
+.block {
+    width: 5rem;
+    height: 8rem;
+    float: left;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+}
+.black {
+    background: #000000;
+}

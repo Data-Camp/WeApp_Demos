@@ -1,0 +1,48 @@
+.container {
+  border-top: 0;
+}
+
+.types {
+  width: 100%;
+  height: 15px;
+  position: fixed;
+  display: flex;
+  padding: 10px 0;
+  border-top: 1px solid #ebebeb;
+  background-color: #fff;
+  z-index: 10;
+}
+
+.fix-fixed {
+  width: 100%;
+  height: 30px;
+}
+
+.type-item {
+  flex: 1;
+  font-size: 14px;
+  text-align: center;
+}
+
+.seleted {
+  color: #89bdf7;
+}
+
+.history-bymonth {
+  height: 20px;
+  padding: 10px;
+  margin: 0 20rpx;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.history-date {
+  color: #888;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.forward {
+  width: 20px;
+  height: 20px;
+  float: right;
+}

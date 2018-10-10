@@ -1,0 +1,139 @@
+.header-fix {
+	display: flex;
+	flex-direction: row;
+
+	height: 30px;
+	width: 100%;
+	border-bottom: 1px solid #d2d2d2;
+}
+.header-fix view {
+	flex:1;
+	padding-top: 5px;
+	font-size: 14px;
+	
+}
+
+.header-fix view text:first-child {
+	color:#8a8a8a;
+}
+.header-fix view text:last-child {
+	font-size:12px
+}
+
+.winner {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	padding: 10px 0;
+}
+.winner-info {
+	height:30px;
+	width:100%;
+	display: flex;
+	flex-direction: row;
+}
+.winner-info-tag {
+	flex: 1;
+	background-color: green;
+	border-top-right-radius:10px;
+	border-bottom-right-radius:10px;
+	font-size:16px;
+	padding: 5px;
+	text-align: center;
+	vertical-align:middle;
+	line-height:20px;
+	font-family: "微软雅黑";
+	color: white;
+}
+.winner-info-data {
+	flex:6;
+	float:right;
+	text-align: right;
+	vertical-align:middle;
+	line-height:20px;
+	padding: 5px;
+	font-size: 14px;
+}
+.winner-info-data image {
+	width: 15px;
+	height: 15px;
+}
+.winner-detail {
+	padding: 10px 0 10px 10px;
+	width: 96%;
+	height: 70px;
+	display: flex;
+	flex-direction: row;
+	border-bottom: 1px solid #d2d2d2;
+	cursor: pointer;
+}
+.winner-detail-img-level {
+	height: 22px;
+	margin-top: -5px;
+	color: #22b14c;
+	border:1px solid #22b14c;
+	font-size: 12px;
+	text-align: center;
+	vertical-align:middle;
+	line-height:20px;
+}
+.winner-detail-img-level text {
+	margin: 0 auto;
+}
+.winner-detail image {
+	width: 50px;
+	height: 50px;
+}
+.winner-detail-name {
+	flex: 4;
+	display: flex;
+	flex-direction: row;
+}
+.winner-detail-name-left {
+	padding-left: 8px;
+	flex: 5;
+}
+.left-item image{
+	margin-right: 3px;
+	width: 20px;
+	height: 20px;
+	border: 1px solid #d2d2d2;
+	background-color: #f7fcf8;
+}
+.left-tag image{
+	margin-right: 3px;
+	width: 15px;
+	height: 15px;
+}
+.detail-hidden {
+	display: none;
+}
+.detail-display {
+	display: block;
+}
+.winner-data {
+	padding-left: 10px;
+	background-color: #f7fcf8;
+	font-size: 12px;
+}
+.winner-data-1 {
+	flex: 4;
+	display: flex;
+	flex-direction: row;
+	padding: 6px 0;
+	
+}
+.winner-data-2 {
+	padding: 6px 0;
+}
+.winner-data-2 image {
+	width: 20px;
+	height: 20px;
+	padding-left: 16px;
+}
+.loser-info {
+	margin-top: 10px;
+}
+.loser-info-tag {
+	background-color: red;
+}

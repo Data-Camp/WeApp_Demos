@@ -1,0 +1,118 @@
+#plist-header {
+	position: relative;
+	overflow: hidden
+}
+
+#plh-main {
+	position: relative;
+	z-index: 3;
+	overflow: hidden
+}
+
+#plh-cover {
+	width: 280rpx;
+	height: 280rpx;
+	float: left;
+	margin: 30rpx;
+	position: relative
+}
+
+#plh-cover image {
+	width: 100%;
+	height: 100%;
+}
+
+.blurbg{background-color: #eee}
+#plh-playinfo{position: absolute;z-index: 3;right: 10rpx;bottom: 10rpx;}
+#plh-playinfo image{width: 46rpx;height:46rpx; vertical-align: top; background-color: rgba(0,0,0,.2);border-radius: 50%;}
+#user_ava {
+	width: 60rpx;
+	height: 60rpx;
+	border-radius: 50%;
+	margin-right: 20rpx;
+	vertical-align: middle;
+}
+
+#plh-cnt {
+	margin-left: 280rpx;
+	color: #fff;
+	font-size: 24rpx;
+	line-height: 50rpx
+}
+
+#music_h_name {
+	font-size: 32rpx;
+	padding: 60rpx 20rpx 40rpx 0;
+	display: block
+}
+
+#plh_action {
+	display: flex;
+	position: relative;
+	z-index: 3;
+	clear: both;
+	width: 100%;
+	line-height: 1;	
+
+}
+
+#plh_action view {
+	text-align: center;
+	padding-bottom: 20rpx;
+	color: #fff;
+	border-bottom: none;
+	font-size: 24rpx;
+	flex: 1;
+}
+
+#plh_action view image {
+	width:110rpx;
+	height: 110rpx;
+	display: block;margin: 0 auto -15rpx
+}
+
+.pldetail-item {
+	clear: both;
+	display: flex;
+	align-items:stretch;
+	padding: 20rpx 0 0
+}
+
+.pld-item-sort {
+	width:80rpx;
+	text-align: center;
+	color: #999;
+}
+.topindex{color: red}
+.pld-item-sort .playingidx{width: 38rpx;height:38rpx;}
+.pld-item-sort .ftp{display: block;color: #888;font-size: 18rpx;padding-top: 10rpx;}
+.ftp image{width:18rpx;height: 18rpx;display: inline-block;vertical-align: middle;overflow: hidden;margin-right: 5rpx;}
+.ftp image.tpnew{width:38rpx;height: 10rpx;}
+
+.pld-item{width:580rpx;border-bottom: 1px solid #eee;}
+.pld-item-action{width:100rpx;border-bottom: 1px solid #eee;padding-top: .5em}
+.pld-item-info {
+	display: block;
+	color: #888;
+	font-size: 22rpx;
+	padding: 10rpx 0 20rpx;white-space:  nowrap;overflow: hidden;text-overflow: ellipsis
+}
+
+.pld-item-name {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	display: block;
+	overflow: hidden;
+	word-break:keep-all;
+}
+.transNames{color: #888;display: inline}
+#playall{line-height: 36rpx;overflow: hidden;}
+#playall image{width: 36rpx;height:36rpx;margin:30rpx 20rpx;float: left;}
+#playall #pa-count{
+	border-bottom: 1px solid #eee;
+	display: block;padding: 30rpx 0;margin-left: 76rpx;
+}
+#pa-count text{color: #888;font-size: 24rpx}
+.pld-mv image {
+	width: 78rpx;height:63rpx;
+}

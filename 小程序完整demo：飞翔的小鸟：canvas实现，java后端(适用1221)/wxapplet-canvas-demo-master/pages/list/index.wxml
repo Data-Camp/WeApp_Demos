@@ -1,0 +1,25 @@
+<!-- 调样式真是想死的心都有 -->
+<template name="list">  <!-- 一个列表模版 -->
+  <view class="list">
+        <!-- list内容 -->
+        <block wx:for="{{listData}}">
+          <view class="list-item">
+            <!-- 其实太多的逻辑放到视图层不太好的，后期肯定难以维护 -->
+            <view class="avatar-wrapper">
+                <image class="avatar" wx:if="{{item.pic!=undefined}}"  src="{{item.pic}}"></image>
+                <!-- 没有头像就显示一个默认的 -->
+                <image class="avatar" wx:if="{{item.pic==undefined}}" src="../../images/bird.png"></image>
+            </view>
+            <text class="title">{{item.name}}</text>
+            <text class="sub-title">分数：{{item.score}}</text>
+            <image class="rank-img" wx:if="{{index==0}}" src="../../images/rank1.png"></image>
+            <image class="rank-img" wx:if="{{index==1}}" src="../../images/rank2.png"></image>
+            <image class="rank-img" wx:if="{{index==2}}" src="../../images/rank3.png"></image>
+          </view>
+        </block>
+  </view>
+</template>
+
+<view>
+  <template is="list" data="{{listData}}"></template>
+</view>

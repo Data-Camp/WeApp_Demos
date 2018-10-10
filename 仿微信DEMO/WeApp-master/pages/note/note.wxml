@@ -1,0 +1,13 @@
+<scroll-view scroll-y="true" style="height:100%;">
+    <view wx:for="{{list}}" wx:for-item="item">
+        <view class="graySpace" wx:if="{{item.text}}">
+            <text>{{item.text}}</text>
+        </view>
+        <view class="item-avatar-sm" wx:for="{{item.list_tool}}" wx:for-item="i" data-url="{{i.url}}" bindtap="goPage">
+            <image src="{{i.img}}" />
+            <view class="padding_half">
+                <text class="title">{{i.name}}</text>
+            </view>
+        </view>
+    </view>
+</scroll-view>

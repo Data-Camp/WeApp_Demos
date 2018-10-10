@@ -1,0 +1,23 @@
+<!--page/one/index.wxml-->
+<view class="page">
+    <view class="page-bottom">
+        <view class="page-content">
+            <view  class="wc">
+                <navigator url="../one/index" hover-class="navigator-hover">第一个菜单</navigator>
+            </view>
+            <view  class="wc">
+                <navigator url="../two/index" hover-class="navigator-hover">第二个菜单（缩放）</navigator>
+            </view>
+            <view  class="wc">
+                <navigator url="../three/index" hover-class="navigator-hover">第三个菜单（拖动）</navigator>
+            </view>
+            <view  class="wc">
+                <navigator url="../four/index" hover-class="navigator-hover">第四个菜单</navigator>
+            </view>
+        </view>
+    </view>
+    <view class="page-top {{open ? 'c-state1' : ''}}">
+        <image bindtap="tap_ch" src="../../images/btn.png"></image>
+        <view class="text">第一个菜单</view>
+    </view>
+</view>

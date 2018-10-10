@@ -1,0 +1,157 @@
+.swiper-item{
+  display: block;
+}
+.slide-image {
+  width: 100%;
+}
+swiper {
+  width: 100%;
+}
+.goods_title {
+  font-size: 14px;
+  line-height: 20px;
+  color: #535353;
+  padding: 10px;
+  height: 40px;
+  padding-right: 80px;
+  position: relative;
+}
+.goods_infor_top {
+  background-color: #FFF;
+}
+.goods_price {
+  padding: 10px;
+  font-size: 16px;
+  color: #FF0000;
+}
+.goods_old_price {
+  margin-left: 10px;
+  font-size: 12px;
+  text-decoration: line-through;
+  color: #535353;
+}
+.goods_deliver {
+  padding: 10px;
+  border-top: 1px solid #E5E5E5;
+  font-size: 10px;
+  color: #676767;
+}
+.goods_collect_btn {
+  height: 40px;
+  width: 70px;
+  position: absolute;
+  right: 0;
+  top: 10px;
+  border-left: 1px solid #E5E5E5;
+  text-align: center;
+  font-size: 12px;
+  line-height: 14px;
+}
+.goods_collect_img {
+  width: 24px;
+  height: 24px;
+}
+.goods_infor_pre {
+  margin-top: 10px;
+  background-color: #FFF;
+  padding: 10px;
+  min-height: 40px;
+}
+.goods_infor_txt {
+  position: relative;
+  padding-left: 50px;
+  font-size: 13px;
+  line-height: 18px;
+}
+.goods_infor_brand {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-image: url(../../image/brand.png);
+  background-size: 40px 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+  left: 0px;
+  top: 10px;
+}
+.goods_infor_raw {
+  margin-top: 10px;
+  background-color: #FFF;
+  padding: 10px;
+}
+.goods_infor_item {
+  font-size: 13px;
+  line-height: 18px; 
+}
+.goods_infor_item text  {
+  display: inline-block;
+  width: 90px;
+}
+.goods_detail {
+  padding: 0 10px;
+  margin-top: 10px;
+  background-color: #FFF;
+}
+.goods_detail_title {
+  padding: 10px 0;
+  font-size: 14px;
+}
+.goods_bottom {
+  height: 50px;
+}
+.goods_bottom_btn {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  height: 50px;
+  z-index: 99;
+  background-color: #FFF;
+  border-top: 1px solid #E5E5E5;
+}
+.goods_one {
+  width: 25%;
+  float: left;
+  height: 50px;
+}
+.goods_half_half {
+  width: 25%;
+  float: left;
+  height: 50px;
+  font-size: 12px;
+  line-height: 50px;
+  text-align: center;
+  color: #FFF;
+}
+.red {
+  background-color: #FFA500;
+}
+.green {
+  background-color: #69C3AA;
+}
+.blue {
+  background-color: #00aaef;
+}
+.goods_car_num {
+  width: 30px;
+  height: 30px;
+  margin: 0 auto;
+  margin-top: 10px;
+  font-size: 10px;
+  background-image: url(../../image/car1.png);
+  background-size: 26px;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.goods_car_num span {
+  position: absolute;
+  right: -5px;
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 14px;
+  background-color: #FF0000;
+  color: #FFF;
+  text-align: center;
+  line-height: 14px;
+}

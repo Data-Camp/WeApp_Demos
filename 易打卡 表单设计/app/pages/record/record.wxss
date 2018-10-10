@@ -1,0 +1,252 @@
+.record-page{
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.t-menu{
+  flex: none;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  background-color: #fff;
+  border-bottom: 1px solid #f0f0f0;
+  height: 80rpx;
+}
+.t-menu-btn{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 50%;
+  font-size: 32rpx;
+}
+.selected{
+  color: #2fcc85;
+  border-bottom: 1px solid #2fcc85;
+}
+.t-inner{
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
+  height: 100%;
+  padding: 0 26rpx;
+}
+.t-content-wrap{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+.t-content{
+  width: 100%;
+  display: none;
+}
+.t-content-show{
+  display: block;
+}
+.t-content .inner{
+  padding: 20rpx 0;
+}
+.a-tit{
+  font-size: 32rpx;
+  color: #b2b2b2;
+}
+.total{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  height: 158rpx;
+  border: 1px solid #f0f0f0;
+  border-radius: 10rpx; 
+}
+.c-item{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 168rpx;
+}
+.total .pipe{
+  height: 80rpx;
+  border-left: 1px solid #f0f0f0;
+}
+.c-item .num{
+  font-size: 80rpx;
+  color: #2fcc85;
+}
+.c-item .txt{
+  color: #888;
+}
+.mod-a{
+  display: flex;
+  height: 124rpx;
+  border: 1px solid #f0f0f0;
+  align-items: center;
+  border-radius: 10rpx;
+  background-color: #fff;
+  padding-left: 40rpx;
+  color: #b2b2b2;
+  font-size: 28rpx;
+}
+.mod-a .head{
+  margin-right: 20rpx;
+}
+.mod-a .head image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+.nickName{
+  font-size: 32rpx;
+  color: #676767;
+  margin-right: 10rpx;
+}
+.flag{
+  color: #2fcc85;
+}
+
+.t-time{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+  align-items: center;
+  height:90rpx;
+  padding:0 20rpx;
+  background-color: #fff;
+  border-bottom: 1px solid #f0f0f0;
+  border-radius: 10rpx;
+  color: #2fcc85;
+  font-size: 28rpx;
+}
+.start, .end{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.pipe{
+  height: 48rpx;
+  border-left: 1px solid #f0f0f0;
+}
+.arrow-d{
+  width: 17rpx;
+  height: 9rpx;
+  margin-left: 10rpx;
+}
+.t-time .key{
+  margin-right: 10rpx;
+}
+.t-time .date{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+  align-items: center;
+  font-size: 36rpx;
+}
+
+.record-list{
+  background-color: #fff;
+  border: 1px solid #f0f0f0;
+  border-radius: 10rpx;
+  font-size: 32rpx;
+}
+
+.thead{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 70rpx;
+  color: #b2b2b2;
+}
+.thead .tr{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.thead .th{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
+  width: 20%;
+}
+.thead .th .unit{
+  font-size: 18rpx;
+}
+.tbody{
+  color: #676767;
+  padding: 0 15rpx;
+}
+.tbody .tr{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-top: 1px solid #f0f0f0
+}
+.tbody .td{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 20%;
+  height: 60rpx;
+  overflow: hidden;
+}
+.tbody .td0{
+  justify-content:flex-start;
+}
+.tbody .td0 text{
+  padding-left: 20rpx;
+}
+.s-menu{
+  display: flex;
+  flex-direction: row;
+  margin-left: 1px;
+}
+.s-menu-btn{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 160rpx;
+  height: 68rpx;
+  background-color: #fff;
+  border: 1px solid #f0f0f0;
+  border-bottom: none;
+  margin-left: -1px;
+  border-radius: 10rpx 10rpx 0 0;
+  font-size: 32rpx;
+  color: #b2b2b2;
+}
+.active{
+  background-color: #2fcc85;
+  color: #fff;
+}
+.s-menu-content{
+  display: none;
+  font-size: 28rpx;
+}
+.s-menu-show{
+  display: block;
+}
+.late-list .th,.late-list .td{
+  width: 25%;
+} 
+.leave-list .th,.leave-list .td,.absent-list .th,.absent-list .td, .ontime-list .th, .ontime-list .td{
+  width: 33%;
+}
+.empty-tips{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60rpx;
+  border-top: 1px solid #f0f0f0
+
+}

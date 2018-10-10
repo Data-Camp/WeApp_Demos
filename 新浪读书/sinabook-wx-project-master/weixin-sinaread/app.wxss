@@ -1,0 +1,338 @@
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+.btn { display: inline-block; padding: .2rem .3rem; vertical-align: middle; border:0 none; border: 1px solid rgba(0,0,0,.25); border-radius: 0.3rem; background-image: none; box-shadow: 0 1px rgba(0,0,0,.15), inset 0 1px rgba(255,255,255,.15); color: #fff; text-align: center; text-decoration: none; text-shadow: 1px 1px rgba(0,0,0,.1); font-size: 100%; font-family: inherit; font-weight: inherit; white-space: nowrap; -webkit-user-select: none; -moz-user-select: none; user-select: none; overflow: visible; cursor: pointer; }
+.btn:hover, .btn:focus { text-decoration: none; background-image: linear-gradient(to bottom, rgba(0,0,0,.1), rgba(0,0,0,.1)); }
+.btn:focus { outline: thin dotted; outline: 5px auto -webkit-focus-ring-color; outline-offset: -2px; }
+.btn:active { box-shadow: 0 1px rgba(0,0,0,.2), inset 0 1px rgba(0,0,0,.05); outline: none; }
+.btn-navy { background-color: #001f3f; }
+.btn-blue { background-color: #0074d9; }
+.btn-aqua { background-color: #7fdbff; }
+.btn-teal { background-color: #39cccc; }
+.btn-olive { background-color: #3d9970; }
+.btn-green { background-color: #2ecc40; }
+.btn-lime { background-color: #01ff70; }
+.btn-yellow { background-color: #ffdc00; }
+.btn-orange { background-color: #ff851b; }
+.btn-red { background-color: #ff4136; }
+.btn-fuchsia { background-color: #f012be; }
+.btn-purple { background-color: #b10dc9; }
+.btn-maroon { background-color: #85144b; }
+.btn-white { background-color: #ffffff; }
+.btn-gray { background-color: #aaaaaa; }
+.btn-silver { background-color: #dddddd; }
+.btn-black { background-color: #111111; }
+.btn-white, .btn-silver { color: #111111;  text-shadow: none; }
+
+/* Backgrounds */
+.bg-navy { background-color: #001f3f; }
+.bg-blue { background-color: #0074d9; }
+.bg-aqua { background-color: #7fdbff; }
+.bg-teal { background-color: #39cccc; }
+.bg-olive { background-color: #3d9970; }
+.bg-green { background-color: #2ecc40; }
+.bg-lime { background-color: #01ff70; }
+.bg-yellow { background-color: #ffdc00; }
+.bg-orange { background-color: #ff851b; }
+.bg-red { background-color: #ff4136; }
+.bg-fuchsia { background-color: #f012be; }
+.bg-purple { background-color: #b10dc9; }
+.bg-maroon { background-color: #85144b; }
+.bg-white { background-color: #ffffff; }
+.bg-gray { background-color: #aaaaaa; }
+.bg-silver { background-color: #dddddd; }
+.bg-black { background-color: #111111; }
+/* Colors */
+.navy { color: #001f3f; }
+.blue { color: #0074d9; }
+.aqua { color: #7fdbff; }
+.teal { color: #39cccc; }
+.olive { color: #3d9970; }
+.green { color: #2ecc40; }
+.lime { color: #01ff70; }
+.yellow { color: #ffdc00; }
+.orange { color: #ff851b; }
+.red { color: #ff4136; }
+.fuchsia { color: #f012be; }
+.purple { color: #b10dc9; }
+.maroon { color: #85144b; }
+.white { color: #ffffff; }
+.silver { color: #dddddd; }
+.gray { color: #aaaaaa; }
+.black { color: #111111; }
+
+
+
+/* ---------------------single CSS----------------------- */
+/* display */
+.dn { display: none; }
+.di { display: inline; }
+.db { display: block; }
+.dib { display: inline-block; } /* if the element is block level(eg. div, li), using 'inline-any' instead */
+/* height */
+.h1 { height: 1rem; }
+.h2 { height: 2rem; }
+.h3 { height: 3rem; }
+/* percent width value */
+.pct10 { width: 10%; }
+.pct15 { width: 15%; }
+.pct20 { width: 20%; }
+.pct25 { width: 25%; }
+.pct30 { width: 30%; }
+.pct33 { width: 33.3%; }
+.pct40 { width: 40%; }
+.pct50 { width: 50%; }
+.pct60 { width: 60%; }
+.pct66 { width: 66.6%; }
+.pct70 { width: 70%; }
+.pct75 { width: 75%; }
+.pct80 { width: 80%; }
+.pct90 { width: 90%; }
+.pct100 { width: 100%; }
+/* margin */
+.m0 { margin: 0; }
+.ml1 { margin-left: 1px; }
+.ml2 { margin-left: 2px; }
+/* margin negative */
+.ml-1 { margin-left: -1px; }
+.mr-1 { margin-right: -1px; }
+.mt-1 { margin-top: -1px; }
+.mb-1 { margin-bottom: -1px; }
+.ml-3 { margin-left: -3px; }
+.mr-3 { margin-right: -3px; }
+.mt-3 { margin-top: -3px; }
+.mb-3 { margin-bottom: -3px; }
+.ml-20 { margin-left: -20px; }
+.mr-20 { margin-right: -20px; }
+.mt-20 { margin-top: -20px; }
+.mb-20 { margin-bottom: -20px; }
+.ml1 { margin-left: 1px; }
+.mr1 { margin-right: 1px; }
+.mt1 { margin-top: 1px; }
+.mb1 { margin-bottom: 1px; }
+.ml3 { margin-left: 3px; }
+.mr3 { margin-right: 3px; }
+.mt3 { margin-top: 3px; }
+.mb3 { margin-bottom: 3px; }
+.ml5 { margin-left: 5px; }
+.mr5 { margin-right: 5px; }
+.mt5 { margin-top: 5px; }
+.mb5 { margin-bottom: 5px; }
+.ml10 { margin-left: 10px; }
+.mr10 { margin-right: 10px; }
+.mt10 { margin-top: 10px; }
+.mb10 { margin-bottom: 10px; }
+.ml20 { margin-left: 20px; }
+.mr20 { margin-right: 20px; }
+.mt20 { margin-top: 20px; }
+.mb20 { margin-bottom: 20px; }
+/* padding */
+.p0 { padding: 0; }
+.p1 { padding: 1px; }
+.pl1 { padding-left: 1%; }
+.pt1 { padding-top: 1%; }
+.pr1 { padding-right: 1%; }
+.pb1 { padding-bottom: 1%; }
+
+/* border-color name rule:  border(b)-position(l/r/t/b/d)-width(null/2)-style(null/sh)-color(first one letter/first two letter) |-> All colors are safe color*/
+.bdc { border: 1px solid #ccc; }
+.blc { border-left: 1px solid #ccc; }
+.brc { border-right: 1px solid #ccc; }
+.btc { border-top: 1px solid #ccc; }
+.bbc { border-bottom: 1px solid #ccc; }
+.bdd { border: 1px solid #ddd; }
+.bld { border-left: 1px solid #ddd; }
+.brd { border-right: 1px solid #ddd; }
+.btd { border-top: 1px solid #ddd; }
+.bbd { border-bottom: 1px solid #ddd; }
+.bde { border: 1px solid #eee; }
+.ble { border-left: 1px solid #eee; }
+.bre { border-right: 1px solid #eee; }
+.bte { border-top: 1px solid #eee; }
+.bbe { border-bottom: 1px solid #eee; }
+/* background-color name rule:  bg - (key word/Hex color) |-> All colors are safe color */
+.bgfb { background-color: #fbfbfb; }
+.bgf5 { background-color: #f5f5f5; }
+.bgf0 { background-color: #f0f0f0; }
+.bgeb { background-color: #ebebeb; }
+.bge0 { background-color: #e0e0e0; }
+/* safe color */
+.g0 { color: #000; }
+.g3 { color: #333; }
+.g6 { color: #666; }
+.g9 { color: #999; }
+.gc { color: #ccc; }
+/* font-size */
+.f0 { font-size: 0; }
+.f5 { font-size: .5rem; }
+.f6 { font-size: .6rem; }
+.f7 { font-size: .7rem; }
+.f8 { font-size: .8rem; }
+.f9 { font-size: .9rem; }
+.f10 { font-size: 1rem; }
+.f20 { font-size: 1.5rem; }
+.f30 { font-size: 2rem; }
+/* font-family */
+.fa { font-family: Arial; }
+.ft { font-family: Tahoma; }
+.fv { font-family: Verdana; }
+.fs { font-family: Simsun; }
+.fl { font-family: 'Lucida Console'; }
+.fw { font-family: 'Microsoft Yahei'; }
+/* font-style */
+.n { font-weight: normal; font-style: normal; }
+.b { font-weight: bold; }
+.i { font-style: italic; }
+/* text-align */
+.tc { text-align: center; }
+.tr { text-align: right; }
+.tl { text-align: left; }
+.tj { text-align: justify; }
+/* text-decoration */
+.tdl { text-decoration: underline; }
+/* letter-spacing */
+.lt-1 { letter-spacing: -1px; }
+.lt0 { letter-spacing: 0; }
+.lt1 { letter-spacing: 1px; }
+/* white-space 行内元素不换行*/
+.nowrap { white-space: nowrap; }
+/* word-wrap 连续英文换行*/
+.bk { word-wrap: break-word; }
+/* vertical-align */
+.vm { vertical-align: middle; }
+.vtb { vertical-align: text-bottom; }
+.vb { vertical-align: bottom; }
+.vt { vertical-align: top; }
+.vn { vertical-align: -2px; }
+/* float */
+.l { float: left; }
+.r { float: right; }
+/* clear */
+.cl { clear: both; }
+/* position */
+.rel { position: relative; }
+.abs { position: absolute; }
+/*z-index*/
+.zx1 { z-index: 1; }
+.zx2 { z-index: 2; }
+/* cursor */
+.poi { cursor: pointer; }
+.def { cursor: default; }
+/* overflow */
+.ovh { overflow: hidden; }
+.ova { overflow: auto; }
+/* visibility */
+.vh { visibility: hidden; }
+.vv { visibility: visible; }
+
+
+/* ------------------- multiply CSS ------------------ */
+/* 块状元素水平居中 */
+.auto { margin-left: auto; margin-right: auto; }
+/* 清除浮动*/
+.fix:after { display: table; content: ''; clear: both; }
+/* 基于display: table-cell的自适应布局 */
+.cell { display: table-cell; width: 2000px; }
+/* 双栏自适应cell部分连续英文字符换行 */
+.cell-bk { display: table; width: 100%; table-layout: fixed; word-wrap: break-word; }
+/* 单行文字溢出虚点显 示*/
+.ell { text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
+/* css3过渡动画效果 */
+.trans { 
+	-webkit-transition: all 0.3s; 	
+	        transition: all 0.3s; 
+}
+/* 大小不定元素垂直居中 */
+.dib-vm { display: inline-block; width: 0; height: 100%; vertical-align: middle; }
+/* 加载中背景图片 */
+.loading { background: url(img/loading.gif) no-repeat center; }
+/* 无框文本框文本域 */
+.bd-none { border: 0; outline: none; }
+/* 绝对定位隐藏 */
+.abs-out { position: absolute; left: -999em; top: -999em; }
+.abs-clip { position: absolute; clip: rect(0 0 0 0); }
+/*inline-block与float等宽列表*/
+.inline-box { font-size: 1em; letter-spacing: -.25em; font-family: Arial; }
+.inline-two, .inline-three, .inline-four, .inline-five, .inline-six, .inline-any { display: inline-block;  letter-spacing: 0; vertical-align: top;  }
+.float-two, .float-three, .float-four, .float-five, .float-six { float: left; }
+.inline-two, .float-two { width: 49.9%; }
+.inline-three, .float-three { width: 33.3%; }
+.inline-four, .float-four { width: 24.9%; }
+.inline-five, .float-five { width: 19.9%; }
+.inline-six, .float-six { width: 16.6%; }
+.inline-fix { display: inline-block; width: 100%; height: 0; overflow: hidden; }
+
+
+
+page{
+  background-color: #fcfcfc;
+}
+.f8{
+  font-size: .7rem;
+}
+.b{
+  font-weight: bold;
+}
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: .1rem 0;
+  box-sizing: border-box;
+  line-height: 1.5;
+}
+.container .footer{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 2rem .3rem;
+  font-size: 1rem;
+  text-align: center;
+  background-color: #e0e0e0;
+  color: #fff;
+}
+.classifybtn{
+  position: fixed;
+  right: 10px;
+  bottom:50px;
+  z-index: 1;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #666;
+  text-align: center;
+  line-height: 50px;
+  font-size: .8rem;
+  color: #fff;
+  border:5px solid;
+  border-left-color:#ff851b;
+  border-right-color: #0074d9;
+  border-top-color: yellow;
+  border-bottom-color: green; 
+  background-color: rgba(0,0,0,.5);
+}
+.footer text{
+  font-family: "楷体";
+}
+.extend-bar{
+  width: 100%;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  background-color: #f7f7f7;
+  color: #666;
+  text-align: center;
+  font-size: .8rem;
+}
+.book_star::before{
+    content: '★';
+    display: inline-block;
+    padding-right: .2rem;
+    color: gold;
+}

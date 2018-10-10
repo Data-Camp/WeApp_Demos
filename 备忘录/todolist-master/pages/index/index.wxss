@@ -1,0 +1,192 @@
+/**index.wxss**/
+.header{
+  text-align: center;
+  font-size: 40rpx;
+  color: #ae9e84;
+  margin-bottom: 40px;
+  width:100%;
+  position: relative;
+  height:50px;
+}
+.header::after{
+  content:'TODOS';
+  position: absolute;
+  width: 20rem;
+  z-index: 1;
+  text-align: center;
+  color: rgba(225,225,225,0.5);
+  font-size: 120rpx;
+  left: 0;
+  bottom:-50px;
+}
+
+.userinfo-nickname {
+  color: #a38e6d;
+}
+/*输入区域*/
+.input-wrap{  
+  margin: 30rpx 10rpx;
+}
+.flex-row{
+  display: flex;
+  margin: 10rpx 0;
+  width: 670rpx;
+  -webkit-box-pack: justify;
+}
+.pick-time{
+  line-height: 40rpx;
+  flex:1;
+  margin:-20rpx 0 20rpx;  
+}
+.time{
+  color: #777;
+  font-size:12px;
+}
+.switch{
+  transform: scale(0.5);
+  vertical-align: middle;
+}
+.btn{  
+  border-radius: 5px;
+  font-size: 30rpx;
+  line-height: 100rpx;
+  display: block;
+  background: #6fa6cf;
+}
+.btn-submit{
+  color: #fff;
+  flex: 1;
+  margin-right:10rpx;
+}
+.btn-hover{
+  background: #a2c7e2;
+}
+.btn-cancel{
+  background: #fff;
+}
+
+.ipt-main{
+  border: 1rpx solid #eee;
+  border-radius: 5px;
+  height: 80rpx;
+  padding: 10rpx 15px;
+  font-size: 30rpx;
+  width: 610rpx;
+  display: block;
+}
+
+/*展示列表区域*/
+.list-wrap{
+	text-align:left;
+	width:670rpx;
+  margin: 0 auto;	
+  background: #fff;
+  border:1px solid #e2e2e2;
+  position:relative;
+  border-radius:0 0 5rpx 5rpx;
+}
+.list-wrap::after{
+  content:'';
+  position: absolute;
+  width: 98%;
+  height: 100%;
+  z-index: -1;
+  border: 1px solid #e6e6e6;
+  left: 1%;
+  bottom:-5px;
+  background: #fff;
+  border-radius:0 0 5rpx 5rpx;
+}
+.list-wrap::before{
+  content:'';
+  position: absolute;
+  width: 96%;
+  height: 100%;
+  z-index: -2;
+  border: 1px solid #e6e6e6;
+  left: 2%;
+  bottom:-9px;
+  background: #fff;
+  border-radius:0 0 5rpx 5rpx;
+}
+.list{
+  padding:10px;
+  position:relative;
+}
+.done{
+  background: #e6f1f8;
+  color:#ccc;
+}
+.ico-done{
+  position: absolute;
+  right: 80rpx;  
+}
+.done .ico-done{color: red}
+.ico-delete{
+	position:absolute;
+	right:10rpx;
+}	
+.red{
+  color: red;
+}
+.cnt{
+  width: 400rpx;
+}
+/*修改*/
+.edit-wrap{
+  position: absolute;
+  background: #fff;
+  left: 20px;
+  height: 100%;
+  width: 90%;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  padding: 6rpx;
+}
+.ipt-edit{
+  flex:1;
+  border: 1rpx solid #ddd;
+  border-radius: 3px;
+  padding: 5rpx;
+  margin-right: 10rpx;
+  font-size: 24rpx;
+}
+.btn-edit{
+  line-height: 60rpx;
+  font-size: 24rpx;
+  color: #fff;
+  height: 60rpx;
+}
+
+/*列表地步操作区*/
+.footer{
+  display: flex;
+  justify-content:space-between;
+  font-size: 10rpx;
+  color: #a38e6d;
+  border-top: 1px solid #eee;
+}
+.ft-action{
+  color: #6fa6cf; 
+  margin: 0 10rpx;
+}
+.ft-area{  
+  padding: 20rpx;
+ text-align:center;
+}
+.ft-mid{
+  border-left: 1px solid #eee;
+  border-right: 1px solid #eee;
+  flex:1;
+}
+
+
+.mt{
+  margin-top: 100rpx;
+}
+.btn-save{
+  width:300rpx;
+  color: #fff;
+}

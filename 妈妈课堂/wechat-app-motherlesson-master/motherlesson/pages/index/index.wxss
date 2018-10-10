@@ -1,0 +1,174 @@
+/**index.wxss**/
+.banner{
+  position: relative;
+}
+
+.banners {
+  width: 100%;
+  height: 320rpx;
+}
+
+.banner-image {
+  width: 100%;
+  height: 100%;
+}
+
+.items-container {
+  width: 100%;
+}
+
+.item-type1 {
+  width: 100%;
+  height: 45rpx;
+  background: #f6f6f6;
+}
+
+.item-text-title {
+  color: #999999;
+  font-size: 30rpx;
+  padding-left: 20rpx;
+}
+
+.item-type2 {
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  height: 200rpx;
+  width: 100%;
+  background: white;
+}
+
+.item-type2-top {
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  height: 200rpx;
+  width: 100%;
+  background: white;
+}
+
+.item-type2-left {
+  padding-top: 50rpx;
+  padding-left: 30rpx;
+  height: 150rpx;
+  width: 60%;
+}
+
+.item-type2-title {
+  word-wrap: break-word;
+  word-break: normal;
+  font-size: 36rpx;
+  color: #595959;
+  width: 100%;
+  height: 100%;
+}
+
+.item-type2-right {
+  height: 140rpx;
+  width: 180rpx;
+  padding-top: 30rpx;
+  padding-right: 30rpx;
+}
+
+.item-type2-image {
+  width: 100%;
+  height: 100%;
+}
+
+.bottom-line-view {
+  background: #d8d8d8;
+  width: 100%;
+  height: 3rpx;
+}
+
+.item-type3 {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 240rpx;
+}
+
+.item-type3-top {
+  background: white;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 50rpx;
+}
+
+.item-type3-top-image {
+  width: 28rpx;
+  height: 28rpx;
+  padding: 15rpx;
+}
+
+.item-type3-top-text {
+  padding-top: 15rpx;
+  font-size: 28rpx;
+  color: #595959;
+}
+
+.item-type3-bottom {
+  background: white;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+
+.item-type3-bottom-image {
+  padding: 25rpx;
+  width: 180rpx;
+  height: 140rpx;
+}
+
+.item-type3-bottom-right {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  height: 100%;
+}
+
+.item-type3-bottom-right-toptext {
+  padding-top: 30rpx;
+  font-size: 30rpx;
+  color: #595959;
+  width: 100%;
+  height: 50rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.item-type3-bottom-right-bottomtext {
+  font-size: 24rpx;
+  padding-top: 20rpx;
+  color: #999999;
+  width: 100%;
+  height: 100rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.item-type4 {
+  background: white;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 170rpx;
+}
+
+.item-type4-left-image {
+  padding: 15rpx;
+  width: 50%;
+  height: 140rpx;
+}
+
+.item-type4-right-image {
+  padding: 15rpx;
+  width: 50%;
+  height: 140rpx;
+}

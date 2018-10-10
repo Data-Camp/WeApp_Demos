@@ -1,0 +1,150 @@
+/**answer.wxss**/
+
+.container {
+    padding: 0;
+    font-size: 14rpx;
+    background: #F0F4F3;
+    color: #000;
+}
+
+.question {
+    position: relative;
+    width: 650rpx;
+    padding: 40rpx 50rpx 30rpx;
+    background: #298DE5;
+    color: #fff;
+    font-size: 38rpx;
+    line-height: 48rpx;
+}
+.answerer-wrp{
+    position: relative;
+    width: 750rpx;
+    height: 150rpx;
+    background: #fff;
+}
+.answerer-wrp .bg-half{
+    position: absolute;
+    top: 0;
+    width: 750rpx;
+    height: 75rpx;
+    background: #298DE5;
+}
+.answerer {
+    position: relative;
+    margin: 0 auto;
+    width: 630rpx;
+    height: 90rpx;
+    padding: 30rpx;
+    background: #fff;
+    border: solid 1px #ebebeb;
+    border-radius: 3px;
+    box-shadow: 0 1px 2px #bebebe;
+}
+.answerer .avatar {
+    flex: 1;
+    width: 90rpx;
+    height: 90rpx;
+}
+
+.answerer .avatar image {
+    display: inline-block;
+    width: 90rpx;
+    height: 90rpx;
+    border-radius: 90rpx;
+}
+.answerer .answerer-info{
+    flex: 5;
+    text-align: left;
+    padding: 10rpx 20rpx;
+    line-height: 38rpx;
+}
+.answerer .answerer-info text{
+    display: block;
+}
+.answerer .answerer-info .answerer-name{
+    font-size: 32rpx;
+}
+.answerer .answerer-info .answerer-des{
+    font-size: 22rpx;
+    color: #808080;
+    line-height: 28rpx;
+}
+.answerer .follow{
+    flex: 2;
+    padding: 15rpx 0;
+    font-size: 22rpx;
+}
+.answerer .follow text{
+    display: inline-block;
+    padding: 15rpx 20rpx;
+    color: #40bcd0;
+    border: solid 2px #40bcd0;
+    border-radius: 6rpx;
+}
+.answer-content{
+    padding: 30rpx 40rpx;
+    background: #ffffff;
+}
+.answer-content text{
+    font-size: 32rpx;
+    color: #454545;
+    line-height: 44rpx;
+}
+.answer-content image{
+    width: 100%;
+    margin: 20rpx 0;
+}
+.answer-footer{
+    position: fixed;
+    bottom: 0;
+    height: 70rpx;
+    border-top: solid 1px #ebebeb;
+    background: #ffffff;
+    width: 670rpx;
+    padding: 20rpx 40rpx;
+}
+.answer-footer .good{
+    flex: 1;
+    /*display: inline-block;*/
+    height: 40rpx;
+    border: solid 1px #d1d1d1;
+    border-radius: 3px;
+    padding: 10rpx 8rpx;
+    margin: 10rpx 0;
+}
+.answer-footer .good .good-bad{
+    display: inline-block;
+}
+.answer-footer .good image{
+    display: inline-block;
+    width: 38rpx;
+    height: 38rpx;
+    vertical-align: middle;
+}
+.answer-footer .good .good-num{
+    display: inline-block;
+    padding: 10rpx 4rpx;
+    /*font-size: 24rpx;*/
+}
+.answer-footer .operation-wrp{
+    flex: 5;
+}
+.answer-footer .operation{
+    justify-content: space-between;
+    padding: 0 0 0 60rpx;
+}
+.answer-footer .operation-btn{
+    flex: 1;
+    text-align: center;
+}
+.answer-footer .operation image{
+    display: block;
+    margin: 0 auto;
+    width: 50rpx;
+    height: 50rpx;
+}
+.answer-footer .operation-btn text{
+    display: block;
+    font-size: 14rpx;
+    color: #bebebe;
+}

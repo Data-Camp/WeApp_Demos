@@ -1,0 +1,23 @@
+<scroll-view scroll-y="true">
+    <view class="graySpace"></view>
+    <view class="item-avatar-lg">
+        <image src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+        <view class="text_box padding">
+            <view class="flex">
+                <text class="title">{{userInfo.nickName}}</text>
+            </view>
+            <view class="flex">
+                <text class="title">地址：{{userInfo.country}}{{userInfo.city}}{{userInfo.province}}</text>
+            </view>
+        </view>
+    </view>
+    <view wx:for="{{list}}" wx:for-item="item">
+        <view class="graySpace"></view>
+        <view class="item-avatar-xs" wx:for="{{item.list_tool}}" wx:for-item="i" data-log="{{i.name}}" data-url="{{i.url}}" bindtap="goPage">
+            <image src="{{i.img}}" />
+            <view style="padding-left:10px">
+                <text class="title">{{i.name}}</text>
+            </view>
+        </view>
+    </view>
+</scroll-view>

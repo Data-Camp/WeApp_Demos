@@ -1,0 +1,417 @@
+/* 公共 */
+page {
+  overflow: auto;
+  min-height: 100%;
+  background-color: #f4f4f4;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 1.0), screen and (min--moz-device-pixel-ratio: 1.0), screen and (min-device-pixel-ratio: 1.0), screen and (min-resolution: 1.0dppx) {
+  .bili-icon-tv,
+  .bili-icon-tech,
+  .bili-icon-music,
+  .bili-icon-movie,
+  .bili-icon-live,
+  .bili-icon-kichiku,
+  .bili-icon-game,
+  .bili-icon-fashion,
+  .bili-icon-douga,
+  .bili-icon-dance,
+  .bili-icon-bangumi,
+  .bili-icon-search,
+  .bili-icon-history,
+  .bili-icon-fav,
+  .bili-icon-history-2,
+  .bili-icon-filter-hover,
+  .bili-icn-filter,
+  .bili-icon-upload,
+  .bili-icon-circle-del,
+  .bili-icon-arrow,
+  .bili-icon-del {
+    background-image: url(../../resources/images/ui_3@2x.png);
+    background-size: 274px 228px;
+    display: block;
+  }
+}
+@media screen and (-webkit-min-device-pixel-ratio: 2.0), screen and (min--moz-device-pixel-ratio: 2.0), screen and (min-device-pixel-ratio: 2.0), screen and (min-resolution: 2.0dppx) {
+  .bili-icon-tv,
+  .bili-icon-tech,
+  .bili-icon-music,
+  .bili-icon-movie,
+  .bili-icon-live,
+  .bili-icon-kichiku,
+  .bili-icon-game,
+  .bili-icon-fashion,
+  .bili-icon-douga,
+  .bili-icon-dance,
+  .bili-icon-bangumi,
+  .bili-icon-search,
+  .bili-icon-history,
+  .bili-icon-fav,
+  .bili-icon-history-2,
+  .bili-icon-filter-hover,
+  .bili-icon-filter,
+  .bili-icon-upload,
+  .bili-icon-circle-del,
+  .bili-icon-arrow,
+  .bili-icon-del {
+    background-image: url(../../resources/images/ui_3@2x.png);
+    background-size: 274px 228px;
+    display: block;
+  }
+}
+@media screen and (-webkit-min-device-pixel-ratio: 1.0), screen and (min--moz-device-pixel-ratio: 1.0), screen and (min-device-pixel-ratio: 1.0), screen and (min-resolution: 1.0dppx) {
+  .bilibili-index-sprite {
+    background-image: url('../../resources/images/index.png');
+    background-size: 30px 462px;
+  }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2.0), screen and (min--moz-device-pixel-ratio: 2.0), screen and (min-device-pixel-ratio: 2.0), screen and (min-resolution: 2.0dppx) {
+  .bilibili-index-sprite {
+    background-image: url('../../resources/images/index@2x.png');
+    background-size: 30px 462px;
+  }
+}
+/* 顶部Logo、搜索条 */
+.logo {
+    background-image: url(../../resources/images/logo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.nav-bar {
+  height: 40px;
+  line-height: 40px;
+  color: #fff;
+  background-color: #fff;
+  font-size: 14px;
+  z-index: 10010;
+  border-bottom: 1px solid #e7e7e7;
+  overflow: hidden;
+}
+.nav-bar .nav-wrp {
+  position: relative;
+  height: 100%;
+  z-index: 100;
+  background-color: #fff;
+}
+.nav-bar .logo {
+  float: left;
+  margin-top: 6px;
+  display: block;
+  width: 63px;
+  height: 28px;
+  background-size: 63px 28px !important;
+  margin-left: 18px;
+}
+.nav-bar .cell {
+    float: right;
+    width: 44px;
+    height: 40px;
+    position: relative;
+    box-sizing: border-box;
+    margin-right: 5px;
+}
+.nav-bar .cell .nav-icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -11px;
+    margin-top: -11px;
+}
+.bili-icon-history {
+    background-position: -22px -206px;
+    width: 22px;
+    height: 22px;
+}
+.bili-icon-search {
+    background-position: 0 -206px;
+    width: 22px;
+    height: 22px;
+}
+/* 主内容 */
+.wrapper {
+    position: relative;
+    overflow-x: hidden;
+}
+.flex-bar {
+    padding: 0 0.5rem;
+    height: 45px;
+    line-height: 45px;
+    width: 100%;
+    position: relative;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+.flex-bar .flex-bar-in {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  flex-direction: row;
+}
+.flex-bar .flex-bar-in .on {
+    border-bottom: 4px solid #de698c;
+}
+.flex-bar .flex-bar-in .li {
+    width: 18%;
+    height: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0 5px;
+}
+.flex-bar .flex-bar-in .a {
+    display: block;
+    color: #444;
+}
+.slider-wrapper {
+    position: relative;
+    width: 100%;
+    height: 175px;
+    overflow: hidden;
+    margin-bottom: 12px;
+}
+.slide-image, swiper {
+  width: 100%;
+  height: 175px;
+}
+.row-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 12px;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+.row-container .header {
+    display: block;
+    height: 44px;
+    line-height: 44px;
+    padding: 0 12px;
+}
+.row-container .header .left {
+    float: left;
+    color: #444;
+    font-size: 14px;
+    position: relative;
+    padding-left: 25px;
+}
+.bilibili-index-sprite {
+    display: inline-block;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 12px;
+    left: 0;
+}
+.bilibili-index-hot {
+    background-position: -5px -215px;
+    width: 20px;
+    height: 20px;
+}
+.row-container .header .right {
+    float: right;
+    font-size: 14px;
+    color: #999;
+    position: relative;
+    padding-right: 25px;
+}
+.row-container .header .hot {
+    font-size: 13px;
+    color: #ffb30f;
+    padding: 0 0 0 25px;
+}
+.bilibili-index-ranking {
+    background-position: -5px -65px;
+    width: 20px;
+    height: 20px;
+}
+.row-container .content-wrapper {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    padding: 0 6px;
+    box-sizing: border-box;    
+}
+.row-container img {
+    vertical-align: top;
+}
+.row-container .content-list {
+    width: 50%;
+    display: inline-block;
+    position: relative;
+    padding: 0 6px 24px;
+    vertical-align: top;
+    box-sizing: border-box;
+}
+.row-container .content-list .item {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;  
+}
+.row-container .content-list .item .top {
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 0;
+    padding-bottom: 63%;
+    box-sizing: border-box;  
+}
+.row-container .content-list .info {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding-top: 5px;
+    box-sizing: border-box;  
+}
+.row-container .content-list .item .cover-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transition: opacity .3s;
+    transition: opacity .3s;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 5px;
+    box-sizing: border-box;  
+}
+.row-container .content-list .info .title {
+    width: 100%;
+    max-height: 36px;
+    overflow: hidden;
+    color: #444;
+    font-size: 13px;
+    box-sizing: border-box;  
+    margin-bottom: 4px;
+}
+.row-container .left {
+    float: left;
+    box-sizing: border-box;  
+}
+.row-container .content-list .info .cell {
+    position: relative;
+    width: 50%;
+    font-size: 13px;
+    color: #999;
+    padding-left: 18px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+.bilibili-index-play {
+    background-position: -5px -425px;
+    width: 15px;
+    height: 11px;
+    top: 50%;
+    margin-top: -6px;
+}
+.bilibili-index-danmu {
+    background-position: -5px -446px;
+    width: 15px;
+    height: 11px;
+    top: 50%;
+    margin-top: -6px;
+}
+.bilibili-index-live {
+    background-position: -5px -155px;
+    width: 20px;
+    height: 20px;
+}
+.bilibili-index-arrow {
+    background-position: -5px -395px;
+    width: 20px;
+    height: 20px;
+    right: 0;
+    left: auto;
+}
+.row-container .content-list .info .avatar {
+    position: relative;
+    width: 42px;
+    height: 42px;
+    border-radius: 21px;
+    border: 2px solid #fff;
+    top: -26px;
+    left: 7px;
+    z-index: 10;
+    box-sizing: border-box;
+}
+.row-container .content-list .info .avatar image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+.row-container .content-list .info .user {
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 100%;
+    padding-left: 56px;
+    box-sizing: border-box;
+}
+.row-container .text-overflow {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.row-container .content-list .info .name {
+    font-size: 13px;
+    color: #444;
+    line-height: 44rpx;
+}
+.row-container .content-list .info .desp {
+    font-size: 13px;
+    color: #999;
+    padding-top: 2px;
+}
+.row-container .content-list .info .online {
+    position: absolute;
+    top: 25px;
+    width: 48px;
+    padding: 0 1px;
+    color: #fff;
+    background-color: #ccc;
+    border-radius: 6px;
+    text-align: center;
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+}
+.bilibili-index-bangumi {
+    background-position: -5px -365px;
+    width: 20px;
+    height: 20px;
+}
+.row-container .bangumi-list {
+    width: 33.333333%;
+}
+.row-container .bangumi-list .top {
+    padding-top: 75%;
+}
+.row-container .content-list .info .bangumi-title {
+    text-align: center;
+    font-size: 14px;
+    line-height: 46rpx;
+    color: #444;
+}
+.row-container .content-list .info .bangumi-page {
+    text-align: center;
+    font-size: 13px;
+    color: #de698c;
+}
+.footer {
+    padding: 0 10px;
+    font-size: 26rpx;
+    line-height: 55rpx;
+    text-align: center;
+    clear: both;
+    color: #aaa;
+}

@@ -1,0 +1,51 @@
+@import "../../component/filmList/filmList.wxss";
+.message-area {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+}
+.message {
+    box-sizing: border-box;
+    position: fixed;
+    z-index: 999;
+    left: 50%;
+    top: 50%;
+    width: 200rpx;
+    height: 200rpx;
+    padding: 30rpx;
+    margin-top: -100rpx;
+    margin-left: -100rpx;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 16rpx;
+    background-color: rgba(0, 0, 0, .75);
+    color: #fff;
+    animation: fadeIn .3s;
+}
+
+.message-icon {
+    height: 100rpx;
+    width: 100rpx;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100rpx;
+}
+
+.message-icon-success {
+    background-image: url('http://139.196.214.241:8093/cdn/images/weui-success-icon.png');
+}
+
+.message-icon-warning {
+    background-image: url('http://139.196.214.241:8093/cdn/images/weui-warning-icon.png');
+}
+
+.message-icon-info {
+    background-image: url('http://139.196.214.241:8093/cdn/images/weui-info-icon.png');
+}
+
+.message-content {
+    margin-top: 15rpx;
+    text-align: center;
+}

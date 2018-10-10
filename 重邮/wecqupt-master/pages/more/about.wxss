@@ -1,0 +1,150 @@
+/**about.wxss**/
+.container{
+    background: #f4f4f4;
+    padding: 0;
+    font-size: 11pt;
+}
+.header{
+    position: relative;
+    width: 100%;
+    height: 400rpx;
+    text-align: center;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header .title{
+    position: relative;
+    width: 600rpx;
+    height: 200rpx;
+    z-index: 3;
+    opacity: .95;
+}
+.black-cover{
+    position: absolute;
+    z-index: 2;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #888;
+    opacity: .18;
+}
+.logo{
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 750rpx;
+    border-radius: 10rpx;
+    margin-top: -175rpx;
+    filter: blur(15px);
+}
+.content{
+    flex: 1;
+}
+.version{
+    height: 100rpx;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    padding: 0 45rpx;
+    box-sizing: border-box;
+    font-size: 13pt;
+    color: #666;
+    border-bottom: 1px #e5e5e5 solid;
+}
+.version-title{
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+.title-name{
+    padding-right: 10rpx;
+}
+.version-text{
+    font-size: 10pt;
+    line-height: 100%;
+    color: #7acfa6;
+    border: 1px solid #7acfa6;
+    padding: 5rpx 10rpx;
+    border-radius: 5rpx;
+    margin-left: 10rpx;
+    text-align: center;
+}
+.version-log-link{
+    font-size: 12pt;
+    color: #7acfa6;
+}
+.version-log-link:active{
+    opacity: .8;
+}
+.log-list{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+.describe{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20rpx 45rpx 30rpx;
+    display: flex;
+    flex-flow: column nowrap;
+    color: #545454;
+    line-height: 175%;
+    background: #fff;
+    margin-top: 15rpx;
+    border-top: 1px #e5e5e5 solid;
+    border-bottom: 1px #e5e5e5 solid;
+}
+.desc-title{
+    display: flex;
+    font-size: 13pt;
+    line-height: 200%;
+    margin-bottom: 15rpx;
+}
+.desc-v{
+    flex: 1;
+}
+.desc-time{
+    font-size: 11pt;
+    color: #888;
+}
+.desc-list{
+    display: flex;
+    flex-direction: column;
+    border-left: 8rpx solid #ddd;
+    padding-left: 15rpx;
+    color: #777;
+    margin-bottom: 15rpx;
+    font-size: 10pt;
+}
+.desc-content{
+    padding-bottom: 15rpx;
+}
+.footer{
+    display: flex;
+    flex-direction: column;
+    font-size: 9pt;
+    line-height: 150%;
+    text-align: center;
+    padding: 100rpx 0 15rpx;
+    color: #c2c2c2;
+}
+.footer-lanshan{
+    height: 10pt;
+    line-height: 10pt;
+    font-size: 10pt;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    margin-bottom: 8rpx;
+}
+.footer-lanshan image{
+    width: 10pt;
+    height: 10pt;
+    margin-right: 5rpx;
+}

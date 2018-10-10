@@ -1,0 +1,10 @@
+<view class="content">
+    <image class="main-bg" src="../assets/img/bg2.jpg"></image>
+    <view class="city">广州市</view>
+    <view class="life-container">
+        <import src="../template/lifetpl.wxml"/>
+        <block wx:for="{{life}}">
+            <template is="life-item" data="{{item}}"/>
+        </block>
+    </view>
+</view>

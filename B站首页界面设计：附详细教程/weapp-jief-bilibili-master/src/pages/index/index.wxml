@@ -1,0 +1,89 @@
+<!-- 导入Item模板 -->
+<import src="../public/item.wxml"/>
+
+<view class="wrapper">
+  <!-- 顶部导航 begin -->
+  <include src="../public/header.wxml"/>
+  <!-- 顶部导航 end -->
+
+  <!-- 滚动广告 begin -->
+  <view class="slider-wrapper">
+    <swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{imgUrls}}" wx:key="*this">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image"/>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <!-- 滚动广告 end -->
+
+  <!-- 热门推荐 begin -->
+  <view class="row-container">
+    <navigator class="header">
+      <view class="left">
+        <view class="bilibili-index-sprite bilibili-index-hot"></view>
+        <text>热门推荐</text>
+      </view>
+      <view class="right hot">
+        <view class="bilibili-index-sprite bilibili-index-ranking"></view>
+        <text>排行榜</text>
+      </view>
+    </navigator>
+    <view class="content-wrapper">
+      <block wx:for="{{hotList}}" wx:key="avid">
+        <!-- 使用热门推荐模板，传入当前循环对象item -->
+        <template is="jiefItem1" data="{{...item}}"/>
+      </block>
+    </view>
+  </view>
+  <!-- 热门推荐 end -->
+
+  <!-- 正在直播 begin -->
+  <view class="row-container">
+    <navigator class="header">
+      <view class="left">
+        <view class="bilibili-index-sprite bilibili-index-live"></view>
+        <text>正在直播</text>
+      </view>
+      <view class="right">
+        <text>查看更多直播</text>
+        <view class="bilibili-index-sprite bilibili-index-arrow"></view>
+      </view>
+    </navigator>
+    <view class="content-wrapper">
+      <block wx:for="{{liveList}}" wx:key="avid">
+        <!-- 使用正在直播模板，传入当前循环对象item -->
+        <template is="jiefItem2" data="{{...item}}"/>
+      </block>
+    </view>
+  </view>
+  <!-- 正在直播 end -->
+
+  <!-- 番剧更新 begin -->
+  <view class="row-container">
+    <navigator class="header">
+      <view class="left">
+        <view class="bilibili-index-sprite bilibili-index-bangumi"></view>
+        <text>番剧更新</text>
+      </view>
+      <view class="right">
+        <text>查看更多番剧</text>
+        <view class="bilibili-index-sprite bilibili-index-arrow"></view>
+      </view>
+    </navigator>
+    <view class="content-wrapper">
+      <block wx:for="{{bangumiList}}" wx:key="avid">
+        <!-- 使用正在直播模板，传入当前循环对象item -->
+        <template is="jiefItem3" data="{{...item}}"/>
+      </block>
+    </view>
+  </view>
+  <!-- 番剧更新 end -->
+
+  <!-- 底部版权 begin -->
+  <include src="../public/footer.wxml"/>
+  <!-- 底部版权 end -->
+
+</view>

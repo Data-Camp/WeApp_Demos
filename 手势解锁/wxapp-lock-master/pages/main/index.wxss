@@ -1,0 +1,43 @@
+.lock-box{
+    width:100vw;
+    height: 100vh;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0
+}
+.lock-cav{
+    position: absolute;
+    top: 200rpx;
+    left: 32rpx;
+    z-index: 5
+}
+.lock-title{
+    position: absolute;
+    top: 80rpx;
+    left: 122rpx;
+    display:block;
+    font-size: 28rpx;
+    color: #10AEFF;
+    height: 40rpx;
+    line-height: 40rpx 
+}
+.lock-title.error{
+    color: #e64340
+}
+.lock-title.succ{
+    color: #09bb07
+}
+.lock-reset{
+    position: absolute;
+    top: 80rpx;
+    right: 122rpx; 
+    color:#10AEFF; 
+    display:block;
+    font-size: 36rpx;
+    height: 40rpx;
+    line-height: 40rpx 
+}
+.lock-reset:active{
+    opacity: 0.8
+}

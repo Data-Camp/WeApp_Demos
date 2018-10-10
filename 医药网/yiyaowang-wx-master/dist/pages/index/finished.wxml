@@ -1,0 +1,9 @@
+<view class="todo-list">
+  <view class="list">
+    <block wx:for="{{todos}}" wx:key="__k" wx:for-index="_k1" wx:for-item="_v1"><view class="list-item todos-list-item flex-row todos-flex-row items-center todos-items-center todo todos-todo {{_v1.state.className}} todos-{{_v1.state.className}}">
+  <icon class="todo-icon todos-todo-icon" type="{{_v1.state.icon}}" size="20" color="#999" catchtap="_dispatch" data-catchtap="handleFinish" data-path="todos.{{_k1}}"/>
+  <view class="block todos-block flex todos-flex todo-title todos-todo-title {{_v1.state.className}}-title todos-{{_v1.state.className}}-title"> {{_v1.props.title}} </view>
+  <view class="btn todos-btn btn-small todos-btn-small {{_v1.props.finished?'btn-gray-hollow':'btn-danger'}} todos-{{_v1.props.finished?'btn-gray-hollow':'btn-danger'}}" catchtap="_dispatch" data-catchtap="handleRemove" data-path="todos.{{_k1}}">删除</view>
+</view></block>
+  </view>
+</view>

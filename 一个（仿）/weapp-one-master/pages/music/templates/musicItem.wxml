@@ -1,0 +1,34 @@
+<template name="music-item">
+  <scroll-view class="music" scroll-y="true">
+    <view class="music-container">
+      <view class="music-cover">
+        <image class="music-cover-image" src="{{item.cover}}" mode="aspectFill"></image>
+      </view>
+      <view class="music-control">
+        <view class="music-author">
+          <image class="music-author-avatar" src="{{item.author.web_url}}" mode="aspectFill"></image>
+          <view class="music-author-username">
+            <text>{{item.author.user_name}}</text>
+          </view>
+          <view class="music-author-desc">
+            <text>{{item.author.desc}}</text>
+          </view>
+        </view>
+        <view class="music-play" bindtap="togglePlay">
+          <image class="music-play-control" src="{{item.playImg}}" data-id="{{item.id}}"></image>
+        </view>
+        <view class="music-title">
+          <text>{{item.title}}</text>
+        </view>
+        <view class="music-maketime">
+          <text>{{item.maketime}}</text>
+        </view>
+      </view>
+      <view class="music-content">
+        <include wx:if="{{item.contentType === 'story'}}" src="../includes/story.wxml"/>
+        <include wx:if="{{item.contentType === 'lyric'}}" src="../includes/lyric.wxml"/>
+        <include wx:if="{{item.contentType === 'about'}}" src="../includes/about.wxml"/>
+      </view>
+    </view>
+  </scroll-view>
+</template>

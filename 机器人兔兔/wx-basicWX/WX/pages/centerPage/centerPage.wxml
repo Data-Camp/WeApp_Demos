@@ -1,0 +1,19 @@
+<view class="container wrap">
+    <view class="menu" bindtap="actionSheetChange"> </view>
+    <text font-size="14px;">{{userInfo.nickName}}</text> welcom to here.
+     <view class="textBox"><text>我是机器人兔兔</text></view>
+    <view class="btnBox">
+       
+       
+        <button  bindtap="chatWithMe" size="mini" type="primary" plain="true">跟我聊天吧</button>
+    </view>
+    <action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetChange">
+        <block wx:key="1" wx:for="{{actionSheetItems}}">
+            <action-sheet-item  wx:key="{{item.name}}" class="item" bindtap="bindItemTap" data-navigator="{{item.linkTo}}">{{item.name}}</action-sheet-item>
+        </block>
+        <action-sheet-cancel class="cancel">取消</action-sheet-cancel>
+    </action-sheet>
+    <!--<view>//开发工具暂不支持map
+        <map longitude="113.324520" latitude="23.099994" markers="{{markers}}" covers="{{covers}}" style="width: 375px; height: 200px;"></map>
+    </view>-->
+</view>

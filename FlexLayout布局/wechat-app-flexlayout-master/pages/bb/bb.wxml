@@ -1,0 +1,78 @@
+<view class="menu">
+    <scroll-view scroll-x="true" class="top-nav">
+        <view bindtap="toNew" class="top-btn {{new}}">上新</view>
+        <view bindtap="toGood" class="top-btn {{good}}">好货</view>
+        <view bindtap="toChild" class="top-btn {{child}}">童装</view>
+        <view bindtap="toMom" class="top-btn {{mom}}">母婴</view>
+        <view bindtap="toGirl" class="top-btn {{girl}}">女装</view>
+        <view bindtap="toFood" class="top-btn {{food}}">食品</view>
+        <view bindtap="toBeauti" class="top-btn {{beauti}}">丽人</view>
+        <view bindtap="toHome" class="top-btn {{home}}">居家</view>
+    </scroll-view>
+</view>
+<scroll-view scroll-y="true" style="height: 600px;" class="container">
+    <loading hidden="{{hidden}}">
+        加载中...
+    </loading>
+    <view class="first line">
+        <image class="first-img" mode="scaleToFill" src="http://b2.hucdn.com//upload/hmp/1609/29/79597670154837_750x300.jpg"></image>
+    </view>
+    <view class="second line">
+        <view class="sl-col">
+             <image class="second-img" mode="scaleToFill" src="http://b2.hucdn.com//upload/hmp/1609/14/23080112334484_120x80.png!100q50.webp"></image>
+             <text>工厂直供</text>
+        </view>
+        <view class="sl-col">
+            <image class="second-img" mode="scaleToFill" src="http://b2.hucdn.com//upload/hmp/1608/30/26071831380311_120x80.png!100q50.webp"></image>
+            <text>免费试用</text>
+        </view>
+        <view class="sl-col">
+             <image class="second-img" mode="scaleToFill" src="http://b2.hucdn.com//upload/hmp/1609/20/74848780300311_120x80.png!100q50.webp"></image>
+            <text>贝贝众筹</text>
+        </view>
+        <view class="sl-col">
+             <image class="second-img" mode="scaleToFill" src="http://b2.hucdn.com//upload/hmp/1608/30/26177615590311_120x80.png!100q50.webp"></image>
+             <text>签到领钱</text>
+        </view>
+    </view>
+    <view class="line toutiao">
+        <image class="toutiao-img" mode="scaleToFill" src="http://h0.hucdn.com/images/201639/8a92f3b3c7f9d255_132x122.png"></image>
+        <view class="two-line-text">
+            <text class="text-center txt">儿童身高, 体重发育标准! 快来看看 ...</text>
+            <text class="text-center txt">一件衣服值不值得买, 重要看这五点 ...</text>
+        </view>
+    </view>
+    <view class="line forth">
+        <view class="left">
+            <image class="forth-img" mode="scaleToFill" src="http://b2.hucdn.com//upload/hmp/1609/29/54731005601173_326x410.jpg!320q50.webp"></image>
+        </view>
+        <view class="right">
+            <view class="top">
+                <view class="cl4">
+                    <image class="cl4-img" mode="scaleToFill" src="http://b2.hucdn.com//upload/hmp/1607/15/48459914315915_212x204.jpg!200q50.webp"></image>
+                </view>
+                <view class="cl4">
+                    <image class="cl4-img" mode="scaleToFill" src="http://b2.hucdn.com//upload/hmp/1609/22/11023966677968_212x204.jpg!200q50.webp"></image>
+                </view>
+            </view>
+            <view class="bottom">
+                <view class="cl4">
+                    <image class="cl4-img" mode="scaleToFill" src="http://b2.hucdn.com//upload/hmp/1609/28/67263117394059_212x204.jpg!200q50.webp"></image>
+                </view>
+                <view class="cl4">
+                    <image class="cl4-img" mode="scaleToFill" src="http://b2.hucdn.com//upload/hmp/1609/28/63148107355039_212x204.jpg!200q50.webp"></image>
+                </view>
+            </view>
+        </view>
+    </view>
+     <view class="line one-img">
+        <text class="alone-line-text">今日特卖</text>
+        <image class="poster" mode="scaleToFill" src="http://b1.hucdn.com/upload/show/1609/22/07024560401727_750x350.jpg!750q50.webp"></image>
+    </view>
+    <view class="line one-img">
+        <image class="poster" mode="scaleToFill" src="http://b1.hucdn.com/upload/show/1609/23/03493200704091_750x350.jpg!750q50.webp"></image>
+    </view>
+    <view class="line one-img">
+        <image class="poster" mode="scaleToFill" src="http://b1.hucdn.com/upload/show/1609/26/89758650701601_750x350.jpg!750q50.webp"></image>
+    </view>
+</scroll-view>

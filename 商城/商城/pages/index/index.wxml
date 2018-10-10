@@ -1,0 +1,58 @@
+<view>
+  <swiper indicator-dots="{{indicatorDots}}" 
+    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<view class="category">
+  <view class="category_item" wx:for="{{iconArray}}">
+    <view class="category_item_wrap">
+      <view class="icon_wrap">
+        <image src="{{item.iconUrl}}" class="index_icon"></image>
+      </view>
+      <view class="category_item_text">
+        <text>{{item.iconText}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+<view>
+  <view class="singal_item" wx:for="{{itemArray}}">
+    <view class="singal_item_title">
+      <text>{{item.itemText}}</text>
+    </view>
+    <view class="singal_item_image">
+      <image bindload="cusImageLoad" src="{{item.itemUrl}}" style="width: {{imageWidth}};height: {{imageHeight}}"></image>
+    </view>
+  </view>
+</view>
+<view>
+  <view class="commen_title">
+    <text>猜你喜欢</text>
+  </view>
+  <view class="single_goods">
+    <view class="single_image_wrap">
+      <image src="../../image/zhutu.jpg" class="single_goods_image"></image>
+    </view>
+    <view class="single_goods_infor">
+      <navigator url="../spdetail/spdetail">
+        <view class="single_goods_name">
+          <text>木村耀司登山旅行大学生户外情侣双肩背包外带小背包</text>
+        </view>
+        <view class="single_goods_address">
+          <text>诸暨</text>
+        </view>
+        <view class="single_goods_price">
+          <text>¥169.00</text>
+          <view class="carImgWrap">
+            <image src="../../image/car.png" class="carImg"></image>
+          </view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+</view>

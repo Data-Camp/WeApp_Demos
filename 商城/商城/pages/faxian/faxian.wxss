@@ -1,0 +1,52 @@
+.active_item_title{
+    padding: 15px;
+    background-color: #FFF;
+}
+.active_title_wrap {
+    text-align: center;
+    padding-bottom: 2px;
+    border-bottom: 1px solid #000;
+    width: 80px;
+    margin: 0 auto;
+}
+.active_title {
+    display: inline-block;
+    font-size: 14px;
+    padding: 0 10px;
+    padding-bottom: 5px;
+    border-bottom: 3px solid #000;
+    font-weight: 700;
+}
+.active_goods_name {
+    background-color: #FFF;
+    padding: 7px 10px;
+    font-size: 14px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+.active_item_infor {
+    background-color: #FFF;
+    font-size: 14px;
+    padding: 0 10px;
+    padding-bottom: 10px;
+}
+.active_new_price {
+    color: #FF0000;
+}
+.active_old_price {
+    font-size: 12px;
+    text-decoration: line-through;
+    margin-left: 5px;
+}
+.active_time {
+    float: right;
+    font-size: 12px;
+}
+.active_block {
+    margin-bottom: 10px;
+}
+.active_group_price {
+    font-size: 12px;
+    color: #FF0000;
+}

@@ -1,0 +1,10 @@
+.title{
+  width: 90%;
+  font-size: 50rpx;
+  font-weight: 700;
+  margin-bottom:50rpx;
+}
+.summary{
+  width: 90%;
+  margin-top: 20px
+}

@@ -1,0 +1,105 @@
+<import src="../component/toast.wxml"/>
+
+<scroll-view scroll-y="false" class="container">
+<!--白色背景区域-->
+
+  <template is="warn1" data="{{ toast1 }}"/>
+  <template is="warn2" data="{{ toast2 }}"/>
+
+  <view class="wrap">
+
+  <!--按钮切换-->
+    <view class="btn" bindtap="changeBtn">
+      <view class="{{currentIndex==0?'active':''}}" data-index="0">单程</view>
+  	  <view class="{{currentIndex==1?'active':''}}" data-index="1">往返</view>
+    </view>
+
+    <!--城市选择-->
+    <view class="chooseCity pd-70">
+  		<view class="citySelect">
+  			<view class="startCity" bindtap="selectCity" data-type="1">{{startCity}}</view>
+  			<view class="citySelect_img">
+          <view catchtap="rotate_img" animation="{{animation}}">
+            <image class="changeCity_bg" src="/images/changeCity_bg.png"></image>
+          </view>
+  				<image class="samll_plane" src="/images/samll_plane.png"></image>
+  			</view>
+  			<view class="endCity" bindtap="selectCity" data-type="2">{{endCity}}</view>
+  		</view>
+
+      <view class="chooseDate">
+        <block>
+          <picker mode="date" value="{{FSdate.currentday}}" start="{{FSdate.startday}}" bindchange="bingDateChange" data-type='1' class="pickerLine">
+            <view>
+              <text class="date">{{FSdate.date}}</text>
+              <text class="week">{{FSdate.week}}出发</text>
+            </view>
+          </picker>
+        </block>
+        <block wx:if="{{currentIndex==1}}">
+          <picker mode="date" value="{{FEdate.currentday}}" start="{{FEdate.startday}}" bindchange="bingDateChange" data-type='2' class="pickerLine leftPicker">
+            <view class="endDate">
+              <text class="date">{{FEdate.date}}</text>
+              <text class="week">{{FEdate.week}}返回</text>
+            </view>
+          </picker>
+        </block>
+      </view>
+    </view>
+
+    <view class="title">酒店</view>
+
+    <view class="chooseCity pd-70 pdt-0">
+  		<view class="citySelect">
+  			<view class="hotelCity" bindtap="selectCity" data-type="3">{{hotelCity}}</view>
+  		</view>
+
+      <view class="chooseDate">
+        <block>
+          <picker mode="date" value="{{HSdate.currentday}}" start="{{HSdate.startday}}" bindchange="bingDateChange" data-type='3'>
+            <view class="startDate">
+              <text class="date">{{HSdate.date}}</text>
+              <text class="week">{{HSdate.week}}入住</text>
+            </view>
+          </picker>
+        </block>
+        <block>
+          <picker mode="date" value="{{HEdate.currentday}}" start="{{HEdate.startday}}" bindchange="bingDateChange" data-type='4'>
+            <view class="endDate">
+              <text class="date">{{HEdate.date}}</text>
+              <text class="week">{{HEdate.week}}离店</text>
+            </view>
+          </picker>
+        </block>
+      </view>
+    </view>
+
+    <view class="title">人数</view>
+
+    <view class="person">
+      <view class="personNum">
+        <view class="text">成人</view>
+        <view class="outer">
+          <view class="minus" bindtap="minusAdultNum">—</view>
+          <view class="num">{{adultNum}}</view>
+          <view class="plus" bindtap="plusAdultNum">+</view>
+        </view>
+      </view>
+
+      <view class="personNum ml-30">
+        <view class="text">儿童</view>
+        <view class="outer">
+          <view class="minus" bindtap="minusChildNum">—</view>
+          <view class="num">{{childNum}}</view>
+          <view class="plus" bindtap="plusChildNum">+</view>
+        </view>
+      </view>
+
+      <view class="remind" bindtap="alertWarn">
+        <image src="/images/tishi.png"></image>
+      </view>
+    </view>
+
+    <button class="sureBtn" catchtap="searchProduct">确定</button>
+  </view>
+</scroll-view>

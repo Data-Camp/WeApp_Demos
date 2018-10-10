@@ -1,0 +1,179 @@
+<!--index.wxml-->
+<view class="container">
+  <!--功能导航-->
+  <view class="main-core">
+    <block wx:for="{{core}}" wx:key="id">
+      <navigator wx:if="{{remind !== '未绑定' && !item.disabled && (!user.teacher || !item.teacher_disabled) }}" class="main-core-item" url="{{'/pages/core/'+item.id+'/'+item.id}}">
+        <image class="core-item-icon" src="/images/core/{{item.id}}.png"></image>
+        <text class="core-item-name">{{item.name}}</text>
+      </navigator>
+      <view wx:else class="main-core-item disabled" bindtap="disabled_item">
+        <image class="core-item-icon" src="/images/core/{{item.id}}@disabled.png"></image>
+        <text class="core-item-name">{{item.name}}</text>
+      </view>
+    </block>
+    <view class="fix_tip {{disabledItemTap?'active':''}}">
+        <text wx:if="{{remind == '未绑定'}}">请先绑定帐号</text>
+        <text wx:else>该服务不可用</text>
+    </view>
+  </view>
+  <view wx:if="{{remind}}" class="remind-box">
+    <image wx:if="{{remind == '加载中'}}" class="remind-img" src="/images/index/loading.gif"></image>
+    <block wx:else>
+      <image class="remind-img" src="/images/index/nothing.png"></image>
+      <text class="remind-text">{{remind}}</text>
+      <navigator wx:if="{{remind == '未绑定'}}" url="/pages/more/login" class="remind-btn">前往绑定</navigator>
+    </block>
+  </view>
+  <!--卡片列表-->
+  <view wx:else class="main-card">
+  
+    <!--今日课表-->
+    <view class="main-card-item" id="kb" wx:if="{{card.kb.show}}">
+      <navigator url="/pages/core/kb/kb">
+        <view class="card-item-hd">
+          <image class="card-item-icon" src="/images/core/kb.png"></image>
+          <text class="card-item-name">今日课表</text>
+        </view>
+        <view wx:if="{{card.kb.nothing}}" class="card-item-bd kb-nothing">
+          <text>今天居然没有课~😆</text>
+        </view>
+        <view wx:else class="card-item-bd">
+          <view class="kb-item" wx:for="{{card.kb.data}}" wx:key="when">
+            <view class="kb-item-left">
+              <text class="kb-item-what">{{item.what}}</text>
+              <text class="kb-item-when">{{item.when}}</text>
+            </view>
+            <text class="kb-item-where">{{item.where}}</text>
+          </view>
+        </view>
+        <view class="kb-open">
+          <text>查看完整课表</text>
+        </view>
+      </navigator>
+    </view>
+
+    <!--一卡通-->
+    <view class="main-card-item" id="ykt" wx-if="{{card.ykt.show}}">
+      <navigator url="/pages/core/ykt/ykt">
+        <view class="card-item-hd">
+          <image class="card-item-icon" src="/images/core/ykt.png"></image>
+          <text class="card-item-name">一卡通</text>
+        </view>
+        <view class="card-item-bd">
+          <view class="card-info-hd">
+            <view class="card-info-left">
+              <text class="ykt-title">余额：</text>
+            </view>
+            <view class="card-info-right">
+              <view>截至时间：{{card.ykt.data.last_time}}</view>
+            </view>
+          </view>
+          <view class="ykt-balance">
+            <text class="ykt-balance-value">{{card.ykt.data.balance}}</text>
+            <text class="ykt-balance-text">元</text>
+          </view>
+          <block wx:if="{{card.ykt.data.cost_status}}">
+            <text class="ykt-title">今日消费：</text>
+            <view class="ykt-cost">
+              <block wx:for="{{card.ykt.data.today_cost.value}}" wx:key="*this">
+                <text class="ykt-cost-value">{{item}}</text>
+                <text class="ykt-cost-text" wx:if="{{ index != card.ykt.data.today_cost.value.length - 1}}">+</text>
+              </block>
+              <text class="ykt-cost-text">=</text>
+              <text class="ykt-cost-total">{{card.ykt.data.today_cost.total}}</text>
+              <text class="ykt-cost-text">元</text>
+            </view>
+          </block>
+        </view>
+      </navigator>
+    </view>
+    
+    <!--借阅信息-->
+    <view class="main-card-item" id="jy" wx:if="{{card.jy.show}}">
+      <navigator url="/pages/core/jy/jy">
+        <view class="card-item-hd">
+          <image class="card-item-icon" src="/images/core/jy.png"></image>
+          <text class="card-item-name">借阅信息</text>
+        </view>
+        <view class="card-item-bd">
+          <view class="card-info-hd">
+            <view class="card-info-left">
+              <text class="card-info-name">{{user.we.info.name}}</text>
+              <text class="card-info-number">{{user.we.info.id}}</text>
+            </view>
+            <view class="card-info-right">
+              <text>当前借阅：{{card.jy.data.books_num}}</text>
+              <text>欠费金额：{{card.jy.data.dbet}}</text>
+            </view>
+          </view>
+          <view class="jy-list">
+            <view class="jy-item" wx:for="{{card.jy.data.book_list}}" wx:key="book_name">
+              <view class="jy-book">
+                <view class="jy-pickup-time">
+                  <text class="jy-pickup-time-value">{{item.jsrq}}</text>
+                  <text class="jy-pickup-time-text">借</text>
+                </view>
+                <text class="jy-book-name">{{item.book}}</text>
+              </view>
+              <view class="jy-return-time">
+                <text class="jy-return-time-value">{{item.yhrq}}</text>
+                <text class="jy-return-time-text">还</text>
+              </view>
+              <view class="jy-timing">
+                <text class="jy-timing-text" wx:if="{{item.timing>=0}}">还有</text>
+                <text class="jy-timing-text" wx:else>已超过</text>
+                <text class="jy-timing-value">{{item.timing>=0?item.timing:-item.timing}}</text>
+                <text class="jy-timing-text">天</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </navigator>
+    </view>
+
+    <!--水电费-->
+    <view class="main-card-item" id="sdf" wx:if="{{card.sdf.show}}">
+      <navigator url="/pages/core/sdf/sdf">
+        <view class="card-item-hd">
+          <image class="card-item-icon" src="/images/core/sdf.png"></image>
+          <text class="card-item-name">电费查询</text>
+        </view>
+        <view class="card-item-bd">
+          <view class="card-info-hd">
+            <view class="card-info-left">
+              <text class="card-info-name">{{card.sdf.data.room}}</text>
+            </view>
+            <view class="card-info-right">
+              <view>截至时间：{{card.sdf.data.record_time}}</view>
+            </view>
+          </view>
+          <text class="sdf-hd">当月用电：</text>
+          <view class="sdf-bd">
+            <view class="sdf-key">
+              <text class="sdf-value">{{card.sdf.data.spend}}</text>
+              <text class="sdf-text">度</text>
+            </view>
+            <view class="sdf-key" wx:if="{{card.sdf.data.cost<=0}}">
+              <text class="sdf-text">剩余</text>
+              <text class="sdf-value">{{-card.sdf.data.cost}}</text>
+              <text class="sdf-text">元</text>
+            </view>
+            <view class="sdf-key" wx:else>
+              <text class="sdf-text">用超</text>
+              <text class="sdf-value">{{card.sdf.data.cost}}</text>
+              <text class="sdf-text">元</text>
+            </view>
+          </view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+
+  <view class="main-ending">
+    <view class="main-ending-line"></view>
+    <view class="main-ending-text">我是一个乖巧的结尾</view>
+    <view class="main-ending-line"></view>
+  </view>
+
+</view>

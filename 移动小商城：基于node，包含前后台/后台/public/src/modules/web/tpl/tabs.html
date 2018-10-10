@@ -1,0 +1,14 @@
+<ion-tabs class="tabs-light tabs-icon-top" ng-class="{'tabs-hide': tabsHidden}">
+	
+	<ion-tab title="主页" icon-on="ion-ios-list" icon-off="ion-ios-list-outline" ui-sref="web.index.home">
+		<ion-nav-view name="tab-home" nav-transition="ios"></ion-nav-view>
+	</ion-tab>
+
+	<ion-tab title="管理" icon-on="ion-ios-plus" icon-off="ion-ios-plus-outline" ng-click="app.selectModal.open()">
+		<ion-nav-view name="tab-admin" nav-transition="ios"></ion-nav-view>
+	</ion-tab>
+	
+	<ion-tab title="我的" icon-on="ion-ios-person" icon-off="ion-ios-person-outline" ui-sref="web.user.info">
+		<ion-nav-view name="tab-user" nav-transition="ios"></ion-nav-view>
+	</ion-tab>
+</ion-tabs>

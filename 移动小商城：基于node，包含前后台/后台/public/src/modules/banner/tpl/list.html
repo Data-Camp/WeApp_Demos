@@ -1,0 +1,22 @@
+<ion-view view-title="所有图片">
+	<ion-nav-buttons side="right">
+		<a class="button button-clear icon ion-ios-plus-empty" ui-sref="web.banner.add"></a>
+	</ion-nav-buttons>
+	<ion-content>
+		<ion-refresher pulling-icon="ion-arrow-down-c" pulling-text="下拉刷新" on-refresh="vm.doRefresh()">
+		</ion-refresher>
+		<ion-list class="avatar">
+			<ion-item ng-repeat="item in vm.banners.items" on-hold="vm.showSheet(item)">
+				<img class="icon-type" ng-src="{{ item.images[0].path }}" alt="" width="40">
+				<h2>{{ item.title }} <i class="icon ion-ios-eye-outline" ng-if="item.is_show"></i></h2>
+				<p>{{ item.remark }}</p>
+				<i class="badge text-black">{{ item.sort }}</i>
+				<ion-option-button class="button-calm icon ion-edit" ui-sref="web.banner.edit({id: item._id})"></ion-option-button>
+				<ion-option-button class="button-assertive icon ion-close" on-tap="vm.banners.delete({id: item._id})"></ion-option-button>
+			</ion-item>
+		</ion-list>
+		<ion-infinite-scroll ng-if="vm.banners.paginate.hasNext" on-infinite="vm.loadMore()">
+		</ion-infinite-scroll>
+		<prompt-message ng-if="!vm.banners.items.length" text="没有更多的数据了"></prompt-message>
+	</ion-content>
+</ion-view>

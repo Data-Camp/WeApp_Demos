@@ -1,0 +1,5 @@
+
+/*同名也无效*/
+.footTabBar{
+    display: flex;
+}

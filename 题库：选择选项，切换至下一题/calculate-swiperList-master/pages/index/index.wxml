@@ -1,0 +1,6 @@
+<!--index.wxml-->
+
+<import src="../common/movie-list.wxml"/>
+
+<loading hidden="{{!isLoading}}">加载中...</loading>
+<template wx:if="{{!isLoading}}" is="movie-lists" data="{{answers,layerlayer,swiper}}"/>

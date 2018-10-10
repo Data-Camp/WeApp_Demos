@@ -1,0 +1,24 @@
+<!--index.wxml-->
+<view class="container page-index">
+  <view class="search-form">
+    <input placeholder="输入要搜索的关键字" value="{{query}}" bindinput="bindKeyInput" auto-focus/>
+    <icon type="search" size="20"  catchtap="fetchBookData" />
+  </view>
+  
+  <view class="books-list">
+    <loading hidden="{{hidden}}">加载中...</loading>
+    <block wx:for="{{books}}">
+      <view class="books-item" id="{{item.ID}}" index="{{index}}" catchtap="redirectToDetail">
+        <image style="width: 80px;height:104px;background-color: #eeeeee;" aspectFit  src="{{item.Image}}"></image>
+        <view class="books-item-txt">
+          <view class="txt-title">
+            <text>{{item.Title}}</text>
+          </view>
+          <view class="txt-source">
+            <text>{{item.SubTitle}}</text>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

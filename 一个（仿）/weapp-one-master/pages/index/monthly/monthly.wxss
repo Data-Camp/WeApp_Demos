@@ -1,0 +1,51 @@
+.monthly {
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.vol-card {
+  width: calc(50% - 12px);
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ebebeb;
+}
+
+.vol-header {
+  width: 100%;
+  height: 300rpx;
+  position: relative;
+}
+
+.vol-cover {
+  width: 100%;
+  height: 300rpx;
+}
+
+.vol-data {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  padding: 3px 5px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 200;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.vol-makettime {
+  float: right;
+}
+
+.vol-desc {
+  padding: 5px 3px;
+}
+
+.vol-content {
+  font-size: 12px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}

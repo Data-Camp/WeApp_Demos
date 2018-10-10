@@ -1,0 +1,61 @@
+<!--home.wxml-->
+<view class="top-search" bindtap="searchtap" style="background:{{ scrollTop === 0 ?'-webkit-linear-gradient(top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0))' :( scrollTop<200 ? 'rgba(254, 72, 0,'+(scrollTop/400+0.3) +')' : 'rgba(254,72,0,0.8)')  }} ">
+		<view class="search-box">
+			<view class="search-input">
+        <icon type="search" size="12" />
+        <text>请输入搜索内容</text>
+      </view>
+		</view>
+</view>
+<scroll-view class="full-screen" scroll-y="true" bindscroll='scrollY'>
+  <view class="top-banner-wrap">
+    <import src="/templates/swiper/swiper.wxml"/>
+    <template is="swiper" data="{{...swiper}}"/>
+  </view>
+  <view class="sorts-wrap">
+    <view class="flex-wrap" wx:for="{{sortRows}}" wx:for-item="sortRow" wx:for-index="rowIndex">
+      <view class="flex-item" wx:for="{{sortRow}}" wx:for-item="sortItem" wx:for-index="sortIndex">
+        <navigator url="{{sortItem.url}}">
+          <image src="{{sortItem.image}}"></image>
+          <text>{{sortItem.title}}</text>
+        </navigator>
+      </view>
+    </view>
+  </view>
+  <view class="group-wrap">
+    <view class="group-item {{group.time<0 ? 'time-will' : (group.time== 0 ? 'time-end' : '') }}" 
+    wx:for='{{groups}}' wx:for-item="group" wx:for-index="groupIndex" bindtap="grouptap" data-id="{{group.teamBuyingId}}">
+      <view class="imgBox">
+        <view class="group-status">{{group.time>0 ? "正在拼" : (group.time<0 ? "即将开始" : "已结束")}}</view>
+        <view class="img-wrap">
+          <image class="group-img" src='{{group.teamBuyingImg}}'></image>
+        </view>
+        <view class="timeBox">
+          <block wx:if="{{group.time == 0}}"> 
+            已结束
+          </block>
+          <view wx:elif="{{group.time < 0}}">
+            未开始
+          </view>
+          <block wx:else>
+            <text class="time-tip">距结束</text>
+            <text class="hour time-item">{{group.timeObj && group.timeObj.hour[0]}}</text>
+            <text class="hour time-item">{{group.timeObj && group.timeObj.hour[1]}}</text>
+            <text>:</text>
+            <text class="min time-item">{{group.timeObj && group.timeObj.min[0]}}</text>
+            <text class="min time-item">{{group.timeObj && group.timeObj.min[1]}}</text>
+            <text>:</text>
+            <text class="sec time-item">{{group.timeObj && group.timeObj.sec[0]}}</text>
+            <text class="sec time-item">{{group.timeObj && group.timeObj.sec[1]}}</text>
+            <text>:</text>
+            <text class="minSec time-item">{{group.timeObj && group.timeObj.minSec}}</text>
+          </block>
+        </view>
+      </view>
+      <view class="group-des">
+        <view class="h4">【天天拼货团-秋衣秋裤专场】</view>
+        <view class="des">秋衣扎在秋裤里秋裤扎在袜子里这是对冬天最起码的尊重，但是首先你要有秋衣和秋裤。壹级采本期为您推荐37度恒温发热衣，秋衣秋裤纯棉系列，秋衣秋裤莫代尔系列，一定要看哦！</view>
+      </view>
+    </view>
+  </view>
+</scroll-view>

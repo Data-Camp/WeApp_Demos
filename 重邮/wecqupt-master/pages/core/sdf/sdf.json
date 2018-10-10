@@ -1,0 +1,6 @@
+{
+  "navigationBarBackgroundColor": "#ffcb63",
+  "navigationBarTitleText": "电费查询",
+  "backgroundColor": "#ffcb63",
+  "enablePullDownRefresh": false
+}

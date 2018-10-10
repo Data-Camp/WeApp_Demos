@@ -1,0 +1,180 @@
+<view class="bottomGrayboder toptab" data-c_e_id="wx_view_cb07a842">
+    <view class="toptabWrap" data-c_e_id="wx_view_c2045354">
+        <view class="active toptabItem" data-c_e_id="_other_text_221e07ff">
+            动态
+        </view>
+        <view class="toptabItem" data-c_e_id="_other_text978931bf">
+            消息
+        </view>
+    </view>
+</view>
+<view class="wx-view_GSg09R" data-c_e_id="wx_view_fe73d09a">
+    <view class="bottomGrayboder listitemWrap" data-c_e_id="wx_view687aaf2e">
+        <view class="notifylistitem" data-c_e_id="wx_view_16d0f86f">
+            <navigator class="nav_userlink" data-c_e_id="wx_navigator2ffed891" hover-class="navigator-hover">
+                <view class="likeuser" data-c_e_id="wx_viewd34d457a">
+                    <image class="useravatar" data-c_e_id="wx_image48c93c0f" mode="aspectFill" src="http://imgcdn.guoku.com/avatar/50/large_94108_69b6c416bd7c03c6738476a466d6df05.jpg" style="background-size: cover; background-position: center center; background-repeat: no-repeat; background-image: url(http://imgcdn.guoku.com/avatar/50/large_94108_69b6c416bd7c03c6738476a466d6df05.jpg); "/>
+                </view>
+            </navigator>
+            <view class="wx-view_WnUrtw2" data-c_e_id="wx_view_66505bdf">
+                <view class="wx-view_F9ISUC2" data-c_e_id="wx_view27217bec">
+                    <navigator class="wx-navigator_wTcTS2" data-c_e_id="wx_navigator70eae9f8" hover-class="navigator-hover">
+                        <text class="wx-text_71u3gA2" data-c_e_id="wx_text5fe6919d">木芽</text>
+                    </navigator>
+                    <text class="wx-text_kGXxsa2" data-c_e_id="wx_texta38253c0">喜爱了一件商品</text>
+                    <text class="wx-text_kGXxsa3" data-c_e_id="wx_text6014538a">6小时前</text>
+                </view>
+            </view>
+            <navigator class="nav_commoditylink" data-c_e_id="wx_navigatoraa33ee92" hover-class="navigator-hover" url="../detail/detail">
+                <image class="wx-image_5vt1BO" data-c_e_id="wx_imagefe7b3a6f" mode="aspectFit" src="http://imgcdn.guoku.com/images/310/fd5480b556b0c0d8b8d74084a1e40802.jpg" style="background-image: url(http://imgcdn.guoku.com/images/310/fd5480b556b0c0d8b8d74084a1e40802.jpg); background-size: contain; background-position: center center; background-repeat: no-repeat; "/>
+            </navigator>
+        </view>
+    </view>
+    <view class="bottomGrayboder listitemWrap" data-c_e_id="wx_view036db106">
+        <view class="notifylistitem" data-c_e_id="wx_view7f911b50">
+            <navigator class="nav_userlink" data-c_e_id="wx_navigator842898a5" hover-class="navigator-hover">
+                <view class="likeuser" data-c_e_id="wx_view5f9fc5f5">
+                    <image class="useravatar" data-c_e_id="wx_image38cacd5c" mode="aspectFill" src="http://imgcdn.guoku.com/avatar/672c5e2e4db3f213f5e94c06c5f7e5b3.jpg" style="background-size: cover; background-position: center center; background-repeat: no-repeat; background-image: url(http://imgcdn.guoku.com/avatar/672c5e2e4db3f213f5e94c06c5f7e5b3.jpg); "/>
+                </view>
+            </navigator>
+            <view class="wx-view_WnUrtw2" data-c_e_id="wx_view2d58c3bc">
+                <view class="wx-view_F9ISUC2" data-c_e_id="wx_view6a7fea9a">
+                    <navigator class="wx-navigator_wTcTS2" data-c_e_id="wx_navigatorbdd2e341" hover-class="navigator-hover">
+                        <text class="wx-text_71u3gA2" data-c_e_id="wx_text7de85d19">K2</text>
+                    </navigator>
+                    <text class="wx-text_kGXxsa2" data-c_e_id="wx_text49aa8c24">喜爱了一件商品</text>
+                    <text class="wx-text_kGXxsa3" data-c_e_id="wx_textffa79a3a">6小时前</text>
+                </view>
+            </view>
+            <navigator class="nav_commoditylink" data-c_e_id="wx_navigatorcf89004f" hover-class="navigator-hover">
+                <image class="wx-image_5vt1BO" data-c_e_id="wx_imagedc65f68a" mode="aspectFit" src="http://imgcdn.guoku.com/images/310/cff316f54a804cd11f836d3c0813c751.jpg"/>
+            </navigator>
+        </view>
+    </view>
+    <view class="bottomGrayboder listitemWrap" data-c_e_id="wx_view958eb778">
+        <view class="notifylistitem" data-c_e_id="wx_view66617f48">
+            <navigator class="nav_userlink" data-c_e_id="wx_navigator847cf9ac" hover-class="navigator-hover">
+                <view class="likeuser" data-c_e_id="wx_view604ca15d">
+                    <image class="useravatar" data-c_e_id="wx_image96c6f1ad" mode="aspectFill" src="http://imgcdn.guoku.com/avatar/large/e1786c6ae7425a1dff35caf9612e2130" style="background-size: cover; background-position: center center; background-repeat: no-repeat; background-image: url(http://imgcdn.guoku.com/avatar/large/e1786c6ae7425a1dff35caf9612e2130); "/>
+                </view>
+            </navigator>
+            <view class="wx-view_WnUrtw2" data-c_e_id="wx_view5e0a03ce">
+                <view class="wx-view_F9ISUC2" data-c_e_id="wx_view7d1e52fb">
+                    <navigator class="wx-navigator_wTcTS2" data-c_e_id="wx_navigator24d44aa2" hover-class="navigator-hover">
+                        <text class="wx-text_71u3gA2" data-c_e_id="wx_text66538d98">木芽</text>
+                    </navigator>
+                    <text class="wx-text_kGXxsa2" data-c_e_id="wx_textdf6a516c">喜爱了一件商品</text>
+                    <text class="wx-text_kGXxsa3" data-c_e_id="wx_text99f85c0d">6小时前</text>
+                </view>
+            </view>
+            <navigator class="nav_commoditylink" data-c_e_id="wx_navigator22011f58" hover-class="navigator-hover">
+                <image class="wx-image_5vt1BO" data-c_e_id="wx_image63977c3c" mode="aspectFit" src="http://imgcdn.guoku.com/images/310/b507e20989ea85a90aca03c043471374.jpg"/>
+            </navigator>
+        </view>
+    </view>
+    <view class="bottomGrayboder listitemWrap" data-c_e_id="wx_view863ff8fd">
+        <view class="notifylistitem" data-c_e_id="wx_viewa19d2f1b">
+            <navigator class="nav_userlink" data-c_e_id="wx_navigator3a813ce8" hover-class="navigator-hover">
+                <view class="likeuser fm2" data-c_e_id="wx_view964c8d78">
+                    <image class="useravatar" data-c_e_id="wx_image967e8cce" mode="aspectFill" src="http://imgcdn.guoku.com/avatar/672c5e2e4db3f213f5e94c06c5f7e5b3.jpg" style="background-size: cover; background-position: center center; background-repeat: no-repeat; background-image: url(http://imgcdn.guoku.com/avatar/672c5e2e4db3f213f5e94c06c5f7e5b3.jpg); "/>
+                </view>
+            </navigator>
+            <view class="wx-view_WnUrtw2" data-c_e_id="wx_view27921d04">
+                <view class="wx-view_F9ISUC2" data-c_e_id="wx_view38bf794f">
+                    <navigator class="wx-navigator_wTcTS2" data-c_e_id="wx_navigator55269828" hover-class="navigator-hover">
+                        <text class="wx-text_71u3gA2" data-c_e_id="wx_text0ec601ba">木芽</text>
+                    </navigator>
+                    <text class="wx-text_kGXxsa2" data-c_e_id="wx_text7718cd04">喜爱了一件商品</text>
+                    <text class="wx-text_kGXxsa3" data-c_e_id="wx_text401943e8">6小时前</text>
+                </view>
+            </view>
+            <navigator class="nav_commoditylink" data-c_e_id="wx_navigator2410f45c" hover-class="navigator-hover">
+                <image class="wx-image_5vt1BO" data-c_e_id="wx_image22569ebb" mode="aspectFit" src="http://imgcdn.guoku.com/images/310/8e121b76cc34865addb641c2d8a4cded.jpg"/>
+            </navigator>
+        </view>
+    </view>
+    <view class="bottomGrayboder listitemWrap" data-c_e_id="wx_viewaa4de1f1">
+        <view class="notifylistitem" data-c_e_id="wx_viewf1f98795">
+            <navigator class="nav_userlink" data-c_e_id="wx_navigator0d9e9a7e" hover-class="navigator-hover">
+                <view class="likeuser fm2" data-c_e_id="wx_view710c9396">
+                    <image class="useravatar" data-c_e_id="wx_image046c13ee" mode="aspectFill" src="http://imgcdn.guoku.com/avatar/672c5e2e4db3f213f5e94c06c5f7e5b3.jpg" style="background-size: cover; background-position: center center; background-repeat: no-repeat; background-image: url(http://imgcdn.guoku.com/avatar/672c5e2e4db3f213f5e94c06c5f7e5b3.jpg); "/>
+                </view>
+            </navigator>
+            <view class="wx-view_WnUrtw2" data-c_e_id="wx_view8ec41c70">
+                <view class="wx-view_F9ISUC2" data-c_e_id="wx_view69e06eac">
+                    <navigator class="wx-navigator_wTcTS2" data-c_e_id="wx_navigatord7c6316c" hover-class="navigator-hover">
+                        <text class="wx-text_71u3gA2" data-c_e_id="wx_textc5c4154a">木芽</text>
+                    </navigator>
+                    <text class="wx-text_kGXxsa2" data-c_e_id="wx_text491aa686">喜爱了一件商品</text>
+                    <text class="wx-text_kGXxsa3" data-c_e_id="wx_textc4107d93">6小时前</text>
+                </view>
+            </view>
+            <navigator class="nav_commoditylink" data-c_e_id="wx_navigator82f26faf" hover-class="navigator-hover">
+                <image class="wx-image_5vt1BO" data-c_e_id="wx_image67467877" mode="aspectFit" src="http://imgcdn.guoku.com/images/310/67b216143fe35c6e6aa1a2223e46f22a.jpg"/>
+            </navigator>
+        </view>
+    </view>
+    <view class="bottomGrayboder listitemWrap" data-c_e_id="wx_view56e36ab1">
+        <view class="notifylistitem" data-c_e_id="wx_view022ba928">
+            <navigator class="nav_userlink" data-c_e_id="wx_navigatoracdad67d" hover-class="navigator-hover">
+                <view class="likeuser fm2" data-c_e_id="wx_view61126de8">
+                    <image class="useravatar" data-c_e_id="wx_image480f7ce0" mode="aspectFill" src="http://imgcdn.guoku.com/avatar/672c5e2e4db3f213f5e94c06c5f7e5b3.jpg" style="background-size: cover; background-position: center center; background-repeat: no-repeat; background-image: url(http://imgcdn.guoku.com/avatar/672c5e2e4db3f213f5e94c06c5f7e5b3.jpg); "/>
+                </view>
+            </navigator>
+            <view class="wx-view_WnUrtw2" data-c_e_id="wx_viewc4681b5a">
+                <view class="wx-view_F9ISUC2" data-c_e_id="wx_view8091d659">
+                    <navigator class="wx-navigator_wTcTS2" data-c_e_id="wx_navigatora07964bb" hover-class="navigator-hover">
+                        <text class="wx-text_71u3gA2" data-c_e_id="wx_textb9cb93ca">木芽</text>
+                    </navigator>
+                    <text class="wx-text_kGXxsa2" data-c_e_id="wx_textd51b5743">喜爱了一件商品</text>
+                    <text class="wx-text_kGXxsa3" data-c_e_id="wx_text881c390e">6小时前</text>
+                </view>
+            </view>
+            <navigator class="nav_commoditylink" data-c_e_id="wx_navigator77be8cfe" hover-class="navigator-hover">
+                <image class="wx-image_5vt1BO" data-c_e_id="wx_imagecd8398bf" mode="aspectFit" src="http://imgcdn.guoku.com/images/310/944c984c88c5ebc3d11a9c24c85293aa.jpg"/>
+            </navigator>
+        </view>
+    </view>
+    <view class="bottomGrayboder listitemWrap" data-c_e_id="wx_viewd0fa39c1">
+        <view class="notifylistitem" data-c_e_id="wx_viewc4a6dbae">
+            <navigator class="nav_userlink" data-c_e_id="wx_navigator66fa9dc3" hover-class="navigator-hover">
+                <view class="likeuser fm2" data-c_e_id="wx_view14187e29">
+                    <image class="useravatar" data-c_e_id="wx_image1c98580d" mode="aspectFill" src="http://imgcdn.guoku.com/avatar/672c5e2e4db3f213f5e94c06c5f7e5b3.jpg" style="background-size: cover; background-position: center center; background-repeat: no-repeat; background-image: url(http://imgcdn.guoku.com/avatar/672c5e2e4db3f213f5e94c06c5f7e5b3.jpg); "/>
+                </view>
+            </navigator>
+            <view class="wx-view_WnUrtw2" data-c_e_id="wx_viewe3f5a454">
+                <view class="wx-view_F9ISUC2" data-c_e_id="wx_viewc78a558f">
+                    <navigator class="wx-navigator_wTcTS2" data-c_e_id="wx_navigatorc4cc5981" hover-class="navigator-hover">
+                        <text class="wx-text_71u3gA2" data-c_e_id="wx_textf6806d95">木芽</text>
+                    </navigator>
+                    <text class="wx-text_kGXxsa2" data-c_e_id="wx_text62efd1cd">喜爱了一件商品</text>
+                    <text class="wx-text_kGXxsa3" data-c_e_id="wx_text7f0c7b71">6小时前</text>
+                </view>
+            </view>
+            <navigator class="nav_commoditylink" data-c_e_id="wx_navigatorbb51b834" hover-class="navigator-hover">
+                <image class="wx-image_5vt1BO" data-c_e_id="wx_image27903649" mode="aspectFit" src="http://imgcdn.guoku.com/images/310/6e4ef5db08bf79b099cde055830f5af0.jpg"/>
+            </navigator>
+        </view>
+    </view>
+    <view class="bottomGrayboder listitemWrap" data-c_e_id="wx_view4abfa750">
+        <view class="notifylistitem" data-c_e_id="wx_viewe11ccd4d">
+            <navigator class="nav_userlink" data-c_e_id="wx_navigator5df031c3" hover-class="navigator-hover">
+                <view class="likeuser fm2" data-c_e_id="wx_viewdf44a57b">
+                    <image class="useravatar" data-c_e_id="wx_image838a6853" mode="aspectFill" src="http://imgcdn.guoku.com/avatar/large/e1786c6ae7425a1dff35caf9612e2130" style="background-size: cover; background-position: center center; background-repeat: no-repeat; background-image: url(http://imgcdn.guoku.com/avatar/large/e1786c6ae7425a1dff35caf9612e2130); "/>
+                </view>
+            </navigator>
+            <view class="wx-view_WnUrtw2" data-c_e_id="wx_viewf01b2481">
+                <view class="wx-view_F9ISUC2" data-c_e_id="wx_viewb0886fd7">
+                    <navigator class="wx-navigator_wTcTS2" data-c_e_id="wx_navigator7eb6f7d2" hover-class="navigator-hover">
+                        <text class="wx-text_71u3gA2" data-c_e_id="wx_text5059d0cf">木芽</text>
+                    </navigator>
+                    <text class="wx-text_kGXxsa2" data-c_e_id="wx_text4121dd45">喜爱了一件商品</text>
+                    <text class="wx-text_kGXxsa3" data-c_e_id="wx_text69987b2b">6小时前</text>
+                </view>
+            </view>
+            <navigator class="nav_commoditylink" data-c_e_id="wx_navigatorb1120a7e" hover-class="navigator-hover">
+                <image class="wx-image_5vt1BO" data-c_e_id="wx_image66dc5813" mode="aspectFit" src="http://imgcdn.guoku.com/images/310/fd5480b556b0c0d8b8d74084a1e40802.jpg"/>
+            </navigator>
+        </view>
+    </view>
+</view>

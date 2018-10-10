@@ -1,0 +1,189 @@
+@import "./imgUrl/imgUrl.less";
+
+page{
+  height: 100%;
+  width: 100%;
+  background: #F0EFF5;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+}
+
+form {
+  width: 100%;
+  height: auto;
+}
+
+picker{
+  width: 60%;
+  height: 100px;
+  line-height: 100px;
+  padding-right: 60rpx;
+  font-size: @font-base-size;
+  .placeholder{
+    color: @palceholder-color;
+  }
+}
+
+radio-group{
+  height: 100px;
+  line-height: 100px;
+  width: 60%;
+  padding-right: 60rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  .radio{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 40%;
+    flex: 1;
+    font-size: @font-base-size;
+    position: relative;
+    vertical-align: middle;
+    radio{
+      width: 40rpx;
+      position: absolute;
+      opacity: 0;
+    }
+    icon{
+      margin-right: 10px;
+      font-size: 46rpx;
+      display: flex;
+    }
+  }
+}
+
+.ordergood {
+  width: 100%;
+  background: #F0EFF5;
+  padding-top: 50px;
+  .banner {
+    width: 100%;
+    padding-top: 0;
+    background: #fff;
+    .airpeople {
+      height: 104px;
+      line-height: 104px;
+      display: flex;
+      flex: 1;
+      justify-content: flex-start;
+      align-items: center;
+      position: relative;
+      &:after{
+        content: '';
+        width: 200%;
+        height: 0;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        border-bottom: 1px solid #C7C7C7;/*no*/
+        transform: scale(0.5);
+        transform-origin: 0 0;
+      }
+      label.airp {
+        width: 7em;
+        display: block;
+        color: @font-color;
+        font-size: @font-base-size;
+      }
+
+      input {
+        height: 100px;
+        line-height: 100px;
+        display: block;
+        width: 100%;
+        flex: 1;
+        padding-right: 30px;
+        font-size: @font-base-size;
+      }
+      .arow {
+        width: 15rpx;
+        height: 26rpx;
+        position: absolute;
+        right: 36rpx;
+        top: 50%;
+        margin-top: -13rpx;
+      }
+      .airname {
+        font-size: @font-base-size;
+        color: #59a5f0;
+      }
+
+      &:last-child{
+        &:after{
+          border-bottom: none;
+        }
+      }
+    }
+  }
+}
+
+
+.addperson {
+  background: #59A5F0;
+  color: #FFFFFF;
+  width: 680px;
+  height: 82px;
+  line-height: 82px;
+  margin-top: 35px;
+}
+
+.hidden {
+  display: none;
+}
+
+
+//常旅客卡
+.layout{
+  padding-left: 38px;
+  position: relative;
+  &:before,&:after{
+    content: '';
+    width: 200%;
+    height: 0;
+    position: absolute;
+    left: 0;
+    transform: scale(0.5);
+    transform-origin: 0 0;
+  }
+  &:before{
+    top: 0;
+    border-top: 1px solid #C7C7C7;/*no*/
+  }
+  &:after{
+    bottom: 0;
+    border-bottom: 1px solid #C7C7C7;/*no*/
+  }
+}
+.travellerCard {
+  height: 100px;
+  line-height: 100px;
+
+  label {
+    float: left;
+    width: 500rpx;
+    color: @font-color;
+    font-size: @font-base-size;
+    margin-left: 34px;
+  }
+}
+
+.body-view_01 {
+  float: right;
+  display: block;
+  line-height: 100px;
+  height: 100px;
+  width: 100px;
+  margin-right: 39px;
+  box-sizing: border-box;
+  switch {
+    display: block;
+    height: 100px;
+    line-height: 100px;
+    margin-top: 15px;
+  }
+}

@@ -1,0 +1,11 @@
+<!--index.wxml-->
+<view class="container">
+  <view  bindtap="bindViewTap" class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">亲爱哒 {{userInfo.nickName}}</text>
+    <text class="userinfo-nickname" style="margin-top:10px;">こんにちは~</text>
+  </view>
+  <view class="usermotto">
+    <button class="btn"  bindtap="goGojuuonn" hover-class="other-button-hover"> 五十音图 </button>
+  </view>
+</view>

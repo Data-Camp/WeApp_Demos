@@ -1,0 +1,33 @@
+<!--index.wxml-->
+<view class="time-container">
+  <view class="time-card {{item.screenshot ? 'has-img' : 'no-img'}}" wx:for-index="itemIndex"  wx:for="{{timeLine}}">
+      <navigator url="../entry/entry?index={{itemIndex}}">
+        <view class="time-card-img-box" wx:if="{{item.screenshot}}">
+          <image class="time-card-img" style="width: 750rpx; height: 400rpx; background-color: #eeeeee;" mode="aspectFill" src="{{item.screenshot.url}}"></image>
+        </view>
+      </navigator>
+      <view  class="time-card-cotent-box">
+        <view class="time-card-top">
+          <navigator url="../entry/entry?index={{itemIndex}}">
+            <view class="time-card-title">
+              <text class="time-card-title-text">{{item.title}}</text>
+            </view>
+          </navigator>
+          <view class="time-card-avatar-box">
+            <image src="{{item.user.avatar_large}}" class="time-card-avatar"></image>
+          </view>
+          </view>
+          <view class="time-card-sub">
+            <text>{{contentLimit(item.content)}}</text>
+          </view>
+          <view class="time-card-bottom" data-index="{{itemIndex}}" bindtap="touchEntry">
+            <view class="time-card-tags">
+              <text class="time-card-tag" wx:for="{{item.tagsTitleArray}}" wx:for-index="tagIndex" wx:for-item="tag" wx:if="{{tagIndex < 3}}">{{tag}}</text>
+            </view>
+            <view class="time-card-action">
+              <image style="width: 50rpx; height: 38rpx; margin-top: 15rpx;margin-left: 10rpx;" src="http://covteam.u.qiniudn.com/heart2.png"></image>
+            </view>
+          </view>
+        </view>
+    </view>
+</view>

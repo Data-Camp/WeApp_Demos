@@ -1,0 +1,14 @@
+
+<view class="container">
+  <view class="page__hd">
+    <text class="page__title">canvas</text>
+  </view>
+
+  <view class="page-body">
+    <view class="page-body-wrapper">
+      <canvas canvas-id="canvas" class="canvas"></canvas>
+    </view>
+  </view>
+</view>
+
+

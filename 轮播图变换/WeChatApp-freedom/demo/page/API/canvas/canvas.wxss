@@ -1,0 +1,32 @@
+.page-body-wrapper {
+  flex-grow: 1;
+}
+.canvas-element-wrapper {
+  display: block;
+  margin-bottom: 100rpx;
+}
+.canvas-element {
+  width: 100%;
+  height: 400rpx;
+}
+.canvas-buttons {
+  padding: 50rpx 50rpx 10rpx;
+  border-top: 1px solid #ccc;
+  display: flex;
+  flex-grow: 1;
+  overflow-y: scroll;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 400rpx;
+  box-sizing: border-box;
+}
+.canvas-button {
+  font-size: 28rpx;
+  width: 290rpx;
+  margin: 20rpx auto; 
+}
+.canvas-button-reset {
+  width: 610rpx;
+  margin: 20rpx auto; 
+}

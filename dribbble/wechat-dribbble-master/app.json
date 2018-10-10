@@ -1,0 +1,41 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/shots/shots",
+    "pages/designers/designers"
+  ],
+  "window":{
+    "backgroundColor":"#f4f4f4",
+    "navigationBarBackgroundColor": "#333",
+    "navigationBarTitleText": "Dribbble",
+    "navigationBarTextStyle":"white",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#ccc",
+    "selectedColor": "#fff",
+    "borderStyle": "#333",
+    "backgroundColor": "#333",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "Popular",
+      "iconPath": "./images/tabbar-icon-popular-normal.png",
+      "selectedIconPath": "./images/tabbar-icon-popular-active.png"
+    }, {
+      "pagePath": "pages/designers/designers",
+      "text": "Designers",
+      "iconPath": "./images/tabbar-icon-designers-normal.png",
+      "selectedIconPath": "./images/tabbar-icon-designers-active.png"
+    }, {
+      "pagePath": "pages/teams/teams",
+      "text": "Teams",
+      "iconPath": "./images/tabbar-icon-teams-normal.png",
+      "selectedIconPath": "./images/tabbar-icon-teams-active.png"
+    }, {
+      "pagePath": "pages/me/index",
+      "text": "Me",
+      "iconPath": "./images/tabbar-icon-me-normal.png",
+      "selectedIconPath": "./images/tabbar-icon-me-active.png"
+    }]
+  }
+}

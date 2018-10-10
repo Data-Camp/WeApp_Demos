@@ -1,0 +1,11 @@
+<view class="page">
+  <view class="page__hd">
+    <text class="page__title">{{method}}</text>
+    <text class="page__desc">{{introduction}}</text>
+  </view>
+  <view class="page__bd">
+    <view class="section section_gap">
+      <canvas style="width: 100%; height: 300px;" canvas-id="mycanvas"></canvas>
+    </view>
+  </view>
+</view>

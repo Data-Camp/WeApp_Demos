@@ -1,0 +1,13 @@
+{
+  "debug":"true",
+  "pages":[
+    "pages/index/index",
+    "pages/feedback/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "用户反馈",
+    "navigationBarTextStyle":"black"
+  }
+}

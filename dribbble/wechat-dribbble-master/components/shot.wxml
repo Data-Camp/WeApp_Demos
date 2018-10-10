@@ -1,0 +1,13 @@
+
+<view
+    class="shot-image-wrap"
+    style="background:url({{ shot.images.normal }});background-size: cover;"
+>
+</view>
+<view class="shot-info">
+    <image src="../../images/icon-views.png" class="shot-icon views-icon"></image>
+    <text class="shot-info-text">{{ shot.views_count }}</text>
+    <image src="../../images/icon-hearts.png" class="shot-icon hearts-icon"></image>
+    <text class="shot-info-text">{{ shot.likes_count }}</text>
+</view>
+<view class="animated" wx:if="{{shot.animated}}"></view>

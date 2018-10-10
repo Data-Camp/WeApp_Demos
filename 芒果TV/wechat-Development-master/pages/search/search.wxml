@@ -1,0 +1,11 @@
+<import src="../../common/template.wxml"/>
+
+<view class="search">
+    <view class="searchRank">
+        <view class="form">    
+            <input type="text" class="cl" value="{{value}}" bindfocus="onFouse" bindblur="onBlue"/>
+            <icon type="cancel" size="20" color="#fff" catchtap="deleteTxt"/>
+        </view>
+    </view>
+    <template is="searchTxt" data="{{ranking}}" />
+</view>

@@ -1,0 +1,86 @@
+<!-- 渲染普通的单项数据 -->
+<template name="radio">
+  <view class="container">
+  <block wx:for="{{itemList.options}}">
+    <view class="list {{item.class}}" data-option="{{[item,index,idx]}}" bindtap="tapRadio">
+      <view class="number"> {{item.tip}}</view> {{item.content}}
+    </view>
+  </block>
+  </view>  
+</template>
+
+<!-- 渲染普通的多选数据 -->
+<template name="checkbox">
+  <view class="container">
+  <block wx:for="{{itemList.options}}" >
+    <view class="list {{item.class}}" data-option="{{[item,index,idx]}}" bindtap="tapCheckbox">
+      <view class="number"> {{item.tip}}</view> {{item.content}}
+    </view>
+  </block>
+  </view> 
+  <view class="btn"  bindtap="tapSelect">确定</view>
+</template>
+
+<!-- 题目选择模层 -->
+<template name="layer">
+ <scroll-view  class="status-lists"scroll-y="true">
+ <block wx:for="{{answers.allLists}}" >
+    <view bindtap="setActiveNum" data-option="{{index}}" wx:if="{{item.isAnswer == 0}}" class="status-list {{answers.activeNum == index?'active':''}}">{{index+1}}</view>
+    <view bindtap="setActiveNum" data-option="{{index}}" wx:if="{{item.isAnswer == 1}}" class="status-list success  {{answers.activeNum == index?'active':''}}">{{index+1}}</view>
+    <view bindtap="setActiveNum" data-option="{{index}}" wx:if="{{item.isAnswer == 2}}" class="status-list error  {{answers.activeNum == index?'active':''}}">{{index+1}}</view>
+  </block>
+ </scroll-view>
+</template>
+
+<!-- 试题详解 -->
+<template name="tip">
+ <view class="resolve">
+  <view class="h1">试题详解</view>
+  {{itemList.tip}}
+ </view>
+</template>
+
+<!-- 页面题目模板 -->
+<template name="movie-list">
+    <view class="header">
+      <view class="xuanz">{{itemList.type}}</view>
+      {{itemList.content}}
+    </view>
+    <view class="poster" wx:if="{{!!itemList.media_type && !!itemList.media_url}}">
+      <image mode="aspectFit" wx:if="{{itemList.media_type == 1}}" src="{{itemList.media_url}}"></image>
+      <video wx:if="{{itemList.media_type == 2}}" src="{{itemList.media_url}}"></video>
+    </view>
+
+    <template  wx:if="{{itemList.type == '多选'}}" is="checkbox" data="{{itemList,idx}}"/>
+    <template  wx:else is="radio" data="{{itemList,idx}}"/>
+
+    <!--<template is="tip" data="{{answers,itemList}}"/>-->
+</template>
+<!-- 题目展示页面 -->
+<template name="movie-lists">
+  <view class='swiper-lists' catchtouchend='touchEnd' catchtouchstart='setEvent'>
+    <block wx:for="{{answers.list}}" wx:for-item="itemList" wx:for-index="idx">
+        <view  wx:if="{{idx == swiper.active-1}}" class='swiper-list prev' animation="{{swiper.animationO}}">
+          <template is="movie-list" data="{{idx,itemList,answers,layerlayer}}"/>
+        </view>
+        <view  wx:if="{{idx == swiper.active}}" class='swiper-list' animation="{{swiper.animationT}}">
+          <template is="movie-list" data="{{idx,itemList,answers,layerlayer}}"/>
+        </view>
+        <view  wx:if="{{idx == swiper.active+1}}" class='swiper-list next' animation="{{swiper.animationS}}">
+          <template is="movie-list" data="{{idx,itemList,answers,layerlayer}}"/>
+        </view>
+    </block>
+  </view>
+
+  <view hidden="{{!layerlayer.isLayerShow}}" class="footer-layer" bindtap="layerFooterClick"></view>
+  <view class="footer" animation="{{layerlayer.layerAnimation}}">
+    <view class="count">
+      <view class="collect" wx:if="{{!answers.list.isStore}}" bindtap="collectList">收藏</view>
+      <view class="collect active" wx:else bindtap="collectList">收藏</view>
+      <view class="page" bindtap='pageClick'>{{answers.activeNum + 1}}/{{answers.allLists.length}}</view>
+      <view class="success">{{answers.success}}</view>
+      <view class="error">{{answers.error}}</view>
+    </view>
+    <template is="layer" data="{{answers,layerlayer}}" />
+  </view>
+</template>

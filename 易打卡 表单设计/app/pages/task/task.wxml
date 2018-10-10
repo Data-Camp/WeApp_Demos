@@ -1,0 +1,206 @@
+<view class="task-page">
+    
+    <!-- 切换菜单 -->
+    <view class="t-menu">
+        <view class="t-menu-btn {{tabIndex ? '' : 'selected'}}" bindtap="changeTab" id="myTask">
+            <text>我的任务</text>
+        </view>
+        <view class="t-menu-btn {{tabIndex ? 'selected' : ''}}" bindtap="changeTab" id="hotTask">
+            <text>热门任务</text>
+        </view>
+    </view>
+
+    <!-- 任务分类 -->
+    <view class="t-inner">
+
+        <!-- 邀请码 -->
+        <view class="invitation" bindtap="inputCode">
+            <text>填写邀请码</text>
+            <image class="write" src="../../image/write.png"></image>
+        </view>
+        
+        <view class="t-content-wrap">
+            
+            <!-- 我的任务 -->
+            <view id="myTaskList" class="t-content {{tabIndex ? '' : 't-content-show'}}">
+                <scroll-view scroll-y="true" style="height: 900rpx;">
+                    <block wx:for-items="{{myTasks}}">
+                        <view class="task-item-wrap">
+                            <view class="task-item type{{item.state}}">
+                                <view class="flag"></view>
+                                <view class="task-item-inner {{item.open ? 'task-info-show' : ''}}">
+                                    <view class="task-info" id="record_{{item._id}}" data-taskname="{{item.name}}" data-taskstart="{{item.startTime}}" data-taskend="{{item.endTime}}" bindtap="showRecord">
+                                        
+
+                                        <!-- 进行时 -->
+                                        <block wx:if="{{item.state == 0}}">
+                                            <view class="task-name">
+                                                <text>{{item.name}}</text>
+                                            </view>
+                                            <view class="cate-item">
+                                                <image class="cate-icon" src="../../image/icon_clock_red@3x.png"></image>
+                                                <text>{{item.disTime}}</text>       
+                                            </view>
+
+                                            <view class="cate-item">
+                                                <image class="cate-icon" src="../../image/icon_location_red@3x.png"></image>
+                                                <text>{{item.address}}</text>       
+                                            </view>
+
+                                            <view class="statistics">
+                                                <view class="statistics-cate">
+                                                    <image class="cate-icon" src="../../image/icon_complete-person@3x.png"></image>
+                                                    <text class="num">{{item.signedNum}}</text>
+                                                </view>
+                                                <view class="statistics-cate">
+                                                    <image class="cate-icon" src="../../image/icon_total-people@3x.png"></image>
+                                                    <text class="num">{{item.totalNum}}</text>
+                                                </view>
+                                            </view>
+                                        </block>
+
+                                        <!-- 已打卡 -->
+                                        <block wx:if="{{item.state == 1}}">
+                                            <text class="task-name">{{item.name}}</text>
+                                            <view class="cate-item">
+                                                <image class="cate-icon" src="../../image/icon_complete_green@3x.png"></image>
+                                                <text>已打卡</text>       
+                                            </view>
+
+                                            <view class="cate-item">
+                                                <image class="cate-icon" src="../../image/icon_location_green@3x.png"></image>
+                                                <text>{{item.address}}</text>       
+                                            </view>
+
+                                            <view class="statistics">
+                                                <view class="statistics-cate">
+                                                    <image class="cate-icon" src="../../image/icon_complete-person@3x.png"></image>
+                                                    <text class="num">{{item.signedNum}}</text>
+                                                </view>
+                                                <view class="statistics-cate">
+                                                    <image class="cate-icon" src="../../image/icon_total-people@3x.png"></image>
+                                                    <text class="num">{{item.totalNum}}</text>
+                                                </view>
+                                            </view>
+                                        </block>
+
+                                        <!-- 已请假 -->
+                                        <block wx:if="{{item.state == 2}}">
+                                            <text class="task-name">{{item.name}}</text>
+                                            <view class="cate-item">
+                                                <image class="cate-icon" src="../../image/icon_complete_green@3x.png"></image>
+                                                <text>已请假</text>       
+                                            </view>
+
+                                            <view class="cate-item">
+                                                <image class="cate-icon" src="../../image/icon_location_green@3x.png"></image>
+                                                <text>{{item.address}}</text>       
+                                            </view>
+
+                                            <view class="statistics">
+                                                <view class="statistics-cate">
+                                                    <image class="cate-icon" src="../../image/icon_complete-person@3x.png"></image>
+                                                    <text class="num">{{item.signedNum}}</text>
+                                                </view>
+                                                <view class="statistics-cate">
+                                                    <image class="cate-icon" src="../../image/icon_total-people@3x.png"></image>
+                                                    <text class="num">{{item.totalNum}}</text>
+                                                </view>
+                                            </view>
+                                        </block>
+
+                                        <!-- 将来时 -->
+                                        <block wx:if="{{item.state == 3}}">
+                                            <view class="task-name">
+                                                <text>{{item.name}}</text>
+                                            </view>
+                                            <view class="cate-item">
+                                                <image class="cate-icon" src="../../image/icon_clock_yellow@3x.png"></image>
+                                                <text>任务开始日期{{item.startTime}}</text>
+                                            </view>
+                                        </block>
+
+                                        <!-- 过去时 -->
+                                        <block wx:if="{{item.state == 4}}">
+                                            <view class="task-name">
+                                                <text>{{item.name}}</text><text>【已过期】</text>
+                                            </view>
+                                        </block>
+                                    </view>
+                                    <view class="task-icon" id="{{item._id}}" bindtap="taskToggle">
+                                        <image  class="more" src="../../image/icon_more@3x.png"></image>
+                                    </view>
+                                </view>
+                            </view>
+                            
+                            
+                            <view class="{{item.open ? 'task-item-controls-show' : 'task-item-controls-hide'}}">
+                                <view class="task-item-controls">
+                                    <view class="fun" bindtap="myDeatil" id="info_{{item._id}}">
+                                        <image class="icon info" src="../../image/icon_info@3x.png"></image>
+                                    </view>
+                                    <view class="fun" bindtap="shareTask" id="share_{{item._id}}">
+                                        <image class="icon share" src="../../image/icon_share@3x.png"></image>
+                                    </view>
+                                    <view class="fun" bindtap="taskDelete" id="task_{{item._id}}">
+                                        <image class="icon delete" src="../../image/icon_delete@3x.png"></image>
+                                    </view>
+                                    <!--<view class="fun">
+                                        <image class="icon top" src="../../image/icon_top@3x.png"></image>
+                                    </view>-->
+                                </view>
+                            </view>
+                        </view>
+                    </block>
+                </scroll-view>
+            </view>
+
+            <!-- 热门任务 -->
+            <view id="hotTaskList" class="t-content {{tabIndex ? 't-content-show' : ''}}">
+                <scroll-view scroll-y="true" style="height: 920rpx;">
+                    <block wx:if="{{hotTasks.length == 0}}">
+                        <view class="empty-tips">
+                            <text>暂无热门任务</text>    
+                        </view>
+                    </block>
+                    <block wx:else>
+                        <block wx:for-items="{{hotTasks}}" wx:for-index="idx">
+                            <view class="task-item-wrap">
+                                <view class="task-item">
+                                    <view class="task-item-inner {{item.open ? 'task-info-show' : ''}}">
+                                        <view class="task-info" id="task_{{item._id}}" bindtap="hotDeatil">
+
+                                            <view class="task-name">
+                                                <text>{{item.name}}</text>
+                                            </view>
+
+                                            <view class="cate-item">
+                                                <image class="cate-icon" src="../../image/icon_location_red@3x.png"></image>
+                                                <text>{{item.address}}</text>       
+                                            </view>
+
+                                            <view class="statistics">
+                                                <view class="statistics-cate">
+                                                    <image class="cate-icon" src="../../image/icon_total-people@3x.png"></image>
+                                                    <text class="num">{{item.userList.length}}</text>
+                                                </view>
+                                            </view>
+
+                
+                                        </view>
+                                        <view class="task-icon" id="{{idx}}_{{item._id}}" bindtap="haddleHotTask">
+                                            <image  class="more" src="{{item.added ? '../../image/added.png' : '../../image/add_green.png'}}"></image>
+                                        </view>
+                                    </view>
+                                </view>
+                            </view>
+                        </block>
+                    </block>
+                    
+                </scroll-view>
+            </view>
+        </view>
+        
+    </view>
+
+</view>

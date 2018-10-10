@@ -1,0 +1,27 @@
+<view class="page">
+  <view class="page__hd">
+    <text class="page__title">swiper</text>
+    <text class="page__desc">swiper</text>
+  </view>
+  <view class="page__bd">
+    <view class="section section_gap swiper">
+      <swiper indicator-dots="{{indicatorDots}}" vertical="{{vertical}}"
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{background}}">
+          <swiper-item>
+            <view class="swiper-item bc_{{item}}"></view>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <view class="btn-area">
+      <button type="default" bindtap="changeIndicatorDots">indicator-dots</button>
+      <button type="default" bindtap="changeVertical">{{vertical?'horizontal':'vertical'}}</button>
+      <button type="default" bindtap="changeAutoplay">autoplay</button>
+    </view>
+    <slider bindchange="durationChange" value="{{duration}}" show-value min="500" max="2000"/>
+    <view class="section__title">duration</view>
+    <slider bindchange="intervalChange" value="{{interval}}" show-value min="2000" max="10000"/>
+    <view class="section__title">interval</view>
+  </view>
+</view>

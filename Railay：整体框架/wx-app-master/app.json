@@ -1,0 +1,44 @@
+{
+  "pages":[
+    "pages/share/index",
+    "pages/share/detail",
+    "pages/activity/index",
+    "pages/post/index",
+    "pages/message/index",
+    "pages/me/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Railay",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath":"pages/share/index",
+      "text":"分享",
+      "iconPath":"/assets/icons/copy.png",
+      "selectedIconPath":"/assets/icons/copy.png"
+    },{
+      "pagePath":"pages/activity/index",
+      "text":"活动",
+      "iconPath":"/assets/icons/paper-plane.png",
+      "selectedIconPath":"/assets/icons/paper-plane.png"
+    },{
+      "pagePath":"pages/post/index",
+      "text":"发布",
+      "iconPath":"/assets/icons/edit.png",
+      "selectedIconPath":"/assets/icons/edit.png"
+    },{
+      "pagePath":"pages/message/index",
+      "text":"消息",
+      "iconPath":"/assets/icons/envelope.png",
+      "selectedIconPath":"/assets/icons/envelope.png"
+    },{
+      "pagePath":"pages/me/index",
+      "text":"我",
+      "iconPath":"/assets/icons/avatar.png",
+      "selectedIconPath":"/assets/icons/avatar.png"
+    }]
+  }
+}

@@ -1,0 +1,33 @@
+.wxSortPickerViewTemTags{
+  position: fixed;
+  top: 10px;
+  right: 0;
+  background-color: #fff;
+  color: cornflowerblue;
+}
+.wxSortPickerViewTemTag{
+  text-align: center;
+  padding: 3px;
+  font-size: 12px;
+}
+.wxSortPickerViewFixedTag{
+  position: fixed;
+  width: 100%;
+}
+
+.wxSortPickerViewTag{
+  background-color: #eee;
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 5px;
+}
+
+.wxSortPickerViewItem{
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px solid #eee;
+  margin-left: 5px;
+}

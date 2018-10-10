@@ -1,0 +1,57 @@
+<!--jy.wxml-->
+<view class="container">
+    <view wx:if="{{remind}}" class="remind-box">
+        <image wx:if="{{remind == '加载中'}}" class="remind-img" src="/images/index/loading.gif"></image>
+        <block wx:else>
+          <image class="remind-img" src="/images/index/nothing.png"></image>
+          <text class="remind-text">{{remind}}</text>
+        </block>
+    </view>
+    <block wx:else>
+        <view class="user-jy">
+            <view class="user-jy-item user-jy-num">
+                <text class="user-jy-hd">当前借阅</text>
+                <view class="user-jy-bd">
+                    <text class="user-jy-value">{{jyData.books_num}}</text>
+                    <text class="user-jy-text">本</text>
+                </view>
+            </view>
+            <view class="user-jy-item user-jy-history" bindtap="jyHistory">
+                <text class="user-jy-hd">历史借阅</text>
+                <view class="user-jy-bd">
+                    <text class="user-jy-value">{{jyData.history}}</text>
+                    <text class="user-jy-text">本</text>
+                </view>
+            </view>
+            <view class="user-jy-item user-jy-dbet">
+                <text class="user-jy-hd">欠费</text>
+                <view class="user-jy-bd">
+                    <text class="user-jy-value">{{jyData.dbet}}</text>
+                    <text class="user-jy-text">元</text>
+                </view>
+            </view>
+        </view>
+        <view wx:if="{{jyData.nothing}}" class="remind-box">
+            <image class="remind-img" src="/images/index/nothing.png"></image>
+            <text class="remind-text">当前无借阅</text>
+        </view>
+        <view wx:else class="book-list">
+            <text wx:if="{{!message}}" class="current-type">当前借阅记录</text>
+            <block wx:for="{{jyData.book_list}}" wx:key="name" wx:for-item="itemName">
+                <view class="book-wraper">
+                    <view class="book-info">
+                        <text class="book-name">{{itemName.book}}</text>
+                        <view class="book-date">
+                            <text>借阅日期：{{itemName.jsrq}}</text>
+                            <text>应还日期：{{itemName.yhrq}}</text>
+                        </view>                
+                    </view>
+                    <image class="book-img" src="/images/core/jy.png"></image>
+                </view>
+            </block>
+        </view>
+        <view class="fix_tip {{jyHistoryTap?'active':''}}">
+            <text>暂不能查看历史借阅详情哦~</text>
+        </view>
+    </block>
+</view>

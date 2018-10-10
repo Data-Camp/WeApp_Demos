@@ -1,0 +1,3 @@
+<import src="../../common/list.wxml"/>
+
+<template is="list" data="{{ goods, prompt }}"/>

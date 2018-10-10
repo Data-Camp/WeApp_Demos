@@ -1,0 +1,57 @@
+.movie-video {
+  width: 100%;
+}
+
+.video {
+  width: 100%;
+  height: 180px;
+}
+
+.movie-story-header {
+  height: 30px;
+  padding-left: 10px;
+  font-size: 12px;
+  line-height: 30px;
+  color:  #888;
+  background-color: #eee;
+}
+
+.movie-story-body {
+  padding: 15px;
+}
+
+.story-author {
+  display: inline-block;
+  width: 80%;
+  margin-bottom: 10px;
+  font-weight: 200;
+  font-size: 12px;
+}
+
+.story-author-avatar {
+  width: 30px;
+  height: 30px;
+  float: left;
+  margin-right: 15rpx;
+  border-radius: 50%;
+}
+
+.story-author-username {
+  padding: 2px;
+  color: #89bdf7;
+}
+
+.story-makettime {
+  margin-top: 3px;
+  color: #888;
+}
+
+.story-title {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.story-content {
+  font-size: 14px;
+  line-height: 1.5;
+}

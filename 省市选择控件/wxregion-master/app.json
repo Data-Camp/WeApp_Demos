@@ -1,0 +1,11 @@
+{
+  "pages":[
+    "pages/wxregion/wxregion"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "省市联动",
+    "navigationBarTextStyle":"black"
+  }
+}

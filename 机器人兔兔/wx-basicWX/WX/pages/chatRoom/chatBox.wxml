@@ -1,0 +1,22 @@
+<view class="wrap"> 
+    <view class="containerBox" style="">
+       <view wx:key="{{index}}" wx:for="{{allContentList}}">
+            <view wx:key="{{index}}"  wx:if="{{index%2 == 1}}" class="textBox fl" style="">{{item.value}}</view>
+             <view wx:key="{{index}}"  wx:if="{{index%2 == 0}}" class="textBox fr">{{item.value}}</view>
+       </view>
+        <!--<view class="leftBox" wx:for="{{inputValueList}}">
+        =======
+            <view wx:key="{{index}}" class="textItem">{{item.value}}</view>
+        </view>
+        <view class="rightBox" wx:for="{{returnValueList}}">
+            <view wx:key="{{index}}" class="textItem">{{item.value}}</view>
+        </view>-->
+
+        <!--<view class="section__title">你输入的是：{{inputValue}}</view>
+        <input  bindinput="bindKeyInput" placeholder="输入同步到view中"/>-->
+    </view>
+    <view class="handleBox">
+        <input  class="input_submit" placeholder="点击输入，开始聊天吧" value="{{inputTemp}}" bindinput="bindKeyInput"/>
+        <button type="submit" class="btn_submit" size="mini" bindtap="submitTo">发送</button>
+    </view>
+</view>

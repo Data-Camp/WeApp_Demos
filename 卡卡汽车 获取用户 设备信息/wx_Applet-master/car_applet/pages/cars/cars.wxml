@@ -1,0 +1,81 @@
+<!--logs.wxml-->
+<view class="container">
+  <view class="title">
+    <text id="tit">车型大全</text>
+  </view>
+  <!--热门车系-->
+  <view class="car_type">
+    <view class="type_style">
+      <text class="type_name">热门品牌</text>
+    </view>
+    <block wx:for="{{image_url}}">
+      <view class="content_img" bindtap="remen_click">
+        <image src="{{item}}" style="width: 100%; height: 100%"></image>
+      </view>
+    </block>
+
+    <!--字母A开头-->
+    <view class="type_style">
+      <text class="type_name">A</text>
+    </view>
+    <block wx:for="{{car_icon_a}}">
+      <view class="icons_title" bindtap="aodi_click">
+        <view class="icons">
+          <image src="{{item}}" style="width: 100%; height: 100%;"></image>
+        </view>
+        <view class="car_title">
+          {{car_title_a[index]}}
+        </view>
+      </view>
+    </block>
+    <!--字母B开头-->
+    <view class="type_style">
+      <text class="type_name">B</text>
+    </view>
+    <block wx:for="{{car_icon_b}}">
+      <view class="icons_title">
+        <view class="icons">
+          <image src="{{item}}" style="width: 100%; height: 100%;"></image>
+        </view>
+        <view class="car_title">
+          {{car_title_b[index]}}
+        </view>
+      </view>
+    </block>
+    <!--字母D开头-->
+    <view class="type_style">
+      <text class="type_name">D</text>
+    </view>
+    <block wx:for="{{car_icon_d}}">
+      <view class="icons_title">
+        <view class="icons">
+          <image src="{{item}}" style="width: 100%; height: 100%;"></image>
+        </view>
+        <view class="car_title">
+          {{car_title_d[index]}}
+        </view>
+      </view>
+    </block>
+    <!--字母#开头-->
+    <view class="type_style">
+      <text class="type_name">#</text>
+    </view>
+    <block wx:for="{{car_icon}}">
+      <view class="icons_title">
+        <view class="icons">
+          <image src="{{item}}" style="width: 100%; height: 100%;"></image>
+        </view>
+        <view class="car_title">
+          {{car_title[index]}}
+        </view>
+      </view>
+    </block>
+
+  </view>
+
+</view>
+
+
+  <block wx:for="{{logs}}" wx:for-item="log">
+    <text class="log-item">{{index + 1}}. {{log}}</text>
+  </block>

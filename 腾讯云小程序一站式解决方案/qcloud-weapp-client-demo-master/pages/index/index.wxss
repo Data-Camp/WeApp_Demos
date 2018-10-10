@@ -1,0 +1,33 @@
+view.root {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: #f3f3f3;
+}
+
+view.line {
+    padding: 0.5rem;
+    font-family: "Microsoft Yahei";
+}
+
+view.line text {
+    display: block;
+}
+
+view.line input {
+    border: 1px solid #CCC;
+    border-radius: 2px;
+    padding: 0 10px;
+    height: 30px;
+    margin: 5px 0;
+    font-family: Arial;
+    background: white;
+}
+
+view.line button {
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 5px;
+}

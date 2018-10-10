@@ -1,0 +1,72 @@
+<!--search.wxml-->
+
+<view class="container">
+
+           <view  class="novel_logo" >
+            <image class="logo_image" src="../../image/novel_icon_shelf.png"  mode="aspectFit"></image>
+            <text class="logo_name">百度小说</text>
+          </view>
+          
+
+          <view class="search" >
+          <image class="search_logo" src="../../image/novel_new_search_icon.png"/>
+            <input class="search_input" bindchange="bindInputChange" bindFocus="bindFocusStyle" placeholder="搜索全网热书"/>
+            <view class="sort-list-wrap" style="display:{{show_list}};">
+              <block wx:for-items="{{novels}}">
+                  <view class="listItem" style="display:{{show_letter}}">{{item.title}}</view>
+              </block>
+            </view>
+          </view>
+          <view class="search-history">搜索历史：{{history}}</view>
+
+          <view class="area">
+              <view class="left_area">
+             
+                  <view class="left_title" bindtap="bindViewTap" >     
+                   <!--<image class="icon-image" src="../../image/novel_green_bar.png"  mode="aspectFit"></image>-->
+                   
+                  <text class="left_title">百度热搜榜</text>               
+                  </view>
+                  <image class="line" src="../../image/line.png" mode="aspectFill"/>
+                  <!--<canvas  canvas-id="first-canvas" style="width: 300px; height: 10px;" color="#0a0"></canvas>-->
+                  <view class="article" bindtap="bindViewTap" >1. 大主宰</view>
+                  <view class="article" bindtap="bindViewTap" >2. 逆鳞</view>
+                  <view class="article" bindtap="bindViewTap" >3. 修罗武神</view>       
+              </view>
+
+              <view class="left_area">
+              
+                  <view class="left_title" bindtap="bindViewTap" id="{{idb}}">
+                  <!--<image class="icon-image" src="../../image/novel_green_bar.png"  mode="aspectFit"></image>-->
+                  <text class="left_title">起点会员点击榜</text>
+                    
+                  </view>
+                   <image src="../../image/line.png" class="line" mode="aspectFill"/>
+                   <!--<canvas  canvas-id="first-canvas" style="width: 300px; height: 10px;" color="#0a0"></canvas>-->
+                  <view class="article" bindtap="bindViewTap" >1. 断</view>
+                  <view class="article" bindtap="bindViewTap" >2. 天神决</view>
+                  <view class="article" bindtap="bindViewTap" >3. 极品小老板</view>
+              </view>
+          </view>
+
+
+<canvas  canvas-id="first-canvas" style="width: 100%; height: 10px;" color="#0a0"></canvas>
+
+    <view class="most-read-area">
+          <import src="../template/itemtpl"/>
+        <view class="left_title"  id="{{idc}}">最多阅读</view>
+         <image src="../../image/line.png" class="line" mode="aspectFill"/>
+         <!--<canvas  canvas-id="first-canvas" style="width: 300px; height: 10px;" color="#0a0"></canvas>-->
+        <view class="most_read_item"  wx:for-items="{{items}}">
+        <view class="title-author">
+          <view id="title" bindtap="bindViewTap">{{item.title}}</view>
+          <view id="author">{{item.author}} {{item.status}}</view>
+          </view>
+          <view id="type">{{item.type}}</view>
+        </view>
+        
+      </view>  
+            
+          
+</view>
+

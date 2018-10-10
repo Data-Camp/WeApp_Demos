@@ -1,0 +1,17 @@
+<view class="container">
+
+    <block wx:for="{{bookInfo}}" wx:key="unique">
+    <image class="pic" mode="aspectFit" src="{{item.img}}"></image>
+<view class="tip">图书信息</view>
+        <view class="bookinfo pct100">
+            <view class="book_author">作者：{{item.author}}</view>
+            <view class="book_publisher">出版社：<text>{{item.publisher}}</text></view>
+            <view class="book_tags">标签：{{item.tag}}</view>
+            <view class="book_pubdate">出版时间：{{item.pubdate}}</view>
+        </view>
+        <view class="tip">图书摘要</view>
+        <view class="book_summary f8 ovh rel" style="{{'height:'+smryHeight}}">　　{{item.info}}</view>
+        <view class="extend-bar" wx:if="{{smryHeight=='4.5rem'}}" bindtap="extendBox">展开▼</view>
+        <view class="extend-bar" wx:else bindtap="extendBox">收起▲</view>
+     </block>  
+</view>

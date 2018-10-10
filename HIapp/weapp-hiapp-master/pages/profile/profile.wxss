@@ -1,0 +1,7 @@
+.user-avatar {
+  width: 110rpx;
+  height: 110rpx;
+  border: 1rpx solid #d9d9d9;
+  border-radius: 10rpx;
+  background-color: #c8c8c8;
+}

@@ -1,0 +1,96 @@
+page{
+    height:100%;
+    min-height:100%;
+    background: #007AFF;
+    color:#fff;
+    font-family:"Microsoft Yahei","宋体";
+    font-size:14px;
+}
+.content{
+    position:relative;
+    height:100%;
+}
+.main-bg{
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:-1;
+    height:100%;
+    width:100%;
+    opacity:0.6;
+}
+.today{
+    height:50%;
+}
+.info{
+    padding:20rpx;
+}
+.temp{
+    font-size:180rpx;
+    text-align:center;
+}
+.weather-img{
+    padding:20rpx;
+    text-align:center;
+}
+.today-img{
+    display:inline-block;
+    width: 126rpx;
+    height: 90rpx;
+}
+.city{
+    margin-right:10rpx;
+    margin-top:30rpx;
+    font-size:16px;
+    text-align:left;
+}
+.time{
+    margin-bottom: 120rpx;
+    position:absolute;
+    bottom:0;
+    width:100%;
+    font-family:'Yahei light';
+}
+.today-time{
+    padding:20rpx;
+    font-size:120rpx;
+    text-align:center;
+}
+.today-date{
+    padding:20rpx;
+    font-size:50rpx;
+    text-align:center;
+}
+.weather{
+    font-size:16px;
+    text-align:center;
+}
+.des{
+    margin-top:10rpx;
+    font-size:12px;
+}
+.future{
+    display: flex;
+    flex-direction: row;
+    padding: 10rpx 0 20rpx 5rpx;
+    box-shadow: 10px 10px 20px rgba(0,0,0,.5);
+    height: 400rpx;
+    background: #fff;
+    background: rgba(0,0,0,.1);
+    text-align: center;
+}
+.future-item{
+    min-height: 100%;
+    width: 200rpx;
+    margin-left: 10rpx;
+    margin-right: 10rpx;
+    border: 1px solid #ff7f50;
+    border-radius: 10rpx;
+    padding-top: 10rpx;
+    display:inline-block;
+}
+.future-item view{
+    margin-top: 10px;
+    line-height:1.1em;
+    
+}

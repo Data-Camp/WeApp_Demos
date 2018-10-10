@@ -1,0 +1,23 @@
+<view class="container">
+  <view class="question">
+    <view class="question-title">
+      <text>{{question.question_title}}</text>
+    </view>
+    <view class="question-content">
+      <text>{{question.question_content}}</text>
+    </view>
+  </view>
+  <view class="answer">
+    <view class="answer-header">
+      <view class="answer-title">
+        <text>{{question.answer_title}}</text>
+      </view>
+      <view class="answer-makettime">
+        <text>{{question.question_makettime}}</text>
+      </view>
+    </view>
+    <view class="answer-content">
+      <text>{{question.answer_content}}</text>
+    </view>
+  </view>
+</view>

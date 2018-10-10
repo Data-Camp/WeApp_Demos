@@ -1,0 +1,22 @@
+@import "/common.wxss";
+.leader{
+    
+    position: relative;
+    box-sizing: border-box;
+    border-bottom: 1px solid #e5e5e5;
+    background-size: 2.65rem 2.65rem;
+    background-position: left .75rem center;
+    background-repeat: no-repeat;
+    height: 4.4rem;
+    padding: .7rem 0.75rem 0 4.15rem;
+    background-color: #fff;
+}
+
+.leader-avatar {
+    position: absolute;
+    top: .875rem;
+    left: .75rem;
+    width: 2.65rem;
+    height: 2.65rem;
+    border-radius: 50%;
+}

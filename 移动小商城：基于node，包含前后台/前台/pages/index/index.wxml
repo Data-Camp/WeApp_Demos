@@ -1,0 +1,26 @@
+<import src="../common/nav.wxml"/>
+<import src="../common/list.wxml"/>
+
+<swiper class="swiper_box" indicator-dots="{{ indicatorDots }}" autoplay="{{ autoplay }}" current="{{ current }}" interval="{{ interval }}" duration="{{ duration }}" circular="{{ circular }}" bindchange="swiperchange">
+    <block wx:for="{{ images }}" wx:key="">
+        <swiper-item>
+            <image src="{{ item.path }}" class="slide-image"/>
+        </swiper-item>
+    </block>
+</swiper>
+
+<view class="weui-search-bar">
+    <view class="weui-search-bar__form">
+        <view class="weui-search-bar__box">
+            <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+            <input type="text" class="weui-search-bar__input" placeholder="搜索"/>
+        </view>
+        <label class="weui-search-bar__label" bindtap="search">
+            <icon class="weui-icon-search" type="search" size="14"></icon>
+            <view class="weui-search-bar__text">搜索</view>
+        </label>
+    </view>
+</view>
+
+<template is="nav" data="{{ navList, activeIndex }}"/>
+<template is="list" data="{{ goods, prompt }}"/>

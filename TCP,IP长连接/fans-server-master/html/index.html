@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>这是一个很长很长很长的标题</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+</head>
+
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-1"><span>代号:</span></div>
+        <div class="col-md-3" id="username" style="color: rebeccapurple"></div>
+        <div class="col-md-2" style="color: rebeccapurple">在线人数：<span id="online"></span></div>
+        <div class="col-md-2 col-md-offset-4">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn" data-toggle="modal" data-target="#myModal">
+                修改本宝宝的马甲
+            </button>
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"><span
+                                    aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                            <h4 class="modal-title" id="myModalLabel">修改显示称呼</h4>
+                        </div>
+                        <div class="modal-body">
+                            <input type="text" id="changename">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                            <button type="button" id="savename" class="btn btn-primary">保存</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="container" style="height: 450px; margin-top: 30px;margin-left: 15px;"></div>
+
+    <div><textarea id="data" class="form-control" rows="3"></textarea></div>
+    <div>
+        <button id="send">发送消息</button>
+    </div>
+
+    <span id="x" style="display:none"></span>
+</div>
+
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="reconnecting-websocket.js"></script>
+<script src="encoding.js"></script>
+<script src="//cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script>
+    $(function () {
+        $("input").focus(function(){
+            $("input").css("background-color","#FFFFCC");
+        });
+        if ($.cookie('username') == undefined) {
+            var username = 'someone' + Math.floor(Math.random() * 1000);
+            $.cookie('username', username);
+            var first_login = true;
+        } else {
+            var username = $.cookie('username');
+        }
+        $("#username").html(username);
+        var start_len = $('#container').children('div').length;
+        var ws = new ReconnectingWebSocket("ws://120.24.229.18:3564/", null, {debug: true, binaryType: 'arraybuffer'});
+        var decoder = new TextDecoder('utf-8');
+        ws.onopen = function () {
+            if(first_login) {
+                ws.send(JSON.stringify({
+                    Hello: {
+                        Name: username
+                    }
+                }));  // Sends a message.
+            }
+            if(start_len == 0){
+                ws.send(JSON.stringify({
+                    UserInfo: {
+                        Message: '',
+                        Uid: 0,
+                        UserName: username,
+                        Cmd: 'list'
+                    }
+                }));
+                start_len = 1;
+            }
+            ws.send(JSON.stringify({
+                Online: {
+                    Number: 0,
+                    Cmd: "online",
+                }
+            }));
+        };
+        ws.onmessage = function (e) {
+            // Receives a message.
+            var data = JSON.parse(decoder.decode(e.data));
+            if (data.Hello != undefined) {
+                $("#container").append("<div class=\"row\" style='color: #EAA90B'>welcome " + data.Hello.Name + " 🌺 </div>");
+            }
+            if (data.UserInfo != undefined) {
+                var row_name = data.UserInfo.UserName;
+                row_name = $("#x").text(row_name).html();
+                var row_message = data.UserInfo.Message;
+                row_message = $("#x").text(row_message).html();
+                $("#container").append("<div class=\"row\">" + row_name + ':  ' + row_message + "</div>");
+            }else if (data.List != undefined) {
+                var arr = data.List.MessageJson;
+                $.each(arr.reverse(), function (index, item) {
+                    if (item != '') {
+                        var list = $.parseJSON(item);
+                        if (list) {
+                            var row_name = list.UserName;
+                            row_name = $("#x").text(row_name).html();
+                            var row_message = list.Message;
+                            row_message = $("#x").text(row_message).html();
+                            $("#container").append("<div class=\"row\">" + row_name + ':  ' + row_message + "</div>");
+                        }
+                    }
+                });
+            } else if (data.Online.Cmd != undefined) {
+                $("#online").html(data.Online.Number);
+            }
+            var len = $('#container').children('div').length;
+            if (len > 20) {
+                $('#container div:first').remove();
+            }
+
+        };
+        ws.onclose = function () {
+            console.log("closed");
+        };
+        $('#send').on('click', function () {
+            var data = $("#data").val();
+            data = $.trim(data).substr(0,80); // 用jQuery的trim方法删除前后空格
+            if (data == '') {// 判断是否是空字符串，而不是null
+                alert("输入不能为空!");
+                return false;
+            }
+            ;
+            ws.send(JSON.stringify({
+                UserInfo: {
+                    Message: data,
+                    Uid: 11,
+                    UserName: username,
+                    Cmd: "sendMessage",
+                }
+            }));
+            $("#data").val('');
+        });
+        $("textarea").keydown(function (event) {
+            if (event.keyCode == "13") {
+                $("#send").trigger("click");
+                event.preventDefault();
+            }
+        });
+        $("#savename").click(function () {
+            var name = $("#changename").val();
+            name = $.trim(name); // 用jQuery的trim方法删除前后空格
+            if (name != '') {// 判断是否是空字符串，而不是null
+                $.cookie('username', name);
+                window.location.reload();
+            }else{
+                $("#changename").focus();
+            }
+        });
+        $("#data").focus();
+        setInterval(function () {
+            ws.send(JSON.stringify({
+                Online: {
+                    Number: 0,
+                    Cmd: "online",
+                }
+            }));
+        }, 10000);
+    });
+</script>
+</body>
+</html>

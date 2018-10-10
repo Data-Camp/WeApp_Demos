@@ -1,0 +1,17 @@
+<view class="cartview">
+  <view class="shoppingitem">
+    <image class="item-choose" src="../../images/choose_p.png"></image>
+    <image class="item-cover" src="{{props.mainimg3}}"></image>
+    <view class="item-content">
+      <view class="item-title">{{props.productname}}</view>
+      <view class="item-bottom">
+        <view class="item-prize">￥{{props.originalprice}}</view>
+        <view class="action-btns" catchtap="handleAdd">
+          <image class="btn-minus action-btn" src="../../images/minus_p.png" ></image>
+          <text>{{props.sellStatus}}</text>
+          <image class="btn-plus action-btn" src="../../images/plus_n.png"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

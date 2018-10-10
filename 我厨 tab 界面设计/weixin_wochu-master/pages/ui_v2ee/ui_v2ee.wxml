@@ -1,0 +1,49 @@
+<!--index.wxml-->
+<view class="container">
+
+
+  <view class="selection">
+    <swiper class="ui_v2ee_swiper" indicator-dots="{{indicatorDots}}"
+      autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{imgUrls}}">
+        <swiper-item>
+          <image src="{{item}}" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>  
+
+  <view class="selection">
+    <view class="header">
+      <text class="text_left">精品推荐</text>  <text class="text_right">全部商品</text>
+    </view>
+
+    <view class="content">
+      <view class="content_item" wx:for="{{contentItems}}" bindtap="handleTapImage" id="这地方可以传参" >
+             <image src="../../images/img3.png" />
+             <view class="content_item_text"><text>图片标题,小毛请点</text></view>
+      </view>
+    </view>
+  </view>
+
+  <view class="selection">
+     <view class="header">
+        <text class="text_left">热门评测</text>  <text class="text_right">全部评测</text>
+     </view>
+
+     <view class="list_item" wx:for="{{listItems}}">
+        <view class="list_item_images">
+          <image src="../../images/img2.png" class="list_item_image"/>
+          <image src="../../images/IMG_0611.png" class="avatar"/>
+        </view>
+        
+        <view class="list_item_text">
+          <view class="list_item_text_title"><text>商品标题商品标题</text></view> 
+          <view class="list_item_text_content"><text >商品描述内容商品描述内容商品描述内容商品描述内容商品描述内容商品描述内容</text></view>
+        </view>
+     </view>
+    
+  </view>
+
+
+</view>

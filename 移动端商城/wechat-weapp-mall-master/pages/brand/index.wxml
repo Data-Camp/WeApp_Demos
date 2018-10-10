@@ -1,0 +1,15 @@
+<view class="container">
+    <block wx:for="{{brandList.brand}}">
+        <view class="brand_item">
+            <navigator url="../list/index?brand={{item.id}}&typeid={{item.typeid}}">
+                <image src="{{item.pic}}" class="pic"></image>
+                <view class="right_cont">
+                    <image src="{{item.logo}}" class="logo"></image>
+                    <text class="name">{{item.chinesename}}</text>
+                    <text class="brief">{{item.brief}}</text>
+                    <text class="price">￥{{item.minprice}}元/件起</text>
+                </view>
+            </navigator>
+        </view>
+    </block>
+</view>

@@ -1,0 +1,12 @@
+<view class="container">
+  <form bindsubmit="formSubmit">
+    <view class="editor-container">
+      <textarea name="feedback" placeholder="Hi, have any suggestions to tell us?" class="editor-text" placeholder-class="placeholder-class" auto-focus/>
+    </view>
+  </form>
+  <view class="tools flex-row">
+    <view class="tool flex-row">
+      <image class="tool-icon" src="../../assets/emotion.png"></image>
+    </view>
+  </view>
+</view>

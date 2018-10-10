@@ -1,0 +1,7 @@
+
+
+<template name="msgItem">
+	<view>
+		这里是模版内容
+	</view>
+</template>

@@ -1,0 +1,19 @@
+<view class="container">
+	<view class="input-list">
+		<view class="input-item">
+			<text class="input-item-label">联系人</text>
+			<view class="input-item-content">
+				<input type="text" auto-focus placeholder="请输入您的姓名" bindinput="inputName"></input>
+			</view>
+		</view>
+		<view class="input-item">
+			<text class="input-item-label">手机号码</text>
+			<view class="input-item-content">
+				<input type="idcard" placeholder="请输入您的手机号码" maxlength="11" bindinput="inputPhone"></input>
+			</view>
+		</view>
+	</view>
+	<view class="btn-submit">
+		<button class="btn-block btn-orange" bindtap="reserveSubmit" disabled="{{submited}}">确认预约</button>
+	</view>
+</view>

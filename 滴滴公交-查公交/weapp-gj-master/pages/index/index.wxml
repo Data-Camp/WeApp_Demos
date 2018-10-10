@@ -1,0 +1,6 @@
+<!--index.wxml-->
+<view  class="container">
+    <navigator url="../suggest/suggest"  hover-class="navigator-hover">
+        <input placeholder="搜地点，查公交" />
+    </navigator>
+</view>

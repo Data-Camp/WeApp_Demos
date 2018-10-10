@@ -1,0 +1,25 @@
+<view class="container">
+  <view class="find-list" wx:for="{{findList}}" wx:key="{{index}}" wx:for-item="items">
+    <view class="find-items">
+      <image src="../../images/icon_find_car@2x.png" mode="scollFill center" class="find-icon"></image>
+      <text class="series">{{items.series}} {{items.market_price}}万</text>
+      <text wx:if="{{items.find_type > 1}}" class="find-type">竞价中</text>
+    </view>
+    <view class="find-items">
+      <text class="font-type">{{items.type}}</text>
+      <text class="font-type-1">{{items.oncard_province}} {{items.oncard_city}}</text>
+    </view>
+    <view class="find-items">
+      <view class="font-type">
+        <text wx:if="{{items.channel == 1}}" class="channel">中规</text>
+        <text>{{items.out_color}}/{{items.in_color}}</text>
+      </view>
+      <view class="font-type-1">
+        <text>剩:{{items.surplus_time}}</text>
+      </view>
+    </view>
+    <view class="find-items">
+      <text wx:if="{{items.earnest_money > 0}}" class="earnest-money">己冻结诚意金{{items.earnest_money}}元</text>
+    </view>
+  </view>
+</view>

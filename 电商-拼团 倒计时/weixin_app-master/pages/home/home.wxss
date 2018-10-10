@@ -1,0 +1,138 @@
+page{
+    height:100%;
+    width:100%;
+}
+/*顶部搜索条*/
+.top-search{
+    position:fixed;
+    left:0;
+    right:0;
+    top:0;
+    z-index:1000;
+}
+.search-box{
+    position: relative;
+}
+.search-box::before,.search-box::after{
+    content:"";
+    position:absolute;
+    display:inline-block;
+    top:0;
+    height:60rpx;
+    width:60rpx;
+}
+.search-box::before{
+    left:20rpx;
+    background:url(./images/top_logo.png) no-repeat center;
+    background-size:contain;
+}
+.search-box::after{
+    right:20rpx;
+    background:url(./images/top_provider.png) no-repeat center;
+    background-size:contain;
+}
+.search-input{
+    box-sizing:border-box;
+    width:70%;
+    height:60rpx;
+    line-height: 60rpx;
+    margin:10rpx auto; 
+    padding:0 10rpx;
+    background:#fff;
+    border-radius:30rpx;
+    font-size:28rpx;
+    color:#aaa;
+}
+.search-input icon,.search-input text{
+    margin-left:16rpx;
+}
+/*上下滚动*/
+.full-screen{
+    height:100%;
+}
+/*分类*/
+.sorts-wrap{
+    font-size:28rpx;
+    text-align:center;
+}
+.sorts-wrap .flex-wrap{
+    margin:10rpx 0 20rpx 0;
+}
+.sorts-wrap navigator image{
+    width:80rpx;
+    height:80rpx;
+}
+.sorts-wrap navigator text{
+    display: block;
+}
+/*拼团列表*/
+.group-item .imgBox{
+    position:relative;
+}
+.group-item .imgBox .group-status{
+    position: absolute;
+    width: 66px;
+    height: 20px;
+    line-height: 20px;
+    right: 30px;
+    top: 0;
+    background: #d52831;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+}
+.group-item.time-will .imgBox .group-status,.group-item.time-will .imgBox .timeBox{
+    background:#7555f4;
+}
+.group-item.time-end .imgBox .group-status,.group-item.time-end .imgBox .timeBox{
+    background:#aaa;
+}
+.group-item .imgBox .group-status::after{
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    border: 5px solid #d52831;
+    border-width: 0 33px 5px 33px;
+    border-bottom-color: transparent;
+}
+.group-item.time-will .imgBox .group-status::after{
+    border-color:#7555f4;
+    border-bottom-color: transparent;
+}
+.group-item.time-end .imgBox .group-status::after{
+    border-color:#aaa;
+    border-bottom-color: transparent;
+}
+.group-item .img-wrap image{
+    height:375rpx;
+}
+.group-item .imgBox .timeBox{
+    position: absolute;
+    left: 12%;
+    right: 12%;
+    bottom: -15px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 15px;
+    background: #d52831;
+    color: #fff;
+    z-index: 1;
+}
+.group-item .imgBox .timeBox .time-item{
+    background: #000;
+    padding: 0 2px;
+    margin: 0 2px;
+    border-radius: 4px;
+}
+.group-item .group-des .h4{
+    margin: 25px 0 10px 10px;
+    font-size: 16px;
+}
+.group-item .group-des .des{
+    margin:10px;
+    font-size:14px;
+    line-height:1.4;
+}
+

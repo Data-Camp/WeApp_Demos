@@ -1,0 +1,110 @@
+.m-detail{
+    width: 95%;
+    margin: 0 auto;
+    background-color: #242f34;
+    border-radius: 3rpx;
+    color: #fff;
+    padding: 20rpx;
+}
+
+.m-name{
+    display: flex;
+    flex-direction: row;
+    font-size: 16px;
+}
+
+.m-name-left{
+    width: 60%;
+}
+
+.m-name-right{
+    width: 40%;
+}
+
+.m-name-right{
+    text-align: left;
+}
+
+.m-green{
+    color: #0feb00;
+}
+
+.m-block{
+    margin: 40rpx auto;
+}
+
+.m-plist{
+    border-top: 1px solid #fff;
+    width: 98%;
+    padding: 10rpx;
+}
+
+.m-plist-title{
+    padding: 10rpx 0 20rpx 0;
+    font-size: bold;
+    text-align: left;
+}
+
+.m-plist-head{
+    padding: 5rpx 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.m-plist-body{
+    display: flex;
+    flex-direction: row;
+}
+
+.m-plist-ceil{
+    width: 30%;
+    text-align: left;
+}
+
+.m-plist-body .m-plist-ceil{
+    font-size: 14px;
+}
+
+.m-cpu-list{
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+}
+
+.m-cpu-single-20,
+.m-cpu-single-30{
+    padding: 5rpx;
+}
+
+.m-cpu-single-20{
+    width: 20%;
+}
+
+.m-cpu-single-30{
+    width: 30%;
+}
+
+.m-mem-percent,
+.m-cpu-percent{
+    text-align: left;
+    font-size: 14px;
+}
+
+.m-mem{
+    display: flex;
+    flex-direction: column;
+}
+
+.m-mem-body{
+    display: flex;
+    flex-direction: row;
+}
+
+.m-load{
+    font-size: 14px;
+}
+
+.m-mem-single{
+    width: 33%;
+    text-align: left;   
+}

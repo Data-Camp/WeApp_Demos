@@ -1,0 +1,22 @@
+<view class="list">
+    <form bindsubmit="formSubmit">
+        <view class="item">
+            <label>收货人</label>
+            <input value="{{(address != '')?address.name:''}}" name="name" placeholder="名字"/>
+        </view>
+        <view class="item">
+            <label>手机号</label>
+            <input value="{{(address != '')?address.tel:''}}" type="idcard" name="tel" placeholder="11位手机号"/>
+        </view>
+        <view class="item">
+            <label>详细地址</label>
+            <input value="{{(address != '')?address.address:''}}" name="address" placeholder="详细地址"></input>    
+        </view>
+        <view class="item bt">
+            <button formType="submit" class="btn">{{(address != '')?'修改':'添加'}}</button>
+            <block wx:if="{{address != ''}}" >
+                <button bindtap="deleteAddress" class="btn">删除</button>
+            </block>
+        </view>
+    </form>
+</view>

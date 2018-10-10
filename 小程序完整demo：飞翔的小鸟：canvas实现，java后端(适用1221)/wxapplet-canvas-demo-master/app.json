@@ -1,0 +1,37 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/list/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Flappy Bird",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "borderStyle": "white",
+    "color": "#000000",
+    "selectedColor": "#B45F06",
+    "backgroundColor": "#1DC6F1",
+    "list": [
+      {
+        "iconPath": "images/1.1.png",
+        "selectedIconPath": "images/1.2.png",
+        "pagePath": "pages/index/index",
+        "text": "游戏"
+      },
+      {
+        "iconPath": "images/2.1.png",
+        "selectedIconPath": "images/2.2.png",
+        "pagePath": "pages/list/index",
+        "text": "排行榜"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

@@ -1,0 +1,65 @@
+/* pages/course/course.wxss */
+.courses{
+  width:750rpx;
+  height: 1050rpx;
+  justify-content: space-around;
+}
+/*left*/
+.courses-left{
+    width:25%;
+    padding-top: 20rpx;
+    background-color: rgba(217,217,217,0.3);
+}
+.courses-left view{
+    box-sizing: border-box;
+    width:100%;
+    display: block;
+    line-height: 60rpx;
+    font-size: 24rpx;
+    padding-left: 5rpx;
+}
+.courses-left text{
+    padding-left: 15rpx;
+}
+.active{
+    background:url("../../images/section_title_tip.png") left no-repeat;
+    background-size: 5rpx 60rpx;
+}
+.active text{
+    display: block;
+    background-color: #FFF;
+}
+/*right*/
+.courses-right{
+    width:75%;
+    box-sizing: border-box;
+    padding:20rpx 5% 0 5%;
+}
+.rcmd-course navigator{
+    width:100%;
+}
+.rcmd-course image{
+    width:100%;
+    height: 160rpx;
+}
+.couList{
+    font-size: 24rpx;
+    line-height: 48rpx;
+    padding-top: 30rpx;
+}
+.couList text{
+    display: block;
+    color:#000;
+}
+.couList navigator{
+    color:#999;
+    display: inline-block;
+    padding-right: 50rpx;
+}
+
+
+
+
+
+
+

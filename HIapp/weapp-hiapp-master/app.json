@@ -1,0 +1,39 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/contacts/contacts",
+    "pages/settings/settings",
+    "pages/about/about",
+    "pages/feedback/feedback",
+    "pages/profile/profile",
+    "pages/message/message"
+  ],
+  "window":{
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ff9630",
+    "navigationBarTitleText": "HiApp",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#929292",
+    "selectedColor": "#ff9630",
+    "backgroundColor": "#f7f7f8",
+    "borderStyle": "white",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "Home",
+      "iconPath": "assets/home-outline.png",
+      "selectedIconPath": "assets/home-selected.png"
+    }, {
+      "pagePath": "pages/contacts/contacts",
+      "text": "Contacts",
+      "iconPath": "assets/contacts-outline.png",
+      "selectedIconPath": "assets/contacts-selected.png"
+    }, {
+      "pagePath": "pages/settings/settings",
+      "text": "Settings",
+      "iconPath": "assets/settings-outline.png",
+      "selectedIconPath": "assets/settings-selected.png"
+    }]
+  }
+}

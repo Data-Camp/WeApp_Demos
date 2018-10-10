@@ -1,0 +1,37 @@
+/** list.wxss **/
+
+.item-container {
+  margin: 10rpx 20rpx;
+  position: relative;
+}
+
+.cover {
+  width: 100%;
+  height: 400rpx;
+  display: block;
+}
+
+.desc {
+  margin: 10rpx 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20rpx;
+  border-bottom: 1px solid #E5E7ED;
+}
+
+.desc .left {
+}
+
+.desc .right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.right image{
+  display: block;
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 30rpx;
+}

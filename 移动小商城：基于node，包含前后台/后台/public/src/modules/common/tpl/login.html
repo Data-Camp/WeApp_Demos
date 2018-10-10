@@ -1,0 +1,26 @@
+<ion-modal-view>
+	<ion-header-bar>
+		<a class="button" on-tap="app.modal.close()">返回</a>
+		<h1 class="title">重新登录</h1>
+	</ion-header-bar>
+	<ion-content>
+		<form name="form" ng-submit="app.submitForm(form.$valid)" novalidate>
+			<div class="list">
+				<div class="item item-positive">
+					<h1 class="light text-center">user login</h1>
+				</div>
+				<label class="item item-input">
+					<i class="icon ion-ios-person-outline positive"></i>
+					<input input-clear name="username" type="text" placeholder="请输入您的用户名" ng-model="app.form.username" required>
+				</label>
+				<label class="item item-input">
+					<i class="icon ion-ios-unlocked-outline positive"></i>
+					<input input-clear name="password" type="password" placeholder="请输入您的密码" ng-model="app.form.password" required>
+				</label>
+			</div>
+			<div class="padding-left padding-right">
+				<button type="submit" class="button button-block button-positive">立即登录</button>
+			</div>
+		</form>
+	</ion-content>
+</ion-modal-view>

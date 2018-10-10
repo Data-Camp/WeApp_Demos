@@ -1,0 +1,47 @@
+page {
+    font-family: -apple-system-font, 'Helvetica Neue', Helvetica, 'Microsoft YaHei', sans-serif;
+    font-family:;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+}
+
+.ft10{
+    font-size:10px;
+}
+
+
+.fl{
+    float:left;
+}
+
+.fr{
+    float:right;
+}
+
+.tips {
+    font-size: 18px;
+    text-align: center;
+    padding: 50px;
+    color: #ccc;
+    font-weight:100;
+}
+
+.tips image {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.tips image,
+.tips text {
+    vertical-align: middle;
+}
+
+.hide{
+    display:none!important;
+}
+
+.show{
+    display:block;
+}

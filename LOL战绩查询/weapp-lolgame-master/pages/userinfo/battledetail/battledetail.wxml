@@ -1,0 +1,169 @@
+<!--index.wxml-->
+<view class="container">
+	<view class="header-fix">
+		<view style="text-align:left"><text>开始时间 </text><text>{{start_time}}</text></view>
+		<view style="text-align:center"><text>游戏时长 </text><text>{{game_time}}</text></view>
+		<view style="text-align:right"><text>模式 </text><text>{{game_type[game_detail.game_type].name}}</text></view>
+	</view>
+	<view class="winner">
+		<view class="winner-info">
+			<view class="winner-info-tag"><text>胜利方</text></view>
+			<view class="winner-info-data">
+				<image src="../../../img/battle/battle_kill_icon_win.png"></image>
+				<text> {{win[0]}} </text>
+				<image src="../../../img/battle/battle_death_icon_win.png"></image>
+				<text> {{win[1]}} </text>
+				<image src="../../../img/battle/battle_assist_icon_win.png"></image>
+				<text> {{win[2]}} </text>
+				<image src="../../../img/battle/battle_money_icon_win.png"></image>
+				<text> {{win[3]}} </text>
+			</view>
+		</view>
+		<block wx:for="{{game_detail.gamer_records}}">
+			<block wx:if="{{item.win == 1}}">
+				<view class="winner-detail" bindtap="detailTap" data-index="{{index}}">
+					<view class="winner-detail-img">
+						<image src="http://cdn.tgp.qq.com/pallas/images/champions_id/{{item.champion_id}}.png"></image>
+						<view class="winner-detail-img-level">
+							<text>Lv{{item.level}}</text>
+						</view>
+					</view>
+					
+					<view class="winner-detail-name">
+						<view class="winner-detail-name-left">
+							<a style="display:block;text-decoration:underline;padding-bottom:6px;">{{item.name}}</a>
+							<view class="left-item">
+								<image src="http://ddragon.leagueoflegends.com/cdn/6.12.1/img/item/{{item.item0}}.png"></image>
+								<image src="http://ddragon.leagueoflegends.com/cdn/6.12.1/img/item/{{item.item1}}.png"></image>
+								<image src="http://ddragon.leagueoflegends.com/cdn/6.12.1/img/item/{{item.item2}}.png"></image>
+								<image src="http://ddragon.leagueoflegends.com/cdn/6.12.1/img/item/{{item.item3}}.png"></image>
+								<image src="http://ddragon.leagueoflegends.com/cdn/6.12.1/img/item/{{item.item4}}.png"></image>
+								<image src="http://ddragon.leagueoflegends.com/cdn/6.12.1/img/item/{{item.item5}}.png"></image>
+								<image src="http://ddragon.leagueoflegends.com/cdn/6.12.1/img/item/{{item.item6}}.png"></image>
+							</view>
+							<view>
+								<view class="left-tag">
+									<block wx:for="{{item.battle_tag_list}}" wx:for-item="tag">
+										<image src="../../../img/battle/battle_tag_icon{{tag.tag_id}}.png"></image>
+									</block>
+								</view>
+							</view>
+						</view>
+						<view style="flex:1;text-align: right"><text>{{item.champions_killed}}/{{item.num_deaths}}/{{item.assists}}</text></view>
+					</view>
+				</view>
+				<view class="winner-data {{display[index]}}">
+					<view class="winner-data-1">
+						<view style="flex:1"><text>补兵 {{item.minions_killed}}</text></view>
+						<view style="flex:1"><text>金钱 {{item.gold_earned}}</text></view>
+						<view style="flex:1"><text>最大连杀 {{item.largest_killing_spree}}</text></view>
+					</view>
+					<view class="winner-data-1">
+						<view style="flex:1"><text>经验 {{item.exp}}</text></view>
+						<view style="flex:1"><text>推塔 {{item.turrets_killed}}</text></view>
+						<view style="flex:1"><text>最大多杀 {{item.largest_multi_kill}}</text></view>
+					</view>
+					<view class="winner-data-1">
+						<view style="flex:1"><text>总治疗 {{item.total_health}}</text></view>
+						<view style="flex:1"><text>输出伤害 {{item.total_damage_dealt}}</text></view>
+						<view style="flex:1"><text>承受伤害 {{item.total_damage_taken}}</text></view>
+					</view>
+					<view class="winner-data-2">
+						<text> 给对方英雄造成的总伤害 {{item.total_damage_dealt_to_champions}}</text>
+					</view>
+					<view class="winner-data-2">
+						<text> 给对方英雄造成的物理伤害 {{item.physical_damage_dealt_to_champions}}</text>
+					</view>
+					<view class="winner-data-2">
+						<text> 给对方英雄造成的魔法伤害 {{item.magic_damage_dealt_to_champions}}</text>
+					</view>
+					<view class="winner-data-2">
+						<text>对局评价分 {{item.game_score}}  </text>
+						<image src="../../../img/battle/Summoner_{{item.summon_spell1_id}}.png"></image>
+						<image src="../../../img/battle/Summoner_{{item.summon_spell2_id}}.png" style="padding-left: 10px;"></image>
+					</view>
+				</view>
+			</block>
+		</block>
+
+		<view class="winner-info loser-info">
+			<view class="winner-info-tag loser-info-tag"><text>失败方</text></view>
+			<view class="winner-info-data">
+				<image src="../../../img/battle/battle_kill_icon_lose.png"></image>
+				<text> {{lost[0]}} </text>
+				<image src="../../../img/battle/battle_death_icon_lose.png"></image>
+				<text> {{lost[1]}} </text>
+				<image src="../../../img/battle/battle_assist_icon_lose.png"></image>
+				<text> {{lost[2]}} </text>
+				<image src="../../../img/battle/battle_money_icon_lose.png"></image>
+				<text> {{lost[3]}} </text>
+			</view>
+		</view>
+		<block wx:for="{{game_detail.gamer_records}}">
+			<block wx:if="{{item.win == 2}}">
+				<view class="winner-detail" bindtap="detailTap" data-index="{{index}}">
+					<view class="winner-detail-img">
+						<image src="http://cdn.tgp.qq.com/pallas/images/champions_id/{{item.champion_id}}.png"></image>
+						<view class="winner-detail-img-level">
+							<text>Lv{{item.level}}</text>
+						</view>
+					</view>
+					
+					<view class="winner-detail-name">
+						<view class="winner-detail-name-left">
+							<a style="display:block;text-decoration:underline;padding-bottom:6px;">{{item.name}}</a>
+							<view class="left-item">
+								<image src="http://ddragon.leagueoflegends.com/cdn/6.12.1/img/item/{{item.item0}}.png"></image>
+								<image src="http://ddragon.leagueoflegends.com/cdn/6.12.1/img/item/{{item.item1}}.png"></image>
+								<image src="http://ddragon.leagueoflegends.com/cdn/6.12.1/img/item/{{item.item2}}.png"></image>
+								<image src="http://ddragon.leagueoflegends.com/cdn/6.12.1/img/item/{{item.item3}}.png"></image>
+								<image src="http://ddragon.leagueoflegends.com/cdn/6.12.1/img/item/{{item.item4}}.png"></image>
+								<image src="http://ddragon.leagueoflegends.com/cdn/6.12.1/img/item/{{item.item5}}.png"></image>
+								<image src="http://ddragon.leagueoflegends.com/cdn/6.12.1/img/item/{{item.item6}}.png"></image>
+							</view>
+							<view>
+								<view class="left-tag">
+									<block wx:for="{{item.battle_tag_list}}" wx:for-item="tag">
+										<image src="../../../img/battle/battle_tag_icon{{tag.tag_id}}.png"></image>
+									</block>
+								</view>
+							</view>
+						</view>
+						<view style="flex:1;text-align: right"><text>{{item.champions_killed}}/{{item.num_deaths}}/{{item.assists}}</text></view>
+					</view>
+				</view>
+				<view class="winner-data {{display[index]}}">
+					<view class="winner-data-1">
+						<view style="flex:1"><text>补兵 {{item.minions_killed}}</text></view>
+						<view style="flex:1"><text>金钱 {{item.gold_earned}}</text></view>
+						<view style="flex:1"><text>最大连杀 {{item.largest_killing_spree}}</text></view>
+					</view>
+					<view class="winner-data-1">
+						<view style="flex:1"><text>经验 {{item.exp}}</text></view>
+						<view style="flex:1"><text>推塔 {{item.turrets_killed}}</text></view>
+						<view style="flex:1"><text>最大多杀 {{item.largest_multi_kill}}</text></view>
+					</view>
+					<view class="winner-data-1">
+						<view style="flex:1"><text>总治疗 {{item.total_health}}</text></view>
+						<view style="flex:1"><text>输出伤害 {{item.total_damage_dealt}}</text></view>
+						<view style="flex:1"><text>承受伤害 {{item.total_damage_taken}}</text></view>
+					</view>
+					<view class="winner-data-2">
+						<text> 给对方英雄造成的总伤害 {{item.total_damage_dealt_to_champions}}</text>
+					</view>
+					<view class="winner-data-2">
+						<text> 给对方英雄造成的物理伤害 {{item.physical_damage_dealt_to_champions}}</text>
+					</view>
+					<view class="winner-data-2">
+						<text> 给对方英雄造成的魔法伤害 {{item.magic_damage_dealt_to_champions}}</text>
+					</view>
+					<view class="winner-data-2">
+						<text>对局评价分 {{item.game_score}}  </text>
+						<image src="../../../img/battle/Summoner_{{item.summon_spell1_id}}.png"></image>
+						<image src="../../../img/battle/Summoner_{{item.summon_spell2_id}}.png" style="padding-left: 10px;"></image>
+					</view>
+				</view>
+			</block>
+		</block>
+	</view>
+</view>

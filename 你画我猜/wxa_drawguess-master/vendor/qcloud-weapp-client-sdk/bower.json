@@ -1,0 +1,32 @@
+{
+  "name": "qcloud-weapp-client-sdk",
+  "description": "QCloud 微信小程序客户端 SDK",
+  "main": "index.js",
+  "authors": [
+    "Tencent Cloud"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "qcloud",
+    "weapp",
+    "wechat",
+    "sdk",
+    "client",
+    "auth",
+    "websocket"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "typings.json",
+    "jsconfig.json",
+    "package.json",
+    ".npmignore",
+    ".travis.yml",
+    ".gitignore"
+  ]
+}

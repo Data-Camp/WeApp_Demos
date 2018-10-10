@@ -1,0 +1,12 @@
+<!--shelf.wxml-->
+<view class="container">
+
+  <audio poster="{{poster}}" name="{{name}}" author="{{author}}" src="{{src}}" action="{{action}}" controls loop></audio>
+
+<view class="buttons">
+<button type="default" bindtap="audioPlay" plain="true" class="button1">播放</button>
+<button type="default" bindtap="audioPause" plain="true" class="button1">暂停</button>
+<button type="default" bindtap="audio14" plain="true" class="button1">设置当前播放时间为14秒</button>
+<button type="default" bindtap="audioStart" plain="true" class="button1">回到开头</button>
+</view>
+</view>

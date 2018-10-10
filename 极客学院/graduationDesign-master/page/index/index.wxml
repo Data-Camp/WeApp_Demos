@@ -1,0 +1,16 @@
+<view wx:for="{{dataList}}" wx:for-item="itemList"  wx:key="item.id">
+    <template is="bookList" data="{{...itemList}}"/>
+</view>
+
+
+<template name="bookList">
+    <view class="book-item" data-id="{{id}}" bindtap="previewId">
+        <view class="book-img">
+            <image src="{{background_img}}"></image>
+            <image src="{{logo_img}}"></image>
+        </view>
+        <view class="book-name">{{name}}</view>
+        <view class="book-count">{{article_count}} 章</view>
+        <text class="book-uv">{{uv}} 人阅读</text>
+    </view>
+</template>

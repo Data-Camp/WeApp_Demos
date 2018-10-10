@@ -1,0 +1,49 @@
+<view class="container">
+    <view class="detail_cont">
+        <text id="detail">奥迪品牌简介</text>
+    </view>
+<!--汽车简介内容-->
+    <view class="info_cont">
+        <text id="info">
+            奥迪(Audi)是一个国际著名豪华汽车品牌，作为高技术水平、质量标准、创新能力、以及经典车型款式的代表，奥迪是世界最成功的汽车品牌之一。公司总部设在德国的英戈尔施塔特。
+        </text>
+    </view>
+<!--汽车图片-->
+    <view class="car_cont">
+        <swiper autoplay="true" duration="{{duration}}" class="car_pic">
+            <block wx:for="{{imgUrls}}">
+                <swiper-item>
+                    <image src="{{item}}" style="width: 100%; height: 100%"></image>
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+<!--汽车价格&车名-->
+    <view class="name_cont">
+        <text class="car_name">奥迪R8</text>
+        <text class="car_price">厂家指导价：182.3 - 253.8万</text>
+    </view>
+<!--汽车配置-->
+    <view class="car_detail">
+        <text>车型名称 : 奥迪R8 V10 Performance</text>
+    </view>
+    <view class="car_detail">
+        <text>级别 : 跑车</text>
+    </view>
+    <view class="car_detail">
+        <text>发动机 : 5.2LL449KW</text>
+    </view>
+    <view class="car_detail">
+        <text>车身结构 : 2门 2座 跑车</text>
+    </view>
+    <view class="car_detail">
+        <text>最高车速 : 330(km/h)</text>
+    </view>
+
+    <button id="btn" size="mini" type="primary" loading="{{btn_load}}" plain="{{plain}}" bindtap="setLoad">查看更多配置</button>
+
+    <loading hidden="{{ hidden }}">
+        Loading...
+    </loading>
+
+</view>

@@ -1,0 +1,33 @@
+.wrap{
+    font-size: 30px;
+}
+/** 修改默认的navigator点击态 **/
+.navigator-hover {
+    color:blue;
+}
+/** 自定义其他点击态样式类 **/
+.other-navigator-hover {
+    color:red;
+}
+.menu{
+    position: absolute;
+    top:1px;
+    left:1px;
+    background: url(../resource/menu.png) no-repeat center center;
+    border-radius: 5px;
+    font-size: 13px;
+    height: 22px;
+    width:50px;
+    line-height: 20px;
+    color: #fff;
+    text-align: center;
+}
+.imgBox{
+    text-align: center;
+}
+.btnBox{
+    margin:10px 0;
+}
+.textBox{
+    margin: 50px 0;
+}

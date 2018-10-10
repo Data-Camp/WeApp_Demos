@@ -1,0 +1,41 @@
+
+<view wx:if="{{address == ''}}" class="toAddress" bindtap="toAddress">
+    <text >添加地址</text>
+</view>
+<view class="header" wx:else>
+      <view class="distribution">配送信息</view>
+      <view class="address" bindtap="toAddress">
+        <view class="user">
+            <text class="name">{{address.username}}</text>
+            <text class="tel">{{address.mobile}}</text>
+        </view>
+        <view class="ress">{{address.address}}</view>
+      </view>
+      <view class="xian xian2"></view>
+</view>
+
+<view class="box">
+  <text class="title">订单清单</text>
+  <view class="list">
+    <block wx:for="{{allGoods}}">
+      <view class="item">
+        <text class="left">{{item.name}}(x{{item.buycount}})</text>
+        <text class="right">¥{{item.pay}}</text>
+      </view>
+    </block>
+    <view class="fot">
+      <text class="left">实际支付</text>
+      <text class="right">¥{{sumPrice}}</text>
+    </view>
+  </view>
+</view>
+
+<view class="footer">
+  <view class="left">
+    <text class="p">总价:</text>
+    <text class="span">¥{{sumPrice}}</text>
+  </view>
+  <view class="right">
+    <button bindtap="settlement">支付</button>
+  </view>
+</view>

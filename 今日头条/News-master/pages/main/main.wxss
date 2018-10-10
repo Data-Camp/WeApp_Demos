@@ -1,0 +1,73 @@
+/*menubar*/
+.menubar{
+    height: 80rpx;
+    background: #f4f5f6;
+    position: fixed;
+    left:0;
+    top:0;
+    z-index: 99;
+    white-space: nowrap;
+    display: flex;
+}
+.menu_more{
+    width:80rpx;
+    height: 80rpx;
+    background: #f4f5f6;
+    position: fixed;
+    right:0;
+    top:0;
+    z-index: 9;
+}
+.menu_more image{
+    width:50rpx;
+    height: 50rpx;
+    position: absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    margin:auto;
+}
+.menu{
+    width:1070rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    background: #f4f5f6;
+}
+.menu text{
+    display: inline-block;
+    width:100rpx;
+    font-size: 30rpx;
+    height: 100%;
+    text-align: center;
+}
+.menu text.active{
+    color:#d43d3d;
+}
+
+/*content*/
+.content{
+    padding-top:80rpx;
+}
+.details{
+    overflow: hidden;
+    margin:0 30rpx;
+    padding:30rpx 0;
+    border-bottom:1px solid #e3e3e3;
+}
+.title{
+    display: block;
+    font-size: 34rpx;
+    margin-bottom:20rpx;
+}
+.picBox image{
+    display: block;
+}
+.info{
+    margin-top:10rpx;
+    font-size: 22rpx;
+    color:#999;
+}
+.info .author{
+    padding-right:20rpx;
+}

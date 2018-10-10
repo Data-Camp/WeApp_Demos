@@ -1,0 +1,14 @@
+<view class="page">
+  <view class="page__hd">
+    <text class="page__title">progress</text>
+    <text class="page__desc">进度条</text>
+  </view>
+  <view class="page__bd">
+    <view class="section section_gap">
+      <progress percent="20" show-info/>
+      <progress percent="40" active/>
+      <progress percent="60" stroke-width="10"/>
+      <progress percent="80" color="#10AEFF"/>
+    </view>
+  </view>
+</view>

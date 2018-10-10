@@ -1,0 +1,48 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/card/card",
+    "pages/webmon/webmon",
+    "pages/ipaddress/ipaddress",
+    "pages/weather/weather",
+    "pages/drive/drive",
+    "pages/parities/parities",
+    "pages/history/history",
+    "pages/qqtest/qqtest",
+    "pages/almanac/almanac",
+    "pages/constellation/constellation",
+
+    "pages/logs/logs"
+  ],
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "images/tabbar/icon_home.png",
+      "selectedIconPath" : "images/tabbar/icon_home_selected.png"
+    },{
+      "pagePath": "pages/logs/logs",
+      "text": "日志",
+      "iconPath": "images/tabbar/icon_enshrine.png",
+      "selectedIconPath" : "images/tabbar/icon_enshrine_selected.png"
+    },{
+      "pagePath": "pages/index/index",
+      "text": "我的",
+      "iconPath": "images/tabbar/icon_member.png",
+      "selectedIconPath" : "images/tabbar/icon_member_selected.png"
+    }]
+  },
+
+  
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "window":{
+    "backgroundTextStyle":"#019DD6",
+    "navigationBarBackgroundColor": "#019DD6",
+    "navigationBarTitleText": "首页",
+    "navigationBarTextStyle":"while"
+  },
+  "debug":true
+}

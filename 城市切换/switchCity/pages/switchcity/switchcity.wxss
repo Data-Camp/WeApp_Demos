@@ -1,0 +1,55 @@
+.searchLetter{
+    position: fixed;
+    right: 0;
+    width: 40px;
+    height: 100%;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    color: #666;
+    z-index: 1
+}
+.searchLetter view{
+    height: 70rpx;
+}
+.touchClass{
+    background-color: rgba(0, 0, 0,0.5);
+    color: #fff;
+}
+.showSlectedLetter{
+    background-color: rgba(0, 0, 0,0.5);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top:50%;
+    left: 50%;
+    margin: -50px;
+    width: 100px;
+    height: 100px;
+    border-radius:10px; 
+    font-size: 26px;
+    z-index: 1
+}
+.selection{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+.item_letter{
+    display: flex;
+    background-color: #f8f8f8;
+    height: 30px;
+    padding-left: 10px;
+    align-items: center;
+}
+.item_city{
+    display: flex;
+    background-color: #fff;
+    height: 40px;
+    padding-left: 10px;
+    align-items: center;
+    border-bottom: 1px solid #f8f8f8
+}

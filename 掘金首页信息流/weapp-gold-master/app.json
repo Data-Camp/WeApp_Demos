@@ -1,0 +1,12 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/entry/entry"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarTextStyle": "white",
+    "navigationBarBackgroundColor": "#006cff",
+    "navigationBarTitleText": "掘金"
+  }
+}

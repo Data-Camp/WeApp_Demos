@@ -1,0 +1,9 @@
+#recpage{background-color: #fbfcfd}
+#rec_header{padding: 20rpx;display: flex; align-items: center;display: none}
+#rch_img,#rch_img image{width: 160rpx;height:160rpx;}
+#rch_arrow{width:40rpx;text-align: center;}
+#rch_arrow image{width: 24rpx;height:42rpx;}
+#rch_info{padding-left: 20rpx;font-size:24rpx;color: #999;line-height: 2;width: 100%}
+#rchi_name{color: #333;font-size: 30rpx;display: block}
+
+

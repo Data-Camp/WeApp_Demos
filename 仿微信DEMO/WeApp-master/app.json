@@ -1,0 +1,55 @@
+{
+  "pages": [  
+    "pages/wechat/wechat",
+    "pages/note/note",
+    "pages/find/find",
+    "pages/mine/mine",
+    "pages/message/message",
+    "pages/audio/audio",
+    "pages/info/info",  
+    "pages/newfriend/newfriend",
+    "pages/moments/moments",        
+    "pages/picker/picker", 
+    "pages/upload/upload",
+    "pages/ws/ws",     
+    "pages/index/index",        
+    "pages/logs/logs"
+  ],
+  "window":{
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "",
+    "backgroundColor": "#eee",
+    "backgroundTextStyle": "dark"
+  },
+  "tabBar": {
+    "backgroundColor":"#333",
+    "selectedColor":"red",
+    "list": [{
+      "pagePath": "pages/wechat/wechat",
+      "iconPath":"image/wechat.png",
+      "selectedIconPath":"image/wechat_2.png",
+      "text": "微信"
+    }, {
+      "pagePath": "pages/note/note",
+      "iconPath":"image/note.png",
+      "selectedIconPath":"image/note_2.png",
+      "text": "通讯录"
+    }, {
+      "pagePath": "pages/find/find",
+      "iconPath":"image/find.png",
+      "selectedIconPath":"image/find_2.png",
+      "text": "发现"
+    }, {
+      "pagePath": "pages/mine/mine",
+      "iconPath":"image/mine.png",
+      "selectedIconPath":"image/mine_2.png",
+      "text": "我"
+    }]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

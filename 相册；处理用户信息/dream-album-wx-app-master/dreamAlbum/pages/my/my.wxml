@@ -1,0 +1,25 @@
+<view class="userinfo">
+  <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+  <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+</view>
+<!--顶部切换-->
+<view class="swiper-tab">
+  <view wx:for="{{barTitle}}" wx:key="bar" data-currenttab="{{item.currentTab}}" class="swiper-tab-list {{currentTab==item.currentTab?'on':''}}"  bindtap="swichNav">{{item.name}}</view>
+</view>
+
+<!--模版列表-->
+<view class="mobileListBorder">
+     <scroll-view scroll-y="true"  wx:if="{{items.length>0}}" style="height:400px;">
+        <view class="main">
+            <view wx:for="{{items}}" wx:key="{{itemsss}}" class="subMain">
+                <view class="subMainImage">
+                    <image src="../../image/background-down.png" class="downImage"/>
+                    <image src="../../image/background-up.png" class="upImage"/>
+                    <image class="images" bindtap="previewImage"  data-src="{{item.cover}}" src="{{item.cover}}"/>
+                    <image src="../../image/collect.png" class="collectImage" />
+                </view>
+                <view class="subMainText">{{item.title}}</view>
+            </view>
+        </view>
+    </scroll-view>
+</view>

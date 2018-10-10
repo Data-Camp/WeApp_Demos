@@ -1,0 +1,26 @@
+<view class="container">
+  <view class="serial">
+    <view class="serial-header">
+      <view class="serial-author">
+        <image class="serial-author-avatar" src="{{serial.author.web_url}}"></image>
+        <view class="serial-author-username">
+          <text>{{serial.author.user_name}}</text>
+        </view>
+        <view class="serial-makettime">
+          <text>{{serial.maketime}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="serial-body">
+      <view class="serial-title">
+        <text>{{serial.title}}</text>
+      </view>
+      <view class="serial-content">
+        <text>{{serial.content}}</text>
+      </view>
+      <view class="serial-charge-edt">
+        <text>{{serial.charge_edt}}</text>
+      </view>
+    </view>
+  </view>
+</view>

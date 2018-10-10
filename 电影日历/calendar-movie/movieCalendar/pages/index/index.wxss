@@ -1,0 +1,85 @@
+/**index.wxss**/
+.calendar-container{
+    position: relative;
+    height: 100%;
+    padding: 10px;
+}
+.loading{
+    position: absolute;
+    left:50%;
+    top:50%;
+    width:120rpx;
+    height:120rpx;
+    margin-left: -60rpx;
+    margin-top: -60rpx;
+}
+.container-inner{
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    margin-bottom: 10px;
+    border:1px solid #333;
+    opacity:0;
+}
+.inner-date{
+    flex-grow: 1;
+    padding: 15px;
+    border-bottom:1px solid #333;
+}
+.date-year-month{
+    padding: 5px;
+    text-align: center;
+}
+.date-year-month text{
+    border-bottom:1px solid #333;
+}
+.year-month{
+    padding-right:15px;
+}
+.date-day{
+    text-align: center;
+    font-size: 180px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+    letter-spacing: -5px;
+}
+.date-show-year{
+    color:#777;
+    text-align: center;
+}
+.date-directors{
+    text-align: center;
+    color:#AAA;
+    font-size: 12px;
+}
+.date-directors text:last-child text{
+    display:none;
+}
+.inner-comment{
+    width: 100%;
+    padding: 10px;
+    font-style: italic;
+    color: #666;
+}
+.inner-comment text{
+    font-size: 30px;
+    color:#888;
+}
+.inner-movie{
+  display: -webkit-flex;
+  display: flex;
+  padding: 10px;
+}
+.movie-average{
+    font-size:40px;
+    line-height:40px;
+    letter-spacing: -5px;
+    margin-right: 10px;
+}
+.star{
+    width:16px;
+    height:16px;
+    margin: 2px;
+    vertical-align: top;
+}

@@ -1,0 +1,219 @@
+<view class="bottomGrayboder topSearchbar" data-c_e_id="wx_view_cb07a842">
+    <view class="topsearchWrap" data-c_e_id="wx_view_c2045354">
+        <view class="wx-view_cc8qyh" data-c_e_id="wx_view_5e72bf3e">
+            <input class="c-block c-fullwidth wx-input_aN3YXL" data-c_e_id="wx_input688dad1c" name="input1" placeholder="◎搜索商品" placeholder-class="placeholderstyle" type="text"/>
+            <view class="_other_text_BWlAnA" data-c_e_id="_other_text_2cfa57c1">
+                取消
+            </view>
+        </view>
+    </view>
+</view>
+<scroll-view class="Wrapscroll-view" data-c_e_id="wx_scroll_view_18790ec8" lower-threshold="50" scroll-y="True" style="overflow-x: hidden; overflow-y: auto; " upper-threshold="50">
+    <swiper autoplay="True" class="wx-swiper_1NANrl" data-c_e_id="wx_swiperb0e59502" lower-threshold="50">
+        <swiper-item class="c-full wx-swiper-item_FzHVfG" data-c_e_id="wx_swiper_item0a22cff2">
+            <navigator class="wx-navigator_oHb4kO2" data-c_e_id="wx_navigator1d201966" hover-class="navigator-hover"/>
+        </swiper-item>
+        <swiper-item class="c-full wx-swiper-item_hVbASy" data-c_e_id="wx_swiper_itemfe1765d4">
+            <navigator class="wx-navigator_oHb4kO" data-c_e_id="wx_navigator_1944013f" hover-class="navigator-hover"/>
+        </swiper-item>
+        <swiper-item class="c-full wx-swiper-item_PQD5ZA" data-c_e_id="wx_swiper_item716c0df2">
+            <navigator class="wx-navigator_oHb4kO3" data-c_e_id="wx_navigator94b7b01f" hover-class="navigator-hover"/>
+        </swiper-item>
+    </swiper>
+    <view class="classifyiconWrap" data-c_e_id="wx_view687aaf2e">
+        <view class="classifyicongrid" data-c_e_id="wx_view1ae8f9cf">
+            <navigator class="wx-navigator_JBV5If" data-c_e_id="wx_navigator_fffd7ec2" hover-class="navigator-hover">
+                <image class="wx-image_9GbZXI" data-c_e_id="wx_image_9d6e31b5" mode="aspectFit" src="http://static.guoku.com/static/v4/34e153450034ebbd9166b38702e38f36e65a9e69/images/category-icon/1.png" style="background-image: url(http://static.guoku.com/static/v4/34e153450034ebbd9166b38702e38f36e65a9e69/images/category-icon/1.png); background-size: contain; background-position: center center; background-repeat: no-repeat; "/>
+                <text class="wx-text_DGqVdA" data-c_e_id="wx_text_bcfc95a8">居家</text>
+            </navigator>
+            <navigator class="wx-navigator_JBV5If" data-c_e_id="wx_navigator3f11737a" hover-class="navigator-hover">
+                <image class="wx-image_9GbZXI" data-c_e_id="wx_imagec8f62f66" src="http://static.guoku.com/static/v4/789d3b7ce489b572bda5b6b791fcff7a3fcf7053/images/category-icon/8.png"/>
+                <text class="wx-text_DGqVdA" data-c_e_id="wx_text9c2a525a">美容</text>
+            </navigator>
+            <navigator class="wx-navigator_JBV5If" data-c_e_id="wx_navigator6a497cba" hover-class="navigator-hover">
+                <image class="wx-image_9GbZXI" data-c_e_id="wx_imagec5f84a9f" src="http://static.guoku.com/static/v4/789d3b7ce489b572bda5b6b791fcff7a3fcf7053/images/category-icon/10.png"/>
+                <text class="wx-text_DGqVdA" data-c_e_id="wx_text983d495a">文化</text>
+            </navigator>
+            <navigator class="wx-navigator_JBV5If" data-c_e_id="wx_navigator39f6c5d0" hover-class="navigator-hover">
+                <image class="wx-image_9GbZXI" data-c_e_id="wx_image7867bf70" src="http://static.guoku.com/static/v4/789d3b7ce489b572bda5b6b791fcff7a3fcf7053/images/category-icon/18.png"/>
+                <text class="wx-text_DGqVdA" data-c_e_id="wx_textd8b64938">配饰</text>
+            </navigator>
+            <navigator class="wx-navigator_JBV5If" data-c_e_id="wx_navigator258582ba" hover-class="navigator-hover">
+                <image class="wx-image_9GbZXI" data-c_e_id="wx_image14a432af" src="http://static.guoku.com/static/v4/789d3b7ce489b572bda5b6b791fcff7a3fcf7053/images/category-icon/21.png"/>
+                <text class="wx-text_DGqVdA" data-c_e_id="wx_textfcb3869e">科技</text>
+            </navigator>
+            <navigator class="wx-navigator_JBV5If" data-c_e_id="wx_navigator31d3d564" hover-class="navigator-hover">
+                <image class="wx-image_9GbZXI" data-c_e_id="wx_image47369e40" src="http://static.guoku.com/static/v4/789d3b7ce489b572bda5b6b791fcff7a3fcf7053/images/category-icon/25.png"/>
+                <text class="wx-text_DGqVdA" data-c_e_id="wx_text3e642c75">玩乐</text>
+            </navigator>
+            <navigator class="wx-navigator_JBV5If" data-c_e_id="wx_navigator3edad07c" hover-class="navigator-hover">
+                <image class="wx-image_9GbZXI" data-c_e_id="wx_image30b0b6b5" src="http://static.guoku.com/static/v4/34e153450034ebbd9166b38702e38f36e65a9e69/images/category-icon/12.png"/>
+                <text class="wx-text_DGqVdA" data-c_e_id="wx_text8791a944">美食</text>
+            </navigator>
+            <navigator class="wx-navigator_JBV5If" data-c_e_id="wx_navigatord0131675" hover-class="navigator-hover">
+                <image class="wx-image_9GbZXI" data-c_e_id="wx_imaged8ca3c7a" src="http://static.guoku.com/static/v4/789d3b7ce489b572bda5b6b791fcff7a3fcf7053/images/category-icon/13.png"/>
+                <text class="wx-text_DGqVdA" data-c_e_id="wx_text576cb736">女装</text>
+            </navigator>
+            <navigator class="wx-navigator_JBV5If" data-c_e_id="wx_navigator0c98fb33" hover-class="navigator-hover">
+                <image class="wx-image_9GbZXI" data-c_e_id="wx_image9e586eb6" src="http://static.guoku.com/static/v4/789d3b7ce489b572bda5b6b791fcff7a3fcf7053/images/category-icon/14.png"/>
+                <text class="wx-text_DGqVdA" data-c_e_id="wx_text2c8a98bd">男装</text>
+            </navigator>
+            <navigator class="wx-navigator_JBV5If" data-c_e_id="wx_navigatorf6ff8df7" hover-class="navigator-hover">
+                <image class="wx-image_9GbZXI" data-c_e_id="wx_image118e9094" src="http://static.guoku.com/static/v4/789d3b7ce489b572bda5b6b791fcff7a3fcf7053/images/category-icon/20.png"/>
+                <text class="wx-text_DGqVdA" data-c_e_id="wx_text821ae8dc">户外</text>
+            </navigator>
+            <navigator class="wx-navigator_JBV5If" data-c_e_id="wx_navigator078a9a9e" hover-class="navigator-hover">
+                <image class="wx-image_9GbZXI" data-c_e_id="wx_image29bc2574" src="http://static.guoku.com/static/v4/789d3b7ce489b572bda5b6b791fcff7a3fcf7053/images/category-icon/26.png"/>
+                <text class="wx-text_DGqVdA" data-c_e_id="wx_textfac7c18c">母婴</text>
+            </navigator>
+            <navigator class="wx-navigator_JBV5If" data-c_e_id="wx_navigatorffcb5c0e" hover-class="navigator-hover">
+                <image class="wx-image_9GbZXI" data-c_e_id="wx_image276491b2" src="http://static.guoku.com/static/v4/789d3b7ce489b572bda5b6b791fcff7a3fcf7053/images/category-icon/37.png"/>
+                <text class="wx-text_DGqVdA" data-c_e_id="wx_text122e19bb">健康</text>
+            </navigator>
+        </view>
+    </view>
+    <view class="PanellistWrap" data-c_e_id="wx_view964f0a2d">
+        <view class="_other_text_LxtT2c" data-c_e_id="_other_text_d25ea969">
+            热门图文
+        </view>
+        <navigator class="bottomGrayboder Panellistitem" data-c_e_id="wx_navigator_af86d451" hover-class="navigator-hover" url="../detail/detail">
+            <view class="wx-view_zjJ9We" data-c_e_id="wx_view8414e2c3">
+                <image class="wx-image_SidGqw" data-c_e_id="wx_image_7d20755b" mode="aspectFill" src="http://imgcdn.guoku.com/images/450/613fb66bd206fa2246ae65a71058dd3c.jpeg" style="background-size: cover; background-position: center center; background-repeat: no-repeat; background-image: url(http://imgcdn.guoku.com/images/450/613fb66bd206fa2246ae65a71058dd3c.jpeg); "/>
+            </view>
+            <view class="c-minheight wx-view_WUvt7O" data-c_e_id="wx_viewa978d21e">
+                <text class="wx-text_JkhshF" data-c_e_id="wx_text5a660962">盘点&amp;种草，明年最时髦的 30 个包袋品牌</text>
+                <text class="wx-text_3YNNM3" data-c_e_id="wx_text23eac020">对不少姑娘来说，「包」治百病，如果有什么是一个包不能解决的，那就再买一个。F盘点了2017年春夏时装周上能够时髦到明年的...</text>
+            </view>
+        </navigator>
+        <navigator class="bottomGrayboder Panellistitem" data-c_e_id="wx_navigatorb0e64949" hover-class="navigator-hover" url="../detail/detail">
+            <view class="wx-view_zjJ9We" data-c_e_id="wx_view9fc818d0">
+                <image class="wx-image_SidGqw" data-c_e_id="wx_imageebc3df5f" mode="aspectFill" src="http://imgcdn.guoku.com/images/450/7a39132a46bb2a0580c29ea8e1c56dd8.jpeg" style="background-size: cover; background-position: center center; background-repeat: no-repeat; background-image: url(http://imgcdn.guoku.com/images/450/7a39132a46bb2a0580c29ea8e1c56dd8.jpeg); "/>
+            </view>
+            <view class="c-minheight wx-view_WUvt7O" data-c_e_id="wx_view2cb8a6f5">
+                <text class="wx-text_JkhshF" data-c_e_id="wx_textfe2f7b86">秋季购衣指南，Shoes to buy</text>
+                <text class="wx-text_3YNNM3" data-c_e_id="wx_text8210df09">已经有了全套装备的你现在一定需要一双最最时髦的鞋来撑起你整个秋季Look。鞋是最能体现生活态度的，精致优雅或是简单随性，...</text>
+            </view>
+        </navigator>
+        <navigator class="bottomGrayboder Panellistitem" data-c_e_id="wx_navigator41a70666" hover-class="navigator-hover" url="../detail/detail">
+            <view class="wx-view_zjJ9We" data-c_e_id="wx_viewc136d046">
+                <image class="wx-image_SidGqw" data-c_e_id="wx_imageb3892c49" mode="aspectFill" src="http://imgcdn.guoku.com/images/450/b9f07bfe8c600a014deb102a44d694ca.jpeg" style="background-size: cover; background-position: center center; background-repeat: no-repeat; background-image: url(http://imgcdn.guoku.com/images/450/b9f07bfe8c600a014deb102a44d694ca.jpeg); "/>
+            </view>
+            <view class="c-minheight wx-view_WUvt7O" data-c_e_id="wx_view05e9b708">
+                <text class="wx-text_JkhshF" data-c_e_id="wx_text7ce6bb0a">提升穿衣品味的 level，全靠这些细节了</text>
+                <text class="wx-text_3YNNM3" data-c_e_id="wx_textb1611b84">衣服换来换去，总有换腻的那一天。如何让老旧的衣服穿出新的感觉，你可以像他们一样在配饰上多下功夫。不经意在细节处的流露总是...</text>
+            </view>
+        </navigator>
+    </view>
+    <view class="wx-view_TQ4nqD" data-c_e_id="wx_view381b909b">
+        <view class="_other_text_LxtT2c2" data-c_e_id="_other_textf48e3a90">
+            推荐用户
+        </view>
+        <scroll-view class="wx-scroll-view_u9Dyk2" data-c_e_id="wx_scroll_view0fb0066a" lower-threshold="50" scroll-x="True" style="overflow-x: auto; overflow-y: hidden; " upper-threshold="50">
+            <view class="wx-view_Fsk3xr" data-c_e_id="wx_view_ccf230eb">
+                <navigator class="wx-navigator_NdRePK" data-c_e_id="wx_navigator_13aa3280" hover-class="navigator-hover">
+                    <view class="wx-view_rMrdRK" data-c_e_id="wx_viewe2514a34">
+                        <image class="useravatar" data-c_e_id="wx_imagec29a0d18" mode="aspectFill" src="http://imgcdn.guoku.com/avatar/128/782029b69f29e84d8f262c390bf3ab8c.jpg" style="background-size: cover; background-position: center center; background-repeat: no-repeat; background-image: url(http://imgcdn.guoku.com/avatar/128/782029b69f29e84d8f262c390bf3ab8c.jpg); "/>
+                    </view>
+                    <text class="c-block wx-text_rEcdDL" data-c_e_id="wx_textdc7856d5">假杂志</text>
+                </navigator>
+                <navigator class="wx-navigator_NdRePK" data-c_e_id="wx_navigator1586a87e" hover-class="navigator-hover">
+                    <view class="wx-view_rMrdRK" data-c_e_id="wx_view2a69167c">
+                        <image class="useravatar" data-c_e_id="wx_image9391a906" mode="aspectFill" src="http://imgcdn.guoku.com/avatar/128/589c0d8d2966eb20241a61564676b7f7.jpg" style="background-size: cover; background-position: center center; background-repeat: no-repeat; background-image: url(http://imgcdn.guoku.com/avatar/128/589c0d8d2966eb20241a61564676b7f7.jpg); "/>
+                    </view>
+                    <text class="c-block wx-text_rEcdDL" data-c_e_id="wx_text9cc54c36">UPUPUP</text>
+                </navigator>
+                <navigator class="wx-navigator_NdRePK" data-c_e_id="wx_navigatore7153e65" hover-class="navigator-hover">
+                    <view class="wx-view_rMrdRK" data-c_e_id="wx_view7e9222ed">
+                        <image class="useravatar" data-c_e_id="wx_image2ed04110" mode="aspectFill" src="http://imgcdn.guoku.com/avatar/128/a1a4d46fdb8b5a0404ed092f6cc45249.jpg" style="background-size: cover; background-position: center center; background-repeat: no-repeat; background-image: url(http://imgcdn.guoku.com/avatar/128/a1a4d46fdb8b5a0404ed092f6cc45249.jpg); "/>
+                    </view>
+                    <text class="c-block wx-text_rEcdDL" data-c_e_id="wx_texte3731c5a">Twippo法国时尚</text>
+                </navigator>
+                <navigator class="wx-navigator_NdRePK" data-c_e_id="wx_navigator223d3249" hover-class="navigator-hover">
+                    <view class="wx-view_rMrdRK" data-c_e_id="wx_viewdf33b99b">
+                        <image class="useravatar" data-c_e_id="wx_image7b018a43" mode="aspectFill" src="http://imgcdn.guoku.com/avatar/128/782029b69f29e84d8f262c390bf3ab8c.jpg" style="background-size: cover; background-position: center center; background-repeat: no-repeat; background-image: url(http://imgcdn.guoku.com/avatar/128/782029b69f29e84d8f262c390bf3ab8c.jpg); "/>
+                    </view>
+                    <text class="c-block wx-text_rEcdDL" data-c_e_id="wx_texte93770e2">假杂志</text>
+                </navigator>
+                <navigator class="wx-navigator_NdRePK" data-c_e_id="wx_navigator29a940dd" hover-class="navigator-hover">
+                    <view class="wx-view_rMrdRK" data-c_e_id="wx_viewaabf8332">
+                        <image class="useravatar" data-c_e_id="wx_image0b2ff366" mode="aspectFill" src="http://imgcdn.guoku.com/avatar/128/589c0d8d2966eb20241a61564676b7f7.jpg" style="background-size: cover; background-position: center center; background-repeat: no-repeat; background-image: url(http://imgcdn.guoku.com/avatar/128/589c0d8d2966eb20241a61564676b7f7.jpg); "/>
+                    </view>
+                    <text class="c-block wx-text_rEcdDL" data-c_e_id="wx_textd7ca4bdb">UPUPUP</text>
+                </navigator>
+                <navigator class="wx-navigator_NdRePK" data-c_e_id="wx_navigatora9244556" hover-class="navigator-hover">
+                    <view class="wx-view_rMrdRK" data-c_e_id="wx_viewa3a0785b">
+                        <image class="useravatar" data-c_e_id="wx_imagecfeca450" mode="aspectFill" src="http://imgcdn.guoku.com/avatar/128/589c0d8d2966eb20241a61564676b7f7.jpg" style="background-size: cover; background-position: center center; background-repeat: no-repeat; background-image: url(http://imgcdn.guoku.com/avatar/128/589c0d8d2966eb20241a61564676b7f7.jpg); "/>
+                    </view>
+                    <text class="c-block wx-text_rEcdDL" data-c_e_id="wx_text11c75f5d">UPUPUP</text>
+                </navigator>
+                <navigator class="wx-navigator_NdRePK" data-c_e_id="wx_navigatora22361a3" hover-class="navigator-hover">
+                    <view class="wx-view_rMrdRK" data-c_e_id="wx_view33e60719">
+                        <image class="useravatar" data-c_e_id="wx_image48c93c0f" mode="aspectFill" src="http://imgcdn.guoku.com/avatar/128/589c0d8d2966eb20241a61564676b7f7.jpg" style="background-size: cover; background-position: center center; background-repeat: no-repeat; background-image: url(http://imgcdn.guoku.com/avatar/128/589c0d8d2966eb20241a61564676b7f7.jpg); "/>
+                    </view>
+                    <text class="c-block wx-text_rEcdDL" data-c_e_id="wx_textcfe58764">UPUPUP</text>
+                </navigator>
+                <navigator class="wx-navigator_NdRePK" data-c_e_id="wx_navigator155af6be" hover-class="navigator-hover">
+                    <view class="wx-view_rMrdRK" data-c_e_id="wx_view7b448dad">
+                        <image class="useravatar" data-c_e_id="wx_imageaa9fda71" mode="aspectFill" src="http://imgcdn.guoku.com/avatar/128/589c0d8d2966eb20241a61564676b7f7.jpg" style="background-size: cover; background-position: center center; background-repeat: no-repeat; background-image: url(http://imgcdn.guoku.com/avatar/128/589c0d8d2966eb20241a61564676b7f7.jpg); "/>
+                    </view>
+                    <text class="c-block wx-text_rEcdDL" data-c_e_id="wx_textf537a4b1">UPUPUP</text>
+                </navigator>
+            </view>
+        </scroll-view>
+    </view>
+    <view class="c-minheight wx-view_TQ4nqD" data-c_e_id="wx_view878d6007">
+        <view class="_other_text_LxtT2c2" data-c_e_id="_other_text1d60a2a3">
+            热门商品
+        </view>
+        <view class="c-minheight wx-view_tdlUCs" data-c_e_id="wx_view_f0c1777a">
+            <navigator class="bottomGrayboder rightGrayboder wx-navigator_n3vQYd" data-c_e_id="wx_navigator_2a68306e" hover-class="navigator-hover" url="../detail/detail">
+                <image class="wx-image_HsAX8s" data-c_e_id="wx_image_ebc70630" mode="aspectFit" src="http://imgcdn.guoku.com/images/310/15d1670caa233632626f4e4d5c6c33b2.jpg" style="background-image: url(http://imgcdn.guoku.com/images/310/15d1670caa233632626f4e4d5c6c33b2.jpg); background-size: contain; background-position: center center; background-repeat: no-repeat; "/>
+                <view class="c-minheight wx-view_ZhdL6d" data-c_e_id="wx_view_10a382ed">
+                    <text class="c-block wx-text_cjhm6S" data-c_e_id="wx_text262d2755">玲珑</text>
+                    <text class="wx-text_JkhshF2" data-c_e_id="wx_text34637bc6">独处盒子 体验装</text>
+                    <text class="c-block wx-text_WEMSkk" data-c_e_id="wx_text500774db">￥118.00</text>
+                </view>
+            </navigator>
+            <navigator class="bottomGrayboder rightGrayboder wx-navigator_n3vQYd" data-c_e_id="wx_navigator235f3af5" hover-class="navigator-hover" url="../detail/detail">
+                <image class="wx-image_HsAX8s" data-c_e_id="wx_image5f9d3972" mode="aspectFit" src="http://imgcdn.guoku.com/images/310/e228f3550f9b4010260e6eea55fe9970.jpg" style="background-image: url(http://imgcdn.guoku.com/images/310/e228f3550f9b4010260e6eea55fe9970.jpg); background-size: contain; background-position: center center; background-repeat: no-repeat; "/>
+                <view class="c-minheight wx-view_ZhdL6d" data-c_e_id="wx_viewef98b2c1">
+                    <text class="c-block wx-text_cjhm6S" data-c_e_id="wx_texta1a14d42">MAKE UP FOR EVER</text>
+                    <text class="wx-text_JkhshF2" data-c_e_id="wx_texte0f9c3ef">艺术家唇釉</text>
+                    <text class="c-block wx-text_WEMSkk" data-c_e_id="wx_text908c5eea">￥200.00</text>
+                </view>
+            </navigator>
+            <navigator class="bottomGrayboder rightGrayboder wx-navigator_n3vQYd" data-c_e_id="wx_navigator1a6ca069" hover-class="navigator-hover" url="../detail/detail">
+                <image class="wx-image_HsAX8s" data-c_e_id="wx_image4c496e18" mode="aspectFit" src="http://imgcdn.guoku.com/images/310/1dbca855f8bef20b7ff23a004f35a46f.jpg" style="background-image: url(http://imgcdn.guoku.com/images/310/1dbca855f8bef20b7ff23a004f35a46f.jpg); background-size: contain; background-position: center center; background-repeat: no-repeat; "/>
+                <view class="c-minheight wx-view_ZhdL6d" data-c_e_id="wx_view8962c896">
+                    <text class="c-block wx-text_cjhm6S" data-c_e_id="wx_text699a7b33">GROWN ALCHEMIST</text>
+                    <text class="wx-text_JkhshF2" data-c_e_id="wx_textfdd192ca">水润修护日霜</text>
+                    <text class="c-block wx-text_WEMSkk" data-c_e_id="wx_textd752e84a">￥118.00</text>
+                </view>
+            </navigator>
+            <navigator class="bottomGrayboder rightGrayboder wx-navigator_n3vQYd" data-c_e_id="wx_navigatoraf495ae6" hover-class="navigator-hover" url="../detail/detail">
+                <image class="wx-image_HsAX8s" data-c_e_id="wx_image87aa7860" mode="aspectFit" src="http://imgcdn.guoku.com/images/310/ceda597a6651e84689b1d7093b0fa1fc.jpg" style="background-image: url(http://imgcdn.guoku.com/images/310/ceda597a6651e84689b1d7093b0fa1fc.jpg); background-size: contain; background-position: center center; background-repeat: no-repeat; "/>
+                <view class="c-minheight wx-view_ZhdL6d" data-c_e_id="wx_view227cd203">
+                    <text class="c-block wx-text_cjhm6S" data-c_e_id="wx_text5dffe3df">玲珑</text>
+                    <text class="wx-text_JkhshF2" data-c_e_id="wx_text685118c3">儿童纯棉枕套 2 个</text>
+                    <text class="c-block wx-text_WEMSkk" data-c_e_id="wx_text09741a8c">￥135.00</text>
+                </view>
+            </navigator>
+            <navigator class="bottomGrayboder rightGrayboder wx-navigator_n3vQYd" data-c_e_id="wx_navigatorb631715d" hover-class="navigator-hover" url="../detail/detail">
+                <image class="wx-image_HsAX8s" data-c_e_id="wx_image01676399" mode="aspectFit" src="http://imgcdn.guoku.com/images/310/0192d602dcc9137b0bb52daceb85777d.jpg"/>
+                <view class="c-minheight wx-view_ZhdL6d" data-c_e_id="wx_view6c1e02dd">
+                    <text class="c-block wx-text_cjhm6S" data-c_e_id="wx_text18e0204a">BOTANIST</text>
+                    <text class="wx-text_JkhshF2" data-c_e_id="wx_text30a6ae54">无硅滋润洗护套装</text>
+                    <text class="c-block wx-text_WEMSkk" data-c_e_id="wx_text70385392">￥118.00</text>
+                </view>
+            </navigator>
+            <navigator class="bottomGrayboder rightGrayboder wx-navigator_n3vQYd" data-c_e_id="wx_navigatorf29281d1" hover-class="navigator-hover" url="../detail/detail">
+                <image class="wx-image_HsAX8s" data-c_e_id="wx_imagecd27d345" mode="aspectFit" src="http://imgcdn.guoku.com/images/310/e4b5ffb6eb0fab2cb8c32649f36d9548.jpg" style="background-image: url(http://imgcdn.guoku.com/images/310/e4b5ffb6eb0fab2cb8c32649f36d9548.jpg); background-size: contain; background-position: center center; background-repeat: no-repeat; "/>
+                <view class="c-minheight wx-view_ZhdL6d" data-c_e_id="wx_view2218001a">
+                    <text class="c-block wx-text_cjhm6S" data-c_e_id="wx_texta5f89c39">Thermo</text>
+                    <text class="wx-text_JkhshF2" data-c_e_id="wx_textd024e7c7">户外旅行保温杯</text>
+                    <text class="c-block wx-text_WEMSkk" data-c_e_id="wx_text0d61bfbf">￥247.00</text>
+                </view>
+            </navigator>
+        </view>
+    </view>
+</scroll-view>

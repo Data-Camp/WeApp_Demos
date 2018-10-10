@@ -1,0 +1,11 @@
+<view>
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view>
+    <input text="number" placeholder="请输入姓名"   maxlength="10"/>
+  </view>
+  <view class="btn-area">
+    <button class="btn" formType="submit">Submit</button>
+    <button class="btn" formType="reset">Reset</button>
+  </view>
+</form>
+</view>

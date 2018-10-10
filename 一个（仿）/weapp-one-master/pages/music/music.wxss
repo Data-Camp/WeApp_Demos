@@ -1,0 +1,133 @@
+.musics-swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.music {
+  height: 100%;
+  width: calc(100% + 30rpx);
+}
+
+.music-container {
+  margin-right: 30rpx;
+}
+
+.music-cover {
+  width: 100%;
+}
+
+.music-cover-image {
+  width: 100%;
+  height: 750rpx;
+}
+
+.music-control {
+  margin: 0 20rpx;
+  padding: 15rpx 20rpx 8rpx 15rpx;
+  position: relative;
+  top: -20px;
+  background-color: #fff;
+  border: 1px solid #ebebeb;
+  border-radius: 3px;
+  box-shadow: 0px 1px 1px #ebebeb;
+}
+
+.music-author {
+  display: inline-block;
+  width: 80%;
+  margin-bottom: 25px;
+  font-weight: 200;
+  font-size: 12px;
+}
+
+.music-author-avatar {
+  width: 40px;
+  height: 40px;
+  float: left;
+  margin-right: 15rpx;
+  border-radius: 50%;
+}
+
+.music-author-username {
+  padding: 5px;
+  color: #89bdf7;
+}
+
+.music-author-desc {
+  color: #888;
+}
+
+.music-play {
+  float: right;
+}
+
+.music-play-control {
+  width: 40px;
+  height: 40px;
+  margin-top: 20px;
+}
+
+.music-title {
+  font-size: 16px;
+}
+
+.music-maketime {
+  color: #888;
+  font-size: 12px;
+  text-align: right;
+}
+
+.music-content {
+  margin: 0 20rpx 25rpx 20rpx;
+}
+
+.music-content-header {
+  text-align: right;
+  border-bottom: 1px solid #eee;
+}
+
+.content-label {
+  float: left;
+  margin-top: 10rpx;
+  margin-left: 5rpx;
+  font-size: 12px;
+}
+
+.content-links {
+  display: inline-block;
+}
+
+.link {
+  width: 35px;
+  height: 18px;
+}
+
+.music-content-body {
+  margin-top: 10px;
+}
+
+.story-title {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.story-author {
+  color: #89bdf7;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.story-content {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.lyric-content {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.about-content {
+  font-size: 14px;
+  line-height: 1.5;
+}

@@ -1,0 +1,76 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.slide-image{
+    display: block;
+    height: 150px;
+    width:100%
+}
+.menueview{
+  display:flex;
+  background-color:#FFF;
+  padding:5px 0
+}
+.menue-image{
+  flex:1;
+  height:50px;
+  height:auto
+}
+.separator{
+ height: 4px;
+ width:20rem;
+  background-color: #F3F3F3
+}
+.floortitle{
+  display:flex;
+  height:34px;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 13px;
+  font-size:14px;
+  color:rgba(0,0,0,0.7);
+  border-bottom: 1px solid #e2e2e3
+}
+.hotgoodcontainer{
+    display:flex;
+    flex-wrap: wrap;
+    width:100%;
+}
+.gooditem{
+    width:33.333333%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    font-size:12px;
+    box-sizing:border-box;
+    border: 0.5px solid #e2e2e3;
+    padding-bottom:10px
+}
+.productimg{
+   width:80px;
+   height:80px;
+}
+.imgview{
+  width:80px;
+  height:80px;
+}

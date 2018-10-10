@@ -1,0 +1,11 @@
+{
+  "pages":[
+    "pages/chat/chat"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#333",
+    "navigationBarTitleText": "SDK测试",
+    "navigationBarTextStyle":"white"
+  }
+}

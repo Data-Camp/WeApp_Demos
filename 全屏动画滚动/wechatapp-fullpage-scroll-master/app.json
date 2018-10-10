@@ -1,0 +1,11 @@
+{
+  "pages":[
+    "pages/fullpage/fullpage"
+  ],
+  "window":{
+    "backgroundTextStyle":"white",
+    "navigationBarBackgroundColor": "#FF9933",
+    "navigationBarTitleText": "全屏滚动",
+    "navigationBarTextStyle": "white"
+  }
+}

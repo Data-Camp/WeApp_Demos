@@ -1,0 +1,45 @@
+.book-item{
+    height:140rpx;
+    background: #fff;
+    margin-top: 8rpx;
+    padding:20rpx 20rpx 20rpx 65rpx;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.book-item .book-img{
+    width: 100rpx;
+    height: 100rpx;
+    float: left;
+    margin-right: 80rpx;
+    position: relative;
+}
+
+.book-item .book-img image{
+    position: absolute;
+    width: 100rpx;
+    height: 100rpx;
+    top: 0;
+    left: 0;
+}
+
+.book-item .book-name{
+    font-size: 32rpx;
+    height: 50rpx;
+    line-height: 50rpx;
+}
+
+.book-item .book-count{
+    height: 30rpx;
+    line-height: 30rpx;
+    margin-top: 20rpx;
+    font-size: 24rpx;
+    color: #1e75b8;
+}
+
+.book-item .book-uv{
+    font-size: 16rpx;
+    position: absolute;
+    bottom: 20rpx;
+    right: 20rpx;
+}

@@ -1,0 +1,17 @@
+{
+  "注释":"可以定义应用由什么文件组成的，和一些配置信息",
+  "pages":[
+    "pages/homePage/homePage",
+    "pages/appointment/appointment",
+    "pages/disposalList/disposalList",
+    "pages/appointment/customerProject/customerProject",
+    "pages/customer/customer",
+    "pages/message/message"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#3D98CB",
+    "navigationBarTitleText": "治疗师",
+    "navigationBarTextStyle":"white"
+  }
+}

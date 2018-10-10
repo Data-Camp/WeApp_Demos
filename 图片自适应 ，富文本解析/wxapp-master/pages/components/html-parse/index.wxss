@@ -1,0 +1,72 @@
+.html-parse__element {
+    font-size: 34rpx;
+}
+.html-parse__element text, 
+.html-parse__element view{
+    display: inline;
+    line-height: 40rpx;
+}
+view.html-parse__p,
+view.html-parse__div,
+view.html-parse__video {
+    display: block;
+}
+.html-parse__img {
+    width: 100%;
+}
+view.html-parse__video {
+    width: 100%;
+}
+.html-parse__video video {
+    width: 100%;
+}
+.html-parse__a {
+    color: #0000cc;
+    text-decoration: underline;
+}
+view.html-parse__li {
+    display: block;
+}
+.html-parse__p {
+    margin-bottom: 20rpx;
+}
+.html-parse__b,
+.html-parse__strong {
+    font-weight: bold
+}
+.html-parse__u {
+    text-decoration: underline;
+}
+.html-parse__em {
+    font-style: italic;
+}
+.html-parse__hr {
+    width: 100%;
+    height: 1rpx;
+    overflow: hidden;
+    background: #808080
+}
+view.html-parse__pre {
+    display: block;
+    background: #f8f8f8;
+    padding: 16rpx 24rpx;
+}
+view.html-parse__blockquote {
+    display: block;
+    margin: 16rpx 40rpx;
+}
+/*table样式*/
+view.html-parse__table {
+    display: block;
+    border: 1rpx solid #d8d8d8;
+}
+view.html-parse__tr {
+    display: flex;
+}
+view.html-parse__td,
+view.html-parse__th {
+    padding: 8rpx;
+    flex: 1;
+    border: 1rpx solid #d8d8d8;
+}
+    

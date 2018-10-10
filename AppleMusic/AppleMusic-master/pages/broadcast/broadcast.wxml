@@ -1,0 +1,49 @@
+<view class="broadcast">
+    <view class="slogan">
+        <image class="slogan-image" src="../../image/broadcast/slogan.png" ></image>
+    </view>
+    <view class="white-space">
+        <text class="white-space-text">精选电台</text>
+    </view>
+    <view class="braodcast-list">
+        <view class="braodcast-item">
+            <view  class="braodcast-image-container">
+                <image class="braodcast-image" src="../../image/broadcast/1.png"></image>
+            </view>
+            <view class="braodcast-info"  style="background:#fcffb0;">
+                <text class="braodcast-name">国语音乐电台</text>
+                <text class="braodcast-text">热门国语单曲。</text>
+            </view>
+        </view>
+ 
+        <view class="braodcast-item">
+            <view class="braodcast-image-container">
+                <image class="braodcast-image" src="../../image/broadcast/2.png"></image>
+            </view>
+            <view class="braodcast-info" style="background:#ffffff;">
+                <text class="braodcast-name">怀旧音乐电台</text>
+                <text class="braodcast-text">重温流金岁月。</text>
+            </view>
+        </view>
+
+        <view class="braodcast-item">
+            <view class="braodcast-image-container">
+                <image class="braodcast-image" src="../../image/broadcast/3.png"></image>
+            </view>
+            <view class="braodcast-info" style="background:#fffd48;">
+                <text class="braodcast-name">欧美音乐电台</text>
+                <text class="braodcast-text">欧美热门单曲。</text>
+            </view>
+        </view>
+
+        <view class="braodcast-item">
+            <view class="braodcast-image-container">
+                <image class="braodcast-image" src="../../image/broadcast/4.png"></image>
+            </view>
+            <view class="braodcast-info" style="background:#ff8a90;">
+                <text class="braodcast-name">古典音乐电台</text>
+                <text class="braodcast-text">古典旋律，历久弥新。</text>
+            </view>
+        </view>
+    </view>
+</view>

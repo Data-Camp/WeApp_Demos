@@ -1,0 +1,38 @@
+<view class="container">
+    <view id="car_title_cont">
+        <text id="car_title">超跑阵容</text>
+    </view>
+
+    <view class="car_names">法拉利</view>
+    <view class="img_cont">
+      <swiper class="img_pic">
+        <block>
+          <swiper-item>
+            <image src="http://img1.xcarimg.com/b70/s8124/c_20160708111430452859370711393.jpg" style="width: 100% height: 100%;"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+
+    <view class="car_names">兰博基尼</view>
+    <view class="img_cont">
+      <swiper class="img_pic">
+        <block>
+          <swiper-item>
+            <image src="http://img1.xcarimg.com/b67/s6633/c_20150710104510986162680120832.jpg" style="width: 100% height: 100%;"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+
+    <view class="car_names">迈凯伦</view>
+    <view class="img_cont">
+      <swiper class="img_pic">
+        <block>
+          <swiper-item>
+            <image src="http://img1.xcarimg.com/b226/s6991/c_20150629145006087467591186056.jpg" style="width: 100% height: 100%;"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+</view>

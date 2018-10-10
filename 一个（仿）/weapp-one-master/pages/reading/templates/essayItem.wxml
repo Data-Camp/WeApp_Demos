@@ -1,0 +1,14 @@
+<template name="essay-item">
+  <view class="article-item" data-id="{{item.content_id}}" bindtap="tapEssay">
+    <view class="article-header">
+      <text class="article-title">{{item.hp_title}}</text>
+      <text class="article-type">短篇</text>
+      <view class="article-author">
+        <text>{{item.author[0].user_name}}</text>
+      </view>
+    </view>
+    <view class="article-content">
+      <text>{{item.guide_word}}</text>
+    </view>
+  </view>
+</template>

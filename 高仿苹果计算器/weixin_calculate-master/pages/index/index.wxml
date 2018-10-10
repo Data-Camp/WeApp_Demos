@@ -1,0 +1,46 @@
+<view class="container">
+  
+  <!-- 计算结果 -->
+  <view class="result-container">
+    <text class="result">{{result}}</text>
+  </view>
+
+  <!-- 计算器按钮 -->
+  <view class="button-container">
+  
+    <view class="row">
+      <button class="number">C</button>
+      <button class="number" bindtap="tapAbsolute">+/_</button>
+      <button class="number" bindtap="tapPercent">%</button>
+      <button class="operator {{operator == '/' ? 'optActive' : ''}}" data-value="/" bindtap="tapOperator">÷</button>
+    </view>
+  
+    <view class="row">
+      <button class="number" data-value="7" bindtap="tapNumber">7</button>
+      <button class="number" data-value="8" bindtap="tapNumber">8</button>
+      <button class="number" data-value="9" bindtap="tapNumber">9</button>
+      <button class="operator {{operator == '*' ? 'optActive' : ''}}" data-value="*" bindtap="tapOperator">×</button>
+    </view>
+  
+    <view class="row">
+      <button class="number" data-value="4" bindtap="tapNumber">4</button>
+      <button class="number" data-value="5" bindtap="tapNumber">5</button>
+      <button class="number" data-value="6" bindtap="tapNumber">6</button>
+      <button class="operator {{operator == '-' ? 'optActive' : ''}}" data-value="-" bindtap="tapOperator">-</button>
+    </view>
+  
+    <view class="row">
+      <button class="number" data-value="1" bindtap="tapNumber">1</button>
+      <button class="number" data-value="2" bindtap="tapNumber">2</button>
+      <button class="number" data-value="3" bindtap="tapNumber">3</button>
+      <button class="operator {{operator == '+' ? 'optActive' : ''}}" data-value="+" bindtap="tapOperator">+</button>
+    </view>
+  
+    <view class="row">
+      <button class="number large" data-value="0" bindtap="tapNumber">0</button>
+      <button class="number" data-value="." bindtap="tapNumber">.</button>
+      <button class="operator" bindtap="tapCalculate">=</button>
+    </view>
+
+  </view>
+</view>

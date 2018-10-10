@@ -1,0 +1,26 @@
+<import src="../../mars/templates/component.wxml" />
+
+<template is="loading" data="{{loading}}" />
+
+<view hidden="{{loading}}" class="weui-panel weui-panel_access">
+  <view class="weui-panel__hd">资讯列表</view>
+  <view class="weui-panel__bd">
+    <block wx:for="{{articlelist}}" wx:key="artlist_for">
+      <navigator url="/pages/index/detail/index?aid={{item.NID}}" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+        <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+          <image class="weui-media-box__thumb" src="{{item.NUrl}}" />
+        </view>
+        <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+          <view class="weui-media-box__title">{{item.NTitle}}</view>
+          <view class="weui-media-box__desc">{{item.NAbout}}</view>
+        </view>
+      </navigator>
+    </block>
+  </view>
+  <view class="weui-panel__ft">
+    <view class="weui-cell weui-cell_access weui-cell_link">
+      <view class="weui-cell__bd">查看更多</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,94 @@
+page {
+  height: 100%;
+  background-color: #efeff4;
+}
+
+view, scroll-view, input, text{
+  box-sizing: border-box;  
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.wx-cells {
+  width: 100%;
+  margin-top: 45rpx;
+  font-size: 34rpx;
+  border-top: 1rpx solid #d9d9d9;
+  border-bottom: 1rpx solid #d9d9d9;
+  background-color: #fff;
+}
+
+.wx-cell {
+  padding: 20rpx 25rpx;
+  display: flex;
+  align-items: center;
+}
+
+.wx-cell-icon{
+  width: 56rpx;
+  height: 56rpx;
+}
+
+.wx-cell-text{
+  flex: 1;
+  margin-left: 30rpx;
+}
+
+.wx-cell-arrow{
+  width: 30rpx;
+  height: 30rpx;
+  margin-left: 10rpx;
+}
+
+.wx-cell-inner{
+  padding: 30rpx 30rpx 30rpx 0;  
+  margin-left: 30rpx; 
+  border-bottom: 1rpx solid #d9d9d9; 
+}
+
+.wx-cell-left{
+  font-size: 35rpx;
+  align-items: center;
+}
+
+.wx-cell-right{
+  align-items: center;
+}
+
+.wx-cell-right-text{
+  font-size: 30rpx;
+  color: #808080;
+}
+
+.no-border{
+  border: 0;
+}
+
+.flex-column{
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-rest-height {
+  flex: 1;
+  height: initial;
+}
+
+.flex-row{
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-rest-width {
+  flex: 1;
+  width: initial;
+}
+
+.placeholder-class {
+  color: #808080;
+}

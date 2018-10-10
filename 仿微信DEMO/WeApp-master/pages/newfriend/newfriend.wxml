@@ -1,0 +1,65 @@
+<scroll-view>
+    <!--<view class="weui-search-bar weui-search-bar_focusing" id="search_bar">
+        <view class="weui-search-bar__form">
+            <view class="weui-search-bar__box">
+                <text class="weui-icon-search"></text>
+                <input type="text" class="weui-search-bar__input" id="search_input" placeholder="搜索" bindinput="inputFun" bindblur="inputclear" value="{{inputValue}}"/>
+                <text class="weui-icon-clear" id="search_clear"></text>
+            </view>
+            <view for="search_input" class="weui-search-bar__label" id="search_text">
+                <text class="weui-icon-search"></text>
+                <text>搜索</text>
+            </view>
+        </view>
+        <text class="weui-search-bar__cancel-btn" id="search_cancel" bindtap="inputclear">取消</text>
+    </view>-->
+    
+    <!--<view class="weui-search-bar {{ focusing ? 'weui-search-bar_focusing' : '' }}">
+        <form class="weui-search-bar__form">
+        <view class="weui-search-bar__box">
+            <text class="weui-icon-search" />
+            <input type="text"
+            class="weui-search-bar__input"
+            value="{{ inputValue }}"
+            placeholder="搜索"
+            focus="{{ focusing }}"
+            bindinput="inputFun"
+            bindblur="inputBlur"
+            />
+            <text class="weui-icon-clear" bindtap="inputclear" wx:if="{{ inputValue.length > 0 }}"></text>
+            <icon style="position: absolute;top: 0;right: 0;padding:6px 6px" type="cancel" size="16" bindtap="inputclear" wx:if="{{ inputValue.length > 0 }}"/>
+        </view>
+        <label class="weui-search-bar__label"
+            wx:if="{{ ! focusing }}"
+            bindtap="inputFocus"
+        >
+            <text class="weui-icon-search" /> 搜索
+        </label>
+        </form>
+        <view class="weui-search-bar__cancel-btn" bindtap="inputclear">取消</view>
+    </view>
+    <view class="weui-cells weui-cells_access search_show" hidden="{{type}}" id="search_show">
+        <view class="weui-cell" wx:for="{{textList}}" wx:for-item="i">
+            <view class="weui-cell__bd weui-cell_primary">
+                <text>{{inputValue}}</text>
+            </view>
+        </view>
+        
+    </view>-->
+    <view class="item-avatar-md" wx:for="{{list}}" wx:for-item="i" data-name="{{i.name}}" data-id="{{i.id}}" bindtap="goPage">  
+        <image src="{{i.img}}"></image>
+        <view class="item-text">
+           <view class="text_box">
+          <view class="flex">
+            <text class="title">{{i.name}}</text>
+          </view>
+          <view class="flex" style="color:#3ccccc">
+            <text class="message">{{i.message}}</text>
+          </view>
+         </view>
+          </view>
+        <view class="item-time padding_half" style="color:#3ccccc">
+          <text class="message">{{i.type?"已添加":"未添加"}}</text>
+        </view>
+    </view>
+</scroll-view>

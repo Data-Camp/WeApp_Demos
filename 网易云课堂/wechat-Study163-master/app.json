@@ -1,0 +1,54 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/course/course",
+    "pages/mystudy/mystudy",
+    "pages/accounts/accounts",
+    "pages/other/other",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundColor":"#31a030",
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "网易云课堂",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar":{
+    "color":"#666",
+    "selectedColor":"#31a030",
+    "backgroundColor":"#FFF",
+    "borderStyle":"black",
+    "list":[
+      {
+        "pagePath":"pages/index/index",
+        "text":"首页",
+        "iconPath":"images/tab_index1.png",
+        "selectedIconPath":"images/tab_index2.png"
+      },
+      {
+        "pagePath":"pages/course/course",
+        "text":"全部课程",
+        "iconPath":"images/tab_course1.png",
+        "selectedIconPath":"images/tab_course2.png"
+      },
+      {
+        "pagePath":"pages/mystudy/mystudy",
+        "text":"我的学习",
+        "iconPath":"images/tab_mystudy1.png",
+        "selectedIconPath":"images/tab_mystudy2.png"
+      },
+      {
+        "pagePath":"pages/accounts/accounts",
+        "text":"帐号",
+        "iconPath":"images/tab_account1.png",
+        "selectedIconPath":"images/tab_account1.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

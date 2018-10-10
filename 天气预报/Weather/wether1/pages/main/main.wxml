@@ -1,0 +1,17 @@
+<view class="content">
+    <image class="main-bg" src="../assets/img/bg.jpg"></image>
+    <view class="today">
+        <view class="info">
+            <view class="temp">{{temp}}</view>
+            <view class="weather">{{weather}}</view>
+            <view class="des">友情提示：{{des}}</view>
+            <view class="city">{{city}}</view>
+        </view>
+    </view>
+    <import src="../template/itemtpl.wxml"/>
+    <view class="future">
+        <block wx:for="{{future}}">
+            <template is="future-item" data="{{item}}"/>
+        </block>
+    </view>
+</view>

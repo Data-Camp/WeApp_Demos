@@ -1,0 +1,57 @@
+{
+  "pages": [
+    "pages/focusNews/focusNews",
+    "pages/focusNewsDetail/focusNewsDetail",
+    "pages/uestcAnnounce/uestcAnnounce",
+    "pages/uestcNotice/uestcNotice",
+    "pages/uestcLibrary/uestcLibrary",
+    "pages/uestcLibraryLogin/uestcLibraryLogin",
+    "pages/uestcLibrarySearch/uestcLibrarySearch"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fbf9fe",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#fbf9fe"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true,
+  "tabBar": {
+    "color": "#888",
+    "selectedColor": "#89bdf7",
+    "backgroundColor": "#fff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/focusNews/focusNews",
+        "text": "焦点新闻",
+        "iconPath": "image/focus.png",
+        "selectedIconPath": "image/focus_active.png"
+      },
+      {
+        "pagePath": "pages/uestcAnnounce/uestcAnnounce",
+        "text": "校园公告",
+        "iconPath": "image/announce.png",
+        "selectedIconPath": "image/announce_active.png"
+      },
+      {
+        "pagePath": "pages/uestcNotice/uestcNotice",
+        "text": "校内通知",
+        "iconPath": "image/notice.png",
+        "selectedIconPath": "image/notice_active.png"
+      },
+      {
+        "pagePath": "pages/uestcLibraryLogin/uestcLibraryLogin",
+        "text": "图书馆",
+        "iconPath": "image/lab.png",
+        "selectedIconPath": "image/lab_active.png"
+      }
+    ]
+  }
+}

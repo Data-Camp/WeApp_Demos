@@ -1,0 +1,55 @@
+<!--index.wxml-->
+<view class="container">
+  <scroll-view class="scroll-container" upper-threshold="{{sortPanelDist}}" bindscroll="onToTop" scroll-y="true" style="height:calc(100% - 1px)">
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{imgUrls}}">
+            <swiper-item>
+                <image src="{{item}}" class="slide-image" style="height:{{windowWidth * 0.375}}px !important"/>
+            </swiper-item>
+        </block>
+    </swiper>
+    <view class="category-panel">
+        <view class="category-item">
+            <image class="category-item-image" src="../../resources/images/ic_index_tab_kind.png" />
+            <text class="category-item-text">分类</text>
+        </view>
+        <view class="category-item">
+            <image class="category-item-image" src="../../resources/images/ic_index_tab_ten.png" />
+            <text class="category-item-text">优选</text>
+        </view>
+        <view class="category-item">
+            <image class="category-item-image" src="../../resources/images/ic_index_tab_share.png" />
+            <text class="category-item-text">晒单</text>
+        </view>
+        <view class="category-item">
+            <image class="category-item-image" src="../../resources/images/ic_index_tab_qa.png" />
+            <text class="category-item-text">常见问题</text>
+        </view>
+    </view>
+    <block wx:if="{{notices.length>0}}">
+        <view class="notice-panel">
+            <image class="notice-image" src="../../resources/images/ic_notice.png" />
+            <view class="notice-message" animation="{{animationNotice}}" style="opacity:{{noticeIdx>=0}};">
+                <span style="color:#999999">恭喜</span><span style="color:#3273c3">{{notices[noticeIdx].name}}</span><span style="color:#999999">{{notices[noticeIdx].time}}</span>{{notices[noticeIdx].goods}}
+            </view>
+        </view>
+    </block>
+    <view class="sort-panel" style="position:{{sortPanelPos}};top:{{sortPanelTop}}px">
+        <view class="sort-item">人气</view>
+        <view class="sort-item">最新</view>
+        <view class="sort-item">进度</view>
+        <view class="sort-item comb on">
+            <view class="comb-text">总需人次</view>
+            <view class="comb-arrs down">
+                <image class="comb-arr-up" src=""></image>
+                <image class="comb-arr-down" src=""></image>
+            </view>
+        </view>
+    </view>
+    <view class="goods-panel">
+        <import src="tpl/goodsList.wxml"/>
+        <template is="goodsList" data="{{goodsList:goodsList}}"/>
+    </view>
+  </scroll-view>
+  <view class="tabbar-border"></view>
+</view>

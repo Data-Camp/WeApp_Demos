@@ -1,0 +1,180 @@
+/**answer.wxss**/
+
+.answer-feed {
+    padding: 0;
+    font-size: 14rpx;
+    background: #F0F4F3;
+    color: #000;
+}
+.question-wrp{
+    border-radius: 3px;
+    box-shadow: 0 1px 2px #bebebe;
+}
+.question-item{
+    width: 710rpx;
+    padding: 40rpx 20rpx 10rpx;
+    background: #fff;
+}
+.question-item .que-tag{
+
+}
+.question-item .que-tag .tag{
+    height: 28rpx;
+    padding: 15rpx 20rpx;
+    border-radius: 28rpx;
+    margin: 0 10rpx;
+    background: #EEF5F8;
+    color: #2186E0;
+    font-size: 28rpx;
+    vertical-align: middle;
+}
+.question-item .que-title{
+    padding: 40rpx 20rpx 30rpx;
+    font-size: 38rpx;
+}
+.question-item .que-content{
+    padding: 0 20rpx;
+    font-size: 26rpx;
+}
+.question-item .que-follow{
+    margin: 20rpx;
+    height: 68rpx;
+}
+.question-item .que-follow view{
+    display: inline-block;
+    margin: 0 40rpx 0 0;
+}
+
+.question-item .que-follow image{
+    width: 50rpx;
+    height: 50rpx;
+    margin: 0 10rpx 0 0;
+    vertical-align: middle;
+}
+.question-item .que-follow .left{
+    float: left;
+    padding: 10rpx 0;
+}
+.question-item .que-follow .left text{
+    color: #AFAFAF;
+    height: 50rpx;
+    vertical-align: middle;
+    padding: 18rpx 0;
+    font-size: 24rpx;
+}
+.question-item .que-follow .right{
+    float: right;
+    padding: 20rpx 55rpx;
+    color: #ffffff;
+    background: #52C980;
+    border-radius: 3px;
+    font-size: 26rpx;
+    margin: 0;
+}
+.que-operate{
+    width: 750rpx;
+    border-top: solid 1px #ebebeb;
+    border-bottom: solid 1px #ebebeb;
+    color: #889091;
+    vertical-align: middle;
+    background: #ffffff;
+}
+.que-operate .flex-item{
+    padding: 20rpx 0;
+    font-size: 26rpx;
+}
+.que-operate .invite{
+    border-right: solid 2px #ebebeb;
+}
+.que-operate image{
+    width: 50rpx;
+    height: 50rpx;
+    vertical-align: middle;
+    margin: 0 20rpx 0 0;
+}
+
+/*.answer-feed .feed-item{*/
+    /*width: 690rpx;*/
+    /*padding: 30rpx 30rpx 20rpx;*/
+    /*margin: 7rpx 0 6rpx 0;*/
+    /*background: #ffffff;*/
+    /*border-top: 1px solid #eee;*/
+    /*border-bottom: 1px solid #eee;*/
+    /*box-shadow: 0 2px 5px #eeeeee;*/
+/*}*/
+/*.answer-feed .feed-item .feed-source{*/
+    /*width: 690rpx;*/
+    /*left: 0;*/
+    /*height: 50rpx;*/
+/*}*/
+/*.answer-feed .feed-item .feed-source .avatar{*/
+    /*position: relative;*/
+    /*display: inline-block;*/
+/*}*/
+/*.answer-feed .feed-item .feed-source a{*/
+    /*display: inline-block;*/
+    /*height: 40rpx;*/
+/*}*/
+/*.answer-feed .feed-item .feed-source .avatar image{*/
+    /*/!*position: absolute;*!/*/
+    /*display: inline-block;*/
+    /*width: 45rpx;*/
+    /*height: 45rpx;*/
+    /*border-radius: 45rpx;*/
+    /*top: 10rpx;*/
+    /*vertical-align: middle;*/
+/*}*/
+/*.answer-feed .feed-item .feed-source text{*/
+    /*/!*position: absolute;*!/*/
+    /*display: inline-block;*/
+    /*height: 40rpx;*/
+    /*line-height: 40rpx;*/
+    /*vertical-align: middle;*/
+    /*margin: 0 0 0 15rpx;*/
+    /*color: #a0acac;*/
+    /*font-size: 16rpx;*/
+/*}*/
+/*.answer-feed .feed-item .feed-source .item-more{*/
+    /*display: inline-block;*/
+    /*width: 40rpx;*/
+    /*height: 45rpx;*/
+    /*float: right;*/
+/*}*/
+/*.answer-feed .feed-item .feed-content{*/
+    /*padding: 10rpx 0 0 0;*/
+/*}*/
+/*.answer-feed .feed-item .feed-content .question text{*/
+    /*font-size: 28rpx;*/
+    /*font-weight: 600px;*/
+    /*line-height: 40rpx;*/
+    /*text-space: 5rpx;*/
+/*}*/
+.answer-feed .feed-item .feed-content .answer-body{
+    padding: 0;
+    /*height: 10rpx;*/
+    font-size: 24rpx;
+    line-height: 28rpx;
+    color: #5b5b5b;
+}
+/*.answer-feed .feed-item .feed-content .answer-actions{*/
+    /*width: 690rpx;*/
+    /*padding: 10rpx 0  0;*/
+    /*color: #a0acac;*/
+/*}*/
+/*.answer-feed .feed-item .feed-content .answer-actions view{*/
+    /*display: inline-block;*/
+    /*vertical-align: text-bottom;*/
+    /*padding: 0 10rpx 0 0;*/
+    /*font-size: 24rpx;*/
+/*}*/
+/*.answer-feed .feed-item .feed-content .answer-actions .dot ::after{*/
+    /*content: "•";*/
+/*}*/
+
+
+
+
+
+
+
+

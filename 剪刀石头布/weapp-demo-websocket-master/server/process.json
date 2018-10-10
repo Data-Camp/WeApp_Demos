@@ -1,0 +1,16 @@
+{
+    "apps": [
+        {
+            "name": "websocket",
+            "script": "dist/app.js",
+            "watch": ["dist"],
+            "ignore_watch": ["node_modules"],
+            "cwd": "/data/release/qcloud-applet-websocket",
+            "exec_mode": "fork",
+            "env": {
+                "NODE_ENV": "production",
+                "PORT": 9595
+            }
+        }
+    ]
+}

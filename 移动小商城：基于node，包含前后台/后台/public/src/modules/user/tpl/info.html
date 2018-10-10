@@ -1,0 +1,128 @@
+<ion-view view-title="我的">
+	<ion-nav-buttons side="right">
+		<a class="button button-clear icon ion-ios-gear-outline" ui-sref="web.user.setting"></a>
+	</ion-nav-buttons>
+	<ion-content>
+		<script id="modal.html" type="text/ng-template">		
+			<ion-modal-view>
+				<ion-header-bar>
+					<a class="button" on-tap="vm.modal.close()">关闭</a>
+					<h1 class="title">编辑</h1>
+					<a class="button" on-tap="vm.submitForm(form.$valid)">保存</a>
+				</ion-header-bar>
+				<ion-content>
+					<form name="form" novalidate>
+						<div class="weui-cells weui-cells_form">
+					        <div class="weui-cell">
+					            <div class="weui-cell__hd">
+					            	<label class="weui-label">手机</label>
+					            </div>
+					            <div class="weui-cell__bd">
+					                <input name="tel" class="weui-input" type="tel" placeholder="手机" ng-model="vm.form.tel" required>
+					            </div>
+					        </div>
+					        <div class="weui-cell">
+					            <div class="weui-cell__hd">
+					            	<label class="weui-label">邮箱</label>
+					            </div>
+					            <div class="weui-cell__bd">
+					                <input name="email" class="weui-input" type="email" placeholder="邮箱" ng-model="vm.form.email" required>
+					            </div>
+					        </div>
+					        <div class="weui-cell">
+					            <div class="weui-cell__hd">
+					            	<label class="weui-label">昵称</label>
+					            </div>
+					            <div class="weui-cell__bd">
+					                <input name="nickname" class="weui-input" type="text" placeholder="昵称" ng-model="vm.form.nickname" required>
+					            </div>
+					        </div>
+					        <div class="weui-cell">
+					            <div class="weui-cell__hd">
+					            	<label class="weui-label">生日</label>
+					            </div>
+					            <div class="weui-cell__bd">
+					                <input name="birthday" class="weui-input" type="date" placeholder="生日" ng-model="vm.form.birthday" required>
+					            </div>
+					        </div>
+					    </div>
+					    <div class="weui-cells weui-cells_radio">
+				            <label class="weui-cell weui-check__label">
+				                <div class="weui-cell__bd">
+				                    <p>男</p>
+				                </div>
+				                <div class="weui-cell__ft">
+				                    <input type="radio" name="gender" class="weui-check" value="male" ng-model="vm.form.gender">
+				                    <span class="weui-icon-checked"></span>
+				                </div>
+				            </label>
+				            <label class="weui-cell weui-check__label">
+				                <div class="weui-cell__bd">
+				                    <p>女</p>
+				                </div>
+				                <div class="weui-cell__ft">
+				                    <input type="radio" name="gender" class="weui-check" value="female" ng-model="vm.form.gender">
+				                    <span class="weui-icon-checked"></span>
+				                </div>
+				            </label>
+				        </div>
+					</form>
+				</ion-content>
+			</ion-modal-view>
+		</script>
+		<div class="weui-cells">
+			<div class="weui-cell">
+				<div class="head-img" style="background-image: url({{ vm.userInfo.avatar }})"></div>
+				<input class="upload-head-img" type="file" accept="image/jpg,image/jpeg,image/png,image/gif" multiple="" file-model="vm.file" file-fn="vm.getFile()">
+			</div>
+	        <div class="weui-cell">
+	            <div class="weui-cell__hd">
+	            	<i class="fa fa-phone cell_icon"></i>
+	            </div>
+	            <div class="weui-cell__bd">
+	                <p>手机</p>
+	            </div>
+	            <div class="weui_cell_ft">{{ vm.userInfo.tel }}</div>
+	        </div>
+	        <div class="weui-cell">
+	            <div class="weui-cell__hd">
+	            	<i class="fa fa-envelope cell_icon"></i>
+	            </div>
+	            <div class="weui-cell__bd">
+	                <p>邮箱</p>
+	            </div>
+	            <div class="weui_cell_ft">{{ vm.userInfo.email }}</div>
+	        </div>
+	        <div class="weui-cell">
+	            <div class="weui-cell__hd">
+	            	<i class="fa fa-user cell_icon"></i>
+	            </div>
+	            <div class="weui-cell__bd">
+	                <p>昵称</p>
+	            </div>
+	            <div class="weui_cell_ft">{{ vm.userInfo.nickname }}</div>
+	        </div>
+	        <div class="weui-cell">
+	            <div class="weui-cell__hd">
+	            	<i class="fa fa-transgender cell_icon"></i>
+	            </div>
+	            <div class="weui-cell__bd">
+	                <p>性别</p>
+	            </div>
+	            <div class="weui_cell_ft">{{ vm.userInfo.gender === 'female' ? '女' : '男' }}</div>
+	        </div>
+	        <div class="weui-cell">
+	            <div class="weui-cell__hd">
+	            	<i class="fa fa-birthday-cake cell_icon"></i>
+	            </div>
+	            <div class="weui-cell__bd">
+	                <p>生日</p>
+	            </div>
+	            <div class="weui_cell_ft">{{ vm.userInfo.birthday | date: 'yyyy-MM-dd' }}</div>
+	        </div>
+	    </div>
+	    <div class="weui-btn-area">
+        	<button type="button" class="weui-btn weui-btn_default" on-tap="vm.modal.open()">编辑</button>
+    	</div>
+	</ion-content>
+</ion-view>

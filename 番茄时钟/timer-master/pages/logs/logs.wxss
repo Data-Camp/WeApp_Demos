@@ -1,0 +1,27 @@
+.container{
+	padding-bottom: 50px;
+	max-height: 92%;
+}
+.log {
+	color: #999;
+	margin: 15px 10px;
+}
+.log_item{
+	padding: 15px 5px;
+}
+.log_item text {
+	padding-right: 20px;
+}
+.clear{
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+}
+.clear .clear_btn {
+	margin: 10px;
+	height: 35px;
+	line-height: 35px;
+	color:#fff;
+	background-color: #fd8f58;
+	border-radius: 2px;
+}

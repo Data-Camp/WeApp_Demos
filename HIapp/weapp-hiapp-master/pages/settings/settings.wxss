@@ -1,0 +1,24 @@
+.user-avatar {
+  width: 130rpx;
+  height: 130rpx;
+  border: 1rpx solid #d9d9d9;
+  border-radius: 10rpx;
+  background-color: #c8c8c8;
+}
+
+.user-info{
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  font-size: 34rpx;
+  margin-left: 30rpx;
+}
+
+.user-info-text{
+  margin: 10rpx 0;
+}
+
+.user-info-uid{
+  font-size: 28rpx;
+  color: #808080;
+}

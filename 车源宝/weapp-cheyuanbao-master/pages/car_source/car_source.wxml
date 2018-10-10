@@ -1,0 +1,32 @@
+<view class="container">
+  <view class="search_bar">
+    <input placeholder="搜索品牌/车系/车款/指导价" auto-focus class="search_bar_txt"/>
+  </view>
+  <view class="hot-brand">
+    <text class="source_title">热门品牌</text>
+    <view class="hot-list" data-id="{{id}}">
+      <view class="hot-item" wx:for="{{hotCar}}" wx:key="unique" wx:for-item="item">
+        <image src="{{item.image_src}}" mode="scaleToFill center"></image>
+        <text>{{item.name}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="import-car">
+    <text class="source_title">平行进口车</text>
+    <view class="car-parallel">
+      <image src="../../images/car_parallel_import@2x.png" mode="scaleToFill center" class="car-parallel-icon"></image>
+      <text class="car-parallel-txt">平行进口</text>
+    </view>
+  </view>
+  <view class="brand-list">
+    <view wx:for="{{commonCar}}" wx:key="unique" wx:for-item="common">
+      <text class="alpha">{{common.alpha}}</text>
+      <view class="brand-list-item">
+          <view wx:for="{{common.list}}" wx:key="unique" wx:for-item="brand" class="brand-items">
+            <image src="{{brand.image_src}}" mode="scaleToFill center"></image>
+            <text>{{brand.name}}</text>
+          </view>
+      </view>
+    </view>
+  </view>
+</view>

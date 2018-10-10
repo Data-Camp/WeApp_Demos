@@ -1,0 +1,132 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.user-section{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    padding: .2rem .3rem;
+    box-shadow: 0 0 2px rgb(125, 185, 159);
+    color: #fcfcfc;
+    background-color: rgba(0, 0, 0,.6);
+    overflow: hidden;
+}
+
+.user_img_top{
+  margin-top:1.8rem
+}
+
+.user_headimg{
+    float: left;
+    margin-right: .5rem;
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 50%;
+}
+.user_hello{
+    display: block;
+    line-height: 1.6rem;
+    font-size: .8rem;
+    font-weight: bold;
+}
+.search_ico{
+    float: right;
+    margin-right: .3rem;
+    width: 1.6rem;
+    height: 1.6rem;
+    background: url("../../img/search.png") center no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+.slide-image{
+    width: 100%;
+    height: 100%;
+}
+.floortitle{
+  display:flex;
+  height:34px;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 13px;
+  font-size:14px;
+  color:rgba(0,0,0,0.7);
+  border-bottom: 1px solid #e2e2e3
+}
+
+.nav-hover{
+    background-color: rgb(234, 234, 234);
+}
+
+.book_item{
+    padding: .4rem;
+    position: relative;
+    overflow: hidden;   
+    box-shadow: 0 0 1px rgba(117, 180, 153,.8);
+}
+.book_item_img{
+    float: left;
+    width: 30%;
+    height: 5.9rem;
+}
+.book_item_infos{
+    width:68%;
+    padding-left: 2%;
+    float: right;
+}
+.book_title{
+    display: inline-block;
+    width: 100%;
+    line-height: 1rem;
+    font-family:Helvetica,Arial,sans-serif;
+    font-size: .8rem;
+    color: rgb(96, 147, 122);
+    overflow: hidden;
+    word-break: keep-all;
+    text-overflow: ellipsis;
+}
+.book_star,.book_author,.book_tags,.book_item_summary,.book_price{
+    font-size: .7rem;
+    color: #666;
+}
+.book_star{
+    color: coral;
+    padding-bottom:4px;
+    position: absolute; 
+    right: 1rem; 
+    top: -2px;
+    font-size: .8rem; 
+}
+
+.book_item_summary{
+    display: inline-block;
+    margin-top: .1rem;
+    height: 1.85rem;
+    color: #333;
+    overflow: hidden;
+}
+
+
+

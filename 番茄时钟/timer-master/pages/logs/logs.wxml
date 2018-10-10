@@ -1,0 +1,31 @@
+<block wx:if="{{logs.length}}">
+	<scroll-view class="container" scroll-y="true">
+	  <view class="log panel">
+	  	<view class="log_item" wx:for="{{logs}}" wx:for-index="$index" wx:for-item="log">
+	  		<text class="log_start">{{log.startTime}}</text>
+	  		<text class="log_action">{{log.action}}</text>
+	  		<text class="log_action">{{log.name}}</text>
+	  	</view>
+	  </view>
+		
+	</scroll-view>
+	<view class="clear">
+		<button bindtap="switchModal" class="clear_btn" size="mini" >清除记录</button>
+	</view>
+	<modal 
+		title="提示" 
+		confirm-text="确定" 
+		cancel-text="取消" 
+		hidden="{{modalHidden}}" 
+		bindconfirm="clearLog" 
+		bindcancel="switchModal">
+	    是否清除记录？此操作不可恢复!
+	</modal>
+</block>
+<block wx:else>
+	<view class="nodata">
+		<image class="nodata_img" src="../../image/nodata.png"></image>
+		<text class="nodata_text">暂无记录</text>
+	</view>
+</block>
+<toast hidden="{{toastHidden}}" bindchange="hideToast">清除成功！</toast>

@@ -1,0 +1,127 @@
+/**index.wxss**/
+/*.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}*/
+
+
+
+.container {
+  /*background-color: red;*/
+}
+
+.ui_v2ee_swiper {
+  height: 350rpx;
+  width: 750rpx;
+}
+.ui_v2ee_swiper image{
+  height: 350rpx;
+  width: 750rpx;
+}
+
+.header {
+  height: 55rpx;
+  border-left-width: 2px;
+  border-left-color: limegreen;
+  border-left-style: solid;
+  display: flex; /*变成flex布局*/
+  justify-content: space-between;  /*两边对齐*/
+  align-items: center;
+}
+.text_right{
+  color: limegreen;
+  font-size: 13px;
+  padding-right: 10px;
+}
+.text_left {
+  color: black;
+  font-size: 15px;
+  padding-left: 5px;
+}
+.content {
+  display: flex;
+  flex-direction: row; /*默认的方向*/
+  flex-wrap: wrap;  /*自动换行*/
+  justify-content: center; /*水平方向居中对齐*/
+}
+.content_item {
+  height: 200rpx;
+  width: 45%;
+  background-color: gray;
+  margin: 5px;
+  position: relative; /*相对定位 ——相对或者绝对都是定位，这里为了子视图方便定位*/
+}
+.content_item image {
+  width: 100%;
+  height: 100%;
+}
+.content_item_text{
+  width: 100%;
+  height: 30%;
+  background: -webkit-linear-gradient(bottom, rgba(0 , 0, 0, 0.3), rgba(0 , 0, 0, 0));
+  color: white;
+  position: absolute; /*绝对布局 相对于最近已经定位的父视图定位*/
+  bottom: 0px;
+  font-size: 11px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-right: 1%;
+  padding-left: 1%;
+  padding-bottom: 1%;
+}
+
+.list_item {
+  width: 100%;
+  height: 500rpx;
+}
+.list_item_images {
+  width: 100%;
+  height: 300rpx;
+  position: relative;
+}
+.list_item_image {
+  width: 100%;
+  height: 300rpx;
+}
+.avatar{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius:50%;
+  position: absolute;
+  bottom: -60rpx;
+  right: 100rpx; 
+}
+.list_item_text {
+  width: 98%;
+  height: 200rpx;
+  margin-top: 20rpx;
+  padding-right: 2%;
+  padding-left: 2%;
+  /*background-color: royalblue;*/
+}
+.list_item_text_title{
+  font-size: 14px;
+  color: black;
+}
+.list_item_text_content{
+  font-size: 12px;
+  color: gray;
+  margin-top: 25rpx;
+}

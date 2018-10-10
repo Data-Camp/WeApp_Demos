@@ -1,0 +1,14 @@
+{
+    "pages": [
+        "pages/drawguess/index",
+        "pages/index/index",
+        "pages/chat/chat",
+        "pages/upload/index"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#f8777b",
+        "navigationBarTitleText": "腾讯云小程序解决方案",
+        "navigationBarTextStyle": "white"
+    }
+}

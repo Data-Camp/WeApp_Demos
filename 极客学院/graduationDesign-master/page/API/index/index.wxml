@@ -1,0 +1,33 @@
+<view class="container">
+  <view class="header">
+      <view class="title">小程序接口</view>
+      <view class="desc">这里就当前已支持的接口能力进行演示</view>
+  </view>
+
+  <view class="menu-list">
+    <block wx:for="{{menuList}}" wx:for-item="menuItem">
+      <view class="menu-item">
+        <view class="menu-item-main" id="{{index}}" bindtap="tapMenuItem">
+          <text class="menu-item-name">{{menuItem.name}}</text>
+          <image
+            class="menu-item-arrow {{menuItem.opened ? 'open' : 'close'}} {{menuItem.url ? 'url' : ''}}"
+            src="/image/arrowright.png">
+          </image>
+        </view>
+        <view class="menu-item-api-list {{menuItem.opened ? 'open' : 'close'}}">
+          <block wx:for="{{menuItem.APIList}}" wx:for-item="APIItem">
+            <navigator url="{{APIItem.url}}">
+              <view class="menu-item-api-item" style="{{index === 0 ? 'border-top:none;' : ''}}">
+                <view class="menu-item-api-item-text">
+                  <text class="menu-item-api-item-text-zhname">{{APIItem.zhName}}</text>
+                  <text class="menu-item-api-item-text-enname">{{APIItem.enName}}</text>
+                </view>
+                <image class="menu-item-api-item-arrow" src="/image/arrowright.png"></image>
+              </view>
+            </navigator>
+          </block>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

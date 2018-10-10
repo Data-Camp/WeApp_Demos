@@ -1,0 +1,28 @@
+page{
+    background-color: #fff;
+    font-size: 14px;
+}
+.swiper_box {
+    width: 100%;
+    height: 320px;
+}
+.swiper_box .slide-image{
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    overflow: hidden;
+}
+.shopping_container{
+    padding: 0 30rpx;
+}
+.shopping_container .title{
+    margin: 20rpx 0;
+    font-weight: bold;
+    color: #333;
+}
+
+.shopping_container .reason{
+    margin: 20rpx 0;
+    color: #939393;
+    line-height: 22px;
+}

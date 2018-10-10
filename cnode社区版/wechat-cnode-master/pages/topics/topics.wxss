@@ -1,0 +1,120 @@
+.topics{
+  height: 100%;
+  overflow: hidden;
+}
+/*导航 nav*/
+.top-bar {
+  height: 72rpx;
+  background: #444;
+  width:100%;
+  position: fixed;
+  top:0;
+  z-index:1;
+}
+.top-bar-item {
+  display:inline-block;
+  width: 150rpx;
+  color: #80bd01;
+  text-align: center;
+  /* line-height: 72rpx; */
+  font-size: 28rpx;
+}
+.top-bar-active{
+  color: #fff;
+  font-size: 32rpx;
+}
+
+/*列表 list*/
+.scroll-posts-list{
+  overflow: hidden;
+  margin-top: 72rpx;
+}
+.posts-list{
+  position: relative;
+  overflow: hidden;
+  padding: 0 30rpx;
+  border-bottom: 1rpx solid #80bd01;
+}
+.posts-list-info{
+  overflow: hidden;
+  display: flex;
+  margin-top: 30rpx;
+  padding-bottom: 20rpx;
+  border-bottom: 1rpx solid #eee;
+}
+.posts-list-info .userimg{
+  overflow: hidden;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+.posts-list-info .item-box{
+  flex: 1;
+  margin-left: 30rpx;
+}
+.posts-list-info .item-box .userinfo{
+  display: flex;
+}
+.posts-list-info .item-box .userinfo .username,
+.posts-list-info .item-box .userinfo .time{
+  flex: 1;
+}
+.posts-list-info .item-box .userinfo .time{
+  text-align: right;
+  color: #555;
+}
+.posts-list-info .item-box .posts-title{
+  height: 80rpx;
+  margin: 20rpx 0;
+  font-size: 30rpx;
+  color: #35495e;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.posts-list-info .item-box  .posts-tag{
+  display: inline-block;
+  width: 80rpx;
+  height: 38rpx;
+  text-align: center;
+  line-height: 38rpx;
+  margin-right: 10rpx;
+  font-size: 26rpx;
+  color: #80bd01;
+  border: 1rpx solid #80bd01;
+}
+.posts-list-info .item-box .hot{
+  color: red;
+  border: 1rpx solid red;
+}
+.posts-list .bar-info .bar-info-item{
+  display: inline-block;
+  margin-right: 50rpx;
+  line-height: 66rpx;
+}
+.posts-list .bar-info .bar-info-item-icon{
+  display: inline-block;
+  vertical-align: middle;
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 10rpx;
+}
+.posts-list .bar-info .bar-info-item-number{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.posts-list .bar-info .bar-info-item2{
+  display: inline-block;
+  float: right;
+  line-height: 66rpx;
+}
+.posts-list .bar-info .bar-info-item2 .bar-info-item-number{
+  color: #80bd01;
+}
+/*loading*/
+.loading-font{
+  font-size: 30rpx;
+}

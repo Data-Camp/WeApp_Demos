@@ -1,0 +1,52 @@
+<!--text.wxml-->
+<view class="grid">
+    <!--hotwords list-->
+    <view id="wordscard">
+      <view >
+        <icon type="{{icontype[0]}}" size="15"/>
+        <text>HOTWORDS</text>
+        <icon type="{{icontype[0]}}" size="15"/>
+      </view>
+      <view class="rowalign">
+        <text wx:for="{{data.hotwords}}">{{item.word}}</text>
+      </view>
+    </view>
+
+    <!--hot news list-->
+    <view class="card short-card" wx:for="{{data.hotnews}}" wx:for-index="itemIndex">
+        <view><text class="title">{{ item.title }}</text></view>
+        <view><text class="tag">发布于 {{ item.date }}, 公众号 {{ item.account }}</text></view>
+        <view class="btn-area">
+            <button type="default" size="mini" data-index="{{itemIndex}}" bindtap="modalTap">SHOW DETAILS</button>
+        </view>
+    </view>
+
+    <!--top news list-->
+        <view class="card" wx:for="{{data.topnews}}" wx:for-index="itemIndex">
+            <view><text class="title">{{ item.title }}</text></view>
+            <view><text class="tag">发布于 {{ item.date }}, 公众号 {{ item.account }}</text></view>
+            <view>
+                <text class="para">{{item.summary}}</text>
+            </view>
+            <view>
+                 <text class="tlink">{{data.fakeUrl + item.openid}}</text>
+            </view>
+        </view>
+</view>
+
+<modal title="NEWS DETAIL" confirm-text="confirm" hidden="{{modalHidden}}" no-cancel bindconfirm="modalHide">
+    <view>
+        <image class="news-avatar" src="{{modalContent.img}}" background-size="cover"></image>    </view>
+    <view>
+        <text>Title: {{modalContent.title}}</text>
+    </view>
+    <view>
+        <text>Account: {{modalContent.account}}</text>
+    </view>
+    <view>
+        <text>Date: {{modalContent.date}}</text>
+    </view>
+    <view>
+            LINK: <text>{{modalContent.link}}</text>
+        </view>
+</modal>

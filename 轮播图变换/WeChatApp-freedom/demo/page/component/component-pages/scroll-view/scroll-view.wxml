@@ -1,0 +1,26 @@
+<view class="page">
+  <view class="page__hd">
+    <text class="page__title">scroll-view</text>
+    <text class="page__desc">可滚动视图区域</text>
+  </view>
+  <view class="page__bd">
+    <view class="section">
+      <view class="section__title">vertical scroll</view>
+      <scroll-view scroll-y="true" style="height: 200px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+        <view id="green" class="scroll-view-item bc_green"></view>
+        <view id="red"  class="scroll-view-item bc_red"></view>
+        <view id="yellow" class="scroll-view-item bc_yellow"></view>
+        <view id="blue" class="scroll-view-item bc_blue"></view>
+      </scroll-view>
+    </view>
+    <view class="section section_gap">
+      <view class="section__title">horizontal scroll</view>
+      <scroll-view class="scroll-view_H" scroll-x="true" style="width: 100%">
+        <view id="green" class="scroll-view-item_H bc_green"></view>
+        <view id="red"  class="scroll-view-item_H bc_red"></view>
+        <view id="yellow" class="scroll-view-item_H bc_yellow"></view>
+        <view id="blue" class="scroll-view-item_H bc_blue"></view>
+      </scroll-view>
+    </view>
+  </view>
+</view>

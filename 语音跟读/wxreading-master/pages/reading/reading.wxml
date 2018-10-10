@@ -1,0 +1,47 @@
+<!--logs.wxml-->
+<view class="container reading_container">
+    <swiper class="swiper_container">
+        <block wx:for-items="{{readingInfo}}" wx:key="item">
+            <swiper-item class="readingItem">
+                <view class="readingItem-img"
+                      style="background: url({{item.img_url}}) no-repeat center center;background-size: cover;">
+                </view>
+                <view class="readingItem-content">
+                    <view class="item-index">{{index + 1}}/{{readingInfo.length}}</view>
+                    <view class="readingItem-audio-content">
+                        <image class="read-audio-icon" src="images/btn_read_videoPlay.png" id="{{index}}"
+                               bindtap="tapPlayPartAudio">
+                            <audio src="{{item.audio_url}}" id="partaudio-{{index}}"></audio>
+                        </image>
+                        <view class="read-audio-info">
+                            <text class="ri-en_content">{{item.resource_en_content}}</text>
+                            <text class="ri-content">{{item.resource_content}}</text>
+                        </view>
+                    </view>
+
+                    <!-- 底部 控制区域 -->
+                    <view class="read-audio-control">
+                        <progress percent="{{currentProgress}}" stroke-width="6" class="read-audio-progress" color="#1ECFA7"/>
+                        <text class="read-audio-duration">{{item.audio_duration}}'</text>
+                        <image class="audio-listen" src="images/btn_read_listenS.png"
+                               bindtap="tapRePlayUserAudio" id="replay-{{index}}" data-reading_item="{{index}}"></image>
+                        <block wx:if="{{recording == true}}">
+                            <image class="audio-record" src="images/btn_read_record_stop.png"
+                                   bindtap="tapCompleteUserAudio" id="record-{{index}}"
+                                   data-reading_item="{{index}}"></image>
+                        </block>
+                        <block wx:if="{{recording == false}}">
+                            <image class="audio-record" src="images/btn_read_record.png"
+                                   bindtap="tapRecordUserAudio" id="record-{{index}}"
+                                   data-reading_item="{{index}}"></image>
+                        </block>
+                    </view>
+                </view>
+            </swiper-item>
+        </block>
+    </swiper>
+
+    <view class="fixed_submit_btn" bindtap="tapSubmitReadingResult">
+        <text>完成！提交录音打卡~</text>
+    </view>
+</view>

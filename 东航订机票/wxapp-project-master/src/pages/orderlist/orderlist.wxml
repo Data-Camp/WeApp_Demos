@@ -1,0 +1,42 @@
+<scroll-view scroll-y="true" scroll-y="false" class="container" bindscrolltolower="loadMore">
+    <block wx:for="{{orderList}}" wx:key="{{index}}">
+      <view class="wrap" data-order="{{item.OrderID}}" bindtap="tapdetail">
+          <view class="wrap-top">
+              <text class="txt">{{item.OrderTitle}}</text>
+              <view class="orderLi">
+                <view class="orderMin">
+                    <view class="time">
+                        <text>出行时间：</text>
+                        <text>{{item.DepartTime}}</text>
+                    </view>
+                    <view class="number">
+                        <text>返程时间：</text>
+                        <text>{{item.BackTime}}</text>
+                    </view>
+                </view>
+                <view class="number yetpay">{{item.OrderStatus}}</view>
+            </view> 
+          </view>
+
+          <view class="wrap-btm">
+              <view class="number">
+                  <text>单号：</text>
+                  <text>{{item.OrderID}}</text>
+              </view>
+              <view class="number">
+                  <text>订单金额</text>
+                  <text class="paytxt">¥{{item.OrderAmount}}</text>
+              </view>
+          </view>
+      </view>
+    </block>
+
+    <view wx:if="{{login}}" class="tips">
+      <view wx:if="{{hasMore}}">
+        <image src="/images/loading.gif" mode="aspectFill" /><text>这里要久一点……</text></view>
+      <view wx:else><text>没有更多内容了</text></view>
+    </view>
+    <view wx:else class="tips">
+      <text>抱歉，您登陆失败！</text>
+    </view>
+</scroll-view>

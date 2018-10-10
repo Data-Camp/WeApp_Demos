@@ -1,0 +1,114 @@
+<!--index.wxml-->
+<view class="container">
+	<view class="profile-header">
+		<view class="profile-bg">
+			<image class="profile-header-icon" src="http://cdn.tgp.qq.com/pallas/images/usericon/{{user_hot_info[0].icon}}.png" background-size="cover"></image>
+		</view>
+		<view style="width:100%">
+			<label class="profile-header-name" style="text-align:center;display:block;">{{user_hot_info[0].name}}</label>
+		</view>
+	</view>
+	<view class="profile-container">
+		<view class="profile-tab">
+			<view class="profile-tab-sub {{select[0]}}" bindtap="selectNav" data-index="0">战绩
+			</view>
+			<view class="profile-tab-sub {{select[1]}}" bindtap="selectNav" data-index="1">能力
+			</view>
+			<view class="profile-tab-sub {{select[2]}}" bindtap="selectNav" data-index="2">资产
+			</view>
+		</view>
+		<view class="{{display[0]}}">
+			<view class="content-info">
+				<view class="content-info-division">
+					<image class="division-img" src="../../../img/division/{{user_hot_info[0].tier}}.png"></image>
+					<text wx:if="{{user_hot_info[0].tier == 255}}">无段位</text>
+					<text>{{division_name[user_hot_info[0].tier]}}{{division_position[user_hot_info[0].queue]}}</text>
+				</view>
+				<view class="content-info-win">
+					<tr class="win-num">
+						<td style="margin-right:20%"><text>战斗力 </text><text style="font-size:20px;color:#ea8010">{{user_hot_info[0].power_value}}</text></td>
+						<td style="text-align:right;width:50%"><text>胜点 </text><text style="font-size:20px;color:#ea8010">{{user_hot_info[0].win_point}}</text></td>
+					</tr>
+					<view class="win-honor">
+						<block wx:if="{{user_ext_info[1].god_like_num > 0}}">
+							<view class="win-honor-item" style="background: url(../../../img/honor/honor_god.png) no-repeat 50%">
+								<view class="win-honor-times"><text>{{user_ext_info[1].god_like_num}}次</text></view>
+								<view><text>超神</text></view>
+							</view>
+						</block>
+
+						<block wx:if="{{user_ext_info[1].penta_kills > 0}}">
+							<view class="win-honor-item" style="background: url(../../../img/honor/honor_5_kill.png) no-repeat 50%">
+								<view class="win-honor-times"><text>{{user_ext_info[1].penta_kills}}次</text></view>
+								<view><text>五杀</text></view>
+							</view>
+						</block>
+
+						<block wx:if="{{user_ext_info[1].quadra_kills > 0}}">
+							<view class="win-honor-item" style="background: url(../../../img/honor/honor_4_kill.png) no-repeat 50%">
+								<view class="win-honor-times"><text>{{user_ext_info[1].quadra_kills}}次</text></view>
+								<view><text>四杀</text></view>
+							</view>
+						</block>
+
+						<block wx:if="{{user_ext_info[1].god_like_num>0 && user_ext_info[1].penta_kills>0 && user_ext_info[1].quadra_kills>0 && user_ext_info[1].triple_kills>0}}">
+							
+						</block>
+
+						<block wx:elif="user_ext_info[1].triple_kills>0}}">
+							<view class="win-honor-item" style="background: url(../../../img/honor/honor_3_kill.png) no-repeat 50%">
+								<view class="win-honor-times"><text>{{user_ext_info[1].triple_kills}}次</text></view>
+								<view><text>三杀</text></view>
+							</view>
+						</block>
+					</view>
+				</view>
+			</view>
+			<view class="content-info-history">
+				<view class="history-header">我的战绩</view>
+				<block wx:for="{{combat_list[0].battle_list}}">
+					<navigator url="battledetail/battledetail?qquin={{qquin}}&area_id={{area_id}}&game_id={{item.game_id}}" >
+						<view class="history-content">
+							<view class="history-content-img">
+								<image src="http://cdn.tgp.qq.com/pallas/images/champions_id/{{combat_list[0].battle_list[index].champion_id}}.png" background-size="cover" />
+							</view>
+							<view class="history-content-data">
+					            <view><text style="color: {{win.color[item.win]}}">{{win.name[item.win]}}</text></view>
+					            <view><text style="font-size:12px">{{game_type[item.game_type].name}}</text></view>
+				            </view>
+				            <view class="history-content-time">
+					            <view><text>{{item.battle_time}}</text></view>
+					            <view><text style="font-size:12px">{{battle_flag[item.flag]}}</text></view>
+				            </view>
+				        </view>
+					</navigator>
+				</block>
+			</view>
+		</view>
+		<view class="{{display[1]}}">
+			<!-- canvas.wxml -->
+			<view class="canvas-abilty">
+				<canvas style="width: 250px; height: 250px;" canvas-id="firstCanvas"></canvas>
+				<!-- 当使用绝对定位时，文档流后边的canvas的显示层级高于前边的canvas-->
+			</view>
+			<view class="ability-tag">
+				<text>常用位置:</text>
+				<text style="color:#ea8010;padding-left:15px">{{recent_position[4].name}} {{recent_position[3].name}} {{recent_position[2].name}}</text>
+			</view>
+			<view class="ability-tag">
+				<text>最近常用英雄:</text>
+			</view>
+			<view>
+				<view class="ability-tag-position">
+					<block wx:for="{{recent_champion}}">
+						<view class="position-item">
+							<image src="http://cdn.tgp.qq.com/pallas/images/champions_id/{{item.champion_id}}.png"></image>
+							<text> {{item.use_num}}场</text>
+							<text>{{item.per}}%胜</text>
+						</view>
+					</block>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>

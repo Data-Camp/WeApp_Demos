@@ -1,0 +1,24 @@
+<scroll-view class="page_list" scroll-y="true" bindscrolltolower="loadMore" bindscrolltoupper="refresh">
+
+  <!--上方图片-->
+  <swiper indicator-dots="{{imageimageList}}" autoplay="true" interval="3000" duration="1000">
+    <block wx:for="{{imageimageList}}">
+      <swiper-item class="banner">
+        <image src="http://www.news.uestc.edu.cn{{item.imgHref}}" class="slide-image" style="width:100%; height:100%;" mode="aspectFill" />
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <!--瀑布流列表-->
+  <view wx:for="{{caiItems}}">
+    <view data-detail-href-Id="{{item.detailHrefId}}" class="item" bindtap="onItemClick">
+      <view class="news-item">
+        <view class="title">{{item.title}}</view>
+        <text class="time">{{item.time}}</text>
+        <view class="desc">{{item.desc}}</view>
+      </view>
+    </view>
+  </view>
+
+</scroll-view>
+<loading hidden="{{loading}}">加载中...</loading>

@@ -1,0 +1,13 @@
+<!--play.wxml-->
+<view class="score">{{score}}</view>
+<view class="play-box" style="bottom: {{scrollHeight}}px">
+    <block wx:for="{{blockData}}" wx:for-index="i" wx:key="i">
+        <view class="block-line" id="line-{{blockData[i].id}}">
+            <block wx:for="{{blockData[i].block}}" wx:key="*this" wx:for-index="j">
+                <view wx:if="{{blockData[i].block[j] == 0}}" id="block-{{blockData[i].id}}-{{j}}-{{0}}" class="block" bindtap="handleClickWhite"></view>
+                <view wx:elif="{{blockData[i].block[j] == 1}}" class="block black" id="block-{{blockData[i].id}}-{{j}}-{{1}}" bindtap="handleClickBlack"></view>
+                <view wx:else class="block gray" id="block-{{blockData[i].id}}-{{j}}-{{2}}" bindtap="handleClickGray"></view>
+            </block>  
+        </view>
+    </block>
+</view>

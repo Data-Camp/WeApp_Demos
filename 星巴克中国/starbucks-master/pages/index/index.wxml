@@ -1,0 +1,90 @@
+<!--category.wscroll-xml-->
+<view class="page-index">
+    <view class="store">
+        <view class="icon"></view>
+        <view class="name">星巴克中国</view>
+        <view class="tip">店铺公告：今天开始全国2500家门店支持微信支付哦！</view>
+    </view>
+
+    <view class="banner">
+        <swiper indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{imgUrls}}">
+            <swiper-item>
+            <image src="{{item}}" class="slide-image" width="355" height="150"/>
+            </swiper-item>
+        </block>
+        </swiper>
+    </view>
+
+    <view class="content">
+        <view class="quan">
+            <view class="quan-item">
+                <view class="money">10</view>
+                <view class="condition">满100使用</view>
+                <view class="get-btn">领取</view>
+            </view>
+            <view class="quan-item">
+                <view class="money">20</view>
+                <view class="condition">满180使用</view>
+                <view class="get-btn">领取</view>
+            </view>
+            <view class="quan-item">
+                <view class="money">30</view>
+                <view class="condition">满240使用</view>
+                <view class="get-btn">领取</view>
+            </view>
+            
+        </view>
+        <view class="commiditys">
+            <view class="recommend">
+                <view class="left-wrap">
+                   <view class="left-item">
+                        <view class="title">昭和无惨绘｜丸尾末广×花轮和一 新英名二十八众句</view>
+                        <view class="price">35</view>
+                        <view class="pic">
+                            <image src="../../images/image_01.png" ></image>
+                        </view>
+                   </view>
+                </view>
+                <view class="right-wrap">
+                    <view class="right-item">
+                        <view class="price">35</view>
+                        <view class="pic">
+                            <image src="../../images/image_01.png" ></image>
+                        </view>
+                    </view>
+
+                    <view class="right-item">
+                        <view class="price">35</view>
+                        <view class="pic">
+                            <image src="../../images/image_01.png" ></image>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="hot">
+                <view class="label">热卖商品</view>
+                <view class="hot-wrap">
+                    <view class="hot-item">
+                        <image src="../../images/image_01.png" ></image>
+                        <view class="title">昭和无惨绘｜丸尾末广×花轮和一 新英名二十八</view>
+                        <view class="info">
+                            <view class="price">35</view>
+                            <view class="count">98</view>
+                        </view>
+                    </view>
+
+                    <view class="hot-item">
+                        <image src="../../images/image_01.png" ></image>
+                        <view class="title">昭和无惨绘</view>
+                        <view class="info">
+                            <view class="price">35</view>
+                            <view class="count">98</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

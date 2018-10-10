@@ -1,0 +1,146 @@
+.container {
+	padding: 15px;
+}
+
+/* header */
+.header-title {
+	text-align: center;
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 40rpx;
+	padding-bottom: 40rpx;
+}
+.header-title .title {
+	display: block;
+	color: #333;
+	margin-bottom: 5px;
+	font-size: 36rpx;
+	font-weight: 500;
+}
+.header-title .description {
+	display: block;
+	font-size: 28rpx;
+	color: #777;
+}
+
+
+/* ================================ */
+.designer {
+	padding-bottom: 50rpx;
+	margin-bottom: 60rpx;
+	border-bottom: 1px solid #ddd;
+}
+
+.designer .avatar .photo{
+	float: left;
+	width: 120rpx;
+	height: 120rpx;
+	border-radius: 100%;
+}
+
+.designer .info {
+	padding-left: 150rpx;
+	padding-right: 60rpx;
+}
+
+.designer .info .name {
+	display: block;
+	font-size: 16px;
+	font-weight: bold;
+}
+.designer .info .location {
+	font-size: 13px;
+	color: #777;
+}
+.designer .info .skills {
+	color: #999;
+	font-size: 12px;
+	line-height: 1.4;
+	margin: 8rpx 0;
+	margin-bottom: 18rpx;
+}
+
+.designer .follow-btn {
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	margin-right: 5px;
+	border-radius: 2px;
+	background: url(../../images/icon-follow.png) no-repeat center #ddd;
+	-webkit-background-size: 12px 12px;
+	background-size: 12px 12px;
+}
+
+.designer .followers-stat {
+	display: inline-block;
+}
+.designer .followers-stat .count {
+	display: block;
+	font-size: 12px;
+	color: #777;
+}
+.designer .followers-stat .text {
+	display: block;
+	font-size: 12px;
+	color: #999;
+}
+.designer .bio {
+	line-height: 1.4;
+	font-size: 13px;
+	color :#999;
+	padding-top: 16rpx;
+}
+
+
+
+/* ================================ */
+.shots {
+	position: relative;
+  	width: 100%;
+	margin-top: 60rpx;
+  	white-space: nowrap;
+	overflow: hidden;
+}
+.shots::after, .shots.is-scrolled::before {
+	content: "";
+	position: absolute;
+    top: 0;
+    width: 20px;
+    height: 100%;
+    z-index: 1;
+    visibility: visible;
+}
+.shots::after {
+	right: 0;
+    background: linear-gradient(to right, rgba(244,244,244,0), #f4f4f4);
+}
+.shots.is-scrolled::before {
+	left: 0;
+    background: linear-gradient(to left, rgba(244,244,244,0), #f4f4f4);
+}
+.shots .shot-item-nav {
+	display: inline-block;
+	padding: 5px;
+	background-color: #fff;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.07);
+	border-radius: 2px;
+	overflow: hidden;
+	margin-right: 5%;
+	margin-bottom: 5px;
+}
+.shots .shot-item {
+	position: relative;
+}
+.shots .shot-item .animated {
+	position: absolute;
+  right: 5px;
+  top: 5px;
+  width: 23px;
+  height: 14px;
+  background: url(../../images/animated-gif.png);
+  background-size: 100%;
+  z-index: 1;
+}
+.shots .shot-item image {
+	width: 100%;
+	height: 100%;
+}

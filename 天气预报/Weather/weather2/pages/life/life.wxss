@@ -1,0 +1,51 @@
+page{
+    height:100%;
+    min-height:100%;
+    background: #007AFF;
+    color:#fff;
+    font-family:"Microsoft Yahei","宋体";
+    font-size:14px;
+}
+.content{
+    position:relative;
+     padding-left:20rpx;
+    padding-right:20rpx;
+    height:100%;
+}
+.main-bg{
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:-1;
+    height:1300rpx;
+    min-height:100%;
+    width:100%;
+    opacity:0.6;
+}
+.city{
+    padding-top:50rpx;
+    font-size:16px;
+}
+.life-item{
+    height:200rpx;
+    vertical-align: middle;
+    margin-top:30rpx;
+    border-bottom: 1px solid #fff;
+}
+.life-item image{
+    height:100rpx;
+    width: 100rpx;
+    display:inline-block;
+    margin-right:30rpx;
+}
+.life-title{
+    font-size:16px;
+    padding-bottom:15rpx;
+}
+.life-des-container{
+    width:580rpx;
+    display:inline-block;
+}
+.life-des{
+    font-size:12px;
+}

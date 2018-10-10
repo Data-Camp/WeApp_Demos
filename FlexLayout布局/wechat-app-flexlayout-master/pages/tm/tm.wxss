@@ -1,0 +1,45 @@
+/**index.wxss**/
+.tm{
+    height: 600px;
+    padding: 5rpx;
+}
+
+.m{
+    width: 95%;
+    border: 1px solid #242f34;
+    border-radius: 3px;
+    margin: 5rpx auto;
+    padding: 10rpx;
+    background-color: #242f34;
+    color: #fff;
+}
+
+.m-data{
+    margin-top: 20rpx;
+    display: flex;
+    flex-direction: column;
+}
+
+.m-data-left{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10rpx;
+}
+
+.m-data-right{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10rpx;
+}
+
+.m-data-top-left{
+    width: 60%;
+}
+
+.m-data-top-right{
+    width: 40%;
+}
+
+.m-green{
+    color: #0feb00;
+}

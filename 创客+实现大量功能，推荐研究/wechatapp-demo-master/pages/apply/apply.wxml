@@ -1,0 +1,164 @@
+<view class="container container-gray">
+	<view class="group">
+		<view class="group-header">基本信息</view>
+		<view class="group-body">
+			<view class="input-list">
+				<view class="input-item">
+					<text class="input-item-label">项目名称</text>
+					<view class="input-item-content">
+						<input type="text" placeholder="请输入项目名称"></input>
+					</view>
+				</view>
+				<view class="input-item">
+					<text class="input-item-label">公司名称</text>
+					<view class="input-item-content">
+						<input type="text" placeholder="请输入公司名称"></input>
+					</view>
+				</view>
+				<view class="input-item">
+					<text class="input-item-label">项目行业</text>
+					<picker class="input-item-content" bindchange="bindPickerChange" data-pickername="industry" value="{{industryindex}}" range="{{industryarr}}" mode="selector">{{industryarr[industryindex]}}
+					</picker>
+				</view>
+				<view class="input-item">
+					<text class="input-item-label">运营状态</text>
+					<picker class="input-item-content" bindchange="bindPickerChange" data-pickername="status" value="{{statusindex}}" range="{{statusarr}}" mode="selector">{{statusarr[statusindex]}}
+					</picker>
+				</view>
+				<view class="input-item input-item-full">
+					<text class="input-item-label">一句话介绍</text>
+					<textarea placeholder="可输入50字" maxlength="50"></textarea>
+				</view>
+				<view class="input-item input-item-full">
+				<text class="input-item-label">项目图标</text>
+					<view class="img-upload">
+						<view class="img-add"></view>
+						<view class="img-item">
+							<image src="http://szimg.mukewang.com/5806de7c00014a3105400300-360-202.jpg" mode="aspectFill"></image>
+						</view>
+						<view class="img-item">
+							<image src="http://szimg.mukewang.com/5806de7c00014a3105400300-360-202.jpg" mode="aspectFill"></image>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+		<view class="group-header">创始人</view>
+		<view class="group-body">
+			<view class="input-list">
+				<view class="input-item">
+					<text class="input-item-label">姓名</text>
+					<view class="input-item-content">
+						<input type="text" placeholder="请输入姓名"></input>
+					</view>
+				</view>
+				<view class="input-item">
+					<text class="input-item-label">职位</text>
+					<picker class="input-item-content" bindchange="bindPickerChange" data-pickername="job" value="{{jobindex}}" range="{{jobarr}}" mode="selector">{{jobarr[jobindex]}}
+					</picker>
+				</view>
+				<view class="input-item input-item-full">
+					<text class="input-item-label">主要履历</text>
+					<textarea placeholder="请输入主要履历"></textarea>
+				</view>
+			</view>
+		</view>
+		<view class="group-header">产品亮点</view>
+		<view class="group-body">
+			<textarea placeholder="请输入产品亮点"></textarea>
+		</view>
+		<!-- <view class="group-header">市场规模</view>
+		<view class="group-body">
+			<textarea placeholder="请输入市场规模"></textarea>
+		</view> -->
+		<view class="group-header">产品指标数据</view>
+		<view class="group-body">
+			<view class="input-list">
+				<view class="input-item">
+					<text class="input-item-label">用户总量</text>
+					<view class="input-item-content">
+						<input type="number"></input>
+					</view>
+				</view>
+				<view class="input-item">
+					<text class="input-item-label">DUA数据</text>
+					<view class="input-item-content">
+						<input type="number"></input>
+					</view>
+				</view>
+				<view class="input-item input-item-adaption">
+					<text class="input-item-label">月收入流水</text>
+					<view class="input-item-content">
+						<input type="number"></input>
+					</view>
+				</view>
+				<view class="input-item input-item-adaption">
+					<text class="input-item-label">公众号粉丝数</text>
+					<view class="input-item-content">
+						<input type="number"></input>
+					</view>
+				</view>
+				<view class="input-item input-item-adaption">
+					<text class="input-item-label">日均阅读量（近30日）</text>
+					<view class="input-item-content">
+						<input type="number"></input>
+					</view>
+				</view>
+			</view>
+		</view>
+		<view class="group-header">融资信息</view>
+		<view class="group-body">
+			<view class="input-list">
+				<view class="input-item">
+					<text class="input-item-label">融资经历</text>
+					<view class="input-item-content">
+						<radio-group bindchange="setFinance">
+							<label class="{{!hasfinancing?'checked':''}}">
+								<radio value="未融资" checked="{{!hasfinancing}}"/>未融资
+							</label>
+							<label class="{{hasfinancing?'checked':''}}">
+								<radio value="已融资" checked="{{hasfinancing}}" />已融资
+							</label>
+						</radio-group>
+					</view>
+				</view>
+				<view wx:if="{{hasfinancing}}">
+					<view class="input-item input-item-adaption">
+						<text class="input-item-label">最后融资额（W）</text>
+						<view class="input-item-content">
+							<input type="number"></input>
+						</view>
+					</view>
+					<view class="input-item input-item-adaption">
+						<text class="input-item-label">最后融资时间</text>
+						<view class="input-item-content">
+							<input type="date"></input>
+						</view>
+					</view>
+					<view class="input-item">
+						<text class="input-item-label">投资主体</text>
+						<view class="input-item-content">
+							<radio-group bindchange="setIsorg">
+								<label class="{{isorg?'checked':''}}">
+									<radio value="机构" checked="{{isorg}}"/>机构
+								</label>
+								<label class="{{!isorg?'checked':''}}">
+									<radio value="个人" checked="{{!isorg}}" />个人
+								</label>
+							</radio-group>
+						</view>
+					</view>
+					<view class="input-item" wx:if="{{isorg}}">
+						<text class="input-item-label">机构名称</text>
+						<view class="input-item-content">
+							<input type="text"></input>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="btn-submit">
+		<button class="btn-block btn-orange" bindtap="applySubmit">提交</button>
+	</view>
+</view>

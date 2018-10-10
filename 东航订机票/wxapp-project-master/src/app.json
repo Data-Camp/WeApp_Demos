@@ -1,0 +1,45 @@
+{
+    "pages": [
+      "pages/index/index",
+      "pages/hotelDetails/hotelDetails",
+      "pages/orderlist/orderlist",
+      "pages/orderdetail/orderdetail",
+      "pages/airticket/airticket",
+      "pages/selectpassengers/selectpassengers",
+      "pages/createTraveller/createTraveller",
+      "pages/productDetail/productDetail",
+      "pages/hotelChange/hotelChange",
+      "pages/selectcity/selectcity",
+      "pages/selectStartCity/selectStartCity",
+      "pages/order/order",
+      "pages/redact/redact",
+      "pages/verySorry/verySorry",
+      "pages/guarantee/guarantee"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#59A5F0",
+        "navigationBarTitleText": "东航旅行",
+        "navigationBarTextStyle": "white"
+    },
+    "tabBar": {
+        "selectedColor": "#59A5F0",
+        "backgroundColor": "#fff",
+        "borderStyle": "black",
+        "list": [{
+            "pagePath": "pages/index/index",
+            "text": "旅行预订",
+            "iconPath": "images/tab1.png",
+            "selectedIconPath": "images/tabcolor1.png"
+        }, {
+            "pagePath": "pages/orderlist/orderlist",
+            "text": "我的订单",
+            "iconPath": "images/tab2.png",
+            "selectedIconPath": "images/tabcolor2.png"
+        }]
+    },
+
+    "networkTimeout": {
+        "request": 120000
+    }
+}

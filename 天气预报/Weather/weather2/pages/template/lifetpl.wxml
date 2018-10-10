@@ -1,0 +1,9 @@
+<template name="life-item">
+    <view class="life-item">
+            <image src="{{item.img}}"></image>
+            <view class="life-des-container">
+                <view class="life-title">{{item.tipt}} {{item.zs}}</view>
+                <view class="life-des">{{item.des}}</view>
+            </view>
+    </view>
+</template>

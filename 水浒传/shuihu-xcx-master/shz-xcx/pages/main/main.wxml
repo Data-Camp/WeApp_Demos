@@ -1,0 +1,4 @@
+<!--index.wxml-->
+<view class="welcome-container">
+  <image src="/image/welcome-lc.jpg" background-size="cover" class="wel-pic"></image>
+</view>

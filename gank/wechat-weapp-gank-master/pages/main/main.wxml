@@ -1,0 +1,17 @@
+<!--main.wxml-->
+<view>
+
+    <loading hidden="{{hidden}}">
+        加载中...
+    </loading>
+
+    <view class="card" wx:for="{{items}}">
+        <view data-publish-time="{{item.time}}" bindtap="onItemClick">
+            <image class="image" mode="aspectFill" src="{{item.src}}"/>
+            <text class="time">{{item.time}}</text>
+            <view class="title">{{item.title}}</view>
+        </view>
+    </view>
+
+    <icon type="success" size="50" class="post" bindtap="onPostClick"/>
+</view>

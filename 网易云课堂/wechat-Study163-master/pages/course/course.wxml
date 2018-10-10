@@ -1,0 +1,35 @@
+<!--pages/course/course.wxml-->
+<import src="../other/template.wxml"/>
+<view class="pageContainer">
+    <template is="search"/>
+    <view class="courses flex">
+    <view class="courses-left">
+        <block wx:for="{{courses}}" wx:for-index="couIdx" wx:for-item="couItem">
+            <view data-index="{{couIdx}}" class="{{couItem.active=='true'?'active':''}}"  bindtap="selectTab">
+                <text>{{couItem.title}}</text>
+            </view>
+        </block>
+    </view>
+    <scroll-view scroll-y="true" class="courses-right">
+        <block wx:for="{{courses}}" wx:for-index="couIdx" wx:for-item="couItem">
+            <view hidden="{{couItem.active=='true'?'':'hid'}}">
+                <block wx:for="{{couItem.category.ad}}" wx:for-index="adIdx" wx:for-item="adItem">
+                    <view class="rcmd-course flex">
+                        <navigator url="{{adItem.navigator}}">
+                            <image src="{{adItem.imgurl}}"></image>
+                        </navigator>
+                    </view>
+                </block>
+                <block wx:for="{{couItem.category.item}}" wx:for-index="idx" wx:for-item="item">
+                    <view class="couList">
+                        <text>{{item.title}}</text>
+                        <block wx:for="{{item.stdCourse}}" wx:for-item="stdItem">
+                            <navigator url="{{stdItem.url}}">{{stdItem.title}}</navigator>
+                        </block>
+                    </view>
+                </block>
+            </view>
+        </block>
+    </scroll-view>
+    <view> 
+</view>

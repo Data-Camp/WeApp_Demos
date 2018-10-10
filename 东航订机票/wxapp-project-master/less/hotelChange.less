@@ -1,0 +1,125 @@
+@import "./imgUrl/imgUrl.less";
+
+page{
+  height: 100%;
+  background: #F4F4F4;
+}
+.top{
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    background-color: #fff;
+    display: flex;
+    text{
+        width: 160px;
+        font-size:30rpx;
+        text-align: center;
+    }
+    .info{
+        color: #343434;
+        width: 589px;
+        font-size:30rpx;
+        .left,.right{
+          font-size:26rpx;
+          color:#9e9e9e;
+          margin-left: 5px;
+        }
+        .left{
+            margin-right: 5px;
+        }
+    }
+}
+.main{
+    width: 100%;
+    margin-top: 10px;
+    .hotelInfo{
+        width: 100%;
+        margin-bottom: 10px;
+        .hotelTop{
+            width: 100%;
+            position: relative;
+        }
+        .rightIcon{
+            display: block;
+            width: 100%;
+            height: 356px;
+        }
+        .relativeIcon{
+            width:65px;
+            height: 66px;
+            background-size: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        .hotelName{
+          width: 100%;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          height: 80px;
+          line-height: 80px;
+          color: white;
+          font-size: 32rpx;
+          background-color: rgba(0,0,0,0.5);
+          padding-left: 37px;
+          box-sizing: border-box;
+        }
+
+        .messageDetail{
+            width: 100%;
+            height:70px;
+            background-color: #fff;
+            padding: 0px 47px 0px 37px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            .leftMap{
+                width: 500px;
+                height: 70px;
+                line-height: 70px;
+                position: relative;
+                .mapIcon{
+                  position: absolute;
+                  width: 30px;
+                  height: 35px;
+                  top:15px;
+                  left:0;
+                }
+                text{
+                  padding-left:40px;
+                  box-sizing: border-box;
+                  display: block;
+                  font-size: 26rpx;
+                  line-height: 70px;
+                  text-overflow: ellipsis;
+                  white-space: nowrap;	//强制不换行
+                  overflow: hidden;
+                }
+            }
+
+            .Priceright{
+                height:70px;
+                width:165px;
+                text-align: right;
+                .add{
+                    display: block;
+                    font-size: 34rpx;
+                    height: 70px;
+                    line-height: 70px;
+                    color:#ff7f00;
+                }
+                .reduce{
+                    display: block;
+                    font-size: 34rpx;
+                    height: 70px;
+                    line-height: 70px;
+                    color:#58a4ef;
+                }
+            }
+        }
+    }
+}

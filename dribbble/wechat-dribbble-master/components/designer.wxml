@@ -1,0 +1,59 @@
+<view class="designer">
+	<view class="avatar">
+		<image src="{{item.avatar_url}}" class="photo"></image>
+	</view>
+	<view class="info">
+		<text class="name">{{item.name}}</text>
+		<text class="location">{{item.location}}</text>
+		<view class="skills">
+			<block wx:for="{{item.skills}}" wx:key="item.id" wx:for-item="skill">
+				<text >{{skill}}</text>,
+			</block>
+    </view>
+    <view class="followers">
+    	<view 
+    		class="follow-btn"
+    		bindtap="followDesigner"
+    		data-id="{{item.id}}"
+    	></view>
+    	<view class="followers-stat">
+    		<text class="count">{{item.followers_count}}</text>
+    		<text class="text">followers</text>
+    	</view>
+    </view>
+    <view class="bio">
+    	<text>{{item.bio}}</text>
+    </view>
+	</view>
+
+	<scroll-view
+		class="shots {{item.isScrolled ? 'is-scrolled' : ''}}"
+		scroll-x="true"
+		lower-threshold="300"
+		bindscroll="scroll"
+		bindscrolltoupper="scrolltoupper"
+		bindscrolltolower="scrolltolower"
+		wx:if="{{shots[item.id].shots.length > 0}}"
+		data-index="{{index}}"
+		data-userid="{{item.id}}"
+	>
+  	<navigator
+    		class="shot-item-nav"
+				wx:for="{{shots[item.id].shots}}"
+				wx:for-item="shot"
+				wx:for-index="shotIndex"
+				wx:key="shot.id"
+				data-id="{{shot.id}}"
+				url="../shots/shots?id={{shot.id}}&title={{shot.title}}&user_id={{shot.user_id}}&user_name={{shot.owner.name}}&created_at={{shot.created_at}}&animated={{shot.animated}}&is_request=true&description={{shot.description}}&image={{shot.img_hidpi || shot.img}}&user_avatar={{shot.owner.avatar}}"
+    	>
+			<view
+				class="shot-item"
+				style="width:{{shotWidth}}px; height:{{shotHeight}}px;"
+			>
+				<view class="animated" wx:if="{{shot.animated}}"></view>
+				<image src="{{shot.img}}"></image>
+			</view>
+  	</navigator>
+
+	</scroll-view>
+</view>

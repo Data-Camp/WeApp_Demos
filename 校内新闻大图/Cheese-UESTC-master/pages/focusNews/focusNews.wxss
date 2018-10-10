@@ -1,0 +1,98 @@
+.mainFrame {
+  margin-top: 0rpx;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 0px solid #ebebeb;
+}
+
+.container {
+  padding-top: 0px;
+  /*display: flex;
+  flex-direction:column;*/
+}
+
+.vol-swiper-item {
+  padding: 20rpx;
+  box-sizing: border-box;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+}
+
+.title {
+  /*margin-left: 20px;*/
+  display: block;
+  width: 100%;
+  height: 50px;
+  /*text-align: center;*//*line-height: 50px;*/
+  color: #f00;
+}
+
+.time {
+  font-size: 22rpx;
+  text-align: right;
+  /*padding: 50rpx;*/
+  color: #ccc;
+}
+
+.vol-card {
+  /*parent layout  and  this inner padding*/
+  padding: 20rpx;
+  border: 2px solid #ebebeb;
+  border-radius: 5px;
+  box-shadow: 10px 10px 10px #c0c0c0;
+  background: #fff;
+  margin-top: 0px;
+}
+
+.vol-swiper {
+  height: 100%;
+}
+
+.vol-picture {
+  width: 100%;
+}
+
+.vol-meta-title {
+  margin-top: 5px;
+  text-align: center;
+  padding: 10rpx 5rpx;
+  font-size: 17px;
+  color: #000;
+  font-family: 'KaiTi';
+}
+
+.vol-meta-time {
+  padding: 10rpx 5rpx;
+  font-size: 12px;
+  float: right;
+  margin-right: 5px;
+  color: #888;
+}
+
+.vol-author {
+  float: right;
+}
+
+.vol-content {
+  margin-top: 15rpx;
+  padding: 0 5rpx;
+  font-size: 14px;
+  line-height: 1.4;
+  font-family: 'KaiTi';
+  color: #9c9c9c;
+}
+
+.vol-content-text {
+  margin-top: 5px;
+  width: 100%;
+  min-height: 200rpx;
+  display: inline-block;
+  text-indent: 2em;
+}
+
+.vol-makettime {
+  font-size: 13px;
+  color: #888;
+  text-align: right;
+}

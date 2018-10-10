@@ -1,0 +1,217 @@
+/**search.wxss**/
+.container{
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+  
+}
+.novel_logo {
+  display: flex;
+  position: relative;
+  top: -100rpx;
+  flex-direction: row;
+   height: 7rem;
+   text-align: left;
+   width: 100%;
+  
+  align-items: flex-start;
+  
+}
+
+.logo_image {
+  width: 50%;
+  height: 30%;
+  margin: 20rpx;
+  align-items: flex-start;
+  position: relative;
+  bottom: 10rpx;
+  left: -100rpx;
+}
+
+.logo_name {
+  color: #0a0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 30rpx;
+  left: -200rpx;
+}
+
+.search{
+  width: 100%;
+  position: absolute;
+  height: 2.082rem;
+  background-color: #F2F2F2;
+}
+
+.search_logo{
+  width: 5%;
+  height: 1rem;
+  background-size: 80%;
+  position: absolute;
+  margin-left: 10rpx;
+  left: 5%;
+  right: 5%;
+  top: 0.3rem;
+  
+}
+
+.search_input{
+  position: absolute;
+  top: 0.3em;
+  left: 5%;
+  width: 85%;
+  border-radius: 10px;
+  border: 1px solid #E1E1E1;
+  
+  padding-left: 8%;
+  font-size: 12px;
+  color: #000;
+}
+
+.search-history{
+  
+  position: relative;
+  left: 1%;
+  right: 1%;
+  top: -170rpx;
+  padding-left: 3%;
+  padding-right: 3%;
+  font-size: 12px;
+  border: 1px solid darkgray;
+  border-radius: 10px;
+}
+
+.area {
+  position: relative;
+  top:-120rpx;
+    display:flex;
+    flex-direction:row;
+    flex:1;
+    width: 100%;
+    background-color: #fff;
+    
+}
+.most-read-area{
+  display:flex;
+    flex-direction:column;
+    flex:1;
+    width: 100%;
+    background-color: #fff;
+    margin-top: 100rpx;
+}
+.bar_logo{
+  width: 5%;
+  height: 1rem;
+  background-size: 80%;
+  position: absolute;
+  left: 5%;
+  right: 5%;
+  top: 0.3rem;
+}
+.left_area{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: flex-start;
+  margin-top: 20rpx;
+
+  
+}
+.article{
+  margin-top: 10%;
+  width: 100%;
+  text-align: left;
+  font-size: 80%;
+  margin-left: 10rpx;
+}
+
+.most_read_area{
+  
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-start;
+  padding-left: 10rpx;
+   margin-left: 10rpx;
+  margin-top: 30rpx;
+}
+.left_title{
+  
+  margin-top:10rpx;
+  margin-bottom: 10rpx;
+  align-items: flex-start;
+  margin-left: 10rpx;
+}
+.most_read_item {
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    margin-left: 10rpx;
+    margin-top: 10rpx;
+    margin-right: 1px;
+    
+}
+.title-author{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+#title{
+  margin-left: 10rpx;
+    font-size: 90%;
+    margin-top: 10rpx;
+    text-align:start;
+    
+}
+
+#author{
+  margin-left: 10rpx;
+    color: #a00;
+    display: flex;
+    font-size: 50%;
+    flex-direction: row;
+    text-align:start;
+    
+     margin-top: 10rpx;
+    
+}
+
+#type{
+  margin-left: 10rpx;
+    color: #0a0;
+    font-size: 50%;
+    text-align:end;
+    margin-right: 10%;
+     margin-top: 10rpx;
+     width: 50%;
+}
+
+.line{
+  width: 700rpx;
+  height: 10rpx;
+}
+
+.icon-image{
+  width: 50%;
+  height: 100rpx;
+ 
+  align-items: flex-start;
+  position: relative;
+  bottom: 10rpx;
+  left: -100rpx;
+}
+
+.first-canvas{
+  width: 100%;
+  height: 3rpx;
+}
+
+.sort-list-wrap{
+    width:200rpx;
+}
+
+
+
+

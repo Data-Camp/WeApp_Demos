@@ -1,0 +1,26 @@
+<import src="../../common/prompt.wxml"/>
+
+<view class="address-list">
+    <scroll-view class="scroll-list"  scroll-y="true" style="height: 100%" bindscrolltolower="lower">
+        <view class="weui-panel" wx:if="{{ !!address.paginate.total }}">
+            <view class="weui-panel__bd">
+                <view class="weui-media-box weui-media-box_text" wx:for="{{ address.items }}" wx:key="">
+                    <view class="weui-media-box__title weui-media-box__title_in-text">{{ item.name }} {{ item.gender === 'female' ? '女士' : '先生' }} {{ item.tel }}</view>
+                    <view class="weui-media-box__desc">{{ item.address }}</view>
+                    <view class="weui-media-box__info">
+                        <view class="weui-media-box__info__meta text-orangered" wx:if="{{ item.is_def }}">默认地址</view>
+                        <view class="weui-media-box__info__meta" wx:if="{{ !item.is_def }}" bindtap="setDefalutAddress" data-id="{{ item._id }}">设为默认</view>
+                    </view>
+                    <view class="edit" bindtap="toAddressEdit" data-id="{{ item._id }}">
+                        <image class="icon" src="../../../assets/images/iconfont-edit.png" />
+                    </view>
+                </view>
+            </view>
+        </view>
+        <template is="prompt" data="{{ prompt }}"/>
+        <view class="btn-plus" bindtap="toAddressAdd">
+            <image class="icon" src="../../../assets/images/iconfont-plus-circle.png" />
+            <text>新增地址</text>
+        </view>
+    </scroll-view>
+</view>

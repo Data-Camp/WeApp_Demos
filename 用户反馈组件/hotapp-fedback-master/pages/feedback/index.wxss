@@ -1,0 +1,188 @@
+/* pages/feedback/index.wxss */
+page {
+  height: 100%;
+  width: 100%;
+}
+.container {
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+}
+/*聊天盒子*/
+.scrollwechat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+   height: 100%;
+}
+.scrollview{
+ height: 100%;
+
+}
+.scrollwechat li {
+  width: 100%;
+  display: flex;
+  margin-top: 20rpx;
+}
+.mydate{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mydatebox{
+  background: #d9d9d9;
+  border-radius: 15rpx;
+  padding: 0rpx 10rpx;
+}
+.mydatetext{
+  color: #fff;
+  font-size: 12px;
+}
+.container .user {
+  flex-direction: row;
+}
+
+.container .sys{
+  flex-direction: row-reverse;
+}
+.feedbackimg image{
+   width: 100%;
+   height: 300rpx;
+}
+
+.headimg {
+  width: 80rpx;
+  height: 80rpx;
+}
+.imgview1{
+   width: 160rpx;
+   display: flex;
+   justify-content: center;
+}
+.imgview2{
+   width: 160rpx;
+   display: flex;
+   justify-content: center;
+
+}
+.textview {
+  width:100%;
+  border-radius: 10rpx;
+  background: #d5eaf8;
+  padding: 20rpx;
+}
+.triangle image{
+  width: 20rpx;
+  height: 80rpx;
+}
+.textview2 {
+   width:100%;
+  background: #fff;
+  border-radius: 10rpx;
+  padding: 20rpx;
+}
+.link{
+  height: 150rpx;
+}
+.footer {
+  width: 96%;
+  height: 100rpx;
+  padding: 2%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  background: #efeff4;
+
+}
+
+.footinput {
+  flex: 1;
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input {
+  width: 100%;
+  height: 60rpx;
+  padding: 10rpx 4rpx;
+  border: 1px solid #ccc;
+  border-radius: 10rpx;
+}
+.foodsend {
+  width: 100rpx;
+  height: 80rpx;
+  display: flex;
+  margin: 10rpx;
+   background: #17af0f;
+   border-radius: 10rpx;
+  justify-content: center;
+  align-items: center;
+}
+.send{
+  font-size: 14px;
+  color: #fff;
+}
+.footadd {
+  width: 100rpx;
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.addbroder {
+  padding: 10rpx;
+  border: 1px solid #ccc;
+  border-radius: 100rpx;
+}
+
+.footadd image {
+  width: 50rpx;
+  height: 50rpx;
+}
+.footaddbox{
+  height: 200rpx;
+  
+}
+.footaddbox ul{
+  display: flex;
+  height: 100%;
+  flex-direction: row;
+ 
+}
+.footaddbox ul li{
+  flex: 1;
+  height: 100%;
+  font-size: 12px;
+  color: #9a9a9a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footaddimg{
+  border: 1px solid #ccc;
+  border-radius: 20rpx;
+  margin: 10rpx;
+  padding: 30rpx;
+}
+.footaddtext{
+  border: 1px solid #ccc;
+  border-radius: 20rpx;
+  margin: 10rpx;
+  padding: 30rpx;
+}
+.footaddbox ul li image{
+  width: 60rpx;
+  height: 60rpx;
+}
+.tellinput{
+  height: 50rpx;
+  line-height: 50rpx;
+  border: 1px solid #efeff4;
+}

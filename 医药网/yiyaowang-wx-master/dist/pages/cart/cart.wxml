@@ -1,0 +1,19 @@
+<view class="cart-cart">
+  <block wx:for="{{shoppinglist}}" wx:key="__k" wx:for-index="_k1" wx:for-item="_v1"><view class="cartview shoppinglist-cartview">
+  <view class="shoppingitem shoppinglist-shoppingitem">
+    <image class="item-choose shoppinglist-item-choose" src="../../images/choose_p.png"/>
+    <image class="item-cover shoppinglist-item-cover" src="{{_v1.props.mainimg3}}"/>
+    <view class="item-content shoppinglist-item-content">
+      <view class="item-title shoppinglist-item-title">{{_v1.props.productname}}</view>
+      <view class="item-bottom shoppinglist-item-bottom">
+        <view class="item-prize shoppinglist-item-prize">￥{{_v1.props.originalprice}}</view>
+        <view class="action-btns shoppinglist-action-btns" catchtap="_dispatch" data-catchtap="handleAdd" data-path="shoppinglist.{{_k1}}">
+          <image class="btn-minus shoppinglist-btn-minus action-btn shoppinglist-action-btn" src="../../images/minus_p.png"/>
+          <text>{{_v1.props.sellStatus}}</text>
+          <image class="btn-plus shoppinglist-btn-plus action-btn shoppinglist-action-btn" src="../../images/plus_n.png"/>
+        </view>
+      </view>
+    </view>
+  </view>
+</view></block>
+</view>

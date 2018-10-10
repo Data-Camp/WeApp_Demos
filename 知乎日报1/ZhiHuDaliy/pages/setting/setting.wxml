@@ -1,0 +1,37 @@
+<view class="setting-header">
+    <text>主题</text>
+</view>
+<view class="setting-item option">
+    <view class="inner">
+        <view class="content">
+            <view class="title"><text>夜间模式</text></view>
+            <view class="desc"><text>切换页面到黑色主题皮肤</text></view>
+        </view>
+        <icon class="checker" type="circle" size="20" />
+    </view>
+</view>
+
+<view class="setting-header">
+    <text>浏览设置</text>
+</view>
+<view class="setting-item option">
+    <view class="inner">
+        <view class="content">
+            <view class="title"><text>无图模式</text></view>
+            <view class="desc"><text>应用将不会下载和显示图片</text></view>
+        </view>
+        <icon class="checker" type="success" color="#1891D4" size="20" />
+    </view>
+</view>
+
+<view class="setting-header">
+    <text>数据</text>
+</view>
+<view class="setting-item">
+    <view class="inner">
+        <view class="content">
+            <view class="title"><text>清除缓存</text></view>
+            <view class="desc"><text>清除应用下载的全部数据</text></view>
+        </view>
+    </view>
+</view>

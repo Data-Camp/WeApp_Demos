@@ -1,0 +1,4 @@
+page{display: flex;flex-direction: column;background-color: #eee}
+#header{flex: 0 0 100rpx;background: red}
+#top{flex: 0 0 80rpx;background-color: blue;}
+#main{flex: 1;background-color: yellow;}

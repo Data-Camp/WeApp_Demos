@@ -1,0 +1,58 @@
+.bigImg{
+    width: 100%;
+    height: 40%;
+    background: url("../../image/moments_bg.jpg");
+    background-size: cover;
+    position:relative;
+}
+.userAva{
+    position: absolute;
+    right:50rpx;
+    bottom:0;
+}
+.userAva image{
+    position:relative;
+    width: 140rpx;
+    height: 140rpx;
+    right:0;
+    bottom:-50rpx;
+}
+.userAva text{
+    color: white;
+}
+.moments_content{
+    margin-top: 90rpx;
+    font-size: 30rpx;
+}
+.otherAva{
+    width: 90rpx;
+    height: 90rpx;
+}
+.otherName{
+    color:darkmagenta
+}
+.borderBot{
+    border-bottom: 1px solid #ccc
+}
+.nickTime{
+    margin: 20rpx 0;
+    position:relative;
+}
+.nickIcon{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 18px;
+}
+.marginBot{
+    margin-bottom: 40rpx;
+}
+
+/** 修改默认的navigator点击态 **/
+.navigator-hover {
+    color:blue;
+}
+/** 自定义其他点击态样式类 **/
+.other-navigator-hover {
+    color:red;
+}

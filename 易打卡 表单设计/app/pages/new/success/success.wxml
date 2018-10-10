@@ -1,0 +1,29 @@
+<!-- 创建成功 -->
+<view class="success">
+    
+    <view class="tit">
+        <text>创建成功!</text>
+    </view>
+
+    <view class="panel">
+        <view class="task-name">
+            <text>签到口令</text>
+        </view>
+        <view class="intro">
+            <image class="pic" src="../../../image/pic.png"></image>
+        </view>
+        <view class="tips">
+            <text>长按下方口令，复制并发送给你的好友，邀请他到易打卡参加此任务！</text>
+        </view>
+        <view class="dot-line">
+            <image src="../../../image/dot-line.png"></image>
+        </view>
+        <view class="code">
+            <input type="text" value="{{command}}"/>
+        </view>
+    </view>
+
+    <view class="close" bindtap="bindClose">
+        <image src="../../../image/success-close.png"></image>
+    </view>
+</view>

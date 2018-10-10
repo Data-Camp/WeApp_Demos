@@ -1,0 +1,24 @@
+<import src="../common/header.wxml" />
+<import src="../common/footer.wxml" />
+
+<view class="container">
+  <template is="header" data="{{title: 'onAccelerometerChange'}}"/>
+
+  <view class="page-body">
+    <view class="page-body-wrapper">
+      <text class="page-body-text">倾斜手机即可移动下方小球</text>
+      <view class="page-body-canvas">
+        <canvas class="page-body-ball" show="{{true}}" canvas-id="big-ball"></canvas>
+        <canvas class="page-body-ball" show="{{true}}" canvas-id="small-ball"></canvas>
+      </view>
+      <view class="page-body-xyz">
+        <text class="page-body-title">X: {{x}}</text>
+        <text class="page-body-title">Y: {{y}}</text>
+        <text class="page-body-title">Z: {{z}}</text>
+      </view>
+    </view>
+  </view>
+
+  <template is="footer" />
+</view>
+

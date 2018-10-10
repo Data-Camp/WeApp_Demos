@@ -1,0 +1,52 @@
+<view class="container">
+    <text class="music-category-text">最近添加></text>
+    <view class="music-list-container">
+        <view class="big-photo-list">
+            <view class="big-photo-item"  wx:for="{{songsList}}" bindtap="play" data-num="{{index}}">
+                
+                <image class="photo" src="{{item.coverImgUrl}}"></image>
+                
+                <text class="music-name">{{item.name}}</text>
+                <text class="music-author">{{item.singer}}</text>
+            </view>
+            
+        </view>
+    </view>
+
+    <view class="music-group-selector"  bindtap="actionSheetTap">
+        <text class="music-group-selector-text">{{musicGroupName}}</text>
+        <image style="width:14px;height:14px;" src="../../image/icon-jiantou.png"></image>
+    </view>
+
+    <view class="list-container">
+        <import src="../../template/music-play-list.wxml"/>
+        <import src="../../template/songs-list.wxml"/>
+        <import src="../../template/album-list.wxml"/>
+        <import src="../../template/author-list.wxml"/>
+        <template is="{{listTemplateName}}" data="{{templateData}}"></template>
+    </view>
+    
+    <view class="bottom-space"></view>
+
+</view>
+
+<view class="play-bar">
+    <view class="play-bar-image-container"> 
+        <image class="play-bar-image" src="{{playBar.coverImgUrl}}" ></image>
+    </view>
+    <text class="play-bar-text">{{playBar.name}}</text>
+    <block wx:if="{{playing === false}}">
+    <image class="play-bar-button" src="../../image/icon-play.png"   bindtap="play"  data-num="{{playingSongsNum}}"></image>
+    </block>
+    <block wx:if="{{playing === true}}">
+    <image class="play-bar-button" src="../../image/icon-pause.png"   bindtap="pause"  data-num="{{playingSongsNum}}"></image>
+    </block>
+
+</view>
+
+<action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetChange">
+  <block wx:for="{{actionSheetItems}}">
+    <action-sheet-item class="item" bindtap="bind{{item}}">{{item}}</action-sheet-item>
+  </block>
+  <action-sheet-cancel class="cancel">取消</action-sheet-cancel>
+</action-sheet>

@@ -1,0 +1,16 @@
+<view class="container">
+    <view  class="top_bangdan" style="text-align:left;font-size:14px;background-color: gainsboro;height:1.2rem" >首页>>图书榜单>></view>
+        <block wx:for="{{bookList}}" wx:key="unique">
+            <navigator hover-class="nav-hover" url="../detail/index?id={{item.id}}">
+                <view class="book_item"> 
+                    <image mode="aspectFit" class="book_item_img" src="{{item.img}}"></image>
+                    <view class="book_item_infos">
+                        <view class="book_title">{{item.title}}</view>
+                        <view class="book_author">作者：{{item.author}}</view>
+                        <view class="book_tags">标签：{{item.tags}}</view>
+                        <view class="book_item_summary">摘要：{{item.info}}</view>
+                    </view>
+                </view>
+            </navigator>
+        </block> 
+</view> 

@@ -1,0 +1,209 @@
+.flower_container {
+    background:#E0565B;
+    padding:0 16rpx 136rpx 16rpx;
+}
+.flower-header-bg {
+    position:relative;
+    display:block;
+    width:750rpx;
+    height:390rpx;
+}
+.flower-list-content {
+    position:relative;
+    width:100%;
+    background-color:#FFFFFF;
+}
+/* flower-list-content */
+.flower-list-content {
+    border-radius:28rpx;
+}
+.fist-line-user {
+    position:relative;
+    width:100%;
+    height:284rpx;
+    border-bottom:4rpx solid #F6F6F6;
+    box-sizing:border-box;
+}
+.fist-line-user-1 {
+    position:relative;
+    display:flex;
+    flex-flow:column nowrap;
+    align-items:center;
+    justify-content:center;
+    top:-40rpx;
+    width:240rpx;
+    padding:24rpx 40rpx 0 40rpx;
+    background-color:#FFFFFF;
+    box-sizing:border-box;
+    margin:0 auto;
+    border-radius:28rpx 28rpx 0 0;
+    box-shadow:0 -20rpx 20rpx rgba(0,0,0,.1);
+}
+/*第一名*/
+.user-portrait-1 {
+    position:relative;
+    width:160rpx;
+    height:160rpx;
+    border-radius:50%;
+    background-color:#1ECFA7;
+}
+.user-rank-icon {
+    position:absolute;
+    right:0;
+    bottom:0;
+    width:60rpx;
+    height:60rpx;
+}
+.user-name-1 {
+    font-size:32rpx;
+    height:42rpx;
+    text-align:center;
+    overflow:hidden;
+}
+.user-age-1 {
+    font-size:24rpx;
+    height:32rpx;
+    color:#666666;
+}
+.user-flowernum-1 {
+    font-size:36rpx;
+    color:#FF7500;
+}
+/* 第二名 */
+.fist-line-user-2 {
+    position:absolute;
+    display:flex;
+    flex-flow:column nowrap;
+    align-items:center;
+    justify-content:center;
+    top:0;
+    left:0;
+    width:240rpx;
+    padding:20rpx 60rpx;
+    box-sizing:border-box;
+}
+.user-portrait-2 {
+    position:relative;
+    width:120rpx;
+    height:120rpx;
+    border-radius:50%;
+    background-color:#1ECFA7;
+}
+/* 第三名 */
+.fist-line-user-3 {
+    position:absolute;
+    display:flex;
+    flex-flow:column nowrap;
+    align-items:center;
+    justify-content:center;
+    top:0;
+    right:0;
+    width:240rpx;
+    padding:20rpx 60rpx;
+    box-sizing:border-box;
+}
+/*main-rank-list*/
+.main-rank-list {
+    position:relative;
+    padding-bottom:24rpx;
+}
+.rank-item {
+    width:100%;
+    display:flex;
+    flex-flow:row nowrap;
+    align-items:center;
+    padding:18rpx 60rpx;
+    height:116rpx;
+    box-sizing:border-box;
+    border-bottom:4rpx solid #F6F6F6;
+}
+.rank-item-pos {
+    font-size:32rpx;
+    width:56rpx;
+}
+.rank-item-portrait {
+    flex-shrink:0;
+    margin-left:40rpx;
+    width:80rpx;
+    height:80rpx;
+    border-radius:50%;
+    background-color:#1ECFA7;
+}
+.rank-item-info {
+    margin-left:20rpx;
+    display:flex;
+    flex-flow:column nowrap;
+}
+.rank-item-info-name {
+    font-size:28rpx;
+}
+.rank-item-info-age {
+    font-size:20rpx;
+    height:28rpx;
+    color:#666666;
+}
+.rank-item-flowernum {
+    position:absolute;
+    font-size:32rpx;
+    line-height:80rpx;
+    color:#FF7500;
+    right:64rpx;
+}
+/*fixed-cur-user-info*/
+.fixed-my-container {
+    position:fixed;
+    left:0;
+    bottom:0;
+    display:flex;
+    width:100%;
+    height:120rpx;
+    flex-flow:row nowrap;
+    align-items:center;
+    padding:16rpx 40rpx;
+    box-sizing:border-box;
+    border-top:2rpx solid #C1C1C1;
+    background-color:#FFFFFF;
+}
+.fixed-my-index {
+    font-size:32rpx;
+    color:#1ECFA7;
+}
+.fixed-my-portrait {
+    flex-shrink:0;
+    margin-left:56rpx;
+    width:80rpx;
+    height:80rpx;
+    border:2rpx solid #1ECFA7;
+    border-radius:50%;
+    background-color:silver;
+}
+.fixed-my-info {
+    margin-left:20rpx;
+    display:flex;
+    flex-flow:column nowrap;
+}
+.fixed-my-info-pos {
+    font-size:32rpx;
+    color:#1ECFA7;
+}
+.fixed-my-info-beat {
+    font-size:24rpx;
+    color:#666666;
+}
+.fixed-my-flowernum {
+    position:absolute;
+    font-size:36rpx;
+    line-height:80rpx;
+    color:#1ECFA7;
+    right:64rpx;
+}
+/**/
+.testBg {
+    background:url('..') no-repeat center center;
+    background-size:cover;
+}
+.has-nomore-data {
+    color:silver;
+    line-height:40rpx;
+    font-size:28rpx;
+}

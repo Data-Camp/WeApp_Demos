@@ -1,0 +1,64 @@
+<view class="active_block">
+    <view class="active_item_title">
+        <view class="active_title_wrap">
+            <view class="active_title">限时折扣</view>
+        </view>
+    </view>
+    <view class="active_item">
+        <view>
+            <image bindload="cusImageLoad" src="../../image/test.jpg" style="width: {{imageWidth}};height: {{imageHeight}}"></image>
+        </view>
+        <view class="active_goods_name">
+            大保健营养保健品适合老年人和婴幼儿易吸收营养好吃的
+        </view>
+        <view class="active_item_infor">
+            <text class="active_new_price">¥95</text>
+            <text class="active_old_price">¥190</text>
+            <text class="active_time">还剩1天20小时</text>
+        </view>
+    </view>
+    <view class="active_item">
+        <view>
+            <image bindload="cusImageLoad" src="../../image/test.jpg" style="width: {{imageWidth}};height: {{imageHeight}}"></image>
+        </view>
+        <view class="active_goods_name">
+            大保健营养保健品适合老年人和婴幼儿易吸收营养好吃的
+        </view>
+        <view class="active_item_infor">
+            <text class="active_new_price">¥95</text>
+            <text class="active_old_price">¥190</text>
+            <text class="active_time">还剩1天20小时</text>
+        </view>
+    </view>
+</view>
+<view>
+    <view class="active_item_title">
+        <view class="active_title_wrap">
+            <view class="active_title">参加团购</view>
+        </view>
+    </view>
+    <view class="active_item">
+        <view>
+            <image bindload="cusImageLoad" src="../../image/test.jpg" style="width: {{imageWidth}};height: {{imageHeight}}"></image>
+        </view>
+        <view class="active_goods_name">
+            大保健营养保健品适合老年人和婴幼儿易吸收营养好吃的
+        </view>
+        <view class="active_item_infor">
+            <text class="active_group_price">团购价¥90</text>
+            <text class="active_time">三人团</text>
+        </view>
+    </view>
+    <view class="active_item">
+        <view>
+            <image bindload="cusImageLoad" src="../../image/test.jpg" style="width: {{imageWidth}};height: {{imageHeight}}"></image>
+        </view>
+        <view class="active_goods_name">
+            大保健营养保健品适合老年人和婴幼儿易吸收营养好吃的
+        </view>
+        <view class="active_item_infor">
+            <text class="active_group_price">团购价¥80</text>
+            <text class="active_time">四人团</text>
+        </view>
+    </view>
+</view>

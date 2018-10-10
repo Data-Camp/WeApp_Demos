@@ -1,0 +1,28 @@
+<view class="container">
+	<view class="video-menu">
+	    <scroll-view scroll-x="true" class="top-nav">
+	    	<block wx:for="{{tab}}">
+		        <view bindtap="toTab" data-index="{{item.idx}}" class="top-btn {{item.hover}}">{{item.title}}</view>
+	        </block>
+	    </scroll-view>
+	</view>
+	<view class="video {{tab[0].content}}">
+		<block wx:for="{{latest}}">
+
+            <view class="video-row">
+                <!--这里不能直接传视频路径到url的参数中，因为视频路径中也带参数，会被解析成url的参数-->
+                <navigator url="play/play" data-path="{{item.get_url}}" bindtap="playTap">
+                    <view class="video-row-in">
+                        <image class="video-row-in-img" src="{{item.img}}"></image>
+					    <image class="video-new" src="../../img/video_new.png"></image>
+                        <view class="one-tag">
+                            <text class="one-tag-title">{{item.title}}</text>
+                            <text class="one-tag-name">{{item.cname}}</text>
+                            <text class="one-tag-pos">{{item.ename}}</text>
+                        </view>
+                    </view>
+                </navigator>
+            </view>
+        </block>
+	</view>
+</view>

@@ -1,0 +1,126 @@
+.homePage {
+  background-color: #f8f8f8;
+}
+
+.home_swiper {
+  width: 750rpx;
+  height: 350rpx;
+  /*background-color: greenyellow;*/
+}
+
+.home_swiper image {
+  width: 750rpx;
+  height: 350rpx;
+}
+
+.recommendedContent {
+  width: 750rpx;
+  height: 200rpx;
+}
+
+.recommendedContent image {
+  height: 200rpx;
+  width: 25%;
+}
+
+.home_Goods {
+  background-color: #f8f8f8;
+}
+
+.homePagePageType4View {
+  margin-top: 2rpx;
+  margin-bottom: 2rpx;
+}
+
+.homePagePageType5View {
+  margin-top: 2rpx;
+  margin-bottom: 2rpx;
+}
+
+.homePagePageType6View {
+  margin-top: 2rpx;
+  margin-bottom: 2rpx;
+}
+
+.homePagePageType7View {
+  width: 750rpx;
+  height: 660rpx;
+  margin-top: 2rpx;
+  margin-bottom: 2rpx;
+  display: flex;
+  flex-direction: row; /*默认的方向*/
+  flex-wrap: wrap; /*自动换行*/
+  justify-content: center; /*水平方向居中对齐*/
+}
+
+.homePagePageType4View image {
+  width: 750rpx;
+  height: 300rpx;
+}
+
+.homePagePageType5View image {
+  width: 750rpx;
+  height: 85rpx;
+}
+
+.homePagePageType6View image {
+  width: 750rpx;
+  height: 300rpx;
+}
+
+.goods_view {
+  width: 33%;
+  height: 330rpx;
+  background-color: white;
+}
+
+.goods_view image {
+  width: 100%;
+  height: 240rpx;
+}
+
+.goods_text {
+  height: 80rpx;
+  margin: 5rpx;
+  position: relative;
+}
+
+.goods_name {
+  font-size: 25rpx;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.goods_marketPrice {
+  font-size: 22rpx;
+  color: darkgray;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-decoration: line-through;
+  margin-top: 5rpx;
+  margin-bottom: 5rpx;
+}
+
+.goods_price {
+  font-size: 23rpx;
+  color: orange;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.addToCartImage {
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute; /*绝对布局 相对于最近已经定位的父视图定位*/
+  right: 0rpx;
+  bottom: 2rpx;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+}

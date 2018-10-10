@@ -1,0 +1,18 @@
+<!-- 输入口令 -->
+<view class="invitation-page">
+    
+    <!-- 输入框 -->
+    <view class="section">
+        <input bindinput="changeInput" placeholder="请粘贴或输入邀请码至此栏" auto-focus/>
+    </view>
+
+    <!-- 下一步 -->
+    <view class="next-btn" bindtap="next">
+        <text>下一步</text>
+    </view>
+
+    <!-- 提示信息 -->
+    <modal confirm-text="确定"no-confirm  no-cancel hidden="{{modalHidden}}" mask bindconfirm="modalChange">
+        请输入有效口令
+    </modal>
+</view>

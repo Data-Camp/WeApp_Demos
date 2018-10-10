@@ -1,0 +1,41 @@
+<import src="../common/prompt.wxml"/>
+
+<view class="weui-panel weui-panel_access" wx:if="{{ !!carts.items.length }}" wx:for="{{ carts.items }}" wx:key="">
+    <view class="weui-panel__hd">
+        <text class="info-meta" wx:if="{{ !canEdit }}" data-value="edit" bindtap="onTapEdit">编辑</text>
+        <text class="info-meta" wx:if="{{ canEdit }}" bindtap="onTapEdit">完成</text>
+        <text class="info-meta" bindtap="del" data-id="{{ item._id }}">删除</text>
+    </view>
+    <view class="weui-panel__bd">
+        <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+            <view class="weui-media-box__hd weui-media-box__hd_in-appmsg" bindtap="navigateTo" data-id="{{ item.goods._id }}">
+                <image class="weui-media-box__thumb" src="{{ item.goods.thumb_url }}" />
+            </view>
+            <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                <view class="weui-media-box__title">{{ item.goods.name }}</view>
+                <view class="weui-media-box__desc">
+                    <text class="text-orangered">¥ {{ item.goods.price }}</text>
+                </view>
+                <view class="weui-media-box__info">
+                    <view class="weui-media-box__info__meta">数量 x{{ item.total }}</view>
+                    <view class="weui-media-box__info__meta">单价 x{{ item.amount }}</view>
+                    <view class="weui-media-box__info__meta">总价 x{{ item.totalAmount }}</view>
+                </view>
+                <view class="quantity-wrapper" wx:if="{{ canEdit }}">
+                    <view class="customize-qua">
+                        <view class="quantity-decrease" bindtap="decrease" data-id="{{ item._id }}" data-total="{{ item.total }}"></view>
+                        <input class="quantity" type="number" data-id="{{ item._id }}" value="{{ item.total }}" bindinput="bindKeyInput" />
+                        <view class="quantity-increase" bindtap="increase" data-id="{{ item._id }}" data-total="{{ item.total }}"></view>
+                    </view>
+                </view>
+            </view>
+        </navigator>
+    </view>
+</view>
+    
+<template is="prompt" data="{{ prompt }}"/>
+
+<view class="button-sp-area" wx:if="{{ !!carts.items.length }}">
+    <button class="weui-btn" type="primary" bindtap="confirmOrder">去结算</button>
+    <button class="weui-btn" type="warn" bindtap="clear">清空</button>
+</view>

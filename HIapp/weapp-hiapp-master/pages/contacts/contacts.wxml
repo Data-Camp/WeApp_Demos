@@ -1,0 +1,17 @@
+<scroll-view scroll-y="true" class="contacts flex-column">
+  <block wx:for="{{contacts}}">
+    <view class="header flex-row" wx:if="{{item.header}}">{{item.header}}</view>
+    <view class="contact-card" data-name="{{item.nickname}}" bindtap="navToMessage">
+      <view class="contact-card-inner flex-row">
+        <image class="contact-avatar" src="{{item.avatar}}"></image>
+        <view class="contact-name flex-row flex-rest-width">
+          <text>{{item.nickname}}</text>
+        </view>
+        <view class="contact-right flex-row">
+          <text class="contact-right-text">{{item.location}}</text>
+          <image class="wx-cell-arrow" src="../../assets/right-gray.png"></image>
+        </view>
+      </view>
+    </view> 
+  </block>
+</scroll-view>

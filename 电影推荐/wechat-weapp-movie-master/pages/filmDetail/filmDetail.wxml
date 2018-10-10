@@ -1,0 +1,71 @@
+<view class="container">
+    <block wx:if="{{showLoading}}">
+        <view class="loading">玩命加载中…</view>
+    </block>
+    <block wx:else>
+    <!-- fd: film detail -->
+        <view class="fd-hd">
+            <view class="fd-hd-bg" style="background-image: url({{filmDetail.images.large}})"></view>
+            <image src="{{filmDetail.images.large}}" class="fd-cover"></image>
+            <view class="fd-intro">
+                <view class="fd-title">{{filmDetail.title}}</view>
+                <view class="fd-intro-txt">导演：{{filmDetail.directors[0].name}}</view>
+                <view class="fd-intro-txt">
+                    演员：
+                    <block wx:for="{{filmDetail.casts}}" wx:for-item="filmDetailCastItem" wx:for-index="filmDetailCastIndex" wx:key="filmDetailCastItem">
+                        {{filmDetailCastItem.name}}
+                        <block wx:if="{{filmDetailCastIndex !== filmDetail.casts.length - 1}}">/</block>
+                    </block>
+                </view>
+                <view class="fd-intro-txt">豆瓣评分：
+                    <block wx:if="{{filmDetail.rating.average == 0}}">
+                        暂无评分
+                    </block>
+                    <block wx:else>
+                        {{filmDetail.rating.average}}分
+                    </block>
+                </view>
+                <view class="fd-intro-txt">上映年份：{{filmDetail.year}}年</view>
+            </view>
+        </view>
+        <view class="fd-data">
+            <view class="fd-data-item">
+                <view class="fd-data-num">{{filmDetail.collect_count}}</view>
+                <view class="fd-data-title">看过</view>
+            </view>
+            <view class="fd-data-item">
+                <view class="fd-data-num">{{filmDetail.wish_count}}</view>
+                <view class="fd-data-title">想看</view>
+            </view>
+            <view class="fd-data-item">
+                <view class="fd-data-num">{{filmDetail.ratings_count}}</view>
+                <view class="fd-data-title">评分人数</view>
+            </view>
+        </view>
+        <view class="fd-bd">
+            <view class="fd-bd-title">剧情简介</view>
+            <view class="fd-bd-intro">{{filmDetail.summary}}</view>
+            <view class="fd-bd-title">导演/演员</view>
+            <view class="fd-bd-person">
+                <view class="fd-bd-person-item" data-id="{{filmDetail.directors[0].id}}" bindtap="viewPersonDetail">
+                    <image class="fd-bd-person-avatar" src="{{filmDetail.directors[0].avatars.medium}}"></image>
+                    <view class="fd-bd-person-name">{{filmDetail.directors[0].name}}</view>
+                    <view class="fd-bd-person-role">导演</view>
+                </view>
+                <block wx:for="{{filmDetail.casts}}" wx:for-item="filmDetailCastItem" wx:key="filmDetailCastItem">
+                    <view class="fd-bd-person-item" data-id="{{filmDetailCastItem.id}}" bindtap="viewPersonDetail">
+                        <image class="fd-bd-person-avatar" src="{{filmDetailCastItem.avatars.medium}}"></image>
+                        <view class="fd-bd-person-name">{{filmDetailCastItem.name}}</view>
+                        <view class="fd-bd-person-role">演员</view>
+                    </view>
+                </block>
+            </view>
+            <view class="fd-bd-title">标签</view>
+            <view class="fd-bd-tag">
+                <block wx:for="{{filmDetail.genres}}" wx:for-item="filmDetailTagItem" wx:key="filmDetailTagItem">
+                    <view class="fd-bd-tag-item" data-tag="{{filmDetailTagItem}}" catchtap="viewFilmByTag">{{filmDetailTagItem}}</view>
+                </block>
+            </view>
+        </view>
+    </block> 
+</view>

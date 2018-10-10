@@ -1,0 +1,20 @@
+<!--当用户点击该组件的时候会在该页面对应的Page中找到相应的事件处理函数。 真坑-->
+<!--在相应的Page定义中写上相应的事件处理函数，参数是event-->
+<template name="footTabBar">
+<view class="footTabBar">
+    <view wx:for="{{tabBarList}}" wx:for-item="perTab" bindtap="{{perTab.tabCbName}}">
+        <text> {{perTab.text}}</text>
+    </view>
+</view>
+</template>
+
+<!--改成跳转页面 -->
+<!--<template name="footTabBar">
+  <view wx:for="{{tabBarList}}" wx:for-item="perTab" >
+    <navigator url="{{perTab.url}}" hover-class="navigator-hover"> {{perTab.text}}</navigator>
+  </view>
+</template>-->
+
+<!--模板拥有自己的作用域，只能使用data传入的数据-->
+
+<!--模板的样式?-->

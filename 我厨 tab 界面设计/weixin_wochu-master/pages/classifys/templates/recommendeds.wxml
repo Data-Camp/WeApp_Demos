@@ -1,0 +1,14 @@
+<template name="classify_recommendeds_right">
+  <include wx:if="{{type == '1'}}" src="../includes/recommendPage.wxml" />
+  <include wx:if="{{type == '0'}}" src="../includes/categoryPage.wxml" />
+</template>
+<template name="classify_recommendeds_left">
+  <block wx:for="{{leftArray}}">
+    <view class="classify_recommendeds_left" wx:if="{{item.name == '推荐'}}" id="1"  bindtap="tapCategory">
+      {{item.name}}
+    </view>
+    <view class="classify_recommendeds_left" wx:if="{{item.name != '推荐'}}" id="0" data-id="{{item.id}}" bindtap="tapCategory">
+      {{item.name}}
+    </view>
+  </block>
+</template>

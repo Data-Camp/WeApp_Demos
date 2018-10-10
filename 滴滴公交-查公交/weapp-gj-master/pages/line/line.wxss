@@ -1,0 +1,64 @@
+.line-header {
+    position: relative;
+    width: 100%;
+}
+.line-title{
+    position: relative;
+    height:70px;
+    padding-left:16px;
+    background: #ffffff;
+    overflow: hidden;
+}
+.line-name-area {
+    font-size: 14px;
+    margin-top:12px;
+    width:320px;
+    color: #333333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    
+   
+}
+.line-name {
+    float:left;
+    margin-right:10px;
+    font-weight: bold;
+}
+.line-from,
+.line-to{
+    float:left;
+}
+ .line-from-to-icon {
+    float:left;
+    font-size: 16px;
+    color: #ADADAD;
+    margin-left:6px;
+    margin-right:6px;
+}
+.line-time-area view{
+    display: inline;
+}
+.line-time-area {
+    font-size: 12px;
+    margin-top:8px;
+    color: #666666;
+}
+.line-start {
+    margin-right:4px;
+}
+.line-start-time {
+    margin-right:12px;
+}
+.line-end {
+    margin-right:4px;
+}
+.line-end-time {
+    margin-right:12px;
+}
+.line-realtime-icon {
+    font-size: 12px;
+    color: #2590fe;
+    margin-right:5px;
+    transform:scale(0.75);
+}

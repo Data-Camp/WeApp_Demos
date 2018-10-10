@@ -1,0 +1,63 @@
+.masker {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9998;
+}
+
+.region-container {
+    width: 100%;
+    height: 350px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background: #fff;
+    z-index: 9999;
+}
+
+.region-header {
+    width: 100%;
+    height: 49px;
+    border-bottom: 1px solid #f2f2f2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.region-header text {
+    padding: 0 30px;
+    height: 100%;
+}
+
+.region-header .confirm {
+    color: #1aad16;
+}
+
+.region {
+    width: 100%;
+    height: 300px;
+}
+
+.addr-item {
+    line-height: 50px;
+    text-align: center;
+}
+
+.show {
+    text-align: center;
+    margin: 20px;
+    height: 50px;
+}
+.choose {
+    margin: 20px 0;
+}
+
+.active {
+    height: 50px;
+}

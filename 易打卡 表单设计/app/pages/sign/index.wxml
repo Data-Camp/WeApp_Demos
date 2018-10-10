@@ -1,0 +1,181 @@
+<view class="sign-page">
+
+    <!-- 有打卡任务 -->
+    <block wx:if="{{flag}}">
+
+        <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" bindchange="changeSwiper">
+            <block wx:for="{{tasks}}">
+                <swiper-item>
+                    
+                    <!-- module a -->
+                    <view class="module-a">
+                        <view class="module-a-l">
+                            <view class="item">
+                                <text class="key">您的任务</text><text class="task-name">{{item.name}}</text>
+                            </view>
+                            <view class="item">
+                                <view class="key">{{item.distance}}</view>
+                                <view class="update-address-btn {{updateAddres ? 'update-address' : 'updateAddres'}}" bindtap="updateDistance">
+                                    <image class="update-address-icon" src="../../image/refresh.png"></image>
+                                    <text>更新</text>
+                                </view>
+                            </view>
+                        </view>
+                        <view class="module-a-r">
+                            <!-- leave btn -->
+                            <view class="leave-btn" bindtap="showLeavePanel">
+                                <text class="txt">请假</text>
+                            </view>
+                        </view>
+                    </view>
+                </swiper-item>
+            </block>
+        </swiper>
+        
+        <!-- module b -->
+        <view class="module-b">
+            <!-- 状态为0：倒计时 -->
+            <block wx:if="{{currentState == 0}}">
+                <view class="tit">
+                    <block wx:if="{{currentTimeFlag == 0}}">
+                        <text>倒计时</text>
+                    </block>
+                    <block wx:if="{{currentTimeFlag == 1}}">
+                        <text>已迟到</text>
+                    </block>
+                </view>
+                <view class="num">
+                    <text class="hour">{{clock.hour}}</text>
+                    <text>:</text>
+                    <text class="min">{{clock.min}}</text>
+                </view>
+                <view class="sign-wrap" bindtap="signTask">
+                    <view class="sign-btn"><image src="../../image/sign_btn_{{btn}}.png"></image></view>
+                </view>
+            </block>
+
+            <!-- 状态为1：已打卡 -->
+            <block wx:if="{{currentState == 1}}">
+                <view class="tit success">
+                    <text>打卡成功！</text>
+                </view>
+                <view class="num unable">
+                    <text class="hour">00</text>
+                    <text>:</text>
+                    <text class="min">00</text>
+                </view>
+                <view class="sign-wrap">
+                    <view class="sign-btn"><image src="../../image/sign_btn_2.png"></image></view>
+                </view>
+            </block>
+
+            <!-- 状态为2：请假中 -->
+            <block wx:if="{{currentState == 2}}">
+                <view class="tit">
+                    <text>请假中</text>
+                </view>
+                <view class="num unable">
+                    <text class="hour">00</text>
+                    <text>:</text>
+                    <text class="min">00</text>
+                </view>
+                <view class="sign-wrap">
+                    <view class="sign-btn"><image src="../../image/sign_btn_unable.png"></image></view>
+                </view>
+            </block>
+        </view>
+        
+
+        <!-- 记录心情 -->
+        <view class="humor">
+            <!--<text classclass="tips">本月已累计打卡2天，继续努力^_^~</text>-->
+            <input type="text" bindinput="bindKeyInput" class="input" placeholder="随手记下今天的感想..."></input>
+        </view>
+
+    </block>
+    
+    <!-- 无打卡任务 -->
+    <block wx:else>
+        <view class="module-no">
+            <view class="tips">
+                <text>当前无打卡任务，可点击新建按钮添加任务！</text>
+            </view>
+            <view class="system-time">
+                <view class="tit">
+                    <text>倒计时</text>
+                </view>
+                <view class="num">
+                    <text class="hour">00</text>
+                    <text>:</text>
+                    <text class="min">00</text>
+                </view>
+            </view>
+
+            <view class="sign-wrap">
+                <view class="sign-btn"><image src="../../image/sign_btn_unable.png"></image></view>
+            </view>
+        </view>
+    </block>
+
+    <!-- 提示信息 -->
+    <modal class="modal" hidden="{{modalHidden}}" no-cancel bindconfirm="modalChange" bindcancel="modalChange">
+      <view>{{modalText}}</view>
+    </modal>
+        
+    <!-- 请假提示框 -->
+    <view class="overlay" hidden="{{leaveHidden}}">
+        <view class="leave-panel">
+            <view class="inner">
+                <form bindsubmit="leaveSubmit">
+                    <!-- 当前任务名 -->
+                    <view class="title">
+                        <text>{{curTask.name}}</text>
+                    </view>
+
+                    <!-- 当前任开始时间 -->
+                    <view class="mod-b mt20 time-b">
+                        <view class="key">
+                            <text>开始时间</text>
+                        </view>
+                        <view class="value">
+                            <picker mode="date" value="{{currentLeaveStart}}" start="{{curTask.startTime}}" end="curTask.endTime" bindchange="startDateChange">
+                                <view class="date">{{currentLeaveStart}}<image class="arrow-d" src="../../image/arrow-d-0.png"></image></view>
+                            </picker>
+                        </view>
+                    </view>
+
+                    <!-- 当前任务结束时间 -->
+                    <view class="mod-b mt20 time-b">
+                        <view class="key">
+                            <text>结束时间</text>
+                        </view>
+                        <view class="value">
+                            <picker mode="date" value="{{currentLeaveEnd}}" start="{{curTask.startTime}}" end="{{curTask.endTime}}" bindchange="endDateChange">
+                                <view class="date">{{currentLeaveEnd}}<image class="arrow-d" src="../../image/arrow-d-0.png"></image></view>
+                            </picker>
+                        </view>
+                    </view>
+                    <!--<view class="mod-b mt20">
+                        <text>申请请假</text>
+                        <view>
+                            <text>{{}}天</text>
+                        </view>
+                    </view>-->
+
+                    <view class="leave-reason mt20">
+                        <textarea bindblur="inputReason" class="textarea" placeholder="填写请假事由..."/>
+                    </view>
+
+                    <view class="mt20">
+                        <button form-type="submit" class="submit-btn">提交</button>
+                    </view>
+
+                    <view class="close-btn" bindtap="HideLeavePanel">
+                        <image src="../../image/success-close.png"></image>
+                    </view>
+                </form>
+            </view>
+        </view>
+    </view>
+    
+</view>

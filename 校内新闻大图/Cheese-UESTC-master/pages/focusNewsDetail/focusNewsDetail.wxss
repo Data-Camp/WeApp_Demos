@@ -1,0 +1,33 @@
+@import "../../wxParse/wxParse.wxss";
+.firstRow{
+    /*width: 100%;*/
+    display: flex;
+    flex-direction:column;
+}
+
+
+.table{margin: 0 auto; padding: 0;font-size: 14px;font-family: Arial, 宋体, Helvetica, sans-serif;}
+/**{margin: 0 auto; padding: 0;font-size: 14px;font-family: Arial, 宋体, Helvetica, sans-serif;}*/
+ 
+.table {display: table; width: 100%; border-collapse: collapse;}
+
+.table-tr {display: table-row; height: 30px;
+			position:relative;}
+.table-th {display: table-cell;font-weight: bold;height: 100%;border: 1px solid gray;text-align: center;vertical-align: middle;background-color:#E5E5E5;}
+.table-td {display: table-cell; height: 100%;}
+
+.sub-table {width: 100%;height: 100%;display: table;}
+.sub-table-tr {display: table-row; height: 100%;}
+.sub-table-td {display: table-cell; height: 100%;border: 1px solid gray; text-align: center;vertical-align: middle;}
+
+
+
+table {
+width: 600px;
+border-collapse: collapse;
+}
+
+th, td {
+border: none;
+}
+

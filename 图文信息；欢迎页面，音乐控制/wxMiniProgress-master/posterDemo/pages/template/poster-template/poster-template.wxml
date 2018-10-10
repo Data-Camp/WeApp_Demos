@@ -1,0 +1,17 @@
+<template name="posterTemp">
+    <view class="poster-container">
+        <view class="poster-auto">
+            <image class="poster-auto-img" src="{{avatar}}"></image>
+            <text class="poster-auto-time">{{date}}</text>
+        </view>
+        <text class="poster-title">{{title}}</text>
+        <image class="poster-img" src="{{imgSrc}}"></image>
+        <text class="poster-content">{{content}}</text>
+        <view class="poster-like-container">
+            <image class="poster-like-img" src="{{likeImgPath.likeView}}"></image>
+            <text class="poster-like-num">{{reading}}</text>
+            <image class="poster-like-img" src="{{likeImgPath.likeCollection}}"></image>
+            <text class="poster-like-num">{{collection}}</text>
+        </view>
+    </view>
+</template>

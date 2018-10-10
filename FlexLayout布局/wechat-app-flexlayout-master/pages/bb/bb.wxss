@@ -1,0 +1,149 @@
+.menu{
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  background: #fff;
+  border-bottom:#eee solid 1px;
+  z-index: 100000
+}
+
+.top-nav{
+    white-space: nowrap;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.top-btn{
+    display: inline-block;
+    padding: 22rpx;
+    font-size: 16px;
+}
+
+.top-hoverd-btn{
+    color: #42bd56;
+    border-bottom: #42bd56 solid 1px;
+}
+
+
+.line{
+    display: flex;
+    margin: 5rpx;
+    border: #ddd solid 1px;
+    padding: 50rpx;
+}
+
+.text-center{
+    margin: 0 auto;
+}
+
+.first{
+    text-align: center;
+    padding: 3rpx;
+}
+
+.toutiao{
+    padding: 1rpx;
+}
+
+.toutiao-img{
+    width: 80px;
+    height: 80px;
+}
+
+.two-line-text{
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.txt{
+    margin: 8px 10px;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.first-img{
+    width: 370px;
+    height: 180px;
+}
+
+.second{
+    padding: 5rpx;
+}
+
+.second-img{
+    height: 50px;
+    width: 95%;
+    margin-bottom: 5rpx;
+}
+
+.sl-col{
+    width: 84px;
+    margin: 0 2rpx;
+    border: #ddd solid 1px;
+    text-align: center;
+    padding: 3rpx;
+    font-size: 12px;
+}
+
+.forth{
+    display: flex;
+    text-align: center;
+    padding: 10px;
+}
+
+.forth-img{
+    width: 150px;
+    height: 200px;
+}
+
+.forth .left{
+    border: #ddd dotted 1px;
+    padding: 1rpx;
+    margin-right: 5rpx;
+}
+
+.forth .right{
+    display: flex;
+    border: #ddd dotted 1px;
+    flex-direction: column;
+    font-size: 12px;
+}
+
+.forth .bottom,
+.forth .top{
+    display: flex;
+    margin: 1rpx;
+
+}
+
+.cl4-img{
+    width: 90px;
+    height: 90px;
+}
+
+.bottom .cl4,
+.top .cl4{
+    width: 50%;
+    margin: 1rpx;
+    border: #ddd dotted 1px;
+    flex: auto;
+    text-align: center;
+}
+
+.one-img{
+    flex-direction: column;
+    padding: 1rpx;
+}
+
+.alone-line-text{
+    width: 100%;
+    text-align: center;
+    padding: 30rpx;
+}
+
+.poster{
+    width: 370px;
+    height: 200px;
+    background: #0f0;
+}

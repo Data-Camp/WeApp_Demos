@@ -1,0 +1,18 @@
+.title {
+	font-weight: bold;
+	font-size: 13px;
+	width: auto;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	word-wrap: normal;
+	word-wrap: break-word;
+	word-break: break-all;
+	color: #000;
+}
+
+.content {
+	color: #999;
+	font-size: 13px;
+	overflow: hidden;
+}

@@ -1,0 +1,14 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/game/game"
+  ],
+  "window": {
+    "backgroundColor": "#f6f6f6",
+    "backgroundTextStyle": "light",
+
+    "navigationBarBackgroundColor": "#f6f6f6",
+    "navigationBarTitleText": "WebSocket 剪刀石头布",
+    "navigationBarTextStyle": "black"
+  }
+}

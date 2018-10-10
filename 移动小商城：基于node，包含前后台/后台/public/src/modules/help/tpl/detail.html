@@ -1,0 +1,17 @@
+<ion-view view-title="使用帮助">
+	<ion-content>
+        <ion-refresher pulling-icon="ion-arrow-down-c" pulling-text="下拉刷新" on-refresh="vm.doRefresh()">
+        </ion-refresher>
+		<article class="weui-article">
+            <section class="weui_article_heading">
+                <h1><strong>{{ vm.helps.item.title }}</strong></h1>
+                <p class="weui_article_info">
+                    <span>{{ vm.helps.item.create_at | date: 'yyyy-MM-dd' }}</span>
+                </p>
+            </section>
+            <section class="weui_article_body">
+                <p>{{ vm.helps.item.content }}</p>
+            </section>
+        </article>
+	</ion-content>
+</ion-view>

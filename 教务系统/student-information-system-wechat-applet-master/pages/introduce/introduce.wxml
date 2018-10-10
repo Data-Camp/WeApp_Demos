@@ -1,0 +1,14 @@
+<!--index.wxml-->
+<view class="page">
+    <view class="page__hd">
+        <view class="page__title">跨域限制</view>
+    </view>
+    <view class="page__bd">
+        <text>
+            由于同源策略，跨域访问受限，模拟登录暂时无法获取到 Cookie
+        </text>
+        <text>
+            使用模拟得数据进行演示，直接通过 GET 方法从个人站点获取 HTML
+        </text>
+    </view>
+</view>

@@ -1,0 +1,35 @@
+.page-body-wrapper {
+  flex-grow: 1;
+}
+.page-body-info {
+  margin: 0;
+  margin-top: 40rpx;
+  padding-top: 40rpx;
+  flex-grow: 1;
+}
+.image-plus {
+  margin-top: 150rpx;
+  width: 150rpx;
+  height: 150rpx;
+  border: 1px solid #999;
+  position: relative;
+}
+.image-plus-horizontal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: #d9d9d9;
+  width: 4rpx;
+  height: 80rpx;
+  transform: translate(-50%, -50%);
+}
+.image-plus-vertical {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: #d9d9d9;
+  width: 80rpx;
+  height: 4rpx;
+  transform: translate(-50%, -50%);
+}
+

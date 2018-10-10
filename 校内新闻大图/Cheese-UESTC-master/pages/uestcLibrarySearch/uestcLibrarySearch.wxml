@@ -1,0 +1,44 @@
+<!--<view class="mainFrame">-->
+  <view >{{tip}}</view>
+  <!--<scroll-view class="page_list" scroll-y="true" bindscrolltolower="loadMore" bindscrolltoupper="refresh">-->
+    <view class="page_list" wx:for="{{bookSearch}}">
+      <view class="allItem" data-detail-href="{{item.time}}">
+
+        <!--封面-->
+        <view class="bookcover">
+          <image class="bookcover" src="../../image/labraryBookCover.png" mode="aspectFit"></image>
+          <view class="booknum">{{item.booknum}}</view>
+        </view>
+
+        <!--右侧内容-->
+        <view class="content">
+
+          <!--标题-->
+          <view class="title">{{item.bookTitle}}</view>
+
+          <!--出版社-->
+          <view class="publisherContainer">
+            <view class="publisher">{{item.bookPublisher}}</view>
+          </view>
+
+          <!--记录-->
+          <view class="bookRecordsContainer">
+            <view class="bookRecordsTitle" style="display:flex;flex-direction:row;">
+              <view class="bookAddress"> 馆藏地</view>
+              <view class="bookStatus">图书状态</view>
+              <!--具体的条码位置 如几排几列列 需要内网才能查到-->
+              <view class="bookBarCode"> 条码和位置</view>
+            </view>
+            <view class="page_list"  wx:for="{{item.bookRecords}}">
+              <view class="bookRecords" style="display:flex;flex-direction:row;">
+                <view class="bookAddress"> {{item.bookAddress}}</view>
+                <view class="bookStatus"> {{item.bookStatus}}</view>
+                <view class="bookBarCode"> {{item.bookBarCode}}</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  <!--</scroll-view>-->
+<!--</view>-->

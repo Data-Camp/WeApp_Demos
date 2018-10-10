@@ -1,0 +1,342 @@
+<!-- 记录页 -->
+<view class="record-page">
+    
+    <!-- 切换菜单 -->
+    <view class="t-menu">
+        <view class="t-menu-btn {{tabIndex ? '' : 'selected'}}" bindtap="changeTab" id="all">
+            <text>全体</text>
+        </view>
+        <view class="t-menu-btn {{tabIndex ? 'selected' : ''}}" bindtap="changeTab" id="single">
+            <text>个人</text>
+        </view>
+    </view>
+
+    <!-- 记录分类 -->
+    <view class="t-inner">
+        <view class="t-content-wrap">
+
+            <!-- 全体记录 -->
+            <view class="t-content {{tabIndex ? '' : 't-content-show'}}">
+                <scroll-view scroll-y="true" style="height: 1000rpx;">
+                    <view class="inner">
+                        <text class="a-tit">最新打卡情况 【{{currentTime}}】</text>
+                        
+                        <!-- 统计 -->
+                        <view class="total mt20">
+                            <view class="c-item">
+                                <text class="num">{{aontime}}</text>
+                                <text class="txt">打卡</text>
+                            </view>
+                            <view class="pipe"></view>
+                            <view class="c-item">
+                                <text class="num">{{alate}}</text>
+                                <text class="txt">迟到</text>
+                            </view>
+                            <view class="pipe"></view>
+                            <view class="c-item">
+                                <text class="num">{{absent}}</text>
+                                <text class="txt">未打卡</text>
+                            </view>
+                            <view class="pipe"></view>
+                            <view class="c-item">
+                                <text class="num">{{aleave}}</text>
+                                <text class="txt">请假</text>
+                            </view>
+                        </view>
+
+                        <!-- 人员记录 -->
+                        <view class="record-list mt20">
+                            <view class="t-time mt20">
+                                <view class="start">
+                                    <text class="key">起始</text>
+                                    <picker mode="date" value="{{aStartDay}}" start="{{taskStartDate}}" end="{{taskEndDate}}"  bindchange="aStartDateChange">
+                                        <view class="date">{{aStartDay}}<image class="arrow-d" src="../../image/arrow-d-0.png"></image></view>
+                                    </picker>
+                                </view>
+                                <view class="pipe"></view>
+                                <view class="end">
+                                    <text class="key">截止</text>
+                                    <picker mode="date" value="{{aEndDay}}" start="{{taskStartDate}}" end="{{taskEndDate}}" bindchange="aEndDateChange">
+                                        <view class="date">{{aEndDay}}<image class="arrow-d" src="../../image/arrow-d-0.png"></image></view>
+                                    </picker>
+                                </view>
+                            </view>
+
+                            <view class="thead">
+                                <view class="th th0">
+                                    <text>成员</text>
+                                </view>
+                                <view class="th">
+                                    <text>打卡</text><text class="unit">(天)</text>
+                                </view>
+                                <view class="th">
+                                    <text>迟到</text><text class="unit">(天)</text>
+                                </view>
+                                <view class="th">
+                                    <text>未打卡</text><text class="unit">(天)</text>
+                                </view>
+                                <view class="th">
+                                    <text>请假</text><text class="unit">(天)</text>
+                                </view>
+                            </view>
+
+                            <view class="tbody">
+
+                                <block wx:for="{{aRecordList}}">
+                                    <view class="tr">
+                                        <view class="td td0">
+                                            <text>{{item.nickName}}</text>
+                                        </view>
+                                        <view class="td">
+                                            <text>{{item.ontime}}</text>
+                                        </view>
+                                        <view class="td">
+                                            <text>{{item.late}}</text>
+                                        </view>
+                                        <view class="td">
+                                            <text>{{item.absent}}</text>
+                                        </view>
+                                        <view class="td">
+                                            <text>{{item.leave}}</text>
+                                        </view>
+                                    </view>
+                                </block>
+                                
+
+                            </view>
+                        </view>
+                    </view>
+                </scroll-view>
+            </view>
+
+            <!-- 个人记录 -->
+            <view class="t-content {{tabIndex ? 't-content-show' : ''}}">
+
+                <view class="t-time mt20">
+                    <view class="start">
+                        <text class="key">起始</text>
+                        <picker mode="date" value="{{sStartDay}}" start="{{taskStartDate}}" end="{{taskEndDate}}"  bindchange="sStartDateChange">
+                            <view class="date">{{sStartDay}}<image class="arrow-d" src="../../image/arrow-d-0.png"></image></view>
+                        </picker>
+                    </view>
+                    <view class="pipe"></view>
+                    <view class="end">
+                        <text class="key">截止</text>
+                        <picker mode="date" value="{{sEndDay}}" start="{{taskStartDate}}" end="{{taskEndDate}}" bindchange="sEndDateChange">
+                            <view class="date">{{sEndDay}}<image class="arrow-d" src="../../image/arrow-d-0.png"></image></view>
+                        </picker>
+                    </view>
+                </view>
+
+                <!-- 统计 -->
+                <view class="total mt20">
+                    <view class="c-item">
+                        <text class="num">{{sontime}}</text>
+                        <text class="txt">打卡</text>
+                    </view>
+                    <view class="pipe"></view>
+                    <view class="c-item">
+                        <text class="num">{{slate}}</text>
+                        <text class="txt">迟到</text>
+                    </view>
+                    <view class="pipe"></view>
+                    <view class="c-item">
+                        <text class="num">{{sbsent}}</text>
+                        <text class="txt">未打卡</text>
+                    </view>
+                    <view class="pipe"></view>
+                    <view class="c-item">
+                        <text class="num">{{sleave}}</text>
+                        <text class="txt">请假</text>
+                    </view>
+                </view>
+
+                <view class="s-menu mt20">
+                    <view id="late" bindtap="changeSTab" class="s-menu-btn {{sMenuIndex == 0 ? 'active' : ''}}">
+                        <text>迟到</text>
+                    </view>
+                    <view id="leave" bindtap="changeSTab" class="s-menu-btn {{sMenuIndex == 1 ? 'active' : ''}}">
+                        <text>请假</text>
+                    </view>
+                    <view id="absent" bindtap="changeSTab" class="s-menu-btn {{sMenuIndex == 2 ? 'active' : ''}}">
+                        <text>未打卡</text>
+                    </view>
+                    <view id="ontime" bindtap="changeSTab" class="s-menu-btn {{sMenuIndex == 3 ? 'active' : ''}}">
+                        <text>已打卡</text>
+                    </view>
+                </view>
+
+                <scroll-view scroll-y="true" style="height: 900rpx;">
+
+                    <view class="s-menu-content {{sMenuIndex == 0 ? 's-menu-show' : ''}}">
+                        <view class="record-list late-list">
+                            <view class="thead">
+                                <view class="th">
+                                    <text>日期</text>
+                                </view>
+                                <view class="th">
+                                    <text>打卡时间</text>
+                                </view>
+                                <view class="th">
+                                    <text>迟到时长</text>
+                                </view>
+                                <view class="th">
+                                    <text>当前出勤比</text>
+                                </view>
+                            </view>
+
+                            <view class="tbody">
+                            
+                                <block wx:if="{{sLateList.length == 0}}">
+                                    <view class="empty-tips">
+                                        <text>当前没有记录</text>    
+                                    </view>
+                                </block>
+                                <block wx:else>
+                                    <block wx:for="{{sLateList}}">
+                                        <view class="tr">
+                                            <view class="td">
+                                                <text>{{item.date}}</text>
+                                            </view>
+                                            <view class="td">
+                                                <text>{{item.signTime}}</text>
+                                            </view>
+                                            <view class="td">
+                                                <text>{{item.duration}}</text>
+                                            </view>
+                                            <view class="td">
+                                                <text>{{item.ratio}}</text>
+                                            </view>
+                                        </view>
+                                    </block>
+                                </block>
+                                
+                            </view>
+                        </view>
+                    </view>
+                    <view class="s-menu-content {{sMenuIndex == 1 ? 's-menu-show' : ''}}">
+                        <view class="record-list leave-list">
+                            <view class="thead">
+                                <view class="th">
+                                    <text>日期</text>
+                                </view>
+                                <view class="th">
+                                    <text>请假事由</text>
+                                </view>
+                                <view class="th">
+                                    <text>当前出勤比</text>
+                                </view>
+                            </view>
+
+                            <view class="tbody">
+
+                                <block wx:if="{{sLeaveList.length == 0}}">
+                                    <view class="empty-tips">
+                                        <text>当前没有记录</text>    
+                                    </view>
+                                </block>
+                                <block wx:else>
+                                    <block wx:for="{{sLeaveList}}">
+                                        <view class="tr">
+                                            <view class="td">
+                                                <text>{{item.date}}</text>
+                                            </view>
+                                            <view class="td">
+                                                <text>{{item.reason}}</text>
+                                            </view>
+                                            <view class="td">
+                                                <text>{{item.ratio}}</text>
+                                            </view>
+                                        </view>
+                                    </block>
+                                </block>
+                                
+                            </view>
+                        </view>
+                    </view>
+                    <view class="s-menu-content {{sMenuIndex == 2 ? 's-menu-show' : ''}}">
+                        <view class="record-list absent-list">
+                            <view class="thead">
+                                <view class="th">
+                                    <text>日期</text>
+                                </view>
+                                <view class="th">
+                                    <text>备注</text>
+                                </view>
+                                <view class="th">
+                                    <text>当前出勤比</text>
+                                </view>
+                            </view>
+
+                            <view class="tbody">
+
+                                <block wx:if="{{sAbsentList.length == 0}}">
+                                    <view class="empty-tips">
+                                        <text>当前没有记录</text>    
+                                    </view>
+                                </block>
+                                <block wx:else>
+                                    <block wx:for="{{sAbsentList}}">
+                                        <view class="tr">
+                                            <view class="td">
+                                                <text>{{item.date}}</text>
+                                            </view>
+                                            <view class="td">
+                                                <text>{{item.notes}}</text>
+                                            </view>
+                                            <view class="td">
+                                                <text>{{item.ratio}}</text>
+                                            </view>
+                                        </view>
+                                    </block>
+                                </block>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="s-menu-content {{sMenuIndex == 3 ? 's-menu-show' : ''}}">
+                        <view class="record-list absent-list">
+                            <view class="thead">
+                                <view class="th">
+                                    <text>日期</text>
+                                </view>
+                                <view class="th">
+                                    <text>打卡名次</text>
+                                </view>
+                                <view class="th">
+                                    <text>当前出勤比</text>
+                                </view>
+                            </view>
+
+                            <view class="tbody">
+
+                                <block wx:if="{{sOntimeList.length == 0}}">
+                                    <view class="empty-tips">
+                                        <text>当前没有记录</text>    
+                                    </view>
+                                </block>
+                                <block wx:else>
+                                    <block wx:for="{{sOntimeList}}">
+                                        <view class="tr">
+                                            <view class="td">
+                                                <text>{{item.date}}</text>
+                                            </view>
+                                            <view class="td">
+                                                <text>{{item.position}}</text>
+                                            </view>
+                                            <view class="td">
+                                                <text>{{item.ratio}}</text>
+                                            </view>
+                                        </view>
+                                    </block>
+                                </block>
+                                
+                            </view>
+                        </view>
+                    </view>
+
+                </scroll-view>
+            </view>
+        </view>
+    </view>
+
+</view>

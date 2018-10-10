@@ -1,0 +1,32 @@
+<view class="container">
+  <view class="nav_left">
+    <block wx:for="{{navLeftItems}}">
+      <view class="nav_left_items {{curNav == item.id ? 'active' : ''}}" bindtap="switchRightTab" data-index="{{index}}" data-id="{{item.id}}">{{item.tree.desc}}</view>
+    </block>
+  </view>
+  <view class="nav_right">
+    <view wx:if="{{navRightItems[curIndex].tree.nodes[1].tree.nodes}}">
+      <block wx:for="{{navRightItems[curIndex].tree.nodes[1].tree.nodes}}">
+        <view class="nav_right_items">
+          <navigator url="../list/index?brand={{item.tree.id}}&typeid={{navRightItems[curIndex].id}}">
+            <view>
+              <block wx:if="{{item.tree.logo}}">
+                <image src="{{item.tree.logo}}"></image>
+              </block>
+              <block wx:else>
+                <image src="http://temp.im/50x30"></image>
+              </block>
+            </view>
+            <view wx:if="{{item.tree.desc}}">
+              <text>{{item.tree.desc}}</text>
+            </view>
+            <view wx:else>
+              <text>{{item.tree.desc2}}</text>
+            </view>
+          </navigator>
+        </view>
+      </block>
+    </view>
+    <view wx:else>暂无数据</view>
+  </view>
+</view>

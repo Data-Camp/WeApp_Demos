@@ -1,0 +1,10 @@
+<view class="content">
+    <image class="main-bg" src="../assets/img/bg2.jpg"></image>
+    <view class="city">广州市</view>
+    <import src="../template/futuretpl.wxml"/>
+    <view class="future-container">
+      <block wx:for="{{future}}">
+        <template is="future" data="{{item,index}}"/>
+      </block>
+    </view>
+</view>

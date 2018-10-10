@@ -1,0 +1,25 @@
+/* pages/config/config.wxss */
+
+page{
+    color: white;
+    font-family: "黑体","宋体"
+}
+.section-title{
+    font-size: 20px;
+    background-color: #0099cc;
+    height: 80rpx;
+    line-height: 80rpx;
+    padding-left: 20rpx;
+    box-shadow: 1px 1px 2px #bbb;
+}
+
+.section-title switch{
+    padding-right: 10rpx;
+}
+
+.voice radio-group{
+    margin: 20rpx;
+}
+.voice label{
+    margin-left: 20rpx;
+}

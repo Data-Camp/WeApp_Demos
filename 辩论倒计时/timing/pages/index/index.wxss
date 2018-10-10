@@ -1,0 +1,49 @@
+.content{
+    font-family: "黑体","宋体";
+    color:#fff;
+}
+.title{  
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    background-color: orange;
+    box-shadow: 2px 2px 10px #b8b8b8;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.time{
+    height: 380rpx;
+}
+.big-circle{
+    width: 350rpx;
+    height: 350rpx;
+    border-radius: 50%;
+    position: absolute;
+}
+.circle{
+    width: 300rpx;
+    height: 300rpx;
+    margin-left: 25rpx;
+    margin-top: 25rpx;
+    border-radius: 50%;
+    position: absolute;
+}
+.right {
+    clip: rect(0,auto,auto,150rpx);
+}
+
+.btnGroup{
+    display: flex;
+    flex-direction: row;
+}
+.btn{
+    background-color: #0099cc;
+    color: white;
+}
+
+.first{
+    left: 15rpx;
+}
+.second{
+    left: 390rpx;
+}

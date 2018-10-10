@@ -1,0 +1,33 @@
+{
+  "pages":[
+    "pages/tm/tm",
+    "pages/bb/bb",
+    "pages/douban/douban",
+    "pages/detail/detail"
+  ],
+  "tabBar":{
+    "borderStyle": "white",
+    "list": [{
+        "text": "TM",
+        "pagePath": "pages/tm/tm",
+        "iconPath": "images/store.png",
+        "selectedIconPath": "images/store-selected.png"
+    },{
+        "text": "贝贝",
+        "pagePath": "pages/bb/bb",
+        "iconPath": "images/store.png",
+        "selectedIconPath": "images/store-selected.png"
+    },{
+        "text": "豆瓣",
+        "pagePath": "pages/douban/douban",
+        "iconPath": "images/store.png",
+        "selectedIconPath": "images/store-selected.png"
+    }]
+  },
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "TinyMonit",
+    "navigationBarTextStyle":"black"
+  }
+}

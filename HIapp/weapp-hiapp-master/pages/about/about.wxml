@@ -1,0 +1,18 @@
+<view class="container flex-column">
+  <view class="top-container flex-rest-height">
+    <view class="logo">
+      <image src="../../assets/logo.png" class="logo-image"></image>
+    </view>
+    <view class="name">
+      <text>HiApp</text>
+    </view>
+    <view class="about">
+      <text class="about-text">GitHub: BelinChung/wxapp-hiapp</text>
+      <text class="about-text">Email: BelinChung@gmail.com</text>
+      <text class="about-text">Twitter: @BelinChung</text>
+    </view>
+  </view>
+  <view class="bottom-container">
+    <text>Copyright © 2016 BelinChung.</text>
+  </view>
+</view>

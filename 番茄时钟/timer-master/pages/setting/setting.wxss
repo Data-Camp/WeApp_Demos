@@ -1,0 +1,22 @@
+.container{
+	padding:15px 10px;
+}
+.section{
+	margin-bottom: 10px;
+}
+.section_title{
+	font-size: 12px;
+	color:#999;
+}
+.section_check{
+	margin-right: 5px;
+}
+.section_tip{
+	display: block;
+	text-align: right;
+	color: #CEC9C9;
+	padding-bottom: 10px;
+}
+.section_body{
+	margin-top: 15px;
+}

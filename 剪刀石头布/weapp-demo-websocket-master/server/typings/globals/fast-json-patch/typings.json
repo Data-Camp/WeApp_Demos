@@ -1,0 +1,8 @@
+{
+  "resolution": "main",
+  "tree": {
+    "src": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/d09fbd46a893294f5fe7d53dc206dd41661e7ee2/fast-json-patch/fast-json-patch.d.ts",
+    "raw": "registry:dt/fast-json-patch#1.0.0+20160803194703",
+    "typings": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/d09fbd46a893294f5fe7d53dc206dd41661e7ee2/fast-json-patch/fast-json-patch.d.ts"
+  }
+}

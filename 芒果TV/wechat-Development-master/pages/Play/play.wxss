@@ -1,0 +1,16 @@
+.play video{
+    width:100%;
+}
+
+.v{
+    display:block;
+    width:100%;
+    text-align:center;
+    line-height:25px;
+    padding:20px 0;
+}
+
+.v2{
+    color: #888;
+    font-size:12px;
+}

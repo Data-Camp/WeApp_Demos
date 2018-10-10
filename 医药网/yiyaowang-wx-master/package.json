@@ -1,0 +1,47 @@
+{
+  "name": "yiyaowang",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "labrador build",
+    "flow": "flow",
+    "eslint": "eslint ./"
+  },
+  "keywords": [
+    "labrador"
+  ],
+  "dependencies": {
+    "al-request": "^0.1.2",
+    "al-ui": "^0.1.1",
+    "assert": "^1.4.1",
+    "babel-core": "^6.18.2",
+    "babel-eslint": "^7.1.1",
+    "babel-plugin-syntax-export-extensions": "^6.13.0",
+    "babel-plugin-syntax-flow": "^6.18.0",
+    "babel-plugin-transform-export-extensions": "^6.8.0",
+    "babel-plugin-transform-flow-strip-types": "^6.18.0",
+    "babel-plugin-transform-runtime": "^6.15.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "babel-runtime": "^6.18.0",
+    "eslint": "^3.10.2",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-plugin-flowtype": "^2.25.0",
+    "eslint-plugin-flowtype-errors": "^1.5.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-react": "^6.7.1",
+    "flow-bin": "^0.35.0",
+    "labrador": "^0.6.5",
+    "labrador-immutable": "^0.6.0",
+    "labrador-redux": "^0.1.1",
+    "labrador-storage": "^0.1.0",
+    "redux": "^3.6.0",
+    "redux-actions": "^1.0.1",
+    "redux-logger": "^2.7.4",
+    "redux-persist": "^4.0.0-beta1",
+    "redux-saga": "^0.13.0",
+    "regenerator-runtime": "^0.10.0",
+    "seamless-immutable": "^6.3.0"
+  }
+}

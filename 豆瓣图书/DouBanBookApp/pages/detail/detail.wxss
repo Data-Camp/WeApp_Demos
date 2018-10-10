@@ -1,0 +1,73 @@
+page {
+    background: #EEE;
+}
+.cover-container {
+    background: #42BD56;
+    text-align: center;
+    padding: 50rpx 0;
+}
+.cover-container image {
+    display: inline-block;
+    width: 300rpx;
+    height: 400rpx;
+}
+
+.book-meta {
+    position: relative;
+    padding: 20rpx;
+    overflow: hidden;
+}
+.book-meta .range {
+    position: absolute;
+    top: 30rpx;
+    right: 20rpx;
+    width: 180rpx;
+    background: #FFF;
+    padding: 20rpx 10rpx;
+    text-align: center;
+    box-shadow: 2px 2px 10px #CCC;
+}
+.book-meta .meta-info {
+    margin-right: 200rpx;
+}
+.meta-info text {
+    display: block
+}
+.book-title {
+    font-weight: bold;
+    font-size: 40rpx;
+}
+.other-meta {
+    padding-top: 10rpx;
+    color: #888;
+    font-size: 30rpx;
+}
+.range text {
+    display: block;
+}
+.range .score {
+    font-size: 50rpx;
+    font-weight: bold;
+}
+.range .starts {
+    font-size: 40rpx;
+}
+.range .viewers {
+    font-size: 30rpx;
+}
+
+.book-intro {
+    margin-bottom: 40rpx;
+    padding: 20rpx;
+    background: #FAFAFA;
+}
+.book-intro .intro-header {
+    color: #888;
+    font-weight: bold;
+    padding: 40rpx 0;
+}
+.book-intro .intro-content {
+    font-size: 35rpx;
+    line-height: 2;
+    text-align: justify
+}

@@ -1,0 +1,76 @@
+/**index.wxss**/
+.menu{
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  background: #fff;
+  border-bottom:#eee solid 1px;
+  z-index: 100000
+}
+.top-nav{
+    white-space: nowrap;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.top-btn{
+    display: inline-block;
+    padding: 22rpx;
+    font-size: 16px;
+}
+
+.top-hoverd-btn{
+    color: #42bd56;
+    border-bottom: #42bd56 solid 1px;
+}
+.video {
+    display: flex;
+    flex-direction: row;
+    width: 98%;
+    padding-right: 2%;
+    flex-flow: row wrap;
+}
+.video-row {
+    width: 50%;
+    margin: 5px 0;
+}
+.video-row-in {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #d2d2d2;
+    margin-left: 5px;
+    border-radius: 3px;
+}
+.video-row-in-img {
+    border-radius: 3px;
+    width: 100%;
+    height: 100px;
+    float:left;
+}
+.video-new {
+  width:40px;
+  height:18px;
+  position:relative;
+  display: block;
+}
+.one-tag {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding-left: 5px;
+}
+.one-tag text {
+    font-family:"微软雅黑";
+    display: block;
+}
+.one-tag-title {
+    font-size: 14px;
+}
+.one-tag-name {
+    font-size: 12px;
+    color: #d2d2d2;
+}
+.one-tag-pos {
+    font-size: 12px;
+    color: blue;
+}

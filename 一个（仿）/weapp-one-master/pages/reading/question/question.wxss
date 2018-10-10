@@ -1,0 +1,40 @@
+.question {
+  margin: 15px;
+  line-height: 1.5;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.question-title {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.question-content {
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+.answer {
+  margin: 15px;
+}
+
+.answer-header {
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.answer-title {
+  display: inline-block;
+  font-size: 14px;
+}
+
+.answer-makettime {
+  float: right;
+  color: #888;
+  font-size: 12px;
+}
+
+.answer-content {
+  font-size: 14px;
+  line-height: 1.5;
+}

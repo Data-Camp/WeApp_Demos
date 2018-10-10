@@ -1,0 +1,48 @@
+
+<import src="/templates/question.wxml"/>
+
+<view class="tem-view">公共字号、颜色等</view>
+
+<view class="tem-view fd-color-orange fd-font-large fd-text-center">橙色－大号字体</view>
+
+<view class="tem-view fd-color-blue fd-font-middle fd-text-center">蓝色－中号字体</view>
+
+<view class="tem-view fd-color-green fd-font-small fd-text-center">蓝色－小号字体</view>
+
+<view class="tem-view">
+    <image class="fd-avatar-large" src="/images/test-ad.jpg" />
+    <image class="fd-avatar-middle" src="/images/test-ad.jpg" />
+    <image class="fd-avatar-small" src="/images/test-ad.jpg" />
+</view>
+
+<view class="tem-view">定义公共组件</view>
+
+<view class="tem-view">
+    <button type="default" size="mini" class="fd-defalut-btn"> 默认按钮 </button>
+</view>
+
+<view class="tem-view">
+    <view class="fd-icon-top-btn">
+        <image class="fd-icon-top-btn-icon" src="/images/icons/icon-health.png" />
+        <text class="fd-icon-top-btn-text">健康</text>
+    </view>
+    <view class="fd-icon-top-btn">
+        <image class="fd-icon-top-btn-icon" src="/images/icons/icon-job.png" />
+        <text class="fd-icon-top-btn-text">健康</text>
+    </view>
+    <view class="fd-icon-top-btn">
+        <image class="fd-icon-top-btn-icon" src="/images/icons/icon-social.png" />
+        <text class="fd-icon-top-btn-text">健康</text>
+    </view>
+</view>
+
+<view class="tem-view">定义公共模版</view>
+
+<view>
+    <block wx:for="{{questions}}" wx:for-item="question">
+        <template is="question" data="{{question}}"/>
+    </block>
+</view>
+
+
+

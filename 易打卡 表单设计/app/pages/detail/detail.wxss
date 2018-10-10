@@ -1,0 +1,128 @@
+.mt20{
+  margin-top: 20rpx;
+}
+
+.detail-page{
+  display: flex;
+  flex-direction: column;
+  font-size: 32rpx;
+  color: #676767;
+  padding: 30rpx 0;
+}
+
+.mod-a{
+  padding: 0 20rpx;
+  border: 1px solid #f0f0f0;
+  background-color: #fff;
+}
+
+.mod{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20rpx;
+  min-height: 90rpx;
+}
+
+.value{
+  color: #b2b2b2;
+}
+.t-address, .t-sign-time, .t-time{
+  border-bottom: 1px solid #f0f0f0;
+}
+.t-time{
+  justify-content:space-around;
+}
+.t-address .key{
+  width: 150rpx;
+}
+.t-address .value{
+  width: 500rpx;
+  line-height: 48rpx;
+  overflow: hidden;
+}
+.pipe{
+  height: 48rpx;
+  border-left: 1px solid #f0f0f0;
+}
+.date{
+  padding-left: 10rpx;
+  color: #2fcc85;
+}
+.week{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+  align-items: center;
+}
+.week .d{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 48rpx;
+  height: 48rpx;
+  border-radius: 50%;
+  background-color: #b2b2b2;
+  text-align: center;
+  color: #fff;
+  margin: 0 15rpx;
+}
+.week .on{
+  background-color: #2fcc85;
+}
+
+.user-list{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 0 10rpx;
+}
+.user-list-tit{
+  display: flex;
+  font-size: 32rpx;
+  line-height: 80rpx;
+  padding-left: 20rpx;
+}
+.user{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 177rpx;
+  margin-bottom: 20rpx;
+}
+.head{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  overflow: hidden;
+}
+.head .img{
+  display: flex;
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 10rpx;
+}
+.nick-name{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 10rpx;
+  font-size: 28rpx;
+  overflow: hidden;
+  height: 30rpx;
+  line-height: 30rpx;
+  text-overflow:ellipsis;
+}
+.add-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50rpx 26rpx 0;
+  height: 80rpx;
+  color: #fff;
+  background-color: #2fcc85;
+  border-radius: 10rpx;
+}
+.added{
+  opacity: 0.4
+}

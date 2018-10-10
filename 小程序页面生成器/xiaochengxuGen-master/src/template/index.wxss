@@ -1,0 +1,7 @@
+/**${file}.wxss**/
+.usermotto {
+  margin-top: 200px;
+}
+.user-motto2 {
+  font-size:20rpx;
+}

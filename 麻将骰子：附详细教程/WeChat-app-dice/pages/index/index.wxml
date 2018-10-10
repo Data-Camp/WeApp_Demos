@@ -1,0 +1,100 @@
+<!-- 骰子模版视图 -->
+
+<template name="first">
+    <view class="first face">
+        <span class="pip"></span>
+    </view>
+</template>
+
+<template name="second">
+    <view class="second face">
+        <span class="pip"></span>
+        <span class="pip"></span>
+    </view>
+</template>
+
+<template name="third">
+    <view class="third face">
+        <span class="pip"></span>
+        <span class="pip third-item-center"></span>
+        <span class="pip"></span>
+    </view>
+</template>
+
+<template name="fourth">
+    <view class="fourth face">
+        <!--按照列排列两个点-->
+        <view class="column">
+            <span class="pip"></span>
+            <span class="pip"></span>
+        </view>
+        <!--按照列排列另外两个点-->
+        <view class="column">
+            <span class="pip"></span>
+            <span class="pip"></span>
+        </view>
+    </view>
+</template>
+
+<template name="fifth">
+    <view class="fifth face">
+        <!--按照列排列两个点-->
+        <view class="column">
+            <span class="pip"></span>
+            <span class="pip"></span>
+        </view>
+        <!--按照列排列中间一个点-->
+        <view class="column fifth-column-center">
+            <span class="pip"></span> 
+        </view>
+        <!--按照列排列另外两个点--> 
+        <view class="column">
+            <span class="pip"></span>
+            <span class="pip"></span>
+        </view>
+    </view>
+</template>
+
+<template name="sixth">
+    <view class="sixth face">
+        <!--按照列排列三个点-->
+        <view class="column">
+            <span class="pip"></span>
+            <span class="pip"></span>
+            <span class="pip"></span>
+        </view> 
+         <!--按照列排列另外三个点-->
+        <view class="column">
+            <span class="pip"></span>
+            <span class="pip"></span>
+            <span class="pip"></span>
+        </view>
+    </view>
+</template>
+
+<!-- 展示视图 -->
+<view class="flex-container"> 
+    <view class="result" style="visibility:{{isShow}}">
+        <text>恭喜，您摇到的数字是：{{total}}</text>
+    </view>
+    <view class="dice-box">
+        <block>
+            <template is="{{dice[num1]}}"></template>
+        </block>
+    </view>
+    <view class="second-row">
+        <view class="dice-box">
+        <block>
+            <template is="{{dice[num2]}}"></template>
+        </block>
+         </view>
+            <view class="dice-box">
+        <block>
+            <template is="{{dice[num3]}}"></template>
+        </block>
+    </view>
+    </view>
+    <view class="button-box">
+        <button type="{{buttonType}}"  bindtap="shakeClick" >{{buttonValue}}</button>
+    </view>
+</view>

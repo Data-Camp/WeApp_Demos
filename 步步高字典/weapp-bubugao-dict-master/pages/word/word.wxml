@@ -1,0 +1,50 @@
+<view class="item" style="margin-bottom:5px" catchtap="Detail" id="{{detail.id}}">
+        <view class="info">
+            <!--<image class="avatar" src="{{item.member.avatar_mini}}"></image>-->
+            <text class="searchword" style="margin-top:130px;">{{detail.zi}}</text>
+            <text class="reply" style="color:grey">拼音：</text>
+                <block wx:for="{{detail.pinyins}}" wx:key="*this">
+                    <text class="reply" bindtap="morePyTap" id="{{item}}" style="border-bottom:1px dashed blue;;color:blue">{{item}}</text>
+                </block>
+            
+
+                <text class="reply"><text style="color:grey;margin-left:10px">五笔：</text>{{detail.wubi}}</text>
+
+            </view>
+        <view class="info" style="margin-left:70px;margin-top:30rpx;">
+            
+            <text style="color:grey;" class="reply">部首：</text>
+            <text class="reply" id="{{detail.bushou}}" bindtap="morebushouTap" style="border-bottom:1px dashed blue;;color:blue">{{detail.bushou}}</text>
+        
+            <text class="reply"><text style="color:grey;margin-left:10px;">笔画：</text>{{detail.bihua}}</text>
+            </view>
+            
+        <view class="info" style="margin-left:70px;margin-top:30rpx;">
+                 <text style="color:grey;"  class="reply">读音：</text>
+                 <text class="reply">{{detail.pinyin}}</text>
+        </view>
+
+        <!--<view class="titleBox">
+            <text class="title">{{item.wubi}}</text>
+            
+        </view>-->
+
+        <!--<view class="node">
+            <text class="node">{{item.pinyin}}</text>
+        </view>-->
+    </view>
+<!--<scroll-view scroll-y="true" style="height: 100%;">-->
+    <block wx:if="{{detail.jijie!=null && detail.jijie!=''}}">
+        <text style = "color:grey">简解：</text>  
+        <view style="margin-top:2px;margin-bottom:2px;margin-left:15rpx;line-height:1.3" wx:key="*this" wx:for="{{detail.jijie}}">
+        
+        <text>{{item}}</text>
+        </view>
+    </block>
+    <block wx:if="{{detail.xiangjie!=null && detail.xiangjie!=''}}">
+     <view style = "margin-bottom:8px;margin-top:8px;border-bottom: 1px solid #e2e2e2;"></view>
+        <text style = "color:grey">详解：</text>  
+        <view style="margin-top:2px;margin-bottom:2px;margin-left:15rpx;line-height:1.3" wx:key="*this" wx:for="{{ detail.xiangjie }}">
+            {{item}}
+        </view>
+    </block>    

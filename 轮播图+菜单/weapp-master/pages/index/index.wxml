@@ -1,0 +1,31 @@
+<!--index.wxml-->
+<view class="container">
+<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for-items="{{banner_list[0].banner}}">
+    <swiper-item>
+      <image src="{{item.pic_url}}" class="slide-image" />
+    </swiper-item>
+  </block>
+</swiper>
+ <view>
+  <view class='menueview' >
+   <block wx:for-items="{{banner_list[1].banner}}">
+   <image src="{{item.pic_url}}" class="menue-image" />
+   </block>
+  </view>
+ </view>
+ <view class='separator'></view>
+<view class='floortitle'>
+  <view class='floortitlemoreicon'>热卖商品</view>
+  <view class='floortitlemoretext'>更多> </view>
+</view>
+<view class='hotgoodcontainer'>
+  <view class='gooditem' wx:for="{{hotgoods}}" wx:for-index="idx" wx:for-item="good">
+    <view class='imgview'>
+      <image class='productimg' src='{{good.pic_url}}'/>
+    </view>
+    <view>{{good.name}}</view>
+  </view>
+<view>
+</view>

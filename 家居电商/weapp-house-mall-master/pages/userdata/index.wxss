@@ -1,0 +1,47 @@
+/**index.wxss**/
+page{
+  background: #f3f3f3;
+  height: 100%;
+}
+
+.list {
+  margin-top:10px;
+  background: #fff;
+  border-top:1px solid #eee;
+}
+.list .item{
+  padding:20px 10px;
+  margin:0 5px;
+  font-size: 14px;
+  color:#333;
+  position: relative;
+  border-bottom: 1px solid #f3f3f3;
+}
+.list .item::last-child{
+  border:none;
+}
+.list .item .tou {
+  width:50px;
+  height: 50px;
+  border-radius: 5px;
+  margin-right:30px;
+  float: right;
+}
+.list .tou-item {
+  line-height: 50px;
+}
+.list .item:after{
+  content: "";
+  display: block;
+  clear: both;
+}
+.list .item .jump{
+  position: absolute;
+  right:20px;
+  color:#999;
+}
+.list .item .text{
+  float:right;
+  margin-right:30px;
+  color:#999;
+}
